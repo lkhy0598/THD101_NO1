@@ -1,5 +1,6 @@
 .big_title{
-    border-bottom: 2px solid $lightblue;
+
+    position: relative;
 
 .big_title_img{
     background-image: url(../../img/TITLE-BG.jpg);
@@ -7,7 +8,7 @@
     background-size: cover;
     width: 280px;
     height: 100px;
-    padding: 10px 20px;
+    padding: 10px 45px;
     box-sizing: border-box;
     text-align: left;
     color: $white;
@@ -18,8 +19,25 @@
     
     .p{
         font-size: $bread;
+        padding: 0 5px;
     }
 
 }
 
+}
+
+
+
+
+
+.arc_title{
+    font-size: $h2;
+    width: 80px;
+    height: 80px;
+    background-color: $orange;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 50%;
+    color: $white;
+    font-weight: bold;
 }

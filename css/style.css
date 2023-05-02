@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("/css/reset.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 body {
   font-family: "Noto Sans";
   line-height: 1.25;
@@ -5,7 +8,7 @@ body {
 }
 
 .big_title {
-  border-bottom: 2px solid #98C7CF;
+  position: relative;
 }
 .big_title .big_title_img {
   background-image: url(../../img/TITLE-BG.jpg);
@@ -13,7 +16,7 @@ body {
   background-size: cover;
   width: 280px;
   height: 100px;
-  padding: 10px 20px;
+  padding: 10px 45px;
   box-sizing: border-box;
   text-align: left;
   color: #FFFFFF;
@@ -23,6 +26,19 @@ body {
 }
 .big_title .big_title_img .p {
   font-size: 15px;
+  padding: 0 5px;
+}
+
+.arc_title {
+  font-size: 35px;
+  width: 80px;
+  height: 80px;
+  background-color: #F89F69;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-weight: bold;
 }
 
 input {
@@ -43,6 +59,75 @@ input:focus {
 
 .rwd_336 {
   width: 336px;
+}
+
+.big_title::after {
+  content: "";
+  position: absolute;
+  border: 2px solid #98C7CF;
+  width: 1166px;
+  top: 96px;
+  left: 280px;
+}
+
+.dot {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.dot::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #000 0%, #000 20%, transparent 0%, transparent 100%);
+  background-size: 17px 17px;
+  background-position: 0 0;
+}
+
+.allow {
+  font-size: 30px;
+  color: #33414E;
+}
+
+.card_body {
+  width: 1200px;
+  height: 350px;
+  border: 1px solid;
+  margin: 0 auto;
+  border-radius: 10px;
+  display: flex;
+}
+
+.card_left > img {
+  border-radius: 10px 0 0 10px;
+}
+
+.card_title {
+  font-size: 25px;
+  color: #FFFFFF;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  background-color: #F89F69;
+  width: 160px;
+  height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 43px;
+}
+
+.card_date {
+  display: flex;
+}
+
+.card_date li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 1rem;
+  content: "/";
 }
 
 /*# sourceMappingURL=style.css.map */

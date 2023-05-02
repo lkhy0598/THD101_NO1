@@ -1,0 +1,40 @@
+@mixin card($w , $h) {
+    width: $w;
+    height: $h;
+}
+
+.card_body{
+    @include card (1200px ,350px);
+    border: 1px solid;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: flex;
+}
+
+.card_left > img{
+    border-radius: 10px 0 0 10px;
+}
+
+.card_title{
+    font-size: $p;
+    color: $white;
+    font-weight: 800;
+    letter-spacing: .1em;
+    background-color: $orange;
+    width: 160px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 43px;
+
+}
+
+.card_date{
+    display: flex;
+}
+
+.card_date li:not(:last-child)::after {
+    display: inline-block;
+    margin: 0 1rem;
+    content: "/";
+}

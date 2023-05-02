@@ -1,0 +1,8 @@
+
+// 手機板414px
+@mixin m() {
+    @media screen and (max-width: 414px) {
+        @content;
+    }
+}
+
