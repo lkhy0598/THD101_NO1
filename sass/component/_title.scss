@@ -1,0 +1,25 @@
+.big_title{
+    border-bottom: 2px solid $lightblue;
+
+.big_title_img{
+    background-image: url(../../img/TITLE-BG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 280px;
+    height: 100px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    text-align: left;
+    color: $white;
+
+    .h1{
+        font-size: $h1;
+    }
+    
+    .p{
+        font-size: $bread;
+    }
+
+}
+
+}
