@@ -1,38 +1,34 @@
-@mixin card($w , $h) {
-    width: $w;
-    height: $h;
-}
-
-.card_body{
-    @include card (1200px ,350px);
-    border: 1px solid;
+// index消息小卡
+.CARD_BODY{
+    height: 350px;
+    // border: 2px solid ;
     margin: 0 auto;
     border-radius: 10px;
     display: flex;
+
 }
 
-.card_left > img{
+.CARD_LEFT > img{
     border-radius: 10px 0 0 10px;
 }
 
-.card_title{
+.CARD_TITLE{
     font-size: $p;
     color: $white;
-    font-weight: 800;
-    letter-spacing: .1em;
+    font-weight: 700;
     background-color: $orange;
     width: 160px;
     height: 40px;
     border-radius: 10px;
     text-align: center;
-    line-height: 43px;
+    line-height: 45px;
 }
 
-.card_date{
+.CARD_DATE{
     display: flex;
 }
 
-.card_date li:not(:last-child)::after {
+.CARD_DATE li:not(:last-child)::after {
     display: inline-block;
     margin: 0 1rem;
     content: "/";

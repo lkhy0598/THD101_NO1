@@ -4,6 +4,7 @@ nav {
     background-size: cover;
     position: fixed;
     width: 100%;
+    z-index: 99;
 
     ul {
         display: flex;

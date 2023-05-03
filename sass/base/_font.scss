@@ -1,7 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
 
-$h1: 45px;
-$h2: 35px;
-$h3: 30px;
-$p: 25px;
-$bread: 15px;
+$h1: 4.5rem;
+$h2: 3.5rem;
+$h3: 3rem;
+$p: 2.5rem;
+$littleword:2rem;
+$bread: 1.5rem;
+$initial:10px;
+
+h1{
+    font-size: $h1;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+h2{
+    font-size: $h2;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+h3{
+    font-size: $h3;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+p{
+    font-size: $p;
+    letter-spacing: 1.5px;
+}
+
+.BREAD{
+    font-size: $bread;
+    letter-spacing: 1.5px;
+}
+
+.EN{
+    font-size: $bread;
+    font-weight: 400;
+}

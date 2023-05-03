@@ -1,9 +1,9 @@
 // icon改大小及顏色
 @mixin icons($fontsize, $color) {
-    font-size: $fontsize;
+    font-size: 40px;
     color: $color;
 }
 
-.allow{
+.ALLOW{
     @include icons(30px , #33414E)
 }
