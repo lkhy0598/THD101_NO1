@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @@include('./layout/style.html',{
+        title:'首頁'
+    })
+</head>
+
+<body>
+
+    <!-- header -->
+    @@include('./layout/header_test.html')
+    <!-- header end -->
+
+    <!-- header下面的背景 -->
+    <div class="background">
+
+        <!-- wrapper -->
+        <div class="wrapper">
+
+            <!-- 麵包屑 -->
+            <div class="bread">
+                <a href="#">首頁</a> / <a href="#">關於院所</a>
+            </div>
+
+            <!-- 大標題 -->
+            <div class="big_title">
+                <div class="big_title_img">
+                    <h1>關於院所</h1>
+                    <p>About Us</p>
+                </div>
+            </div>
+
+            <!-- 小標題 -->
+            <div class="small_title">
+                <p><span>醫院簡介</span>Clinic Profile</p>
+            </div>
+
+            <div class="dot"></div>
+
+            <div class="card_body">
+                <div class="card_left">
+                    <img src="img/20220227-A7401812_TP_V 1.jpg" alt="">
+                </div>
+                <div class="card_right">
+                    <div class="card_title">最新消息</div>
+                    <ul class="card_date">
+                        <li>
+                            <p>2023</p>
+                        </li>
+                        <li>
+                            <p>04</p>
+                        </li>
+                        <li>
+                            <p>01</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="arc_title">1</div>
+            <div><i class="bi bi-arrow-right-circle-fill allow"></i></div>
+
+            <!-- input -->
+            <label for="owner_name">飼主姓名<br><input type="text" id="owner_name" class="rwd_336"></label>
+
+        </div><!-- wrapper -->
+
+        <!-- footer -->
+        @@include('./layout/footer_test.html')
+        <!-- footer end -->
+    </div><!-- header下面的背景 -->
+
+</body>
+
+</html>
