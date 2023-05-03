@@ -7,6 +7,7 @@ header {
 
 }
 
+// 背景圖片統一裁成1920*1080
 .master_vision {
     background-image: url('../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg');
     background-repeat: no-repeat;
@@ -19,9 +20,37 @@ header {
     // margin-left: 282.5px;
     margin-top: 105px;
 
+    animation: image 30s ease-in-out infinite;
+
     img {
         width: 100%;
         height: 855px;
     }
 
+}
+
+@keyframes image {
+    0% {
+        background-image: url('../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg');
+    }
+
+    20% {
+        background-image: url('../../img/header/pexels-anna-shvets-4588055.jpg');
+    }
+
+    40% {
+        background-image: url('../../img/header/flouffy-7hEXd9kYPCY-unsplash.jpg');
+    }
+
+    60% {
+        background-image: url('../../img/header/alicja-gancarz-e3EHK9pzmLU-unsplash.jpg');
+    }
+
+    80% {
+        background-image: url('../../img/header/peri-stojnic-5Vr_RVPfbMI-unsplash.jpg');
+    }
+
+    100% {
+        background-image: url('../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg');
+    }
 }

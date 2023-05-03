@@ -7,91 +7,35 @@ body {
   letter-spacing: 0.5px;
 }
 
-.big_title {
-  position: relative;
-}
-.big_title .big_title_img {
-  background-image: url(../../img/TITLE-BG.jpg);
+.background {
+  background-image: url("../../img/BG.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 280px;
-  height: 100px;
-  padding: 10px 45px;
-  box-sizing: border-box;
-  text-align: left;
-  color: #FFFFFF;
-}
-.big_title .big_title_img .h1 {
-  font-size: 45px;
-}
-.big_title .big_title_img .p {
-  font-size: 15px;
-  padding: 0 5px;
 }
 
-.arc_title {
-  font-size: 35px;
-  width: 80px;
-  height: 80px;
-  background-color: #F89F69;
-  line-height: 80px;
-  text-align: center;
-  border-radius: 50%;
-  color: #FFFFFF;
-  font-weight: bold;
+.wrapper {
+  max-width: 75%;
+  margin: 0 auto;
 }
 
-input {
-  border-radius: 10px;
-  box-sizing: border-box;
-  padding: 10px;
-  margin-top: 10px;
-  border: 1px solid #9E9E9E;
-}
-
-input:focus {
-  outline: none;
-}
-
-.rwd_376 {
-  width: 376px;
-}
-
-.rwd_336 {
-  width: 336px;
-}
-
-.big_title::after {
-  content: "";
-  position: absolute;
-  border: 2px solid #98C7CF;
-  width: 1166px;
-  top: 96px;
-  left: 280px;
-}
-
-.dot {
-  position: relative;
-  width: 200px;
-  height: 200px;
-}
-
-.dot::before {
-  content: "";
+a {
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(circle, #000 0%, #000 20%, transparent 0%, transparent 100%);
-  background-size: 17px 17px;
-  background-position: 0 0;
 }
 
-.allow {
-  font-size: 30px;
-  color: #33414E;
+.reserve {
+  background-color: #F89F69;
+  font-size: 25px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 65px;
+  width: 270px;
+  height: 65px;
+}
+
+.login {
+  font-size: 25px;
+  font-weight: 700;
 }
 
 .card_body {
@@ -128,6 +72,188 @@ input:focus {
   display: inline-block;
   margin: 0 1rem;
   content: "/";
+}
+
+input {
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #9E9E9E;
+}
+
+input:focus {
+  outline: none;
+}
+
+.rwd_376 {
+  width: 376px;
+}
+
+.rwd_336 {
+  width: 336px;
+}
+
+.bread {
+  color: #34424F;
+}
+.bread a {
+  display: initial;
+  color: #34424F;
+  text-decoration: none;
+}
+
+.big_title {
+  position: relative;
+}
+.big_title::after {
+  content: "";
+  position: absolute;
+  border: 2px solid #98C7CF;
+  width: 1143px;
+  bottom: 0;
+  left: 280px;
+}
+.big_title .big_title_img {
+  background-image: url(../../img/TITLE-BG.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 280px;
+  height: 100px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  text-align: left;
+  color: #FFFFFF;
+}
+.big_title .big_title_img h1 {
+  font-size: 45px;
+}
+.big_title .big_title_img p {
+  font-size: 15px;
+}
+
+.small_title {
+  border-bottom: 2px solid #34424F;
+}
+.small_title span {
+  font-size: 35px;
+  margin-right: 10px;
+}
+.small_title p {
+  font-size: 15px;
+  color: #34424F;
+}
+
+.arc_title {
+  font-size: 35px;
+  width: 80px;
+  height: 80px;
+  background-color: #F89F69;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.dot {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.dot::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #FFFFFF 0%, #FFFFFF 20%, transparent 0%, transparent 100%);
+  background-size: 17px 17px;
+  background-position: 0 0;
+}
+
+.allow {
+  font-size: 30px;
+  color: #33414E;
+}
+
+header {
+  background-image: url("../../img/HEADER-BG.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 960px;
+}
+
+.master_vision {
+  background-image: url("../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 250px 0 0 0;
+  width: 1620px;
+  height: 855px;
+  float: right;
+  margin-top: 105px;
+  animation: image 30s ease-in-out infinite;
+}
+.master_vision img {
+  width: 100%;
+  height: 855px;
+}
+
+@keyframes image {
+  0% {
+    background-image: url("../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg");
+  }
+  20% {
+    background-image: url("../../img/header/pexels-anna-shvets-4588055.jpg");
+  }
+  40% {
+    background-image: url("../../img/header/flouffy-7hEXd9kYPCY-unsplash.jpg");
+  }
+  60% {
+    background-image: url("../../img/header/alicja-gancarz-e3EHK9pzmLU-unsplash.jpg");
+  }
+  80% {
+    background-image: url("../../img/header/peri-stojnic-5Vr_RVPfbMI-unsplash.jpg");
+  }
+  100% {
+    background-image: url("../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg");
+  }
+}
+nav {
+  background-image: url("../../img/HEADER-BG.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav ul li a {
+  text-decoration: none;
+  font-size: 15px;
+  margin: 20px 80px 20px 0;
+  color: #FFFFFF;
+}
+nav ul li a:hover {
+  color: #34424F;
+}
+nav ul li a span {
+  font-size: 25px;
+  font-weight: 700;
+}
+nav ul li a i {
+  font-size: 25px;
+}
+nav ul li a .bi-person-fill {
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

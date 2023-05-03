@@ -1,9 +1,9 @@
 // 麵包屑
-.bread{
+.bread {
     // 中間"/"的顏色
     color: $blueblack;
 
-    a{
+    a {
         display: initial;
         color: $blueblack;
         text-decoration: none;
@@ -12,49 +12,60 @@
 }
 
 // 大標題
-.big_title{
-    border-bottom: 2px solid $lightblue;
+.big_title {
+    position: relative;
 
-.big_title_img{
-    background-image: url(../../img/TITLE-BG.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 280px;
-    height: 100px;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    text-align: left;
-    color: $white;
-
-    h1{
-        font-size: $h1;
+    &::after {
+        content: "";
+        position: absolute;
+        border: 2px solid $lightblue;
+        width: 1143px;
+        bottom: 0;
+        left: 280px;
     }
-    
-    p{
-        font-size: $bread;
+
+    .big_title_img {
+        background-image: url(../../img/TITLE-BG.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 280px;
+        height: 100px;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        text-align: left;
+        color: $white;
+
+        h1 {
+            font-size: $h1;
+        }
+
+        p {
+            font-size: $bread;
+        }
+
     }
 
 }
 
-}
+
 
 // 小標題
-.small_title{
+.small_title {
     border-bottom: 2px solid $blueblack;
 
-    span{
+    span {
         font-size: $h2;
         margin-right: 10px;
     }
 
-    p{
+    p {
         font-size: $bread;
         color: $blueblack;
     }
 
 }
 
-.arc_title{
+.arc_title {
     font-size: $h2;
     width: 80px;
     height: 80px;
