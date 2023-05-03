@@ -1,4 +1,5 @@
-// header nav 設定
+
+//header nav設定
 .HEADER_NAV {
     background-image: url('../../img/HEADER-BG.png');
     background-repeat: no-repeat;
@@ -7,14 +8,14 @@
     width: 100%;
     z-index: 99;
 
-    .HEADER_UL {
+    >ul {
         display: flex;
         justify-content: flex-end;
         align-items: center;
 
-        .HEADER_LI {
+        >li {
 
-            .HEADER_A {
+            >a {
                 text-decoration: none;
                 font-size: $bread;
                 margin:20px 80px 20px 0;
@@ -24,12 +25,12 @@
                     color: $blueblack;
                 }
 
-                .HEADER_SPAN {
+                >span {
                     font-size: $p;
                     font-weight: 700;
                 }
 
-                .HEADER_I{
+                >i{
                     font-size: $p;
                 }
 
@@ -42,5 +43,4 @@
     }
 }
 
-// footer nav 設定
-
+//footer nav設定
