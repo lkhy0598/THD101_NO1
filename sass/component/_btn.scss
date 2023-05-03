@@ -1,0 +1,21 @@
+a {
+    display: block;
+}
+
+.reserve {
+    background-color: $orange;
+    font-size: $p;
+    border-radius: 10px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 65px;
+    width: 270px;
+    height: 65px;
+}
+
+.reserve:hover{}
+
+.login {
+    font-size: $p;
+    font-weight: 700;
+}

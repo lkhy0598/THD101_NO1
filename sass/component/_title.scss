@@ -1,6 +1,19 @@
-.big_title{
+// 麵包屑
+.bread{
+    // 中間"/"的顏色
+    color: $blueblack;
 
-    position: relative;
+    a{
+        display: initial;
+        color: $blueblack;
+        text-decoration: none;
+    }
+
+}
+
+// 大標題
+.big_title{
+    border-bottom: 2px solid $lightblue;
 
 .big_title_img{
     background-image: url(../../img/TITLE-BG.jpg);
@@ -8,27 +21,38 @@
     background-size: cover;
     width: 280px;
     height: 100px;
-    padding: 10px 45px;
+    padding: 10px 20px;
     box-sizing: border-box;
     text-align: left;
     color: $white;
 
-    .h1{
+    h1{
         font-size: $h1;
     }
     
-    .p{
+    p{
         font-size: $bread;
-        padding: 0 5px;
     }
 
 }
 
 }
 
+// 小標題
+.small_title{
+    border-bottom: 2px solid $blueblack;
 
+    span{
+        font-size: $h2;
+        margin-right: 10px;
+    }
 
+    p{
+        font-size: $bread;
+        color: $blueblack;
+    }
 
+}
 
 .arc_title{
     font-size: $h2;

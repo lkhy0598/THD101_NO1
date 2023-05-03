@@ -2,11 +2,17 @@
 @import 'base/color';
 
 @import 'component/body';
+@import "component/btn";
+@import 'component/card';
+@import 'component/form';
 @import 'component/title';
-@import 'component/input';
 @import 'component/dividing-line';
 @import 'component/dot';
 @import 'component/icons';
-@import 'component/card';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/login';
+@import 'layout/nav';
 
 @import 'mixin/mixin';

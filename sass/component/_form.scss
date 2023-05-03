@@ -1,0 +1,22 @@
+input{
+    border-radius: 10px;
+    box-sizing: border-box;
+    // height: 45px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #9E9E9E;
+}
+
+input:focus{
+    outline: none;
+}
+
+// RWD比較長的input
+.rwd_376{
+    width: 376px;
+}
+
+// RWD比較短的input
+.rwd_336{
+    width: 336px;
+}
