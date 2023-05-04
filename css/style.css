@@ -175,6 +175,53 @@ a {
   font-weight: 700;
 }
 
+.BTN {
+  font-size: 2.5rem;
+  height: 65px;
+  line-height: 65px;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 10px;
+  position: relative;
+}
+.BTN:after {
+  content: "";
+  width: 100%;
+  height: 110%;
+  border: 2px solid rebeccapurple;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  transition: all 0.8s;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  opacity: 0;
+}
+.BTN:hover::after {
+  transform: translate(-50%, -50%) scale(1.05);
+  transform-origin: center;
+  opacity: 1;
+  transition: all 0.8s;
+}
+
+.TOP_BTN {
+  background-image: url(/img/TOP-BTN.svg);
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border: unset;
+  border-radius: 50%;
+}
+.TOP_BTN:hover {
+  background-image: url(/img/TOP-BTN-HOVER.svg);
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border: unset;
+  border-radius: 50%;
+}
+
 .CARD_BODY {
   height: 350px;
   margin: 0 auto;
@@ -326,7 +373,7 @@ header {
   height: 960px;
 }
 
-.master_vision {
+.MASTER_VISION {
   background-image: url("../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -338,7 +385,7 @@ header {
   margin-top: 105px;
   animation: image 30s ease-in-out infinite;
 }
-.master_vision img {
+.MASTER_VISION img {
   width: 100%;
   height: 855px;
 }

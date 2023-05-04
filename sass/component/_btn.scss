@@ -1,7 +1,7 @@
 a {
     display: block;
 }
-
+// 立即預約按鈕
 .RESERVE {
     background-color: $orange;
     font-size: $p;
@@ -17,8 +17,62 @@ a {
         color: $white;
     }
 }
-
+// 登入紐
 .LOGIN {
     font-size: $p;
     font-weight: 700;
+}
+// 網頁btn width需自行設定
+.BTN{
+    font-size: $p;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 10px;
+    position: relative;
+    
+    &:after{
+        content: '';
+        width: 100%;
+        height: 110%;
+        border: 2px solid rebeccapurple;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        transition:all .8s;
+        transform: translate(-50% , -50%);
+        transform-origin: center;
+        opacity: 0;
+        
+    }
+    
+    &:hover::after{
+        transform: translate(-50% , -50%) scale(1.05);
+        transform-origin: center;
+        opacity: 1;
+        transition:all .8s;
+    }
+
+}
+
+// top紐
+
+.TOP_BTN{
+    background-image: url(/img/TOP-BTN.svg);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border: unset;
+    border-radius: 50%;
+
+    &:hover{
+        background-image: url(/img/TOP-BTN-HOVER.svg);
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        border: unset;
+        border-radius: 50%;
+    }
 }
