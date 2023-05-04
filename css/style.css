@@ -165,7 +165,6 @@ a {
   line-height: 65px;
   width: 270px;
   height: 65px;
-  transition: all 1s ease;
 }
 .HEADER_NAV .RESERVE:hover {
   background: linear-gradient(180deg, #C53D3D 0%, #BC6231 100%);
@@ -211,7 +210,7 @@ a {
   cursor: pointer;
 }
 .BTN_BACK:hover {
-  background: linear-gradient(180deg, #610E0E 0%, #891D1D 100%);
+  background: black;
 }
 
 .TOP_BTN {
