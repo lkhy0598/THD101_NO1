@@ -21,13 +21,6 @@ label{
 }
 
 
-
-// RWD比較長的input
-.RWD_376{
-    width: 376px;
-}
-
-// RWD比較短的input
-.RWD_336{
-    width: 336px;
-}
+// RWD時的input有兩種長度：
+// 有外層DIV的長度：width: 336px;
+// 自己在外面的長度:width: 376px;
