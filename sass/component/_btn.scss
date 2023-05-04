@@ -12,16 +12,9 @@ a {
     line-height: 65px;
     width: 270px;
     height: 65px;
-<<<<<<< HEAD
-<<<<<<< HEAD
     cursor: pointer;
-=======
-    transition: all 1s ease;
->>>>>>> c5805bb099c62cefa1f653cc4a8452d8922772ae
 
-=======
-    
->>>>>>> HAO
+    transition: all 1s ease;
     &:hover{
         background: $linear-orange-hover;
         color: $white;
@@ -47,25 +40,7 @@ a {
     border: unset;
     background: $linear-darkblue;
     color: $white;
-<<<<<<< HEAD
-    cursor: pointer;
     
-    &:after{
-        content: '';
-        width: 100%;
-        height: 110%;
-        padding: 2px;
-        border: 1px solid $blueblack;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        border-radius: 15px;
-        transition:all 1s;
-        transform: translate(-50% , -50%);
-        transform-origin: center;
-        opacity: 0;
-=======
-
     &:hover{
         background: $linear-darkblue-hover;
         color: $white;
@@ -85,7 +60,6 @@ a {
     //     transform: translate(-50% , -50%);
     //     transform-origin: center;
     //     opacity: 0;
->>>>>>> c5805bb099c62cefa1f653cc4a8452d8922772ae
         
     // }
     
@@ -126,17 +100,13 @@ a {
     background-image: url(/img/TOP-BTN.svg);
     width: 100px;
     height: 100px;
-    cursor: pointer;
     border: unset;
     border-radius: 50%;
-    cursor: pointer;
-    
 
     &:hover{
         background-image: url(/img/TOP-BTN-HOVER.svg);
         width: 100px;
         height: 100px;
-        cursor: pointer;
         border: unset;
         border-radius: 50%;
     }
