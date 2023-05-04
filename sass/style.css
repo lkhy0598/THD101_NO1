@@ -156,8 +156,7 @@ a {
 }
 
 .HEADER_NAV .RESERVE {
-  cursor: pointer;
-  background: linear-gradient(180deg, #FF965C 0%, #DC643E 100%);
+  background-color: #F89F69;
   font-size: 2.5rem;
   border-radius: 10px;
   font-weight: 700;
@@ -165,10 +164,9 @@ a {
   line-height: 65px;
   width: 270px;
   height: 65px;
-  transition: all 1s ease;
 }
 .HEADER_NAV .RESERVE:hover {
-  background: linear-gradient(180deg, #C53D3D 0%, #BC6231 100%);
+  background-color: #CB5656;
   color: #FFFFFF;
 }
 
@@ -178,7 +176,6 @@ a {
 }
 
 .BTN {
-  cursor: pointer;
   font-size: 2.5rem;
   height: 65px;
   line-height: 65px;
@@ -187,16 +184,32 @@ a {
   border-radius: 10px;
   position: relative;
   border: unset;
-  background: linear-gradient(180deg, #33414E 0%, #22163C 100%);
+  background-color: #34424F;
   color: #FFFFFF;
 }
-.BTN:hover {
-  background: linear-gradient(180deg, #000000 0%, #24313F 100%);
-  color: #FFFFFF;
+.BTN:after {
+  content: "";
+  width: 100%;
+  height: 110%;
+  padding: 2px;
+  border: 1px solid #34424F;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 15px;
+  transition: all 1s;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  opacity: 0;
+}
+.BTN:hover::after {
+  transform: translate(-50%, -50%) scale(1.04, 1.11);
+  transform-origin: center;
+  opacity: 1;
+  transition: all 0.8s;
 }
 
 .BTN_BACK {
-  cursor: pointer;
   font-size: 2.5rem;
   height: 65px;
   line-height: 65px;
@@ -205,15 +218,14 @@ a {
   border-radius: 10px;
   position: relative;
   border: unset;
-  background: linear-gradient(180deg, #CB5656 0%, #A92A2A 100%);
+  background-color: #CB5656;
   color: #FFFFFF;
 }
 .BTN_BACK:hover {
-  background: linear-gradient(180deg, #610E0E 0%, #891D1D 100%);
+  opacity: 0.7;
 }
 
 .TOP_BTN {
-  cursor: pointer;
   background-image: url(/img/TOP-BTN.svg);
   width: 100px;
   height: 100px;
@@ -279,6 +291,14 @@ label input {
 }
 label input:focus {
   outline: none;
+}
+
+.RWD_376 {
+  width: 376px;
+}
+
+.RWD_336 {
+  width: 336px;
 }
 
 .BREAD {
