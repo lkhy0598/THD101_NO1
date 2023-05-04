@@ -2,7 +2,7 @@ a {
     display: block;
 }
 // 立即預約按鈕
-.RESERVE {
+.HEADER_NAV .RESERVE {
     background-color: $orange;
     font-size: $p;
     border-radius: 10px;
@@ -22,7 +22,8 @@ a {
     font-size: $p;
     font-weight: 700;
 }
-// 網頁btn width需自行設定
+// 前台btn有放大外框效果 width需自行設定
+// 如果BTN上方有文字，請自行加入margin-top:15px
 .BTN{
     font-size: $p;
     height: 65px;
@@ -31,17 +32,21 @@ a {
     font-weight: 500;
     border-radius: 10px;
     position: relative;
+    border: unset;
+    background-color: $blueblack;
+    color: $white;
     
     &:after{
         content: '';
         width: 100%;
         height: 110%;
-        border: 2px solid rebeccapurple;
+        padding: 2px;
+        border: 1px solid $blueblack;
         position: absolute;
         top: 50%;
         left: 50%;
-        border-radius: 10px;
-        transition:all .8s;
+        border-radius: 15px;
+        transition:all 1s;
         transform: translate(-50% , -50%);
         transform-origin: center;
         opacity: 0;
@@ -49,12 +54,30 @@ a {
     }
     
     &:hover::after{
-        transform: translate(-50% , -50%) scale(1.05);
+        transform: translate(-50% , -50%) scale(1.04, 1.11);
         transform-origin: center;
         opacity: 1;
         transition:all .8s;
     }
 
+}
+
+// BTN_BACK 後台BTN width需自行設定
+.BTN_BACK{
+    font-size: $p;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 10px;
+    position: relative;
+    border: unset;
+    background-color: $red;
+    color: $white;
+
+    &:hover{
+        opacity: .7;
+    }
 }
 
 // top紐
@@ -66,6 +89,7 @@ a {
     cursor: pointer;
     border: unset;
     border-radius: 50%;
+    
 
     &:hover{
         background-image: url(/img/TOP-BTN-HOVER.svg);
