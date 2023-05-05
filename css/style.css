@@ -190,7 +190,6 @@ a {
   border: unset;
   background: linear-gradient(180deg, #33414E 0%, #22163C 100%);
   color: #FFFFFF;
-  cursor: pointer;
 }
 .BTN:hover {
   background: linear-gradient(180deg, #000000 0%, #24313F 100%);
@@ -222,7 +221,6 @@ a {
   height: 100px;
   border: unset;
   border-radius: 50%;
-  cursor: pointer;
 }
 .TOP_BTN:hover {
   background-image: url(/img/TOP-BTN-HOVER.svg);
@@ -422,7 +420,7 @@ a {
   color: #33414E;
 }
 
-header {
+section {
   background-image: url("../../img/HEADER-BG.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -525,6 +523,10 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
+}
+.HEADER_NAV:hover img[src="./img/LOGO.png"] {
+  opacity: 0;
+  transition: all 0.1s;
 }
 .HEADER_NAV > ul {
   display: flex;
