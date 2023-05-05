@@ -53,3 +53,44 @@
 }
 
 //footer nav設定
+
+
+.FOOTER_NAV {
+    
+    
+   
+    >ul {
+        
+        display: flex;
+        width: 360px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-right: 16.6vw;
+        margin-top: 2.5vh;
+        >li {
+            
+            padding: 2px 30px;
+            >a {
+                text-decoration: none;
+                margin:20px 0;
+                color: $white;
+                
+
+                &:hover{
+                    opacity: .3;
+                }
+
+                >span {
+                    font-size: $p;
+                    font-weight: 500;
+                }
+
+            
+
+                
+            }
+        }
+
+        
+    }
+}

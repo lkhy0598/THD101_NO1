@@ -3,7 +3,8 @@ a {
 }
 // 立即預約按鈕
 .HEADER_NAV .RESERVE {
-    background-color: $orange;
+    cursor: pointer;
+    background: $linear-orange;
     font-size: $p;
     border-radius: 10px;
     font-weight: 700;
@@ -11,9 +12,11 @@ a {
     line-height: 65px;
     width: 270px;
     height: 65px;
+    cursor: pointer;
 
+    transition: all 1s ease;
     &:hover{
-        background-color: $red;
+        background: $linear-orange-hover;
         color: $white;
     }
 }
@@ -24,7 +27,9 @@ a {
 }
 // 前台btn有放大外框效果 width需自行設定
 // 如果BTN上方有文字，請自行加入margin-top:15px
+
 .BTN{
+    cursor: pointer;
     font-size: $p;
     height: 65px;
     line-height: 65px;
@@ -33,37 +38,43 @@ a {
     border-radius: 10px;
     position: relative;
     border: unset;
-    background-color: $blueblack;
+    background: $linear-darkblue;
     color: $white;
     
-    &:after{
-        content: '';
-        width: 100%;
-        height: 110%;
-        padding: 2px;
-        border: 1px solid $blueblack;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        border-radius: 15px;
-        transition:all 1s;
-        transform: translate(-50% , -50%);
-        transform-origin: center;
-        opacity: 0;
+    &:hover{
+        background: $linear-darkblue-hover;
+        color: $white;
+    }
+
+    // &:after{
+    //     content: '';
+    //     width: 100%;
+    //     height: 110%;
+    //     padding: 2px;
+    //     border: 1px solid $blueblack;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     border-radius: 15px;
+    //     transition:all 1s;
+    //     transform: translate(-50% , -50%);
+    //     transform-origin: center;
+    //     opacity: 0;
         
-    }
+    // }
     
-    &:hover::after{
-        transform: translate(-50% , -50%) scale(1.04, 1.11);
-        transform-origin: center;
-        opacity: 1;
-        transition:all .8s;
-    }
+    // &:hover::after{
+    //     transform: translate(-50% , -50%) scale(1.04, 1.11);
+    //     transform-origin: center;
+    //     opacity: 1;
+    //     transition:all .8s;
+    // }
 
 }
 
 // BTN_BACK 後台BTN width需自行設定
 .BTN_BACK{
+    cursor: pointer;
     font-size: $p;
     height: 65px;
     line-height: 65px;
@@ -72,30 +83,30 @@ a {
     border-radius: 10px;
     position: relative;
     border: unset;
-    background-color: $red;
+    background: $linear-red;
     color: $white;
+    cursor: pointer;
 
     &:hover{
-        opacity: .7;
+        // opacity: .7;
+        background: $linear-red-hover;
     }
 }
 
 // top紐
 
 .TOP_BTN{
+    cursor: pointer;
     background-image: url(/img/TOP-BTN.svg);
     width: 100px;
     height: 100px;
-    cursor: pointer;
     border: unset;
     border-radius: 50%;
-    
 
     &:hover{
         background-image: url(/img/TOP-BTN-HOVER.svg);
         width: 100px;
         height: 100px;
-        cursor: pointer;
         border: unset;
         border-radius: 50%;
     }
