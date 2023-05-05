@@ -1,33 +1,96 @@
-// input
-label{
+// input請自己設定width
+.INPUT {
 
     font-size: $p;
 
-    input{
+    input {
         font-family: 'Noto Sans';
         font-size: 20px;
         color: $blueblack;
         border-radius: 10px;
         box-sizing: border-box;
-        height: 45px;    
         padding: 10px;
         margin-top: 10px;
         border: 1px solid #9E9E9E;
+        height: 45px;
+        width: 300px;
     }
-    
-    input:focus{
+
+    input:focus {
         outline: none;
     }
+
 }
 
+// RWD的input有兩種長度：
+// 有外層DIV的長度: width: 336px;
+// 自己在外面的長度: width: 376px;
 
 
-// RWD比較長的input
-.RWD_376{
-    width: 376px;
+// select請自己設定width
+.SELECT {
+
+    font-size: $p;
+    position: relative;
+
+    select {
+        // 隱藏預設箭頭
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        font-family: 'Noto Sans';
+        font-size: 20px;
+        color: $blueblack;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #9E9E9E;
+        height: 45px;
+        width: 300px;
+
+    }
+
+    // 箭頭
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-left: 2.5px solid black;
+        border-bottom: 2.5px solid black;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        position: absolute;
+        bottom: 13.5px;
+        right: 17.5px;
+    }
+
+    select:focus {
+        outline: none;
+    }
+
 }
 
-// RWD比較短的input
-.RWD_336{
-    width: 336px;
+// textarea請自己設定width
+.TEXTAREA {
+
+    font-size: $p;
+
+    textarea {
+        font-family: 'Noto Sans';
+        font-size: 20px;
+        color: $blueblack;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #9E9E9E;
+        width: 300px;
+    }
+
+    textarea:focus {
+        outline: none;
+    }
+
 }

@@ -1,11 +1,10 @@
 header {
-    background-image: url('../../img/HEADER-BG.png');
+    background-image: url("../../img/HEADER-BG.jpg");
     background-repeat: no-repeat;
-    background-position: center center;
     background-size: cover;
-    // height: 860px;
-
+    overflow: hidden;
 }
+
 
 // 背景圖片統一裁成1920*1080
 .MASTER_VISION {
@@ -15,7 +14,7 @@ header {
     background-size: cover;
     border-radius: 250px 0 0 0;
     width: 87.5%;
-    height: 855px;
+    height: 830px;
     float: right;
     // margin-left: 282.5px;
     margin-top: 105px;
@@ -24,7 +23,7 @@ header {
 
     img {
         width: 100%;
-        height: 855px;
+        height: 830px;
     }
 
 }
@@ -35,7 +34,7 @@ header {
     }
 
     20% {
-        background-image: url('../../img/header/pexels-anna-shvets-4588055.jpg');
+        background-image: url('../../img/header/leslie-low-0lzAa5raUso-unsplash.png');
     }
 
     40% {

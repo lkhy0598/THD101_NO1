@@ -1,18 +1,15 @@
-
 //header nav設定
-.HEADER_NAV {
-    background-image: url('../../img/HEADER-BG.png');
+ .HEADER_NAV {
+    background-image: url("../../img/HEADER-BG.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: fixed;
     width: 100%;
     z-index: 99;
-    position: relative;
-    // display: flex;
-    // justify-content: space-between;
+    top: 0;
     
     >img{
-        // width: 15%;
+        width: 12.5%;
         position: absolute;
         top: 0;
         left: 0;
@@ -27,7 +24,6 @@
 
         >li {
             
-
             >a {
                 text-decoration: none;
                 margin:20px 0;
