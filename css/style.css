@@ -564,6 +564,7 @@ footer {
 }
 .FOOTER_NAV > ul > li {
   padding: 2px 30px;
+  width: 100px;
 }
 .FOOTER_NAV > ul > li > a {
   text-decoration: none;
@@ -576,6 +577,4 @@ footer {
 .FOOTER_NAV > ul > li > a > span {
   font-size: 2.5rem;
   font-weight: 500;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
