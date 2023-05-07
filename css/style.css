@@ -157,6 +157,7 @@ a {
 
 .HEADER_NAV .RESERVE {
   cursor: pointer;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF965C), to(#DC643E));
   background: linear-gradient(180deg, #FF965C 0%, #DC643E 100%);
   font-size: 2.5rem;
   border-radius: 10px;
@@ -166,9 +167,11 @@ a {
   width: 270px;
   height: 65px;
   cursor: pointer;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 .HEADER_NAV .RESERVE:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#DC643E), to(#f48347));
   background: linear-gradient(180deg, #DC643E 0%, #f48347 100%);
   color: #FFFFFF;
 }
@@ -188,10 +191,12 @@ a {
   border-radius: 10px;
   position: relative;
   border: unset;
+  background: -webkit-gradient(linear, left top, left bottom, from(#33414E), to(#22163C));
   background: linear-gradient(180deg, #33414E 0%, #22163C 100%);
   color: #FFFFFF;
 }
 .BTN:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#24313F));
   background: linear-gradient(180deg, #000000 0%, #24313F 100%);
   color: #FFFFFF;
 }
@@ -206,11 +211,13 @@ a {
   border-radius: 10px;
   position: relative;
   border: unset;
+  background: -webkit-gradient(linear, left top, left bottom, from(#CB5656), to(#A92A2A));
   background: linear-gradient(180deg, #CB5656 0%, #A92A2A 100%);
   color: #FFFFFF;
   cursor: pointer;
 }
 .BTN_BACK:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#610E0E), to(#891D1D));
   background: linear-gradient(180deg, #610E0E 0%, #891D1D 100%);
 }
 
@@ -234,6 +241,8 @@ a {
   height: 350px;
   margin: 0 auto;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -254,6 +263,8 @@ a {
 }
 
 .CARD_DATE {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -261,6 +272,73 @@ a {
   display: inline-block;
   margin: 0 1rem;
   content: "/";
+}
+
+.SHOPPINGCARD {
+  margin-top: 35px;
+}
+.SHOPPINGCARD a {
+  text-decoration: none;
+}
+.SHOPPINGCARD a .SHOPPINGCARD_IMG {
+  position: relative;
+  margin-bottom: 20px;
+  -webkit-filter: drop-shadow(0px 0px 5px #6b7d80);
+          filter: drop-shadow(0px 0px 5px #6b7d80);
+}
+.SHOPPINGCARD a .SHOPPINGCARD_IMG::before {
+  content: "";
+  width: 100%;
+  height: 50px;
+  background: rgba(248, 159, 105, 0.7);
+  border-radius: 0px 0px 3px 3px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+.SHOPPINGCARD a .SHOPPINGCARD_IMG img {
+  width: 100%;
+  border-radius: 3px 50px 3px 3px;
+}
+.SHOPPINGCARD a .SHOPPINGCARD_IMG span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  line-height: 50px;
+}
+.SHOPPINGCARD a .SHOPPINGCARD_IMG span .SHOPPINGCART_ICON::before {
+  color: #FFF;
+  font-size: 2.5rem;
+  margin-right: 20px;
+  -webkit-transform: translate(20%, 20%);
+          transform: translate(20%, 20%);
+}
+.SHOPPINGCARD a .SHOPPINGCARD_IMG span p {
+  color: #FFF;
+  font-weight: 900;
+}
+.SHOPPINGCARD a .SHOPPINGCARD_TITLE {
+  height: 125px;
+  font-weight: 700;
+  line-height: 34px;
+  margin-bottom: 10px;
+  color: #34424F;
+}
+.SHOPPINGCARD a .SHOPPINGCARD_PRICE {
+  font-weight: 700;
+  line-height: 34px;
+  color: #D13333;
+  text-align: right;
 }
 
 .INPUT {
@@ -272,7 +350,8 @@ a {
   font-size: 2rem;
   color: #34424F;
   border-radius: 10px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 10px;
   margin-top: 10px;
   border: 1px solid #9E9E9E;
@@ -296,7 +375,8 @@ a {
   font-size: 2rem;
   color: #34424F;
   border-radius: 10px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 10px;
   margin-top: 10px;
   border: 1px solid #9E9E9E;
@@ -328,7 +408,8 @@ a {
   font-size: 20px;
   color: #34424F;
   border-radius: 10px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 10px;
   margin-top: 10px;
   border: 1px solid #9E9E9E;
@@ -365,8 +446,9 @@ a {
   background-size: cover;
   width: 280px;
   height: 100px;
-  padding: 10px 20px;
-  box-sizing: border-box;
+  padding: 5px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .BIG_TITLE .BIG_TITLE_IMG h1 {
   text-align: left;
@@ -438,13 +520,42 @@ a {
   height: 830px;
   float: right;
   margin-top: 105px;
+<<<<<<< HEAD
   animation: image_carousel 30s ease-in-out infinite;
+=======
+  -webkit-animation: image_carousel 30s ease-in-out infinite;
+          animation: image_carousel 30s ease-in-out infinite;
+>>>>>>> 277963854afebdb2c8221e8940cc5b5c0a22cc11
 }
 .CAROUSEL .MASTER_VISION > img {
   width: 100%;
   height: 830px;
 }
 
+<<<<<<< HEAD
+=======
+@-webkit-keyframes image_carousel {
+  0% {
+    background-image: url("../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg");
+  }
+  20% {
+    background-image: url("../../img/header/leslie-low-0lzAa5raUso-unsplash.png");
+  }
+  40% {
+    background-image: url("../../img/header/flouffy-7hEXd9kYPCY-unsplash.jpg");
+  }
+  60% {
+    background-image: url("../../img/header/alicja-gancarz-e3EHK9pzmLU-unsplash.jpg");
+  }
+  80% {
+    background-image: url("../../img/header/peri-stojnic-5Vr_RVPfbMI-unsplash.jpg");
+  }
+  100% {
+    background-image: url("../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg");
+  }
+}
+
+>>>>>>> 277963854afebdb2c8221e8940cc5b5c0a22cc11
 @keyframes image_carousel {
   0% {
     background-image: url("../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg");
@@ -466,11 +577,15 @@ a {
   }
 }
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 326px;
   background: linear-gradient(258.59deg, #28333B 32.91%, #323F4B 61.97%);
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
 }
 
@@ -527,12 +642,18 @@ footer {
 }
 .HEADER_NAV:hover img[src="img/V-HEADER-LOGO.svg"] {
   opacity: 0;
+  -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
 .HEADER_NAV > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-left: 20%;
 }
 .HEADER_NAV > ul > li > a {
@@ -556,10 +677,15 @@ footer {
 }
 
 .FOOTER_NAV > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 360px;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-right: 16.6vw;
   margin-top: 2.5vh;
 }
@@ -578,4 +704,129 @@ footer {
 .FOOTER_NAV > ul > li > a > span {
   font-size: 2.5rem;
   font-weight: 500;
+}
+
+.SHOPPING .SHOPPING_MASTERVISION {
+  background-image: url("/img/shopping/SHOPPING_MASTERVISION_01.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 250px 0 0 0;
+  width: 87.5%;
+  height: 830px;
+  float: right;
+  margin-top: 105px;
+  -webkit-animation: image 30s ease-in-out infinite;
+          animation: image 30s ease-in-out infinite;
+}
+.SHOPPING .SHOPPING_MASTERVISION img {
+  width: 100%;
+  height: 830px;
+}
+.SHOPPING .SHOPPINGBG {
+  background-image: url("../../img/BG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.SHOPPING .BREAD {
+  padding-top: 55px;
+}
+.SHOPPING .BIG_TITLE {
+  overflow: hidden;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+.SHOPPING .BIG_TITLE::after {
+  width: 0px;
+}
+.SHOPPING .SHOPPINGHOT {
+  background-image: url(/img/shopping/SHOPPINGHOT_BG.png);
+  width: 100%;
+  height: 737px;
+}
+.SHOPPING .SMALL_TITLE {
+  margin: 0 auto;
+  padding-top: 45px;
+}
+.SHOPPING .SHOPPINGCARDAREA_UL {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.SHOPPING .SHOPPINGCARDBTN {
+  margin-top: 60px;
+  width: 320px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.SHOPPING .SHOPPINGSELECT {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 135px;
+  padding-top: 130px;
+}
+.SHOPPING .SELECT {
+  margin-right: 60px;
+}
+.SHOPPING .SELECTOP {
+  width: 350px;
+  font-weight: 600;
+}
+.SHOPPING select option {
+  color: #34424F;
+  font-weight: 600;
+}
+.SHOPPING ::-webkit-input-placeholder {
+  color: #34424F;
+  font-weight: 600;
+}
+.SHOPPING ::-moz-placeholder {
+  color: #34424F;
+  font-weight: 600;
+}
+.SHOPPING :-ms-input-placeholder {
+  color: #34424F;
+  font-weight: 600;
+}
+.SHOPPING ::-ms-input-placeholder {
+  color: #34424F;
+  font-weight: 600;
+}
+.SHOPPING ::placeholder {
+  color: #34424F;
+  font-weight: 600;
+}
+.SHOPPING .SEARCH_ALL {
+  position: relative;
+  display: inline-block;
+  width: 64%;
+}
+.SHOPPING .SHOPPINGSELECT_SEARCH {
+  width: 100%;
+  font-weight: 500;
+}
+.SHOPPING .SEARCHBTN_ALL {
+  position: absolute;
+  top: 19%;
+  right: 0px;
+  z-index: 10;
+  width: 20%;
+}
+.SHOPPING .SEARCHICON {
+  font-size: 2rem;
+  color: #FFF;
+  z-index: 5;
+  margin-right: 10px;
+}
+.SHOPPING .SEARCHBTN {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  font-size: 2rem;
+  border-radius: 0px 10px 10px 0px;
+  position: relative;
 }/*# sourceMappingURL=style.css.map */

@@ -33,3 +33,84 @@
     margin: 0 1rem;
     content: "/";
 }
+
+
+.SHOPPINGCARD{
+    margin-top: 35px;
+
+    a{
+        text-decoration: none;
+
+        .SHOPPINGCARD_IMG{
+            // display: inline-block;
+            // width: 100%;
+            // border-radius:3px 50px 3px 3px; 
+            position: relative;
+            margin-bottom: 20px;
+            filter: drop-shadow(0px 0px 5px #6b7d80);
+            &::before{
+                content: '';
+                width: 100%;
+                height: 50px;
+                background: rgba(248, 159, 105, 0.7);
+                border-radius: 0px 0px 3px 3px;
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+            }
+
+            img{
+                width: 100%;
+                border-radius:3px 50px 3px 3px; 
+            }
+
+            span{
+                display: flex;
+                align-items: center;
+                justify-content:center;
+
+                width: 100%;
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+
+                .SHOPPINGCART_ICON{
+                    &::before{
+                        color: #FFF;
+                        font-size: 2.5rem;
+                        margin-right: 20px;
+                        transform: translate(20%,20%);
+                    }
+                }
+
+                p{
+                    
+                    color: #FFF;
+                    font-weight: 900;}
+                    line-height: 50px;
+            }
+            
+        }
+
+        .SHOPPINGCARD_TITLE{
+            height: 125px;
+            font-weight: 700;
+            line-height: 34px;
+            margin-bottom: 10px;
+            color:$blueblack;
+        }
+
+        .SHOPPINGCARD_PRICE{
+            font-weight: 700;
+            line-height: 34px;
+            color: $redprice;
+            text-align: right;
+        }
+
+
+    }
+
+
+
+}
+
