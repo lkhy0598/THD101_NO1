@@ -2,10 +2,11 @@
 .INPUT {
 
     font-size: $p;
+    color: $blueblack;
 
     input {
         font-family: 'Noto Sans';
-        font-size: 20px;
+        font-size: $littleword;
         color: $blueblack;
         border-radius: 10px;
         box-sizing: border-box;
@@ -32,6 +33,7 @@
 
     font-size: $p;
     position: relative;
+    color: $blueblack;
 
     select {
         // 隱藏預設箭頭
@@ -39,7 +41,7 @@
         -webkit-appearance: none;
         -moz-appearance: none;
         font-family: 'Noto Sans';
-        font-size: 20px;
+        font-size: $littleword;
         color: $blueblack;
         border-radius: 10px;
         box-sizing: border-box;

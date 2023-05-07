@@ -265,10 +265,11 @@ a {
 
 .INPUT {
   font-size: 2.5rem;
+  color: #34424F;
 }
 .INPUT input {
   font-family: "Noto Sans";
-  font-size: 20px;
+  font-size: 2rem;
   color: #34424F;
   border-radius: 10px;
   box-sizing: border-box;
@@ -285,13 +286,14 @@ a {
 .SELECT {
   font-size: 2.5rem;
   position: relative;
+  color: #34424F;
 }
 .SELECT select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   font-family: "Noto Sans";
-  font-size: 20px;
+  font-size: 2rem;
   color: #34424F;
   border-radius: 10px;
   box-sizing: border-box;
@@ -420,14 +422,13 @@ a {
   color: #33414E;
 }
 
-section {
+.CAROUSEL {
   background-image: url("../../img/HEADER-BG.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
 }
-
-.MASTER_VISION {
+.CAROUSEL .MASTER_VISION {
   background-image: url("../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -437,14 +438,14 @@ section {
   height: 830px;
   float: right;
   margin-top: 105px;
-  animation: image 30s ease-in-out infinite;
+  animation: image_carousel 30s ease-in-out infinite;
 }
-.MASTER_VISION img {
+.CAROUSEL .MASTER_VISION > img {
   width: 100%;
   height: 830px;
 }
 
-@keyframes image {
+@keyframes image_carousel {
   0% {
     background-image: url("../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg");
   }
