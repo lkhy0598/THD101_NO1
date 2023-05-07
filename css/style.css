@@ -169,7 +169,7 @@ a {
   transition: all 1s ease;
 }
 .HEADER_NAV .RESERVE:hover {
-  background: linear-gradient(180deg, #C53D3D 0%, #BC6231 100%);
+  background: linear-gradient(180deg, #DC643E 0%, #f48347 100%);
   color: #FFFFFF;
 }
 
