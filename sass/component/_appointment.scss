@@ -1,0 +1,25 @@
+.APPOINTMENT{
+    width: 100px;
+    height: 300px;
+    border-radius: 10px 0 0 10px;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    background-color: #34424F;
+    transform: translateY(-50%);
+    z-index: 999;
+    line-height: 100px;
+    display: flex;
+    align-items: center;
+    
+  
+
+       >p{
+            color: $white;
+            font-weight: 700;
+            writing-mode: vertical-lr;
+            text-orientation: upright;  
+            letter-spacing: 10px;
+      
+        }
+}

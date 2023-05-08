@@ -1,23 +1,24 @@
-@import url('/css/reset.css');
+@import url("/css/reset.css");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
-html{
-    font-family: 'Noto Sans';
-    line-height: 1.25;
-    // letter-spacing: 1.5px;
-    font-size: $initial;
+html {
+  font-family: 'Noto Sans', sans-serif;
+  line-height: 1.25;
+  // letter-spacing: 1.5px;
+  font-size: $initial;
 }
 
 // header下面的背景
-.BACKGROUND{
-    background-image: url('../../img/BG.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+.BACKGROUND {
+  background-image: url("../../img/BG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 // wrapper
 .WRAPPER {
-    max-width: 1440px;
-    margin: 0 auto;
-    width: 75%;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 75%;
 }

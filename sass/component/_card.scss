@@ -1,15 +1,33 @@
 // index消息小卡
+
+.INFORMATION_CARD{
+    padding-top: 50px;
+}
+
+
 .CARD_BODY{
+    width: 1200px;
     height: 350px;
     // border: 2px solid ;
     margin: 0 auto;
     border-radius: 10px;
     display: flex;
+    padding: 50px 0;
 
 }
 
 .CARD_LEFT > img{
     border-radius: 10px 0 0 10px;
+}
+
+.CARD_RIGHT{
+    position: relative;
+    background-color: $white;
+    width: 675px;
+    height: 350px;
+    border-radius: 0 10px 10px 0;
+    padding:0 30px 0 40px;
+    
 }
 
 .CARD_TITLE{
@@ -21,18 +39,30 @@
     height: 40px;
     border-radius: 10px;
     text-align: center;
-    line-height: 45px;
+    line-height: 40px;
+    margin-top: 30px;
 }
 
 .CARD_DATE{
-    display: flex;
+    font-size: $littleword;
+    font-weight: 500;
+    padding-top: 30px;
 }
 
-.CARD_DATE li:not(:last-child)::after {
-    display: inline-block;
-    margin: 0 1rem;
-    content: "/";
+.CARD_CONTENT{
+    padding-top: 30px;
+    font-weight: 500;
+    line-height: 50px;
 }
+
+.ALLOW{
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+}
+
+
+// ================= SHOPPINGCARD ====================
 
 
 .SHOPPINGCARD{
