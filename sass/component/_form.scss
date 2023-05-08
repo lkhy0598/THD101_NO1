@@ -3,7 +3,9 @@
 
     font-size: $p;
     color: $blueblack;
-
+    @include m(){
+        font-size: $littleword;
+    }
     input {
         font-family: 'Noto Sans';
         font-size: $littleword;
@@ -34,6 +36,10 @@
     font-size: $p;
     position: relative;
     color: $blueblack;
+
+    @include m(){
+        font-size: $littleword;
+    }
 
     select {
         // 隱藏預設箭頭
@@ -79,9 +85,13 @@
 
     font-size: $p;
 
+    @include m(){
+        font-size: $littleword;
+    }
+
     textarea {
         font-family: 'Noto Sans';
-        font-size: 20px;
+        font-size: $littleword;
         color: $blueblack;
         border-radius: 10px;
         box-sizing: border-box;

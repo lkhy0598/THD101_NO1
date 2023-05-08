@@ -15,6 +15,12 @@ a {
     cursor: pointer;
 
     transition: all 1s ease;
+
+
+    @include m(){
+       font-size: $littleword;
+    }
+
     &:hover{
         background: $linear-orange-hover;
         color: $white;
@@ -24,6 +30,10 @@ a {
 .LOGIN {
     font-size: $p;
     font-weight: 700;
+
+    @include m(){
+        font-size: $littleword;
+    }
 }
 // 前台btn有放大外框效果 width需自行設定
 // 如果BTN上方有文字，請自行加入margin-top:15px
@@ -40,6 +50,12 @@ a {
     border: unset;
     background: $linear-darkblue;
     color: $white;
+
+    @include m(){
+        font-size: $littleword;
+        height: 50px;
+        line-height: 50px;
+    }
     
     &:hover{
         background: $linear-darkblue-hover;
@@ -85,7 +101,12 @@ a {
     border: unset;
     background: $linear-red;
     color: $white;
-    cursor: pointer;
+
+    @include m{
+        font-size: $littleword;
+        height: 50px;
+        line-height: 50px;
+    }
 
     &:hover{
         // opacity: .7;
@@ -98,10 +119,18 @@ a {
 .TOP_BTN{
     cursor: pointer;
     background-image: url(/img/TOP-BTN.svg);
+   
     width: 100px;
     height: 100px;
     border: unset;
     border-radius: 50%;
+
+    @include m{
+        background-size: 42px;
+        background-repeat: no-repeat;
+        width: 42px;
+        height: 42px;
+    }
 
     &:hover{
         background-image: url(/img/TOP-BTN-HOVER.svg);
@@ -109,5 +138,11 @@ a {
         height: 100px;
         border: unset;
         border-radius: 50%;
+        @include m{
+            background-size: 42px;
+            background-repeat: no-repeat;
+            width: 42px;
+            height: 42px;
+        }
     }
 }

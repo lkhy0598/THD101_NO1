@@ -4,39 +4,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
 @import url("/css/reset.css");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
-h1 {
-  font-size: 4.5rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-}
-
-h2 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-}
-
-h3 {
-  font-size: 3rem;
-  font-weight: 400;
-  letter-spacing: 1.5px;
-}
-
-p {
-  font-size: 2.5rem;
-  letter-spacing: 1.5px;
-}
-
-.BREAD {
-  font-size: 1.5rem;
-  letter-spacing: 1.5px;
-}
-
-.EN {
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-
 .COL-1 {
   width: calc((100% - 220px) / 12 * 1);
   margin-right: 20px;
@@ -133,6 +100,59 @@ p {
   margin-right: 0;
 }
 
+h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+@media screen and (max-width: 414px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+@media screen and (max-width: 414px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+@media screen and (max-width: 414px) {
+  h3 {
+    font-size: 2.5rem;
+  }
+}
+
+p {
+  font-size: 2.5rem;
+  letter-spacing: 1.5px;
+}
+@media screen and (max-width: 414px) {
+  p {
+    font-size: 2rem;
+  }
+}
+
+.BREAD {
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+}
+
+.EN {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
 html {
   font-family: "Noto Sans";
   line-height: 1.25;
@@ -157,7 +177,6 @@ a {
 
 .HEADER_NAV .RESERVE {
   cursor: pointer;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF965C), to(#DC643E));
   background: linear-gradient(180deg, #FF965C 0%, #DC643E 100%);
   font-size: 2.5rem;
   border-radius: 10px;
@@ -167,11 +186,14 @@ a {
   width: 270px;
   height: 65px;
   cursor: pointer;
-  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
+@media screen and (max-width: 414px) {
+  .HEADER_NAV .RESERVE {
+    font-size: 2rem;
+  }
+}
 .HEADER_NAV .RESERVE:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#DC643E), to(#f48347));
   background: linear-gradient(180deg, #DC643E 0%, #f48347 100%);
   color: #FFFFFF;
 }
@@ -179,6 +201,11 @@ a {
 .LOGIN {
   font-size: 2.5rem;
   font-weight: 700;
+}
+@media screen and (max-width: 414px) {
+  .LOGIN {
+    font-size: 2rem;
+  }
 }
 
 .BTN {
@@ -191,12 +218,17 @@ a {
   border-radius: 10px;
   position: relative;
   border: unset;
-  background: -webkit-gradient(linear, left top, left bottom, from(#33414E), to(#22163C));
   background: linear-gradient(180deg, #33414E 0%, #22163C 100%);
   color: #FFFFFF;
 }
+@media screen and (max-width: 414px) {
+  .BTN {
+    font-size: 2rem;
+    height: 50px;
+    line-height: 50px;
+  }
+}
 .BTN:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#24313F));
   background: linear-gradient(180deg, #000000 0%, #24313F 100%);
   color: #FFFFFF;
 }
@@ -211,13 +243,17 @@ a {
   border-radius: 10px;
   position: relative;
   border: unset;
-  background: -webkit-gradient(linear, left top, left bottom, from(#CB5656), to(#A92A2A));
   background: linear-gradient(180deg, #CB5656 0%, #A92A2A 100%);
   color: #FFFFFF;
-  cursor: pointer;
+}
+@media screen and (max-width: 414px) {
+  .BTN_BACK {
+    font-size: 2rem;
+    height: 50px;
+    line-height: 50px;
+  }
 }
 .BTN_BACK:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#610E0E), to(#891D1D));
   background: linear-gradient(180deg, #610E0E 0%, #891D1D 100%);
 }
 
@@ -229,6 +265,14 @@ a {
   border: unset;
   border-radius: 50%;
 }
+@media screen and (max-width: 414px) {
+  .TOP_BTN {
+    background-size: 42px;
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px;
+  }
+}
 .TOP_BTN:hover {
   background-image: url(/img/TOP-BTN-HOVER.svg);
   width: 100px;
@@ -236,13 +280,19 @@ a {
   border: unset;
   border-radius: 50%;
 }
+@media screen and (max-width: 414px) {
+  .TOP_BTN:hover {
+    background-size: 42px;
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px;
+  }
+}
 
 .CARD_BODY {
   height: 350px;
   margin: 0 auto;
   border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -263,8 +313,6 @@ a {
 }
 
 .CARD_DATE {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -283,8 +331,7 @@ a {
 .SHOPPINGCARD a .SHOPPINGCARD_IMG {
   position: relative;
   margin-bottom: 20px;
-  -webkit-filter: drop-shadow(0px 0px 5px #6b7d80);
-          filter: drop-shadow(0px 0px 5px #6b7d80);
+  filter: drop-shadow(0px 0px 5px #6b7d80);
 }
 .SHOPPINGCARD a .SHOPPINGCARD_IMG::before {
   content: "";
@@ -301,15 +348,9 @@ a {
   border-radius: 3px 50px 3px 3px;
 }
 .SHOPPINGCARD a .SHOPPINGCARD_IMG span {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   position: absolute;
   left: 0px;
@@ -320,8 +361,7 @@ a {
   color: #FFF;
   font-size: 2.5rem;
   margin-right: 20px;
-  -webkit-transform: translate(20%, 20%);
-          transform: translate(20%, 20%);
+  transform: translate(20%, 20%);
 }
 .SHOPPINGCARD a .SHOPPINGCARD_IMG span p {
   color: #FFF;
@@ -345,13 +385,17 @@ a {
   font-size: 2.5rem;
   color: #34424F;
 }
+@media screen and (max-width: 414px) {
+  .INPUT {
+    font-size: 2rem;
+  }
+}
 .INPUT input {
   font-family: "Noto Sans";
   font-size: 2rem;
   color: #34424F;
   border-radius: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 10px;
   margin-top: 10px;
   border: 1px solid #9E9E9E;
@@ -367,6 +411,11 @@ a {
   position: relative;
   color: #34424F;
 }
+@media screen and (max-width: 414px) {
+  .SELECT {
+    font-size: 2rem;
+  }
+}
 .SELECT select {
   appearance: none;
   -webkit-appearance: none;
@@ -375,8 +424,7 @@ a {
   font-size: 2rem;
   color: #34424F;
   border-radius: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 10px;
   margin-top: 10px;
   border: 1px solid #9E9E9E;
@@ -403,13 +451,17 @@ a {
 .TEXTAREA {
   font-size: 2.5rem;
 }
+@media screen and (max-width: 414px) {
+  .TEXTAREA {
+    font-size: 2rem;
+  }
+}
 .TEXTAREA textarea {
   font-family: "Noto Sans";
-  font-size: 20px;
+  font-size: 2rem;
   color: #34424F;
   border-radius: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 10px;
   margin-top: 10px;
   border: 1px solid #9E9E9E;
@@ -447,8 +499,7 @@ a {
   width: 280px;
   height: 100px;
   padding: 5px 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .BIG_TITLE .BIG_TITLE_IMG h1 {
   text-align: left;
@@ -479,6 +530,14 @@ a {
   text-align: center;
   border-radius: 50%;
   color: #FFFFFF;
+}
+@media screen and (max-width: 414px) {
+  .ARC_TITLE {
+    font-size: 2.5rem;
+    height: 65px;
+    width: 65px;
+    line-height: 65px;
+  }
 }
 
 .DOT {
@@ -520,42 +579,13 @@ a {
   height: 830px;
   float: right;
   margin-top: 105px;
-<<<<<<< HEAD
   animation: image_carousel 30s ease-in-out infinite;
-=======
-  -webkit-animation: image_carousel 30s ease-in-out infinite;
-          animation: image_carousel 30s ease-in-out infinite;
->>>>>>> 277963854afebdb2c8221e8940cc5b5c0a22cc11
 }
 .CAROUSEL .MASTER_VISION > img {
   width: 100%;
   height: 830px;
 }
 
-<<<<<<< HEAD
-=======
-@-webkit-keyframes image_carousel {
-  0% {
-    background-image: url("../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg");
-  }
-  20% {
-    background-image: url("../../img/header/leslie-low-0lzAa5raUso-unsplash.png");
-  }
-  40% {
-    background-image: url("../../img/header/flouffy-7hEXd9kYPCY-unsplash.jpg");
-  }
-  60% {
-    background-image: url("../../img/header/alicja-gancarz-e3EHK9pzmLU-unsplash.jpg");
-  }
-  80% {
-    background-image: url("../../img/header/peri-stojnic-5Vr_RVPfbMI-unsplash.jpg");
-  }
-  100% {
-    background-image: url("../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg");
-  }
-}
-
->>>>>>> 277963854afebdb2c8221e8940cc5b5c0a22cc11
 @keyframes image_carousel {
   0% {
     background-image: url("../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg");
@@ -577,15 +607,11 @@ a {
   }
 }
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 326px;
   background: linear-gradient(258.59deg, #28333B 32.91%, #323F4B 61.97%);
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   position: relative;
 }
 
@@ -600,8 +626,8 @@ footer {
 
 .FOOTER_ICON {
   position: absolute;
-  bottom: 3.65vh;
-  right: 12vw;
+  bottom: 11%;
+  right: 10%;
 }
 
 .FOOTER_ICON > a {
@@ -642,18 +668,12 @@ footer {
 }
 .HEADER_NAV:hover img[src="img/V-HEADER-LOGO.svg"] {
   opacity: 0;
-  -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
 .HEADER_NAV > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   padding-left: 20%;
 }
 .HEADER_NAV > ul > li > a {
@@ -669,23 +689,28 @@ footer {
   font-size: 2.5rem;
   font-weight: 700;
 }
+@media screen and (max-width: 414px) {
+  .HEADER_NAV > ul > li > a > span {
+    font-size: 2rem;
+  }
+}
 .HEADER_NAV > ul > li > a > i {
   font-size: 2.5rem;
+}
+@media screen and (max-width: 414px) {
+  .HEADER_NAV > ul > li > a > i {
+    font-size: 2rem;
+  }
 }
 .HEADER_NAV > ul > li > a .bi-person-fill {
   margin-right: 10px;
 }
 
 .FOOTER_NAV > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 360px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-right: 16.6vw;
   margin-top: 2.5vh;
 }
@@ -705,6 +730,11 @@ footer {
   font-size: 2.5rem;
   font-weight: 500;
 }
+@media screen and (max-width: 414px) {
+  .FOOTER_NAV > ul > li > a > span {
+    font-size: 2rem;
+  }
+}
 
 .SHOPPING .SHOPPING_MASTERVISION {
   background-image: url("/img/shopping/SHOPPING_MASTERVISION_01.jpg");
@@ -716,8 +746,7 @@ footer {
   height: 830px;
   float: right;
   margin-top: 105px;
-  -webkit-animation: image 30s ease-in-out infinite;
-          animation: image 30s ease-in-out infinite;
+  animation: image 30s ease-in-out infinite;
 }
 .SHOPPING .SHOPPING_MASTERVISION img {
   width: 100%;
@@ -749,23 +778,18 @@ footer {
   padding-top: 45px;
 }
 .SHOPPING .SHOPPINGCARDAREA_UL {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 .SHOPPING .SHOPPINGCARDBTN {
   margin-top: 60px;
   width: 320px;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .SHOPPING .SHOPPINGSELECT {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0 135px;
   padding-top: 130px;
 }
@@ -780,19 +804,7 @@ footer {
   color: #34424F;
   font-weight: 600;
 }
-.SHOPPING ::-webkit-input-placeholder {
-  color: #34424F;
-  font-weight: 600;
-}
 .SHOPPING ::-moz-placeholder {
-  color: #34424F;
-  font-weight: 600;
-}
-.SHOPPING :-ms-input-placeholder {
-  color: #34424F;
-  font-weight: 600;
-}
-.SHOPPING ::-ms-input-placeholder {
   color: #34424F;
   font-weight: 600;
 }
