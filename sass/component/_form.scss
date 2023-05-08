@@ -40,6 +40,11 @@
         appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
+        // 新箭頭
+        background-image: url('../../img/chevron-down.svg');
+        background-repeat: no-repeat;
+        background-position-x: 95%;
+        background-position-y: 50%;
         font-family: 'Noto Sans';
         font-size: $littleword;
         color: $blueblack;
@@ -50,22 +55,6 @@
         border: 1px solid #9E9E9E;
         height: 45px;
         width: 300px;
-
-    }
-
-    // 箭頭
-    &::after {
-        content: "";
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        border-left: 2.5px solid black;
-        border-bottom: 2.5px solid black;
-        transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-        position: absolute;
-        bottom: 13.5px;
-        right: 17.5px;
     }
 
     select:focus {
