@@ -13,20 +13,33 @@ h1{
     font-size: $h1;
     font-weight: 700;
     letter-spacing: 1.5px;
+
+    @include m(){
+        font-size: $h2;
+    }
 }
 h2{
     font-size: $h2;
     font-weight: 700;
     letter-spacing: 1.5px;
+    @include m(){
+        font-size: $h3;
+    }
 }
 h3{
     font-size: $h3;
     font-weight: 400;
     letter-spacing: 1.5px;
+    @include m(){
+        font-size: $p;
+    }
 }
 p{
     font-size: $p;
     letter-spacing: 1.5px;
+    @include m(){
+        font-size: $littleword;
+    }
 }
 
 .BREAD{

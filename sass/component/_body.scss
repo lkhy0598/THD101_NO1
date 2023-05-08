@@ -1,11 +1,11 @@
 @import url("/css/reset.css");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
-html {
-  font-family: 'Noto Sans', sans-serif;
-  line-height: 1.25;
-  // letter-spacing: 1.5px;
-  font-size: $initial;
+html{
+    font-family: 'Noto Sans TC';
+    line-height: 1.25;
+    // letter-spacing: 1.5px;
+    font-size: $initial;
 }
 
 // header下面的背景

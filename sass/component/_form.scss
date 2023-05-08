@@ -2,10 +2,13 @@
 .INPUT {
 
     font-size: $p;
-
+    color: $blueblack;
+    @include m(){
+        font-size: $littleword;
+    }
     input {
         font-family: 'Noto Sans';
-        font-size: 20px;
+        font-size: $littleword;
         color: $blueblack;
         border-radius: 10px;
         box-sizing: border-box;
@@ -32,14 +35,24 @@
 
     font-size: $p;
     position: relative;
+    color: $blueblack;
+
+    @include m(){
+        font-size: $littleword;
+    }
 
     select {
         // 隱藏預設箭頭
         appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
+        // 新箭頭
+        background-image: url('../../img/chevron-down.svg');
+        background-repeat: no-repeat;
+        background-position-x: 95%;
+        background-position-y: 50%;
         font-family: 'Noto Sans';
-        font-size: 20px;
+        font-size: $littleword;
         color: $blueblack;
         border-radius: 10px;
         box-sizing: border-box;
@@ -48,22 +61,6 @@
         border: 1px solid #9E9E9E;
         height: 45px;
         width: 300px;
-
-    }
-
-    // 箭頭
-    &::after {
-        content: "";
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        border-left: 2.5px solid black;
-        border-bottom: 2.5px solid black;
-        transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-        position: absolute;
-        bottom: 13.5px;
-        right: 17.5px;
     }
 
     select:focus {
@@ -77,9 +74,13 @@
 
     font-size: $p;
 
+    @include m(){
+        font-size: $littleword;
+    }
+
     textarea {
         font-family: 'Noto Sans';
-        font-size: 20px;
+        font-size: $littleword;
         color: $blueblack;
         border-radius: 10px;
         box-sizing: border-box;

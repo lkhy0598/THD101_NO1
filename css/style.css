@@ -5,39 +5,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
 @import url("/css/reset.css");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
-h1 {
-  font-size: 4.5rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-}
-
-h2 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-}
-
-h3 {
-  font-size: 3rem;
-  font-weight: 400;
-  letter-spacing: 1.5px;
-}
-
-p {
-  font-size: 2.5rem;
-  letter-spacing: 1.5px;
-}
-
-.BREAD {
-  font-size: 1.5rem;
-  letter-spacing: 1.5px;
-}
-
-.EN {
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-
 .COL-1 {
   width: calc((100% - 220px) / 12 * 1);
   margin-right: 20px;
@@ -134,6 +101,59 @@ p {
   margin-right: 0;
 }
 
+h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+@media screen and (max-width: 414px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+@media screen and (max-width: 414px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+@media screen and (max-width: 414px) {
+  h3 {
+    font-size: 2.5rem;
+  }
+}
+
+p {
+  font-size: 2.5rem;
+  letter-spacing: 1.5px;
+}
+@media screen and (max-width: 414px) {
+  p {
+    font-size: 2rem;
+  }
+}
+
+.BREAD {
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+}
+
+.EN {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
 html {
   font-family: "Noto Sans", sans-serif;
   line-height: 1.25;
@@ -169,6 +189,11 @@ a {
   cursor: pointer;
   transition: all 1s ease;
 }
+@media screen and (max-width: 414px) {
+  .HEADER_NAV .RESERVE {
+    font-size: 2rem;
+  }
+}
 .HEADER_NAV .RESERVE:hover {
   background: linear-gradient(180deg, #DC643E 0%, #f48347 100%);
   color: #FFFFFF;
@@ -177,6 +202,11 @@ a {
 .LOGIN {
   font-size: 2.5rem;
   font-weight: 700;
+}
+@media screen and (max-width: 414px) {
+  .LOGIN {
+    font-size: 2rem;
+  }
 }
 
 .BTN {
@@ -191,6 +221,13 @@ a {
   border: unset;
   background: linear-gradient(180deg, #33414E 0%, #22163C 100%);
   color: #FFFFFF;
+}
+@media screen and (max-width: 414px) {
+  .BTN {
+    font-size: 2rem;
+    height: 50px;
+    line-height: 50px;
+  }
 }
 .BTN:hover {
   background: linear-gradient(180deg, #000000 0%, #24313F 100%);
@@ -209,7 +246,13 @@ a {
   border: unset;
   background: linear-gradient(180deg, #CB5656 0%, #A92A2A 100%);
   color: #FFFFFF;
-  cursor: pointer;
+}
+@media screen and (max-width: 414px) {
+  .BTN_BACK {
+    font-size: 2rem;
+    height: 50px;
+    line-height: 50px;
+  }
 }
 .BTN_BACK:hover {
   background: linear-gradient(180deg, #610E0E 0%, #891D1D 100%);
@@ -223,12 +266,28 @@ a {
   border: unset;
   border-radius: 50%;
 }
+@media screen and (max-width: 414px) {
+  .TOP_BTN {
+    background-size: 42px;
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px;
+  }
+}
 .TOP_BTN:hover {
   background-image: url(/img/TOP-BTN-HOVER.svg);
   width: 100px;
   height: 100px;
   border: unset;
   border-radius: 50%;
+}
+@media screen and (max-width: 414px) {
+  .TOP_BTN:hover {
+    background-size: 42px;
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px;
+  }
 }
 
 .INFORMATION_CARD {
@@ -271,9 +330,13 @@ a {
 }
 
 .CARD_DATE {
+<<<<<<< HEAD
   font-size: 2rem;
   font-weight: 500;
   padding-top: 30px;
+=======
+  display: flex;
+>>>>>>> 347ae7a277beec2fb30aa507e175101ee9ec7ca0
 }
 
 .CARD_CONTENT {
@@ -349,10 +412,16 @@ a {
 
 .INPUT {
   font-size: 2.5rem;
+  color: #34424F;
+}
+@media screen and (max-width: 414px) {
+  .INPUT {
+    font-size: 2rem;
+  }
 }
 .INPUT input {
   font-family: "Noto Sans";
-  font-size: 20px;
+  font-size: 2rem;
   color: #34424F;
   border-radius: 10px;
   box-sizing: border-box;
@@ -369,13 +438,23 @@ a {
 .SELECT {
   font-size: 2.5rem;
   position: relative;
+  color: #34424F;
+}
+@media screen and (max-width: 414px) {
+  .SELECT {
+    font-size: 2rem;
+  }
 }
 .SELECT select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  background-image: url("../../img/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
   font-family: "Noto Sans";
-  font-size: 20px;
+  font-size: 2rem;
   color: #34424F;
   border-radius: 10px;
   box-sizing: border-box;
@@ -385,19 +464,6 @@ a {
   height: 45px;
   width: 300px;
 }
-.SELECT::after {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-left: 2.5px solid black;
-  border-bottom: 2.5px solid black;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  position: absolute;
-  bottom: 13.5px;
-  right: 17.5px;
-}
 .SELECT select:focus {
   outline: none;
 }
@@ -405,9 +471,14 @@ a {
 .TEXTAREA {
   font-size: 2.5rem;
 }
+@media screen and (max-width: 414px) {
+  .TEXTAREA {
+    font-size: 2rem;
+  }
+}
 .TEXTAREA textarea {
   font-family: "Noto Sans";
-  font-size: 20px;
+  font-size: 2rem;
   color: #34424F;
   border-radius: 10px;
   box-sizing: border-box;
@@ -479,6 +550,14 @@ a {
   text-align: center;
   border-radius: 50%;
   color: #FFFFFF;
+}
+@media screen and (max-width: 414px) {
+  .ARC_TITLE {
+    font-size: 2.5rem;
+    height: 65px;
+    width: 65px;
+    line-height: 65px;
+  }
 }
 
 .DOT {
@@ -589,8 +668,8 @@ footer {
 
 .FOOTER_ICON {
   position: absolute;
-  bottom: 3.65vh;
-  right: 12vw;
+  bottom: 11%;
+  right: 10%;
 }
 
 .FOOTER_ICON > a {
@@ -652,8 +731,18 @@ footer {
   font-size: 2.5rem;
   font-weight: 700;
 }
+@media screen and (max-width: 414px) {
+  .HEADER_NAV > ul > li > a > span {
+    font-size: 2rem;
+  }
+}
 .HEADER_NAV > ul > li > a > i {
   font-size: 2.5rem;
+}
+@media screen and (max-width: 414px) {
+  .HEADER_NAV > ul > li > a > i {
+    font-size: 2rem;
+  }
 }
 .HEADER_NAV > ul > li > a .bi-person-fill {
   margin-right: 10px;
@@ -682,6 +771,11 @@ footer {
 .FOOTER_NAV > ul > li > a > span {
   font-size: 2.5rem;
   font-weight: 500;
+}
+@media screen and (max-width: 414px) {
+  .FOOTER_NAV > ul > li > a > span {
+    font-size: 2rem;
+  }
 }
 
 .BIG_TITLE {
@@ -891,6 +985,13 @@ footer {
   color: #34424F;
   font-weight: 600;
 }
+<<<<<<< HEAD
+=======
+.SHOPPING ::-moz-placeholder {
+  color: #34424F;
+  font-weight: 600;
+}
+>>>>>>> 347ae7a277beec2fb30aa507e175101ee9ec7ca0
 .SHOPPING ::placeholder {
   color: #34424F;
   font-weight: 600;
@@ -924,4 +1025,6 @@ footer {
   font-size: 2rem;
   border-radius: 0px 10px 10px 0px;
   position: relative;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

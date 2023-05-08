@@ -2,7 +2,33 @@
 @mixin m() {
     @media screen and (max-width: 414px) {
         @content;
+
+
+        
     }
+}
+@mixin m() {
+  
+  @for $i from 1 through 11 {
+    .RWD-COL-#{$i} {
+    width: calc((100% - #{$column-gap * 10}) / 11 * #{$i});
+    margin-right: $column-gap;
+    // float: left;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  }
+}
+
+
+@mixin flex-container($direction: row, $wrap: wrap, $justify-content: center, $align-items: center) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
 }
 
 $column-gap: 20px;
@@ -19,10 +45,4 @@ $column-gap: 20px;
   }
 }
 
-@mixin flex-container($direction: row, $wrap: wrap, $justify-content: center, $align-items: center) {
-    display: flex;
-    flex-direction: $direction;
-    flex-wrap: $wrap;
-    justify-content: $justify-content;
-    align-items: $align-items;
-}
+
