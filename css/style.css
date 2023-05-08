@@ -420,6 +420,10 @@ a {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  background-image: url("../../img/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
   font-family: "Noto Sans";
   font-size: 2rem;
   color: #34424F;
@@ -430,19 +434,6 @@ a {
   border: 1px solid #9E9E9E;
   height: 45px;
   width: 300px;
-}
-.SELECT::after {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-left: 2.5px solid black;
-  border-bottom: 2.5px solid black;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  position: absolute;
-  bottom: 13.5px;
-  right: 17.5px;
 }
 .SELECT select:focus {
   outline: none;
@@ -579,11 +570,33 @@ a {
   height: 830px;
   float: right;
   margin-top: 105px;
-  animation: image_carousel 30s ease-in-out infinite;
+  -webkit-animation: image_carousel 30s ease-in-out infinite;
+          animation: image_carousel 30s ease-in-out infinite;
 }
 .CAROUSEL .MASTER_VISION > img {
   width: 100%;
   height: 830px;
+}
+
+@-webkit-keyframes image_carousel {
+  0% {
+    background-image: url("../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg");
+  }
+  20% {
+    background-image: url("../../img/header/leslie-low-0lzAa5raUso-unsplash.png");
+  }
+  40% {
+    background-image: url("../../img/header/flouffy-7hEXd9kYPCY-unsplash.jpg");
+  }
+  60% {
+    background-image: url("../../img/header/alicja-gancarz-e3EHK9pzmLU-unsplash.jpg");
+  }
+  80% {
+    background-image: url("../../img/header/peri-stojnic-5Vr_RVPfbMI-unsplash.jpg");
+  }
+  100% {
+    background-image: url("../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg");
+  }
 }
 
 @keyframes image_carousel {
@@ -841,4 +854,6 @@ footer {
   font-size: 2rem;
   border-radius: 0px 10px 10px 0px;
   position: relative;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
