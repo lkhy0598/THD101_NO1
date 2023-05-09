@@ -2,9 +2,6 @@
 @mixin m() {
     @media screen and (max-width: 414px) {
         @content;
-
-
-        
     }
 }
 @mixin m() {
