@@ -47,8 +47,21 @@
 //     }
 // }
 
+
+.DOT{
+    position: absolute;
+    width: 425px;
+    height: 425px;
+    right: 0px;
+    bottom:-120px;
+    z-index: 10;
+
+}
+
+// ============================================================
+
 .SHOPPINGBG{
-    background-image: url('../../img/BG.jpg');
+    background-image: url('../../img/shopping/SHOPPING_BG.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -63,6 +76,7 @@
     margin-bottom: 40px;
     &::after{
         width: 0px;
+        border: 0px;
     }
 }
 
@@ -119,7 +133,7 @@ select option{
 .SEARCH_ALL{
     position: relative;
     display: inline-block;
-    width: 64%;
+    width: 63%;
 }
 
 
@@ -156,5 +170,85 @@ select option{
     
     
 }
+
+// ==================================================================
+
+.SHOPPINGITEM{
+    box-sizing: border-box;
+    padding: 0 135px;
+    padding-top: 100px;
+}
+
+.SHOPPINGITEM_UL{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    
+}
+
+.SHOPPINGITEM .SHOPPINGCARD{
+    margin-bottom: 50px;
+    // flex-basis: 321.41px;
+}
+
+.PGAENUMBER{
+    padding-top: 120px;
+    display: flex;
+    justify-content:center;
+}
+
+.PGAENUMBER span{
+    width: 25px;
+    &:hover{
+        border-bottom: 2px solid $blueblack;
+    }
+}
+
+.PGAENUMBER span>img{
+    margin: 0 auto;
+    height: 25px;
+    
+}
+
+.PAGEBTN{
+    width: 12px;
+    cursor: pointer;
+    
+}
+
+.PGAENUMBER p{
+    display: block;
+    width: 50px;
+    margin: 0 10px;
+    color: $blueblack;
+    cursor: pointer;
+    text-align: center;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.LEFT{
+    transform: rotate(180deg);
+    margin-right: 20px;
+    padding-right: 25%;
+
+}
+
+.RIGHT{
+    margin-left: 20px;
+    padding-left: 25%;
+    
+}
+
+
+footer{
+    margin-top: 335px;
+}
+
+
+
+
+
 
 }
