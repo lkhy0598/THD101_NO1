@@ -1,0 +1,174 @@
+.BIG_TITLE { 
+    padding-top: 100px;
+}
+
+.BACKGROUND{
+    position: relative;
+}
+
+// .BACKGROUND::after{
+//     content: "";
+//     background-image: url('/img/index/test.jpg');
+//     top: 0;
+//     left: 0;
+//     position: absolute;
+//     display: block;
+// }
+
+// ==========看診進度==========
+.CONSULTATION_UL{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 120px;
+}
+
+.CONSULTATION_ITEM{
+    padding: 0 90px;
+}
+
+.TOPBACKGROUND_1 , .TOPBACKGROUND_2, .TOPBACKGROUND_3{
+    width: 293px;
+    height: 55px;
+    background-color: $lightblue;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+
+.TOPBACKGROUND_1::after{
+    content: "第一診間";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+    width: 182px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border-radius: 100px;
+    background-color: $orange;
+}
+
+.TOPBACKGROUND_2::after{
+    content: "第二診間";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+    width: 182px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border-radius: 100px;
+    background-color: $orange;
+}
+
+.TOPBACKGROUND_3::after{
+    content: "第三診間";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+    width: 182px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border-radius: 100px;
+    background-color: $orange;
+}
+
+
+.CONSULTATIONCARD{
+    width: 293px;
+    height: 296px;
+    background-color: $white;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+
+    >p{
+        padding: 20px 0;
+        font-weight: 500;
+    }
+
+    
+
+    .CONSULTATION_NUM{
+        font-size: 80px;
+        font-weight: 700;
+        color: $orange;
+    }
+}
+
+
+// ======== 資訊導覽 ========
+
+.BTN_WRAAPER{
+    margin-top: 80px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.BTN{
+    width: 320px;
+    
+}
+
+// =========== 服務項目 =============
+
+
+.Services_UL{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.Services_ITEM{
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.Services_ITEM > img{
+    border-radius: 80px 10px 80px 10px;
+}
+
+.Services_ITEM h3{
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+
+// ================================
+
+.FEATURE_WRAPPER{
+    display: flex;
+}
+
+.FEATURE_ITEM{
+    // height: 100px;
+}
+
+.FEATURE_ITEM p{
+    padding: 0 130px;
+}
+
+
+.FEATURE_RIGHT > img{
+    border-radius: 100px 0 0 100px;
+}
+
+.ARC_TITLE{}
