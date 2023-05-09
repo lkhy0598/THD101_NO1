@@ -3,9 +3,10 @@
 
     font-size: $p;
     color: $blueblack;
-    @include m(){
-        font-size: $littleword;
-    }
+
+    // @include m(){
+    //     font-size: $littleword;
+    // }
     input {
         font-family: 'Noto Sans';
         font-size: $littleword;
@@ -37,9 +38,9 @@
     position: relative;
     color: $blueblack;
 
-    @include m(){
-        font-size: $littleword;
-    }
+    // @include m(){
+    //     font-size: $littleword;
+    // }
 
     select {
         // 隱藏預設箭頭
@@ -61,6 +62,7 @@
         border: 1px solid #9E9E9E;
         height: 45px;
         width: 300px;
+
     }
 
     select:focus {
@@ -73,10 +75,10 @@
 .TEXTAREA {
 
     font-size: $p;
-
-    @include m(){
-        font-size: $littleword;
-    }
+    color: $blueblack;
+    // @include m(){
+    //     font-size: $littleword;
+    // }
 
     textarea {
         font-family: 'Noto Sans';

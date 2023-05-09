@@ -1,0 +1,73 @@
+.ASIDE_TOP {
+    background-color: #EEEEEE;
+    width: 18%;
+    padding: 10px 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    select{
+        width: 100%;
+    }
+
+    h3{
+        color: $blueblack;
+        margin: 20px 0;
+    }
+
+    h3:nth-of-type(2){
+        align-self: flex-end;
+    }
+
+    span {
+        font-size: 6rem;
+        font-weight: 700;
+    }
+
+    .BTN_BACK {
+        text-align: left;
+        width: 100%;
+        margin: 0 0 15px;
+        padding: 0 20px;
+
+        .bi-arrow-right-circle {
+            position: absolute;
+            right: 20px;
+        }
+    }
+}
+
+.ASIDE_BUTTON {
+    background-color: #EBE3DD;
+    width: 18%;
+
+    ul {
+
+        li {
+
+            a {
+                font-size: $p;
+                text-decoration: none;
+                line-height: 80px;
+                color: $blueblack;
+                display: block;
+                position: relative;
+
+                &:hover {
+                    background-color: $white;
+                }
+
+                >i:first-of-type {
+                    margin-left: 50px;
+                    margin-right: 10px;
+                }
+
+                .bi-chevron-right {
+                    position: absolute;
+                    right: 50px;
+                }
+            }
+        }
+    }
+
+}

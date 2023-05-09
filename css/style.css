@@ -105,21 +105,11 @@ h1 {
   font-weight: 700;
   letter-spacing: 1.5px;
 }
-@media screen and (max-width: 414px) {
-  h1 {
-    font-size: 3.5rem;
-  }
-}
 
 h2 {
   font-size: 3.5rem;
   font-weight: 700;
   letter-spacing: 1.5px;
-}
-@media screen and (max-width: 414px) {
-  h2 {
-    font-size: 3rem;
-  }
 }
 
 h3 {
@@ -127,20 +117,10 @@ h3 {
   font-weight: 400;
   letter-spacing: 1.5px;
 }
-@media screen and (max-width: 414px) {
-  h3 {
-    font-size: 2.5rem;
-  }
-}
 
 p {
   font-size: 2.5rem;
   letter-spacing: 1.5px;
-}
-@media screen and (max-width: 414px) {
-  p {
-    font-size: 2rem;
-  }
 }
 
 .BREAD {
@@ -154,7 +134,7 @@ p {
 }
 
 html {
-  font-family: "Noto Sans";
+  font-family: "Noto Sans TC";
   line-height: 1.25;
   font-size: 10px;
 }
@@ -188,11 +168,6 @@ a {
   cursor: pointer;
   transition: all 1s ease;
 }
-@media screen and (max-width: 414px) {
-  .HEADER_NAV .RESERVE {
-    font-size: 2rem;
-  }
-}
 .HEADER_NAV .RESERVE:hover {
   background: linear-gradient(180deg, #DC643E 0%, #f48347 100%);
   color: #FFFFFF;
@@ -201,11 +176,6 @@ a {
 .LOGIN {
   font-size: 2.5rem;
   font-weight: 700;
-}
-@media screen and (max-width: 414px) {
-  .LOGIN {
-    font-size: 2rem;
-  }
 }
 
 .BTN {
@@ -220,13 +190,6 @@ a {
   border: unset;
   background: linear-gradient(180deg, #33414E 0%, #22163C 100%);
   color: #FFFFFF;
-}
-@media screen and (max-width: 414px) {
-  .BTN {
-    font-size: 2rem;
-    height: 50px;
-    line-height: 50px;
-  }
 }
 .BTN:hover {
   background: linear-gradient(180deg, #000000 0%, #24313F 100%);
@@ -246,13 +209,6 @@ a {
   background: linear-gradient(180deg, #CB5656 0%, #A92A2A 100%);
   color: #FFFFFF;
 }
-@media screen and (max-width: 414px) {
-  .BTN_BACK {
-    font-size: 2rem;
-    height: 50px;
-    line-height: 50px;
-  }
-}
 .BTN_BACK:hover {
   background: linear-gradient(180deg, #610E0E 0%, #891D1D 100%);
 }
@@ -260,18 +216,11 @@ a {
 .TOP_BTN {
   cursor: pointer;
   background-image: url(/img/TOP-BTN.svg);
+  background-color: transparent;
   width: 100px;
   height: 100px;
   border: unset;
   border-radius: 50%;
-}
-@media screen and (max-width: 414px) {
-  .TOP_BTN {
-    background-size: 42px;
-    background-repeat: no-repeat;
-    width: 42px;
-    height: 42px;
-  }
 }
 .TOP_BTN:hover {
   background-image: url(/img/TOP-BTN-HOVER.svg);
@@ -279,14 +228,6 @@ a {
   height: 100px;
   border: unset;
   border-radius: 50%;
-}
-@media screen and (max-width: 414px) {
-  .TOP_BTN:hover {
-    background-size: 42px;
-    background-repeat: no-repeat;
-    width: 42px;
-    height: 42px;
-  }
 }
 
 .CARD_BODY {
@@ -385,11 +326,6 @@ a {
   font-size: 2.5rem;
   color: #34424F;
 }
-@media screen and (max-width: 414px) {
-  .INPUT {
-    font-size: 2rem;
-  }
-}
 .INPUT input {
   font-family: "Noto Sans";
   font-size: 2rem;
@@ -410,11 +346,6 @@ a {
   font-size: 2.5rem;
   position: relative;
   color: #34424F;
-}
-@media screen and (max-width: 414px) {
-  .SELECT {
-    font-size: 2rem;
-  }
 }
 .SELECT select {
   appearance: none;
@@ -441,11 +372,7 @@ a {
 
 .TEXTAREA {
   font-size: 2.5rem;
-}
-@media screen and (max-width: 414px) {
-  .TEXTAREA {
-    font-size: 2rem;
-  }
+  color: #34424F;
 }
 .TEXTAREA textarea {
   font-family: "Noto Sans";
@@ -522,14 +449,6 @@ a {
   border-radius: 50%;
   color: #FFFFFF;
 }
-@media screen and (max-width: 414px) {
-  .ARC_TITLE {
-    font-size: 2.5rem;
-    height: 65px;
-    width: 65px;
-    line-height: 65px;
-  }
-}
 
 .DOT {
   position: relative;
@@ -570,33 +489,11 @@ a {
   height: 830px;
   float: right;
   margin-top: 105px;
-  -webkit-animation: image_carousel 30s ease-in-out infinite;
-          animation: image_carousel 30s ease-in-out infinite;
+  animation: image_carousel 30s ease-in-out infinite;
 }
 .CAROUSEL .MASTER_VISION > img {
   width: 100%;
   height: 830px;
-}
-
-@-webkit-keyframes image_carousel {
-  0% {
-    background-image: url("../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg");
-  }
-  20% {
-    background-image: url("../../img/header/leslie-low-0lzAa5raUso-unsplash.png");
-  }
-  40% {
-    background-image: url("../../img/header/flouffy-7hEXd9kYPCY-unsplash.jpg");
-  }
-  60% {
-    background-image: url("../../img/header/alicja-gancarz-e3EHK9pzmLU-unsplash.jpg");
-  }
-  80% {
-    background-image: url("../../img/header/peri-stojnic-5Vr_RVPfbMI-unsplash.jpg");
-  }
-  100% {
-    background-image: url("../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg");
-  }
 }
 
 @keyframes image_carousel {
@@ -702,18 +599,8 @@ footer {
   font-size: 2.5rem;
   font-weight: 700;
 }
-@media screen and (max-width: 414px) {
-  .HEADER_NAV > ul > li > a > span {
-    font-size: 2rem;
-  }
-}
 .HEADER_NAV > ul > li > a > i {
   font-size: 2.5rem;
-}
-@media screen and (max-width: 414px) {
-  .HEADER_NAV > ul > li > a > i {
-    font-size: 2rem;
-  }
 }
 .HEADER_NAV > ul > li > a .bi-person-fill {
   margin-right: 10px;
@@ -743,10 +630,98 @@ footer {
   font-size: 2.5rem;
   font-weight: 500;
 }
-@media screen and (max-width: 414px) {
-  .FOOTER_NAV > ul > li > a > span {
-    font-size: 2rem;
-  }
+
+.BACK_NAV {
+  background-image: url("../../img/HEADER-BG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+.BACK_NAV > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22.5vh;
+}
+.BACK_NAV:hover img[src="img/BACK-LOGO.svg"] {
+  opacity: 0;
+  transition: all 0.1s;
+}
+.BACK_NAV ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 22.5vh;
+}
+.BACK_NAV ul > li > a {
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: #34424F;
+  display: block;
+  margin: 0 40px;
+}
+.BACK_NAV ul > li > a:hover {
+  color: #FFFFFF;
+}
+.BACK_NAV ul > li > a > i {
+  margin-right: 10px;
+}
+
+.ASIDE_TOP {
+  background-color: #EEEEEE;
+  width: 18%;
+  padding: 10px 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.ASIDE_TOP select {
+  width: 100%;
+}
+.ASIDE_TOP h3 {
+  color: #34424F;
+  margin: 20px 0;
+}
+.ASIDE_TOP h3:nth-of-type(2) {
+  align-self: flex-end;
+}
+.ASIDE_TOP span {
+  font-size: 6rem;
+  font-weight: 700;
+}
+.ASIDE_TOP .BTN_BACK {
+  text-align: left;
+  width: 100%;
+  margin: 0 0 15px;
+  padding: 0 20px;
+}
+.ASIDE_TOP .BTN_BACK .bi-arrow-right-circle {
+  position: absolute;
+  right: 20px;
+}
+
+.ASIDE_BUTTON {
+  background-color: #EBE3DD;
+  width: 18%;
+}
+.ASIDE_BUTTON ul li a {
+  font-size: 2.5rem;
+  text-decoration: none;
+  line-height: 80px;
+  color: #34424F;
+  display: block;
+  position: relative;
+}
+.ASIDE_BUTTON ul li a:hover {
+  background-color: #FFFFFF;
+}
+.ASIDE_BUTTON ul li a > i:first-of-type {
+  margin-left: 50px;
+  margin-right: 10px;
+}
+.ASIDE_BUTTON ul li a .bi-chevron-right {
+  position: absolute;
+  right: 50px;
 }
 
 .SHOPPING .SHOPPING_MASTERVISION {
@@ -854,6 +829,4 @@ footer {
   font-size: 2rem;
   border-radius: 0px 10px 10px 0px;
   position: relative;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

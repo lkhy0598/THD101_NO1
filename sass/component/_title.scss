@@ -73,11 +73,11 @@
     border-radius: 50%;
     color: $white;
 
-    @include m(){
-        font-size: $p;
-        height: 65px;
-        width: 65px;
-        line-height: 65px;
+    // @include m(){
+    //     font-size: $p;
+    //     height: 65px;
+    //     width: 65px;
+    //     line-height: 65px;
         
-    }
+    // }
 }

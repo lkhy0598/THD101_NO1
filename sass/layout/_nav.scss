@@ -42,22 +42,22 @@
                 >span {
                     font-size: $p;
                     font-weight: 700;
-                    @include m{
-                        font-size: $littleword;
-                    }
+                    // @include m{
+                    //     font-size: $littleword;
+                    // }
                 }
 
                 >i {
                     font-size: $p;
-                    @include m{
-                        font-size: $littleword;
-                    }
+                    // @include m{
+                    //     font-size: $littleword;
+                    // }
                 }
 
                 // 登入登出icon
                 .bi-person-fill {
                     margin-right: 10px;
-                  
+
                 }
             }
         }
@@ -66,8 +66,6 @@
 
 //footer nav設定
 .FOOTER_NAV {
-
-
 
     >ul {
 
@@ -79,7 +77,6 @@
         margin-top: 2.5vh;
 
         >li {
-
             padding: 2px 30px;
             width: 100px;
 
@@ -96,17 +93,64 @@
                 >span {
                     font-size: $p;
                     font-weight: 500;
-                    @include m{
-                        font-size: $littleword;
-                    }
+                    // @include m{
+                    //     font-size: $littleword;
+                    // }
+
                 }
 
-
-
-
             }
+
         }
 
+    }
 
+}
+
+.BACK_NAV {
+    background-image: url("../../img/HEADER-BG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    // position: fixed;
+    // z-index: 99;
+    // top: 0;
+
+    >img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 22.5vh;
+    }
+
+    &:hover img[src="img/BACK-LOGO.svg"] {
+        opacity: 0;
+        transition: all .1s;
+    }
+
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 22.5vh;
+
+        >li {
+
+            >a {
+                font-size: $p;
+                text-decoration: none;
+                color: $blueblack;
+                display: block;
+                margin: 0 40px;
+
+                &:hover {
+                    color: $white;
+                }
+
+                >i {
+                    margin-right: 10px;
+                }
+            }
+        }
     }
 }
