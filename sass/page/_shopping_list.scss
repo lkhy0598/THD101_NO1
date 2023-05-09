@@ -1,0 +1,166 @@
+.SHOPPINGLIST{
+    background-image: url('../../img/shopping_list/SHOPPING_LIST_BG.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .BREAD{
+        padding-top:361px ;
+    }
+
+    .SHOPPINGLIST_TOP{
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 160px;
+
+        .SHOPPINGLIST_SMALLIMG{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 8.5%;
+            margin-right: 10px;
+
+            img{
+                cursor: pointer;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .SHOPPINGLIST_BIGIMG{
+            overflow: hidden;
+            border-radius: 10px 80px 10px 10px;
+            position: relative;
+            cursor: pointer;
+            &:hover{
+                .SHOPPINGLIST_MAGNIFIER{
+                    background-image: url(/img/shopping_list/magnifier_hover.png);
+                    width: 90px;
+                    height: 90px;
+            
+                }
+            }
+            
+            .SHOPPINGLIST_MAGNIFIER{
+                transform: scale(.8);
+                position: absolute;
+                right: 30px;
+                bottom: 10px;
+            }
+
+            .SHOPPINGLIST_IMG{
+                height: 100%;
+                background-color: #fff;
+                img{
+                    // width: 100%;
+                    display: block;
+                    margin: 0 auto;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .SHOPPINGLIST_TOPTEXT{
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: space-between;
+
+            h2{
+                color: $blueblack;
+                line-height: 58px;
+                margin-bottom: 45px;
+            }
+
+            h1{
+                color:$redprice;
+                margin-bottom: 53px;
+            }
+
+            h3{
+                color: $blueblack;
+                margin-bottom: 20px;
+            }
+
+            .ITEMCOUNT_BTN{
+                margin-bottom: 20px;
+            }
+
+            .SHOPPINGLIST_CARTBTN{
+                margin-bottom: 40px;
+                .BTN{
+                width: 100%;
+                background: $linear-orange;
+                font-weight: 700;
+                &:hover{
+                    background: $linear-orange-hover;
+                    color: $white;
+                }
+                }
+            }
+
+            .SHOPPINGLIST_SHARE{
+                display: flex;
+                p{
+                    margin-right: 20px;
+                }
+
+                a{  
+                    display: inline-block;
+                    margin-right: 20px;
+                    width: 25px;
+                    
+                    img{
+                        display: inline-block;
+                        width: 100%;
+
+                    }
+                }
+            }
+        }
+        
+    }
+
+// ======================================================================
+
+    .SHOPPINGHOT{
+        width: 100%;
+        margin-bottom: 70px;
+    }
+
+    .SMALL_TITLE{
+        margin: 0 auto;
+        // padding-top: 45px;
+    }
+
+    .SHOPPINGCARDAREA_UL{
+        display: flex;
+        justify-content: space-around;
+    }
+
+// ===================================================================
+
+    .SHOPPINGLIST_CONTENT{
+
+        .SMALL_TITLE{
+            margin-bottom: 40px;
+        }
+
+        p{
+            white-space: pre-wrap;
+            line-height: 40px;
+            color: $blueblack;
+            margin-bottom: 40px;
+
+            b{
+                font-weight: bold;
+            }
+        }
+    }
+
+    footer{
+        margin-top: 335px;
+    }
+
+
+}
