@@ -1,9 +1,4 @@
 node_modules
-<<<<<<< HEAD
-css
-dist
-=======
 css/style.css
 css/style.css.map
 dist
->>>>>>> LAI
