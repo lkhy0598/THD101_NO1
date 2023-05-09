@@ -135,7 +135,7 @@ p {
 }
 
 html {
-  font-family: "Noto Sans";
+  font-family: "Noto Sans TC";
   line-height: 1.25;
   font-size: 10px;
 }
@@ -271,13 +271,9 @@ a {
 }
 
 .CARD_DATE {
-<<<<<<< HEAD
   font-size: 2rem;
   font-weight: 500;
   padding-top: 30px;
-=======
-  display: flex;
->>>>>>> 347ae7a277beec2fb30aa507e175101ee9ec7ca0
 }
 
 .CARD_CONTENT {
@@ -982,13 +978,10 @@ footer {
   color: #34424F;
   font-weight: 600;
 }
-<<<<<<< HEAD
-=======
 .SHOPPING ::-moz-placeholder {
   color: #34424F;
   font-weight: 600;
 }
->>>>>>> 347ae7a277beec2fb30aa507e175101ee9ec7ca0
 .SHOPPING ::placeholder {
   color: #34424F;
   font-weight: 600;
