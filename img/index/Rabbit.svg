@@ -1,0 +1,17 @@
+<svg width="94" height="84" viewBox="0 0 94 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="19.4576" height="9.72881" rx="4.8644" transform="matrix(-3.08612e-07 -1 -1 5.57956e-08 78.082 82.6094)" fill="#A58B90"/>
+<rect width="19.4576" height="9.72881" rx="4.8644" transform="matrix(-3.08612e-07 -1 -1 5.57956e-08 30.8281 82.6094)" fill="#A58B90"/>
+<rect width="20.8475" height="9.72881" rx="4.8644" transform="matrix(-1.65773e-07 -1 -1 1.03733e-07 82.9453 84)" fill="#B5ACAC"/>
+<rect width="20.8475" height="9.72881" rx="4.8644" transform="matrix(-1.65773e-07 -1 -1 1.03733e-07 35.6914 84)" fill="#B5ACAC"/>
+<rect width="72.9661" height="45.8644" rx="22.9322" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 14.1504 77.0508)" fill="#DBDCDE"/>
+<rect width="83" height="33" rx="16.5" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 0 77)" fill="#DBDCDE"/>
+<path d="M78.8535 38.3398C81.4952 36.5516 87.39 33.8782 89.8355 37.4908C92.281 41.1035 87.7016 45.72 85.1062 47.5767" stroke="black" stroke-width="5" stroke-linecap="round"/>
+<path d="M19.5584 46.2554C27.1373 33.2454 39.5856 5.46075 44.9372 8.76469C50.2888 12.0686 32.5014 36.3703 24.9626 49.4035" stroke="black" stroke-width="5" stroke-linecap="round"/>
+<path d="M12.8549 45.2043C17.5205 30.8888 23.8307 1.10415 29.7586 3.20547C35.6866 5.30678 23.4228 32.8125 18.8014 47.1422" stroke="black" stroke-width="5" stroke-linecap="round"/>
+<ellipse cx="1.73729" cy="2.4322" rx="1.73729" ry="2.4322" transform="matrix(-1 0 0 1 17.625 55.5078)" fill="black"/>
+<ellipse cx="1.73729" cy="2.4322" rx="1.73729" ry="2.4322" transform="matrix(-1 0 0 1 10.6758 53.4238)" fill="black"/>
+<path d="M17.625 68.7109C17.625 70.1008 16.8776 72.8804 13.8879 72.8804C10.8982 72.8804 10.0376 70.1008 9.98093 68.7109" stroke="black" stroke-width="5" stroke-linecap="round"/>
+<path d="M4.96932 67.1626C6.84623 67.2591 8.43813 64.3522 7.5073 62.5282C7.19241 61.9112 3.40172 61.5487 2.91968 62.2925C1.8059 64.011 3.09241 67.0662 4.96932 67.1626Z" fill="black"/>
+<rect width="21" height="24" rx="10.5" transform="matrix(-1.65773e-07 -1 -1 1.03733e-07 78 69)" fill="#B5ACAC"/>
+<rect width="11" height="12" rx="5.5" transform="matrix(-1.65773e-07 -1 -1 1.03733e-07 53 52)" fill="#B5ACAC"/>
+</svg>

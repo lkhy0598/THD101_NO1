@@ -1,7 +1,61 @@
+.INDEX{
+    
+
 .BIG_TITLE { 
     padding-top: 100px;
+    position: relative;
 }
 
+// ============= 動物插畫區 =================
+//    ======= (看診進度) ====== 
+.HIPPO_TURTLE1{
+    position: absolute;
+    width: 80px;
+    bottom:  0;
+    right: 25vw;
+
+}
+
+.HIPPO_TURTLE2{
+    position: absolute;
+    width: 120px;
+    bottom:  0;
+    right: 16vw;
+
+}
+
+.HIPPO_TURTLE3{
+    position: absolute;
+    width: 160px;
+    bottom:  0;
+    right: 5vw;
+
+}
+// ======== (資訊導覽) =======
+.DINO_RABBIT{
+    position: absolute;
+    width: 120px;
+    bottom: 4px;
+    left: 25vw;
+    display: block;
+    animation: walk 5s alternate infinite;
+}
+@keyframes walk {
+    0%{
+        left: 25vw;
+        
+    }
+
+    100%{
+        left: 60vw;
+    }
+}
+
+//========== (服務項目) =========
+
+
+
+// ==================================================
 .BACKGROUND{
     position: relative;
 }
@@ -14,6 +68,40 @@
 //     position: absolute;
 //     display: block;
 // }
+.CAROUSEL{
+    position: relative;
+}
+
+.DOT{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 30px;
+    bottom: 40px;
+    z-index: 10;
+
+}
+
+.DOT1{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 0px;
+    bottom: 0px;
+    z-index: 10;
+
+}
+
+.DOT2{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 0px;
+    top: 5px;
+    z-index: 10;
+
+}
+
 
 // ==========看診進度==========
 .CONSULTATION_UL{
@@ -117,6 +205,11 @@
 
 // ======== 資訊導覽 ========
 
+.INFORMATION_CARD{
+    padding-top: 50px;
+}
+
+
 .BTN_WRAAPER{
     margin-top: 80px;
     margin-bottom: 100px;
@@ -132,13 +225,16 @@
 
 
 .Services_UL{
+    // border: 1px solid;
     display: flex;
     justify-content: space-between;
+    margin: 80px 0;
+    
 }
 
 
 .Services_ITEM{
-    padding: 80px 40px;
+    padding: 0 40px;
     text-align: center;
 }
 
@@ -156,6 +252,7 @@
 
 .FEATURE_WRAPPER{
     display: flex;
+    
 }
 
 .FEATURE_LEFT{
@@ -165,13 +262,32 @@
 .FEATURE_ITEM{
     display: flex;
     justify-content: space-between;
-    padding: 60px 0;
+    // padding: 60px 0;
+    &:first-child{
+        padding-top: 100px;
+        padding-bottom: 90px;
+    }
+    
+    &:nth-child(2) {
+        padding-bottom: 90px;
+    }
+    
+    &:nth-child(3) {
+        padding-bottom: 90px;
+    }
+
+    &:last-child{
+        padding-bottom: 100px;
+        // padding-top: 60px;
+    }
+    
 }
 
 .FEATURE_ITEM p{
     line-height: 160%;
-    padding: 0 80px;
+    padding: 0 50px;
     font-weight: 500;
+    text-align: justify;
 }
 
 
@@ -189,6 +305,65 @@
 // ============== 核心項目 ====================
 
 .CORE_CONTENT{
+    width: 100%;
+    margin-top: 80px;
     display: flex;
+    justify-content: space-between;
+    
 }
 
+
+// ================= 交通位置及門診時刻表 ====================
+
+
+.LOCATION_WRAPPER{
+    margin-top: 150px;
+    padding-bottom: 200px;
+    display: flex;
+
+}
+
+.LOCATION_LEFT{
+    width: 50%;
+    // border: 1px solid;
+}
+
+.LOCATION_RIGHT{
+    width: 50%;
+    padding-left: 30px;
+}
+
+.LOCATION_LOGO{
+    margin-bottom: 20px;
+}
+
+.LOCATION_INFORMATION{
+    display: flex;
+    padding: 10px 0;
+}
+
+.LOCATION_INFORMATION > i {
+    font-size: 35px;
+    color: $blueblack;
+    padding-right: 15px;
+   
+}
+
+.LOCATION_INFORMATION > p{
+    line-height: 35px;
+    color: $blueblack;
+}
+
+.LOCATION_TIMETABLE{
+    margin-top: 20px;
+}
+
+.LOCATION_TIMETABLE > img{
+    border-radius: 10px ;
+}
+}
+
+
+
+
+// =========================  RWD ===============================

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>首頁 - 波波動物醫院</title>
   </head>
-  <body>
+  <body class="INDEX">
     <!-- =====appointment門診時間及預約======== -->
 
     <div class="APPOINTMENT">
@@ -52,12 +52,16 @@
     <!-- =================================MASTER_VISION====================================== -->
     <section class="CAROUSEL">
       <div class="MASTER_VISION"><img src="img/HEADER-TOP.png" alt="" /></div>
+      <div class="DOT"></div>
+      <div class="DOT1"></div>
+      
     </section>
 
     <!-- ============================================================================= -->
 
     <!-- header下方區塊的背景 -->
     <section class="BACKGROUND">
+      <div class="DOT2"></div>
       <!-- ============看診進度TITLE========== -->
       
       <section class="BIG_TITLE WRAPPER">
@@ -65,6 +69,12 @@
           <h1>看診進度</h1>
           <p class="EN">Consultation Progress</p>
         </section>
+      
+        <img class="HIPPO_TURTLE1" src="img/index/Hippo_Turtle.svg" alt="">
+        <img class="HIPPO_TURTLE2" src="img/index/Hippo_Turtle.svg" alt="">
+        <img class="HIPPO_TURTLE3" src="img/index/Hippo_Turtle.svg" alt="">
+
+
       </section>
 
       <!-- ========MAIN======== -->
@@ -115,13 +125,16 @@
           <h1>資訊導覽</h1>
           <p class="EN">Information</p>
         </section>
+        
+        <img src="img/index/Dino_Rabbit.svg" alt="" class="DINO_RABBIT">
+
       </section>
 
        <!-- ========MAIN======== -->
        <!-- 資訊導覽 -->
 
 
-       <div class="WRAPPER">
+       <section class="WRAPPER">
         <ul class="INFORMATION_CARD">
           <li class="CARD_BODY">
               <div class="CARD_LEFT">
@@ -165,7 +178,7 @@
           <button class="BTN">查看更多</button>
         </div>
         
-      </div>
+      </section>
 
 
       <!-- ================== 服務項目 TITLE ===============-->
@@ -175,6 +188,8 @@
           <h1>服務項目</h1>
           <p class="EN">Services</p>
         </section>
+
+      
       </section>
 
 
@@ -182,7 +197,7 @@
        <!-- 服務項目 -->
 
 
-       <div class="WRAPPER">
+       <section class="WRAPPER">
         <ul class="Services_UL">
           <li class="Services_ITEM COL-3">
             <img src="/img/index/Vaccines.jpg" alt="">
@@ -202,7 +217,7 @@
             <p class="BREAD">Pet Hotel</p>
           </li>
 
-          <li class="Services_ITEM">
+          <li class="Services_ITEM COL-3">
             <img src="/img/index/Communication.jpg" alt="">
             <h3>寵物溝通</h3>
             <p class="BREAD">Communication</p>
@@ -210,7 +225,7 @@
           
           
         </ul>
-       </div>
+       </section>
 
         <!-- ================== 醫院特色 TITLE ===============-->
 
@@ -226,7 +241,7 @@
        <!-- 醫院特色 -->
 
 
-       <div class="WRAPPER">
+       <section class="WRAPPER">
         <div class="FEATURE_WRAPPER">
           <ul class="FEATURE_LEFT">
             <li class="FEATURE_ITEM">
@@ -258,15 +273,15 @@
           </div>
         </div>
         
-       </div>
+       </section>
 
 
        <!-- ========MAIN======== -->
        <!-- about 、 QA 、 shopping -->
 
 
-       <div class="WRAPPER">
-        <ul class="CORE_CONTENT">
+       <section class="WRAPPER">
+        <ul class="CORE_CONTENT WRAPPER">
           <li class="Services_ITEM COL-4">
             <img src="/img/index/about.jpg" alt="">
             <h3>關於院所</h3>
@@ -285,10 +300,44 @@
             <p class="BREAD">Shopping</p>
           </li>
           
-          
-          
         </ul>
-       </div>
+       </section>
+
+
+      <!-- ========MAIN======== -->
+      <!-- location -->
+
+
+      <section class="WRAPPER">
+        <div class="LOCATION_WRAPPER">
+          <div class="LOCATION_LEFT">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1278.0129118998307!2d121.52466683154347!3d25.04200095528725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a970a11a84ad%3A0x58e05f2528812097!2z5ZyL56uL6Ie65YyX5ZWG5qWt5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1683701812809!5m2!1szh-TW!2stw" width="700" height="525" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+            
+          <div class="LOCATION_RIGHT">
+            <div class="LOCATION_LOGO">
+              <img src="img/index/locationLOGO.svg" alt="">
+            </div>
+          
+            <div class="LOCATION_INFORMATION">
+              <i class="bi bi-telephone"></i>
+              <p>連絡電話：02-3322-2777</p>
+            </div>
+            <div class="LOCATION_INFORMATION">
+              <i class="bi bi-geo-alt"></i>
+              <p>地址：100台北市中正區濟南路一段321號</p>
+            </div>
+
+
+            <div class="LOCATION_TIMETABLE">
+              <img src="img/index/TIMETABLE.jpg" alt="">
+            </div>
+          </div>
+         
+        </div>
+        
+      </section>
+
 
 
     </section>
