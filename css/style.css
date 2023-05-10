@@ -106,11 +106,21 @@ h1 {
   font-weight: 700;
   letter-spacing: 1.5px;
 }
+@media screen and (max-width: 414px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
 
 h2 {
   font-size: 3.5rem;
   font-weight: 700;
   letter-spacing: 1.5px;
+}
+@media screen and (max-width: 414px) {
+  h2 {
+    font-size: 3rem;
+  }
 }
 
 h3 {
@@ -118,10 +128,20 @@ h3 {
   font-weight: 400;
   letter-spacing: 1.5px;
 }
+@media screen and (max-width: 414px) {
+  h3 {
+    font-size: 2.5rem;
+  }
+}
 
 p {
   font-size: 2.5rem;
   letter-spacing: 1.5px;
+}
+@media screen and (max-width: 414px) {
+  p {
+    font-size: 2rem;
+  }
 }
 
 .BREAD {
@@ -135,7 +155,7 @@ p {
 }
 
 html {
-  font-family: "Noto Sans TC";
+  font-family: Arial, "Noto Sans TC";
   line-height: 1.25;
   font-size: 10px;
 }
@@ -358,7 +378,7 @@ a {
   border-radius: 10px;
   box-sizing: border-box;
   padding: 10px;
-  margin-top: 10px;
+  margin: 10px 0;
   border: 1px solid #9E9E9E;
   height: 45px;
   width: 300px;
@@ -408,7 +428,6 @@ a {
   padding: 10px;
   margin-top: 10px;
   border: 1px solid #9E9E9E;
-  width: 300px;
 }
 .TEXTAREA textarea:focus {
   outline: none;
@@ -714,44 +733,44 @@ footer {
   margin-right: 10px;
 }
 
-.ASIDE_TOP {
-  background-color: #EEEEEE;
+.BACK_MAIN_CONTENT_LEFT {
   width: 18%;
+}
+.BACK_MAIN_CONTENT_LEFT .ASIDE_TOP {
+  background-color: #EEEEEE;
   padding: 10px 25px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
-.ASIDE_TOP select {
+.BACK_MAIN_CONTENT_LEFT .ASIDE_TOP select {
   width: 100%;
 }
-.ASIDE_TOP h3 {
+.BACK_MAIN_CONTENT_LEFT .ASIDE_TOP h3 {
   color: #34424F;
   margin: 20px 0;
 }
-.ASIDE_TOP h3:nth-of-type(2) {
+.BACK_MAIN_CONTENT_LEFT .ASIDE_TOP h3:nth-of-type(2) {
   align-self: flex-end;
 }
-.ASIDE_TOP span {
+.BACK_MAIN_CONTENT_LEFT .ASIDE_TOP span {
   font-size: 6rem;
   font-weight: 700;
 }
-.ASIDE_TOP .BTN_BACK {
+.BACK_MAIN_CONTENT_LEFT .ASIDE_TOP .BTN_BACK {
   text-align: left;
   width: 100%;
   margin: 0 0 15px;
   padding: 0 20px;
 }
-.ASIDE_TOP .BTN_BACK .bi-arrow-right-circle {
+.BACK_MAIN_CONTENT_LEFT .ASIDE_TOP .BTN_BACK .bi-arrow-right-circle {
   position: absolute;
   right: 20px;
 }
-
-.ASIDE_BUTTON {
+.BACK_MAIN_CONTENT_LEFT .ASIDE_BUTTON {
   background-color: #EBE3DD;
-  width: 18%;
 }
-.ASIDE_BUTTON ul li a {
+.BACK_MAIN_CONTENT_LEFT .ASIDE_BUTTON ul li a {
   font-size: 2.5rem;
   text-decoration: none;
   line-height: 80px;
@@ -759,16 +778,340 @@ footer {
   display: block;
   position: relative;
 }
-.ASIDE_BUTTON ul li a:hover {
+.BACK_MAIN_CONTENT_LEFT .ASIDE_BUTTON ul li a:hover {
   background-color: #FFFFFF;
 }
-.ASIDE_BUTTON ul li a > i:first-of-type {
+.BACK_MAIN_CONTENT_LEFT .ASIDE_BUTTON ul li a > i:first-of-type {
   margin-left: 50px;
   margin-right: 10px;
 }
-.ASIDE_BUTTON ul li a .bi-chevron-right {
+.BACK_MAIN_CONTENT_LEFT .ASIDE_BUTTON ul li a .bi-chevron-right {
   position: absolute;
   right: 50px;
+}
+
+/* 下方內容 */
+.BACK_MAIN_CONTENT {
+  display: flex;
+}
+
+/* 下方右側 */
+.BACK_MAIN_CONTENT_RIGHT {
+  width: 82%;
+  padding: 55px 65px;
+}
+
+/* --------病歷搜尋表單---------- */
+.MEDICAL_RECORD_SEARCH {
+  width: 74%;
+  margin: 0 auto;
+}
+.MEDICAL_RECORD_SEARCH ul {
+  width: 100%;
+  margin-top: 85px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  align-items: end;
+  padding: 0;
+}
+.MEDICAL_RECORD_SEARCH p {
+  width: 5%;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+.MEDICAL_RECORD_SEARCH input:nth-child(1) {
+  width: 80%;
+}
+
+.MEDICAL_RECORD_SEARCH input:nth-child(2) {
+  width: 80%;
+}
+
+.MEDICAL_RECORD_SEARCH input:nth-child(3) {
+  width: 60%;
+}
+
+.MEDICAL_RECORD_SEARCH input:nth-child(5) {
+  width: 60%;
+}
+
+.BTN_BACK {
+  width: 250px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* 病歷搜尋結果 */
+.MEDICAL_RECORD_TABLE_ALL {
+  width: 74%;
+  margin: 0 auto 75px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.MEDICAL_RECORD_TABLE_ALL ul {
+  display: flex;
+  font-size: 2.5rem;
+}
+
+.BACK_TABLE_TITLE {
+  background-color: #CB5656;
+  color: #FFFFFF;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  outline: 2px solid #CB5656;
+  border-radius: 10px 10px 0 0;
+}
+
+.BACK_TABLE_CONTENT {
+  color: #34424F;
+  text-align: center;
+  line-height: 80px;
+  height: 80px;
+}
+.BACK_TABLE_CONTENT li {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.MEDICAL_RECORD_TABLE_ALL li:nth-child(1) {
+  width: 20%;
+}
+
+.MEDICAL_RECORD_TABLE_ALL li:nth-child(2) {
+  width: 17%;
+}
+
+.MEDICAL_RECORD_TABLE_ALL li:nth-child(3) {
+  width: 17%;
+}
+
+.MEDICAL_RECORD_TABLE_ALL li:nth-child(4) {
+  width: 30%;
+}
+
+.MEDICAL_RECORD_TABLE_ALL li:nth-child(5) {
+  width: 8%;
+}
+
+.MEDICAL_RECORD_TABLE_ALL li:nth-child(6) {
+  width: 8%;
+  border-right: none;
+}
+
+/*----------新增病歷----------*/
+.ADD_MEDICAL_RECORD {
+  width: 55%;
+  margin: 0 auto;
+}
+
+.ADD_MEDICAL_RECORD_FORM {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 70px;
+}
+.ADD_MEDICAL_RECORD_FORM p {
+  margin: 10px 0;
+}
+.ADD_MEDICAL_RECORD_FORM input {
+  width: 100%;
+}
+.ADD_MEDICAL_RECORD_FORM select {
+  width: 100%;
+}
+
+.ADD_MEDICAL_RECORD_FORM li:nth-child(1) {
+  flex-basis: 100%;
+  margin-bottom: 20px;
+}
+
+.ADD_MEDICAL_RECORD_FORM li:nth-child(8) {
+  flex-basis: 100%;
+}
+
+.ADD_MEDICAL_RECORD_FORM li:nth-child(9) {
+  flex-basis: 100%;
+}
+
+.ADD_MEDICAL_RECORD_FORM li {
+  width: 45%;
+}
+
+textarea {
+  width: 100%;
+}
+
+/* 上傳檔案input */
+.FILEBOX {
+  position: relative;
+  font-size: 2.5rem;
+  color: #34424F;
+  /* 檔案名稱 */
+  /* 選取檔案按鈕 */
+  /* 隱藏原按鈕 */
+}
+.FILEBOX .FILENAME {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  height: 45px;
+  font-size: 2rem;
+  color: #34424F;
+  border: 1px solid #9E9E9E;
+  margin: 10px 0;
+}
+.FILEBOX .FILEBUTTON {
+  background-color: #D9D9D9;
+  width: 145px;
+  height: 45px;
+  padding: 10px;
+  border: 0;
+  border-radius: 0 10px 10px 0;
+  position: absolute;
+  top: 35px;
+  right: 0px;
+  cursor: pointer;
+}
+.FILEBOX .FILE {
+  width: 145px;
+  height: 45px;
+  position: absolute;
+  top: 24px;
+  right: -12px;
+  cursor: pointer;
+  /* filter:alpha( opacity : 0); */
+  opacity: 0;
+}
+
+.BTN_BOX {
+  display: flex;
+}
+
+/*----------會員管理區塊---------*/
+/* 會員管理 */
+.MEMBER_PROFILE {
+  width: 76.5%;
+  margin: 0 auto;
+}
+
+.BACK_BANNER {
+  width: 100%;
+  height: 60px;
+  background-color: #CB5656;
+  color: white;
+  font-size: 30px;
+  line-height: 60px;
+  border-radius: 10px;
+  border: none;
+  padding-left: 20px;
+}
+
+.MEMBER_PROFILE_SEARCH {
+  width: 75%;
+  margin: 70px auto 50px;
+}
+.MEMBER_PROFILE_SEARCH ul {
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.MEMBER_PROFILE_TABLE {
+  width: 86%;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.MEMBER_PROFILE_TABLE ul {
+  display: flex;
+  font-size: 2.5rem;
+}
+
+.MEMBER_PROFILE_TABLE li:nth-child(1) {
+  width: 19%;
+}
+
+.MEMBER_PROFILE_TABLE li:nth-child(2) {
+  width: 19%;
+}
+
+.MEMBER_PROFILE_TABLE li:nth-child(3) {
+  width: 33%;
+}
+
+.MEMBER_PROFILE_TABLE li:nth-child(4) {
+  width: 7%;
+}
+
+.MEMBER_PROFILE_TABLE li:nth-child(5) {
+  width: 7%;
+}
+
+.MEMBER_PROFILE_TABLE li:nth-child(6) {
+  width: 15%;
+  border-right: none;
+}
+
+/* 寵物搜尋 */
+.PET_PROFILE {
+  width: 76.5%;
+  margin: 100px auto 0;
+}
+
+.PET_PROFILE_SEARCH {
+  width: 75%;
+  margin: 70px auto 50px;
+}
+.PET_PROFILE_SEARCH ul {
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 寵物搜尋結果 */
+.PET_PROFILE_TABLE {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.PET_PROFILE_TABLE ul {
+  display: flex;
+  font-size: 2.5rem;
+}
+
+.PET_PROFILE_TABLE li:nth-child(1) {
+  width: 23%;
+}
+
+.PET_PROFILE_TABLE li:nth-child(2) {
+  width: 20%;
+}
+
+.PET_PROFILE_TABLE li:nth-child(3) {
+  width: 23%;
+}
+
+.PET_PROFILE_TABLE li:nth-child(4) {
+  width: 20%;
+}
+
+.PET_PROFILE_TABLE li:nth-child(5) {
+  width: 7%;
+}
+
+.PET_PROFILE_TABLE li:nth-child(6) {
+  width: 7%;
+  border-right: none;
 }
 
 .BIG_TITLE {
