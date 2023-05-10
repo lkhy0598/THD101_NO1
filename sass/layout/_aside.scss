@@ -1,6 +1,6 @@
 .BACK_MAIN_CONTENT_LEFT{
     width: 18%;
-
+    background-color: #EBE3DD;
     .ASIDE_TOP {
         background-color: #EEEEEE;
         padding: 10px 25px;
@@ -59,13 +59,13 @@
                     }
     
                     >i:first-of-type {
-                        margin-left: 50px;
+                        margin-left: 10%;
                         margin-right: 10px;
                     }
     
                     .bi-chevron-right {
                         position: absolute;
-                        right: 50px;
+                        right: 10%;
                     }
                 }
             }

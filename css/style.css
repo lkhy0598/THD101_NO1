@@ -828,6 +828,7 @@ footer {
 
 .BACK_MAIN_CONTENT_LEFT {
   width: 18%;
+  background-color: #EBE3DD;
 }
 .BACK_MAIN_CONTENT_LEFT .ASIDE_TOP {
   background-color: #EEEEEE;
@@ -875,12 +876,12 @@ footer {
   background-color: #FFFFFF;
 }
 .BACK_MAIN_CONTENT_LEFT .ASIDE_BUTTON ul li a > i:first-of-type {
-  margin-left: 50px;
+  margin-left: 10%;
   margin-right: 10px;
 }
 .BACK_MAIN_CONTENT_LEFT .ASIDE_BUTTON ul li a .bi-chevron-right {
   position: absolute;
-  right: 50px;
+  right: 10%;
 }
 
 /* 下方內容 */
@@ -900,39 +901,40 @@ footer {
   margin: 0 auto;
 }
 .MEDICAL_RECORD_SEARCH ul {
-  width: 100%;
   margin-top: 85px;
   margin-bottom: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   list-style: none;
   align-items: end;
   padding: 0;
 }
+.MEDICAL_RECORD_SEARCH ul input {
+  width: 100%;
+}
 .MEDICAL_RECORD_SEARCH p {
   width: 5%;
-  margin-right: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.MEDICAL_RECORD_SEARCH input:nth-child(1) {
-  width: 80%;
+.MEDICAL_RECORD_SEARCH li:nth-child(1) {
+  width: 20%;
 }
 
-.MEDICAL_RECORD_SEARCH input:nth-child(2) {
-  width: 80%;
+.MEDICAL_RECORD_SEARCH li:nth-child(2) {
+  width: 20%;
 }
 
-.MEDICAL_RECORD_SEARCH input:nth-child(3) {
-  width: 60%;
+.MEDICAL_RECORD_SEARCH li:nth-child(3) {
+  width: 14%;
 }
 
-.MEDICAL_RECORD_SEARCH input:nth-child(5) {
-  width: 60%;
+.MEDICAL_RECORD_SEARCH li:nth-child(5) {
+  width: 14%;
 }
 
 .BTN_BACK {
-  width: 250px;
+  width: 200px;
   margin: 0 auto;
   display: block;
 }
@@ -1007,6 +1009,7 @@ footer {
   list-style: none;
   justify-content: space-between;
   align-content: center;
+  margin-top: 85px;
   margin-bottom: 70px;
 }
 .ADD_MEDICAL_RECORD_FORM p {
@@ -1091,7 +1094,7 @@ textarea {
 /* 會員管理 */
 .MEMBER_PROFILE {
   width: 76.5%;
-  margin: 0 auto;
+  margin: 85px auto 50px;
 }
 
 .BACK_BANNER {
@@ -1115,6 +1118,24 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.MEMBER_PROFILE_SEARCH ul input {
+  width: 100%;
+}
+.MEMBER_PROFILE_SEARCH ul p {
+  color: #34424F;
+}
+
+.MEMBER_PROFILE_SEARCH li:nth-child(1) {
+  width: 28%;
+}
+
+.MEMBER_PROFILE_SEARCH li:nth-child(2) {
+  width: 3%;
+}
+
+.MEMBER_PROFILE_SEARCH li:nth-child(3) {
+  width: 28%;
 }
 
 .MEMBER_PROFILE_TABLE {
@@ -1167,7 +1188,22 @@ textarea {
   font-size: 2.5rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
+}
+.PET_PROFILE_SEARCH ul input {
+  margin-bottom: 0;
+  width: 100%;
+}
+.PET_PROFILE_SEARCH ul select {
+  width: 100%;
+}
+
+.PET_PROFILE_SEARCH li:nth-child(1) {
+  width: 28%;
+}
+
+.PET_PROFILE_SEARCH li:nth-child(2) {
+  width: 28%;
 }
 
 /* 寵物搜尋結果 */
@@ -1661,4 +1697,84 @@ textarea {
 }
 .SHOPPINGLIST footer {
   margin-top: 335px;
+}
+
+/* 前後台登入頁 */
+.WEB_LOGIN {
+  background-image: url(/img/HEADER-BG.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.WEB_LOGIN main {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.WEB_LOGIN main .FRONT {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.WEB_LOGIN main .BACK {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.BACKEND {
+  display: none;
+  height: 100vh;
+  width: 100%;
+}
+.BACKEND .BACKEND_LOGIN {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  width: 73%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.BACKEND .BACKEND_LOGIN .LEFT_LOGO {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 85%;
+  background-color: #CB5656;
+  border-radius: 30px 0 0 30px;
+}
+.BACKEND .BACKEND_LOGIN .LEFT_LOGO img {
+  display: block;
+  margin: 0 auto;
+  width: 55%;
+}
+.BACKEND .RIGHT_LOGIN {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 85%;
+  background-color: #EBE3DD;
+  border-radius: 0 30px 30px 0;
+}
+.BACKEND .RIGHT_LOGIN .INPUT {
+  display: block;
+}
+.BACKEND .RIGHT_LOGIN .INPUT input {
+  width: 350px;
+  margin: 10px 0;
+}
+.BACKEND .RIGHT_LOGIN .BTN_BACK {
+  margin: 70px 5px 0;
+  width: 163px;
+  display: inline-block;
 }/*# sourceMappingURL=style.css.map */

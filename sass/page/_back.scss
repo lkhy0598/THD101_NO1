@@ -1,7 +1,7 @@
 
 /* 下方內容 */
 .BACK_MAIN_CONTENT{
-    display: flex;
+   display: flex;
 }
 
 /* 下方右側 */
@@ -17,40 +17,44 @@
    margin: 0 auto;
 
    ul{
-      width: 100%;
       margin-top: 85px;
       margin-bottom: 50px;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       list-style: none;
       align-items: end;
       padding: 0;
+
+      input{
+         width: 100%;
+      }
    }
 
    p{
       width: 5%;
-      margin-right: 30px;
-      margin-bottom: 10px;
+      // margin-right: px;
+      margin-bottom: 20px;
    }
 
 }
-.MEDICAL_RECORD_SEARCH input:nth-child(1){
-   width: 80%;
+.MEDICAL_RECORD_SEARCH li:nth-child(1){
+   width: 20%;
 }
-.MEDICAL_RECORD_SEARCH input:nth-child(2){
-   width: 80%;
+.MEDICAL_RECORD_SEARCH li:nth-child(2){
+   width: 20%;
 }
-.MEDICAL_RECORD_SEARCH input:nth-child(3){
-   width: 60%;
+.MEDICAL_RECORD_SEARCH li:nth-child(3){
+   width: 14%;
 }
-.MEDICAL_RECORD_SEARCH input:nth-child(5){
-   width: 60%;
+.MEDICAL_RECORD_SEARCH li:nth-child(5){
+   width: 14%;
 }
 .BTN_BACK{
-   width: 250px;
+   width: 200px;
    margin: 0 auto;
    display: block;
 }
+
 /* 病歷搜尋結果 */
 .MEDICAL_RECORD_TABLE_ALL{
    width: 74%;
@@ -115,6 +119,7 @@
    list-style: none;
    justify-content: space-between;
    align-content: center;
+   margin-top: 85px;
    margin-bottom: 70px;
 
    p{
@@ -199,7 +204,7 @@ textarea{
 /* 會員管理 */
 .MEMBER_PROFILE{
    width: 76.5%;
-   margin: 0 auto;
+   margin: 85px auto 50px;
 }
 .BACK_BANNER{
    width:100%;
@@ -221,8 +226,25 @@ textarea{
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      input{
+         width: 100%;
+      }
+      p{
+         color: $blueblack;
+      }
+   
    }
 } 
+.MEMBER_PROFILE_SEARCH li:nth-child(1){
+   width: 28%;
+}
+.MEMBER_PROFILE_SEARCH li:nth-child(2){
+   width: 3%;
+}
+.MEMBER_PROFILE_SEARCH li:nth-child(3){
+   width: 28%;
+}
 .MEMBER_PROFILE_TABLE{
    width: 86%;
    margin: 0 auto;
@@ -232,6 +254,7 @@ textarea{
    ul{
       display: flex;
       font-size: $p;
+     
   }
 
 }
@@ -268,9 +291,25 @@ textarea{
       font-size: $p;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: end;
+
+      input{
+         margin-bottom: 0;
+         width: 100%;
+      }
+      select{
+         width: 100%;
+      }
   }
 }
+
+.PET_PROFILE_SEARCH li:nth-child(1){
+   width: 28%;
+}
+.PET_PROFILE_SEARCH li:nth-child(2){
+   width: 28%;
+}
+
 /* 寵物搜尋結果 */
 .PET_PROFILE_TABLE{
    width: 90%;

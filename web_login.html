@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>前後檯登入</title>
+    </head>
+    <body>
+        <section class="WEB_LOGIN">
+            <!-- 前後檯登入紐 -->
+            <main class="LOGIN_PAGE">
+                <div class="FRONT">
+                    <a href="#"><img src="img/web_login/FRONT_LOGIN.svg" alt=""></a>
+                </div>
+                <div class="BACK">
+                    <a href="#"><img src="img/web_login/BACK_LOGIN.svg" alt=""></a>
+                </div>
+            </main>
+
+            <!-- 後台登入 -->
+            <section class="BACKEND">
+                <section class="BACKEND_LOGIN">
+                    <section class="LEFT_LOGO">
+                        <img src="img/web_login/LOGIN_LOGO.svg" alt="">
+                    </section>
+                    <section class="RIGHT_LOGIN">
+                        <div class="FORM_BOX">
+                            <form action="get">
+                                <label for="account" class="INPUT">帳號<br>
+                                    <input type="text" name="account" id="account">
+                                </label>
+
+                                <label for="password" class="INPUT">密碼<br>
+                                    <input type="password" name="password" id="password">
+                                </label>
+
+                                <br>
+
+                                <button type="submit" class="FORGOT BTN_BACK">忘記密碼</button>
+                                <button type="submit" class="LOGIN BTN_BACK">登入後台</button>
+                            </form>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('.BACK').click(function () {
+                    $('.BACKEND').show();
+                    $('.LOGIN_PAGE').hide();
+                })
+            });
+        </script>
+    </body>
+</html>
