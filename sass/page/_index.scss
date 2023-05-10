@@ -152,18 +152,26 @@
 }
 
 
-// ================================
+// ============= 醫院特色 ===================
 
 .FEATURE_WRAPPER{
     display: flex;
 }
 
+.FEATURE_LEFT{
+    margin-bottom: 120px;
+}
+
 .FEATURE_ITEM{
-    // height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
 }
 
 .FEATURE_ITEM p{
-    padding: 0 130px;
+    line-height: 160%;
+    padding: 0 80px;
+    font-weight: 500;
 }
 
 
@@ -171,4 +179,16 @@
     border-radius: 100px 0 0 100px;
 }
 
-.ARC_TITLE{}
+.ARC_TITLE{
+  
+    min-width: 80px;
+    min-height: 80px;
+    
+}
+
+// ============== 核心項目 ====================
+
+.CORE_CONTENT{
+    display: flex;
+}
+
