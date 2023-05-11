@@ -1718,10 +1718,6 @@ textarea {
   color: #34424F;
   font-weight: 600;
 }
-.SHOPPING ::-moz-placeholder {
-  color: #34424F;
-  font-weight: 600;
-}
 .SHOPPING ::placeholder {
   color: #34424F;
   font-weight: 600;
@@ -1834,8 +1830,7 @@ textarea {
 .SHOPPINGLIST .SHOPPINGLIST_TOP .SHOPPINGLIST_SMALLIMG img {
   cursor: pointer;
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .SHOPPINGLIST .SHOPPINGLIST_TOP .SHOPPINGLIST_BIGIMG {
   overflow: hidden;
@@ -1862,8 +1857,7 @@ textarea {
   display: block;
   margin: 0 auto;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .SHOPPINGLIST .SHOPPINGLIST_TOP .SHOPPINGLIST_TOPTEXT h2 {
   color: #34424F;
