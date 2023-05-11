@@ -1919,6 +1919,9 @@ textarea {
   display: flex;
   justify-content: space-around;
 }
+.SHOPPINGLIST .SHOPPINGLIST_CONTENT {
+  margin-bottom: 335px;
+}
 .SHOPPINGLIST .SHOPPINGLIST_CONTENT .SMALL_TITLE {
   margin-bottom: 40px;
 }
@@ -1930,9 +1933,6 @@ textarea {
 }
 .SHOPPINGLIST .SHOPPINGLIST_CONTENT p b {
   font-weight: bold;
-}
-.SHOPPINGLIST footer {
-  margin-top: 335px;
 }
 
 /* 前後台登入頁 */
