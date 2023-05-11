@@ -1,0 +1,45 @@
+.LOCATION_WRAPPER{
+    margin-top: 150px;
+    padding-bottom: 200px;
+    display: flex;
+
+}
+
+.LOCATION_LEFT{
+    width: 50%;
+    // border: 1px solid;
+}
+
+.LOCATION_RIGHT{
+    width: 50%;
+    padding-left: 30px;
+}
+
+.LOCATION_LOGO{
+    margin-bottom: 20px;
+}
+
+.LOCATION_INFORMATION{
+    display: flex;
+    padding: 10px 0;
+}
+
+.LOCATION_INFORMATION > i {
+    font-size: 35px;
+    color: $blueblack;
+    padding-right: 15px;
+   
+}
+
+.LOCATION_INFORMATION > p{
+    line-height: 35px;
+    color: $blueblack;
+}
+
+.LOCATION_TIMETABLE{
+    margin-top: 20px;
+}
+
+.LOCATION_TIMETABLE > img{
+    border-radius: 10px ;
+}
