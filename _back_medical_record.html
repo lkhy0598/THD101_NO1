@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>後台 Back</title>
+    <title>後台 病歷紀錄管理</title>
 </head>
 
 <body>
@@ -148,6 +148,7 @@
                     <button class="BTN_BACK" type="submit">新增病歷</button>   
                 </section>
             </section>
+
             <!-- 新增病歷區塊 "會更動區塊" -->
             <section class="BACK_ADD_MEDICAL_RECORD">
 
@@ -227,134 +228,6 @@
                     </form>
                 </section>
             </section>
-
-             <!-- 會員管理區塊 "會更動區塊" -->
-             <section class="BACK_MEMBER_PROFILE">
-
-                <h2>會員管理</h2>
-                <!-- 會員管理 -->
-                <section class="MEMBER_PROFILE">
-
-                    <div class="BACK_BANNER">
-                        <h3>會員管理</h3>
-                    </div>
-
-                    <section class="MEMBER_PROFILE_SEARCH">
-                        
-                        <form action="">
-
-                            <ul>
-                                <li>
-                                    <label for="phone" class="INPUT">手機號碼<br>
-                                        <input type="text" name="phone" id="phone">
-                                    </label>
-                                </li>
-                                <li>
-                                    <p>or</p>
-                                </li>
-                                <li>
-                                    <label for="name" class="INPUT">姓名<br>
-                                        <input type="text" name="name" id="name">
-                                    </label>
-                                </li>
-                                <li>
-                                    <button class="BTN_BACK" type="submit">搜尋會員</button>
-                                </li>
-                            </ul>
-
-                        </form>
-                    </section>
-                    <!-- 會員管理搜尋結果 -->
-                    <section class="MEMBER_PROFILE_TABLE">
-
-                        <ul class="MEMBER_PROFILE_TITLE BACK_TABLE_TITLE">
-                            <li>姓名</li>
-                            <li>手機號碼</li>
-                            <li>加入日期</li>
-                            <li>修改</li>
-                            <li>刪除</li>
-                            <li>新增預約</li>
-                        </ul>
-
-                        <ul class="MEMBER_PROFILE_CONTENT BACK_TABLE_CONTENT">
-                            <li>范植鑫</li>
-                            <li>0988192839</li>
-                            <li>2023/04/01</li>
-                            <li><i class="bi bi-pencil"></i></li>
-                            <li><i class="bi bi-x-lg"></i></li>
-                            <li><i class="bi bi-calendar-plus"></i></li>
-                        </ul>
-                    </section>
-
-                </section>
-
-                <!-- 寵物搜尋 -->
-                <section class="PET_PROFILE">
-
-                    <div class="BACK_BANNER">
-                        <h3>寵物搜尋</h3>
-                    </div>
-
-                    <section class="PET_PROFILE_SEARCH">
-
-                        <form action="">
-
-                            <ul>
-                                <li>
-                                    <label for="phone" class="INPUT">手機號碼<br>
-                                        <input type="text" name="phone" id="phone">
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="consultation_type" class="SELECT">看診類型<br>
-                                        <select id="consultation_typee">
-                                            <option value="general">一般掛號</option>
-                                            <option value="vaccines">預防針</option>
-                                            <option value="health_checks">健康檢查</option>
-                                            <option value="communication">寵物溝通</option>
-                                            <option value="hotel">寵物住宿</option>
-                                        </select>
-                                    </label>
-                                </li>
-                                <li>
-                                    <button class="BTN_BACK" type="submit">搜尋寵物</button>
-                                </li>
-                            </ul>
-
-                        </form>
-                    </section>
-                    <!-- 寵物搜尋結果 -->
-                    <section class="PET_PROFILE_TABLE">
-                        <ul class="PET_PROFILE_TITLE BACK_TABLE_TITLE">
-                            <li>手機號碼</li>
-                            <li>寵物姓名</li>
-                            <li>看診類型</li>
-                            <li>最近看診日期</li>
-                            <li>修改</li>
-                            <li>刪除</li>
-                        </ul>
-                        <ul class="PET_PROFILE_CONTENT BACK_TABLE_CONTENT">
-                            <li>0988192839</li>
-                            <li>范植鑫</li>
-                            <li>一般掛號</li>
-                            <li>2023/04/01</li>
-                            <li><i class="bi bi-pencil"></i></li>
-                            <li><i class="bi bi-x-lg"></i></li>
-                        </ul>
-                        <ul class="PET_PROFILE_CONTENT BACK_TABLE_CONTENT">
-                            <li>0988192839</li>
-                            <li>范植鑫</li>
-                            <li>寵物溝通</li>
-                            <li>2023/04/01</li>
-                            <li><i class="bi bi-pencil"></i></li>
-                            <li><i class="bi bi-x-lg"></i></li>
-                        </ul>
-                    </section>
-                    
-                </section>
-
-            </section>
-
 
         </main>
     </section>
