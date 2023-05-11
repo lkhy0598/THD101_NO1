@@ -1030,26 +1030,19 @@ footer {
 /* 下方內容 */
 .BACK_MAIN_CONTENT {
   display: flex;
+  /* 下方右側 */
 }
-
-/* 下方右側 */
-.BACK_MAIN_CONTENT_RIGHT {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT {
   width: 82%;
   padding: 55px 65px;
+  /* --------病歷搜尋表單---------- */
+  /* 病歷搜尋結果 */
 }
-
-.BTN_BACK {
-  width: 200px;
-  margin: 0 auto;
-  display: block;
-}
-
-/* --------病歷搜尋表單---------- */
-.MEDICAL_RECORD_SEARCH {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_SEARCH {
   width: 74%;
   margin: 0 auto;
 }
-.MEDICAL_RECORD_SEARCH ul {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_SEARCH ul {
   margin-top: 85px;
   margin-bottom: 50px;
   display: flex;
@@ -1058,43 +1051,39 @@ footer {
   align-items: end;
   padding: 0;
 }
-.MEDICAL_RECORD_SEARCH ul input {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_SEARCH ul input {
   width: 100%;
 }
-.MEDICAL_RECORD_SEARCH p {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_SEARCH p {
   width: 5%;
   margin-bottom: 20px;
 }
-
-.MEDICAL_RECORD_SEARCH li:nth-child(1) {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_SEARCH li:nth-child(1) {
   width: 20%;
 }
-
-.MEDICAL_RECORD_SEARCH li:nth-child(2) {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_SEARCH li:nth-child(2) {
   width: 20%;
 }
-
-.MEDICAL_RECORD_SEARCH li:nth-child(3) {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_SEARCH li:nth-child(3) {
   width: 14%;
 }
-
-.MEDICAL_RECORD_SEARCH li:nth-child(5) {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_SEARCH li:nth-child(5) {
   width: 14%;
 }
-
-/* 病歷搜尋結果 */
-.MEDICAL_RECORD_TABLE_ALL {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL {
   width: 74%;
   margin: 0 auto 75px;
   border: 1px solid black;
   border-radius: 10px;
 }
-.MEDICAL_RECORD_TABLE_ALL ul {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL ul {
   display: flex;
   font-size: 2.5rem;
 }
-
-.BACK_TABLE_TITLE {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL ul .bi-pencil, .BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL ul .bi-x-lg {
+  cursor: pointer;
+}
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL .BACK_TABLE_TITLE {
   background-color: #CB5656;
   color: #FFFFFF;
   height: 55px;
@@ -1103,41 +1092,39 @@ footer {
   outline: 2px solid #CB5656;
   border-radius: 10px 10px 0 0;
 }
-
-.BACK_TABLE_CONTENT {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL .BACK_TABLE_CONTENT {
   color: #34424F;
   text-align: center;
   line-height: 80px;
   height: 80px;
 }
-.BACK_TABLE_CONTENT li {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL .BACK_TABLE_CONTENT li {
   border-top: 1px solid black;
   border-right: 1px solid black;
 }
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(1) {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL li:nth-child(1) {
   width: 20%;
 }
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(2) {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL li:nth-child(2) {
   width: 17%;
 }
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(3) {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL li:nth-child(3) {
   width: 17%;
 }
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(4) {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL li:nth-child(4) {
   width: 30%;
 }
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(5) {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL li:nth-child(5) {
   width: 8%;
 }
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(6) {
+.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL li:nth-child(6) {
   width: 8%;
   border-right: none;
+}
+.BACK_MAIN_CONTENT .BTN_BACK {
+  width: 200px;
+  margin: 0 auto;
+  display: block;
 }
 
 /*----------新增病歷----------*/
@@ -1145,8 +1132,7 @@ footer {
   width: 55%;
   margin: 0 auto;
 }
-
-.ADD_MEDICAL_RECORD_FORM {
+.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -1154,40 +1140,18 @@ footer {
   align-content: center;
   margin-top: 85px;
   margin-bottom: 70px;
+  /* 上傳檔案input */
 }
-.ADD_MEDICAL_RECORD_FORM p {
+.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM p {
   margin: 10px 0;
 }
-.ADD_MEDICAL_RECORD_FORM input {
+.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM input {
   width: 100%;
 }
-.ADD_MEDICAL_RECORD_FORM select {
+.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM select {
   width: 100%;
 }
-
-.ADD_MEDICAL_RECORD_FORM li:nth-child(1) {
-  flex-basis: 100%;
-  margin-bottom: 20px;
-}
-
-.ADD_MEDICAL_RECORD_FORM li:nth-child(8) {
-  flex-basis: 100%;
-}
-
-.ADD_MEDICAL_RECORD_FORM li:nth-child(9) {
-  flex-basis: 100%;
-}
-
-.ADD_MEDICAL_RECORD_FORM li {
-  width: 45%;
-}
-
-textarea {
-  width: 100%;
-}
-
-/* 上傳檔案input */
-.FILEBOX {
+.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM .FILEBOX {
   position: relative;
   font-size: 2.5rem;
   color: #34424F;
@@ -1195,7 +1159,7 @@ textarea {
   /* 選取檔案按鈕 */
   /* 隱藏原按鈕 */
 }
-.FILEBOX .FILENAME {
+.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM .FILEBOX .FILENAME {
   width: 100%;
   padding: 10px;
   border-radius: 10px;
@@ -1206,7 +1170,7 @@ textarea {
   border: 1px solid #9E9E9E;
   margin: 10px 0;
 }
-.FILEBOX .FILEBUTTON {
+.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM .FILEBOX .FILEBUTTON {
   font-size: 2rem;
   font-family: Arial, "Noto Sans TC";
   background-color: #D9D9D9;
@@ -1219,7 +1183,7 @@ textarea {
   right: 0px;
   cursor: pointer;
 }
-.FILEBOX .FILE {
+.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM .FILEBOX .FILE {
   width: 145px;
   height: 45px;
   position: absolute;
@@ -1229,226 +1193,38 @@ textarea {
   /* filter:alpha( opacity : 0); */
   opacity: 0;
 }
-
-.BTN_BOX {
+.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM .BTN_BOX {
   display: flex;
 }
-
-/* 下方內容 */
-.BACK_MAIN_CONTENT {
-  display: flex;
-}
-
-/* 下方右側 */
-.BACK_MAIN_CONTENT_RIGHT {
-  width: 82%;
-  padding: 55px 65px;
-}
-
-.BTN_BACK {
-  width: 200px;
-  margin: 0 auto;
-  display: block;
-}
-
-/* --------病歷搜尋表單---------- */
-.MEDICAL_RECORD_SEARCH {
-  width: 74%;
-  margin: 0 auto;
-}
-.MEDICAL_RECORD_SEARCH ul {
-  margin-top: 85px;
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  align-items: end;
-  padding: 0;
-}
-.MEDICAL_RECORD_SEARCH ul input {
-  width: 100%;
-}
-.MEDICAL_RECORD_SEARCH p {
-  width: 5%;
-  margin-bottom: 20px;
-}
-
-.MEDICAL_RECORD_SEARCH li:nth-child(1) {
-  width: 20%;
-}
-
-.MEDICAL_RECORD_SEARCH li:nth-child(2) {
-  width: 20%;
-}
-
-.MEDICAL_RECORD_SEARCH li:nth-child(3) {
-  width: 14%;
-}
-
-.MEDICAL_RECORD_SEARCH li:nth-child(5) {
-  width: 14%;
-}
-
-/* 病歷搜尋結果 */
-.MEDICAL_RECORD_TABLE_ALL {
-  width: 74%;
-  margin: 0 auto 75px;
-  border: 1px solid black;
-  border-radius: 10px;
-}
-.MEDICAL_RECORD_TABLE_ALL ul {
-  display: flex;
-  font-size: 2.5rem;
-}
-
-.BACK_TABLE_TITLE {
-  background-color: #CB5656;
-  color: #FFFFFF;
-  height: 55px;
-  text-align: center;
-  line-height: 55px;
-  outline: 2px solid #CB5656;
-  border-radius: 10px 10px 0 0;
-}
-
-.BACK_TABLE_CONTENT {
-  color: #34424F;
-  text-align: center;
-  line-height: 80px;
-  height: 80px;
-}
-.BACK_TABLE_CONTENT li {
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-}
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(1) {
-  width: 20%;
-}
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(2) {
-  width: 17%;
-}
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(3) {
-  width: 17%;
-}
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(4) {
-  width: 30%;
-}
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(5) {
-  width: 8%;
-}
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(6) {
-  width: 8%;
-  border-right: none;
-}
-
-/*----------新增病歷----------*/
-.ADD_MEDICAL_RECORD {
-  width: 55%;
-  margin: 0 auto;
-}
-
-.ADD_MEDICAL_RECORD_FORM {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  justify-content: space-between;
-  align-content: center;
-  margin-top: 85px;
-  margin-bottom: 70px;
-}
-.ADD_MEDICAL_RECORD_FORM p {
-  margin: 10px 0;
-}
-.ADD_MEDICAL_RECORD_FORM input {
-  width: 100%;
-}
-.ADD_MEDICAL_RECORD_FORM select {
-  width: 100%;
-}
-
-.ADD_MEDICAL_RECORD_FORM li:nth-child(1) {
+.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM li:nth-child(1) {
   flex-basis: 100%;
   margin-bottom: 20px;
 }
-
-.ADD_MEDICAL_RECORD_FORM li:nth-child(8) {
+.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM li:nth-child(8) {
   flex-basis: 100%;
 }
-
-.ADD_MEDICAL_RECORD_FORM li:nth-child(9) {
+.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM li:nth-child(9) {
   flex-basis: 100%;
 }
-
-.ADD_MEDICAL_RECORD_FORM li {
+.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM li {
   width: 45%;
 }
-
-textarea {
+.ADD_MEDICAL_RECORD textarea {
   width: 100%;
-}
-
-/* 上傳檔案input */
-.FILEBOX {
-  position: relative;
-  font-size: 2.5rem;
-  color: #34424F;
-  /* 檔案名稱 */
-  /* 選取檔案按鈕 */
-  /* 隱藏原按鈕 */
-}
-.FILEBOX .FILENAME {
-  width: 100%;
-  padding: 10px;
-  border-radius: 10px;
-  box-sizing: border-box;
-  height: 45px;
-  font-size: 2rem;
-  color: #34424F;
-  border: 1px solid #9E9E9E;
-  margin: 10px 0;
-}
-.FILEBOX .FILEBUTTON {
-  font-size: 2rem;
-  font-family: Arial, "Noto Sans TC";
-  background-color: #D9D9D9;
-  width: 145px;
-  height: 45px;
-  border: 0;
-  border-radius: 0 10px 10px 0;
-  position: absolute;
-  top: 35px;
-  right: 0px;
-  cursor: pointer;
-}
-.FILEBOX .FILE {
-  width: 145px;
-  height: 45px;
-  position: absolute;
-  top: 35px;
-  right: 0;
-  cursor: pointer;
-  /* filter:alpha( opacity : 0); */
-  opacity: 0;
-}
-
-.BTN_BOX {
-  display: flex;
 }
 
 /*----------會員管理區塊---------*/
-/* 會員管理 */
-.MEMBER_PROFILE {
+.BACK_MAIN_CONTENT_RIGHT {
+  /* 會員管理 */
+  /* 寵物搜尋 */
+  /* 寵物搜尋結果 */
+  /*----------------新增會員及寵物區塊------------------*/
+}
+.BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE {
   width: 76.5%;
   margin: 85px auto 50px;
 }
-
-.BACK_BANNER {
+.BACK_MAIN_CONTENT_RIGHT .BACK_BANNER {
   width: 100%;
   height: 60px;
   background-color: #CB5656;
@@ -1459,180 +1235,174 @@ textarea {
   border: none;
   padding-left: 20px;
 }
-
-.MEMBER_PROFILE_SEARCH {
+.BACK_MAIN_CONTENT_RIGHT .BACK_TABLE_TITLE {
+  background-color: #CB5656;
+  color: #FFFFFF;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  outline: 2px solid #CB5656;
+  border-radius: 10px 10px 0 0;
+}
+.BACK_MAIN_CONTENT_RIGHT .BACK_TABLE_CONTENT {
+  color: #34424F;
+  text-align: center;
+  line-height: 80px;
+  height: 80px;
+}
+.BACK_MAIN_CONTENT_RIGHT .BACK_TABLE_CONTENT li {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+}
+.BACK_MAIN_CONTENT_RIGHT .BACK_TABLE_CONTENT li .bi-pencil, .BACK_MAIN_CONTENT_RIGHT .BACK_TABLE_CONTENT li .bi-x-lg, .BACK_MAIN_CONTENT_RIGHT .BACK_TABLE_CONTENT li .bi-calendar-plus {
+  cursor: pointer;
+}
+.BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE_SEARCH {
   width: 75%;
   margin: 70px auto 50px;
 }
-.MEMBER_PROFILE_SEARCH ul {
+.BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE_SEARCH ul {
   font-size: 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.MEMBER_PROFILE_SEARCH ul input {
+.BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE_SEARCH ul input {
   width: 100%;
 }
-.MEMBER_PROFILE_SEARCH ul p {
+.BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE_SEARCH ul p {
   color: #34424F;
 }
-
-.MEMBER_PROFILE_SEARCH li:nth-child(1) {
+.BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE_SEARCH li:nth-child(1) {
   width: 28%;
 }
-
-.MEMBER_PROFILE_SEARCH li:nth-child(2) {
+.BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE_SEARCH li:nth-child(2) {
   width: 3%;
 }
-
-.MEMBER_PROFILE_SEARCH li:nth-child(3) {
+.BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE_SEARCH li:nth-child(3) {
   width: 28%;
 }
-
-.MEMBER_PROFILE_TABLE {
+.BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE_TABLE {
   width: 86%;
   margin: 0 auto;
   border: 1px solid black;
   border-radius: 10px;
 }
-.MEMBER_PROFILE_TABLE ul {
+.BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE_TABLE ul {
   display: flex;
   font-size: 2.5rem;
 }
-
-.MEMBER_PROFILE_TABLE li:nth-child(1) {
+.BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE_TABLE li:nth-child(1) {
   width: 19%;
 }
-
-.MEMBER_PROFILE_TABLE li:nth-child(2) {
+.BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE_TABLE li:nth-child(2) {
   width: 19%;
 }
-
-.MEMBER_PROFILE_TABLE li:nth-child(3) {
+.BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE_TABLE li:nth-child(3) {
   width: 33%;
 }
-
-.MEMBER_PROFILE_TABLE li:nth-child(4) {
+.BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE_TABLE li:nth-child(4) {
   width: 7%;
 }
-
-.MEMBER_PROFILE_TABLE li:nth-child(5) {
+.BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE_TABLE li:nth-child(5) {
   width: 7%;
 }
-
-.MEMBER_PROFILE_TABLE li:nth-child(6) {
+.BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE_TABLE li:nth-child(6) {
   width: 15%;
   border-right: none;
 }
-
-/* 寵物搜尋 */
-.PET_PROFILE {
+.BACK_MAIN_CONTENT_RIGHT .PET_PROFILE {
   width: 76.5%;
   margin: 100px auto 0;
 }
-
-.PET_PROFILE_SEARCH {
+.BACK_MAIN_CONTENT_RIGHT .PET_PROFILE_SEARCH {
   width: 75%;
   margin: 70px auto 50px;
 }
-.PET_PROFILE_SEARCH ul {
+.BACK_MAIN_CONTENT_RIGHT .PET_PROFILE_SEARCH ul {
   font-size: 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: end;
 }
-.PET_PROFILE_SEARCH ul input {
+.BACK_MAIN_CONTENT_RIGHT .PET_PROFILE_SEARCH ul input {
   margin-bottom: 0;
   width: 100%;
 }
-.PET_PROFILE_SEARCH ul select {
+.BACK_MAIN_CONTENT_RIGHT .PET_PROFILE_SEARCH ul select {
   width: 100%;
 }
-
-.PET_PROFILE_SEARCH li:nth-child(1) {
+.BACK_MAIN_CONTENT_RIGHT .PET_PROFILE_SEARCH li:nth-child(1) {
   width: 28%;
 }
-
-.PET_PROFILE_SEARCH li:nth-child(2) {
+.BACK_MAIN_CONTENT_RIGHT .PET_PROFILE_SEARCH li:nth-child(2) {
   width: 28%;
 }
-
-/* 寵物搜尋結果 */
-.PET_PROFILE_TABLE {
+.BACK_MAIN_CONTENT_RIGHT .PET_PROFILE_TABLE {
   width: 90%;
   margin: 0 auto;
   border: 1px solid black;
   border-radius: 10px;
 }
-.PET_PROFILE_TABLE ul {
+.BACK_MAIN_CONTENT_RIGHT .PET_PROFILE_TABLE ul {
   display: flex;
   font-size: 2.5rem;
 }
-
-.PET_PROFILE_TABLE li:nth-child(1) {
+.BACK_MAIN_CONTENT_RIGHT .PET_PROFILE_TABLE li:nth-child(1) {
   width: 23%;
 }
-
-.PET_PROFILE_TABLE li:nth-child(2) {
+.BACK_MAIN_CONTENT_RIGHT .PET_PROFILE_TABLE li:nth-child(2) {
   width: 20%;
 }
-
-.PET_PROFILE_TABLE li:nth-child(3) {
+.BACK_MAIN_CONTENT_RIGHT .PET_PROFILE_TABLE li:nth-child(3) {
   width: 23%;
 }
-
-.PET_PROFILE_TABLE li:nth-child(4) {
+.BACK_MAIN_CONTENT_RIGHT .PET_PROFILE_TABLE li:nth-child(4) {
   width: 20%;
 }
-
-.PET_PROFILE_TABLE li:nth-child(5) {
+.BACK_MAIN_CONTENT_RIGHT .PET_PROFILE_TABLE li:nth-child(5) {
   width: 7%;
 }
-
-.PET_PROFILE_TABLE li:nth-child(6) {
+.BACK_MAIN_CONTENT_RIGHT .PET_PROFILE_TABLE li:nth-child(6) {
   width: 7%;
   border-right: none;
 }
-
-/*----------------新增會員及寵物區塊------------------*/
-.ADD_NEW_MEMBER_PET, .MODIFY_MEMBER, .MODIFY_PET {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_MEMBER_PET, .BACK_MAIN_CONTENT_RIGHT .MODIFY_MEMBER, .BACK_MAIN_CONTENT_RIGHT .MODIFY_PET {
   width: 76.5%;
   margin: 85px auto 50px;
 }
-
-.ADD_NEW_MEMBER, .ADD_NEW_PET, .MODIFY_MEMBER_FORM, .MODIFY_PET_FORM {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_MEMBER, .BACK_MAIN_CONTENT_RIGHT .ADD_NEW_PET, .BACK_MAIN_CONTENT_RIGHT .MODIFY_MEMBER_FORM, .BACK_MAIN_CONTENT_RIGHT .MODIFY_PET_FORM {
   width: 83%;
   margin: 50px auto;
 }
-
-.ADD_NEW_FORM {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM {
   display: flex;
   justify-content: space-between;
 }
-.ADD_NEW_FORM ul {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM ul {
   width: 69%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.ADD_NEW_FORM ul input {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM ul input {
   width: 100%;
 }
-.ADD_NEW_FORM ul select {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM ul select {
   width: 100%;
 }
-.ADD_NEW_FORM .ADD_PIC_IMG {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .ADD_PIC_IMG {
   width: 75%;
   display: block;
   margin: 0 auto 35px;
 }
-.ADD_NEW_FORM .PIC_FILE_BOX {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .PIC_FILE_BOX {
   position: relative;
 }
-.ADD_NEW_FORM .PIC_FILE_BOX .BTN_BACK {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .PIC_FILE_BOX .BTN_BACK {
   width: 160px;
 }
-.ADD_NEW_FORM .PIC_FILE_BOX .PIC_FILE {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .PIC_FILE_BOX .PIC_FILE {
   width: 180px;
   height: 65px;
   position: absolute;
@@ -1642,53 +1412,108 @@ textarea {
   /* filter:alpha( opacity : 0); */
   opacity: 0;
 }
-.ADD_NEW_FORM .ADD_NEW_MEMBER_FORM li {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .ADD_NEW_MEMBER_FORM li {
   margin-bottom: 30px;
 }
-.ADD_NEW_FORM .ADD_NEW_MEMBER_FORM li:nth-child(1) {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .ADD_NEW_MEMBER_FORM li:nth-child(1) {
   width: 47%;
 }
-.ADD_NEW_FORM .ADD_NEW_MEMBER_FORM li:nth-child(2) {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .ADD_NEW_MEMBER_FORM li:nth-child(2) {
   width: 47%;
 }
-.ADD_NEW_FORM .ADD_NEW_MEMBER_FORM li:nth-child(3) {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .ADD_NEW_MEMBER_FORM li:nth-child(3) {
   flex-basis: 100%;
 }
-.ADD_NEW_FORM .ADD_NEW_MEMBER_FORM li:nth-child(4) {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .ADD_NEW_MEMBER_FORM li:nth-child(4) {
   flex-basis: 100%;
 }
-.ADD_NEW_FORM .ADD_NEW_MEMBER_FORM li:nth-child(5) {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .ADD_NEW_MEMBER_FORM li:nth-child(5) {
   flex-basis: 100%;
 }
-.ADD_NEW_FORM .ADD_NEW_PET_FORM li {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .ADD_NEW_PET_FORM li {
   margin-bottom: 30px;
 }
-.ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(1) {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(1) {
   width: 47%;
 }
-.ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(2) {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(2) {
   width: 47%;
 }
-.ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(3) {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(3) {
   width: 47%;
 }
-.ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(4) {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(4) {
   width: 47%;
 }
-.ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(5) {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(5) {
   width: 47%;
 }
-.ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(6) {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(6) {
   width: 47%;
 }
-.ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(7) {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(7) {
   flex-basis: 100%;
 }
-.ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(8) {
+.BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(8) {
   flex-basis: 100%;
+}
+.BACK_MAIN_CONTENT_RIGHT .RESERVE_BOX {
+  background-color: #EBE3DD;
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 40px;
+}
+.BACK_MAIN_CONTENT_RIGHT .RESERVE_BOX .bi-x-lg {
+  font-weight: 700;
+  font-size: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+.BACK_MAIN_CONTENT_RIGHT .RESERVE_BOX form {
+  width: 100%;
+}
+.BACK_MAIN_CONTENT_RIGHT .RESERVE_BOX form .RESERVE_LIST {
+  padding: 90px 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  align-content: center;
+}
+.BACK_MAIN_CONTENT_RIGHT .RESERVE_BOX form .RESERVE_LIST li {
+  /* width: 400px; */
+  margin: 0 26px;
+  font-size: 2.5rem;
+  color: #34424F;
+}
+.BACK_MAIN_CONTENT_RIGHT .RESERVE_BOX form .RESERVE_LIST li .INPUT input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 392px;
+}
+.BACK_MAIN_CONTENT_RIGHT .RESERVE_BOX form .RESERVE_LIST li .SELECT select {
+  width: 392px;
+  padding: 10px;
+  margin: 10px 0;
+}
+.BACK_MAIN_CONTENT_RIGHT .RESERVE_BOX form .RESERVE_LIST li textarea {
+  width: 840px;
+}
+.BACK_MAIN_CONTENT_RIGHT .RESERVE_BOX form .RESERVE_LIST li .RESERVE_LIST li:last-child {
+  /* flex-grow: 1; */
+  flex-basis: 844px;
+}
+.BACK_MAIN_CONTENT_RIGHT .RESERVE_BOX form .RESERVE_LIST li .BTN_BACK {
+  width: 256px;
+  height: 65px;
+  display: block;
+  margin: 0 auto;
 }
 
-.BIG_TITLE {
+.INDEX .BIG_TITLE {
   padding-top: 100px;
   position: relative;
 }
