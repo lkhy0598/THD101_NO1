@@ -145,7 +145,7 @@ select option{
 
 .SEARCHBTN_ALL{
     position: absolute;
-    top:19%;
+    top:16%;
     right: 0px;
     z-index: 10;
     width: 20%;
@@ -193,6 +193,7 @@ select option{
 
 .PGAENUMBER{
     padding-top: 120px;
+    margin-bottom: 335px;
     display: flex;
     justify-content:center;
 }
@@ -240,15 +241,5 @@ select option{
     padding-left: 25%;
     
 }
-
-
-footer{
-    margin-top: 335px;
-}
-
-
-
-
-
 
 }

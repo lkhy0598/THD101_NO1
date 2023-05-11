@@ -242,6 +242,11 @@ a {
   height: 100px;
   border: unset;
   border-radius: 50%;
+  position: sticky;
+  left: 93%;
+  bottom: 30px;
+  margin: 30px;
+  transition: all 0.25s ease-in-out;
 }
 .TOP_BTN:hover {
   background-image: url(/img/TOP-BTN-HOVER.svg);
@@ -249,6 +254,14 @@ a {
   height: 100px;
   border: unset;
   border-radius: 50%;
+}
+.TOP_BTN.SHOW {
+  visibility: visible;
+  opacity: 1;
+}
+.TOP_BTN.HIDE {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .SHOPPINGLIST_MAGNIFIER {
@@ -308,12 +321,8 @@ a {
   line-height: 65px;
 }
 
-.INFORMATION_CARD {
-  padding-top: 50px;
-}
-
 .CARD_BODY {
-  width: 1200px;
+  max-width: 1200px;
   height: 350px;
   margin: 0 auto;
   border-radius: 10px;
@@ -491,19 +500,6 @@ a {
   height: 45px;
   width: 300px;
 }
-.SELECT::after {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-left: 2.5px solid black;
-  border-bottom: 2.5px solid black;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  position: absolute;
-  bottom: 13.5px;
-  right: 17.5px;
-}
 .SELECT select:focus {
   outline: none;
 }
@@ -543,7 +539,7 @@ a {
   content: "";
   position: absolute;
   border: 2px solid #98C7CF;
-  width: 60vw;
+  width: 59.6vw;
   bottom: 0;
   left: 280px;
 }
@@ -593,6 +589,42 @@ a {
   height: 200px;
 }
 .DOT::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #FFFFFF 0%, #FFFFFF 20%, transparent 0%, transparent 100%);
+  background-size: 17px 17px;
+  background-position: 0 0;
+}
+
+.DOT1 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.DOT1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #FFFFFF 0%, #FFFFFF 20%, transparent 0%, transparent 100%);
+  background-size: 17px 17px;
+  background-position: 0 0;
+}
+
+.DOT2 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.DOT2::before {
   content: "";
   display: block;
   position: absolute;
@@ -882,6 +914,117 @@ footer {
 .BACK_MAIN_CONTENT_LEFT .ASIDE_BUTTON ul li a .bi-chevron-right {
   position: absolute;
   right: 10%;
+}
+
+.ABOUT .BACKGROUND {
+  position: relative;
+}
+.ABOUT .CAROUSEL {
+  position: relative;
+}
+.ABOUT .DOT {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  right: 30px;
+  bottom: 40px;
+  z-index: 10;
+}
+.ABOUT .BREAD {
+  padding-top: 30px;
+}
+.ABOUT .ABOUTUS_TITLE {
+  position: relative;
+  color: #FFFFFF;
+  z-index: 10;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.ABOUT .ABOUTUS_TITLE .ABOUTUS_TITLE_IMG {
+  background-image: url(../../img/TITLE-BG.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 280px;
+  height: 100px;
+  padding: 5px 20px;
+  box-sizing: border-box;
+}
+.ABOUT .ABOUTUS_TITLE .ABOUTUS_TITLE_IMG h1 {
+  text-align: left;
+  padding-top: 10px;
+}
+.ABOUT .ABOUTUS_TITLE .ABOUTUS_TITLE_IMG p {
+  padding-top: 5px;
+  padding-left: 5px;
+}
+.ABOUT .FAKE_HIGH {
+  height: 75.4vh;
+}
+.ABOUT .ABOUT_BG > img {
+  width: 100%;
+  position: absolute;
+  top: 145px;
+}
+.ABOUT .SMALL_TITLE {
+  display: flex;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-top: 70px;
+  position: relative;
+}
+.ABOUT .SMALL_TITLE > h2 {
+  z-index: 10;
+}
+.ABOUT .DOT {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: -120px;
+  bottom: 0;
+  z-index: 0;
+}
+.ABOUT .CLINIC_PROFILE {
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 1150px;
+}
+.ABOUT .CLINIC_PROFILE > img {
+  float: left;
+}
+.ABOUT .LOCATION_WRAPPER {
+  margin-top: 150px;
+  padding-bottom: 200px;
+  display: flex;
+}
+.ABOUT .LOCATION_LEFT {
+  width: 50%;
+}
+.ABOUT .LOCATION_RIGHT {
+  width: 50%;
+  padding-left: 30px;
+}
+.ABOUT .LOCATION_LOGO {
+  margin-bottom: 20px;
+}
+.ABOUT .LOCATION_INFORMATION {
+  display: flex;
+  padding: 10px 0;
+}
+.ABOUT .LOCATION_INFORMATION > i {
+  font-size: 35px;
+  color: #34424F;
+  padding-right: 15px;
+}
+.ABOUT .LOCATION_INFORMATION > p {
+  line-height: 35px;
+  color: #34424F;
+}
+.ABOUT .LOCATION_TIMETABLE {
+  margin-top: 20px;
+}
+.ABOUT .LOCATION_TIMETABLE > img {
+  border-radius: 10px;
 }
 
 /* 下方內容 */
@@ -1243,34 +1386,91 @@ textarea {
   border-right: none;
 }
 
-.BIG_TITLE {
+.INDEX .BIG_TITLE {
   padding-top: 100px;
-}
-
-.BACKGROUND {
   position: relative;
 }
-
-.CONSULTATION_UL {
+.INDEX .HIPPO_TURTLE1 {
+  position: absolute;
+  width: 80px;
+  bottom: 0;
+  right: 25vw;
+}
+.INDEX .HIPPO_TURTLE2 {
+  position: absolute;
+  width: 120px;
+  bottom: 0;
+  right: 16vw;
+}
+.INDEX .HIPPO_TURTLE3 {
+  position: absolute;
+  width: 160px;
+  bottom: 0;
+  right: 5vw;
+}
+.INDEX .DINO_RABBIT {
+  position: absolute;
+  width: 120px;
+  bottom: 4px;
+  left: 25vw;
+  display: block;
+  animation: walk 5s alternate infinite;
+}
+@keyframes walk {
+  0% {
+    left: 25vw;
+  }
+  100% {
+    left: 60vw;
+  }
+}
+.INDEX .BACKGROUND {
+  position: relative;
+}
+.INDEX .CAROUSEL {
+  position: relative;
+}
+.INDEX .DOT {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  right: 30px;
+  bottom: 40px;
+  z-index: 10;
+}
+.INDEX .DOT1 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 0px;
+  bottom: 0px;
+  z-index: 10;
+}
+.INDEX .DOT2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 0px;
+  top: 5px;
+  z-index: 10;
+}
+.INDEX .CONSULTATION_UL {
   display: flex;
   justify-content: center;
   margin-top: 100px;
   margin-bottom: 120px;
 }
-
-.CONSULTATION_ITEM {
+.INDEX .CONSULTATION_ITEM {
   padding: 0 90px;
 }
-
-.TOPBACKGROUND_1, .TOPBACKGROUND_2, .TOPBACKGROUND_3 {
+.INDEX .TOPBACKGROUND_1, .INDEX .TOPBACKGROUND_2, .INDEX .TOPBACKGROUND_3 {
   width: 293px;
   height: 55px;
   background-color: #98C7CF;
   border-radius: 10px 10px 0 0;
   position: relative;
 }
-
-.TOPBACKGROUND_1::after {
+.INDEX .TOPBACKGROUND_1::after {
   content: "第一診間";
   position: absolute;
   top: -15px;
@@ -1286,8 +1486,7 @@ textarea {
   border-radius: 100px;
   background-color: #F89F69;
 }
-
-.TOPBACKGROUND_2::after {
+.INDEX .TOPBACKGROUND_2::after {
   content: "第二診間";
   position: absolute;
   top: -15px;
@@ -1303,8 +1502,7 @@ textarea {
   border-radius: 100px;
   background-color: #F89F69;
 }
-
-.TOPBACKGROUND_3::after {
+.INDEX .TOPBACKGROUND_3::after {
   content: "第三診間";
   position: absolute;
   top: -15px;
@@ -1320,8 +1518,7 @@ textarea {
   border-radius: 100px;
   background-color: #F89F69;
 }
-
-.CONSULTATIONCARD {
+.INDEX .CONSULTATIONCARD {
   width: 293px;
   height: 296px;
   background-color: #FFFFFF;
@@ -1331,76 +1528,117 @@ textarea {
   flex-direction: column;
   justify-content: center;
 }
-.CONSULTATIONCARD > p {
+.INDEX .CONSULTATIONCARD > p {
   padding: 20px 0;
   font-weight: 500;
 }
-.CONSULTATIONCARD .CONSULTATION_NUM {
+.INDEX .CONSULTATIONCARD .CONSULTATION_NUM {
   font-size: 80px;
   font-weight: 700;
   color: #F89F69;
 }
-
-.BTN_WRAAPER {
+.INDEX .INFORMATION_CARD {
+  padding-top: 50px;
+}
+.INDEX .BTN_WRAAPER {
   margin-top: 80px;
   margin-bottom: 100px;
   text-align: center;
 }
-
-.BTN {
+.INDEX .BTN {
   width: 320px;
 }
-
-.Services_UL {
+.INDEX .Services_UL {
   display: flex;
   justify-content: space-between;
+  margin: 80px 0;
 }
-
-.Services_ITEM {
-  padding: 80px 40px;
+.INDEX .Services_ITEM {
+  padding: 0 40px;
   text-align: center;
 }
-
-.Services_ITEM > img {
+.INDEX .Services_ITEM > img {
   border-radius: 80px 10px 80px 10px;
 }
-
-.Services_ITEM h3 {
+.INDEX .Services_ITEM h3 {
   padding-top: 30px;
   padding-bottom: 15px;
 }
-
-.FEATURE_WRAPPER {
+.INDEX .FEATURE_WRAPPER {
   display: flex;
 }
-
-.FEATURE_LEFT {
+.INDEX .FEATURE_LEFT {
   margin-bottom: 120px;
 }
-
-.FEATURE_ITEM {
+.INDEX .FEATURE_ITEM {
   display: flex;
   justify-content: space-between;
-  padding: 60px 0;
 }
-
-.FEATURE_ITEM p {
+.INDEX .FEATURE_ITEM:first-child {
+  padding-top: 100px;
+  padding-bottom: 90px;
+}
+.INDEX .FEATURE_ITEM:nth-child(2) {
+  padding-bottom: 90px;
+}
+.INDEX .FEATURE_ITEM:nth-child(3) {
+  padding-bottom: 90px;
+}
+.INDEX .FEATURE_ITEM:last-child {
+  padding-bottom: 100px;
+}
+.INDEX .FEATURE_ITEM p {
   line-height: 160%;
-  padding: 0 80px;
+  padding: 0 50px;
   font-weight: 500;
+  text-align: justify;
 }
-
-.FEATURE_RIGHT > img {
+.INDEX .FEATURE_RIGHT > img {
   border-radius: 100px 0 0 100px;
 }
-
-.ARC_TITLE {
+.INDEX .ARC_TITLE {
   min-width: 80px;
   min-height: 80px;
 }
-
-.CORE_CONTENT {
+.INDEX .CORE_CONTENT {
+  width: 100%;
+  margin-top: 80px;
   display: flex;
+  justify-content: space-between;
+}
+.INDEX .LOCATION_WRAPPER {
+  margin-top: 150px;
+  padding-bottom: 200px;
+  display: flex;
+}
+.INDEX .LOCATION_LEFT {
+  width: 50%;
+}
+.INDEX .LOCATION_RIGHT {
+  width: 50%;
+  padding-left: 30px;
+}
+.INDEX .LOCATION_LOGO {
+  margin-bottom: 20px;
+}
+.INDEX .LOCATION_INFORMATION {
+  display: flex;
+  padding: 10px 0;
+}
+.INDEX .LOCATION_INFORMATION > i {
+  font-size: 35px;
+  color: #34424F;
+  padding-right: 15px;
+}
+.INDEX .LOCATION_INFORMATION > p {
+  line-height: 35px;
+  color: #34424F;
+}
+.INDEX .LOCATION_TIMETABLE {
+  margin-top: 20px;
+}
+.INDEX .LOCATION_TIMETABLE > img {
+  border-radius: 10px;
 }
 
 .SHOPPING .SHOPPING_MASTERVISION {
@@ -1499,7 +1737,7 @@ textarea {
 }
 .SHOPPING .SEARCHBTN_ALL {
   position: absolute;
-  top: 19%;
+  top: 16%;
   right: 0px;
   z-index: 10;
   width: 20%;
@@ -1533,6 +1771,7 @@ textarea {
 }
 .SHOPPING .PGAENUMBER {
   padding-top: 120px;
+  margin-bottom: 335px;
   display: flex;
   justify-content: center;
 }
@@ -1569,9 +1808,6 @@ textarea {
 .SHOPPING .RIGHT {
   margin-left: 20px;
   padding-left: 25%;
-}
-.SHOPPING footer {
-  margin-top: 335px;
 }
 
 .SHOPPINGLIST {
