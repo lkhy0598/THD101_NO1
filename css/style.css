@@ -859,6 +859,310 @@ footer {
   margin-right: 10px;
 }
 
+.MODAL {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.MODAL .POPUP_CLOSEBTN {
+  font-size: 5rem;
+  color: #98C7CF;
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  z-index: 1000;
+}
+.MODAL .POPUP_WRAP {
+  background-image: url(/img/user_popup/USER_BG.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 414px;
+  height: 768px;
+  margin: auto;
+  border-radius: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.MODAL .POPUP_WRAP .BG_CLOUD_BOX {
+  display: block;
+  width: 414px;
+  height: 768px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.MODAL .POPUP_WRAP .BG_CLOUD_BOX .BG_CLOUD {
+  position: absolute;
+  top: 65px;
+  left: -170px;
+  z-index: -1;
+}
+
+.POPUP_NAVS {
+  display: flex;
+  font-size: 2rem;
+  height: 5rem;
+  line-height: 5rem;
+  border-radius: 20px 20px 0 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.POPUP_NAVS li {
+  flex-grow: 1;
+  height: 5.5rem;
+  line-height: 5rem;
+  background: linear-gradient(180deg, #D28555 0%, #BF523A 99.48%);
+}
+.POPUP_NAVS li a {
+  color: #000000;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  position: relative;
+}
+.POPUP_NAVS li a::after {
+  display: block;
+  content: "";
+  border-top: 1px solid black;
+  width: 0%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 16%;
+  left: 25%;
+  transition: all 0.3s ease;
+}
+.POPUP_NAVS li a:hover::after {
+  width: 50%;
+}
+.POPUP_NAVS .TAB_ACTIVE {
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.POPUP_NAVS .FORGETTABS,
+.POPUP_NAVS .CHANGETABS {
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.POPUP_TABS_CONTENT {
+  height: 100%;
+}
+.POPUP_TABS_CONTENT .POPUP_BOX {
+  display: none;
+  width: 100%;
+  height: calc(100% - 5rem);
+  border-top: 1px solid rgba(0, 0, 0, 0.1450980392);
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+.POPUP_TABS_CONTENT .POPUP_BOX .USER_LOGO {
+  display: block;
+  margin: 26px auto;
+}
+.POPUP_TABS_CONTENT .POPUPACTIVE {
+  display: flex;
+  pointer-events: auto;
+}
+
+.USER_FORM {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.USER_FORM .INPUT_GROUP {
+  position: relative;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.USER_FORM .INPUT_GROUP .bi {
+  color: #9D9D9D;
+  background: white;
+  font-size: 3rem;
+  position: absolute;
+  left: 6.7rem;
+  bottom: 0.8rem;
+}
+.USER_FORM .INPUT_GROUP input {
+  font-family: "Noto Sans";
+  font-size: 15px;
+  color: #34424F;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0px;
+  border: 1px solid #9E9E9E;
+  height: 45px;
+  width: 300px;
+  text-indent: 40px;
+}
+.USER_FORM .INPUT_GROUP input:focus {
+  outline: none;
+}
+.USER_FORM .INPUT_GROUP input[type=number]::-webkit-outer-spin-button,
+.USER_FORM .INPUT_GROUP input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.USER_FORM .INPUT_GROUP .BTN {
+  font-size: 15px;
+  width: 300px;
+  margin: 0 auto;
+  color: white;
+  text-indent: 0;
+  line-height: 0;
+  font-weight: bold;
+}
+.USER_FORM .INPUT_GROUP .SIGNUP_SUB {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.USER_FORM .INPUT_GROUP .VERIFYINPUT {
+  width: 170px;
+  margin-right: 10px;
+}
+.USER_FORM .INPUT_GROUP .VERIFBTN {
+  width: 120px;
+  height: 45px;
+  font-size: 15px;
+}
+.USER_FORM p {
+  text-align: left;
+  width: 300px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #34424F;
+  line-height: 2rem;
+}
+
+.SIGNUP_INPUTS {
+  flex-grow: 1;
+}
+
+.FORGETBOX {
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+.FORGETBOX .FORGET_BTN {
+  background: none;
+  border: none;
+  color: #34424F;
+  cursor: pointer;
+}
+.FORGETBOX .FORGET_BTN:hover {
+  text-decoration: underline;
+}
+
+.DIVIDING {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+.DIVIDING::before, .DIVIDING::after {
+  display: block;
+  content: "";
+  border-bottom: 1px solid #34424F;
+  flex-grow: 1;
+  height: 0.5em;
+  margin: 0;
+}
+.DIVIDING span {
+  color: #34424F;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.OTHERLOGIN_BTN {
+  margin: 0 auto;
+  margin-bottom: 16px;
+  display: flex;
+  height: 45px;
+  width: 300px;
+  font-size: 2rem;
+  line-height: 45px;
+  border-radius: 10px;
+  border: 1px solid #9E9E9E;
+  background: white;
+  cursor: pointer;
+  position: relative;
+}
+.OTHERLOGIN_BTN:hover {
+  background: linear-gradient(180deg, #CBCBCB 0%, #F0F0F0 100%);
+}
+.OTHERLOGIN_BTN .OTHERLOGIN_ICON {
+  height: 45px;
+  position: absolute;
+  top: 4px;
+  left: -25px;
+}
+.OTHERLOGIN_BTN .OTHERLOGIN_ICON img {
+  height: 50%;
+}
+.OTHERLOGIN_BTN span {
+  font-size: 2rem;
+  text-indent: 40px;
+}
+
+.SIGNUP_BTN {
+  font-weight: unset;
+  margin: 0 auto;
+  margin-bottom: 26px;
+  height: 45px;
+  width: 300px;
+  font-size: 15px;
+  line-height: 45px;
+  cursor: pointer;
+}
+
+.CLOSETABS {
+  display: none;
+}
+
+.CHANGEPASS_SUCC {
+  width: 172px;
+  height: 163px;
+  margin: auto;
+}
+
+.PASS_SEND_BOX,
+.BACKTOLOGIN_BOX {
+  width: 300px;
+  margin: 0 auto;
+}
+.PASS_SEND_BOX p,
+.BACKTOLOGIN_BOX p {
+  width: 300px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #34424F;
+  line-height: 2rem;
+}
+.PASS_SEND_BOX .PASS_SUB,
+.BACKTOLOGIN_BOX .PASS_SUB {
+  width: 300px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-bottom: 26px;
+}
+
 .BACK_MAIN_CONTENT_LEFT {
   width: 18%;
   background-color: #EBE3DD;
@@ -2168,6 +2472,4 @@ footer {
   margin: 70px 5px 0;
   width: 163px;
   display: inline-block;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
