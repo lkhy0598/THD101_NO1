@@ -1943,6 +1943,10 @@ textarea {
   border-radius: 10px;
 }
 
+section {
+  background-image: url(../../img/BG.jpg);
+}
+
 .SHOPPING .SHOPPING_MASTERVISION {
   background-image: url("/img/shopping/SHOPPING_MASTERVISION_01.jpg");
   background-repeat: no-repeat;
