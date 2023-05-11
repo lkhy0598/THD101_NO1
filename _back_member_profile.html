@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>後台 Back</title>
+</head>
+
+<body>
+    
+    <header>
+        <nav class="BACK_NAV">
+
+            <img src="img/BACK-LOGO-HOVER.svg" alt="">
+            <img src="img/BACK-LOGO.svg" alt="">
+
+            <ul>
+                <li><a href="#"><i class="bi bi-plus-square"></i> 新增會員 / 寵物</a></li>
+                <li><a href="#"><i class="bi bi-plus-square"></i> 新增消息</a></li>
+                <li><a href="#"><i class="bi bi-plus-square"></i> 新增商品</a></li>
+                <li><a href="#"><i class="bi bi-person-circle"></i> USER 你好</a></li>
+                <li><a href="#">登出後台</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <section class="BACK_MAIN_CONTENT">
+
+        <!-- 左側內容 -->
+        <aside class="BACK_MAIN_CONTENT_LEFT">
+
+            <div class="ASIDE_TOP">
+                
+                <label for="clinic_room" class="SELECT"><br>
+                    <select id="clinic_room">
+                        <option value="">第一診間</option>
+                        <option value="">第二診間</option>
+                        <option value="">第三診間</option>
+                    </select>
+                </label>
+    
+                <h3>目前叫號</h3>
+                <h3><span>10</span>號</h3>
+    
+                <button class="BTN_BACK">呼叫下一號<i class="bi bi-arrow-right-circle"></i></button><br>
+    
+                <button class="BTN_BACK">過號<i class="bi bi-arrow-right-circle"></i></button>
+    
+            </div>
+    
+            <div class="ASIDE_BUTTON">
+                <ul>
+                    <li><a href="#"><i class="bi bi-calendar"></i> 預約時刻表<i class="bi bi-chevron-right"></i></a></li>
+                    <li><a href="#"><i class="bi bi-receipt-cutoff"></i> 病歷紀錄管理<i class="bi bi-chevron-right"></i></a></li>
+                    <li><a href="#"><i class="bi bi-people-fill"></i> 會員管理<i class="bi bi-chevron-right"></i></a></li>
+                    <li><a href="#"><i class="bi bi-megaphone"></i> 消息管理<i class="bi bi-chevron-right"></i></a></li>
+                    <li><a href="#"><i class="bi bi-cart-fill"> </i>商品管理<i class="bi bi-chevron-right"></i></a></li>
+                    <li><a href="#"><i class="bi bi-truck"></i> 訂單管理<i class="bi bi-chevron-right"></i></a></li>
+                    <li><a href="#"><i class="bi bi-gear"></i> 使用者設定<i class="bi bi-chevron-right"></i></a></li>
+                </ul>
+            </div>
+    
+        </aside>
+
+        <!-- 右側內容 "主要" 不會更動 -->
+        <main class="BACK_MAIN_CONTENT_RIGHT">
+
+            <!-- 會員管理區塊 "會更動區塊" -->
+            <section class="BACK_MEMBER_PROFILE">
+
+                <h2>會員管理</h2>
+                <!-- 會員管理 -->
+                <section class="MEMBER_PROFILE">
+
+                    <div class="BACK_BANNER">
+                        <h3>會員管理</h3>
+                    </div>
+
+                    <section class="MEMBER_PROFILE_SEARCH">
+                        
+                        <form action="">
+
+                            <ul>
+                                <li>
+                                    <label for="phone" class="INPUT">手機號碼<br>
+                                        <input type="text" name="phone" id="phone">
+                                    </label>
+                                </li>
+                                <li>
+                                    <p>or</p>
+                                </li>
+                                <li>
+                                    <label for="name" class="INPUT">姓名<br>
+                                        <input type="text" name="name" id="name">
+                                    </label>
+                                </li>
+                                <li>
+                                    <button class="BTN_BACK" type="submit">搜尋會員</button>
+                                </li>
+                            </ul>
+
+                        </form>
+                    </section>
+                    <!-- 會員管理搜尋結果 -->
+                    <section class="MEMBER_PROFILE_TABLE">
+
+                        <ul class="MEMBER_PROFILE_TITLE BACK_TABLE_TITLE">
+                            <li>姓名</li>
+                            <li>手機號碼</li>
+                            <li>加入日期</li>
+                            <li>修改</li>
+                            <li>刪除</li>
+                            <li>新增預約</li>
+                        </ul>
+
+                        <ul class="MEMBER_PROFILE_CONTENT BACK_TABLE_CONTENT">
+                            <li>范植鑫</li>
+                            <li>0988192839</li>
+                            <li>2023/04/01</li>
+                            <li><i class="bi bi-pencil"></i></li>
+                            <li><i class="bi bi-x-lg"></i></li>
+                            <li><i class="bi bi-calendar-plus"></i></li>
+                        </ul>
+                    </section>
+
+                </section>
+
+                <!-- 寵物搜尋 -->
+                <section class="PET_PROFILE">
+
+                    <div class="BACK_BANNER">
+                        <h3>寵物搜尋</h3>
+                    </div>
+
+                    <section class="PET_PROFILE_SEARCH">
+
+                        <form action="">
+
+                            <ul>
+                                <li>
+                                    <label for="phone" class="INPUT">手機號碼<br>
+                                        <input type="text" name="phone" id="phone">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="consultation_type" class="SELECT">看診類型<br>
+                                        <select id="consultation_typee">
+                                            <option value="general">一般掛號</option>
+                                            <option value="vaccines">預防針</option>
+                                            <option value="health_checks">健康檢查</option>
+                                            <option value="communication">寵物溝通</option>
+                                            <option value="hotel">寵物住宿</option>
+                                        </select>
+                                    </label>
+                                </li>
+                                <li>
+                                    <button class="BTN_BACK" type="submit">搜尋寵物</button>
+                                </li>
+                            </ul>
+
+                        </form>
+                    </section>
+                    <!-- 寵物搜尋結果 -->
+                    <section class="PET_PROFILE_TABLE">
+                        <ul class="PET_PROFILE_TITLE BACK_TABLE_TITLE">
+                            <li>手機號碼</li>
+                            <li>寵物姓名</li>
+                            <li>看診類型</li>
+                            <li>最近看診日期</li>
+                            <li>修改</li>
+                            <li>刪除</li>
+                        </ul>
+                        <ul class="PET_PROFILE_CONTENT BACK_TABLE_CONTENT">
+                            <li>0988192839</li>
+                            <li>范植鑫</li>
+                            <li>一般掛號</li>
+                            <li>2023/04/01</li>
+                            <li><i class="bi bi-pencil"></i></li>
+                            <li><i class="bi bi-x-lg"></i></li>
+                        </ul>
+                        <ul class="PET_PROFILE_CONTENT BACK_TABLE_CONTENT">
+                            <li>0988192839</li>
+                            <li>范植鑫</li>
+                            <li>寵物溝通</li>
+                            <li>2023/04/01</li>
+                            <li><i class="bi bi-pencil"></i></li>
+                            <li><i class="bi bi-x-lg"></i></li>
+                        </ul>
+                    </section>
+                    
+                </section>
+
+            </section>
+            <!-- 新增會員及寵物區塊 "會更動區塊" -->
+            <section class="BACK_ADD_NEW_MEMBER">
+                <h2>新增會員及寵物</h2>
+
+                <section class="ADD_NEW_MEMBER_PET">
+
+                    <!-- 新增會員 -->
+                    <div class="BACK_BANNER">
+                        <h3>新增會員</h3>
+                    </div>
+                    
+                    <section class="ADD_NEW_MEMBER">
+
+
+                        <form action="" class="ADD_NEW_FORM">
+
+                            <section class="ADD_NEW_MEMBER_PIC ADD_PIC">
+
+                                <img id="preview_member_pic" src="img/backend/MENBER_PIC.svg"  class="ADD_PIC_IMG"/>
+
+                                <label for="member_pic" class="PIC_FILE_BOX">
+                                    <input type="button" id="member_pic" value="上傳照片" class="BTN_BACK">
+                                    <input name="member_pic" type="file" id="member_pic" class="PIC_FILE" accept="image/gif, image/jpeg, image/png"/ >
+                                </label>
+
+                            </section>
+
+                            <ul class="ADD_NEW_MEMBER_FORM">
+                                <li>
+                                    <label for="name" class="INPUT">姓名<br>
+                                        <input type="text" name="name" id="name">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="phone" class="INPUT">手機號碼<br>
+                                        <input type="text" name="phone" id="phone">
+                                    </label>
+                                </li>
+                                
+                                <li>
+                                    <label for="email" class="INPUT">電子信箱<br>
+                                        <input type="email" name="email" id="email">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="address" class="INPUT">通訊地址<br>
+                                        <input type="text" name="address" id="address">
+                                    </label>
+                                </li>
+                                <li>
+                                    <button class="BTN_BACK" type="submit">新增會員</button>
+                                </li>
+                            </ul>
+
+                        </form>
+                    </section>
+                    <!-- 新增寵物 -->
+                    <div class="BACK_BANNER">
+                        <h3>新增寵物</h3>
+                    </div>
+
+                    <section class="ADD_NEW_PET">
+
+
+                        <form action="" class="ADD_NEW_FORM">
+
+                            <section class="ADD_NEW_PET_PIC ADD_PIC">
+
+                                <img id="preview_pet_pic" src="img/backend/PET_PIC.svg"  class="ADD_PIC_IMG"/>
+
+                                <label for="member_pic" class="PIC_FILE_BOX" >
+                                    <input type="button" id="member_pic" value="上傳照片" class="BTN_BACK">
+                                    <input name="member_pic" type="file" id="member_pic" class="PIC_FILE" accept="image/gif, image/jpeg, image/png"/ >
+                                </label>
+                            
+                            </section>
+
+                            <ul class="ADD_NEW_PET_FORM">
+                                <li>
+                                    <label for="owner_name" class="INPUT">主人姓名<br>
+                                        <input type="text" name="owner_name" id="owner_name">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="phone" class="INPUT">手機號碼<br>
+                                        <input type="text" name="phone" id="phone">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="pet_name" class="INPUT">寵物姓名<br>
+                                        <input type="text" name="pet_name" id="pet_name">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="pet_gender" class="SELECT">寵物性別<br>
+                                        <select name="pet_gender" id="pet_gender">
+                                            <option value="male">公</option>
+                                            <option value="female">母</option>
+                                        </select>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="pet_category" class="SELECT">寵物類型<br>
+                                        <select id="pet_category">
+                                            <option value="dog">狗狗</option>
+                                            <option value="cat">貓貓</option>
+                                            <option value="rabbit">兔子</option>
+                                            <option value="other">其他</option>
+                                        </select>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="pet_age" class="INPUT">寵物年齡<br>
+                                        <input type="text" name="pet_age" id="pet_age">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="vaccines" class="INPUT">上次施打預防針日期<br>
+                                        <input type="date" name="vaccines" id="vaccines">
+                                    </label>
+                                </li>
+                                <li>
+                                    <button class="BTN_BACK" type="submit">新增寵物</button>
+                                </li>
+                            </ul>
+
+                        </form>
+                    </section>
+
+                </section>
+
+                
+                
+            </section>
+            <!-- 修改會員區塊"會更動區塊" -->
+            <section class="BACK_MODIFY_MEMBER">
+
+                <h2>修改會員</h2>
+
+                <section class="MODIFY_MEMBER">
+                    
+                    <!-- 修改會員 -->
+                    <div class="BACK_BANNER">
+                        <h3>修改會員</h3>
+                    </div>
+                    
+                    <section class="MODIFY_MEMBER_FORM">
+
+
+                        <form action="" class="ADD_NEW_FORM">
+
+                            <section class="ADD_NEW_MEMBER_PIC ADD_PIC">
+
+                                <img id="preview_member_pic" src="img/backend/MENBER_PIC.svg"  class="ADD_PIC_IMG"/>
+
+                                <label for="member_pic" class="PIC_FILE_BOX">
+                                    <input type="button" id="member_pic" value="上傳照片" class="BTN_BACK">
+                                    <input name="member_pic" type="file" id="member_pic" class="PIC_FILE" accept="image/gif, image/jpeg, image/png"/ >
+                                </label>
+
+                            </section>
+
+                            <ul class="ADD_NEW_MEMBER_FORM">
+                                <li>
+                                    <label for="name" class="INPUT">姓名<br>
+                                        <input type="text" name="name" id="name">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="phone" class="INPUT">手機號碼<br>
+                                        <input type="text" name="phone" id="phone">
+                                    </label>
+                                </li>
+                                
+                                <li>
+                                    <label for="email" class="INPUT">電子信箱<br>
+                                        <input type="email" name="email" id="email">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="address" class="INPUT">通訊地址<br>
+                                        <input type="text" name="address" id="address">
+                                    </label>
+                                </li>
+                                <li>
+                                    <button class="BTN_BACK" type="submit">修改會員</button>
+                                </li>
+                            </ul>
+
+                        </form>
+                    </section>
+                    
+                </section>
+            </section>
+            <!-- 修改寵物區塊"會更動區塊" -->
+            <section class="BACK_MODIFY_PET">
+
+                <h2>修改會員</h2>
+
+                <section class="MODIFY_PET">
+                    <!-- 修改寵物 -->
+                    <div class="BACK_BANNER">
+                        <h3>修改寵物</h3>
+                    </div>
+
+                    <section class="MODIFY_PET_FORM">
+
+
+                        <form action="" class="ADD_NEW_FORM">
+
+                            <section class="ADD_NEW_PET_PIC ADD_PIC">
+
+                                <img id="preview_pet_pic" src="img/backend/PET_PIC.svg"  class="ADD_PIC_IMG"/>
+
+                                <label for="member_pic" class="PIC_FILE_BOX" >
+                                    <input type="button" id="member_pic" value="上傳照片" class="BTN_BACK">
+                                    <input name="member_pic" type="file" id="member_pic" class="PIC_FILE" accept="image/gif, image/jpeg, image/png"/ >
+                                </label>
+                            
+                            </section>
+
+                            <ul class="ADD_NEW_PET_FORM">
+                                <li>
+                                    <label for="owner_name" class="INPUT">主人姓名<br>
+                                        <input type="text" name="owner_name" id="owner_name">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="phone" class="INPUT">手機號碼<br>
+                                        <input type="text" name="phone" id="phone">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="pet_name" class="INPUT">寵物姓名<br>
+                                        <input type="text" name="pet_name" id="pet_name">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="pet_gender" class="SELECT">寵物性別<br>
+                                        <select name="pet_gender" id="pet_gender">
+                                            <option value="male">公</option>
+                                            <option value="female">母</option>
+                                        </select>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="pet_category" class="SELECT">寵物類型<br>
+                                        <select id="pet_category">
+                                            <option value="dog">狗狗</option>
+                                            <option value="cat">貓貓</option>
+                                            <option value="rabbit">兔子</option>
+                                            <option value="other">其他</option>
+                                        </select>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="pet_age" class="INPUT">寵物年齡<br>
+                                        <input type="text" name="pet_age" id="pet_age">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="vaccines" class="INPUT">上次施打預防針日期<br>
+                                        <input type="date" name="vaccines" id="vaccines">
+                                    </label>
+                                </li>
+                                <li>
+                                    <button class="BTN_BACK" type="submit">修改寵物</button>
+                                </li>
+                            </ul>
+
+                        </form>
+                    </section>
+                </section>
+
+                
+
+            </section>
+
+        </main>
+    </section>
+    
+
+</body>
+
+</html>
