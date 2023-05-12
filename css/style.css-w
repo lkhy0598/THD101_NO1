@@ -1642,12 +1642,7 @@ textarea {
 }
 
 .MEMBERCENTER {
-  position: relative;
-  padding-top: 300px;
-}
-
-.MEMCENTOP {
-  margin-top: 50px;
+  padding-top: 200px;
 }
 
 .SHOPPING .SHOPPING_MASTERVISION {
@@ -2020,4 +2015,4 @@ textarea {
   display: inline-block;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css-w.map */
