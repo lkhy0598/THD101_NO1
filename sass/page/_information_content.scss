@@ -1,0 +1,67 @@
+// 背景雲裝飾
+.BACKGROUND {
+    box-sizing: border-box;
+    overflow: hidden;
+    background-image: none;
+    position: relative;
+
+    .BG {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+    }
+
+    .INFOMATION_BG_CLOUDS {
+        .BG_CLOUD {
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .BG_CLOUD:first-child {
+            transform: scaleX(-1);
+            top: 0;
+            left: 900px;
+        }
+
+        .BG_CLOUD:last-child {
+            bottom: -400px;
+            left: -400px;
+        }
+    }
+}
+
+// 文章內容
+.INFOMATION_CONTENT_BOX {
+    margin-top: 90px;
+    margin-bottom: 110px;
+    color: $blueblack;
+    .INFORMATION_IMG{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    p{
+        margin-bottom: 40px;
+    }
+    .INFOMATION_CONTENT_DATE {
+        font-size: $p;
+        margin-bottom: 10px;
+    }
+
+    .INFOMATION_CONTENT_TITLE {
+        font-size: 3.5rem;
+    }
+
+    .INFOMATION_CONTENT_TEXT {
+        font-size: $p;
+    }
+}
+
+.INFORMATION_BTN{
+    width: 300px;
+    margin: 0 auto;
+    text-decoration: none;
+}
