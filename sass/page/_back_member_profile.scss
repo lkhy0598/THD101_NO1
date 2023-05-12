@@ -1,0 +1,338 @@
+/*----------會員管理區塊---------*/
+.BACK_MAIN_CONTENT_RIGHT{
+   /* 會員管理 */
+   .MEMBER_PROFILE{
+      width: 76.5%;
+      margin: 85px auto 50px;
+   }
+   .BACK_BANNER{
+      width:100%;
+      height:60px;
+      background-color:#CB5656;
+      color: white;
+      font-size:30px;
+      line-height:60px;
+      border-radius:10px;
+      border: none;
+      padding-left: 20px;
+   }
+   .BACK_TABLE_TITLE{
+      background-color: $red;
+      color: $white;
+      height: 55px;
+      text-align: center;
+      line-height: 55px;
+      outline: 2px solid $red;
+      border-radius: 10px 10px 0 0;
+   }
+   .BACK_TABLE_CONTENT{
+      color: $blueblack;
+      text-align: center;
+      line-height: 80px;
+      height: 80px;
+
+      li{
+         border-top: 1px solid black;
+         border-right:1px solid black;
+
+         .bi-pencil, .bi-x-lg, .bi-calendar-plus{
+            cursor: pointer;
+         }
+      }
+   }
+   .MEMBER_PROFILE_SEARCH{
+      width: 75%;
+      margin: 70px auto 50px;
+
+      ul{
+         font-size: $p;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+
+         input{
+            width: 100%;
+         }
+         p{
+            color: $blueblack;
+         }
+      
+      }
+   } 
+   .MEMBER_PROFILE_SEARCH li:nth-child(1){
+      width: 28%;
+   }
+   .MEMBER_PROFILE_SEARCH li:nth-child(2){
+      width: 3%;
+   }
+   .MEMBER_PROFILE_SEARCH li:nth-child(3){
+      width: 28%;
+   }
+   .MEMBER_PROFILE_TABLE{
+      width: 86%;
+      margin: 0 auto;
+      border: 1px solid black;
+      border-radius: 10px;
+
+      ul{
+         display: flex;
+         font-size: $p;
+      
+   }
+
+   }
+   .MEMBER_PROFILE_TABLE li:nth-child(1){
+      width: 19%;
+   }
+   .MEMBER_PROFILE_TABLE li:nth-child(2){
+      width: 19%;
+   }
+   .MEMBER_PROFILE_TABLE li:nth-child(3){
+      width: 33%;
+   }
+   .MEMBER_PROFILE_TABLE li:nth-child(4){
+      width: 7%;
+   }
+   .MEMBER_PROFILE_TABLE li:nth-child(5){
+      width: 7%;
+   }
+   .MEMBER_PROFILE_TABLE li:nth-child(6){
+      width: 15%;
+      border-right: none;
+   }
+
+   /* 寵物搜尋 */
+   .PET_PROFILE{
+      width: 76.5%;
+      margin: 100px auto 0;
+   }
+   .PET_PROFILE_SEARCH{
+      width: 75%;
+      margin: 70px auto 50px;
+
+      ul{
+         font-size: $p;
+         display: flex;
+         justify-content: space-between;
+         align-items: end;
+
+         input{
+            margin-bottom: 0;
+            width: 100%;
+         }
+         select{
+            width: 100%;
+         }
+   }
+   }
+
+   .PET_PROFILE_SEARCH li:nth-child(1){
+      width: 28%;
+   }
+   .PET_PROFILE_SEARCH li:nth-child(2){
+      width: 28%;
+   }
+
+   /* 寵物搜尋結果 */
+   .PET_PROFILE_TABLE{
+      width: 90%;
+      margin: 0 auto;
+      border: 1px solid black;
+      border-radius: 10px;
+
+      ul{
+         display: flex;
+         font-size: $p;
+   }
+   }
+   .PET_PROFILE_TABLE li:nth-child(1){
+      width: 23%;
+   }
+   .PET_PROFILE_TABLE li:nth-child(2){
+      width: 20%;
+   }
+   .PET_PROFILE_TABLE li:nth-child(3){
+      width: 23%;
+   }
+   .PET_PROFILE_TABLE li:nth-child(4){
+      width: 20%;
+   }
+   .PET_PROFILE_TABLE li:nth-child(5){
+      width: 7%;
+   }
+   .PET_PROFILE_TABLE li:nth-child(6){
+      width: 7%;
+      border-right: none;
+   }
+
+   /*----------------新增會員及寵物區塊------------------*/
+   // 修改會員及修改寵物共同使用
+   .ADD_NEW_MEMBER_PET, .MODIFY_MEMBER, .MODIFY_PET{
+      width: 76.5%;
+      margin: 85px auto 50px;
+   }
+
+   .ADD_NEW_MEMBER, .ADD_NEW_PET, .MODIFY_MEMBER_FORM, .MODIFY_PET_FORM{
+      width: 83%;
+      margin: 50px auto;
+   }
+
+   .ADD_NEW_FORM{
+      display: flex;
+      justify-content: space-between;
+
+      ul{
+         width: 69%;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+
+         input{
+            width: 100%;
+         }
+         select{
+            width: 100%;
+         }
+      }
+      // 左側上傳照片區塊
+      .ADD_PIC_IMG{
+         width: 75%;
+         display: block;
+         margin: 0 auto 35px;
+      }
+      .PIC_FILE_BOX{
+
+         position: relative;
+
+         .BTN_BACK{
+            width: 160px;
+         }
+         // 隱藏原本按鈕
+         .PIC_FILE{
+            width: 180px;
+            height: 65px;
+
+            position:absolute;
+            top: 0;
+            left: 20px;
+            cursor:pointer;
+
+            /* filter:alpha( opacity : 0); */
+            opacity: 0;
+         }
+      }
+      // input寬度
+      .ADD_NEW_MEMBER_FORM li{
+         margin-bottom: 30px;
+      }
+      .ADD_NEW_MEMBER_FORM li:nth-child(1){
+         width: 47%;
+      }
+      .ADD_NEW_MEMBER_FORM li:nth-child(2){
+         width: 47%;
+      }
+      .ADD_NEW_MEMBER_FORM li:nth-child(3){
+         flex-basis: 100%;
+      }
+      .ADD_NEW_MEMBER_FORM li:nth-child(4){
+         flex-basis: 100%;
+      }
+      .ADD_NEW_MEMBER_FORM li:nth-child(5){
+         flex-basis: 100%;
+      }
+
+      .ADD_NEW_PET_FORM li{
+         margin-bottom: 30px;
+      }
+      .ADD_NEW_PET_FORM li:nth-child(1){
+         width: 47%;
+      }
+      .ADD_NEW_PET_FORM li:nth-child(2){
+         width: 47%;
+      }
+      .ADD_NEW_PET_FORM li:nth-child(3){
+         width: 47%;
+      }
+      .ADD_NEW_PET_FORM li:nth-child(4){
+         width: 47%;
+      }
+      .ADD_NEW_PET_FORM li:nth-child(5){
+         width: 47%;
+      }
+      .ADD_NEW_PET_FORM li:nth-child(6){
+         width: 47%;
+      }
+      .ADD_NEW_PET_FORM li:nth-child(7){
+         flex-basis: 100%;
+      }
+      .ADD_NEW_PET_FORM li:nth-child(8){
+         flex-basis: 100%;
+      }
+
+   }
+
+   .RESERVE_BOX{
+      background-color: #EBE3DD;
+      width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      padding-bottom: 40px;
+
+      .bi-x-lg{
+         font-weight: 700;
+         font-size: 25px;
+         cursor: pointer;
+         position: absolute;
+         top: 5%;
+         right: 5%;
+      }
+      form{
+         width: 100%;
+
+         .RESERVE_LIST{
+            padding: 90px 0;
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            justify-content: center;
+            align-content: center;
+
+            li{
+               /* width: 400px; */
+               margin: 0  26px;
+               font-size: $p;
+               color: $blueblack;
+
+               .INPUT input{
+                  padding: 10px;
+                  margin: 10px 0;
+                  width: 392px;
+               }
+              .SELECT select{
+               width: 392px;
+               padding: 10px;
+               margin: 10px 0;
+               }
+               textarea {   
+                  width: 840px;
+               }
+               .RESERVE_LIST li:last-child{
+                  /* flex-grow: 1; */
+                  flex-basis: 844px;
+                  
+               }
+               .BTN_BACK{
+                  width: 256px;
+                  height: 65px;
+                  display: block;
+                  margin: 0 auto; 
+               }
+           }
+        }
+      }   
+
+  }
+
+
+}
+

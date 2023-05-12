@@ -117,7 +117,8 @@ a {
     }
 }
 
-// top紐
+// top按鈕
+// 請參考shopping.html，<script>記得連結至"top_btn.js"
 
 .TOP_BTN {
     cursor: pointer;
@@ -127,7 +128,11 @@ a {
     height: 100px;
     border: unset;
     border-radius: 50%;
-
+    position:sticky;
+    left: 93%;
+    bottom:30px;
+    margin: 30px;
+    transition: all .25s ease-in-out;
     // @include m{
     //     background-size: 42px;
     //     background-repeat: no-repeat;
@@ -148,6 +153,17 @@ a {
         //     height: 42px;
         // }
     }
+
+    &.SHOW {
+        visibility: visible;
+        opacity: 1;
+    }
+      
+    &.HIDE {
+        visibility: hidden;
+        opacity: 0;
+    }
+
 }
 
 .SHOPPINGLIST_MAGNIFIER{

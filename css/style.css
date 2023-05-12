@@ -242,6 +242,11 @@ a {
   height: 100px;
   border: unset;
   border-radius: 50%;
+  position: sticky;
+  left: 93%;
+  bottom: 30px;
+  margin: 30px;
+  transition: all 0.25s ease-in-out;
 }
 .TOP_BTN:hover {
   background-image: url(/img/TOP-BTN-HOVER.svg);
@@ -249,6 +254,14 @@ a {
   height: 100px;
   border: unset;
   border-radius: 50%;
+}
+.TOP_BTN.SHOW {
+  visibility: visible;
+  opacity: 1;
+}
+.TOP_BTN.HIDE {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .SHOPPINGLIST_MAGNIFIER {
@@ -486,19 +499,6 @@ a {
   border: 1px solid #9E9E9E;
   height: 45px;
   width: 300px;
-}
-.SELECT::after {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-left: 2.5px solid black;
-  border-bottom: 2.5px solid black;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  position: absolute;
-  bottom: 13.5px;
-  right: 17.5px;
 }
 .SELECT select:focus {
   outline: none;
@@ -1604,50 +1604,6 @@ textarea {
   width: 100%;
   margin-top: 80px;
   display: flex;
-  justify-content: space-between;
-}
-.INDEX .LOCATION_WRAPPER {
-  margin-top: 150px;
-  padding-bottom: 200px;
-  display: flex;
-}
-.INDEX .LOCATION_LEFT {
-  width: 50%;
-}
-.INDEX .LOCATION_RIGHT {
-  width: 50%;
-  padding-left: 30px;
-}
-.INDEX .LOCATION_LOGO {
-  margin-bottom: 20px;
-}
-.INDEX .LOCATION_INFORMATION {
-  display: flex;
-  padding: 10px 0;
-}
-.INDEX .LOCATION_INFORMATION > i {
-  font-size: 35px;
-  color: #34424F;
-  padding-right: 15px;
-}
-.INDEX .LOCATION_INFORMATION > p {
-  line-height: 35px;
-  color: #34424F;
-}
-.INDEX .LOCATION_TIMETABLE {
-  margin-top: 20px;
-}
-.INDEX .LOCATION_TIMETABLE > img {
-  border-radius: 10px;
-}
-
-.MEMBERCENTER {
-  position: relative;
-  padding-top: 300px;
-}
-
-.MEMCENTOP {
-  margin-top: 50px;
 }
 
 .SHOPPING .SHOPPING_MASTERVISION {
@@ -1742,7 +1698,7 @@ textarea {
 }
 .SHOPPING .SEARCHBTN_ALL {
   position: absolute;
-  top: 19%;
+  top: 16%;
   right: 0px;
   z-index: 10;
   width: 20%;
@@ -1776,6 +1732,7 @@ textarea {
 }
 .SHOPPING .PGAENUMBER {
   padding-top: 120px;
+  margin-bottom: 335px;
   display: flex;
   justify-content: center;
 }
@@ -1812,9 +1769,6 @@ textarea {
 .SHOPPING .RIGHT {
   margin-left: 20px;
   padding-left: 25%;
-}
-.SHOPPING footer {
-  margin-top: 335px;
 }
 
 .SHOPPINGLIST {
