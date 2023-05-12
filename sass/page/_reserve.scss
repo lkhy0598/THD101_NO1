@@ -1,0 +1,34 @@
+//預約頁面共用內容——對初診患者資訊區塊
+.BIG_TITLE::after {
+    display: none;
+}
+
+.FIRSTTIME_INFO {
+    border: 2px solid red;
+    align-items: center;
+    justify-content: center;
+}
+
+.RESERVE_TYPE_UL {
+    display: flex;
+
+}
+
+.TITLE_NO {
+    background-color: #FFFFFF;
+    color: #428AA9;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.RESERVE_TYPE {
+    background-color: #428AA9;
+    color: #FFFFFF;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    line-height: 250px;
+}
