@@ -1641,6 +1641,10 @@ textarea {
   border-radius: 10px;
 }
 
+section {
+  background-image: url(../../img/BG.jpg);
+}
+
 .SHOPPING .SHOPPING_MASTERVISION {
   background-image: url("/img/shopping/SHOPPING_MASTERVISION_01.jpg");
   background-repeat: no-repeat;
@@ -1715,10 +1719,6 @@ textarea {
   font-weight: 600;
 }
 .SHOPPING select option {
-  color: #34424F;
-  font-weight: 600;
-}
-.SHOPPING ::-moz-placeholder {
   color: #34424F;
   font-weight: 600;
 }
@@ -1834,8 +1834,7 @@ textarea {
 .SHOPPINGLIST .SHOPPINGLIST_TOP .SHOPPINGLIST_SMALLIMG img {
   cursor: pointer;
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .SHOPPINGLIST .SHOPPINGLIST_TOP .SHOPPINGLIST_BIGIMG {
   overflow: hidden;
@@ -1862,8 +1861,7 @@ textarea {
   display: block;
   margin: 0 auto;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .SHOPPINGLIST .SHOPPINGLIST_TOP .SHOPPINGLIST_TOPTEXT h2 {
   color: #34424F;
@@ -2013,4 +2011,6 @@ textarea {
   margin: 70px 5px 0;
   width: 163px;
   display: inline-block;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
