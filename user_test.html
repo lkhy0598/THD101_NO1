@@ -17,7 +17,7 @@
     <div id="modal" class="MODAL">
         <!-- 關閉按鈕 -->
         <a class="POPUP_CLOSEBTN" href="#">
-            <i class="bi bi-x-circle-fill"></i>
+            <i class="bi bi-x-circle"></i>
         </a>
         <!-- 彈跳視窗_註冊/登入 -->
         <div id="popup-wrap" class="POPUP_WRAP">
@@ -46,7 +46,7 @@
                             <i class="bi bi-lock-fill"></i>
                             <input type="password" id="password" name="password" placeholder="請輸入密碼" /></br>
                         </div>
-                        <div class="FORGETBOX">
+                        <div class="FORGET_BOX">
                             <button type="button" class="FORGET_BTN">忘記密碼？</button>
                         </div>
                         <div class="INPUT_GROUP">
@@ -63,7 +63,7 @@
                             <span>使用GOOGLE登入</span>
                         </button>
                     </form>
-                    <div class="BTN SIGNUP_BTN">立即註冊</div>
+                    <div class="BTN SIGNUP_BTN">註冊會員</div>
                 </div>
                 <!-- 註冊視窗 -->
                 <div id="POPUP_SIGNUP" class="POPUP_BOX ">
@@ -107,7 +107,7 @@
 
                         <p>＊註冊後即同意「會員服務條款、隱私權保護聲明」</p>
                         <div class="INPUT_GROUP">
-                            <input type="submit" id="send-btn" class="SIGNUP_SUB BTN" value="立即註冊" />
+                            <input type="submit" id="send-btn" class=" SIGNUP_SUB BTN" value="送出" />
                         </div>
                     </form>
                 </div>
@@ -130,6 +130,9 @@
                                 驗證
                             </button>
                         </div>
+                        <div class="BACKLOGIN_BOX">
+                            <button type="button" class="BACKLOGIN_BTN">返回登入</button>
+                        </div>
                         <div class="FORGETPASS_DESC">
                             <p>＊系統已寄出驗證信，請至信箱收取。</p>
                             <p>＊若過久未收到驗證信件，請至垃圾信件匣或其他收件匣確認。</p>
@@ -143,7 +146,7 @@
                     </div>
                 </div>
                 <!-- 修改密碼 -->
-                <div id="popup_changepass" class="POPUP_BOX ">
+                <div id="popup_changepass" class="POPUP_BOX">
                     <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
                     <form class="USER_FORM" method="post" action="SIGNUP.php">
                         <div class="INPUT_GROUP">
@@ -163,7 +166,7 @@
                     </div>
                 </div>
                 <!-- 修改完成畫面 -->
-                <div id="popup_changepass" class="POPUP_BOX">
+                <div id="popup_changepass_succ" class="POPUP_BOX">
                     <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
                     <div class="USER_FORM">
                         <img class="CHANGEPASS_SUCC" src="./img/user_popup/CHANGEPASS_SUCC.png" alt="">
@@ -171,7 +174,7 @@
                     <div class="BACKTOLOGIN_BOX">
                         <p>＊三秒後將跳轉到登入頁，如果沒跳轉請點選按鈕</p>
                         <div class="INPUT_GROUP">
-                            <input type="submit" id="login-btn" class="PASS_SUB BTN" value="登入會員" />
+                            <input type="submit" id="login-btn" class="BTN CHANGE_SUCC_BTN BACKLOGIN_BTN" value="登入會員" />
                         </div>
                     </div>
                 </div>
@@ -221,23 +224,7 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.POPUP_NAVS li:first-child').addClass('TAB_ACTIVE');
-            $('.POPUP_TABS_CONTENT div:first-child').addClass('POPUPACTIVE');
-            $('.INPUT_GROUP').removeClass('POPUPACTIVE');
-
-            $('.POPUP_NAVS li').click(function () {
-                var tab_id = $(this).find('a').attr('href');
-
-                $('.POPUP_NAVS li').removeClass('TAB_ACTIVE');
-                $('.POPUP_TABS_CONTENT div').removeClass('POPUPACTIVE');
-
-                $(this).addClass('TAB_ACTIVE');
-                $(tab_id).addClass('POPUPACTIVE');
-            });
-        });
-    </script>
+    <script src="/user_popup.js"></script>
 </body>
 
 </html>
