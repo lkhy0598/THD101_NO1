@@ -10,10 +10,6 @@
   width: calc((100% - 220px) / 12 * 1);
   margin-right: 20px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 .COL-1:last-child {
   margin-right: 0;
 }
@@ -935,11 +931,24 @@ footer {
   margin-right: 10px;
 }
 
-.MODAL {
+body .MODAL_ACTIVE {
   opacity: 1;
+  pointer-events: auto;
+}
+
+body .MODAL .POPUP_WRAP_ACTIVE {
+  display: block;
+  top: 50%;
+  pointer-events: auto;
+}
+
+.MODAL {
+  opacity: 0;
+  pointer-events: none;
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
   height: 100%;
+  transition: all 0.3s ease;
   position: fixed;
   top: 0;
   left: 0;
@@ -952,8 +961,14 @@ footer {
   top: 5%;
   right: 5%;
   z-index: 1000;
+  transition: all 0.3s ease;
+}
+.MODAL .POPUP_CLOSEBTN:hover {
+  color: #FFFFFF;
 }
 .MODAL .POPUP_WRAP {
+  display: none;
+  pointer-events: none;
   background-image: url(/img/user_popup/USER_BG.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -963,7 +978,7 @@ footer {
   border-radius: 20px;
   box-sizing: border-box;
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -1067,7 +1082,7 @@ footer {
   font-size: 3rem;
   position: absolute;
   left: 6.7rem;
-  bottom: 0.8rem;
+  bottom: 0.6rem;
 }
 .USER_FORM .INPUT_GROUP input {
   font-family: "Noto Sans";
@@ -1125,20 +1140,20 @@ footer {
   flex-grow: 1;
 }
 
-.FORGETBOX {
+.FORGET_BOX, .BACKLOGIN_BOX {
   width: 300px;
   margin: 0 auto;
   display: flex;
   justify-content: flex-end;
   margin-bottom: 16px;
 }
-.FORGETBOX .FORGET_BTN {
+.FORGET_BOX .FORGET_BTN, .FORGET_BOX .BACKLOGIN_BTN, .BACKLOGIN_BOX .FORGET_BTN, .BACKLOGIN_BOX .BACKLOGIN_BTN {
   background: none;
   border: none;
   color: #34424F;
   cursor: pointer;
 }
-.FORGETBOX .FORGET_BTN:hover {
+.FORGET_BOX .FORGET_BTN:hover, .FORGET_BOX .BACKLOGIN_BTN:hover, .BACKLOGIN_BOX .FORGET_BTN:hover, .BACKLOGIN_BOX .BACKLOGIN_BTN:hover {
   text-decoration: underline;
 }
 
@@ -1229,8 +1244,9 @@ footer {
   color: #34424F;
   line-height: 2rem;
 }
-.PASS_SEND_BOX .PASS_SUB,
-.BACKTOLOGIN_BOX .PASS_SUB {
+.PASS_SEND_BOX .PASS_SUB, .PASS_SEND_BOX .CHANGE_SUCC_BTN,
+.BACKTOLOGIN_BOX .PASS_SUB,
+.BACKTOLOGIN_BOX .CHANGE_SUCC_BTN {
   width: 300px;
   height: 45px;
   line-height: 45px;
@@ -2254,7 +2270,7 @@ footer {
 .INDEX .LOCATION_TIMETABLE {
   margin-top: 20px;
 }
-.INDEX .LOCATION_TIMETABLE img {
+.INDEX img {
   border-radius: 10px;
 }
 
