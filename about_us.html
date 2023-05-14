@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.css">  
+
     <title>關於院所 - 波波動物醫院</title>
+
+ 
+
   </head>
   <body class="ABOUT">
     <!-- =====appointment門診時間及預約======== -->
@@ -125,6 +130,66 @@
         <section class="TEAM_WRAPPER">
           <P>我們認為「醫病更需醫心」的道理同樣適用於寵物們，因此除了集結各科頂尖醫師外更特別設有行為醫學科、寵物溝通師，讓您的愛寵能在身心兩方面都獲得最好的醫療資源。</P>
         </section>
+
+      <div class="TEAM_WRAPPER_PRODUCERS">
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <section>
+                <img src="img/about/fan.jpg" alt="">
+              </section>
+            </div>
+            <div class="swiper-slide">
+              <section>
+                <img src="img/about/lai.jpg" alt="">
+              </section>
+              
+            </div>
+            <div class="swiper-slide">
+              <section>
+                <img src="img/about/lin.jpg" alt="">
+              </section>
+              
+            </div>
+            <div class="swiper-slide">
+              <section>
+                <img src="img/about/zhan.jpg" alt="">
+              </section>
+              
+            </div>
+            <div class="swiper-slide">
+              <section>
+                <img src="img/about/25413587_l.jpg" alt="">
+              </section>
+              
+            </div>
+            <div class="swiper-slide">
+              <section>
+                <img src="img/about/yu.jpg" alt="">
+              </section>
+              
+            </div>
+            <div class="swiper-slide">
+              <section>
+                <img src="img/about/wei.jpg" alt="">
+              </section>
+              
+            </div>
+          </div>
+     
+        
+          <!-- If we need navigation buttons -->
+         
+        
+
+        </div>
+      </div>
+       
       </section>
 
  
@@ -257,9 +322,10 @@
         本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。
       </p>
     </div>
-
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.js"> </script> 
     <script src="top_btn.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
 
     <script>
       $('.LIGHTBOX').click(function(e){
@@ -267,7 +333,42 @@
         var img_url = $(this).attr("href");
         // e.preventDefault()
         $("#IMG_CONTAINER img").attr("src", img_url);
-    })
+    });
+
+
+    var mySwiper = new Swiper('.swiper',{
+      
+      
+      loop: true,
+      slidesPerView: 'auto',
+      loopedSlides: 4,
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      a11y : {
+        prevSlideMessage: 'Previous slide',
+        nextSlideMessage: '点击可进入下一页幻灯片',
+        firstSlideMessage: 'This is the first slide',
+        lastSlideMessage: 'This is the last slide',
+        paginationBulletMessage: 'Go to slide {{index}}',  
+        notificationClass: 'swiper-notification',
+        containerMessage: 'banner',
+        containerRoleDescriptionMessage: 'This is a swiper',  //aria-role-description
+        itemRoleDescriptionMessage: 'slider',
+        slideLabelMessage: '{{index}} / {{slidesLength}}',
+        slideRole: 'group',
+      },
+    }) 
+
+    //如果你初始化时没有定义Swiper实例，后面也可以通过Swiper的HTML元素来获取该实例
+    new Swiper('.swiper')
+    var mySwiper = document.querySelector('.swiper').swiper
+    mySwiper.slideNext();
     </script>
 
   </body>

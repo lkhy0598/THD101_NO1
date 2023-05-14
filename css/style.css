@@ -180,7 +180,6 @@ html {
 a {
   display: block;
 }
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
 
 .HEADER_NAV .RESERVE {
   cursor: pointer;
@@ -643,6 +642,78 @@ a {
   background-position: 0 0;
 }
 
+.DOT3 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.DOT3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #FFFFFF 0%, #FFFFFF 20%, transparent 0%, transparent 100%);
+  background-size: 17px 17px;
+  background-position: 0 0;
+}
+
+.DOT4 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.DOT4::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #FFFFFF 0%, #FFFFFF 20%, transparent 0%, transparent 100%);
+  background-size: 17px 17px;
+  background-position: 0 0;
+}
+
+.DOT5 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.DOT5::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #FFFFFF 0%, #FFFFFF 20%, transparent 0%, transparent 100%);
+  background-size: 17px 17px;
+  background-position: 0 0;
+}
+
+.DOT6 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.DOT6::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #FFFFFF 0%, #FFFFFF 20%, transparent 0%, transparent 100%);
+  background-size: 17px 17px;
+  background-position: 0 0;
+}
+
 .ALLOW {
   font-size: 40px;
   color: #33414E;
@@ -864,8 +935,6 @@ footer {
   margin-right: 10px;
 }
 
-<<<<<<< HEAD
-=======
 .MODAL {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.7);
@@ -1170,7 +1239,6 @@ footer {
   margin-bottom: 26px;
 }
 
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
 .BACK_MAIN_CONTENT_LEFT {
   width: 18%;
   background-color: #EBE3DD;
@@ -1300,17 +1368,18 @@ footer {
 .ABOUT .CLINIC_PROFILE {
   margin: 0 auto;
   margin-top: 50px;
-<<<<<<< HEAD
   max-width: 1200px;
   margin-bottom: 80px;
 }
 .ABOUT .CLINIC_PROFILE > img {
   float: left;
-  padding-right: 50px;
+  padding-right: 60px;
 }
 .ABOUT .CLINIC_PROFILE > p {
-  padding-top: 40px;
+  padding-top: 38px;
   line-height: 160%;
+  text-align: justify;
+  color: #34424F;
 }
 .ABOUT .TEAM_BG {
   background-image: url("/img/about/teambg.jpg");
@@ -1323,9 +1392,55 @@ footer {
   margin: 0 auto;
 }
 .ABOUT .TEAM_WRAPPER > p {
-  padding-top: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   line-height: 160%;
   color: #34424F;
+  text-align: left;
+}
+.ABOUT .TEAM_WRAPPER_PRODUCERS {
+  width: 1440px;
+  height: 800px;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  margin-left: 400px;
+  padding-right: 1000px;
+  justify-content: end;
+  flex-direction: column;
+  border: 1px solid;
+}
+.ABOUT .swiper-button-prev {
+  position: absolute;
+  top: 50px;
+  right: 100px;
+}
+.ABOUT .swiper {
+  width: 250px;
+  height: 500px;
+  align-items: center;
+  overflow: visible;
+}
+.ABOUT .swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: border-box;
+}
+.ABOUT .swiper-slide-active {
+  width: 300px;
+  height: 500px;
+  transform: scale(1.8);
+  margin-bottom: 80px;
+  overflow: visible;
+}
+.ABOUT .swiper-slide section > img {
+  width: 200px;
+  height: 300px;
 }
 .ABOUT .INTRODUCTION {
   text-align: center;
@@ -1366,12 +1481,6 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-=======
-  max-width: 1150px;
-}
-.ABOUT .CLINIC_PROFILE > img {
-  float: left;
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
 }
 .ABOUT .LOCATION_WRAPPER {
   margin-top: 150px;
@@ -1392,47 +1501,25 @@ footer {
   display: flex;
   padding: 10px 0;
 }
-.ABOUT .LOCATION_INFORMATION > i {
+.ABOUT .LOCATION_INFORMATION i {
   font-size: 35px;
   color: #34424F;
   padding-right: 15px;
 }
-.ABOUT .LOCATION_INFORMATION > p {
+.ABOUT .LOCATION_INFORMATION p {
   line-height: 35px;
   color: #34424F;
 }
 .ABOUT .LOCATION_TIMETABLE {
   margin-top: 20px;
 }
-.ABOUT .LOCATION_TIMETABLE > img {
+.ABOUT .LOCATION_TIMETABLE img {
   border-radius: 10px;
 }
 
 /* 下方內容 */
 .BACK_MAIN_CONTENT {
   display: flex;
-<<<<<<< HEAD
-}
-
-/* 下方右側 */
-.BACK_MAIN_CONTENT_RIGHT {
-  width: 82%;
-  padding: 55px 65px;
-}
-
-.BTN_BACK {
-  width: 200px;
-  margin: 0 auto;
-  display: block;
-}
-
-/* --------病歷搜尋表單---------- */
-.MEDICAL_RECORD_SEARCH {
-  width: 74%;
-  margin: 0 auto;
-}
-.MEDICAL_RECORD_SEARCH ul {
-=======
   /* 下方右側 */
 }
 .BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT {
@@ -1446,7 +1533,6 @@ footer {
   margin: 0 auto;
 }
 .BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_SEARCH ul {
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
   margin-top: 85px;
   margin-bottom: 50px;
   display: flex;
@@ -1455,34 +1541,6 @@ footer {
   align-items: end;
   padding: 0;
 }
-<<<<<<< HEAD
-.MEDICAL_RECORD_SEARCH ul input {
-  width: 100%;
-}
-.MEDICAL_RECORD_SEARCH p {
-  width: 5%;
-  margin-bottom: 20px;
-}
-
-.MEDICAL_RECORD_SEARCH li:nth-child(1) {
-  width: 20%;
-}
-
-.MEDICAL_RECORD_SEARCH li:nth-child(2) {
-  width: 20%;
-}
-
-.MEDICAL_RECORD_SEARCH li:nth-child(3) {
-  width: 14%;
-}
-
-.MEDICAL_RECORD_SEARCH li:nth-child(5) {
-  width: 14%;
-}
-
-/* 病歷搜尋結果 */
-.MEDICAL_RECORD_TABLE_ALL {
-=======
 .BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_SEARCH ul input {
   width: 100%;
 }
@@ -1503,20 +1561,11 @@ footer {
   width: 14%;
 }
 .BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL {
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
   width: 74%;
   margin: 0 auto 75px;
   border: 1px solid black;
   border-radius: 10px;
 }
-<<<<<<< HEAD
-.MEDICAL_RECORD_TABLE_ALL ul {
-  display: flex;
-  font-size: 2.5rem;
-}
-
-.BACK_TABLE_TITLE {
-=======
 .BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL ul {
   display: flex;
   font-size: 2.5rem;
@@ -1525,7 +1574,6 @@ footer {
   cursor: pointer;
 }
 .BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL .BACK_TABLE_TITLE {
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
   background-color: #CB5656;
   color: #FFFFFF;
   height: 55px;
@@ -1534,48 +1582,12 @@ footer {
   outline: 2px solid #CB5656;
   border-radius: 10px 10px 0 0;
 }
-<<<<<<< HEAD
-
-.BACK_TABLE_CONTENT {
-=======
 .BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL .BACK_TABLE_CONTENT {
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
   color: #34424F;
   text-align: center;
   line-height: 80px;
   height: 80px;
 }
-<<<<<<< HEAD
-.BACK_TABLE_CONTENT li {
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-}
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(1) {
-  width: 20%;
-}
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(2) {
-  width: 17%;
-}
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(3) {
-  width: 17%;
-}
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(4) {
-  width: 30%;
-}
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(5) {
-  width: 8%;
-}
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(6) {
-  width: 8%;
-  border-right: none;
-}
-=======
 .BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL .BACK_TABLE_CONTENT li {
   border-top: 1px solid black;
   border-right: 1px solid black;
@@ -1604,19 +1616,13 @@ footer {
   margin: 0 auto;
   display: block;
 }
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
 
 /*----------新增病歷----------*/
 .ADD_MEDICAL_RECORD {
   width: 55%;
   margin: 0 auto;
 }
-<<<<<<< HEAD
-
-.ADD_MEDICAL_RECORD_FORM {
-=======
 .ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM {
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -1624,42 +1630,6 @@ footer {
   align-content: center;
   margin-top: 85px;
   margin-bottom: 70px;
-<<<<<<< HEAD
-}
-.ADD_MEDICAL_RECORD_FORM p {
-  margin: 10px 0;
-}
-.ADD_MEDICAL_RECORD_FORM input {
-  width: 100%;
-}
-.ADD_MEDICAL_RECORD_FORM select {
-  width: 100%;
-}
-
-.ADD_MEDICAL_RECORD_FORM li:nth-child(1) {
-  flex-basis: 100%;
-  margin-bottom: 20px;
-}
-
-.ADD_MEDICAL_RECORD_FORM li:nth-child(8) {
-  flex-basis: 100%;
-}
-
-.ADD_MEDICAL_RECORD_FORM li:nth-child(9) {
-  flex-basis: 100%;
-}
-
-.ADD_MEDICAL_RECORD_FORM li {
-  width: 45%;
-}
-
-textarea {
-  width: 100%;
-}
-
-/* 上傳檔案input */
-.FILEBOX {
-=======
   /* 上傳檔案input */
 }
 .ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM p {
@@ -1672,7 +1642,6 @@ textarea {
   width: 100%;
 }
 .ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM .FILEBOX {
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
   position: relative;
   font-size: 2.5rem;
   color: #34424F;
@@ -1680,11 +1649,7 @@ textarea {
   /* 選取檔案按鈕 */
   /* 隱藏原按鈕 */
 }
-<<<<<<< HEAD
-.FILEBOX .FILENAME {
-=======
 .ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM .FILEBOX .FILENAME {
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
   width: 100%;
   padding: 10px;
   border-radius: 10px;
@@ -1695,11 +1660,7 @@ textarea {
   border: 1px solid #9E9E9E;
   margin: 10px 0;
 }
-<<<<<<< HEAD
-.FILEBOX .FILEBUTTON {
-=======
 .ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM .FILEBOX .FILEBUTTON {
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
   font-size: 2rem;
   font-family: Arial, "Noto Sans TC";
   background-color: #D9D9D9;
@@ -1712,11 +1673,7 @@ textarea {
   right: 0px;
   cursor: pointer;
 }
-<<<<<<< HEAD
-.FILEBOX .FILE {
-=======
 .ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM .FILEBOX .FILE {
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
   width: 145px;
   height: 45px;
   position: absolute;
@@ -1726,21 +1683,6 @@ textarea {
   /* filter:alpha( opacity : 0); */
   opacity: 0;
 }
-<<<<<<< HEAD
-
-.BTN_BOX {
-  display: flex;
-}
-
-/*----------會員管理區塊---------*/
-/* 會員管理 */
-.MEMBER_PROFILE {
-  width: 76.5%;
-  margin: 85px auto 50px;
-}
-
-.BACK_BANNER {
-=======
 .ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM .BTN_BOX {
   display: flex;
 }
@@ -1773,7 +1715,6 @@ textarea {
   margin: 85px auto 50px;
 }
 .BACK_MAIN_CONTENT_RIGHT .BACK_BANNER {
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
   width: 100%;
   height: 60px;
   background-color: #CB5656;
@@ -1784,14 +1725,6 @@ textarea {
   border: none;
   padding-left: 20px;
 }
-<<<<<<< HEAD
-
-.MEMBER_PROFILE_SEARCH {
-  width: 75%;
-  margin: 70px auto 50px;
-}
-.MEMBER_PROFILE_SEARCH ul {
-=======
 .BACK_MAIN_CONTENT_RIGHT .BACK_TABLE_TITLE {
   background-color: #CB5656;
   color: #FFFFFF;
@@ -1819,34 +1752,11 @@ textarea {
   margin: 70px auto 50px;
 }
 .BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE_SEARCH ul {
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
   font-size: 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-<<<<<<< HEAD
-.MEMBER_PROFILE_SEARCH ul input {
-  width: 100%;
-}
-.MEMBER_PROFILE_SEARCH ul p {
-  color: #34424F;
-}
-
-.MEMBER_PROFILE_SEARCH li:nth-child(1) {
-  width: 28%;
-}
-
-.MEMBER_PROFILE_SEARCH li:nth-child(2) {
-  width: 3%;
-}
-
-.MEMBER_PROFILE_SEARCH li:nth-child(3) {
-  width: 28%;
-}
-
-.MEMBER_PROFILE_TABLE {
-=======
 .BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE_SEARCH ul input {
   width: 100%;
 }
@@ -1863,55 +1773,11 @@ textarea {
   width: 28%;
 }
 .BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE_TABLE {
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
   width: 86%;
   margin: 0 auto;
   border: 1px solid black;
   border-radius: 10px;
 }
-<<<<<<< HEAD
-.MEMBER_PROFILE_TABLE ul {
-  display: flex;
-  font-size: 2.5rem;
-}
-
-.MEMBER_PROFILE_TABLE li:nth-child(1) {
-  width: 19%;
-}
-
-.MEMBER_PROFILE_TABLE li:nth-child(2) {
-  width: 19%;
-}
-
-.MEMBER_PROFILE_TABLE li:nth-child(3) {
-  width: 33%;
-}
-
-.MEMBER_PROFILE_TABLE li:nth-child(4) {
-  width: 7%;
-}
-
-.MEMBER_PROFILE_TABLE li:nth-child(5) {
-  width: 7%;
-}
-
-.MEMBER_PROFILE_TABLE li:nth-child(6) {
-  width: 15%;
-  border-right: none;
-}
-
-/* 寵物搜尋 */
-.PET_PROFILE {
-  width: 76.5%;
-  margin: 100px auto 0;
-}
-
-.PET_PROFILE_SEARCH {
-  width: 75%;
-  margin: 70px auto 50px;
-}
-.PET_PROFILE_SEARCH ul {
-=======
 .BACK_MAIN_CONTENT_RIGHT .MEMBER_PROFILE_TABLE ul {
   display: flex;
   font-size: 2.5rem;
@@ -1944,32 +1810,11 @@ textarea {
   margin: 70px auto 50px;
 }
 .BACK_MAIN_CONTENT_RIGHT .PET_PROFILE_SEARCH ul {
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
   font-size: 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: end;
 }
-<<<<<<< HEAD
-.PET_PROFILE_SEARCH ul input {
-  margin-bottom: 0;
-  width: 100%;
-}
-.PET_PROFILE_SEARCH ul select {
-  width: 100%;
-}
-
-.PET_PROFILE_SEARCH li:nth-child(1) {
-  width: 28%;
-}
-
-.PET_PROFILE_SEARCH li:nth-child(2) {
-  width: 28%;
-}
-
-/* 寵物搜尋結果 */
-.PET_PROFILE_TABLE {
-=======
 .BACK_MAIN_CONTENT_RIGHT .PET_PROFILE_SEARCH ul input {
   margin-bottom: 0;
   width: 100%;
@@ -1984,60 +1829,11 @@ textarea {
   width: 28%;
 }
 .BACK_MAIN_CONTENT_RIGHT .PET_PROFILE_TABLE {
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
   width: 90%;
   margin: 0 auto;
   border: 1px solid black;
   border-radius: 10px;
 }
-<<<<<<< HEAD
-.PET_PROFILE_TABLE ul {
-  display: flex;
-  font-size: 2.5rem;
-}
-
-.PET_PROFILE_TABLE li:nth-child(1) {
-  width: 23%;
-}
-
-.PET_PROFILE_TABLE li:nth-child(2) {
-  width: 20%;
-}
-
-.PET_PROFILE_TABLE li:nth-child(3) {
-  width: 23%;
-}
-
-.PET_PROFILE_TABLE li:nth-child(4) {
-  width: 20%;
-}
-
-.PET_PROFILE_TABLE li:nth-child(5) {
-  width: 7%;
-}
-
-.PET_PROFILE_TABLE li:nth-child(6) {
-  width: 7%;
-  border-right: none;
-}
-
-/*----------------新增會員及寵物區塊------------------*/
-.ADD_NEW_MEMBER_PET, .MODIFY_MEMBER, .MODIFY_PET {
-  width: 76.5%;
-  margin: 85px auto 50px;
-}
-
-.ADD_NEW_MEMBER, .ADD_NEW_PET, .MODIFY_MEMBER_FORM, .MODIFY_PET_FORM {
-  width: 83%;
-  margin: 50px auto;
-}
-
-.ADD_NEW_FORM {
-  display: flex;
-  justify-content: space-between;
-}
-.ADD_NEW_FORM ul {
-=======
 .BACK_MAIN_CONTENT_RIGHT .PET_PROFILE_TABLE ul {
   display: flex;
   font-size: 2.5rem;
@@ -2074,21 +1870,11 @@ textarea {
   justify-content: space-between;
 }
 .BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM ul {
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
   width: 69%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-<<<<<<< HEAD
-.ADD_NEW_FORM ul input {
-  width: 100%;
-}
-.ADD_NEW_FORM ul select {
-  width: 100%;
-}
-.ADD_NEW_FORM .ADD_PIC_IMG {
-=======
 .BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM ul input {
   width: 100%;
 }
@@ -2096,20 +1882,10 @@ textarea {
   width: 100%;
 }
 .BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .ADD_PIC_IMG {
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
   width: 75%;
   display: block;
   margin: 0 auto 35px;
 }
-<<<<<<< HEAD
-.ADD_NEW_FORM .PIC_FILE_BOX {
-  position: relative;
-}
-.ADD_NEW_FORM .PIC_FILE_BOX .BTN_BACK {
-  width: 160px;
-}
-.ADD_NEW_FORM .PIC_FILE_BOX .PIC_FILE {
-=======
 .BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .PIC_FILE_BOX {
   position: relative;
 }
@@ -2117,7 +1893,6 @@ textarea {
   width: 160px;
 }
 .BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .PIC_FILE_BOX .PIC_FILE {
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
   width: 180px;
   height: 65px;
   position: absolute;
@@ -2127,53 +1902,6 @@ textarea {
   /* filter:alpha( opacity : 0); */
   opacity: 0;
 }
-<<<<<<< HEAD
-.ADD_NEW_FORM .ADD_NEW_MEMBER_FORM li {
-  margin-bottom: 30px;
-}
-.ADD_NEW_FORM .ADD_NEW_MEMBER_FORM li:nth-child(1) {
-  width: 47%;
-}
-.ADD_NEW_FORM .ADD_NEW_MEMBER_FORM li:nth-child(2) {
-  width: 47%;
-}
-.ADD_NEW_FORM .ADD_NEW_MEMBER_FORM li:nth-child(3) {
-  flex-basis: 100%;
-}
-.ADD_NEW_FORM .ADD_NEW_MEMBER_FORM li:nth-child(4) {
-  flex-basis: 100%;
-}
-.ADD_NEW_FORM .ADD_NEW_MEMBER_FORM li:nth-child(5) {
-  flex-basis: 100%;
-}
-.ADD_NEW_FORM .ADD_NEW_PET_FORM li {
-  margin-bottom: 30px;
-}
-.ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(1) {
-  width: 47%;
-}
-.ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(2) {
-  width: 47%;
-}
-.ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(3) {
-  width: 47%;
-}
-.ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(4) {
-  width: 47%;
-}
-.ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(5) {
-  width: 47%;
-}
-.ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(6) {
-  width: 47%;
-}
-.ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(7) {
-  flex-basis: 100%;
-}
-.ADD_NEW_FORM .ADD_NEW_PET_FORM li:nth-child(8) {
-  flex-basis: 100%;
-}
-=======
 .BACK_MAIN_CONTENT_RIGHT .ADD_NEW_FORM .ADD_NEW_MEMBER_FORM li {
   margin-bottom: 30px;
 }
@@ -2274,7 +2002,6 @@ textarea {
   display: block;
   margin: 0 auto;
 }
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
 
 .INDEX .BIG_TITLE {
   padding-top: 100px;
@@ -2498,7 +2225,7 @@ textarea {
 }
 .INDEX .LOCATION_WRAPPER {
   margin-top: 150px;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
   display: flex;
 }
 .INDEX .LOCATION_LEFT {
@@ -2515,42 +2242,36 @@ textarea {
   display: flex;
   padding: 10px 0;
 }
-.INDEX .LOCATION_INFORMATION > i {
+.INDEX .LOCATION_INFORMATION i {
   font-size: 35px;
   color: #34424F;
   padding-right: 15px;
 }
-.INDEX .LOCATION_INFORMATION > p {
+.INDEX .LOCATION_INFORMATION p {
   line-height: 35px;
   color: #34424F;
 }
 .INDEX .LOCATION_TIMETABLE {
   margin-top: 20px;
 }
-.INDEX .LOCATION_TIMETABLE > img {
+.INDEX .LOCATION_TIMETABLE img {
   border-radius: 10px;
 }
 
-<<<<<<< HEAD
-=======
-.BACKGROUND .WRAPPER .INFORACTIVE {
+.INFORMATION .BACKGROUND .WRAPPER .INFORACTIVE {
   display: block;
 }
-
-.BACKGROUND .WRAPPER .INFORACTIVE {
+.INFORMATION .BACKGROUND .WRAPPER .INFORACTIVE {
   display: block;
 }
-
-.MEMCENTOP {
+.INFORMATION .MEMCENTOP {
   margin-bottom: 25px;
 }
-
-.BIG_TITLE {
+.INFORMATION .BIG_TITLE {
   margin-bottom: 94px;
   border-bottom: 1px solid #428AA9;
 }
-
-.INFORMATION_NAVS {
+.INFORMATION .INFORMATION_NAVS {
   display: flex;
   font-size: 2rem;
   background-color: #FFFFFF;
@@ -2560,33 +2281,32 @@ textarea {
   overflow: hidden;
   margin-bottom: 30px;
 }
-.INFORMATION_NAVS .INFORMATION_TAB {
+.INFORMATION .INFORMATION_NAVS .INFORMATION_TAB {
   flex-grow: 1;
 }
-.INFORMATION_NAVS .INFORMATION_TAB a {
+.INFORMATION .INFORMATION_NAVS .INFORMATION_TAB a {
   text-decoration: none;
   color: #428AA9;
   text-align: center;
   line-height: 45px;
 }
-.INFORMATION_NAVS .INFORMATION_TAB:hover {
+.INFORMATION .INFORMATION_NAVS .INFORMATION_TAB:hover {
   background-color: #98C7CF;
 }
-.INFORMATION_NAVS .INFORTAB_ACTIVE {
+.INFORMATION .INFORMATION_NAVS .INFORTAB_ACTIVE {
   background-color: #428AA9;
   pointer-events: none;
 }
-.INFORMATION_NAVS .INFORTAB_ACTIVE a {
+.INFORMATION .INFORMATION_NAVS .INFORTAB_ACTIVE a {
   color: #FFFFFF;
 }
-
-.BACKGROUND {
+.INFORMATION .BACKGROUND {
   box-sizing: border-box;
   overflow: hidden;
   background-image: none;
   position: relative;
 }
-.BACKGROUND .BG {
+.INFORMATION .BACKGROUND .BG {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -2594,61 +2314,55 @@ textarea {
   left: 0;
   z-index: -2;
 }
-.BACKGROUND .INFOMATION_BG_CLOUDS .BG_CLOUD {
+.INFORMATION .BACKGROUND .INFOMATION_BG_CLOUDS .BG_CLOUD {
   width: 100%;
   position: absolute;
   z-index: -1;
 }
-.BACKGROUND .INFOMATION_BG_CLOUDS .BG_CLOUD:first-child {
+.INFORMATION .BACKGROUND .INFOMATION_BG_CLOUDS .BG_CLOUD:first-child {
   transform: scaleX(-1);
   top: 0;
   left: 900px;
 }
-.BACKGROUND .INFOMATION_BG_CLOUDS .BG_CLOUD:last-child {
+.INFORMATION .BACKGROUND .INFOMATION_BG_CLOUDS .BG_CLOUD:last-child {
   bottom: -400px;
   left: -400px;
 }
-
-.INFORMATION_BOX .INFORMATION_CARD {
+.INFORMATION .INFORMATION_BOX .INFORMATION_CARD {
   display: none;
 }
-.INFORMATION_BOX .INFORMATION_CARD .CARD_BODY {
+.INFORMATION .INFORMATION_BOX .INFORMATION_CARD .CARD_BODY {
   width: 100%;
   max-width: none;
   margin: 0;
   padding: 0;
   margin-bottom: 30px;
 }
-.INFORMATION_BOX .INFORMATION_CARD .CARD_BODY .CARD_LIGHT,
-.INFORMATION_BOX .INFORMATION_CARD .CARD_BODY .CARD_RIGHT {
+.INFORMATION .INFORMATION_BOX .INFORMATION_CARD .CARD_BODY .CARD_LIGHT,
+.INFORMATION .INFORMATION_BOX .INFORMATION_CARD .CARD_BODY .CARD_RIGHT {
   flex-grow: 1;
 }
-
-.PGAENUMBER {
+.INFORMATION .PGAENUMBER {
   padding-top: 120px;
   margin-bottom: 335px;
   display: flex;
   justify-content: center;
 }
-
-.PGAENUMBER span {
+.INFORMATION .PGAENUMBER span {
   width: 25px;
 }
-.PGAENUMBER span:hover {
+.INFORMATION .PGAENUMBER span:hover {
   border-bottom: 2px solid #34424F;
 }
-
-.PGAENUMBER span > img {
+.INFORMATION .PGAENUMBER span > img {
   margin: 0 auto;
   height: 25px;
 }
-
-.PAGEBTN {
+.INFORMATION .PAGEBTN {
   width: 12px;
   cursor: pointer;
 }
-
-.PGAENUMBER p {
+.INFORMATION .PGAENUMBER p {
   display: block;
   width: 50px;
   margin: 0 10px;
@@ -2656,25 +2370,19 @@ textarea {
   cursor: pointer;
   text-align: center;
 }
-.PGAENUMBER p:hover {
+.INFORMATION .PGAENUMBER p:hover {
   text-decoration: underline;
 }
-
-.LEFT {
+.INFORMATION .LEFT {
   position: unset;
   transform: rotate(180deg);
   margin-right: 20px;
   padding-right: 25%;
 }
-
-.RIGHT {
+.INFORMATION .RIGHT {
   position: unset;
   margin-left: 20px;
   padding-left: 25%;
-}
-
-.BIG_TITLE::after {
-  display: none;
 }
 
 .FIRSTTIME_INFO {
@@ -2706,7 +2414,6 @@ textarea {
   line-height: 250px;
 }
 
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c
 .SHOPPING .SHOPPING_MASTERVISION {
   background-image: url("/img/shopping/SHOPPING_MASTERVISION_01.jpg");
   background-repeat: no-repeat;
@@ -3073,19 +2780,15 @@ textarea {
   margin: 70px 5px 0;
   width: 163px;
   display: inline-block;
-<<<<<<< HEAD
-}/*# sourceMappingURL=style.css.map */
->>>>>>> A
-=======
 }
 
-.BACKGROUND {
+.IMFORMATION_CONTENT .BACKGROUND {
   box-sizing: border-box;
   overflow: hidden;
   background-image: none;
   position: relative;
 }
-.BACKGROUND .BG {
+.IMFORMATION_CONTENT .BACKGROUND .BG {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -3093,47 +2796,44 @@ textarea {
   left: 0;
   z-index: -2;
 }
-.BACKGROUND .INFOMATION_BG_CLOUDS .BG_CLOUD {
+.IMFORMATION_CONTENT .BACKGROUND .INFOMATION_BG_CLOUDS .BG_CLOUD {
   width: 100%;
   position: absolute;
   z-index: -1;
 }
-.BACKGROUND .INFOMATION_BG_CLOUDS .BG_CLOUD:first-child {
+.IMFORMATION_CONTENT .BACKGROUND .INFOMATION_BG_CLOUDS .BG_CLOUD:first-child {
   transform: scaleX(-1);
   top: 0;
   left: 900px;
 }
-.BACKGROUND .INFOMATION_BG_CLOUDS .BG_CLOUD:last-child {
+.IMFORMATION_CONTENT .BACKGROUND .INFOMATION_BG_CLOUDS .BG_CLOUD:last-child {
   bottom: -400px;
   left: -400px;
 }
-
-.INFOMATION_CONTENT_BOX {
+.IMFORMATION_CONTENT .INFOMATION_CONTENT_BOX {
   margin-top: 90px;
   margin-bottom: 110px;
   color: #34424F;
 }
-.INFOMATION_CONTENT_BOX .INFORMATION_IMG {
+.IMFORMATION_CONTENT .INFOMATION_CONTENT_BOX .INFORMATION_IMG {
   width: 100%;
   margin-bottom: 40px;
 }
-.INFOMATION_CONTENT_BOX p {
+.IMFORMATION_CONTENT .INFOMATION_CONTENT_BOX p {
   margin-bottom: 40px;
 }
-.INFOMATION_CONTENT_BOX .INFOMATION_CONTENT_DATE {
+.IMFORMATION_CONTENT .INFOMATION_CONTENT_BOX .INFOMATION_CONTENT_DATE {
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
-.INFOMATION_CONTENT_BOX .INFOMATION_CONTENT_TITLE {
+.IMFORMATION_CONTENT .INFOMATION_CONTENT_BOX .INFOMATION_CONTENT_TITLE {
   font-size: 3.5rem;
 }
-.INFOMATION_CONTENT_BOX .INFOMATION_CONTENT_TEXT {
+.IMFORMATION_CONTENT .INFOMATION_CONTENT_BOX .INFOMATION_CONTENT_TEXT {
   font-size: 2.5rem;
 }
-
-.INFORMATION_BTN {
+.IMFORMATION_CONTENT .INFORMATION_BTN {
   width: 300px;
   margin: 0 auto;
   text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
->>>>>>> ca4c091a40ecb01ff7c84649288211169bcd501c

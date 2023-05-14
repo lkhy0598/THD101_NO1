@@ -1,164 +1,168 @@
-// 標籤控制
-.BACKGROUND .WRAPPER .INFORACTIVE {
-    display: block;
-}
+.INFORMATION{
 
-.BACKGROUND .WRAPPER .INFORACTIVE {
-    display: block;
-}
-
-// 麵包屑
-.MEMCENTOP {
-    margin-bottom: 25px;
-}
-
-// 區塊TITLE
-.BIG_TITLE {
-    margin-bottom: 94px;
-    border-bottom: 1px solid $blue;
-}
-
-// 標籤導覽列
-.INFORMATION_NAVS {
-    display: flex;
-    font-size: $littleword;
-    background-color: $white;
-    height: 45px;
-    border-radius: 20px 20px 0 0;
-    box-sizing: border-box;
-    overflow: hidden;
-    margin-bottom: 30px;
-
-    .INFORMATION_TAB {
-        flex-grow: 1;
-
-        a {
-            text-decoration: none;
-            color: $blue;
-            text-align: center;
-            line-height: 45px;
-        }
-
-        &:hover {
-            background-color: $lightblue;
-        }
+    // 標籤控制
+    .BACKGROUND .WRAPPER .INFORACTIVE {
+        display: block;
     }
 
-    .INFORTAB_ACTIVE {
-        background-color: $blue;
-        pointer-events: none;
-
-        a {
-            color: $white;
-        }
+    .BACKGROUND .WRAPPER .INFORACTIVE {
+        display: block;
     }
-}
 
-// 背景雲裝飾
-.BACKGROUND {
-    box-sizing: border-box;
-    overflow: hidden;
-    background-image: none;
-    position: relative;
-    .BG{
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -2;
+    // 麵包屑
+    .MEMCENTOP {
+        margin-bottom: 25px;
     }
-    .INFOMATION_BG_CLOUDS{
-        .BG_CLOUD{
-            width: 100%;
-            position: absolute;
-            z-index: -1;
-        }
-        .BG_CLOUD:first-child {
-            transform: scaleX(-1);
-            top: 0;
-            left: 900px;
-        }
-        .BG_CLOUD:last-child {
-            bottom: -400px;
-            left: -400px;
-        }
+
+    // 區塊TITLE
+    .BIG_TITLE {
+        margin-bottom: 94px;
+        border-bottom: 1px solid $blue;
     }
-}
 
-// 文章區塊
-.INFORMATION_BOX {
-    .INFORMATION_CARD {
-        display: none;
+    // 標籤導覽列
+    .INFORMATION_NAVS {
+        display: flex;
+        font-size: $littleword;
+        background-color: $white;
+        height: 45px;
+        border-radius: 20px 20px 0 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        margin-bottom: 30px;
 
-        .CARD_BODY {
-            width: 100%;
-            max-width: none;
-            margin: 0;
-            padding: 0;
-            margin-bottom: 30px;
+        .INFORMATION_TAB {
+            flex-grow: 1;
 
-            .CARD_LIGHT,
-            .CARD_RIGHT {
-                flex-grow: 1;
+            a {
+                text-decoration: none;
+                color: $blue;
+                text-align: center;
+                line-height: 45px;
             }
 
+            &:hover {
+                background-color: $lightblue;
+            }
+        }
+
+        .INFORTAB_ACTIVE {
+            background-color: $blue;
+            pointer-events: none;
+
+            a {
+                color: $white;
+            }
         }
     }
-}
 
-// 分頁器
-.PGAENUMBER {
-    padding-top: 120px;
-    margin-bottom: 335px;
-    display: flex;
-    justify-content: center;
-}
+    // 背景雲裝飾
+    .BACKGROUND {
+        box-sizing: border-box;
+        overflow: hidden;
+        background-image: none;
+        position: relative;
+        .BG{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
+        }
+        .INFOMATION_BG_CLOUDS{
+            .BG_CLOUD{
+                width: 100%;
+                position: absolute;
+                z-index: -1;
+            }
+            .BG_CLOUD:first-child {
+                transform: scaleX(-1);
+                top: 0;
+                left: 900px;
+            }
+            .BG_CLOUD:last-child {
+                bottom: -400px;
+                left: -400px;
+            }
+        }
+    }
 
-.PGAENUMBER span {
-    width: 25px;
+    // 文章區塊
+    .INFORMATION_BOX {
+        .INFORMATION_CARD {
+            display: none;
 
-    &:hover {
-        border-bottom: 2px solid $blueblack;
+            .CARD_BODY {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+                padding: 0;
+                margin-bottom: 30px;
+
+                .CARD_LIGHT,
+                .CARD_RIGHT {
+                    flex-grow: 1;
+                }
+
+            }
+        }
+    }
+
+    // 分頁器
+    .PGAENUMBER {
+        padding-top: 120px;
+        margin-bottom: 335px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .PGAENUMBER span {
+        width: 25px;
+
+        &:hover {
+            border-bottom: 2px solid $blueblack;
+        }
+    }
+
+    .PGAENUMBER span>img {
+        margin: 0 auto;
+        height: 25px;
+
+    }
+
+    .PAGEBTN {
+        width: 12px;
+        cursor: pointer;
+
+    }
+
+    .PGAENUMBER p {
+        display: block;
+        width: 50px;
+        margin: 0 10px;
+        color: $blueblack;
+        cursor: pointer;
+        text-align: center;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .LEFT {
+        position: unset;
+        transform: rotate(180deg);
+        margin-right: 20px;
+        padding-right: 25%;
+
+    }
+
+    .RIGHT {
+        position: unset;
+        margin-left: 20px;
+        padding-left: 25%;
+
     }
 }
 
-.PGAENUMBER span>img {
-    margin: 0 auto;
-    height: 25px;
-
-}
-
-.PAGEBTN {
-    width: 12px;
-    cursor: pointer;
-
-}
-
-.PGAENUMBER p {
-    display: block;
-    width: 50px;
-    margin: 0 10px;
-    color: $blueblack;
-    cursor: pointer;
-    text-align: center;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-.LEFT {
-    position: unset;
-    transform: rotate(180deg);
-    margin-right: 20px;
-    padding-right: 25%;
-
-}
-
-.RIGHT {
-    position: unset;
-    margin-left: 20px;
-    padding-left: 25%;
-
-}
