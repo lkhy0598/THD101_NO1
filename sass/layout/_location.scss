@@ -22,24 +22,24 @@
 .LOCATION_INFORMATION{
     display: flex;
     padding: 10px 0;
+
+    i{
+        font-size: 35px;
+        color: $blueblack;
+        padding-right: 15px;
+    }
+
+    p{
+        line-height: 35px;
+        color: $blueblack;
+    }
 }
 
-.LOCATION_INFORMATION > i {
-    font-size: 35px;
-    color: $blueblack;
-    padding-right: 15px;
-   
-}
-
-.LOCATION_INFORMATION > p{
-    line-height: 35px;
-    color: $blueblack;
-}
 
 .LOCATION_TIMETABLE{
     margin-top: 20px;
-}
 
-.LOCATION_TIMETABLE > img{
-    border-radius: 10px ;
+    img{
+        border-radius: 10px ;
+    }
 }

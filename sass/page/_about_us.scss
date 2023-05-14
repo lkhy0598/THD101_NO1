@@ -122,12 +122,14 @@
 
 .CLINIC_PROFILE > img{
     float: left;
-    padding-right: 50px;
+    padding-right: 60px;
 }
 
 .CLINIC_PROFILE > p{
-    padding-top: 40px;
+    padding-top: 38px;
     line-height: 160%;
+    text-align: justify;
+    color: $blueblack;
 
 }
 
@@ -146,11 +148,71 @@
 }
 
 .TEAM_WRAPPER > p{
-    padding-top: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     line-height: 160%;
     color: $blueblack;
+    text-align: left;
 }
 
+
+.TEAM_WRAPPER_PRODUCERS{
+    width: 1440px;
+    height: 800px;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    margin-left: 400px;
+    padding-right: 1000px;
+    justify-content: end;
+    flex-direction: column;
+    border: 1px solid;
+
+}
+
+.swiper-button-prev{
+    position: absolute;
+    top: 50px;
+    right: 100px;
+}
+
+.swiper {
+    width: 250px;
+    height: 500px;
+    align-items: center;
+    overflow:visible;
+  }
+
+.swiper-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: border-box
+}
+
+.swiper-slide-active{
+    width: 300px;
+    height: 500px;
+    transform: scale(1.8);
+    margin-bottom: 80px;
+    overflow: visible;
+    // margin: 30px;
+  
+  }
+
+  .swiper-slide{
+    // padding: 30px;
+  }
+
+  .swiper-slide section > img{
+    width: 200px;
+    height: 300px;
+    
+  }
 
 
 // ============== 設備介紹 ==============
@@ -242,25 +304,26 @@
 .LOCATION_INFORMATION{
     display: flex;
     padding: 10px 0;
+
+    i{
+        font-size: 35px;
+        color: $blueblack;
+        padding-right: 15px;
+    }
+
+    p{
+        line-height: 35px;
+        color: $blueblack;
+    }
 }
 
-.LOCATION_INFORMATION > i {
-    font-size: 35px;
-    color: $blueblack;
-    padding-right: 15px;
-   
-}
-
-.LOCATION_INFORMATION > p{
-    line-height: 35px;
-    color: $blueblack;
-}
 
 .LOCATION_TIMETABLE{
     margin-top: 20px;
+
+    img{
+        border-radius: 10px ;
+    }
 }
 
-.LOCATION_TIMETABLE > img{
-    border-radius: 10px ;
-}
 }

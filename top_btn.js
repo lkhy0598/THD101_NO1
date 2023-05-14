@@ -3,6 +3,7 @@ document.querySelector("#js-top").addEventListener('click', function (e) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+
 // const scrollToTopButton = document.getElementById('js-top');
 
 // const scrollFunc = () => {
