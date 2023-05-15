@@ -1027,6 +1027,107 @@ footer {
   border-radius: 10px;
 }
 
+.BACK_INDEX {
+  width: 75%;
+  margin: 90px auto;
+}
+.BACK_INDEX h2 {
+  margin-bottom: 35px;
+}
+.BACK_INDEX .WEB_MESSAGE_BOX {
+  display: flex;
+  margin-bottom: 60px;
+}
+.BACK_INDEX .WEB_MESSAGE_BOX section {
+  padding: 20px;
+  margin-right: 20px;
+  width: 32%;
+  height: 100px;
+  background-color: #EBE3DD;
+  border-radius: 10px;
+  position: relative;
+}
+.BACK_INDEX .WEB_MESSAGE_BOX section div {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.BACK_INDEX .WEB_MESSAGE_BOX section h1, .BACK_INDEX .WEB_MESSAGE_BOX section h1 ~ p {
+  display: inline-block;
+}
+.BACK_INDEX .WEB_MESSAGE_BOX .ORDERS {
+  margin-right: 0;
+}
+.BACK_INDEX .ANALYZE {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #EBE3DD;
+  border-radius: 10px;
+  padding: 20px;
+}
+.BACK_INDEX .ANALYZE .DATA_ANALYSIS {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.BACK_INDEX .ANALYZE .DATA_ANALYSIS .GENERAL {
+  border: 1px solid #CB5656;
+  color: #CB5656;
+}
+.BACK_INDEX .ANALYZE .DATA_ANALYSIS .VACCINES {
+  border: 1px solid #34424F;
+  color: #34424F;
+}
+.BACK_INDEX .ANALYZE .DATA_ANALYSIS .COMMUNICATION {
+  border: 1px solid #F89F69;
+  color: #F89F69;
+}
+.BACK_INDEX .ANALYZE .DATA_ANALYSIS .HOTEL {
+  border: 1px solid #428AA9;
+  color: #428AA9;
+}
+.BACK_INDEX .ANALYZE .DATA_ANALYSIS section {
+  width: 42%;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid black;
+}
+.BACK_INDEX .ANALYZE .DATA_ANALYSIS section h3 {
+  font-weight: 600;
+}
+.BACK_INDEX .ANALYZE .DATA_ANALYSIS section p {
+  font-size: 2rem;
+}
+.BACK_INDEX .ANALYZE .DATA_ANALYSIS section h1 {
+  float: right;
+}
+.BACK_INDEX .ANALYZE .DISTINGUISH .DISTINGUISH_BOX {
+  margin: 10px;
+}
+.BACK_INDEX .ANALYZE .DISTINGUISH span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+.BACK_INDEX .ANALYZE .DISTINGUISH p {
+  display: inline-block;
+  font-size: 2rem;
+}
+.BACK_INDEX .ANALYZE .DISTINGUISH .DISTINGUISH_BOX:nth-child(1) > span {
+  background-color: #CB5656;
+}
+.BACK_INDEX .ANALYZE .DISTINGUISH .DISTINGUISH_BOX:nth-child(2) > span {
+  background-color: #34424F;
+}
+.BACK_INDEX .ANALYZE .DISTINGUISH .DISTINGUISH_BOX:nth-child(3) > span {
+  background-color: #F89F69;
+}
+.BACK_INDEX .ANALYZE .DISTINGUISH .DISTINGUISH_BOX:nth-child(4) > span {
+  background-color: #428AA9;
+}
+
 /* 下方內容 */
 .BACK_MAIN_CONTENT {
   display: flex;
@@ -1193,9 +1294,6 @@ footer {
   /* filter:alpha( opacity : 0); */
   opacity: 0;
 }
-.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM .BTN_BOX {
-  display: flex;
-}
 .ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM li:nth-child(1) {
   flex-basis: 100%;
   margin-bottom: 20px;
@@ -1211,6 +1309,9 @@ footer {
 }
 .ADD_MEDICAL_RECORD textarea {
   width: 100%;
+}
+.ADD_MEDICAL_RECORD .BTN_BOX {
+  display: flex;
 }
 
 /*----------會員管理區塊---------*/
@@ -1768,10 +1869,6 @@ footer {
   border-radius: 10px;
 }
 
-section {
-  background-image: url(../../img/BG.jpg);
-}
-
 .SHOPPING .SHOPPING_MASTERVISION {
   background-image: url("/img/shopping/SHOPPING_MASTERVISION_01.jpg");
   background-repeat: no-repeat;
@@ -1846,6 +1943,10 @@ section {
   font-weight: 600;
 }
 .SHOPPING select option {
+  color: #34424F;
+  font-weight: 600;
+}
+.SHOPPING ::-moz-placeholder {
   color: #34424F;
   font-weight: 600;
 }
@@ -1961,7 +2062,8 @@ section {
 .SHOPPINGLIST .SHOPPINGLIST_TOP .SHOPPINGLIST_SMALLIMG img {
   cursor: pointer;
   width: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .SHOPPINGLIST .SHOPPINGLIST_TOP .SHOPPINGLIST_BIGIMG {
   overflow: hidden;
@@ -1988,7 +2090,8 @@ section {
   display: block;
   margin: 0 auto;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .SHOPPINGLIST .SHOPPINGLIST_TOP .SHOPPINGLIST_TOPTEXT h2 {
   color: #34424F;

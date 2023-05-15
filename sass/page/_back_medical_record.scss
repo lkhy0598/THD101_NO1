@@ -199,9 +199,7 @@
       }
 
    }
-      .BTN_BOX{
-         display: flex;
-      }
+      
    }
    .ADD_MEDICAL_RECORD_FORM li:nth-child(1){
       flex-basis: 100%;
@@ -219,7 +217,9 @@
    textarea{
       width: 100%;
    }
-
+   .BTN_BOX{
+      display: flex;
+   }
 }
 
 
