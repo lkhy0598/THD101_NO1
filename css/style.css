@@ -1384,119 +1384,10 @@ body .MODAL .POPUP_WRAP_ACTIVE {
 .ABOUT .CLINIC_PROFILE {
   margin: 0 auto;
   margin-top: 50px;
-  max-width: 1200px;
-  margin-bottom: 80px;
+  max-width: 1150px;
 }
 .ABOUT .CLINIC_PROFILE > img {
   float: left;
-  padding-right: 60px;
-}
-.ABOUT .CLINIC_PROFILE > p {
-  padding-top: 38px;
-  line-height: 160%;
-  text-align: justify;
-  color: #34424F;
-}
-.ABOUT .TEAM_BG {
-  background-image: url("/img/about/teambg.jpg");
-  padding-top: 100px;
-}
-.ABOUT .TEAM_WRAPPER {
-  max-width: 900px;
-  width: 75%;
-  text-align: center;
-  margin: 0 auto;
-}
-.ABOUT .TEAM_WRAPPER > p {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  line-height: 160%;
-  color: #34424F;
-  text-align: left;
-}
-.ABOUT .TEAM_WRAPPER_PRODUCERS {
-  width: 1440px;
-  height: 800px;
-  overflow: hidden;
-  box-sizing: border-box;
-  position: relative;
-  display: flex;
-  margin-left: 400px;
-  padding-right: 1000px;
-  justify-content: end;
-  flex-direction: column;
-  border: 1px solid;
-}
-.ABOUT .swiper-button-prev {
-  position: absolute;
-  top: 50px;
-  right: 100px;
-}
-.ABOUT .swiper {
-  width: 250px;
-  height: 500px;
-  align-items: center;
-  overflow: visible;
-}
-.ABOUT .swiper-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  display: flex;
-  transition-property: transform;
-  box-sizing: border-box;
-}
-.ABOUT .swiper-slide-active {
-  width: 300px;
-  height: 500px;
-  transform: scale(1.8);
-  margin-bottom: 80px;
-  overflow: visible;
-}
-.ABOUT .swiper-slide section > img {
-  width: 200px;
-  height: 300px;
-}
-.ABOUT .INTRODUCTION {
-  text-align: center;
-  width: 100%;
-}
-.ABOUT .INTRODUCTION > p {
-  margin: 100px 0;
-  color: #34424F;
-}
-.ABOUT .INTRODUCTION_PHOTO {
-  display: flex;
-}
-.ABOUT .GALLERY {
-  display: flex;
-  flex-wrap: wrap;
-  width: 700px;
-  height: 600px;
-}
-.ABOUT .GALLERY a {
-  margin: 0 15px 44px;
-}
-.ABOUT .GALLERY img {
-  width: 277px;
-  height: 277px;
-  border-radius: 0 50px 0 0;
-}
-.ABOUT #IMG_CONTAINER {
-  position: relative;
-  width: 1070px;
-  height: 600px;
-  overflow: hidden;
-  border-radius: 0 100px 0 0;
-}
-.ABOUT #IMG_CONTAINER > img {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 .ABOUT .LOCATION_WRAPPER {
   margin-top: 150px;
@@ -1517,25 +1408,25 @@ body .MODAL .POPUP_WRAP_ACTIVE {
   display: flex;
   padding: 10px 0;
 }
-.ABOUT .LOCATION_INFORMATION i {
+.ABOUT .LOCATION_INFORMATION > i {
   font-size: 35px;
   color: #34424F;
   padding-right: 15px;
 }
-.ABOUT .LOCATION_INFORMATION p {
+.ABOUT .LOCATION_INFORMATION > p {
   line-height: 35px;
   color: #34424F;
 }
 .ABOUT .LOCATION_TIMETABLE {
   margin-top: 20px;
 }
-.ABOUT .LOCATION_TIMETABLE img {
+.ABOUT .LOCATION_TIMETABLE > img {
   border-radius: 10px;
 }
 
-.BACK_INDEX {
-  width: 75%;
-  margin: 90px auto;
+/* 下方內容 */
+.BACK_MAIN_CONTENT {
+  display: flex;
 }
 .BACK_INDEX h2 {
   margin-bottom: 35px;
@@ -1634,131 +1525,24 @@ body .MODAL .POPUP_WRAP_ACTIVE {
   background-color: #428AA9;
 }
 
-/* 下方內容 */
-.BACK_MAIN_CONTENT {
-  display: flex;
-  /* 下方右側 */
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT {
-  width: 82%;
-  padding: 55px 65px;
-  /* --------病歷搜尋表單---------- */
-  /* 病歷搜尋結果 */
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_SEARCH {
-  width: 74%;
-  margin: 0 auto;
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_SEARCH ul {
-  margin-top: 85px;
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  align-items: end;
-  padding: 0;
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_SEARCH ul input {
-  width: 100%;
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_SEARCH p {
-  width: 5%;
-  margin-bottom: 20px;
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_SEARCH li:nth-child(1) {
-  width: 20%;
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_SEARCH li:nth-child(2) {
-  width: 20%;
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_SEARCH li:nth-child(3) {
-  width: 14%;
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_SEARCH li:nth-child(5) {
-  width: 14%;
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL {
-  width: 74%;
-  margin: 0 auto 75px;
-  border: 1px solid black;
-  border-radius: 10px;
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL ul {
-  display: flex;
-  font-size: 2.5rem;
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL ul .bi-pencil, .BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL ul .bi-x-lg {
-  cursor: pointer;
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL .BACK_TABLE_TITLE {
-  background-color: #CB5656;
-  color: #FFFFFF;
-  height: 55px;
-  text-align: center;
-  line-height: 55px;
-  outline: 2px solid #CB5656;
-  border-radius: 10px 10px 0 0;
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL .BACK_TABLE_CONTENT {
-  color: #34424F;
-  text-align: center;
-  line-height: 80px;
-  height: 80px;
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL .BACK_TABLE_CONTENT li {
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL li:nth-child(1) {
-  width: 20%;
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL li:nth-child(2) {
-  width: 17%;
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL li:nth-child(3) {
-  width: 17%;
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL li:nth-child(4) {
-  width: 30%;
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL li:nth-child(5) {
-  width: 8%;
-}
-.BACK_MAIN_CONTENT .BACK_MAIN_CONTENT_RIGHT .MEDICAL_RECORD_TABLE_ALL li:nth-child(6) {
-  width: 8%;
-  border-right: none;
-}
-.BACK_MAIN_CONTENT .BTN_BACK {
-  width: 200px;
-  margin: 0 auto;
-  display: block;
+.ADD_MEDICAL_RECORD_FORM li:nth-child(8) {
+  flex-basis: 100%;
 }
 
-/*----------新增病歷----------*/
-.ADD_MEDICAL_RECORD {
-  width: 55%;
-  margin: 0 auto;
+.ADD_MEDICAL_RECORD_FORM li:nth-child(9) {
+  flex-basis: 100%;
 }
-.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  justify-content: space-between;
-  align-content: center;
-  margin-top: 85px;
-  margin-bottom: 70px;
-  /* 上傳檔案input */
+
+.ADD_MEDICAL_RECORD_FORM li {
+  width: 45%;
 }
-.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM p {
-  margin: 10px 0;
-}
-.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM input {
+
+textarea {
   width: 100%;
 }
-.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM select {
-  width: 100%;
-}
-.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM .FILEBOX {
+
+/* 上傳檔案input */
+.FILEBOX {
   position: relative;
   font-size: 2.5rem;
   color: #34424F;
@@ -1766,7 +1550,7 @@ body .MODAL .POPUP_WRAP_ACTIVE {
   /* 選取檔案按鈕 */
   /* 隱藏原按鈕 */
 }
-.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM .FILEBOX .FILENAME {
+.FILEBOX .FILENAME {
   width: 100%;
   padding: 10px;
   border-radius: 10px;
@@ -1777,7 +1561,7 @@ body .MODAL .POPUP_WRAP_ACTIVE {
   border: 1px solid #9E9E9E;
   margin: 10px 0;
 }
-.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM .FILEBOX .FILEBUTTON {
+.FILEBOX .FILEBUTTON {
   font-size: 2rem;
   font-family: Arial, "Noto Sans TC";
   background-color: #D9D9D9;
@@ -1790,7 +1574,214 @@ body .MODAL .POPUP_WRAP_ACTIVE {
   right: 0px;
   cursor: pointer;
 }
-.ADD_MEDICAL_RECORD .ADD_MEDICAL_RECORD_FORM .FILEBOX .FILE {
+.FILEBOX .FILE {
+  width: 145px;
+  height: 45px;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  cursor: pointer;
+  /* filter:alpha( opacity : 0); */
+  opacity: 0;
+}
+
+.BTN_BOX {
+  display: flex;
+}
+
+/* 下方內容 */
+.BACK_MAIN_CONTENT {
+  display: flex;
+}
+
+/* 下方右側 */
+.BACK_MAIN_CONTENT_RIGHT {
+  width: 82%;
+  padding: 55px 65px;
+}
+
+.BTN_BACK {
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* --------病歷搜尋表單---------- */
+.MEDICAL_RECORD_SEARCH {
+  width: 74%;
+  margin: 0 auto;
+}
+.MEDICAL_RECORD_SEARCH ul {
+  margin-top: 85px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  align-items: end;
+  padding: 0;
+}
+.MEDICAL_RECORD_SEARCH ul input {
+  width: 100%;
+}
+.MEDICAL_RECORD_SEARCH p {
+  width: 5%;
+  margin-bottom: 20px;
+}
+
+.MEDICAL_RECORD_SEARCH li:nth-child(1) {
+  width: 20%;
+}
+
+.MEDICAL_RECORD_SEARCH li:nth-child(2) {
+  width: 20%;
+}
+
+.MEDICAL_RECORD_SEARCH li:nth-child(3) {
+  width: 14%;
+}
+
+.MEDICAL_RECORD_SEARCH li:nth-child(5) {
+  width: 14%;
+}
+
+/* 病歷搜尋結果 */
+.MEDICAL_RECORD_TABLE_ALL {
+  width: 74%;
+  margin: 0 auto 75px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.MEDICAL_RECORD_TABLE_ALL ul {
+  display: flex;
+  font-size: 2.5rem;
+}
+
+.BACK_TABLE_TITLE {
+  background-color: #CB5656;
+  color: #FFFFFF;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  outline: 2px solid #CB5656;
+  border-radius: 10px 10px 0 0;
+}
+
+.BACK_TABLE_CONTENT {
+  color: #34424F;
+  text-align: center;
+  line-height: 80px;
+  height: 80px;
+}
+.BACK_TABLE_CONTENT li {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.MEDICAL_RECORD_TABLE_ALL li:nth-child(1) {
+  width: 20%;
+}
+
+.MEDICAL_RECORD_TABLE_ALL li:nth-child(2) {
+  width: 17%;
+}
+
+.MEDICAL_RECORD_TABLE_ALL li:nth-child(3) {
+  width: 17%;
+}
+
+.MEDICAL_RECORD_TABLE_ALL li:nth-child(4) {
+  width: 30%;
+}
+
+.MEDICAL_RECORD_TABLE_ALL li:nth-child(5) {
+  width: 8%;
+}
+
+.MEDICAL_RECORD_TABLE_ALL li:nth-child(6) {
+  width: 8%;
+  border-right: none;
+}
+
+/*----------新增病歷----------*/
+.ADD_MEDICAL_RECORD {
+  width: 55%;
+  margin: 0 auto;
+}
+
+.ADD_MEDICAL_RECORD_FORM {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 85px;
+  margin-bottom: 70px;
+}
+.ADD_MEDICAL_RECORD_FORM p {
+  margin: 10px 0;
+}
+.ADD_MEDICAL_RECORD_FORM input {
+  width: 100%;
+}
+.ADD_MEDICAL_RECORD_FORM select {
+  width: 100%;
+}
+
+.ADD_MEDICAL_RECORD_FORM li:nth-child(1) {
+  flex-basis: 100%;
+  margin-bottom: 20px;
+}
+
+.ADD_MEDICAL_RECORD_FORM li:nth-child(8) {
+  flex-basis: 100%;
+}
+
+.ADD_MEDICAL_RECORD_FORM li:nth-child(9) {
+  flex-basis: 100%;
+}
+
+.ADD_MEDICAL_RECORD_FORM li {
+  width: 45%;
+}
+
+textarea {
+  width: 100%;
+}
+
+/* 上傳檔案input */
+.FILEBOX {
+  position: relative;
+  font-size: 2.5rem;
+  color: #34424F;
+  /* 檔案名稱 */
+  /* 選取檔案按鈕 */
+  /* 隱藏原按鈕 */
+}
+.FILEBOX .FILENAME {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  height: 45px;
+  font-size: 2rem;
+  color: #34424F;
+  border: 1px solid #9E9E9E;
+  margin: 10px 0;
+}
+.FILEBOX .FILEBUTTON {
+  font-size: 2rem;
+  font-family: Arial, "Noto Sans TC";
+  background-color: #D9D9D9;
+  width: 145px;
+  height: 45px;
+  border: 0;
+  border-radius: 0 10px 10px 0;
+  position: absolute;
+  top: 35px;
+  right: 0px;
+  cursor: pointer;
+}
+.FILEBOX .FILE {
   width: 145px;
   height: 45px;
   position: absolute;
@@ -2120,7 +2111,7 @@ body .MODAL .POPUP_WRAP_ACTIVE {
   margin: 0 auto;
 }
 
-.INDEX .BIG_TITLE {
+.BIG_TITLE {
   padding-top: 100px;
   position: relative;
 }
@@ -2375,160 +2366,8 @@ body .MODAL .POPUP_WRAP_ACTIVE {
   border-radius: 10px;
 }
 
-.INFORMATION .BACKGROUND .WRAPPER .INFORACTIVE {
-  display: block;
-}
-.INFORMATION .BACKGROUND .WRAPPER .INFORACTIVE {
-  display: block;
-}
-.INFORMATION .MEMCENTOP {
-  margin-bottom: 25px;
-}
-.INFORMATION .BIG_TITLE {
-  margin-bottom: 94px;
-  border-bottom: 1px solid #428AA9;
-}
-.INFORMATION .INFORMATION_NAVS {
-  display: flex;
-  font-size: 2rem;
-  background-color: #FFFFFF;
-  height: 45px;
-  border-radius: 20px 20px 0 0;
-  box-sizing: border-box;
-  overflow: hidden;
-  margin-bottom: 30px;
-}
-.INFORMATION .INFORMATION_NAVS .INFORMATION_TAB {
-  flex-grow: 1;
-}
-.INFORMATION .INFORMATION_NAVS .INFORMATION_TAB a {
-  text-decoration: none;
-  color: #428AA9;
-  text-align: center;
-  line-height: 45px;
-}
-.INFORMATION .INFORMATION_NAVS .INFORMATION_TAB:hover {
-  background-color: #98C7CF;
-}
-.INFORMATION .INFORMATION_NAVS .INFORTAB_ACTIVE {
-  background-color: #428AA9;
-  pointer-events: none;
-}
-.INFORMATION .INFORMATION_NAVS .INFORTAB_ACTIVE a {
-  color: #FFFFFF;
-}
-.INFORMATION .BACKGROUND {
-  box-sizing: border-box;
-  overflow: hidden;
-  background-image: none;
-  position: relative;
-}
-.INFORMATION .BACKGROUND .BG {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -2;
-}
-.INFORMATION .BACKGROUND .INFOMATION_BG_CLOUDS .BG_CLOUD {
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-}
-.INFORMATION .BACKGROUND .INFOMATION_BG_CLOUDS .BG_CLOUD:first-child {
-  transform: scaleX(-1);
-  top: 0;
-  left: 900px;
-}
-.INFORMATION .BACKGROUND .INFOMATION_BG_CLOUDS .BG_CLOUD:last-child {
-  bottom: -400px;
-  left: -400px;
-}
-.INFORMATION .INFORMATION_BOX .INFORMATION_CARD {
-  display: none;
-}
-.INFORMATION .INFORMATION_BOX .INFORMATION_CARD .CARD_BODY {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 30px;
-}
-.INFORMATION .INFORMATION_BOX .INFORMATION_CARD .CARD_BODY .CARD_LIGHT,
-.INFORMATION .INFORMATION_BOX .INFORMATION_CARD .CARD_BODY .CARD_RIGHT {
-  flex-grow: 1;
-}
-.INFORMATION .PGAENUMBER {
-  padding-top: 120px;
-  margin-bottom: 335px;
-  display: flex;
-  justify-content: center;
-}
-.INFORMATION .PGAENUMBER span {
-  width: 25px;
-}
-.INFORMATION .PGAENUMBER span:hover {
-  border-bottom: 2px solid #34424F;
-}
-.INFORMATION .PGAENUMBER span > img {
-  margin: 0 auto;
-  height: 25px;
-}
-.INFORMATION .PAGEBTN {
-  width: 12px;
-  cursor: pointer;
-}
-.INFORMATION .PGAENUMBER p {
-  display: block;
-  width: 50px;
-  margin: 0 10px;
-  color: #34424F;
-  cursor: pointer;
-  text-align: center;
-}
-.INFORMATION .PGAENUMBER p:hover {
-  text-decoration: underline;
-}
-.INFORMATION .LEFT {
-  position: unset;
-  transform: rotate(180deg);
-  margin-right: 20px;
-  padding-right: 25%;
-}
-.INFORMATION .RIGHT {
-  position: unset;
-  margin-left: 20px;
-  padding-left: 25%;
-}
-
-.FIRSTTIME_INFO {
-  border: 2px solid red;
-  align-items: center;
-  justify-content: center;
-}
-
-.RESERVE_TYPE_UL {
-  display: flex;
-}
-
-.TITLE_NO {
-  background-color: #FFFFFF;
-  color: #428AA9;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.RESERVE_TYPE {
-  background-color: #428AA9;
-  color: #FFFFFF;
-  width: 250px;
-  height: 250px;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  line-height: 250px;
+section {
+  background-image: url(../../img/BG.jpg);
 }
 
 .SHOPPING .SHOPPING_MASTERVISION {
