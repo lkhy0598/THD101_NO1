@@ -1,11 +1,12 @@
 // 會員功能 modal 彈窗
 
 // 啟用
-body .MODAL_ACTIVE{
+body .MODAL_ACTIVE {
     opacity: 1;
     pointer-events: auto;
 }
-body .MODAL .POPUP_WRAP_ACTIVE{
+
+body .MODAL .POPUP_WRAP_ACTIVE {
     display: block;
     top: 50%;
     pointer-events: auto;
@@ -74,11 +75,37 @@ body .MODAL .POPUP_WRAP_ACTIVE{
             z-index: -1;
             box-sizing: border-box;
             overflow: hidden;
+
             .BG_CLOUD {
                 position: absolute;
                 top: 65px;
                 left: -170px;
                 z-index: -1;
+                animation: move 3s 0s infinite;
+            }
+
+            @keyframes move {
+
+                0% {
+                    transform: rotate(-3deg);
+                    animation-timing-function: ease;
+
+                }
+
+
+                50% {
+                    transform: rotate(3deg);
+                    animation-timing-function: ease-in-out;
+
+                }
+
+
+                100% {
+                    transform: rotate(-3deg);
+                    animation-timing-function: ease;
+
+                }
+
             }
         }
     }
@@ -235,7 +262,7 @@ body .MODAL .POPUP_WRAP_ACTIVE{
             text-indent: 0;
             line-height: 0;
             font-weight: bold;
-            
+
         }
 
         .SIGNUP_SUB {
@@ -273,15 +300,17 @@ body .MODAL .POPUP_WRAP_ACTIVE{
     flex-grow: 1;
 }
 
-// 燈入頁中的忘記密碼按鈕
-.FORGET_BOX,.BACKLOGIN_BOX{
+// 登入頁中的忘記密碼按鈕
+.FORGET_BOX,
+.BACKLOGIN_BOX {
     width: 300px;
     margin: 0 auto;
     display: flex;
     justify-content: flex-end;
     margin-bottom: 16px;
 
-    .FORGET_BTN,.BACKLOGIN_BTN {
+    .FORGET_BTN,
+    .BACKLOGIN_BTN {
         background: none;
         border: none;
         color: $blueblack;
@@ -392,7 +421,8 @@ body .MODAL .POPUP_WRAP_ACTIVE{
         line-height: 2rem;
     }
 
-    .PASS_SUB,.CHANGE_SUCC_BTN {
+    .PASS_SUB,
+    .CHANGE_SUCC_BTN {
         width: 300px;
         height: 45px;
         line-height: 45px;

@@ -1,0 +1,301 @@
+.SHOPPINGCARTP2{
+    background-image: url(../../img/shopping_cart/shopping_cartp2_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .ITEM_PRODUCT--W{
+        width: 40%;
+    }
+
+    .COL-7{
+        margin-right: 0;
+    }
+
+// ======================================
+
+    .BREAD{
+        padding-top:361px ;
+    }
+
+    .SHOPPINGCART_STEP{
+        margin-bottom: 75px;
+        
+        .SHOPPINGCART_ARCTWO{
+            &::before{
+                background-color: $blueblack;
+            }
+            .ARC_TITLE{
+                background-color: $blueblack;
+                color: $white;
+            }
+            p{
+                font-weight: 700;
+            }
+        }
+    }
+
+// ===========================================================
+
+    .SHOPPINGCARTP2_ORDER{
+        .SHOPPINGCARTP2_ORDERTEXT{
+            width: 100%;
+            background-color:rgba(255, 255, 255, 0.5);
+            height: 120px;
+            padding-top: 35px;
+            box-sizing: border-box;
+
+            p{
+                font-weight: 700;
+                color: $blueblack;
+                text-align: center;
+                margin-bottom: 15px;
+                
+            }
+            span{
+                display:inline-block;
+                width: 100%;
+                text-align: center;
+                margin-left: 5px;
+                font-size: $littleword;
+                color: $blueblack;
+                vertical-align: middle;
+
+                .SHOPPINGCARTP2_ORDERARR{
+                    display: inline-block;
+                    width: 15px;
+                    margin-left: 10px;
+                    vertical-align: middle;
+                    img{
+                        width: 100%;
+                        transform: rotate(90deg);
+                        
+                    }
+                }
+
+                
+            }
+        }
+    }
+
+    .ORDERITEM{
+        border-radius: 0px;
+        border: 0px;
+        border-top: 1px solid $gray;
+        margin-bottom: 35px;
+    }
+
+// ======================================================================
+
+
+    .SHOPPINGCARTP2_TEXT{
+        display: flex;
+        margin-bottom: 45px;
+
+        .SHOPPINGCARTP2_TEXT--RIGHT{
+            margin-left: 20px;
+        }
+
+
+            .P2MEMBER{
+                margin-bottom: 40px;
+            }
+
+            .SHOPPINGCARTP2_STEPTEXT--FORM{
+                background-color: rgba(255, 255, 255, 0.5);
+                border-radius: 10px;
+                border: 1px solid $gray;
+                overflow: hidden;
+                width: 100%;
+                padding-bottom: 30px;
+
+                .SHOPPINGCARTP2_STEPTEXT--TITLE{
+                    width: 100%;
+                    height: 60px;
+                    background-color: #fff;
+                    position: relative;
+                    &::after{
+                        content: '';
+                        width: 100%;
+                        height: 1px;
+                        background-color: $gray;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
+                    span{
+                        line-height: 60px;
+                        color: $blueblack;
+                        font-size: $p;
+                        margin-left: 40px;
+                    }
+                }
+
+                .SHOPPINGCARTP2_STEPTEXT--INPUT{
+                    padding:0 40px;
+                    margin-top: 25px;
+                    position: relative;
+            
+                    .INPUT{
+                        font-size: $littleword;
+                        font-weight: 300;
+                        
+                        .INPUTENTER{
+                            width: 100%;
+                            color: $blueblack;
+                            font-weight: 400;
+                        }
+                        ::placeholder{
+                            color: $blueblack;
+                            font-weight: 400;
+                        }
+                    }
+
+                    span{
+                        display: block;
+                        font-size: $bread;
+                        font-weight: 300;
+                        margin-bottom: 6px;
+                    }
+                    div{
+                        .BTN{
+                            width: 100%;
+                        }
+                    }
+                    .CREDITREMIND{
+                        color: $gray;
+                        line-height: 25px;
+                    }
+
+                    .TEXTAREA{
+                        font-size: $littleword;
+                        font-weight: 300;
+                        .TEXTAREA_CONTENT{
+                            width: 100%;
+                            height: 270px
+                        }
+                    }
+
+                    .SAMEMEMBER{
+                        font-size: $littleword;
+                        color: $blueblack;
+                        font-weight: 300;
+                        position: absolute;
+                        top: -4px;
+                        right: 45px;
+
+                        input{
+                            visibility: hidden; /* 把原本的input藏起來 */
+                            
+                        }
+
+                        .CHECKMEMBER{
+                            display: inline-block;
+                            height: 20px;
+                            width: 20px;
+                            border: 1px solid $blueblack;
+                            margin: 0;
+                            transform: translateY(3px);
+                            position: relative;
+                            margin-right: 5px;
+
+                            &::after{
+                                content: '';
+                                width: 25px;
+                                height: 25px;
+                                background-image: url(/img/shopping_cart/tick.png);
+                                background-repeat: no-repeat;
+                                position: absolute;
+                                top: 2.5px;
+                                right: -5.5px;
+                                opacity: 0;
+                                
+                            }
+                        }
+                        
+                    }
+
+                    .SAMEMEMBER input:checked + .CHECKMEMBER::after{
+                        opacity: 1;
+                    }
+                }
+
+                .SHOPPINGCARTP2_STEPTEXT--REMIND{
+                    display: block;
+                    padding:0 40px;
+                    margin-top: 25px;
+                    font-size: $littleword;
+                    font-weight: 300;
+                }
+
+                .SHOPPINGCARTP2_STEPTEXT--HALF{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    padding: 0 40px;
+
+                    .SHOPPINGCARTP2_STEPTEXT--HALFINPUT{
+                        margin-top: 25px;
+                        width: 48%;
+                        .INPUT{
+                            font-size: $littleword;
+                            font-weight: 300;
+                            
+                            .INPUTENTER{
+                                width: 100%;
+                                color: $blueblack;
+                                font-weight: 400;
+                            }
+                            ::placeholder{
+                                color: $blueblack;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            
+        }
+    }
+
+
+// ===========================================================================
+
+
+    .SHOPPINGCARTP2_FINALLINK{
+        width: 100%;
+        height: 160px;
+        background-color: #fff;
+        border-top: 1px solid $gray;
+        border-bottom: 1px solid $gray;
+        margin-bottom: 120px;
+
+        section{
+            height: 160px;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            a{
+                font-size: $littleword;
+                font-weight: 300;
+                color: $blueblack;
+                text-decoration: none;
+
+                &:hover{
+                    text-decoration: underline;
+                    text-underline-position: under;
+                    text-underline-offset: 2px;
+                    font-weight: 400;
+                }
+            }
+
+            .BTN{
+                font-weight: 700;
+            }
+        }
+    }
+
+
+
+
+}

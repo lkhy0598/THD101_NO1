@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='css/style.css'>
+    <title>購物車 SHOPPING_CART</title>
+</head>
+<body class="SHOPPINGCART">
+<!-- ===============================header================================= -->
+<header>
+
+    <nav class="HEADER_NAV">
+
+        <img src="img/V-HEADER-LOGO-HOVER.svg" alt="">
+        <img src="img/V-HEADER-LOGO.svg" alt="">
+        
+
+        <ul>
+            <li>
+                <a href="#"><span>關於院所</span><br>About Us</a>
+            </li>
+            <li>
+                <a href="#"><span>資訊導覽</span><br>Information</a>
+            </li>
+            <li>
+                <a href="#"><span>線上購物</span><br>Shopping</a>
+            </li>
+            <li>
+                <a href="#"><span>常見問題</span><br>Q & A</a>
+            </li>
+            <li>
+                <a href="#"><span>會員中心</span><br>Member Centre</a>
+            </li>
+            <li>
+                <a href="#" class="RESERVE">立即預約</a>
+            </li>
+            <li>
+                <a href="#" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
+            </li>
+            <li>
+                <a href="#"><i class="bi bi-cart-fill"></i></a>
+            </li>
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- ======================================麵包屑========================================== -->
+
+    <section class="BREAD WRAPPER">
+        <a href="#">首頁</a>
+        /
+        <a href="#">購物車</a>
+    </section>
+
+<!-- ====================================購物車第一步驟=========================================== -->
+    <section class="SHOPPINGCART_STEP WRAPPER">
+        <section class="SHOPPINGCART_STEPAREA">
+            <section class="SHOPPINGCART_ARCONE">
+                <div class="ARC_TITLE">1</div>
+                <p>購物車</p>
+            </section>
+            <section class="SHOPPINGCART_ARCTWO">
+                <div class="ARC_TITLE">2</div>
+                <p>填寫資料</p>
+            </section>
+            <section class="SHOPPINGCART_ARCTHREE">
+                <div class="ARC_TITLE">3</div>
+                <p>結帳成功</p>
+            </section>
+        </section>
+
+<!-- =====================================購物車登入==================================================== -->
+
+        <section class="SHOPPINGCART_LOGIN">
+            <p>已經是會員？登入可以更方便管理訂單喔！</p>
+            <span>登入會員</span>
+        </section>
+
+<!-- =====================================購物商品列表==================================================== -->
+
+        <section class="SHOPPINGCART_ITEMFORM">
+            <section class="SHOPPINGCART_ITEMtitle">
+                <span class="ITEM_PRODUCT--W">商品</span>
+                <span class="ITEM_PRICE--W">單件價格</span>
+                <span class="ITEM_COUNT--W">數量</span>
+                <span class="ITEM_SUBTOTAL--W">小計</span>
+                <span class="ITEM_DELETE--W"></span>
+            </section>
+            <section class="SHOPPINGCART_ITEM">
+                <section class="ITEM_PRODUCT ITEM_PRODUCT--W">
+                    <section class="ITEM_PRODUCT--IMG">
+                        <img src="/img/shopping_list/healthy/01/healthy_01_01.jpg" alt="">
+                    </section>
+                    <span>沛威貓狗保健-護眼亮晶晶 30入/盒</span>
+                </section>
+                <section class="ITEM_PRICE ITEM_PRICE--W">
+                    <p>NT＄1,380</p>
+                </section>
+                <section class="ITEM_COUNT ITEM_COUNT--W">
+                    <span class="ITEM_COUNT--MINUS"><i class="bi bi-dash"></i></span>
+                    <span class="ITEM_COUNT--NUM">2</span>
+                    <span class="ITEM_COUNT--PLUS"><i class="bi bi-plus"></i></span>
+                </section>
+                <section class="ITEM_SUBTOTAL ITEM_SUBTOTAL--W">
+                    <p>NT＄2,760</p>
+                </section>
+                <section class="ITEM_DELETE ITEM_DELETE--W">
+                    <i class="bi bi-trash3"></i>
+                </section>
+            </section>
+
+            <section class="SHOPPINGCART_ITEM">
+                <section class="ITEM_PRODUCT ITEM_PRODUCT--W">
+                    <section class="ITEM_PRODUCT--IMG">
+                        <img src="/img/shopping_list/dryfood/09/dryfood_09_01.jpg" alt="">
+                    </section>
+                    <span>【SC星益生趣】無穀貓糧(鮭魚配方) 2.5磅/1.1kg</span>
+                </section>
+                <section class="ITEM_PRICE ITEM_PRICE--W">
+                    <p>NT＄980</p>
+                </section>
+                <section class="ITEM_COUNT ITEM_COUNT--W">
+                    <span class="ITEM_COUNT--MINUS"><i class="bi bi-dash"></i></span>
+                    <span class="ITEM_COUNT--NUM">1</span>
+                    <span class="ITEM_COUNT--PLUS"><i class="bi bi-plus"></i></span>
+                </section>
+                <section class="ITEM_SUBTOTAL ITEM_SUBTOTAL--W">
+                    <p>NT＄980</p>
+                </section>
+                <section class="ITEM_DELETE ITEM_DELETE--W">
+                    <i class="bi bi-trash3"></i>
+                </section>
+            </section>
+
+        </section>
+
+<!-- =================================購物車第一步驟下方3區塊===================================== -->
+
+        <section class="SHOPPINGCART_STEPONETEXT">
+            <section class="SHOPPINGCART_STEPONETEXT--LEFT COL-9">
+                <section class="SHOPPINGCART_STEPONETEXT--FORM COUPON">
+                    <section class="SHOPPINGCART_STEPONETEXT--TITLE">
+                        <span>優惠促銷</span>
+                    </section>
+                    <section class="SHOPPINGCART_STEPONETEXT--SELECT">
+                        <label for="CUPON" class="SELECT">已選擇之優惠<br>
+                            <select id="CUPON" class="SELECTOPTION">
+                                <option value="">請選擇優惠劵</option>
+                                <option value="">台灣限定 滿千免運</option>
+                            </select>
+                        </label>
+                    </section>
+                </section>
+                <section class="SHOPPINGCART_STEPONETEXT--FORM DELIVERY">
+                    <section class="SHOPPINGCART_STEPONETEXT--TITLE">
+                        <span>選擇送貨及付款方式</span>
+                    </section>
+                    <section class="SHOPPINGCART_STEPONETEXT--SELECT">
+                        <label for="CUPON" class="SELECT">送貨地點<br>
+                            <select id="CUPON" class="SELECTOPTION">
+                                <option value="">請選擇所在位置</option>
+                                <option value="">台灣</option>
+                            </select>
+                        </label>
+                    </section>
+                    <section class="SHOPPINGCART_STEPONETEXT--SELECT">
+                        <label for="CUPON" class="SELECT">送貨方式<br>
+                            <select id="CUPON" class="SELECTOPTION">
+                                <option value="">請選擇送貨方式</option>
+                                <option value="">7-11店到店取貨</option>
+                            </select>
+                        </label>
+                    </section>
+                    <section class="SHOPPINGCART_STEPONETEXT--SELECT LASTBOTTOM">
+                        <label for="CUPON" class="SELECT">付款方式<br>
+                            <select id="CUPON" class="SELECTOPTION">
+                                <option value="">請選擇付款方式</option>
+                                <option value="">到貨付款</option>
+                                <option value="">信用卡付款</option>
+                            </select>
+                        </label>
+                    </section>
+                </section>
+            </section>
+            <section class="SHOPPINGCART_STEPONETEXT--RIGHT COL-6">
+                <section class="SHOPPINGCART_STEPONETEXT--FORM">
+                    <section class="SHOPPINGCART_STEPONETEXT--TITLE">
+                        <span>訂單資訊</span>
+                    </section>
+                    <section class="SHOPPINGCART_STEPONETEXT--INFO">
+                        <section class="SHOPPINGCART_STEPONETEXT--ZONE">
+                            <span>小計:</span>
+                            <span><b>NT＄3,740</b></span>
+                        </section>
+                        <section class="SHOPPINGCART_STEPONETEXT--ZONE">
+                            <span>運費:</span>
+                            <span><b>免運</b></span>
+                        </section>
+                        <section class="SHOPPINGCART_STEPONETEXT--ZONE">
+                            <span>使用優惠劵:</span>
+                            <span><b>台灣限定 滿千免運</b></span>
+                        </section>
+                        <section class="SHOPPINGCART_STEPONETEXT--ZONE STEPONETOTAL">
+                            <span>合計:</span>
+                            <span><b>NT＄3,740</b></span>
+                        </section>
+                        <section class="SHOPPINGCART_STEPONETEXT--PAY">
+                            <button class="BTN STEPONEPAY">前往結帳</button>
+                        </section>
+                    </section>
+                </section>
+
+            </section>
+
+        </section>
+
+    </section>
+
+
+
+<!-- ===============================回到TOP================================================ -->
+
+<button class="TOP_BTN"></button>
+
+
+<!-- ==================================FOOTER================================================= -->
+
+<footer>
+    <div class="FOOTER_LOGO">
+        <img src="img/H-LOGO.svg" alt="">
+    </div>
+    <div class="FOOTER_RIGHT">
+        <nav class="FOOTER_NAV">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span>關於院所</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>立即預約</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>資訊導覽</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>會員中心</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>線上購物</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>購物車</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>常見問題</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>追蹤我們</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="FOOTER_ICON">
+        <a href=""><img src="img/FOOTER_FB_ICON.svg" alt=""></a>
+        <a href=""><img src="img/FOOTER_INS_ICON.svg" alt=""></a>
+    </div>
+</footer>
+<div class="FOOTER_BOTTOM">
+    <p>Copyright © 本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。</p>
+</div>
+
+
+</section>
+</body>
+</html>

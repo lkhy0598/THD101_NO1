@@ -1,0 +1,112 @@
+.BACK_INDEX{
+   width: 75%;
+   margin: 90px auto;
+
+   h2{
+      margin-bottom: 35px;
+   }
+   .WEB_MESSAGE_BOX{
+      display: flex;
+      margin-bottom: 60px;
+
+      section{
+         padding: 20px;
+         margin-right: 20px;
+         width: 32%;
+         height: 100px;
+         background-color: #EBE3DD;
+         border-radius: 10px;
+         position: relative;
+
+         div{
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+         }
+         h1, h1 ~ p{
+            display: inline-block;
+         }
+      }
+      .ORDERS{
+         margin-right: 0;
+      }
+   }
+
+   .ANALYZE{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #EBE3DD;
+      border-radius: 10px;
+      padding: 20px;
+
+      .DATA_ANALYSIS{
+         width: 50%;
+         display: flex;
+         flex-wrap: wrap;
+
+         .GENERAL{
+            border: 1px solid $red;
+            color: $red;
+         }
+         .VACCINES{
+            border: 1px solid $blueblack;
+            color: $blueblack;
+         }
+         .COMMUNICATION{
+            border: 1px solid $orange;
+            color: $orange; 
+         }
+         .HOTEL{
+            border: 1px solid $blue;
+            color: $blue; 
+         }
+         
+         section{
+            width: 42%;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+
+            h3{
+               font-weight: 600;
+            }
+            p{
+               font-size: $littleword;
+            }
+            h1{
+               float: right;
+            }
+         }
+      }
+      .DISTINGUISH{
+         .DISTINGUISH_BOX{
+            margin: 10px;
+         }
+         span{
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+         }
+         
+         p{
+            display: inline-block;
+            font-size: $littleword;
+         }
+         .DISTINGUISH_BOX:nth-child(1)>span{
+            background-color: $red;
+         }
+         .DISTINGUISH_BOX:nth-child(2)>span{
+            background-color: $blueblack;
+         }
+         .DISTINGUISH_BOX:nth-child(3)>span{
+            background-color: $orange;
+         }
+         .DISTINGUISH_BOX:nth-child(4)>span{
+            background-color: $blue;
+         }
+      }
+
+   }
+}
