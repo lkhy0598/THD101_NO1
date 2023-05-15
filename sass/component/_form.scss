@@ -113,3 +113,265 @@
     }
 
 }
+
+// ==============================商品列表項目=============================================
+
+.ITEM_PRODUCT--W{width: 33%;}
+.ITEM_PRICE--W{width: 20%;}
+.ITEM_COUNT--W{width: 20%;}
+.ITEM_SUBTOTAL--W{width: 20%;}
+.ITEM_DELETE--W{width: 7%;}
+
+.SHOPPINGCART_ITEMFORM{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    border: 1px solid $gray;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 25px;
+    .SHOPPINGCART_ITEMtitle{
+        height: 60px;
+        background-color: #fff;
+        display: flex;
+        span{
+            display: block;
+            line-height: 60px;
+            color: $blueblack;
+            font-size: $p;
+            text-align: center;
+        }
+    }
+
+}
+
+.SHOPPINGCART_ITEM{
+    width: 100%;
+    height: 157px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &::before{
+        content: '';
+        height: 1px;
+        width: 100%;
+        background-color: $gray;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .ITEM_PRODUCT{
+        display: flex;
+        // justify-content: left;
+
+        .ITEM_PRODUCT--IMG{
+            width: 100px;
+            height: 100px;
+            border-radius:10px;
+            overflow: hidden;
+            margin-left: 40px;
+
+            img{
+                width: 100%;
+            }
+        }
+        span{
+            display: block;
+            width: 60%;
+            font-size: $littleword;
+            color: $blueblack;
+            padding-left: 30px;
+            line-height: 28px;
+        }
+    }
+
+    .ITEM_PRICE{
+        text-align: center;
+    }
+
+    .ITEM_COUNT{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .ITEM_COUNT--MINUS{
+            display: block;
+            width: 30px;
+            height: 30px;
+            background-color: $blueblack;
+            border-radius: 50%;
+            line-height: 29px;
+            font-size: 20px;
+            color: $white;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .ITEM_COUNT--NUM{
+            font-size: $p;
+            color: $blueblack;
+            margin: 0 40px;
+        }
+
+        .ITEM_COUNT--PLUS{
+            display: block;
+            width: 30px;
+            height: 30px;
+            background-color: $blueblack;
+            border-radius: 50%;
+            line-height: 29px;
+            font-size: 20px;
+            color: $white;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+
+    .ITEM_SUBTOTAL{
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .ITEM_DELETE{
+        text-align: center;
+        color: $blueblack;
+        font-size: $p;
+        cursor: pointer;
+    }
+
+
+}
+
+// ===================================選單============================================
+
+.SHOPPINGCART_STEPONETEXT--FORM{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    border: 1px solid $gray;
+    overflow: hidden;
+    width: 100%;
+
+    .SHOPPINGCART_STEPONETEXT--TITLE{
+        width: 100%;
+        height: 60px;
+        background-color: #fff;
+        position: relative;
+        &::after{
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: $gray;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        span{
+            line-height: 60px;
+            color: $blueblack;
+            font-size: $p;
+            margin-left: 40px;
+        }
+    }
+
+    .SHOPPINGCART_STEPONETEXT--SELECT{
+        padding:0 40px;
+
+        .SELECT{
+            font-size: $littleword;
+            font-weight: 300;
+            
+            .SELECTOPTION{
+                width: 100%;
+                color: $blueblack;
+                font-weight: 400;
+
+                option{
+                    color: $blueblack;
+                    font-weight: 400;
+                }
+            }
+            ::placeholder{
+                color: $blueblack;
+                font-weight: 400;
+            }
+        }
+    }
+
+    
+}
+
+// ===========================購物車步驟==================================
+
+.SHOPPINGCART_STEP{
+    margin-top: 25px;
+
+    .SHOPPINGCART_STEPAREA{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        margin-bottom: 50px;
+        p{
+            color: $blueblack;
+            margin-top: 7px;
+        }
+
+        div{
+            font-weight: 700;
+            line-height: 77px;
+        }
+
+        .SHOPPINGCART_ARCONE{
+            display: inline-block;
+            div{
+                margin: 0 auto;
+                background-color:$blueblack ;
+                color: $white;
+            }
+            p{
+                font-weight: 700;
+            }
+        }
+
+        .SHOPPINGCART_ARCTWO{
+            display: inline-block;
+            margin: 0 150px;
+            position: relative;
+            div{
+                margin: 0 auto;
+                background-color:$white;
+                color: $blueblack;
+            }
+            &::before{
+                content:'';
+                position: absolute;
+                display: block;
+                width: 180%;
+                height: 7px;
+                background-color: $white;
+                top: 40px;
+                left: -170px;
+                z-index: -1;
+            }
+            &::after{
+                content:'';
+                position: absolute;
+                display: block;
+                width: 180%;
+                height: 7px;
+                background-color: $white;
+                top: 40px;
+                right: -170px;
+                z-index: -1;
+            }
+        }
+
+        .SHOPPINGCART_ARCTHREE{
+            display: inline-block;
+            div{
+                margin: 0 auto;
+                background-color:$white;
+                color: $blueblack;
+            }
+        }
+    }
+}
+
