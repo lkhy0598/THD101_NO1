@@ -916,324 +916,6 @@ footer {
   right: 10%;
 }
 
-.ABOUT .BACKGROUND {
-  position: relative;
-}
-.ABOUT .CAROUSEL {
-  position: relative;
-}
-.ABOUT .DOT {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  right: 30px;
-  bottom: 40px;
-  z-index: 10;
-}
-.ABOUT .BREAD {
-  padding-top: 30px;
-}
-.ABOUT .ABOUTUS_TITLE {
-  position: relative;
-  color: #FFFFFF;
-  z-index: 10;
-  margin-top: 50px;
-  margin-bottom: 40px;
-}
-.ABOUT .ABOUTUS_TITLE .ABOUTUS_TITLE_IMG {
-  background-image: url(../../img/TITLE-BG.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 280px;
-  height: 100px;
-  padding: 5px 20px;
-  box-sizing: border-box;
-}
-.ABOUT .ABOUTUS_TITLE .ABOUTUS_TITLE_IMG h1 {
-  text-align: left;
-  padding-top: 10px;
-}
-.ABOUT .ABOUTUS_TITLE .ABOUTUS_TITLE_IMG p {
-  padding-top: 5px;
-  padding-left: 5px;
-}
-.ABOUT .FAKE_HIGH {
-  height: 75.4vh;
-}
-.ABOUT .ABOUT_BG > img {
-  width: 100%;
-  position: absolute;
-  top: 145px;
-}
-.ABOUT .SMALL_TITLE {
-  display: flex;
-  padding-bottom: 10px;
-  margin: 0 auto;
-  max-width: 1200px;
-  margin-top: 70px;
-  position: relative;
-}
-.ABOUT .SMALL_TITLE > h2 {
-  z-index: 10;
-}
-.ABOUT .DOT {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  left: -120px;
-  bottom: 0;
-  z-index: 0;
-}
-.ABOUT .CLINIC_PROFILE {
-  margin: 0 auto;
-  margin-top: 50px;
-  max-width: 1150px;
-}
-.ABOUT .CLINIC_PROFILE > img {
-  float: left;
-}
-.ABOUT .LOCATION_WRAPPER {
-  margin-top: 150px;
-  padding-bottom: 200px;
-  display: flex;
-}
-.ABOUT .LOCATION_LEFT {
-  width: 50%;
-}
-.ABOUT .LOCATION_RIGHT {
-  width: 50%;
-  padding-left: 30px;
-}
-.ABOUT .LOCATION_LOGO {
-  margin-bottom: 20px;
-}
-.ABOUT .LOCATION_INFORMATION {
-  display: flex;
-  padding: 10px 0;
-}
-.ABOUT .LOCATION_INFORMATION > i {
-  font-size: 35px;
-  color: #34424F;
-  padding-right: 15px;
-}
-.ABOUT .LOCATION_INFORMATION > p {
-  line-height: 35px;
-  color: #34424F;
-}
-.ABOUT .LOCATION_TIMETABLE {
-  margin-top: 20px;
-}
-.ABOUT .LOCATION_TIMETABLE > img {
-  border-radius: 10px;
-}
-
-/* 下方內容 */
-.BACK_MAIN_CONTENT {
-  display: flex;
-}
-
-/* 下方右側 */
-.BACK_MAIN_CONTENT_RIGHT {
-  width: 82%;
-  padding: 55px 65px;
-}
-
-.BTN_BACK {
-  width: 200px;
-  margin: 0 auto;
-  display: block;
-}
-
-/* --------病歷搜尋表單---------- */
-.MEDICAL_RECORD_SEARCH {
-  width: 74%;
-  margin: 0 auto;
-}
-.MEDICAL_RECORD_SEARCH ul {
-  margin-top: 85px;
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  align-items: end;
-  padding: 0;
-}
-.MEDICAL_RECORD_SEARCH ul input {
-  width: 100%;
-}
-.MEDICAL_RECORD_SEARCH p {
-  width: 5%;
-  margin-bottom: 20px;
-}
-
-.MEDICAL_RECORD_SEARCH li:nth-child(1) {
-  width: 20%;
-}
-
-.MEDICAL_RECORD_SEARCH li:nth-child(2) {
-  width: 20%;
-}
-
-.MEDICAL_RECORD_SEARCH li:nth-child(3) {
-  width: 14%;
-}
-
-.MEDICAL_RECORD_SEARCH li:nth-child(5) {
-  width: 14%;
-}
-
-/* 病歷搜尋結果 */
-.MEDICAL_RECORD_TABLE_ALL {
-  width: 74%;
-  margin: 0 auto 75px;
-  border: 1px solid black;
-  border-radius: 10px;
-}
-.MEDICAL_RECORD_TABLE_ALL ul {
-  display: flex;
-  font-size: 2.5rem;
-}
-
-.BACK_TABLE_TITLE {
-  background-color: #CB5656;
-  color: #FFFFFF;
-  height: 55px;
-  text-align: center;
-  line-height: 55px;
-  outline: 2px solid #CB5656;
-  border-radius: 10px 10px 0 0;
-}
-
-.BACK_TABLE_CONTENT {
-  color: #34424F;
-  text-align: center;
-  line-height: 80px;
-  height: 80px;
-}
-.BACK_TABLE_CONTENT li {
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-}
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(1) {
-  width: 20%;
-}
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(2) {
-  width: 17%;
-}
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(3) {
-  width: 17%;
-}
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(4) {
-  width: 30%;
-}
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(5) {
-  width: 8%;
-}
-
-.MEDICAL_RECORD_TABLE_ALL li:nth-child(6) {
-  width: 8%;
-  border-right: none;
-}
-
-/*----------新增病歷----------*/
-.ADD_MEDICAL_RECORD {
-  width: 55%;
-  margin: 0 auto;
-}
-
-.ADD_MEDICAL_RECORD_FORM {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  justify-content: space-between;
-  align-content: center;
-  margin-top: 85px;
-  margin-bottom: 70px;
-}
-.ADD_MEDICAL_RECORD_FORM p {
-  margin: 10px 0;
-}
-.ADD_MEDICAL_RECORD_FORM input {
-  width: 100%;
-}
-.ADD_MEDICAL_RECORD_FORM select {
-  width: 100%;
-}
-
-.ADD_MEDICAL_RECORD_FORM li:nth-child(1) {
-  flex-basis: 100%;
-  margin-bottom: 20px;
-}
-
-.ADD_MEDICAL_RECORD_FORM li:nth-child(8) {
-  flex-basis: 100%;
-}
-
-.ADD_MEDICAL_RECORD_FORM li:nth-child(9) {
-  flex-basis: 100%;
-}
-
-.ADD_MEDICAL_RECORD_FORM li {
-  width: 45%;
-}
-
-textarea {
-  width: 100%;
-}
-
-/* 上傳檔案input */
-.FILEBOX {
-  position: relative;
-  font-size: 2.5rem;
-  color: #34424F;
-  /* 檔案名稱 */
-  /* 選取檔案按鈕 */
-  /* 隱藏原按鈕 */
-}
-.FILEBOX .FILENAME {
-  width: 100%;
-  padding: 10px;
-  border-radius: 10px;
-  box-sizing: border-box;
-  height: 45px;
-  font-size: 2rem;
-  color: #34424F;
-  border: 1px solid #9E9E9E;
-  margin: 10px 0;
-}
-.FILEBOX .FILEBUTTON {
-  font-size: 2rem;
-  font-family: Arial, "Noto Sans TC";
-  background-color: #D9D9D9;
-  width: 145px;
-  height: 45px;
-  border: 0;
-  border-radius: 0 10px 10px 0;
-  position: absolute;
-  top: 35px;
-  right: 0px;
-  cursor: pointer;
-}
-.FILEBOX .FILE {
-  width: 145px;
-  height: 45px;
-  position: absolute;
-  top: 35px;
-  right: 0;
-  cursor: pointer;
-  /* filter:alpha( opacity : 0); */
-  opacity: 0;
-}
-
-.BTN_BOX {
-  display: flex;
-}
-
 /* 下方內容 */
 .BACK_MAIN_CONTENT {
   display: flex;
@@ -1688,7 +1370,630 @@ textarea {
   flex-basis: 100%;
 }
 
-.BIG_TITLE {
+.COMMODITY_MANAGEMENT_SEARCH {
+  width: 60%;
+  margin: 85px auto 50px;
+}
+.COMMODITY_MANAGEMENT_SEARCH ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.COMMODITY_MANAGEMENT_SEARCH ul li {
+  margin: 10px 0;
+}
+.COMMODITY_MANAGEMENT_SEARCH ul li input {
+  width: 100%;
+}
+.COMMODITY_MANAGEMENT_SEARCH ul li select {
+  width: 100%;
+}
+.COMMODITY_MANAGEMENT_SEARCH ul li p {
+  width: 5%;
+  margin-bottom: 20px;
+}
+
+.COMMODITY_MANAGEMENT_SEARCH ul li:nth-child(1) {
+  width: 30%;
+}
+
+.COMMODITY_MANAGEMENT_SEARCH ul li:nth-child(2),
+.COMMODITY_MANAGEMENT_SEARCH ul li:nth-child(3) {
+  width: 30%;
+}
+
+.COMMODITY_MANAGEMENT_SEARCH ul li:nth-child(4) {
+  width: 30%;
+}
+
+.COMMODITY_MANAGEMENT_SEARCH ul li:nth-child(5),
+.COMMODITY_MANAGEMENT_SEARCH ul li:nth-child(7) {
+  width: 20%;
+}
+
+.COMMODITY_MANAGEMENT_SEARCH ul li:nth-child(6),
+.COMMODITY_MANAGEMENT_SEARCH ul li:nth-child(7),
+.COMMODITY_MANAGEMENT_SEARCH ul li:nth-child(8) {
+  align-self: flex-end;
+}
+
+.COMMODITY_MANAGEMENT_TABLE_ALL {
+  width: 90%;
+  margin: 30px auto 75px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.COMMODITY_MANAGEMENT_TABLE_ALL ul {
+  display: flex;
+  font-size: 2.5rem;
+}
+.COMMODITY_MANAGEMENT_TABLE_ALL .BACK_TABLE_TITLE {
+  background-color: #CB5656;
+  color: #FFFFFF;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  outline: 2px solid #CB5656;
+  border-radius: 10px 10px 0 0;
+}
+.COMMODITY_MANAGEMENT_TABLE_ALL .BACK_TABLE_CONTENT {
+  color: #34424F;
+  text-align: center;
+  line-height: 150px;
+  height: 150px;
+}
+.COMMODITY_MANAGEMENT_TABLE_ALL .BACK_TABLE_CONTENT li {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  overflow: hidden;
+}
+.COMMODITY_MANAGEMENT_TABLE_ALL .BACK_TABLE_CONTENT .bi-pencil {
+  cursor: pointer;
+}
+.COMMODITY_MANAGEMENT_TABLE_ALL .BACK_TABLE_CONTENT .bi-x-lg {
+  cursor: pointer;
+}
+
+.COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(1),
+.COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(2) {
+  width: 10%;
+}
+
+.COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(3) {
+  width: 15%;
+}
+.COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(3) img {
+  height: 100%;
+}
+
+.COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(4) {
+  width: 10%;
+}
+
+.COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(5) {
+  width: 35%;
+}
+
+.COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(6) {
+  width: 10%;
+}
+
+.COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(7),
+.COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(8) {
+  width: 5%;
+}
+
+.COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(8) {
+  border-right: none;
+}
+
+.BACK_ADD_COMMODITY {
+  width: 85%;
+  margin: 85px auto 50px;
+}
+.BACK_ADD_COMMODITY .ADD_COMMODITY {
+  width: 80%;
+  margin: 60px auto;
+}
+.BACK_ADD_COMMODITY .ADD_COMMODITY input {
+  width: 100%;
+}
+.BACK_ADD_COMMODITY .ADD_COMMODITY select {
+  width: 100%;
+  background-position-x: 99.25%;
+}
+.BACK_ADD_COMMODITY .COMMODITY_IMAGE {
+  width: 90%;
+  margin: 80px auto 60px;
+}
+.BACK_ADD_COMMODITY .COMMODITY_IMAGE .COMMODITY_IMAGE_TOP {
+  display: flex;
+  margin-bottom: 40px;
+}
+.BACK_ADD_COMMODITY .COMMODITY_IMAGE .COMMODITY_IMAGE_TOP .IMAGE_TOP {
+  border: 1px solid black;
+  width: 180px;
+  height: 180px;
+  margin-right: 40px;
+  text-align: center;
+}
+.BACK_ADD_COMMODITY .COMMODITY_IMAGE .COMMODITY_IMAGE_TOP .IMAGE_TOP img {
+  width: 100%;
+}
+.BACK_ADD_COMMODITY .COMMODITY_IMAGE .COMMODITY_IMAGE_TOP .IMAGE_TOP .bi-image {
+  font-size: 60px;
+  line-height: 100px;
+}
+.BACK_ADD_COMMODITY .COMMODITY_IMAGE .COMMODITY_IMAGE_TOP .IMAGE_TOP .BTN_BACK {
+  width: 80%;
+}
+.BACK_ADD_COMMODITY .COMMODITY_IMAGE .COMMODITY_IMAGE_TOP .IMAGE_TOP:last-child {
+  border: none;
+  background-color: #EBE3DD;
+}
+.BACK_ADD_COMMODITY .COMMODITY_IMAGE .COMMODITY_IMAGE_TOP .IMAGE_TOP:nth-child(1) {
+  position: relative;
+}
+.BACK_ADD_COMMODITY .COMMODITY_IMAGE .COMMODITY_IMAGE_TOP .IMAGE_TOP:nth-child(1)::before {
+  content: "商品主圖";
+  font-size: 2rem;
+  position: absolute;
+  top: -50px;
+}
+.BACK_ADD_COMMODITY .COMMODITY_IMAGE .COMMODITY_IMAGE_TOP .IMAGE_TOP:nth-child(2) {
+  position: relative;
+}
+.BACK_ADD_COMMODITY .COMMODITY_IMAGE .COMMODITY_IMAGE_TOP .IMAGE_TOP:nth-child(2)::before {
+  content: "商品次圖";
+  font-size: 2rem;
+  position: absolute;
+  top: -50px;
+}
+.BACK_ADD_COMMODITY .COMMODITY_IMAGE .COMMODITY_IMAGE_TOP .IMAGE_TOP:nth-child(3) {
+  position: relative;
+}
+.BACK_ADD_COMMODITY .COMMODITY_IMAGE .COMMODITY_IMAGE_TOP .IMAGE_TOP:nth-child(3)::before {
+  content: "商品次圖";
+  font-size: 2rem;
+  position: absolute;
+  top: -50px;
+}
+.BACK_ADD_COMMODITY .COMMODITY_IMAGE .COMMODITY_IMAGE_BOTTOM {
+  width: 100%;
+  height: 250px;
+  background-color: #EBE3DD;
+  text-align: center;
+}
+.BACK_ADD_COMMODITY .COMMODITY_IMAGE .COMMODITY_IMAGE_BOTTOM .bi-image {
+  font-size: 100px;
+  line-height: 150px;
+}
+.BACK_ADD_COMMODITY .COMMODITY_CONTENT {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.BACK_ADD_COMMODITY .COMMODITY_CONTENT > p {
+  text-align: left;
+  color: #34424F;
+  margin: 40px 0 10px;
+}
+.BACK_ADD_COMMODITY .COMMODITY_CONTENT > div {
+  text-align: left;
+}
+.BACK_ADD_COMMODITY .COMMODITY_CONTENT .BTN_BACK {
+  display: inline-block;
+  margin: 40px 20px;
+}
+
+.MESSAGE_MANAGEMENT_SEARCH {
+  width: 60%;
+  margin: 85px auto 50px;
+}
+.MESSAGE_MANAGEMENT_SEARCH ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.MESSAGE_MANAGEMENT_SEARCH ul li {
+  margin: 10px 0;
+}
+.MESSAGE_MANAGEMENT_SEARCH ul li input {
+  width: 100%;
+}
+.MESSAGE_MANAGEMENT_SEARCH ul li select {
+  width: 100%;
+}
+.MESSAGE_MANAGEMENT_SEARCH ul li p {
+  width: 5%;
+  margin-bottom: 20px;
+}
+
+.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(1) {
+  width: 30%;
+}
+
+.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(2),
+.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(3) {
+  width: 30%;
+}
+
+.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(4) {
+  width: 30%;
+}
+
+.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(5),
+.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(7) {
+  width: 20%;
+}
+
+.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(6),
+.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(7),
+.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(8) {
+  align-self: flex-end;
+}
+
+.MESSAGE_MANAGEMENT_TABLE_ALL {
+  width: 90%;
+  margin: 30px auto 75px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.MESSAGE_MANAGEMENT_TABLE_ALL ul {
+  display: flex;
+  font-size: 2.5rem;
+}
+.MESSAGE_MANAGEMENT_TABLE_ALL .BACK_TABLE_TITLE {
+  background-color: #CB5656;
+  color: #FFFFFF;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  outline: 2px solid #CB5656;
+  border-radius: 10px 10px 0 0;
+}
+.MESSAGE_MANAGEMENT_TABLE_ALL .BACK_TABLE_CONTENT {
+  color: #34424F;
+  text-align: center;
+  line-height: 100px;
+  height: 100px;
+}
+.MESSAGE_MANAGEMENT_TABLE_ALL .BACK_TABLE_CONTENT li {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+}
+.MESSAGE_MANAGEMENT_TABLE_ALL .BACK_TABLE_CONTENT .bi-pencil {
+  cursor: pointer;
+}
+.MESSAGE_MANAGEMENT_TABLE_ALL .BACK_TABLE_CONTENT .bi-x-lg {
+  cursor: pointer;
+}
+
+.MESSAGE_MANAGEMENT_TABLE_ALL li:nth-child(1),
+.MESSAGE_MANAGEMENT_TABLE_ALL li:nth-child(2) {
+  width: 10%;
+}
+
+.MESSAGE_MANAGEMENT_TABLE_ALL li:nth-child(3) {
+  width: 15%;
+}
+.MESSAGE_MANAGEMENT_TABLE_ALL li:nth-child(3) img {
+  height: 100%;
+}
+
+.MESSAGE_MANAGEMENT_TABLE_ALL li:nth-child(4) {
+  width: 10%;
+}
+
+.MESSAGE_MANAGEMENT_TABLE_ALL li:nth-child(5) {
+  width: 35%;
+}
+
+.MESSAGE_MANAGEMENT_TABLE_ALL li:nth-child(6) {
+  width: 10%;
+}
+
+.MESSAGE_MANAGEMENT_TABLE_ALL li:nth-child(7),
+.MESSAGE_MANAGEMENT_TABLE_ALL li:nth-child(8) {
+  width: 5%;
+}
+
+.MESSAGE_MANAGEMENT_TABLE_ALL li:nth-child(8) {
+  border-right: none;
+}
+
+.ADD_MESSAGE {
+  width: 80%;
+  margin: 85px auto 50px;
+}
+.ADD_MESSAGE input {
+  width: 100%;
+  margin-bottom: 25px;
+}
+.ADD_MESSAGE p {
+  color: #34424F;
+  margin: 20px 0 10px;
+}
+.ADD_MESSAGE .BTN_BACK {
+  margin-top: 40px;
+}
+
+.ORDER_MANAGEMENT_SEARCH {
+  width: 75%;
+  margin: 85px auto 50px;
+}
+.ORDER_MANAGEMENT_SEARCH ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.ORDER_MANAGEMENT_SEARCH ul li {
+  margin: 10px 0;
+}
+.ORDER_MANAGEMENT_SEARCH ul li input {
+  width: 100%;
+}
+.ORDER_MANAGEMENT_SEARCH ul li select {
+  width: 100%;
+}
+
+.ORDER_MANAGEMENT_SEARCH ul li:nth-child(1),
+.ORDER_MANAGEMENT_SEARCH ul li:nth-child(2),
+.ORDER_MANAGEMENT_SEARCH ul li:nth-child(3),
+.ORDER_MANAGEMENT_SEARCH ul li:nth-child(4) {
+  width: 20%;
+}
+
+.ORDER_MANAGEMENT_SEARCH ul li:nth-child(5) {
+  align-self: flex-end;
+}
+
+.ORDER_MANAGEMENT_TABLE_ALL {
+  width: 90%;
+  margin: 30px auto 75px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.ORDER_MANAGEMENT_TABLE_ALL ul {
+  display: flex;
+  font-size: 2.5rem;
+}
+.ORDER_MANAGEMENT_TABLE_ALL .BACK_TABLE_TITLE {
+  background-color: #CB5656;
+  color: #FFFFFF;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  outline: 2px solid #CB5656;
+  border-radius: 10px 10px 0 0;
+}
+.ORDER_MANAGEMENT_TABLE_ALL .BACK_TABLE_CONTENT {
+  color: #34424F;
+  text-align: center;
+  line-height: 80px;
+  height: 80px;
+}
+.ORDER_MANAGEMENT_TABLE_ALL .BACK_TABLE_CONTENT li {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+}
+.ORDER_MANAGEMENT_TABLE_ALL .BACK_TABLE_CONTENT .bi-plus-circle {
+  cursor: pointer;
+}
+
+.ORDER_MANAGEMENT_TABLE_ALL .ORDER_MANAGEMENT_TABLE_TITLE:nth-child(3) {
+  border-radius: 0;
+}
+
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(1) li:nth-child(1),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(2) li:nth-child(1),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(1) li:nth-child(2),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(2) li:nth-child(2),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(1) li:nth-child(3),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(2) li:nth-child(3) {
+  width: 20%;
+}
+
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(2) li:nth-child(3) select {
+  width: 90%;
+}
+
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(1) li:nth-child(4),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(2) li:nth-child(4),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(1) li:nth-child(5),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(2) li:nth-child(5) {
+  width: 15%;
+}
+
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(1) li:nth-child(6),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(2) li:nth-child(6) {
+  width: 10%;
+  border-right: none;
+}
+
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(3) li:nth-child(1),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(4) li:nth-child(1) {
+  width: 40%;
+}
+
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(3) li:nth-child(2),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(4) li:nth-child(2) {
+  width: 25%;
+}
+
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(3) li:nth-child(3),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(4) li:nth-child(3) {
+  width: 10%;
+}
+
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(3) li:nth-child(4),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(4) li:nth-child(4) {
+  width: 25%;
+  border-right: none;
+}
+
+.BACK_USER_SETTINGS {
+  width: 76.5%;
+  margin: 85px auto 50px;
+}
+
+.USER_SETTINGS_SECTION {
+  width: 85%;
+  margin: 50px auto;
+}
+
+.USER_SETTINGS_FORM {
+  display: flex;
+  justify-content: space-between;
+}
+.USER_SETTINGS_FORM ul {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.USER_SETTINGS_FORM ul input {
+  width: 100%;
+}
+.USER_SETTINGS_FORM ul select {
+  width: 100%;
+}
+.USER_SETTINGS_FORM .ADD_PIC_IMG {
+  width: 75%;
+  display: block;
+  margin: 0 auto 35px;
+}
+.USER_SETTINGS_FORM .PIC_FILE_BOX {
+  position: relative;
+}
+.USER_SETTINGS_FORM .PIC_FILE_BOX .BTN_BACK {
+  width: 160px;
+}
+.USER_SETTINGS_FORM .PIC_FILE_BOX .PIC_FILE {
+  width: 180px;
+  height: 65px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.USER_SETTINGS li:nth-child(1),
+.USER_SETTINGS li:nth-child(2),
+.USER_SETTINGS li:nth-child(3),
+.USER_SETTINGS li:nth-child(4) {
+  width: 47.5%;
+}
+
+.USER_SETTINGS li:nth-child(5) {
+  width: 100%;
+}
+
+.USER_SETTINGS li:nth-child(6), .USER_SETTINGS li:nth-child(7) {
+  margin-top: 25px;
+  flex-basis: 50%;
+}
+
+.USER_SETTINGS li:nth-child(8) {
+  width: 100%;
+  margin-top: 60px;
+}
+.USER_SETTINGS li:nth-child(8) p {
+  color: #34424F;
+  font-weight: 700;
+  position: relative;
+}
+.USER_SETTINGS li:nth-child(8) p::after {
+  content: "";
+  width: 100%;
+  border-bottom: 2px solid #34424F;
+  position: absolute;
+  left: 0;
+  top: 40px;
+}
+
+.USER_SETTINGS li:nth-child(9) {
+  width: 47.5%;
+  margin-top: 60px;
+}
+
+.USER_SETTINGS li:nth-child(10), .USER_SETTINGS li:nth-child(11), .USER_SETTINGS li:nth-child(12) {
+  width: 47.5%;
+}
+
+.USER_SETTINGS li:nth-child(13), .USER_SETTINGS li:nth-child(14) {
+  margin-top: 25px;
+  flex-basis: 50%;
+}
+
+.APPOINTMENT_SCHEDULE {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 85px 0 50px;
+}
+.APPOINTMENT_SCHEDULE .APPOINTMENT_SCHEDULE_SEARCH {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin-bottom: 50px;
+}
+.APPOINTMENT_SCHEDULE .APPOINTMENT_SCHEDULE_SEARCH li {
+  width: 48.5%;
+}
+.APPOINTMENT_SCHEDULE .APPOINTMENT_SCHEDULE_SEARCH li select {
+  width: 100%;
+}
+.APPOINTMENT_SCHEDULE .APPOINTMENT_SCHEDULE_LEFT {
+  width: 70%;
+}
+.APPOINTMENT_SCHEDULE .APPOINTMENT_SCHEDULE_LEFT .CALENDAR {
+  width: 100%;
+}
+.APPOINTMENT_SCHEDULE .APPOINTMENT_SCHEDULE_RIGHT {
+  width: 25%;
+  margin: 0 auto;
+}
+.APPOINTMENT_SCHEDULE .APPOINTMENT_SCHEDULE_RIGHT p {
+  font-weight: 700;
+}
+.APPOINTMENT_SCHEDULE .APPOINTMENT_SCHEDULE_RIGHT .APPOINTMENT_DATE {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.APPOINTMENT_SCHEDULE .APPOINTMENT_SCHEDULE_RIGHT .APPOINTMENT_DATE p {
+  font-size: 2rem;
+  font-weight: normal;
+}
+.APPOINTMENT_SCHEDULE .APPOINTMENT_SCHEDULE_RIGHT .APPOINTMENT_LIST {
+  border: 1px solid black;
+  border-radius: 10px 0 0 10px;
+  height: 730px;
+  overflow-y: auto;
+  color: #34424F;
+}
+.APPOINTMENT_SCHEDULE .APPOINTMENT_SCHEDULE_RIGHT .APPOINTMENT_LIST .APPOINTMENT_CONTENT {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 2rem;
+  border-bottom: 1px solid black;
+  position: relative;
+}
+.APPOINTMENT_SCHEDULE .APPOINTMENT_SCHEDULE_RIGHT .APPOINTMENT_LIST .APPOINTMENT_CONTENT li {
+  margin: 20px 0;
+}
+.APPOINTMENT_SCHEDULE .APPOINTMENT_SCHEDULE_RIGHT .APPOINTMENT_LIST .APPOINTMENT_CONTENT li:last-child {
+  cursor: pointer;
+  position: absolute;
+  left: 92.5%;
+  top: -20px;
+}
+
+.INDEX .BIG_TITLE {
   padding-top: 100px;
   position: relative;
 }
@@ -1943,8 +2248,115 @@ textarea {
   border-radius: 10px;
 }
 
-section {
-  background-image: url(../../img/BG.jpg);
+.ABOUT .BACKGROUND {
+  position: relative;
+}
+.ABOUT .CAROUSEL {
+  position: relative;
+}
+.ABOUT .DOT {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  right: 30px;
+  bottom: 40px;
+  z-index: 10;
+}
+.ABOUT .BREAD {
+  padding-top: 30px;
+}
+.ABOUT .ABOUTUS_TITLE {
+  position: relative;
+  color: #FFFFFF;
+  z-index: 10;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.ABOUT .ABOUTUS_TITLE .ABOUTUS_TITLE_IMG {
+  background-image: url(../../img/TITLE-BG.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 280px;
+  height: 100px;
+  padding: 5px 20px;
+  box-sizing: border-box;
+}
+.ABOUT .ABOUTUS_TITLE .ABOUTUS_TITLE_IMG h1 {
+  text-align: left;
+  padding-top: 10px;
+}
+.ABOUT .ABOUTUS_TITLE .ABOUTUS_TITLE_IMG p {
+  padding-top: 5px;
+  padding-left: 5px;
+}
+.ABOUT .FAKE_HIGH {
+  height: 75.4vh;
+}
+.ABOUT .ABOUT_BG > img {
+  width: 100%;
+  position: absolute;
+  top: 145px;
+}
+.ABOUT .SMALL_TITLE {
+  display: flex;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-top: 70px;
+  position: relative;
+}
+.ABOUT .SMALL_TITLE > h2 {
+  z-index: 10;
+}
+.ABOUT .DOT {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: -120px;
+  bottom: 0;
+  z-index: 0;
+}
+.ABOUT .CLINIC_PROFILE {
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 1150px;
+}
+.ABOUT .CLINIC_PROFILE > img {
+  float: left;
+}
+.ABOUT .LOCATION_WRAPPER {
+  margin-top: 150px;
+  padding-bottom: 200px;
+  display: flex;
+}
+.ABOUT .LOCATION_LEFT {
+  width: 50%;
+}
+.ABOUT .LOCATION_RIGHT {
+  width: 50%;
+  padding-left: 30px;
+}
+.ABOUT .LOCATION_LOGO {
+  margin-bottom: 20px;
+}
+.ABOUT .LOCATION_INFORMATION {
+  display: flex;
+  padding: 10px 0;
+}
+.ABOUT .LOCATION_INFORMATION > i {
+  font-size: 35px;
+  color: #34424F;
+  padding-right: 15px;
+}
+.ABOUT .LOCATION_INFORMATION > p {
+  line-height: 35px;
+  color: #34424F;
+}
+.ABOUT .LOCATION_TIMETABLE {
+  margin-top: 20px;
+}
+.ABOUT .LOCATION_TIMETABLE > img {
+  border-radius: 10px;
 }
 
 .SHOPPING .SHOPPING_MASTERVISION {
@@ -2021,6 +2433,10 @@ section {
   font-weight: 600;
 }
 .SHOPPING select option {
+  color: #34424F;
+  font-weight: 600;
+}
+.SHOPPING ::-moz-placeholder {
   color: #34424F;
   font-weight: 600;
 }
@@ -2136,7 +2552,8 @@ section {
 .SHOPPINGLIST .SHOPPINGLIST_TOP .SHOPPINGLIST_SMALLIMG img {
   cursor: pointer;
   width: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .SHOPPINGLIST .SHOPPINGLIST_TOP .SHOPPINGLIST_BIGIMG {
   overflow: hidden;
@@ -2163,7 +2580,8 @@ section {
   display: block;
   margin: 0 auto;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .SHOPPINGLIST .SHOPPINGLIST_TOP .SHOPPINGLIST_TOPTEXT h2 {
   color: #34424F;
