@@ -180,10 +180,12 @@
               </section>
               
             </div>
+
+            
           </div>
      
         
-          <!-- If we need navigation buttons -->
+   
          
         
 
@@ -341,28 +343,17 @@
       
       loop: true,
       slidesPerView: 'auto',
-      loopedSlides: 4,
+
 
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+
       pagination: {
         el: '.swiper-pagination',
-      },
-      a11y : {
-        prevSlideMessage: 'Previous slide',
-        nextSlideMessage: '点击可进入下一页幻灯片',
-        firstSlideMessage: 'This is the first slide',
-        lastSlideMessage: 'This is the last slide',
-        paginationBulletMessage: 'Go to slide {{index}}',  
-        notificationClass: 'swiper-notification',
-        containerMessage: 'banner',
-        containerRoleDescriptionMessage: 'This is a swiper',  //aria-role-description
-        itemRoleDescriptionMessage: 'slider',
-        slideLabelMessage: '{{index}} / {{slidesLength}}',
-        slideRole: 'group',
-      },
+      }
+      
     }) 
 
     //如果你初始化时没有定义Swiper实例，后面也可以通过Swiper的HTML元素来获取该实例

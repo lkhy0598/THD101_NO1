@@ -1422,18 +1422,23 @@ body .MODAL .POPUP_WRAP_ACTIVE {
   position: relative;
   display: flex;
   margin-left: 400px;
-  padding-right: 1000px;
+  padding-right: 900px;
   justify-content: end;
   flex-direction: column;
   border: 1px solid;
 }
 .ABOUT .swiper-button-prev {
   position: absolute;
-  top: 50px;
-  right: 100px;
+  top: 230px;
+  left: 1000px;
+}
+.ABOUT .swiper-button-next {
+  position: absolute;
+  top: 230px;
+  right: 300px;
 }
 .ABOUT .swiper {
-  width: 250px;
+  width: 300px;
   height: 500px;
   align-items: center;
   overflow: visible;
@@ -1447,12 +1452,13 @@ body .MODAL .POPUP_WRAP_ACTIVE {
   transition-property: transform;
   box-sizing: border-box;
 }
-.ABOUT .swiper-slide-active {
+.ABOUT .swiper-slide-active > section > img {
   width: 300px;
   height: 500px;
   transform: scale(1.8);
   margin-bottom: 80px;
   overflow: visible;
+  border-radius: 0 100px 0 0;
 }
 .ABOUT .swiper-slide section > img {
   width: 200px;
