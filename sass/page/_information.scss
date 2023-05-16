@@ -17,7 +17,7 @@
     // 區塊TITLE
     .BIG_TITLE {
         margin-bottom: 94px;
-        border-bottom: 1px solid $blue;
+        // border-bottom: 1px solid $blue;
     }
 
     // 標籤導覽列
@@ -60,7 +60,7 @@
     .BACKGROUND {
         box-sizing: border-box;
         overflow: hidden;
-        background-image: none;
+        background: none;
         position: relative;
         .BG{
             height: 100%;
@@ -71,6 +71,8 @@
             z-index: -2;
         }
         .INFOMATION_BG_CLOUDS{
+            height: 100%;
+            overflow: hidden;
             .BG_CLOUD{
                 width: 100%;
                 position: absolute;
