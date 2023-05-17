@@ -8,16 +8,20 @@
     z-index: 99;
     top: 0;
 
-    >img {
-        width: 12.5%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
+    a {
+        
+        img {
+            width: 12.5%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
 
-    &:hover img[src="img/V-HEADER-LOGO.svg"] {
-        opacity: 0;
-        transition: all .1s;
+        &:hover img[src="img/V-HEADER-LOGO.svg"] {
+            opacity: 0;
+            transition: all .1s;
+        }
+
     }
 
     >ul {
@@ -42,6 +46,7 @@
                 >span {
                     font-size: $p;
                     font-weight: 700;
+                    line-height: 1.35;
                     // @include m{
                     //     font-size: $littleword;
                     // }
@@ -112,21 +117,28 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+    position: relative;
     // position: fixed;
     // z-index: 99;
     // top: 0;
 
-    >img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 22.5vh;
+    a {
+
+        >img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 22.5vh;
+        }
+
+        &:hover img[src="img/BACK-LOGO.svg"] {
+            opacity: 0;
+            transition: all .1s;
+        }
+
     }
 
-    &:hover img[src="img/BACK-LOGO.svg"] {
-        opacity: 0;
-        transition: all .1s;
-    }
+
 
     ul {
         display: flex;
