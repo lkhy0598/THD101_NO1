@@ -1,47 +1,239 @@
-.MEMBERCENTER{
-    padding-top:300px;
-    
-    .MEMCENTOP{
-        margin-top: 50px;
-        
-    .BREAD {
-        margin-bottom: 30px;
-    }
-    .BIG_TITLE_IMG{
-        
-        align-items: end;
-        // width: 100%;
+.MEMBERCENTER {
+    padding-top: 300px;
 
-        
-    }
-    .HELLO{
+    .MEMCENTOP {
+        margin-top: 50px;
+
+        .BREAD {
+            margin-bottom: 30px;
+        }
+
+        .BIG_TITLE_IMG {
+
+            align-items: end;
+            // width: 100%;
+
+
+        }
+
+        .HELLO {
             color: #34424F;
             font-size: 20 px;
-           
-            
+            margin-left: 20px;
+
+
         }
     }
 
 }
-.M_bigTitle{
+
+.M_bigTitle {
     display: flex;
     align-items: end;
-    
+
 }
-.BIG_TITLE_RIGHT{
+
+.BIG_TITLE_RIGHT {
     padding-bottom: 10px;
 }
-.MEMBER_MAIN{
+
+.MEMBER_MAIN {
     width: 1440px;
     margin: 0 auto;
     margin-top: 100px;
     display: flex;
+    justify-content: space-between;
     color: #34424F;
-    
+
 }
-.MENU{
-    color:#34424F;
-    h2,h3{
-        margin-bottom: 60px;
+
+.MENU {
+
+    a {
+        text-decoration: none;
+        color: #34424F;
+
+        h2,
+        h3 {
+            margin-bottom: 60px;
+
+        }
+
+        h2:hover {
+
+            color: white;
+        }
+
+        h3:hover {
+
+            color: white;
+        }
+
+
     }
+
+}
+
+
+
+
+.MEMCONTENT {
+    width: 1000px;
+}
+
+.SUBTITLE {
+    border-bottom: 2px solid #34424F;
+    display: flex;
+    align-items: end;
+    width: 100%;
+
+    p {
+        font-size: 16px;
+    }
+}
+
+.MEMBERSETTINGS {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
+
+
+    .avatar {
+        width: 25%;
+        margin: 0 auto;
+
+
+        img {
+            width: 100%;
+            margin-bottom: 60px;
+        }
+
+        button {
+            font-size: 25px;
+            width: 100%;
+        }
+    }
+
+    form {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+        ul {
+            width: 100%;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            li {
+                font-size: 25px;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 50px;
+
+
+                input {
+                    height: 40px;
+                    margin-top: 20px;
+
+                    border-radius: 10px;
+                    border: 1px solid $gray;
+                    overflow: hidden;
+                    font-size: 25px;
+                    padding-left: 20px;
+
+                }
+
+
+
+            }
+
+            .short {
+                width: 40%;
+            }
+
+            .long {
+                width: 90%;
+            }
+        }
+
+        .submit {
+
+            display: flex;
+            justify-content: center;
+
+            input {
+                font-size: 25px;
+                padding: 0 50px;
+                margin-right: 50px;
+
+
+            }
+        }
+
+    }
+
+
+}
+
+.SHOPPINGCART_STEPONETEXT--FORM {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    border: 1px solid $gray;
+    overflow: hidden;
+    width: 100%;
+
+    .SHOPPINGCART_STEPONETEXT--TITLE {
+        width: 100%;
+        height: 60px;
+        background-color: #fff;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: $gray;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        span {
+            line-height: 60px;
+            color: $blueblack;
+            font-size: $p;
+            margin-left: 40px;
+        }
+    }
+
+
+    .SHOPPINGCART_STEPONETEXT--SELECT {
+        padding: 0 40px;
+
+        .SELECT {
+            font-size: $littleword;
+            font-weight: 300;
+
+            .SELECTOPTION {
+                width: 100%;
+                color: $blueblack;
+                font-weight: 400;
+
+                option {
+                    color: $blueblack;
+                    font-weight: 400;
+                }
+            }
+
+            ::placeholder {
+                color: $blueblack;
+                font-weight: 400;
+            }
+        }
+    }
+
+
 }
