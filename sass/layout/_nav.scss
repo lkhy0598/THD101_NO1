@@ -154,3 +154,47 @@
         }
     }
 }
+
+
+
+
+
+
+
+//=============================================================
+// 手機版414px
+@mixin m() {
+    @media screen and (max-width: 414px) {
+        @content;
+    }
+  }
+
+@include m{
+    //header nav設定
+    .HEADER_NAV {
+        background-image: url("");
+        background-color: #111111d2;
+        z-index: 9999;
+      
+        & .RESERVE {
+           
+            margin: 0 auto;
+         
+    
+        }
+   
+
+        >ul {
+            height: 100vh;
+            text-align: center;
+            padding-left: 0;
+            
+
+            >li {
+                
+                padding: 5px 0;
+
+            }
+        }
+    }
+}
