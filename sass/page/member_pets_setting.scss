@@ -90,11 +90,10 @@
 
     p {
         font-size: 16px;
-        margin-left: 20px;
     }
 }
 
-.MEMBERSETTINGS  {
+.MEMBERSETTINGS {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -135,11 +134,9 @@
                 flex-direction: column;
                 margin-bottom: 50px;
 
-
-                input {
+                select {
                     height: 40px;
                     margin-top: 20px;
-
                     border-radius: 10px;
                     border: 1px solid $gray;
                     overflow: hidden;
@@ -147,88 +144,28 @@
                     padding-left: 20px;
 
                 }
-               
 
-
-            }
-            
-            .short {
-                width: 40%;
-            }
-
-            .long {
-                width: 90%;
-            }
-            .middlelong{
-                width: 50%;
-            }
-        }
-        
-        
-
-        .submit {
-
-            display: flex;
-            justify-content: center;
-            width: 100%;
-
-            input {
-                font-size: 25px;
-                padding: 0 50px;
-                margin-right: 50px;
-
-
-            }
-        }
-
-    }
-
-
-}
-.password {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin-top: 40px;
-
-   
-    form {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-
-        ul {
-            width: 100%;
-
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: start;
-
-            li {
-                font-size: 25px;
-                display: flex;
-                flex-direction: column;
-                margin-bottom: 50px;
-                
 
 
                 input {
                     height: 40px;
                     margin-top: 20px;
-
                     border-radius: 10px;
                     border: 1px solid $gray;
                     overflow: hidden;
                     font-size: 25px;
                     padding-left: 20px;
-                    margin-right: 40px;
 
                 }
-               
 
-
+                .comment {
+                    resize: none;
+                }
             }
-            
+
+
+
+            // input的寬度控制
             .short {
                 width: 40%;
             }
@@ -236,12 +173,13 @@
             .long {
                 width: 90%;
             }
-            .middlelong{
+
+            .middlelong {
                 width: 50%;
             }
         }
-        
-        
+
+
 
         .submit {
 

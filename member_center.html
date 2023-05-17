@@ -125,51 +125,73 @@
                     <h1>基本資料</h1>
                     <p>Member settings</p>
                 </div>
-                <div class="MEMBERSETTINGS">
+                <div class="MEMBERSETTINGS ">
                     <div class="avatar">
                         <img src="./img/member_center/member_avatar_default.png" alt="">
-                        <button type="submit" class="BTN" >上傳照片</button>
+                        <button type="submit" class="BTN">上傳照片</button>
                     </div>
                     <form method="post" action="./member_center.php">
                         <ul>
                             <li class="short"><label for="name">姓名</label>
                                 <input type="text" name="name">
                             </li>
-                            <li class="short"><label for="name">生日</label>
+                            <li class="short"><label for="birthday">生日</label>
                                 <input type="date" name="birthday">
                             </li>
-                            <li class="short"><label for="name">手機號碼</label>
+                            <li class="short"><label for="phone">手機號碼</label>
                                 <input type="text" name="phone">
                             </li>
-                            <li class="short"><label for="name">電子信箱</label>
+                            <li class="short"><label for="email">電子信箱</label>
                                 <input type="email" name="email">
                             </li>
-                            <li class="long"><label for="name">通訊地址</label>
+                            <li class="long"><label for="address">通訊地址</label>
                                 <input type="text" name="address">
                             </li>
 
                         </ul>
                         <div class="submit">
-                          <input type="submit" value="儲存" class="BTN">
-                        <input type="submit" value="修改" class="BTN">  
+                            <input type="submit" value="儲存" class="BTN">
+                            <input type="submit" value="修改" class="BTN">
                         </div>
-                        
-
-
 
                     </form>
+
                 </div>
                 <div class="SUBTITLE">
                     <h1>密碼設定</h1>
                     <p>Password setting</p>
                 </div>
-                <form method="post" action="./member_center.php">
+                <div class="MEMBERSETTINGS password">
 
-                </form>
+                    <form method="post" action="./member_center.php">
+                        <ul  >
+                            <li class="middlelong start"><label for="old_password">舊密碼</label>
+                                <input type="text" name="old_password">
+                                
+                            </li>
+                        </ul>
+                        <ul >
+
+
+                            <li class="middlelong"><label for="new_password">新密碼</label>
+                                <input type="text" name="new_password">
+                            </li>
+                            <li class="middlelong"><label for="new_password_confirm">新密碼確認</label>
+                                <input type="text" name="new_password_confirm">
+                            </li>
+
+                        </ul>
+                        <div class="submit">
+                            <input type="submit" value="儲存" class="BTN">
+                            <input type="submit" value="修改" class="BTN">
+                        </div>
+                    </form>
+                </div>
+
 
             </section>
         </section>
-
+        <button id="js-top" class="TOP_BTN"></button>
     </section>
 
 
