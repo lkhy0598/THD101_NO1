@@ -19,37 +19,40 @@
     <!-- ===============================header================================= -->
     <header>
         <nav class="HEADER_NAV">
-            <img src="img/V-HEADER-LOGO-HOVER.svg" alt="" />
+    
+          <a href="index.html">
+            <img src="img/V-HEADER-LOGO-HOVER.svg" alt=""/>
             <img src="img/V-HEADER-LOGO.svg" alt="" />
-
-            <ul>
-                <li>
-                    <a href="#"><span>關於院所</span><br />About Us</a>
-                </li>
-                <li>
-                    <a href="#"><span>資訊導覽</span><br />Information</a>
-                </li>
-                <li>
-                    <a href="#"><span>線上購物</span><br />Shopping</a>
-                </li>
-                <li>
-                    <a href="#"><span>常見問題</span><br />Q & A</a>
-                </li>
-                <li>
-                    <a href="#"><span>會員中心</span><br />Member Centre</a>
-                </li>
-                <li>
-                    <a href="#" class="RESERVE">立即預約</a>
-                </li>
-                <li>
-                    <a href="#" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
-                </li>
-                <li>
-                    <a href="#"><i class="bi bi-cart-fill"></i></a>
-                </li>
-            </ul>
+          </a>
+    
+          <ul>
+            <li>
+              <a href="about_us.html"><span>關於院所</span><br>About Us</a>
+            </li>
+            <li>
+              <a href="#"><span>資訊導覽</span><br>Information</a>
+            </li>
+            <li>
+              <a href="#"><span>線上購物</span><br>Shopping</a>
+            </li>
+            <li>
+              <a href="#"><span>常見問題</span><br>Q & A</a>
+            </li>
+            <li>
+              <a href="#"><span>會員中心</span><br>Member Centre</a>
+            </li>
+            <li>
+              <a href="#" class="RESERVE">立即預約</a>
+            </li>
+            <li>
+              <a href="#" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
+            </li>
+            <li>
+              <a href="#"><i class="bi bi-cart-fill"></i></a>
+            </li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
 
 
@@ -80,28 +83,121 @@
 
         <section class="MEMBER_MAIN">
             <aside class="MENU">
-                <h2>預約查詢</h2>
-                <h2>會員查詢</h2>
-                <h3>會員基本資料</h3>
-                <h3>密碼設定</h3>
-                <h2>寵物設定</h2>
-                <h3>寵物基本資料</h3>
-                <h3>寵物資料新增/修改</h3>
-                <h3>病例查詢</h3>
-                <h3>健康檢查資料查詢</h3>
-                <h2>訂單資料</h2>
-                <h3>訂單記錄查詢</h3>
-                <h3>優惠卷</h3>
-                <h3>購物車</h3>
-
-
+                <a href="">
+                    <h2>預約查詢</h2>
+                </a>
+                <a href="" style="text-decoration: underline;">
+                    <h2>會員查詢</h2>
+                </a>
+                <a href="">
+                    <h3>會員基本資料</h3>
+                </a>
+                <a href="">
+                    <h3>密碼設定</h3>
+                </a>
+                <a href="">
+                    <h2>寵物設定</h2>
+                </a>
+                <a href="">
+                    <h3>寵物基本資料</h3>
+                </a>
+                <a href="">
+                    <h3>寵物資料新增/修改</h3>
+                </a>
+                <a href="">
+                    <h3>病例查詢</h3>
+                </a>
+                <a href="">
+                    <h3>健康檢查資料查詢</h3>
+                </a>
+                <a href="">
+                    <h2>訂單資料</h2>
+                </a>
+                <a href="">
+                    <h3>訂單記錄查詢</h3>
+                </a>
+                <a href="">
+                    <h3>優惠卷</h3>
+                </a>
+                <a href="">
+                    <h3>購物車</h3>
+                </a>
             </aside>
             <section class="MEMCONTENT">
-                <h1>基本資料</h1>
-                <p>Member settings</p>
+                <div class="SUBTITLE">
+                    <h1>基本資料</h1>
+                    <p>Member settings</p>
+                </div>
+                <div class="MEMBERSETTINGS ">
+                    <div class="avatar">
+                        <img src="./img/member_center/member_avatar_default.png" alt="">
+                        <button type="submit" class="BTN">上傳照片</button>
+                    </div>
+                    <form method="post" action="./member_center.php">
+                        <ul>
+                            <li class="short"><label for="name">姓名</label>
+                                <input type="text" name="name">
+                            </li>
+                            <li class="short"><label for="birthday">生日</label>
+                                <input type="date" name="birthday">
+                            </li>
+                            <li class="short"><label for="phone">手機號碼</label>
+                                <input type="text" name="phone">
+                            </li>
+                            <li class="short"><label for="email">電子信箱</label>
+                                <input type="email" name="email">
+                            </li>
+                            <li class="long"><label for="address">通訊地址</label>
+                                <input type="text" name="address">
+                            </li>
+
+                        </ul>
+                        <div class="submit">
+                            <input type="submit" value="儲存" class="BTN">
+                            <input type="submit" value="修改" class="BTN">
+                        </div>
+                        
+
+
+
+                    </form>
+
+                </div>
+                <div class="SUBTITLE">
+                    <h1>密碼設定</h1>
+                    <p>Password setting</p>
+                </div>
+                <div class=" password">
+
+                    <form method="post" action="./member_center.php">
+                        <ul  >
+                            <li class="middlelong start"><label for="old_password">舊密碼</label>
+                                <input type="text" name="old_password">
+                                
+                            </li>
+                        </ul>
+                        <ul >
+
+
+                            <li class="middlelong"><label for="new_password">新密碼</label>
+                                <input type="text" name="new_password">
+                            </li>
+                            <li class="middlelong"><label for="new_password_confirm">新密碼確認</label>
+                                <input type="text" name="new_password_confirm">
+                            </li>
+
+                        </ul>
+                        <div class="submit">
+                            <input type="submit" value="儲存" class="BTN">
+                            <input type="submit" value="修改" class="BTN">
+                        </div>
+                    </form>
+                </div>
+
+
             </section>
         </section>
-
+        <button id="js-top" class="TOP_BTN"></button>
     </section>
 
 
