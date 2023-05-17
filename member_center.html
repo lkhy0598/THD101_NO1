@@ -80,25 +80,93 @@
 
         <section class="MEMBER_MAIN">
             <aside class="MENU">
-                <h2>預約查詢</h2>
-                <h2>會員查詢</h2>
-                <h3>會員基本資料</h3>
-                <h3>密碼設定</h3>
-                <h2>寵物設定</h2>
-                <h3>寵物基本資料</h3>
-                <h3>寵物資料新增/修改</h3>
-                <h3>病例查詢</h3>
-                <h3>健康檢查資料查詢</h3>
-                <h2>訂單資料</h2>
-                <h3>訂單記錄查詢</h3>
-                <h3>優惠卷</h3>
-                <h3>購物車</h3>
-
-
+                <a href="">
+                    <h2>預約查詢</h2>
+                </a>
+                <a href="" style="text-decoration: underline;">
+                    <h2>會員查詢</h2>
+                </a>
+                <a href="">
+                    <h3>會員基本資料</h3>
+                </a>
+                <a href="">
+                    <h3>密碼設定</h3>
+                </a>
+                <a href="">
+                    <h2>寵物設定</h2>
+                </a>
+                <a href="">
+                    <h3>寵物基本資料</h3>
+                </a>
+                <a href="">
+                    <h3>寵物資料新增/修改</h3>
+                </a>
+                <a href="">
+                    <h3>病例查詢</h3>
+                </a>
+                <a href="">
+                    <h3>健康檢查資料查詢</h3>
+                </a>
+                <a href="">
+                    <h2>訂單資料</h2>
+                </a>
+                <a href="">
+                    <h3>訂單記錄查詢</h3>
+                </a>
+                <a href="">
+                    <h3>優惠卷</h3>
+                </a>
+                <a href="">
+                    <h3>購物車</h3>
+                </a>
             </aside>
             <section class="MEMCONTENT">
-                <h1>基本資料</h1>
-                <p>Member settings</p>
+                <div class="SUBTITLE">
+                    <h1>基本資料</h1>
+                    <p>Member settings</p>
+                </div>
+                <div class="MEMBERSETTINGS">
+                    <div class="avatar">
+                        <img src="./img/member_center/member_avatar_default.png" alt="">
+                        <button type="submit" class="BTN" >上傳照片</button>
+                    </div>
+                    <form method="post" action="./member_center.php">
+                        <ul>
+                            <li class="short"><label for="name">姓名</label>
+                                <input type="text" name="name">
+                            </li>
+                            <li class="short"><label for="name">生日</label>
+                                <input type="date" name="birthday">
+                            </li>
+                            <li class="short"><label for="name">手機號碼</label>
+                                <input type="text" name="phone">
+                            </li>
+                            <li class="short"><label for="name">電子信箱</label>
+                                <input type="email" name="email">
+                            </li>
+                            <li class="long"><label for="name">通訊地址</label>
+                                <input type="text" name="address">
+                            </li>
+
+                        </ul>
+                        <div class="submit">
+                          <input type="submit" value="儲存" class="BTN">
+                        <input type="submit" value="修改" class="BTN">  
+                        </div>
+                        
+
+
+
+                    </form>
+                </div>
+                <div class="SUBTITLE">
+                    <h1>密碼設定</h1>
+                    <p>Password setting</p>
+                </div>
+                <form method="post" action="./member_center.php">
+
+                </form>
+
             </section>
         </section>
 
