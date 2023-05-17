@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>後台 商品管理</title>
+    <title>後台 - 商品管理</title>
 </head>
 
 <body>
@@ -15,15 +15,17 @@
     <header>
         <nav class="BACK_NAV">
 
-            <img src="img/BACK-LOGO-HOVER.svg" alt="">
-            <img src="img/BACK-LOGO.svg" alt="">
+            <a href="_back_index.html">
+                <img src="img/BACK-LOGO-HOVER.svg" alt="">
+                <img src="img/BACK-LOGO.svg" alt="">
+            </a>
 
             <ul>
                 <li><a href="#"><i class="bi bi-plus-square"></i> 新增會員 / 寵物</a></li>
                 <li><a href="#"><i class="bi bi-plus-square"></i> 新增消息</a></li>
                 <li><a href="#"><i class="bi bi-plus-square"></i> 新增商品</a></li>
                 <li><a href="#"><i class="bi bi-person-circle"></i> USER 你好</a></li>
-                <li><a href="#">登出後台</a></li>
+                <li><a href="web_login.html">登出後台</a></li>
             </ul>
 
         </nav>
@@ -55,14 +57,21 @@
 
             <div class="ASIDE_BUTTON">
                 <ul>
-                    <li><a href="#"><i class="bi bi-calendar"></i> 預約時刻表<i class="bi bi-chevron-right"></i></a></li>
-                    <li><a href="#"><i class="bi bi-receipt-cutoff"></i> 病歷紀錄管理<i class="bi bi-chevron-right"></i></a>
+                    <li><a href="_back_appointment_schedule.html"><i class="bi bi-calendar"></i> 預約時刻表<i
+                                class="bi bi-chevron-right"></i></a></li>
+                    <li><a href="_back_medical_record.html"><i class="bi bi-receipt-cutoff"></i> 病歷紀錄管理<i
+                                class="bi bi-chevron-right"></i></a>
                     </li>
-                    <li><a href="#"><i class="bi bi-people-fill"></i> 會員管理<i class="bi bi-chevron-right"></i></a></li>
-                    <li><a href="#"><i class="bi bi-megaphone"></i> 消息管理<i class="bi bi-chevron-right"></i></a></li>
-                    <li><a href="#"><i class="bi bi-cart-fill"> </i>商品管理<i class="bi bi-chevron-right"></i></a></li>
-                    <li><a href="#"><i class="bi bi-truck"></i> 訂單管理<i class="bi bi-chevron-right"></i></a></li>
-                    <li><a href="#"><i class="bi bi-gear"></i> 使用者設定<i class="bi bi-chevron-right"></i></a></li>
+                    <li><a href="_back_member_profile.html"><i class="bi bi-people-fill"></i> 會員管理<i
+                                class="bi bi-chevron-right"></i></a></li>
+                    <li><a href="_back_message_management.html"><i class="bi bi-megaphone"></i> 消息管理<i
+                                class="bi bi-chevron-right"></i></a></li>
+                    <li><a href="_back_commodity_management.html" class="ON"><i class="bi bi-cart-fill"> </i>商品管理<i
+                                class="bi bi-chevron-right"></i></a></li>
+                    <li><a href="_back_order_management.html"><i class="bi bi-truck"></i> 訂單管理<i
+                                class="bi bi-chevron-right"></i></a></li>
+                    <li><a href="_back_user_settings.html"><i class="bi bi-gear"></i> 使用者設定<i
+                                class="bi bi-chevron-right"></i></a></li>
                 </ul>
             </div>
 
@@ -288,7 +297,7 @@
             height: 400,                 // set editor height
             minHeight: null,             // set minimum height of editor
             maxHeight: null,             // set maximum height of editor
-            focus: true                  // set focus to editable area after initializing summernote
+            focus: false                 // set focus to editable area after initializing summernote
         });
 
     </script>
