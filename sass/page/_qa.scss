@@ -22,14 +22,27 @@
         }
 
         .BG_CLOUD:first-child {
-            transform: scaleX(-1);
-            top: 0;
-            left: 900px;
+            transform: scale(-3) rotate(330deg);
+            top: 700px;
+            left: 0;
+
+            @include m() {
+                transform: scale(-10) rotate(330deg);
+                top: 1600px;
+            }
         }
 
         .BG_CLOUD:last-child {
-            bottom: -400px;
-            left: -400px;
+            transform: scale(-3) rotate(340deg);
+            top: 3040px;
+            left: 322px;
+
+            @include m() {
+                transform: scale(-10) rotate(340deg);
+                top: 3830px;
+                left: 260px;
+            }
+
         }
     }
 }
@@ -39,12 +52,22 @@
     margin-bottom: 25px;
 }
 
+// 內容寬度
+.WRAPPER {
+    @include m() {
+        width: 90%;
+    }
+}
+
+// 導覽列
 .QA_NAVS {
     margin-top: 100px;
     margin-bottom: 150px;
     display: flex;
     justify-content: space-between;
     width: 100%;
+
+    gap: 10%;
 
     .QA_TAB {
         width: 380px;
@@ -55,12 +78,46 @@
         line-height: 120px;
         background-image: url(../img/qa/QA_TITLEBG.jpg);
 
-
         position: relative;
 
+        @include m() {
+            height: 115px;
+        }
+
         a {
+            height: 100%;
+            margin: 0 auto;
             color: $white;
             text-decoration: none;
+
+            display: flex;
+            align-items: center;
+
+            .QA_TAB_TITLE {
+                margin: 0 auto;
+                display: flex;
+
+                @include m() {
+                    flex-direction: column;
+                }
+
+                p {
+                    line-height: normal;
+                }
+
+                p:nth-child(1) {
+                    @include m() {
+                        font-size: 3rem;
+                    }
+                }
+
+                p:nth-child(2) {
+                    @include m() {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
         }
 
         img {
@@ -76,6 +133,10 @@
     width: 70%;
     margin: 0 auto;
 
+    @include m() {
+        width: 90%;
+    }
+
     .FIRSTVISIT_TITLE {
         text-align: center;
         margin-bottom: 120px;
@@ -88,6 +149,16 @@
         .ARC_TITLE {
             min-width: 80px;
             margin-right: 40px;
+
+            @include m() {
+                min-width: 40px;
+                width: 40px;
+                height: 40px;
+                font-size: 2rem;
+                line-height: 40px;
+
+                margin-right: 20px;
+            }
         }
 
         .FIRSTVISIT_DESC_BOX {
@@ -95,11 +166,20 @@
             height: 100%;
             line-height: normal;
 
+
             .FIRSTVISIT_DESC_TITLE {
                 font-weight: bold;
                 flex-wrap: nowrap;
 
-                .FIRSTVISIT_DESC {}
+                @include m() {
+                    font-size: 3rem;
+                }
+
+                .FIRSTVISIT_DESC {
+                    @include m() {
+                        font-size: 3rem;
+                    }
+                }
             }
         }
     }
@@ -108,15 +188,23 @@
 // QA區塊
 .QA_BOX {
     margin-bottom: 120px;
+
     .QA_TITLE {
         margin-bottom: 80px;
+
+        @include m() {
+            margin-bottom: 40px;
+            padding-left: 20px;
+        }
     }
 
     // 手風琴
-    .ACCORDION_ITEM:last-child{
+    .ACCORDION_ITEM:last-child {
         border-bottom: 1px solid $blue;
     }
+
     .ACCORDION_ITEM {
+
         // 標題
         .ACCORDION_TITLE_BOX {
             display: flex;
@@ -132,14 +220,22 @@
 
             .ACCORDION_TITLE {
                 display: flex;
+                line-height: normal;
+
 
                 img {
                     margin-right: 40px;
+                    max-width: 80px;
+                    max-height: 80px;
+
+                    @include m() {
+                        display: none;
+                    }
                 }
+
 
                 h3 {
                     font-size: $h3;
-
                 }
 
             }
@@ -150,7 +246,15 @@
                 background: $lightblue;
                 color: $white;
                 transition: all 0.3s ease;
+                // @include m() {
+                //     background: $blue;
+                //     color: $white;
+                //     border-top: 1px solid $blueblack;
+                //     border-bottom: 1px solid $blueblack;
+                //     transition: all 0.3s ease;
+                // }
             }
+
 
             &:hover img {
                 filter: drop-shadow(0px 0px 5px $blue);
@@ -164,13 +268,7 @@
                 color: $blue;
                 transition: all 0.3s ease;
             }
-        }
 
-        // TITLE點選時 '+' 樣式
-        .ACC_TITLE_ACTIVE::after {
-            content: '\FF0D';
-            color: $white;
-            // transform: rotate(45deg);
         }
 
         // TITLE點選時樣式
@@ -181,56 +279,43 @@
             border-bottom: 1px solid $blueblack;
             transition: all 0.3s ease;
         }
-    }
 
-    // 手風琴內文
-    .ACCORDION_CONTENT_BOX {
-        display: none;
+        // TITLE點選時 '+' 樣式
+        .ACC_TITLE_ACTIVE::after {
+            color: $white;
+            transform: rotate(45deg);
+        }
 
-        .ACCORDION_CONTENT {
-            display: flex;
-            padding: 20px;
-            padding-right: 50px;
-            // border-bottom: 1px solid $blue;
-            background-color: rgba(255, 255, 255, 0.5);
+        // 手風琴內文
+        .ACCORDION_CONTENT_BOX {
+            display: none;
 
-            line-height: normal;
+            .ACCORDION_CONTENT {
+                display: flex;
+                padding: 20px;
+                padding-right: 50px;
+                // border-bottom: 1px solid $blue;
+                background-color: rgba(255, 255, 255, 0.5);
 
-            img {
-                margin-right: 40px;
-            }
+                line-height: normal;
 
-            p {
-                color: $blueblack;
+                img {
+                    margin-right: 40px;
+                    max-width: 80px;
+                    max-height: 80px;
+
+                    @include m() {
+                        display: none;
+                    }
+                }
+
+                p {
+                    color: $blueblack;
+                    @include m() {
+                        font-size: 3rem;
+                    }
+                }
             }
         }
     }
-}
-
-
-.accordion-header.active::after {
-    color: #fff;
-    transform: rotate(45deg);
-}
-
-.accordion-header.active {
-    background-color: lightseagreen;
-    color: white;
-}
-
-.accordion-content {
-    padding: 20px;
-    background-color: #fff;
-    border: 2px solid lightseagreen;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    font-size: 16px;
-    color: #666;
-    line-height: 1.5;
-    display: none;
-}
-
-.accordion-item.active .accordion-content {
-    display: block;
-
 }
