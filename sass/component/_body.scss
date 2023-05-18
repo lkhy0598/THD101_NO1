@@ -21,10 +21,6 @@ html{
   max-width: 1440px;
   margin: 0 auto;
   width: 75%;
-
-  @include m(){
-    width: 90%;
-  }
 }
 
 
