@@ -1,0 +1,83 @@
+.APPOINTMENT_SCHEDULE {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 85px 0 50px;
+
+    .APPOINTMENT_SCHEDULE_SEARCH {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        margin-bottom: 50px;
+
+        li {
+            width: 48.5%;
+
+            select {
+                width: 100%;
+            }
+        }
+
+    }
+
+    .APPOINTMENT_SCHEDULE_LEFT {
+        width: 70%;
+
+        .CALENDAR {
+            width: 100%;
+        }
+
+    }
+
+    .APPOINTMENT_SCHEDULE_RIGHT {
+        width: 25%;
+        margin: 0 auto;
+
+
+        p {
+            font-weight: 700;
+        }
+
+        .APPOINTMENT_DATE {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+
+            p {
+                font-size: $littleword;
+                font-weight: normal;
+            }
+
+        }
+
+        .APPOINTMENT_LIST {
+            border: 1px solid black;
+            border-radius: 10px 0 0 10px;
+            height: 730px;
+            overflow-y: auto;
+            color: $blueblack;
+
+            .APPOINTMENT_CONTENT {
+                width: 80%;
+                margin: 0 auto;
+                font-size: $littleword;
+                border-bottom: 1px solid black;
+                position: relative;
+
+                li {
+                    margin: 20px 0;
+                }
+
+                li:last-child {
+                    cursor: pointer;
+                    position: absolute;
+                    left: 92.5%;
+                    top: -20px
+                }
+
+            }
+
+        }
+
+    }
+
+}

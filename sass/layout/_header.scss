@@ -53,3 +53,71 @@
         background-image: url('../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg');
     }
 }
+
+
+
+
+// =========================  RWD ===============================
+
+// 手機版414px
+@mixin m() {
+    @media screen and (max-width: 414px) {
+        @content;
+    }
+}
+
+
+
+
+@include m{
+    .CAROUSEL{
+        background-image: url("");
+
+        > .MASTER_VISION{
+            border-radius: 0px;
+            width: 100%;
+            height: 100vh;
+            margin-top: 0;
+            background-image: url('../../img/header/header-m/1.jpg');
+            
+            >img{
+                display: none;
+            }
+        }
+
+
+        
+
+
+
+        
+    }
+
+    
+    @keyframes image_carousel {
+        0% {
+            background-image: url('../../img/header/header-m/1.jpg');
+        }
+    
+        20% {
+            background-image: url('../../img/header/header-m/2.jpg');
+        }
+    
+        40% {
+            background-image: url('../../img/header/header-m/3.jpg');
+        }
+    
+        60% {
+            background-image: url('../../img/header/header-m/4.jpg');
+        }
+    
+        80% {
+            background-image: url('../../img/header/header-m/5.jpg');
+        }
+    
+        100% {
+            background-image: url('../../img/header/header-m/1.jpg');
+        }
+    }
+
+}

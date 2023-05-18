@@ -1,0 +1,162 @@
+// 消息管理_搜尋消息
+
+.MESSAGE_MANAGEMENT_SEARCH {
+    width: 60%;
+    margin: 85px auto 50px;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        li {
+            margin: 10px 0;
+
+            input {
+                width: 100%;
+            }
+
+            select {
+                width: 100%;
+            }
+
+            p {
+                width: 5%;
+                margin-bottom: 20px;
+            }
+
+        }
+
+    }
+
+}
+
+.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(1) {
+    width: 30%;
+}
+
+.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(2),
+.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(3) {
+    width: 30%;
+}
+
+.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(4) {
+    width: 30%;
+}
+
+.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(5),
+.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(7) {
+    width: 20%;
+}
+
+.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(6),
+.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(7),
+.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(8) {
+    align-self: flex-end;
+}
+
+// 消息管理_表格
+
+.MESSAGE_MANAGEMENT_TABLE_ALL {
+    width: 90%;
+    margin: 30px auto 75px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    ul {
+        display: flex;
+        font-size: $p;
+    }
+
+    .BACK_TABLE_TITLE {
+        background-color: $red;
+        color: $white;
+        height: 55px;
+        text-align: center;
+        line-height: 55px;
+        outline: 2px solid $red;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .BACK_TABLE_CONTENT {
+        color: $blueblack;
+        text-align: center;
+        line-height: 100px;
+        height: 100px;
+
+        li {
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+        }
+
+        .bi-pencil {
+            cursor: pointer;
+        }
+
+        .bi-x-lg {
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+
+
+.MESSAGE_MANAGEMENT_TABLE_ALL li:nth-child(1),
+.MESSAGE_MANAGEMENT_TABLE_ALL li:nth-child(2) {
+    width: 10%;
+}
+
+.MESSAGE_MANAGEMENT_TABLE_ALL li:nth-child(3) {
+    width: 15%;
+
+    img {
+        height: 100%;
+    }
+
+}
+
+.MESSAGE_MANAGEMENT_TABLE_ALL li:nth-child(4) {
+    width: 10%;
+}
+
+.MESSAGE_MANAGEMENT_TABLE_ALL li:nth-child(5) {
+    width: 35%;
+}
+
+.MESSAGE_MANAGEMENT_TABLE_ALL li:nth-child(6) {
+    width: 10%;
+}
+
+.MESSAGE_MANAGEMENT_TABLE_ALL li:nth-child(7),
+.MESSAGE_MANAGEMENT_TABLE_ALL li:nth-child(8) {
+    width: 5%;
+}
+
+.MESSAGE_MANAGEMENT_TABLE_ALL li:nth-child(8) {
+    border-right: none;
+}
+
+// 新增消息
+
+.ADD_MESSAGE {
+    width: 80%;
+    margin: 85px auto 50px;
+
+    input {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    p {
+        color: $blueblack;
+        margin: 20px 0 10px;
+    }
+
+    .BTN_BACK {
+        margin-top: 40px;
+    }
+
+}
