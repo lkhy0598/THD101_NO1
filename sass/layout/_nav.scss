@@ -185,7 +185,7 @@
     //header nav設定
     .HEADER_NAV {
         background-image: url("");
-        background-color: #111111d2;
+        background: linear-gradient(160deg, rgb(243, 145, 85, .95) 0%,  rgba(255, 185, 114, 0.95) 40%, rgba(126, 184, 196, 0.8) 100%);
         z-index: 9999;
       
         & .RESERVE {
