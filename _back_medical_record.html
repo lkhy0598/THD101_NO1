@@ -168,14 +168,14 @@
                     </ul>
                 </section>
                 <section>
-                    <button class="BTN_BACK" type="submit">新增病歷</button>
+                    <button class="BTN_BACK MEDICAL_RECORD_TABLE_BTN" type="submit">新增病歷</button>   
                 </section>
             </section>
 
             <!-- 新增病歷區塊 "會更動區塊" -->
             <section class="BACK_ADD_MEDICAL_RECORD">
 
-                <h2>新增病歷</h2>
+                <h2>新增/修改病歷</h2>
 
                 <section class="ADD_MEDICAL_RECORD">
                     <form action="">
@@ -245,8 +245,8 @@
                             </li>
                         </ul>
                         <section class="BTN_BOX">
-                            <button class="BTN_BACK" type="submit">修改病歷</button>
-                            <button class="BTN_BACK" type="submit">新增病歷</button>
+                            <button class="BTN_BACK REVISE_MEDICAL_RECORD_BTN" type="submit">修改病歷</button>
+                            <button class="BTN_BACK ADD_MEDICAL_RECORD_BTN" type="submit">新增病歷</button>
                         </section>
 
                     </form>
@@ -255,8 +255,34 @@
 
         </main>
     </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 
+        <script>
+            $(document).ready(function () {
+                // 修改紐
+                $('.bi-pencil').click(function () {
+                    $('.BACK_ADD_MEDICAL_RECORD').show();
+                    $('.BACK_MEDICAL_RECORD').hide();
+                })
+                // 新增紐
+                $('.MEDICAL_RECORD_TABLE_BTN').click(function () {
+                    $('.BACK_ADD_MEDICAL_RECORD').show();
+                    $('.BACK_MEDICAL_RECORD').hide();
+                })
+
+                $('.ADD_MEDICAL_RECORD_BTN').click(function () {
+                    $('.BACK_MEDICAL_RECORD').show();
+                    $('.BACK_ADD_MEDICAL_RECORD').hide();
+                })
+                
+                $('.REVISE_MEDICAL_RECORD_BTN').click(function () {
+                    $('.BACK_MEDICAL_RECORD').show();
+                    $('.BACK_ADD_MEDICAL_RECORD').hide();
+                })
+            });
+        </script>
 </body>
 
 </html>

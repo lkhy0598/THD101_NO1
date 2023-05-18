@@ -286,7 +286,101 @@
 
                 </section>
 
-            </section>
+                <!-- 修改病歷 -->
+                <section class="RESERVE_BOX">
+                    <i class="bi bi-x-lg"></i>
+                    <form action="get">
+
+                        <ul class="RESERVE_LIST">
+                            <li>
+                                <label for="reserve_type" class="SELECT">預約類型<br>
+                                    <select id="reserve_type">
+                                        <option value="general">一般掛號</option>
+                                        <option value="vaccines">預防針</option>
+                                        <option value="health_checks">健康檢查</option>
+                                        <option value="communication">寵物溝通</option>
+                                        <option value="hotel">寵物住宿</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="reserve_doctor" class="SELECT">指定醫師<br>
+                                    <select id="reserve_doctor">
+                                        <option value="not_specify">不指定</option>
+                                        <option value="范植鑫院長">范植鑫院長</option>
+                                        <option value="賴偉峰醫師">賴偉峰醫師</option>
+                                        <option value="林佳緯醫師">林佳緯醫師</option>
+                                        <option value="詹宗豪醫師">詹宗豪醫師</option>
+                                        <option value="汪玉婷醫師">汪玉婷醫師</option>
+                                        <option value="林育楣醫師">林育楣醫師</option>
+                                        <option value="羅婉瑜溝通師">羅婉瑜溝通師</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="reserve_date"  class="INPUT">預約日期<br>
+                                    <input type="date" name="date" id="date">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="reserve_datetime" class="SELECT">預約時段<br>
+                                    <select id="reserve_datetime">
+                                        <option value="morning">上午 09:00 ~ 12:00</option>
+                                        <option value="afternoon">下午 14:00 ~ 18:00</option>
+                                        <option value="night">晚上 19:00 ~ 21:00</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="owner_name" class="INPUT">主人姓名<br>
+                                    <input type="text" name="owner_name" id="owner_name">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="phone" class="INPUT">手機號碼<br>
+                                    <input type="text" name="phone" id="phone">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="pet_name" class="INPUT">寵物姓名<br>
+                                    <input type="text" name="pet_name" id="pet_name">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="pet_category" class="SELECT">寵物類型<br>
+                                    <select id="pet_category">
+                                        <option value="dog">狗狗</option>
+                                        <option value="cat">貓貓</option>
+                                        <option value="rabbit">兔子</option>
+                                        <option value="other">其他</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="pet_age" class="INPUT">寵物年齡<br>
+                                    <input type="text" name="pet_age" id="pet_age">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="vaccines" class="SELECT">是否打過預防針<br>
+                                    <select id="vaccines">
+                                        <option value="yes">是</option>
+                                        <option value="no">否</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="symptom_type">病徵類型<br>
+                                    <textarea name="symptom_type" id="symptom_type" cols="30" rows="10">請簡述寵物病情
+                                    </textarea>
+                                </label>
+                            </li>
+                            
+                        </ul>
+                        <button class="BTN_BACK" type="submit">修改病歷</button>
+                    </form>
+
+                </section>
 
         </main>
 
