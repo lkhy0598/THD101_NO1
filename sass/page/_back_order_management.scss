@@ -1,0 +1,132 @@
+// 訂單管理_搜尋訂單
+
+.ORDER_MANAGEMENT_SEARCH {
+    width: 75%;
+    margin: 85px auto 50px;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        li {
+            margin: 10px 0;
+
+            input {
+                width: 100%;
+            }
+
+            select {
+                width: 100%;
+            }
+
+        }
+
+    }
+
+}
+
+.ORDER_MANAGEMENT_SEARCH ul li:nth-child(1),
+.ORDER_MANAGEMENT_SEARCH ul li:nth-child(2),
+.ORDER_MANAGEMENT_SEARCH ul li:nth-child(3),
+.ORDER_MANAGEMENT_SEARCH ul li:nth-child(4) {
+    width: 20%;
+}
+
+.ORDER_MANAGEMENT_SEARCH ul li:nth-child(5) {
+    align-self: flex-end;
+}
+
+// 訂單管理_表格
+
+.ORDER_MANAGEMENT_TABLE_ALL {
+    width: 90%;
+    margin: 30px auto 75px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    ul {
+        display: flex;
+        font-size: $p;
+    }
+
+    .BACK_TABLE_TITLE {
+        background-color: $red;
+        color: $white;
+        height: 55px;
+        text-align: center;
+        line-height: 55px;
+        outline: 2px solid $red;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .BACK_TABLE_CONTENT {
+        color: $blueblack;
+        text-align: center;
+        line-height: 80px;
+        height: 80px;
+
+        li {
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+        }
+
+        .bi-plus-circle {
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+.ORDER_MANAGEMENT_TABLE_ALL .ORDER_MANAGEMENT_TABLE_TITLE:nth-child(3){
+    border-radius: 0;
+}
+
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(1) li:nth-child(1),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(2) li:nth-child(1),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(1) li:nth-child(2),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(2) li:nth-child(2),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(1) li:nth-child(3),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(2) li:nth-child(3) {
+    width: 20%;
+}
+
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(2) li:nth-child(3) select{
+    width: 90%;
+}
+
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(1) li:nth-child(4),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(2) li:nth-child(4),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(1) li:nth-child(5),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(2) li:nth-child(5){
+    width: 15%;
+} 
+
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(1) li:nth-child(6),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(2) li:nth-child(6){
+    width: 10%;
+    border-right: none;
+}
+
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(3) li:nth-child(1),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(4) li:nth-child(1) {
+    width: 40%;
+}
+
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(3) li:nth-child(2),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(4) li:nth-child(2) {
+    width: 25%;
+}
+
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(3) li:nth-child(3),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(4) li:nth-child(3) {
+    width: 10%;
+}
+
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(3) li:nth-child(4),
+.ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(4) li:nth-child(4) {
+    width: 25%;
+    border-right: none;
+}

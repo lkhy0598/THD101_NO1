@@ -1,0 +1,275 @@
+// 商品管理_搜尋商品
+
+.COMMODITY_MANAGEMENT_SEARCH {
+    width: 60%;
+    margin: 85px auto 50px;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        li {
+            margin: 10px 0;
+
+            input {
+                width: 100%;
+            }
+
+            select {
+                width: 100%;
+            }
+
+            p {
+                width: 5%;
+                margin-bottom: 20px;
+            }
+
+        }
+
+    }
+
+}
+
+.COMMODITY_MANAGEMENT_SEARCH ul li:nth-child(1) {
+    width: 30%;
+}
+
+.COMMODITY_MANAGEMENT_SEARCH ul li:nth-child(2),
+.COMMODITY_MANAGEMENT_SEARCH ul li:nth-child(3) {
+    width: 30%;
+}
+
+.COMMODITY_MANAGEMENT_SEARCH ul li:nth-child(4) {
+    width: 30%;
+}
+
+.COMMODITY_MANAGEMENT_SEARCH ul li:nth-child(5),
+.COMMODITY_MANAGEMENT_SEARCH ul li:nth-child(7) {
+    width: 20%;
+}
+
+.COMMODITY_MANAGEMENT_SEARCH ul li:nth-child(6),
+.COMMODITY_MANAGEMENT_SEARCH ul li:nth-child(7),
+.COMMODITY_MANAGEMENT_SEARCH ul li:nth-child(8) {
+    align-self: flex-end;
+}
+
+// 商品管理_表格
+
+.COMMODITY_MANAGEMENT_TABLE_ALL {
+    width: 90%;
+    margin: 30px auto 75px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    ul {
+        display: flex;
+        font-size: $p;
+    }
+
+    .BACK_TABLE_TITLE {
+        background-color: $red;
+        color: $white;
+        height: 55px;
+        text-align: center;
+        line-height: 55px;
+        outline: 2px solid $red;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .BACK_TABLE_CONTENT {
+        color: $blueblack;
+        text-align: center;
+        line-height: 150px;
+        height: 150px;
+
+        li {
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            overflow: hidden;
+        }
+
+        .bi-pencil {
+            cursor: pointer;
+        }
+
+        .bi-x-lg {
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+.COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(1),
+.COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(2) {
+    width: 10%;
+}
+
+.COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(3) {
+    width: 15%;
+
+    img {
+        height: 100%;
+    }
+
+}
+
+.COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(4) {
+    width: 10%;
+}
+
+.COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(5) {
+    width: 35%;
+
+}
+
+.COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(6) {
+    width: 10%;
+}
+
+.COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(7),
+.COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(8) {
+    width: 5%;
+}
+
+.COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(8) {
+    border-right: none;
+}
+
+.COMMODITY_MANAGEMENT_TABLE_CONTENT:nth-child(2),
+.COMMODITY_MANAGEMENT_TABLE_CONTENT:nth-child(4) {}
+
+// 新增商品
+
+.BACK_ADD_COMMODITY {
+    width: 85%;
+    margin: 85px auto 50px;
+
+    .ADD_COMMODITY {
+        width: 80%;
+        margin: 60px auto;
+
+        input {
+            width: 100%;
+        }
+
+        select {
+            width: 100%;
+            background-position-x: 99.25%;
+        }
+
+    }
+
+    .COMMODITY_IMAGE {
+        width: 90%;
+        margin: 80px auto 60px;
+
+        .COMMODITY_IMAGE_TOP {
+            display: flex;
+            margin-bottom: 40px;
+
+            .IMAGE_TOP {
+                border: 1px solid black;
+                width: 180px;
+                height: 180px;
+                margin-right: 40px;
+                text-align: center;
+
+                img {
+                    width: 100%;
+                }
+
+                .bi-image {
+                    font-size: 60px;
+                    line-height: 100px;
+                }
+
+                .BTN_BACK {
+                    width: 80%;
+                }
+            }
+
+            .IMAGE_TOP:last-child {
+                border: none;
+                background-color: #EBE3DD;
+            }
+
+            .IMAGE_TOP:nth-child(1) {
+                position: relative;
+
+                &::before {
+                    content: "商品主圖";
+                    font-size: $littleword;
+                    position: absolute;
+                    top: -50px;
+                }
+
+            }
+
+            .IMAGE_TOP:nth-child(2) {
+                position: relative;
+
+                &::before {
+                    content: "商品次圖";
+                    font-size: $littleword;
+                    position: absolute;
+                    top: -50px;
+                }
+
+            }
+
+            .IMAGE_TOP:nth-child(3) {
+                position: relative;
+
+                &::before {
+                    content: "商品次圖";
+                    font-size: $littleword;
+                    position: absolute;
+                    top: -50px;
+                }
+
+            }
+
+        }
+
+        .COMMODITY_IMAGE_BOTTOM {
+            width: 100%;
+            height: 250px;
+            background-color: #EBE3DD;
+            text-align: center;
+
+            .bi-image {
+                font-size: 100px;
+                line-height: 150px;
+            }
+
+        }
+
+    }
+
+    .COMMODITY_CONTENT {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+
+        >p {
+            text-align: left;
+            color: $blueblack;
+            margin: 40px 0 10px;
+        }
+
+        >div {
+            text-align: left
+        }
+
+        .BTN_BACK {
+            display: inline-block;
+            margin: 40px 20px;
+        }
+
+    }
+
+}

@@ -55,6 +55,8 @@
     position: absolute;
     bottom: 20px;
     right: 30px;
+    font-size: 40px;
+    color:$blueblack ;
 }
 
 
@@ -168,3 +170,80 @@
 
 
 
+
+
+
+//=============================================================
+// 手機版414px
+@mixin m() {
+    @media screen and (max-width: 414px) {
+        @content;
+    }
+}
+
+
+@include m {
+    // index消息小卡
+
+
+
+.CARD_BODY{
+    width: auto;
+    max-width: 90vw;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px 0;
+
+}
+
+    
+
+.CARD_RIGHT{
+    position: relative;
+    background-color: $white;
+    width: 100%;
+    height: auto;
+    border-radius: 0 10px 10px 0;
+    padding:0 20px 0;
+    
+}
+
+.CARD_TITLE{
+    font-size: $bread;
+    color: $white;
+    font-weight: 700;
+    background-color: $orange;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    line-height: 25px;
+    margin-top: 10px;
+}
+
+.CARD_DATE{
+    font-size: $initial;
+    position: absolute;
+    right: 20px;
+    top: 16.5px;
+    padding-top: 0;
+}
+
+.CARD_CONTENT{
+    font-size: $bread;
+    padding-top: 13px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.ALLOW{
+    position: absolute;
+    bottom: 11px;
+    right: 20px;
+    font-size: 15px;
+    
+    
+}
+
+}

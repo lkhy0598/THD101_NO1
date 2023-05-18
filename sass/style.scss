@@ -3,7 +3,6 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 @import url("https://code.jquery.com/jquery-3.6.4.js");
 
-
 @import 'mixin/mixin';
 
 @import 'base/font';
@@ -15,7 +14,6 @@
 @import 'component/form';
 @import 'component/title';
 @import 'component/dot';
-@import 'component/icons';
 @import 'component/appointment';
 
 @import 'layout/header';
@@ -25,14 +23,20 @@
 @import 'layout/pop_up';
 @import 'layout/aside';
 
-@import 'page/about_us';
 @import 'page/back_reserve_page';
 @import 'page/back_index';
 @import 'page/back_medical_record';
 @import 'page/back_member_profile';
+@import 'page/back_commodity_management';
+@import 'page/back_message_management';
+@import 'page/back_order_management';
+@import 'page/back_user_settings';
+@import 'page/back_appointment_schedule';
 @import 'page/index';
+@import 'page/about_us';
 @import 'page/information';
 @import 'page/member_center';
+@import 'page/member_pets_setting';
 @import 'page/qa';  
 @import 'page/reserve';
 @import 'page/shopping';

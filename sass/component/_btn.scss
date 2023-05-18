@@ -248,3 +248,23 @@ a {
         }
     }
 }
+
+
+
+// ============ RWD(footer btn) ==========
+
+.FOOTER_TOP_BTN{
+    display: none;
+    color: $white;
+    text-align: center;
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    & > p{
+        font-size: $bread;
+    }
+
+    & > i{
+        font-size: 50px;
+    }
+}
