@@ -17,8 +17,10 @@
     <!-- ===== header ===== -->
     <header>
         <nav class="HEADER_NAV">
-            <img src="img/V-HEADER-LOGO-HOVER.svg" alt="" />
-            <img src="img/V-HEADER-LOGO.svg" alt="" />
+            <a href="index.html">
+                <img src="img/V-HEADER-LOGO-HOVER.svg" alt="" />
+                <img src="img/V-HEADER-LOGO.svg" alt="" />
+            </a>
 
             <ul>
                 <li>
@@ -88,13 +90,31 @@
         <section class="WRAPPER">
             <!-- 導覽列 -->
             <ul class="QA_NAVS">
-                <li class="QA_TAB "><a href="#QA_APPOINTMENT">預約相關問題</a>
+                <li class="QA_TAB ">
+                    <a href="#QA_APPOINTMENT">
+                        <div class="QA_TAB_TITLE">
+                            <p>預約</p>
+                            <p>相關問題</p>
+                        </div>
+                    </a>
                     <img src="./img/qa/QA_TITLEBG2.png" alt="">
                 </li>
-                <li class="QA_TAB "><a href="#QA_MEMBER">會員相關問題</a>
+                <li class="QA_TAB ">
+                    <a href="#QA_MEMBER">
+                        <div class="QA_TAB_TITLE">
+                            <p>會員</p>
+                            <p>相關問題</p>
+                        </div>
+                    </a>
                     <img src="./img/qa/QA_TITLEBG2.png" alt="">
                 </li>
-                <li class="QA_TAB "><a href="#QA_PET">寵物相關問題</a>
+                <li class="QA_TAB ">
+                    <a href="#QA_PET">
+                        <div class="QA_TAB_TITLE">
+                            <p>寵物</p>
+                            <p>相關問題</p>
+                        </div>
+                    </a>
                     <img src="./img/qa/QA_TITLEBG2.png" alt="">
                 </li>
             </ul>
@@ -234,13 +254,13 @@
                     <div class="ACCORDION_TITLE_BOX">
                         <div class="ACCORDION_TITLE">
                             <img src="./img/qa/QA_Q.png" alt="">
-                            <h3 class="ACCORDION_TITLE">如何成為獸醫院的會員？</h3>
+                            <h3 class="ACCORDION_TITLE">如何成為波波動物醫院的會員？</h3>
                         </div>
                     </div>
                     <div class="ACCORDION_CONTENT_BOX">
                         <div class="ACCORDION_CONTENT">
                             <img src="./img/qa/QA_A.png" alt="">
-                            <p>可以在獸醫院官方網站或到院內櫃檯進行會員註冊。</p>
+                            <p>可以在我們的官方網站或到院內櫃檯進行會員註冊。</p>
                         </div>
                     </div>
                 </div>
@@ -406,15 +426,26 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {
+
             // QA索引跳轉 
             $('.QA_NAVS li').click(function () {
-                var tab_id = $(this).find('a').attr('href');
+                // 初始化所有
+                $('.ACCORDION_TITLE_BOX').removeClass('ACC_TITLE_ACTIVE');
+                $('.ACCORDION_CONTENT_BOX').slideUp();
 
+                var tab_id = $(this).find('a').attr('href');
                 // 點選標籤跳轉到區塊並調整適合位置
                 setTimeout(function () {
-                    window.scrollBy(0, -200); // 向上滚动100像素
-                }, 1);
+                    window.scrollBy(0, -200);
+                    // 手機板
+                    // if ($(window).width() <= 414) {
+                    //     window.scrollBy(0, -200);
+                    // } else {
+                    //     window.scrollBy(0, -200);
+                    // };
+                }, .5);
             });
+
             // QA手風琴
             $('.ACCORDION_TITLE_BOX').click(function () {
                 // 先移除所有折疊面板標題的 active class，隱藏所有折疊面板內容
@@ -427,6 +458,10 @@
                     $(this).next().slideDown();
                 }
             });
+            // 手機板時禁用HOVER效果
+            if ($(window).width() <= 414) {
+                $('.ACCORDION_TITLE_BOX').off('mouseenter mouseleave');
+            };
         });
     </script>
 </body>

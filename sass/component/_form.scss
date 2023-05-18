@@ -181,13 +181,18 @@
             display: block;
             width: 30px;
             height: 30px;
-            background-color: $blueblack;
+            border: 1px solid $blueblack;
             border-radius: 50%;
-            line-height: 29px;
+            line-height: 30px;
             font-size: 20px;
-            color: $white;
+            color: $blueblack;
             text-align: center;
             cursor: pointer;
+
+            &:hover{
+                background-color: $blueblack;
+                color: $white;
+            }
         }
 
         .ITEM_COUNT--NUM{
@@ -200,13 +205,18 @@
             display: block;
             width: 30px;
             height: 30px;
-            background-color: $blueblack;
+            border: 1px solid $blueblack;
             border-radius: 50%;
-            line-height: 29px;
+            line-height: 30px;
             font-size: 20px;
-            color: $white;
+            color: $blueblack;
             text-align: center;
             cursor: pointer;
+
+            &:hover{
+                background-color: $blueblack;
+                color: $white;
+            }
         }
     }
 
@@ -359,3 +369,29 @@
     }
 }
 
+
+// ======================動態============================
+
+.ANI{
+    display: inline-block;
+    background-image: url(../../img/shopping_cart/jellyfish01.png);
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position-x: 0px;
+    background-size: 600px 100px;
+
+
+    animation:ANI 1.5s steps(6,end) infinite; 
+    
+}
+
+@keyframes ANI {
+    0%{
+        background-position-x: 0px;
+    }
+
+    100%{
+        background-position: -600px;
+    }
+}

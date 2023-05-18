@@ -6,6 +6,7 @@ html{
     line-height: 1.25;
     // letter-spacing: 1.5px;
     font-size: $initial;
+    color: $blueblack;
 }
 
 // header下面的背景
@@ -20,4 +21,30 @@ html{
   max-width: 1440px;
   margin: 0 auto;
   width: 75%;
+}
+
+
+
+//=============================================================
+// 手機版414px
+@mixin m() {
+  @media screen and (max-width: 414px) {
+      @content;
+  }
+}
+
+@include m {
+
+  .BACKGROUND {
+    height: auto;
+    position: relative;
+    background-image: url("");   
+    background: linear-gradient(176.06deg, #F89F69 0%, #D9EAED 33.33%, #F6DFC8 66.67%, #A7CFD7 100%);
+  }
+
+
+  .WRAPPER{
+    width: 90%;
+  }
+
 }

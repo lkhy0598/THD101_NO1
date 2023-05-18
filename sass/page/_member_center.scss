@@ -86,13 +86,15 @@
     display: flex;
     align-items: end;
     width: 100%;
+    margin-top: 50px;
 
     p {
         font-size: 16px;
+        margin-left: 20px;
     }
 }
 
-.MEMBERSETTINGS {
+.MEMBERSETTINGS  {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -145,11 +147,11 @@
                     padding-left: 20px;
 
                 }
-
+               
 
 
             }
-
+            
             .short {
                 width: 40%;
             }
@@ -157,12 +159,18 @@
             .long {
                 width: 90%;
             }
+            .middlelong{
+                width: 50%;
+            }
         }
+        
+        
 
         .submit {
 
             display: flex;
             justify-content: center;
+            width: 100%;
 
             input {
                 font-size: 25px;
@@ -177,62 +185,79 @@
 
 
 }
-
-.SHOPPINGCART_STEPONETEXT--FORM {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    border: 1px solid $gray;
-    overflow: hidden;
+.password {
+    display: flex;
     width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
 
-    .SHOPPINGCART_STEPONETEXT--TITLE {
+   
+    form {
         width: 100%;
-        height: 60px;
-        background-color: #fff;
-        position: relative;
+        display: flex;
+        flex-direction: column;
 
-        &::after {
-            content: '';
+        ul {
             width: 100%;
-            height: 1px;
-            background-color: $gray;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-        }
 
-        span {
-            line-height: 60px;
-            color: $blueblack;
-            font-size: $p;
-            margin-left: 40px;
-        }
-    }
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+
+            li {
+                font-size: 25px;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 50px;
+                
 
 
-    .SHOPPINGCART_STEPONETEXT--SELECT {
-        padding: 0 40px;
+                input {
+                    height: 40px;
+                    margin-top: 20px;
 
-        .SELECT {
-            font-size: $littleword;
-            font-weight: 300;
+                    border-radius: 10px;
+                    border: 1px solid $gray;
+                    overflow: hidden;
+                    font-size: 25px;
+                    padding-left: 20px;
+                    margin-right: 40px;
 
-            .SELECTOPTION {
-                width: 100%;
-                color: $blueblack;
-                font-weight: 400;
-
-                option {
-                    color: $blueblack;
-                    font-weight: 400;
                 }
+               
+
+
+            }
+            
+            .short {
+                width: 40%;
             }
 
-            ::placeholder {
-                color: $blueblack;
-                font-weight: 400;
+            .long {
+                width: 90%;
+            }
+            .middlelong{
+                width: 50%;
             }
         }
+        
+        
+
+        .submit {
+
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            input {
+                font-size: 25px;
+                padding: 0 50px;
+                margin-right: 50px;
+
+
+            }
+        }
+
     }
 
 
