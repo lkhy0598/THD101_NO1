@@ -17,6 +17,7 @@
       background-color: rgba(0, 0, 0, 0.5);
       display: none;
       pointer-events: all;
+      z-index: 3;
        
    }
    /* 會員管理 */
@@ -48,7 +49,7 @@
       color: $blueblack;
       text-align: center;
       line-height: 80px;
-      height: 80px;
+      min-height: 80px;
 
       li{
          border-top: 1px solid black;
@@ -303,6 +304,7 @@
       transform: translate(-50% , -50%);
 
       display: none;
+      z-index: 5;
 
       .bi-x-lg{
          font-weight: 700;

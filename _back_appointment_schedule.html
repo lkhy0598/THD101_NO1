@@ -171,7 +171,7 @@
                                     電話: 0912345678
                                 </li>
                                 <li>
-                                    <i class="bi bi-pencil"></i>
+                                    <i class="bi bi-pencil RESERVE_REVISE_BTN"></i>
                                 </li>
 
                             </ul>
@@ -197,7 +197,7 @@
                                     電話: 0912345678
                                 </li>
                                 <li>
-                                    <i class="bi bi-pencil"></i>
+                                    <i class="bi bi-pencil RESERVE_REVISE_BTN"></i>
                                 </li>
 
                             </ul>
@@ -223,7 +223,7 @@
                                     電話: 0912345678
                                 </li>
                                 <li>
-                                    <i class="bi bi-pencil"></i>
+                                    <i class="bi bi-pencil RESERVE_REVISE_BTN"></i>
                                 </li>
 
                             </ul>
@@ -249,7 +249,7 @@
                                     電話: 0912345678
                                 </li>
                                 <li>
-                                    <i class="bi bi-pencil"></i>
+                                    <i class="bi bi-pencil RESERVE_REVISE_BTN"></i>
                                 </li>
 
                             </ul>
@@ -275,7 +275,7 @@
                                     電話: 0912345678
                                 </li>
                                 <li>
-                                    <i class="bi bi-pencil"></i>
+                                    <i class="bi bi-pencil RESERVE_REVISE_BTN"></i>
                                 </li>
 
                             </ul>
@@ -287,8 +287,9 @@
                 </section>
 
                 <!-- 修改病歷 -->
+                <div class="MASK"></div>
                 <section class="RESERVE_BOX">
-                    <i class="bi bi-x-lg"></i>
+                    <i class="bi bi-x-lg ESC_BTN"></i>
                     <form action="get">
 
                         <ul class="RESERVE_LIST">
@@ -377,7 +378,7 @@
                             </li>
                             
                         </ul>
-                        <button class="BTN_BACK" type="submit">修改病歷</button>
+                        <button class="BTN_BACK RESERVE_REVISE" type="submit">修改病歷</button>
                     </form>
 
                 </section>
@@ -387,6 +388,8 @@
     </section>
 
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
 
     <script>
 
@@ -397,6 +400,34 @@
             });
             calendar.render();
         });
+
+        $(document).ready(function(){
+            $('.RESERVE_REVISE_BTN').click(function () {
+                // console.log('aaa');
+                $('.RESERVE_BOX').css('display','block');
+                $('.MASK').show();
+            })
+
+            $('.ESC_BTN').click(function(){
+                $('.RESERVE_BOX').css('display','none');
+                $('.MASK').hide();
+            })
+            $('.MASK').click(function(){
+                $('.RESERVE_BOX').css('display','none');
+                $('.MASK').hide();
+            })
+            $('.MASK').click(function(){
+                $('.RESERVE_BOX').css('display','none');
+                $('.MASK').hide();
+            })
+            $('.RESERVE_REVISE').click(function(){
+                $('.RESERVE_BOX').css('display','none');
+                $('.MASK').hide();
+                event.preventDefault();
+            })
+        })
+
+
 
     </script>
 
