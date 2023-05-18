@@ -1,34 +1,210 @@
-//預約頁面共用內容——對初診患者資訊區塊
-.BIG_TITLE::after {
-    // display: none;
+.RESERVE {
+    .CAROUSEL{
+        position: relative;
+    }
+    .DOT{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        right: 30px;
+        bottom: 40px;
+        z-index: 10;
+    
+    }
+    
+    .BACKGROUND>.BIG_TITLE::after {
+        display: none;
+    }
+    
+    //-----預約頁面共用內容——對初診患者資訊區塊-----//
+    .RESERVE_INFO {
+        overflow: hidden;
+        padding-bottom: 170px;
+    }
+    
+    .RESERVE_INFO>.BREAD {
+        margin-top: 45px;
+        margin-bottom: 50px;
+    }
+    
+    .FIRSTTIME_INFO {
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .FIRSTTIME_INFO>h1::before {
+        background-color: #34424F;
+        width: 400px;
+        height: 2px;
+        content: "";
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 150px;
+    }
+    
+    .FIRSTTIME_INFO>h1 {
+        color: #34424F;
+        width: 1440px;
+        position: relative;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+    
+    .FIRSTTIME_INFO>h1::after {
+        background-color: #34424F;
+        width: 400px;
+        height: 2px;
+        content: "";
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 150px;
+    }
+    
+    .RESERVE_TYPE_UL {
+        display: flex;
+        width: 77%;
+        justify-content: space-between;
+        margin-bottom: 85px;
+    }
+    
+    .TITLE_NO {
+        background-color: #FFFFFF;
+        color: #428AA9;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .RESERVE_TYPE {
+        background-color: #428AA9;
+        color: #FFFFFF;
+        width: 250px;
+        height: 250px;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        line-height: 250px;
+    }
+    
+    .FIRSTTIME_INFO>p {
+        color: #34424F;
+        text-align: center;
+        line-height: 1.6;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .FIRSTTIME_INFO .CALL {
+        font-weight: 700;
+    }
+    //----- 預約步驟區塊 -----//
+    .RESERVE_STEPAREA {
+        color: #34424F;
+        margin: 0 auto;
+        display: flex;
+        width: 67%;
+        justify-content: space-between;
+        margin-top: 100px;
+    }
+
+    .RESERVE_ARC {
+        position: relative;
+        flex-grow: 1;
+        display: flex;
+        justify-content:center;
+    }
+
+    .RESERVE_ARC>.ARC_TITLE {
+        color: #428AA9;
+        background-color: #fff;
+    }
+
+    .RESERVE_ARC>p {
+        position: absolute;
+        bottom: -60px;
+    }
+
+    .RESERVE_ARC::before {
+        background-color: #FFF;
+        width: 100px;
+        height: 6px;
+        content: "";
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        top: 35px;
+        left: 0px;
+    }
+
+    .RESERVE_ARC::after {
+        background-color: #FFF;
+        width: 100px;
+        height: 6px;
+        content: "";
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        top: 35px;
+        right: 0px;
+    }
+
+    #ARCONE::before {
+        display: none;
+    }
+
+    #ARCFOUR::after {
+        display: none;
+    }
+
+    #ARCONE>.ARC_TITLE {
+        background-color: #428AA9;
+        color: #FFF;
+        z-index: 10;
+    }
+
+    #ARCONE>p {
+        font-weight: bold;
+    }
+
+    //----- 月曆區塊 -----//
+    .CALENDAR {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .CALENDAR_INFO p {
+        font-size: 18px;
+        color: #34424F;
+        margin: 10px;
+    }
+
+    .CALENDAR_COLOR_INFO {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .CALENDAR_COLOR_INFO p {
+        font-size: 12px;
+        margin-left: -10px;
+        margin-right: 40px;
+    }
+
+    //----- 表單區塊 -----//
+    .RESERVE_FORM1 {
+        border: 1px solid;
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
-.FIRSTTIME_INFO {
-    border: 2px solid red;
-    align-items: center;
-    justify-content: center;
-}
-
-.RESERVE_TYPE_UL {
-    display: flex;
-
-}
-
-.TITLE_NO {
-    background-color: #FFFFFF;
-    color: #428AA9;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.RESERVE_TYPE {
-    background-color: #428AA9;
-    color: #FFFFFF;
-    width: 250px;
-    height: 250px;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    line-height: 250px;
-}
