@@ -1,5 +1,24 @@
 /*----------會員管理區塊---------*/
 .BACK_MAIN_CONTENT_RIGHT{
+   position: relative;
+
+   .BACK_MODIFY_PET, .BACK_ADD_NEW_MEMBER, .BACK_MODIFY_MEMBER{
+      position: absolute;
+      top: 55px;
+      left: 65px;
+      display: none;
+   }
+   .MASK{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+      pointer-events: all;
+       
+   }
    /* 會員管理 */
    .MEMBER_PROFILE{
       width: 76.5%;
@@ -277,6 +296,13 @@
       margin: 0 auto;
       position: relative;
       padding-bottom: 40px;
+
+      position: absolute;
+      top: 50%;
+      left:50%;
+      transform: translate(-50% , -50%);
+
+      display: none;
 
       .bi-x-lg{
          font-weight: 700;
