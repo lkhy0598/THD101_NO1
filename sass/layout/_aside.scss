@@ -1,5 +1,5 @@
 .BACK_MAIN_CONTENT_LEFT{
-    width: 18%;
+    width: 19.75%;
     background-color: #EBE3DD;
     .ASIDE_TOP {
         background-color: #EEEEEE;
@@ -57,6 +57,8 @@
                     &:hover {
                         background-color: $white;
                     }
+
+                    
     
                     >i:first-of-type {
                         margin-left: 10%;
@@ -68,6 +70,11 @@
                         right: 10%;
                     }
                 }
+
+                .ON{
+                    background-color: $white;
+                }
+
             }
         }
     

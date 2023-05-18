@@ -82,3 +82,55 @@
         
     // }
 }
+
+
+
+//=============================================================
+// 手機版414px
+@mixin m() {
+    @media screen and (max-width: 414px) {
+        @content;
+    }
+  }
+  
+  @include m {
+
+    .BIG_TITLE{
+
+
+
+        &::after {
+            content: "";
+            position: absolute;
+            border: 2px solid $lightblue;
+            width: 89vw;
+            bottom: 0;
+            left: 0;
+        }
+    
+
+        .BIG_TITLE_IMG {
+            background-image: url(../../img/M_TITLE-BG.jpg);
+            width: 230px;
+            height: 80px;
+        }
+    }
+
+
+    .ARC_TITLE {
+        font-size: $littleword;
+        width: 40px;
+        height: 40px;
+        background-color: $orange;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+        color: $white;
+    
+    }
+    
+  
+    
+  
+  
+  }

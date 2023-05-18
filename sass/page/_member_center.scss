@@ -1,0 +1,264 @@
+.MEMBERCENTER {
+    padding-top: 300px;
+
+    .MEMCENTOP {
+        margin-top: 50px;
+
+        .BREAD {
+            margin-bottom: 30px;
+        }
+
+        .BIG_TITLE_IMG {
+
+            align-items: end;
+            // width: 100%;
+
+
+        }
+
+        .HELLO {
+            color: #34424F;
+            font-size: 20 px;
+            margin-left: 20px;
+
+
+        }
+    }
+
+}
+
+.M_bigTitle {
+    display: flex;
+    align-items: end;
+
+}
+
+.BIG_TITLE_RIGHT {
+    padding-bottom: 10px;
+}
+
+.MEMBER_MAIN {
+    width: 1440px;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    color: #34424F;
+
+}
+
+.MENU {
+
+    a {
+        text-decoration: none;
+        color: #34424F;
+
+        h2,
+        h3 {
+            margin-bottom: 60px;
+
+        }
+
+        h2:hover {
+
+            color: white;
+        }
+
+        h3:hover {
+
+            color: white;
+        }
+
+
+    }
+
+}
+
+
+
+
+.MEMCONTENT {
+    width: 1000px;
+}
+
+.SUBTITLE {
+    border-bottom: 2px solid #34424F;
+    display: flex;
+    align-items: end;
+    width: 100%;
+    margin-top: 50px;
+
+    p {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+}
+
+.MEMBERSETTINGS  {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
+
+
+    .avatar {
+        width: 25%;
+        margin: 0 auto;
+
+
+        img {
+            width: 100%;
+            margin-bottom: 60px;
+        }
+
+        button {
+            font-size: 25px;
+            width: 100%;
+        }
+    }
+
+    form {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+        ul {
+            width: 100%;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            li {
+                font-size: 25px;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 50px;
+
+
+                input {
+                    height: 40px;
+                    margin-top: 20px;
+
+                    border-radius: 10px;
+                    border: 1px solid $gray;
+                    overflow: hidden;
+                    font-size: 25px;
+                    padding-left: 20px;
+
+                }
+               
+
+
+            }
+            
+            .short {
+                width: 40%;
+            }
+
+            .long {
+                width: 90%;
+            }
+            .middlelong{
+                width: 50%;
+            }
+        }
+        
+        
+
+        .submit {
+
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            input {
+                font-size: 25px;
+                padding: 0 50px;
+                margin-right: 50px;
+
+
+            }
+        }
+
+    }
+
+
+}
+.password {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
+
+   
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        ul {
+            width: 100%;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+
+            li {
+                font-size: 25px;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 50px;
+                
+
+
+                input {
+                    height: 40px;
+                    margin-top: 20px;
+
+                    border-radius: 10px;
+                    border: 1px solid $gray;
+                    overflow: hidden;
+                    font-size: 25px;
+                    padding-left: 20px;
+                    margin-right: 40px;
+
+                }
+               
+
+
+            }
+            
+            .short {
+                width: 40%;
+            }
+
+            .long {
+                width: 90%;
+            }
+            .middlelong{
+                width: 50%;
+            }
+        }
+        
+        
+
+        .submit {
+
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            input {
+                font-size: 25px;
+                padding: 0 50px;
+                margin-right: 50px;
+
+
+            }
+        }
+
+    }
+
+
+}
