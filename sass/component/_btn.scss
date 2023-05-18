@@ -192,11 +192,19 @@ a {
         left: 1px;
         cursor: pointer;
 
+        &:hover{
+            background-color: $blueblack;
+            outline: 1px solid $blueblack;
+            i{
+                color: #fff;
+            }
+        }
+
         
         i{
             font-size: 45px;
             color:$blueblack;
-            line-height: 60px;
+            line-height: 65px;
         }
         
     }
@@ -224,11 +232,19 @@ a {
         top: 1px;
         right: -1px;
         cursor: pointer;
+
+        &:hover{
+            background-color: $blueblack;
+            outline: 1px solid $blueblack;
+            i{
+                color: #fff;
+            }
+        }
         
         i{
             font-size: 45px;
             color:$blueblack;
-            line-height: 60px;
+            line-height: 65px;
         }
     }
 }
