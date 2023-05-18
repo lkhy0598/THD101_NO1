@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,48 +7,49 @@
     <link rel="stylesheet" href='css/style.css'>
     <title>結帳完成 SHOPPING_CART</title>
 </head>
-
 <body class="SHOPPINGCARTP3">
 
-    <!-- ===============================header================================= -->
-    <header>
+<!-- ===============================header================================= -->
+<header>
 
-        <nav class="HEADER_NAV">
+    <nav class="HEADER_NAV">
 
-            <a href="index.html">
-                <img src="img/V-HEADER-LOGO-HOVER.svg" alt="" />
-                <img src="img/V-HEADER-LOGO.svg" alt="" />
-            </a>
+        <a href="index.html">
+            <img src="img/V-HEADER-LOGO-HOVER.svg" alt="" />
+            <img src="img/V-HEADER-LOGO.svg" alt="" />
+        </a>
+        
 
+        <ul>
+            <li>
+                <a href="#"><span>關於院所</span><br>About Us</a>
+            </li>
+            <li>
+                <a href="#"><span>資訊導覽</span><br>Information</a>
+            </li>
+            <li>
+                <a href="#"><span>線上購物</span><br>Shopping</a>
+            </li>
+            <li>
+                <a href="#"><span>常見問題</span><br>Q & A</a>
+            </li>
+            <li>
+                <a href="#"><span>會員中心</span><br>Member Centre</a>
+            </li>
+            <li>
+                <a href="#" class="RESERVE">立即預約</a>
+            </li>
+            <li>
+                <a href="#" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
+            </li>
+            <li>
+                <a href="#"><i class="bi bi-cart-fill"></i></a>
+            </li>
+        </ul>
 
-            <ul>
-                <li>
-                    <a href="#"><span>關於院所</span><br>About Us</a>
-                </li>
-                <li>
-                    <a href="#"><span>資訊導覽</span><br>Information</a>
-                </li>
-                <li>
-                    <a href="#"><span>線上購物</span><br>Shopping</a>
-                </li>
-                <li>
-                    <a href="#"><span>常見問題</span><br>Q & A</a>
-                </li>
-                <li>
-                    <a href="#"><span>會員中心</span><br>Member Centre</a>
-                </li>
-                <li>
-                    <a href="#" class="RESERVE">立即預約</a>
-                </li>
-                <li>
-                    <a href="#" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
-                </li>
-                <li>
-                    <a href="#"><i class="bi bi-cart-fill"></i></a>
-                </li>
-            </ul>
+    </nav>
 
-        </nav>
+</header>
 
 <!-- ========================================================================= -->
 
@@ -65,11 +65,38 @@
         <a href="#">購物車</a>
     </section>
 
-    <!-- ====================================購物車第三步驟=========================================== -->
-    <section class="SHOPPINGCART_STEP WRAPPER">
-        <section class="SHOPPINGCART_STEPAREA--SUCCESS">
-            <span>
-                <img src="./img/shopping_cart/pay_success.png" alt="">
+<!-- ====================================購物車第三步驟=========================================== -->
+<section class="SHOPPINGCART_STEP WRAPPER">
+    <section class="SHOPPINGCART_STEPAREA--SUCCESS">
+        <span>
+            <img src="./img/shopping_cart/pay_success.png" alt="">
+        </span>
+        <h1>購買成功</h1>
+    </section>
+    <section class="SHOPPINGCART_STEPAREA">
+        <section class="SHOPPINGCART_ARCONE">
+            <div class="ARC_TITLE">1</div>
+            <p>購物車</p>
+        </section>
+        <section class="SHOPPINGCART_ARCTWO">
+            <div class="ARC_TITLE">2</div>
+            <p>填寫資料</p>
+        </section>
+        <section class="SHOPPINGCART_ARCTHREE">
+            <div class="ARC_TITLE">3</div>
+            <p>結帳成功</p>
+        </section>
+    </section>
+</section>
+
+<!-- ========================================價格商品明細================================================= -->
+
+<section class="SHOPPINGCARTP2_ORDER WRAPPER">
+    <section class="SHOPPINGCARTP2_ORDERTEXT">
+        <p>合計：NT$ 3,740</p>
+        <span>購物車:(3件)
+            <span class="SHOPPINGCARTP2_ORDERARR">
+            <img src="/img/shopping/🦆 icon _angle-right-b_.svg" alt="">
             </span>
         </span>
     </section>
@@ -168,235 +195,66 @@
         </section>
     </section>
 
-    <!-- ========================================價格商品明細================================================= -->
+    <section class="SHOPPINGCARTP3_CONFIRMZONE CONFIRMZONE_DOWN">
+        <section class="SHOPPINGCARTP3_CONFIRM--T PL COL-7">
+            <span>收件資訊</span>
+            <section class="SHOPPINGCARTP3_CONFIRM--CONTENT">
 
-    <section class="SHOPPINGCARTP2_ORDER WRAPPER">
-        <section class="SHOPPINGCARTP2_ORDERTEXT">
-            <p>合計：NT$ 3,740</p>
-            <span>購物車:(3件)
-                <span class="SHOPPINGCARTP2_ORDERARR">
-                    <img src="/img/shopping/🦆 icon _angle-right-b_.svg" alt="">
-                </span>
-            </span>
+                <section>
+                    <span>送貨方式:</span>
+                    <span>送貨狀態:</span>
+                    <span>門市名稱:</span>
+                    <span>7-11店號:</span>
+                    <span>收件人姓名:</span>
+                    <span>收件人電話:</span>
+                    <span>門市地址:</span>
+                </section>
+                <section>
+                    <span>7-11取貨付款</span>
+                    <span>備貨中</span>
+                    <span>連通門市</span>
+                    <span>163877</span>
+                    <span>范植鑫</span>
+                    <span>0912345***</span>
+                    <span>新北市中和區圓通路293號</span>
+                </section>
+
+            </section>
         </section>
 
-        <section class="SHOPPINGCART_ITEMFORM ORDERITEM">
-            <section class="SHOPPINGCART_ITEMtitle">
-                <span class="ITEM_PRODUCT--W">商品</span>
-                <span class="ITEM_PRICE--W">單件價格</span>
-                <span class="ITEM_COUNT--W">數量</span>
-                <span class="ITEM_SUBTOTAL--W">小計</span>
-            </section>
+        <section class="SHOPPINGCARTP3_CONFIRM--T PR COL-7">
+            <span>付款資訊</span>
+            <section class="SHOPPINGCARTP3_CONFIRM--CONTENT">
+                
+                <section>
+                    <span>付款方式:</span>
+                    <span>付款狀態:</span>
+                </section>
+                <section>
+                    <span>11取貨付款</span>
+                    <span>未付款</span>
+                </section>
 
-            <section class="SHOPPINGCART_ITEM">
-                <section class="ITEM_PRODUCT ITEM_PRODUCT--W">
-                    <section class="ITEM_PRODUCT--IMG">
-                        <img src="/img/shopping_list/healthy/01/healthy_01_01.jpg" alt="">
-                    </section>
-                    <span>沛威貓狗保健-護眼亮晶晶 30入/盒</span>
-                </section>
-                <section class="ITEM_PRICE ITEM_PRICE--W">
-                    <p>NT＄1,380</p>
-                </section>
-                <section class="ITEM_COUNT ITEM_COUNT--W">
-                    <span class="ITEM_COUNT--NUM">2</span>
-                </section>
-                <section class="ITEM_SUBTOTAL ITEM_SUBTOTAL--W">
-                    <p>NT＄2,760</p>
-                </section>
-            </section>
-
-            <section class="SHOPPINGCART_ITEM">
-                <section class="ITEM_PRODUCT ITEM_PRODUCT--W">
-                    <section class="ITEM_PRODUCT--IMG">
-                        <img src="/img/shopping_list/dryfood/09/dryfood_09_01.jpg" alt="">
-                    </section>
-                    <span>【SC星益生趣】無穀貓糧(鮭魚配方) 2.5磅/1.1kg</span>
-                </section>
-                <section class="ITEM_PRICE ITEM_PRICE--W">
-                    <p>NT＄980</p>
-                </section>
-                <section class="ITEM_COUNT ITEM_COUNT--W">
-                    <span class="ITEM_COUNT--NUM">1</span>
-                </section>
-                <section class="ITEM_SUBTOTAL ITEM_SUBTOTAL--W">
-                    <p>NT＄980</p>
-                </section>
             </section>
         </section>
     </section>
 
-    <!-- ================================訂單確認======================================= -->
-
-    <section class="SHOPPINGCARTP3_CONFIRM WRAPPER">
-        <section class="SHOPPINGCARTP3_CONFIRMTITLE">
-            <span class="">訂單確認</span>
+<!-- ================================================================= -->
+    <section class="SHOPPINGCARTP3_MEMO">
+        <section>
+            <label for="memo" class="TEXTAREA">訂單備註<br>
+                <textarea id="memo" placeholder="有什麼想告訴賣家的..." class="TEXTAREA_CONTENT"></textarea>
+            </label>
         </section>
-        <section class="SHOPPINGCARTP3_CONFIRMZONE">
-
-            <section class="SHOPPINGCARTP3_CONFIRM--T PL COL-7">
-                <span>訂單資訊</span>
-                <section class="SHOPPINGCARTP3_CONFIRM--CONTENT">
-
-                    <section>
-                        <span>訂單號碼:</span>
-                        <span>電子信箱:</span>
-                        <span>訂單日期:</span>
-                        <span>訂單狀態:</span>
-                    </section>
-                    <section>
-                        <span>230301N00130</span>
-                        <span>THD101_17***@gmail.com</span>
-                        <span>2023-03-01 00:00AM</span>
-                        <span>訂單處理中</span>
-                    </section>
-
-                </section>
-            </section>
-
-            <section class="SHOPPINGCARTP3_CONFIRM--T PR COL-7">
-                <span>會員資訊</span>
-                <section class="SHOPPINGCARTP3_CONFIRM--CONTENT">
-
-                    <section>
-                        <span>會員名稱:</span>
-                        <span>電話:</span>
-                    </section>
-                    <section>
-                        <span>范植鑫</span>
-                        <span>0912345***</span>
-                    </section>
-
-                </section>
-            </section>
-        </section>
-
-        <section class="SHOPPINGCARTP3_CONFIRMZONE CONFIRMZONE_DOWN">
-            <section class="SHOPPINGCARTP3_CONFIRM--T PL COL-7">
-                <span>收件資訊</span>
-                <section class="SHOPPINGCARTP3_CONFIRM--CONTENT">
-
-                    <section>
-                        <span>送貨方式:</span>
-                        <span>送貨狀態:</span>
-                        <span>門市名稱:</span>
-                        <span>7-11店號:</span>
-                        <span>收件人姓名:</span>
-                        <span>收件人電話:</span>
-                        <span>門市地址:</span>
-                    </section>
-                    <section>
-                        <span>7-11取貨付款</span>
-                        <span>備貨中</span>
-                        <span>連通門市</span>
-                        <span>163877</span>
-                        <span>范植鑫</span>
-                        <span>0912345***</span>
-                        <span>新北市中和區圓通路293號</span>
-                    </section>
-
-                </section>
-            </section>
-
-            <section class="SHOPPINGCARTP3_CONFIRM--T PR COL-7">
-                <span>付款資訊</span>
-                <section class="SHOPPINGCARTP3_CONFIRM--CONTENT">
-
-                    <section>
-                        <span>付款方式:</span>
-                        <span>付款狀態:</span>
-                    </section>
-                    <section>
-                        <span>11取貨付款</span>
-                        <span>未付款</span>
-                    </section>
-
-                </section>
-            </section>
-        </section>
-
-        <!-- ================================================================= -->
-        <section class="SHOPPINGCARTP3_MEMO">
-            <section>
-                <label for="memo" class="TEXTAREA">訂單備註<br>
-                    <textarea id="memo" placeholder="有什麼想告訴賣家的..." class="TEXTAREA_CONTENT"></textarea>
-                </label>
-            </section>
-        </section>
-
-        <!-- ========================================================================== -->
-
-        <section class="SHOPPINGCARTP3_SENDMESSAGE">
-
-            <div>
-                <button class="BTN">送出留言</button>
-            </div>
-
-        </section>
-
-
     </section>
 
-    <!-- ===============================回到TOP================================================ -->
+<!-- ========================================================================== -->
 
-    <button class="TOP_BTN"></button>
+    <section class="SHOPPINGCARTP3_SENDMESSAGE">
 
-
-    <!-- ==================================FOOTER================================================= -->
-
-    <footer>
-        <div class="FOOTER_LOGO">
-            <img src="img/H-LOGO.svg" alt="">
+        <div>
+            <button class="BTN">送出留言</button>
         </div>
-        <div class="FOOTER_RIGHT">
-            <nav class="FOOTER_NAV">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <span>關於院所</span></a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>立即預約</span></a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>資訊導覽</span></a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>會員中心</span></a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>線上購物</span></a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>購物車</span></a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>常見問題</span></a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>追蹤我們</span></a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
-
-        <div class="FOOTER_ICON">
-            <a href=""><img src="img/FOOTER_FB_ICON.svg" alt=""></a>
-            <a href=""><img src="img/FOOTER_INS_ICON.svg" alt=""></a>
-        </div>
-    </footer>
-    <div class="FOOTER_BOTTOM">
-        <p>Copyright © 本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。</p>
-    </div>
-
 
     </section>
 
@@ -487,5 +345,4 @@
 
 
 </body>
-
 </html>
