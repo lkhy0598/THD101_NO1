@@ -11,10 +11,44 @@
         margin-right: 0;
     }
 
+// =========================================
+
+    .CART02_SLOGANALL{
+        width: 100%;
+        padding-top: 130px;
+        position: relative;
+
+        .SLOGAN02{
+            display: block;
+            margin: 0 auto;
+        }
+
+        .CAT{
+            background-image: url(../../img/shopping_cart/cat01.png);
+            animation:ANI2 2s steps(6,end) infinite; 
+            width: 150px;
+            height: 150px;
+            background-size: 900px 150px;
+            position: absolute;
+            right: 266px;
+            bottom: -31px;
+        }
+
+        @keyframes ANI2 {
+            0%{
+                background-position-x: 0px;
+            }
+        
+            100%{
+                background-position: -900px;
+            }
+        }
+    }
+
 // ======================================
 
     .BREAD{
-        padding-top:361px ;
+        padding-top:14px ;
     }
 
     .SHOPPINGCART_STEP{
@@ -37,6 +71,11 @@
 // ===========================================================
 
     .SHOPPINGCARTP2_ORDER{
+
+        .SHOPPINGCARTP2_ORDERTEXTALL{
+            margin-bottom: 35px;
+        }
+
         .SHOPPINGCARTP2_ORDERTEXT{
             width: 100%;
             background-color:rgba(255, 255, 255, 0.5);
@@ -65,6 +104,8 @@
                     width: 15px;
                     margin-left: 10px;
                     vertical-align: middle;
+                    cursor: pointer;
+                    transition: all .3s ease-in-out;
                     img{
                         width: 100%;
                         transform: rotate(90deg);
@@ -81,18 +122,22 @@
         border-radius: 0px;
         border: 0px;
         border-top: 1px solid $gray;
-        margin-bottom: 35px;
+        margin-bottom: 0;
     }
 
 // ======================================================================
 
 
     .SHOPPINGCARTP2_TEXT{
-        display: flex;
+        // display: flex;
         margin-bottom: 45px;
 
-        .SHOPPINGCARTP2_TEXT--RIGHT{
-            margin-left: 20px;
+        .SHOPPINGCARTP2_TEXT--TOP{
+            display: flex;
+        }
+
+        .SHOPPINGCARTP2_TEXT--BOTTOM{
+        display: flex;
         }
 
 
@@ -171,7 +216,7 @@
                         font-weight: 300;
                         .TEXTAREA_CONTENT{
                             width: 100%;
-                            height: 270px
+                            height: 288px
                         }
                     }
 
@@ -290,6 +335,7 @@
             }
 
             .BTN{
+                width: 306px;
                 font-weight: 700;
             }
         }

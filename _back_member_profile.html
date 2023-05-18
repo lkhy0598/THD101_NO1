@@ -6,23 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>後台 會員管理</title>
+    <title>後台 - 會員管理</title>
 </head>
 
 <body>
-    
+
     <header>
         <nav class="BACK_NAV">
 
-            <img src="img/BACK-LOGO-HOVER.svg" alt="">
-            <img src="img/BACK-LOGO.svg" alt="">
+            <a href="_back_index.html">
+                <img src="img/BACK-LOGO-HOVER.svg" alt="">
+                <img src="img/BACK-LOGO.svg" alt="">
+            </a>
 
             <ul>
                 <li><a href="#"><i class="bi bi-plus-square"></i> 新增會員 / 寵物</a></li>
                 <li><a href="#"><i class="bi bi-plus-square"></i> 新增消息</a></li>
                 <li><a href="#"><i class="bi bi-plus-square"></i> 新增商品</a></li>
                 <li><a href="#"><i class="bi bi-person-circle"></i> USER 你好</a></li>
-                <li><a href="#">登出後台</a></li>
+                <li><a href="web_login.html">登出後台</a></li>
             </ul>
 
         </nav>
@@ -34,7 +36,7 @@
         <aside class="BACK_MAIN_CONTENT_LEFT">
 
             <div class="ASIDE_TOP">
-                
+
                 <label for="clinic_room" class="SELECT"><br>
                     <select id="clinic_room">
                         <option value="">第一診間</option>
@@ -42,28 +44,49 @@
                         <option value="">第三診間</option>
                     </select>
                 </label>
-    
+
                 <h3>目前叫號</h3>
                 <h3><span>10</span>號</h3>
-    
+
                 <button class="BTN_BACK">呼叫下一號<i class="bi bi-arrow-right-circle"></i></button><br>
-    
+
                 <button class="BTN_BACK">過號<i class="bi bi-arrow-right-circle"></i></button>
-    
+
             </div>
-    
+
             <div class="ASIDE_BUTTON">
                 <ul>
-                    <li><a href="#"><i class="bi bi-calendar"></i> 預約時刻表<i class="bi bi-chevron-right"></i></a></li>
-                    <li><a href="#"><i class="bi bi-receipt-cutoff"></i> 病歷紀錄管理<i class="bi bi-chevron-right"></i></a></li>
-                    <li><a href="#"><i class="bi bi-people-fill"></i> 會員管理<i class="bi bi-chevron-right"></i></a></li>
-                    <li><a href="#"><i class="bi bi-megaphone"></i> 消息管理<i class="bi bi-chevron-right"></i></a></li>
-                    <li><a href="#"><i class="bi bi-cart-fill"> </i>商品管理<i class="bi bi-chevron-right"></i></a></li>
-                    <li><a href="#"><i class="bi bi-truck"></i> 訂單管理<i class="bi bi-chevron-right"></i></a></li>
-                    <li><a href="#"><i class="bi bi-gear"></i> 使用者設定<i class="bi bi-chevron-right"></i></a></li>
+                    <li>
+                        <a href="_back_appointment_schedule.html"><i class="bi bi-calendar"></i> 預約時刻表<i class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="_back_medical_record.html"><i class="bi bi-receipt-cutoff"></i> 病歷紀錄管理<i class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="_back_member_profile.html" class="ON"><i class="bi bi-people-fill"></i> 會員管理<i class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="_back_message_management.html"><i class="bi bi-megaphone"></i> 消息管理<i class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="_back_commodity_management.html"><i class="bi bi-cart-fill"> </i>商品管理<i class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="_back_order_management.html"><i class="bi bi-truck"></i> 訂單管理<i class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="_back_user_settings.html"><i class="bi bi-gear"></i> 使用者設定<i class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
-    
+
         </aside>
 
         <!-- 右側內容 "主要" 不會更動 -->
@@ -81,7 +104,7 @@
                     </div>
 
                     <section class="MEMBER_PROFILE_SEARCH">
-                        
+
                         <form action="">
 
                             <ul>
@@ -191,7 +214,7 @@
                             <li><i class="bi bi-x-lg"></i></li>
                         </ul>
                     </section>
-                    
+
                 </section>
 
             </section>
@@ -205,7 +228,7 @@
                     <div class="BACK_BANNER">
                         <h3>新增會員</h3>
                     </div>
-                    
+
                     <section class="ADD_NEW_MEMBER">
 
 
@@ -213,11 +236,12 @@
 
                             <section class="ADD_NEW_MEMBER_PIC ADD_PIC">
 
-                                <img id="preview_member_pic" src="img/backend/MENBER_PIC.svg"  class="ADD_PIC_IMG"/>
+                                <img id="preview_member_pic" src="img/backend/MENBER_PIC.svg" class="ADD_PIC_IMG" />
 
                                 <label for="member_pic" class="PIC_FILE_BOX">
                                     <input type="button" id="member_pic" value="上傳照片" class="BTN_BACK">
-                                    <input name="member_pic" type="file" id="member_pic" class="PIC_FILE" accept="image/gif, image/jpeg, image/png"/>
+                                    <input name="member_pic" type="file" id="member_pic" class="PIC_FILE"
+                                        accept="image/gif, image/jpeg, image/png" />
                                 </label>
 
                             </section>
@@ -233,7 +257,7 @@
                                         <input type="text" name="phone" id="phone">
                                     </label>
                                 </li>
-                                
+
                                 <li>
                                     <label for="email" class="INPUT">電子信箱<br>
                                         <input type="email" name="email" id="email">
@@ -263,13 +287,14 @@
 
                             <section class="ADD_NEW_PET_PIC ADD_PIC">
 
-                                <img id="preview_pet_pic" src="img/backend/PET_PIC.svg"  class="ADD_PIC_IMG"/>
+                                <img id="preview_pet_pic" src="img/backend/PET_PIC.svg" class="ADD_PIC_IMG" />
 
-                                <label for="member_pic" class="PIC_FILE_BOX" >
+                                <label for="member_pic" class="PIC_FILE_BOX">
                                     <input type="button" id="member_pic" value="上傳照片" class="BTN_BACK">
-                                    <input name="member_pic" type="file" id="member_pic" class="PIC_FILE" accept="image/gif, image/jpeg, image/png"/ >
+                                    <input name="member_pic" type="file" id="member_pic" class="PIC_FILE"
+                                        accept="image/gif, image/jpeg, image/png" />
                                 </label>
-                            
+
                             </section>
 
                             <ul class="ADD_NEW_PET_FORM">
@@ -326,8 +351,8 @@
 
                 </section>
 
-                
-                
+
+
             </section>
             <!-- 修改會員區塊"會更動區塊" -->
             <section class="BACK_MODIFY_MEMBER">
@@ -335,12 +360,12 @@
                 <h2>修改會員</h2>
 
                 <section class="MODIFY_MEMBER">
-                    
+
                     <!-- 修改會員 -->
                     <div class="BACK_BANNER">
                         <h3>修改會員</h3>
                     </div>
-                    
+
                     <section class="MODIFY_MEMBER_FORM">
 
 
@@ -348,11 +373,12 @@
 
                             <section class="ADD_NEW_MEMBER_PIC ADD_PIC">
 
-                                <img id="preview_member_pic" src="img/backend/MENBER_PIC.svg"  class="ADD_PIC_IMG"/>
+                                <img id="preview_member_pic" src="img/backend/MENBER_PIC.svg" class="ADD_PIC_IMG" />
 
                                 <label for="member_pic" class="PIC_FILE_BOX">
                                     <input type="button" id="member_pic" value="上傳照片" class="BTN_BACK">
-                                    <input name="member_pic" type="file" id="member_pic" class="PIC_FILE" accept="image/gif, image/jpeg, image/png"/ >
+                                    <input name="member_pic" type="file" id="member_pic" class="PIC_FILE"
+                                        accept="image/gif, image/jpeg, image/png" />
                                 </label>
 
                             </section>
@@ -368,7 +394,7 @@
                                         <input type="text" name="phone" id="phone">
                                     </label>
                                 </li>
-                                
+
                                 <li>
                                     <label for="email" class="INPUT">電子信箱<br>
                                         <input type="email" name="email" id="email">
@@ -386,7 +412,7 @@
 
                         </form>
                     </section>
-                    
+
                 </section>
             </section>
             <!-- 修改寵物區塊"會更動區塊" -->
@@ -407,13 +433,14 @@
 
                             <section class="ADD_NEW_PET_PIC ADD_PIC">
 
-                                <img id="preview_pet_pic" src="img/backend/PET_PIC.svg"  class="ADD_PIC_IMG"/>
+                                <img id="preview_pet_pic" src="img/backend/PET_PIC.svg" class="ADD_PIC_IMG" />
 
-                                <label for="member_pic" class="PIC_FILE_BOX" >
+                                <label for="member_pic" class="PIC_FILE_BOX">
                                     <input type="button" id="member_pic" value="上傳照片" class="BTN_BACK">
-                                    <input name="member_pic" type="file" id="member_pic" class="PIC_FILE" accept="image/gif, image/jpeg, image/png"/ >
+                                    <input name="member_pic" type="file" id="member_pic" class="PIC_FILE"
+                                        accept="image/gif, image/jpeg, image/png" />
                                 </label>
-                            
+
                             </section>
 
                             <ul class="ADD_NEW_PET_FORM">
@@ -469,14 +496,14 @@
                     </section>
                 </section>
 
-                
+
 
             </section>
             <!-- 新增預約彈窗 -->
             <section class="RESERVE_BOX">
                 <i class="bi bi-x-lg"></i>
                 <form action="get">
-        
+
                     <ul class="RESERVE_LIST">
                         <li>
                             <label for="reserve_type" class="SELECT">預約類型<br>
@@ -504,7 +531,7 @@
                             </label>
                         </li>
                         <li>
-                            <label for="reserve_date"  class="INPUT">預約日期<br>
+                            <label for="reserve_date" class="INPUT">預約日期<br>
                                 <input type="date" name="date" id="date">
                             </label>
                         </li>
@@ -555,22 +582,22 @@
                             </label>
                         </li>
                         <li>
-                            <label for="symptom_type" class="TEXTAREA" >病徵類型<br>
-                                <textarea name="symptom_type" id="symptom_type"cols="30" rows="10">請簡述寵物病情
+                            <label for="symptom_type" class="TEXTAREA">病徵類型<br>
+                                <textarea name="symptom_type" id="symptom_type" cols="30" rows="10">請簡述寵物病情
                                 </textarea>
                             </label>
                         </li>
-                        
+
                     </ul>
                     <button class="BTN_BACK" type="submit">新增病歷</button>
                 </form>
-        
+
             </section>
 
 
         </main>
     </section>
-    
+
 
 </body>
 
