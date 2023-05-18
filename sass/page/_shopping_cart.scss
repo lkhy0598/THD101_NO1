@@ -6,8 +6,48 @@
 
 //=========================================================================== 
 
+    .CART01_SLOGANALL{
+        width: 100%;
+        padding-top: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .J1{
+            &:hover{
+                transform: translateY(-20px);
+                transition: all .3s ease-in-out;
+            }
+        }
+
+        .J2{
+            &:hover{
+                transform: translateY(-20px);
+                transition: all .3s ease-in-out;
+            }
+        }
+
+        .JELLYFISH{
+            display: block;
+            padding-bottom: 30px;
+            transition: all .3s ease-in-out;
+        }
+
+        .SLOGAN01{
+            display: block;
+            margin: 0 20px;
+            transform: translateY(10px);
+            transition: all .3s ease-in-out;
+            &:hover{
+                transform: translateY(-10px);
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+
+
     .BREAD{
-        padding-top:361px ;
+        padding-top:53px ;
     }
 
     .SHOPPINGCART_LOGIN{
@@ -30,7 +70,7 @@
             display: block;
             width: 17%;
             height: 65px;
-            background-color: $blueblack;
+            background: $linear-darkblue;
             text-align: center;
             position: absolute;
             top: 0px;
@@ -39,10 +79,18 @@
             line-height: 62px;
             color: $white;
             font-size: $p;
+
+            &:hover{
+                background: $linear-darkblue-hover;
+            }
         }
     }
 
 // ============================================================================================
+
+.SHOPPINGCART_STEP{
+    margin-bottom: 200px;
+}
 
     .SHOPPINGCART_ITEMFORM{
         background-color: rgba(255, 255, 255, 0.5);
@@ -141,8 +189,5 @@
         }
     }
 
-    footer{
-        margin-top: 335px;
-    }
 
 }

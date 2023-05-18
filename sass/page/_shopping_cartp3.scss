@@ -6,11 +6,37 @@
     .PL{padding-left: 40px;}
     .PR{padding-right: 40px;}
 
+// ================================================
+
+.CART03_SLOGANALL{
+    width: 100%;
+    padding-top: 130px;
+
+    .DINO{
+        display: block;
+        margin: 0 auto;
+        background-image: url(../../img/shopping_cart/dino02.png);
+        animation:ANI3 5s steps(11,end) infinite; 
+        width: 400px;
+        height: 300px;
+        background-size: 4400px 300px;
+    }
+    @keyframes ANI3 {
+        0%{
+            background-position-x: 0px;
+        }
+    
+        100%{
+            background-position: -4400px;
+        }
+    }
+    }
+
 
 // ========================================
 
     .BREAD{
-        padding-top:361px ;
+        // padding-top:200px ;
         margin-bottom: 50px;
     }
 
@@ -63,6 +89,7 @@
 // ===========================================================
 
 .SHOPPINGCARTP2_ORDER{
+    margin-bottom: 35px;
     .SHOPPINGCARTP2_ORDERTEXT{
         width: 100%;
         background-color:rgba(255, 255, 255, 0.5);
@@ -91,6 +118,8 @@
                 width: 15px;
                 margin-left: 10px;
                 vertical-align: middle;
+                cursor: pointer;
+                transition: all .3s ease-in-out;
                 img{
                     width: 100%;
                     transform: rotate(90deg);
@@ -107,7 +136,8 @@
     border-radius: 0px;
     border: 0px;
     border-top: 1px solid $gray;
-    margin-bottom: 35px;
+    margin-bottom: 0;
+
 }
 
 // ======================================================================
