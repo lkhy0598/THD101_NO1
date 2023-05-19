@@ -18,8 +18,17 @@
     <header>
         <nav class="HEADER_NAV">
             <a href="index.html">
-                <img src="img/V-HEADER-LOGO-HOVER.svg" alt="" />
-                <img src="img/V-HEADER-LOGO.svg" alt="" />
+                <div class="HEADERLOGO_BG_BOX HEADERLOGE_BG_TOP">
+                    <div class="HEADERLOGO_PAW">
+                        <img src="./img/HEADERLOGO_PAW.svg" alt="">
+                        <div class="HEADERLOGO_CLAWS">
+                            <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="HEADER_LOGO_NAME">
+                        <img src="./img/HEADERLOGO_NAME.svg" alt="">
+                    </div>
+                </div>
             </a>
 
             <ul>
@@ -64,11 +73,17 @@
         <div class="DOT2"></div>
         <!-- 背景 -->
         <img class="BG" src="./img/BG.jpg" alt="">
+
         <!-- 背景雲裝飾 -->
-        <div class="QA_BG_CLOUDS">
-            <img class="BG_CLOUD" src="./img/CLOUD_BG.png" alt="">
-            <img class="BG_CLOUD" src="./img/CLOUD_BG.png" alt="">
+        <div class="BG_CLOUDS">
+            <div class="BG_CLOUD CLOUD_1">
+                <img class="BG_CLOUD_IMG1" src="./img/CLOUD_BG.png" alt="">
+            </div>
+            <div class="BG_CLOUD CLOUD_2">
+                <img class="BG_CLOUD_IMG2" src="./img/CLOUD_BG.png" alt="">
+            </div>
         </div>
+
         <!-- ===== 麵包屑 ===== -->
         <section class="MEMCENTOP">
             <section class="BREAD WRAPPER">
@@ -90,38 +105,37 @@
         <section class="WRAPPER">
             <!-- 導覽列 -->
             <ul class="QA_NAVS">
-                <li class="QA_TAB ">
-                    <a href="#QA_APPOINTMENT">
-                        <div class="QA_TAB_TITLE">
-                            <p>預約</p>
-                            <p>相關問題</p>
-                        </div>
-                    </a>
+                <li class="QA_TAB " onclick="smoothScrollTo('QA_APPOINTMENT')">
+
+                    <div class="QA_TAB_TITLE">
+                        <p>預約</p>
+                        <p>相關問題</p>
+                    </div>
+
                     <img src="./img/qa/QA_TITLEBG2.png" alt="">
                 </li>
-                <li class="QA_TAB ">
-                    <a href="#QA_MEMBER">
-                        <div class="QA_TAB_TITLE">
-                            <p>會員</p>
-                            <p>相關問題</p>
-                        </div>
-                    </a>
+                <li class="QA_TAB " onclick="smoothScrollTo('QA_MEMBER')">
+
+                    <div class="QA_TAB_TITLE">
+                        <p>會員</p>
+                        <p>相關問題</p>
+                    </div>
+
                     <img src="./img/qa/QA_TITLEBG2.png" alt="">
                 </li>
-                <li class="QA_TAB ">
-                    <a href="#QA_PET">
-                        <div class="QA_TAB_TITLE">
-                            <p>寵物</p>
-                            <p>相關問題</p>
-                        </div>
-                    </a>
+                <li class="QA_TAB " onclick="smoothScrollTo('QA_SHOPPING')">
+
+                    <div class="QA_TAB_TITLE">
+                        <p>購物</p>
+                        <p>相關問題</p>
+                    </div>
+
                     <img src="./img/qa/QA_TITLEBG2.png" alt="">
                 </li>
             </ul>
             <div class="QA_BOX">
                 <!-- 初診注意事項 -->
                 <div id="QA_FIRSTVISIT" class="FIRSTVISIT_BOX">
-                    <h2 class="FIRSTVISIT_TITLE">初診注意事項</h2>
                     <div class="FIRSTVISIT_ITEM">
                         <div class="ARC_TITLE">1</div>
                         <div class="FIRSTVISIT_DESC_BOX">
@@ -314,7 +328,7 @@
             </div>
             <!-- 寵物相關問題 -->
             <div class="QA_BOX">
-                <h2 id="QA_PET" class="QA_TITLE">購物相關問題：</h2>
+                <h2 id="QA_SHOPPING" class="QA_TITLE">購物相關問題：</h2>
 
                 <div class="ACCORDION_ITEM">
                     <div class="ACCORDION_TITLE_BOX">
@@ -424,46 +438,10 @@
         </footer>
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
+    <script src="top_btn.js"></script>
+    <script src="nav.js"></script>
+    <script src="qa.js"></script>
 
-            // QA索引跳轉 
-            $('.QA_NAVS li').click(function () {
-                // 初始化所有
-                $('.ACCORDION_TITLE_BOX').removeClass('ACC_TITLE_ACTIVE');
-                $('.ACCORDION_CONTENT_BOX').slideUp();
-
-                var tab_id = $(this).find('a').attr('href');
-                // 點選標籤跳轉到區塊並調整適合位置
-                setTimeout(function () {
-                    window.scrollBy(0, -200);
-                    // 手機板
-                    // if ($(window).width() <= 414) {
-                    //     window.scrollBy(0, -200);
-                    // } else {
-                    //     window.scrollBy(0, -200);
-                    // };
-                }, .5);
-            });
-
-            // QA手風琴
-            $('.ACCORDION_TITLE_BOX').click(function () {
-                // 先移除所有折疊面板標題的 active class，隱藏所有折疊面板內容
-                $('.ACCORDION_TITLE_BOX').removeClass('ACC_TITLE_ACTIVE');
-                $('.ACCORDION_CONTENT_BOX').slideUp();
-
-                // 如果點擊的折疊面板內容沒有顯示，則顯示內容，並將該標題的 active class 添加上
-                if (!$(this).next().is(':visible')) {
-                    $(this).addClass('ACC_TITLE_ACTIVE');
-                    $(this).next().slideDown();
-                }
-            });
-            // 手機板時禁用HOVER效果
-            if ($(window).width() <= 414) {
-                $('.ACCORDION_TITLE_BOX').off('mouseenter mouseleave');
-            };
-        });
-    </script>
 </body>
 
 </html>
