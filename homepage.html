@@ -33,44 +33,110 @@
         </ul>
       </div>
     <!-- ===============================header================================= -->
-    <header>
-      <nav class="HEADER_NAV">
-          <a href="homepage.html">
-              <img src="img/V-HEADER-LOGO-HOVER.svg" alt="" />
-              <img src="img/V-HEADER-LOGO.svg" alt="" />
-          </a>
+      <header>
 
+        <nav class="HEADER_NAV">
+    
+            <a href="homepage.html">
+                <div class="HEADERLOGO_BG_BOX HEADERLOGE_BG_TOP">
+                    <div class="HEADERLOGO_PAW">
+                        <img src="./img/HEADERLOGO_PAW.svg" alt="">
+                        <div class="HEADERLOGO_CLAWS">
+                            <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="HEADER_LOGO_NAME">
+                        <img src="./img/HEADERLOGO_NAME.svg" alt="">
+                    </div>
+                </div>
+            </a>
+    
+    
+            <ul>
+                <li>
+                    <a href="about_us.html"><span>關於院所</span><br>About Us</a>
+                </li>
+                <li>
+                    <a href="information.html"><span>資訊導覽</span><br>Information</a>
+                </li>
+                <li>
+                    <a href="shopping.html"><span>線上購物</span><br>Shopping</a>
+                </li>
+                <li>
+                    <a href="qa.html"><span>常見問題</span><br>Q & A</a>
+                </li>
+                <li>
+                    <a href="member_center.html"><span>會員中心</span><br>Member Centre</a>
+                </li>
+                <li>
+                    <a href="#" class="RESERVE">立即預約</a>
+                </li>
+                <li>
+                    <a href="#" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
+                </li>
+                <li>
+                    <a href="#"><i class="bi bi-cart-fill"></i></a>
+                </li>
+            </ul>
+            
+        </nav>
+
+
+
+
+        <nav class="M_HEADER_NAV">
+    
+          <a href="homepage.html">
+              <div class="M_HEADERLOGO_BG_BOX M_HEADERLOGE_BG_TOP">
+                  <div class="M_HEADERLOGO_PAW">
+                      <img src="./img/HEADERLOGO_PAW.svg" alt="">
+                      <div class="M_HEADERLOGO_CLAWS">
+                          <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
+                      </div>
+                  </div>
+                  <div class="M_HEADER_LOGO_NAME">
+                      <img src="./img/HEADERLOGO_NAME.svg" alt="">
+                  </div>
+              </div>
+          </a>
+  
+  
           <ul>
               <li>
-                  <a href="about_us.html"><span>關於院所</span><br />About Us</a>
+                  <a href="about_us.html"><span>關於院所</span><br>About Us</a>
               </li>
               <li>
-                  <a href="#"><span>資訊導覽</span><br />Information</a>
+                  <a href="information.html"><span>資訊導覽</span><br>Information</a>
               </li>
               <li>
-                  <a href="#"><span>線上購物</span><br />Shopping</a>
+                  <a href="shopping.html"><span>線上購物</span><br>Shopping</a>
               </li>
               <li>
-                  <a href="#"><span>常見問題</span><br />Q & A</a>
+                  <a href="qa.html"><span>常見問題</span><br>Q & A</a>
               </li>
               <li>
-                  <a href="#"><span>會員中心</span><br />Member Centre</a>
+                  <a href="member_center.html"><span>會員中心</span><br>Member Centre</a>
               </li>
+
               <li>
-                  <a href="#" class="RESERVE">立即預約</a>
-              </li>
-              <li>
+                <div class="LOGIN_SHOPPING">
                   <a href="#" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
-              </li>
-              <li>
                   <a href="#"><i class="bi bi-cart-fill"></i></a>
+                </div>
+              </li>
+           
+              <li>
+                <a href="#" class="RESERVE">立即預約</a>
               </li>
           </ul>
-          <div class="TOGGLE"><span></span></div>
-      </nav>
 
-     
-  </header>
+
+              
+              
+          <div id="TOGGLE" class="TOGGLE"><span></span></div>
+        </nav>
+    
+    </header>
     <!-- =================================MASTER_VISION====================================== -->
     <section class="CAROUSEL">
       <div class="MASTER_VISION"><img src="img/HEADER-TOP.png" alt="" /></div>
@@ -472,27 +538,28 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
  
     <script src="./top_btn.js"></script>
-    <!-- <script src="./sroll.js"></script> -->
+    <script src="./sroll.js"></script>
+    <script src="./nav.js"></script>
     <script>
       $(function(){
         $(".TOGGLE").click(function(){
             $('.TOGGLE > span').toggleClass('close');
             $('.TOGGLE').toggleClass('close');
-            $(".HEADER_NAV > ul").slideToggle();
-            $('.menu-icon').slideToggle();
+            $(".M_HEADER_NAV > ul").slideToggle();
+            
 
     
         });
       });
 
 
-      let boxes = document.querySelectorAll('.CONSULTATION_UL')
+      
 
       window.addEventListener('scroll', checkBoxes)
       checkBoxes();
       function checkBoxes() {
           let triggerBottom = window.innerHeight*0.8
-
+          let boxes = document.querySelectorAll('.CONSULTATION_UL');
           boxes.forEach(box => {
               const boxTop = box.getBoundingClientRect().top
 
@@ -502,7 +569,10 @@
                   box.classList.remove('show')
               }
           })
-      }
+      };
+
+      
+
 
 
     </script>

@@ -193,6 +193,9 @@
 }
 
 .BACK_NAV {
+  
+    
+    transition: all 0.3s ease;
     background-image: url("../../img/HEADER-BG.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -263,30 +266,167 @@
 
 @include m{
     //header nav設定
-    .HEADER_NAV {
+    .M_HEADER_NAV {
         background-image: url("");
-        background: linear-gradient(160deg, rgb(243, 145, 85, .95) 0%,  rgba(255, 185, 114, 0.95) 40%, rgba(126, 184, 196, 0.8) 100%);
+        background: linear-gradient(160deg, rgb(243, 145, 85, .9) 0%,  rgb(228, 170, 123, .9) 40%, rgba(126, 184, 196, 0.9) 80%, rgba(126, 184, 196, 0.8) 100%);
         z-index: 9999;
-      
-        & .RESERVE {
-           
-            margin: 0 auto;
-         
+        position: fixed;
+        width: 100%;
+        top: 0;
+        transition: all 0.3s ease;
+        > a {
+
+            .M_HEADERLOGO_BG_BOX {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $red;
+                display: flex;
+                flex-direction: column;
+                transition: all 0.3s ease;
+    
+                
+                img{
+                    width: 42px;
+                    
+                }
+
+                .M_HEADERLOGO_PAW {
+                    margin: 0;
+                    position: absolute;
+                    top: 5px;
+                    left: 13px;
+                    z-index: 1;
+                    transition: all 0.3s ease;
+
+                }
+    
+                .M_HEADERLOGO_CLAWS {
+                    display: none;
+    
+                }
+    
+                .M_HEADER_LOGO_NAME {
+                    position: absolute;
+                    top: 55px;
+                    left: 12px;
+                    margin: 10px auto;
+                    margin-top: 0;
+                    transition: all 0.4s ease;
+    
+                }
+    
+                // HEADER_LOGO_形變
+                .M_HEADERLOGO_S {
+                    top: 17px;
+                    left: 20px;
+                    transform: scale(1.1);
+                }
+    
+                .M_HEADERNAME_S {
+                    top: 41px;
+                    left: 102px;
+                    transform: scale(2.2);
+                }
+    
+    
+            }
+    
+            // HEADER_LOGO_BG形變
+            .M_HEADERLOGE_BG_TOP {
+                width: 74px;
+                height: 92px;
+                border-radius: 0 0 45px 0;
+            }
+    
+            .M_HEADERLOGE_BG_SCROLL {
+                width: 188px;
+                height: 92px;
+                border-radius: 0 0 30px 0;
+            }
+    
     
         }
-   
 
         >ul {
-            height: 100vh;
-            text-align: center;
-            padding-left: 0;
             
-
+            height: 100vh;
+            padding-top: 90px;
+            
+           
             >li {
                 
-                padding: 5px 0;
+                display: flex;
+                justify-content: center;
+                position: relative;
+                padding-bottom: 15px;
+                >a {
+                    text-decoration: none;
+                    margin: 20px 0;
+                    color: $white;
+                    display: block;
+                    font-size: 15px;
+    
+                    >span {
+                        font-size: $p;
+                        font-weight: 700;
+                        line-height: 1.35;
+                        letter-spacing: .1em;
+                       
+                    }
 
+                }
+
+                .LOGIN_SHOPPING{
+                    width: 120px;
+                    display: flex;
+                    justify-content: space-between;
+                    border: 1px solid;
+                    .LOGIN{
+                        font-size: $p;
+                        color: $white;
+                    }
+
+                    i{
+                        font-size: $p;
+                        color: $white;
+                    }
+                }
+
+                .RESERVE{
+                  
+                    background: $linear-orange;
+                    font-size: $p;
+                    border-radius: 10px;
+                    font-weight: 700;
+                    text-align: center;
+                    line-height: 50px;
+                    width: 90%;
+                    height: 50px;
+                    cursor: pointer;
+
+       
+                }
             }
+
+            > li:nth-child(1)::after , li:nth-child(2)::after ,li:nth-child(3)::after, li:nth-child(4)::after, li:nth-child(5)::after{
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    color: $white;
+                    width: 120px;
+                    border: 1px solid;
+                    bottom: 10px;
+                    left: 50%;
+                    transform: translate(-50%);
+                    
+            }
+            
+        
+    
+    
+        
         }
     }
+
 }

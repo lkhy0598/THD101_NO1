@@ -34,3 +34,52 @@ $(document).ready(function () {
         }
     });
 });
+
+
+
+
+
+
+
+
+
+// ========= RWD nav ==========
+$(document).ready(function () {
+  
+        $(".TOGGLE").click(function(){
+            
+            console.log("ta");
+           if ($("#TOGGLE").css("display", "block") ){
+                $('.M_HEADER_NAV')
+                    .removeClass('M_HEADER_NAV_SHADOW ');
+
+                $('.M_HEADERLOGO_BG_BOX')
+                .addClass('M_HEADERLOGE_BG_TOP ')
+                .removeClass('M_HEADERLOGE_BG_SCROLL ');
+
+                $('.M_HEADERLOGO_PAW')
+                    .removeClass('M_HEADERLOGO_S ');
+
+                $('.M_HEADER_LOGO_NAME')
+                    .removeClass('M_HEADERNAME_S ');
+           } else {
+                // 導覽列陰影
+                $('.M_HEADER_NAV')
+                .addClass('M_HEADER_NAV_SHADOW ');
+                // LOGO形變
+                $('.M_HEADERLOGO_BG_BOX')
+                .addClass('M_HEADERLOGE_BG_SCROLL ')
+                .removeClass('M_HEADERLOGE_BG_TOP ');
+
+                $('.M_HEADERLOGO_PAW')
+                .addClass('M_HEADERLOGO_S ');
+
+                $('.M_HEADER_LOGO_NAME')
+                .addClass('M_HEADERNAME_S ');
+           }
+         
+            
+
+        });
+
+});
