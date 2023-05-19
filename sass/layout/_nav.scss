@@ -1,4 +1,8 @@
+
 //header nav設定
+.HEADER_NAV_SHADOW {
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.1);
+}
 .HEADER_NAV {
     background-image: url("../../img/HEADER-BG.jpg");
     background-repeat: no-repeat;
@@ -7,22 +11,98 @@
     width: 100%;
     z-index: 99;
     top: 0;
+    transition: all 0.3s ease;
+
+
 
     a {
-        
-        img {
-            width: 12.5%;
+
+        .HEADERLOGO_BG_BOX {
             position: absolute;
             top: 0;
             left: 0;
+            background-color: $red;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+
+            &:hover .HEADERLOGO_PAW .HEADERLOGO_CLAWS {
+                top: 0;
+            }
+
+            .HEADERLOGO_PAW {
+                margin: 10px auto;
+                position: absolute;
+                top: 0px;
+                left: 45px;
+                z-index: 1;
+                transition: all 0.3s ease;
+            }
+
+            .HEADERLOGO_CLAWS {
+                position: absolute;
+                top: 45px;
+                left: 0px;
+                z-index: -1;
+                transition: all 0.3s ease;
+
+            }
+
+            .HEADER_LOGO_NAME {
+                position: absolute;
+                top: 220px;
+                left: 45px;
+                margin: 10px auto;
+                margin-top: 0;
+                transition: all 0.3s ease;
+
+            }
+
+            // HEADER_LOGO_形變
+            .HEADERLOGO_S {
+                top: -60px;
+                left: -40px;
+                transform: scale(.4);
+            }
+
+            .HEADERNAME_S {
+                top: 20px;
+                left: 80px;
+                transform: scale(.8);
+            }
+
+
         }
 
-        &:hover img[src="img/V-HEADER-LOGO.svg"] {
-            opacity: 0;
-            transition: all .1s;
+        // HEADER_LOGO_BG形變
+        .HEADERLOGE_BG_TOP {
+            width: 260px;
+            height: 360px;
+            border-radius: 0 0 125px 0;
         }
+
+        .HEADERLOGE_BG_SCROLL {
+            width: 260px;
+            height: 105px;
+            border-radius: 0 0 50px 0;
+        }
+
+        // img {
+        //     width: 12.5%;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        // }
+
+        // &:hover img[src="img/V-HEADER-LOGO.svg"] {
+        //     opacity: 0;
+        //     transition: all .1s;
+        // }
 
     }
+
+
+
 
     >ul {
         // width: 85%;

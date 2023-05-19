@@ -18,8 +18,17 @@
     <header>
         <nav class="HEADER_NAV">
             <a href="index.html">
-                <img src="img/V-HEADER-LOGO-HOVER.svg" alt="" />
-                <img src="img/V-HEADER-LOGO.svg" alt="" />
+                <div class="HEADERLOGO_BG_BOX HEADERLOGE_BG_TOP">
+                    <div class="HEADERLOGO_PAW">
+                        <img src="./img/HEADERLOGO_PAW.svg" alt="">
+                        <div class="HEADERLOGO_CLAWS">
+                            <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="HEADER_LOGO_NAME">
+                        <img src="./img/HEADERLOGO_NAME.svg" alt="">
+                    </div>
+                </div>
             </a>
 
             <ul>
@@ -415,23 +424,8 @@
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="top_btn.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.INFORMATION_NAVS li:first-child').addClass('INFORTAB_ACTIVE');
-            $('.INFORMATION_BOX ul:first-child').addClass('INFORACTIVE');
-
-            $('.INFORMATION_NAVS li').click(function (e) {
-                e.preventDefault();
-                var tab_id = $(this).find('a').attr('href');
-
-                $('.INFORMATION_NAVS li').removeClass('INFORTAB_ACTIVE');
-                $('.INFORMATION_BOX ul').removeClass('INFORACTIVE');
-
-                $(this).addClass('INFORTAB_ACTIVE');
-                $(tab_id).addClass('INFORACTIVE');
-            });
-        });
-    </script>
+    <script src="nav.js"></script>
+    <script src="infor.js"></script>
 </body>
 
 </html>
