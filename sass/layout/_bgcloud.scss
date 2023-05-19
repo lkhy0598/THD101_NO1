@@ -1,0 +1,52 @@
+// 背景雲裝飾
+.BACKGROUND {
+    box-sizing: border-box;
+    overflow: hidden;
+    background-image: none;
+    position: relative;
+
+    .BG {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+    }
+
+    .BG_CLOUDS {
+        .BG_CLOUD {
+            width: 100%;
+            position: absolute;
+            z-index: -1;
+            animation: move 3s 0s infinite;
+
+            @include m() {}
+        }
+
+        @keyframes move {
+
+            0% {
+                transform: rotate(-3deg);
+                animation-timing-function: ease;
+
+            }
+
+
+            50% {
+                transform: rotate(3deg);
+                animation-timing-function: ease-in-out;
+
+            }
+
+
+            100% {
+                transform: rotate(-3deg);
+                animation-timing-function: ease;
+
+            }
+
+        }
+    }
+}
+
