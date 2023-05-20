@@ -16,6 +16,16 @@
 
     animation: MASTERVISIONIMG 80s ease-in-out infinite;
 
+    @include m {
+        background-image: url('/img/shopping/SHOPPING_M_BG1.jpg');
+        border-radius: 0px;
+        width: 100%;
+        height: 736px;
+        margin-top: 0px;
+
+        animation: MASTERVISIONIMG_M 60s ease-in-out infinite;
+    }
+
 
 
     .MASTERVISIONTEXT1{
@@ -31,6 +41,9 @@
 
 
         animation: MASTERVISIONTEXT1 80s ease-in-out 3s infinite;
+        @include m{
+            display: none;
+        }
     }
 
     .MASTERVISIONTEXT3{
@@ -46,12 +59,19 @@
 
 
         animation: MASTERVISIONTEXT3 80s ease-in-out infinite;
+        @include m{
+            display: none;
+        }
     }
 
 
     img {
         width: 100%;
         height: 830px;
+
+        @include m {
+            display: none;
+        }
     }
 
 }
@@ -109,6 +129,42 @@
     
 }
 
+@keyframes MASTERVISIONIMG_M {
+    0%{
+        background-image: url(../../img/shopping/SHOPPING_M_BG1.jpg);
+    }
+
+    23%{
+        background-image: url(../../img/shopping/SHOPPING_M_BG1.jpg);
+    }
+    
+    25%{
+        background-image: url(../../img/shopping/SHOPPING_M_BG2.jpg);
+
+    }
+
+    48%{
+        background-image: url(../../img/shopping/SHOPPING_M_BG2.jpg);
+    }
+
+    50%{
+        background-image: url(../../img/shopping/SHOPPING_M_BG3.jpg);
+    }
+
+    73%{
+        background-image: url(../../img/shopping/SHOPPING_M_BG3.jpg);
+    }
+
+    75%{
+        background-image: url(../../img/shopping/SHOPPING_M_BG4.jpg);
+    }
+
+    98%{
+        background-image: url(../../img/shopping/SHOPPING_M_BG4.jpg);
+    }
+    
+}
+
 
 .DOT{
     position: absolute;
@@ -149,6 +205,9 @@
     background-size: cover;
     width: 100%;
     height: 800px;
+    @include m {
+        height: 650px;
+    }
 }
 
 .SMALL_TITLE{
@@ -167,6 +226,12 @@
         right: 220px;
         margin: 0;
         padding: 0  ;
+
+        @include m {
+            transform: scale(.55);
+            bottom: -92px;
+            right: -87px;
+        }
     }
 
     @keyframes ANI4 {
@@ -189,7 +254,13 @@
         bottom: -26px;
         right: 80px;
         margin: 0;
-        padding: 0  ;
+        padding: 0 ;
+
+        @include m {
+            transform: scale(.55);
+            right: -37px;
+            bottom: 53px;
+        }
     }
 
     @keyframes ANI5 {
@@ -203,13 +274,32 @@
     }
 }
 
-.SHOPPINGCARDAREA_UL{
-    display: flex;
-    justify-content: space-around;
+.swiper-button-prev{
+    top: var(--swiper-navigation-top-offset,38%);
+    left: 5px;
+    color: $orange;
+    font-weight: 600;
+    @include m {
+        display: none;
+    }
+
 }
 
+.swiper-button-next{
+    top: var(--swiper-navigation-top-offset,38%);
+    color: $orange;
+    right: 5px;
+    font-weight: 600;
+    @include m {
+        display: none;
+    }
+
+}
+
+
+
 .SHOPPINGCARDBTN{
-    margin-top: 60px;
+    margin-top: 70px;
     width: 320px;
     top: 50%;
     left:50%;
@@ -221,14 +311,25 @@
 .SHOPPINGSELECT{
     box-sizing: border-box;
     padding: 0 135px;
-    padding-top: 130px;
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    @include m {
+        display: block;
+        padding: 0px;
+        padding-top: 40px;
+    }
 }
 
 .SELECT{
-    margin-right: 60px;
+    display: block;
+    width: 34%;
+    @include m {
+        width: 100%;
+    }
 }
 .SELECTOP{
-    width: 350px;
+    width: 100%;
     font-weight: 600;
 }
 
@@ -242,10 +343,31 @@ select option{
     font-weight: 600;
 }
 
+.SEARCH_ALL_M{
+    display: none;
+    position: relative;
+    @include m {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .SEARCHBTN_ALL{
+        position: absolute;
+        top:16%;
+        right: 0px;
+        z-index: 10;
+        width: 20%;
+    }
+}
+
 .SEARCH_ALL{
     position: relative;
-    display: inline-block;
+    display: block;
     width: 63%;
+
+    @include m {
+        display: none;
+    }
 }
 
 
@@ -268,6 +390,10 @@ select option{
     color: #FFF;
     z-index: 5;
     margin-right: 10px;
+
+    @include m {
+        margin: 0px;
+    }
 }
 
 
@@ -289,6 +415,11 @@ select option{
     box-sizing: border-box;
     padding: 0 135px;
     padding-top: 100px;
+
+    @include m {
+        padding: 0px;
+        padding-top: 30px;
+    }
 }
 
 .SHOPPINGITEM_UL{
@@ -305,10 +436,23 @@ select option{
     padding: 0 10px;
     // margin-right: 110px;
     // flex-basis: 321.41px;
+
+    @include m {
+        margin-bottom: 0px;
+    }
 }
 
 .SHOPPINGITEM_UL li:nth-child(3n){
     margin-right: 0px;
+    @include m {
+        margin-right: 10px;
+    }
+}
+
+@include m {
+    .SHOPPINGITEM_UL li:nth-child(2n){
+        margin-right: 0px;
+    }
 }
 
 .PGAENUMBER{
@@ -316,6 +460,11 @@ select option{
     margin-bottom: 200px;
     display: flex;
     justify-content:center;
+
+    @include m {
+        margin-bottom: 0px;
+        padding-bottom: 200px;
+    }
 }
 
 .PGAENUMBER span{

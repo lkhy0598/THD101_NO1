@@ -43,12 +43,20 @@
                 background-position: -900px;
             }
         }
+
+        @include m {
+            display: none;
+        }
     }
 
 // ======================================
 
     .BREAD{
         padding-top:14px ;
+
+        @include m {
+            padding-top: 53px;
+        }
     }
 
     .SHOPPINGCART_STEP{
@@ -65,6 +73,14 @@
             p{
                 font-weight: 700;
             }
+        }
+    }
+
+    @include m {
+        div.ARC_TITLE{
+            width: 65px;
+            height: 65px;
+            line-height: 65px;
         }
     }
 
@@ -134,10 +150,22 @@
 
         .SHOPPINGCARTP2_TEXT--TOP{
             display: flex;
+
+            @include m {
+                display: block;
+            }
         }
 
         .SHOPPINGCARTP2_TEXT--BOTTOM{
-        display: flex;
+            display: flex;
+
+            @include m {
+                display: block;
+
+                :first-child{
+                    margin-bottom: 25px;
+                }
+            }
         }
 
 
@@ -152,6 +180,10 @@
                 overflow: hidden;
                 width: 100%;
                 padding-bottom: 30px;
+
+                @include m {
+                    padding-bottom: 25px;
+                }
 
                 .SHOPPINGCARTP2_STEPTEXT--TITLE{
                     width: 100%;
@@ -172,6 +204,10 @@
                         color: $blueblack;
                         font-size: $p;
                         margin-left: 40px;
+
+                        @include m {
+                            margin-left: 20px;
+                        }
                     }
                 }
 
@@ -179,6 +215,10 @@
                     padding:0 40px;
                     margin-top: 25px;
                     position: relative;
+
+                    @include m {
+                        padding:  0 20px;
+                    }
             
                     .INPUT{
                         font-size: $littleword;
@@ -216,7 +256,11 @@
                         font-weight: 300;
                         .TEXTAREA_CONTENT{
                             width: 100%;
-                            height: 288px
+                            height: 288px;
+
+                            @include m {
+                                height: 383px;
+                            }
                         }
                     }
 
@@ -227,6 +271,10 @@
                         position: absolute;
                         top: -4px;
                         right: 45px;
+
+                        @include m {
+                            right: 25px;
+                        }
 
                         input{
                             visibility: hidden; /* 把原本的input藏起來 */
@@ -270,6 +318,10 @@
                     margin-top: 25px;
                     font-size: $littleword;
                     font-weight: 300;
+
+                    @include m {
+                        padding: 0 20px;
+                    }
                 }
 
                 .SHOPPINGCARTP2_STEPTEXT--HALF{
@@ -277,6 +329,11 @@
                     flex-wrap: wrap;
                     justify-content: space-between;
                     padding: 0 40px;
+
+                    @include m {
+                        display: block;
+                        padding: 0 20px;
+                    }
 
                     .SHOPPINGCARTP2_STEPTEXT--HALFINPUT{
                         margin-top: 25px;
@@ -295,6 +352,10 @@
                                 font-weight: 400;
                             }
                         }
+
+                        @include m {
+                            width: 100%;
+                        }
                     }
                 }
             
@@ -312,6 +373,10 @@
         border-top: 1px solid $gray;
         border-bottom: 1px solid $gray;
         margin-bottom: 120px;
+        
+        @include m {
+            height: 100px;
+        }
 
         section{
             height: 160px;
@@ -319,6 +384,11 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            @include m {
+                padding: 0 20px;
+                height: 100px;
+            }
 
             a{
                 font-size: $littleword;
@@ -337,6 +407,10 @@
             .BTN{
                 width: 306px;
                 font-weight: 700;
+
+                @include m {
+                    width: 160px;
+                }
             }
         }
     }

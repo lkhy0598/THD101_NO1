@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href='css/style.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <title>商品介紹 SHOPPING_LIST</title>
 </head>
 
 <body class="SHOPPINGLIST">
     <!-- ===============================header================================= -->
-    <header>
+    <!-- <header>
 
         <nav class="HEADER_NAV">
 
@@ -50,7 +51,7 @@
 
         </nav>
 
-    </header>
+    </header> -->
 
     <!-- ======================================麵包屑========================================== -->
 
@@ -65,35 +66,27 @@
     <!-- ======================================商品頁上方========================================== -->
 
     <section class="WRAPPER SHOPPINGLIST_TOP">
-        <section class="SHOPPINGLIST_SMALLIMG COL-1">
+        <section class="SHOPPINGLIST_SMALLIMG COL-1 RWD-COL-12">
             <section>
-                <span>
                     <img src="./img/shopping_list/can/01/can_01_01.jpg" alt="">
-                </span>
             </section>
             <section>
-                <span>
                     <img src="./img/shopping_list/can/01/can_01_02.jpg" alt="">
-                </span>
             </section>
             <section>
-                <span>
                     <img src="./img/shopping_list/can/01/can_01_03.jpg" alt="">
-                </span>
             </section>
             <section>
-                <span>
                     <img src="./img/shopping_list/can/01/can_01_04.jpg" alt="">
-                </span>
             </section>
         </section>
-        <section class="COL-6 SHOPPINGLIST_BIGIMG">
+        <section class="COL-6 SHOPPINGLIST_BIGIMG RWD-COL-12">
             <span class="SHOPPINGLIST_MAGNIFIER"></span>
             <section class="SHOPPINGLIST_IMG">
                 <img src="./img/shopping_list/can/01/can_01_01.jpg" alt="">
             </section>
         </section>
-        <section class="COL-5 SHOPPINGLIST_TOPTEXT">
+        <section class="COL-5 SHOPPINGLIST_TOPTEXT RWD-COL-12">
             <h2>耐吉斯 源野獵食客主食罐 犬用(全雞+鮭魚肉絲派佐薑黃) 85g</h2>
             <h1>NT$ 53</h1>
             <h3>數量（庫存：5）</h3>
@@ -125,11 +118,11 @@
                     <img src="./img/shopping_list/food.png" alt="">
                 </span>
             </section>
-            
+
         </section>
-        <section class="SHOPPINGCARDAREA WRAPPER">
-            <ul class="SHOPPINGCARDAREA_UL">
-                <li class="SHOPPINGCARD COL-3">
+        <section class="SHOPPINGCARDAREA WRAPPER swiper mySwiper">
+            <ul class="SHOPPINGCARDAREA_UL swiper-wrapper">
+                <li class="SHOPPINGCARD  swiper-slide">
                     <section class="SHOPPINGCARD_IMG">
                         <span>
                             <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -144,7 +137,7 @@
                     </a>
                     <P class="SHOPPINGCARD_PRICE">$53</P>
                 </li>
-                <li class="SHOPPINGCARD COL-3">
+                <li class="SHOPPINGCARD  swiper-slide">
                     <section class="SHOPPINGCARD_IMG">
                         <span>
                             <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -159,7 +152,7 @@
                     </a>
                     <P class="SHOPPINGCARD_PRICE">$58</P>
                 </li>
-                <li class="SHOPPINGCARD COL-3">
+                <li class="SHOPPINGCARD  swiper-slide">
                     <section class="SHOPPINGCARD_IMG">
                         <span>
                             <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -174,7 +167,7 @@
                     </a>
                     <P class="SHOPPINGCARD_PRICE">$1,380</P>
                 </li>
-                <li class="SHOPPINGCARD COL-3">
+                <li class="SHOPPINGCARD  swiper-slide">
                     <section class="SHOPPINGCARD_IMG">
                         <span>
                             <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -189,7 +182,71 @@
                     </a>
                     <P class="SHOPPINGCARD_PRICE">$1,380</P>
                 </li>
+                <li class="SHOPPINGCARD  swiper-slide">
+                    <section class="SHOPPINGCARD_IMG">
+                        <span>
+                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
+                            <p>加入購物車</p>
+                        </span>
+                        <a href="#" class="CARDLINK">
+                            <img src="/img/shopping_list/dryfood/07/dryfood_07_01.jpg" alt="">
+                        </a>
+                    </section>
+                    <a href="#" class="CARDLINK">
+                        <p class="SHOPPINGCARD_TITLE">【SC星益生趣】冷凍乾燥狗狗生食佐餐(鮭魚鱈魚) 3.5oz/99g</p>
+                    </a>
+                    <P class="SHOPPINGCARD_PRICE">$720</P>
+                </li>
+                <li class="SHOPPINGCARD  swiper-slide">
+                    <section class="SHOPPINGCARD_IMG">
+                        <span>
+                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
+                            <p>加入購物車</p>
+                        </span>
+                        <a href="#" class="CARDLINK">
+                            <img src="/img/shopping_list/can/08/can_08_01.jpg" alt="">
+                        </a>
+                    </section>
+                    <a href="#" class="CARDLINK">
+                        <p class="SHOPPINGCARD_TITLE">MDARYN麥德琳 喵樂-肉食控主食罐(嫩雞鮪魚) 80g</p>
+                    </a>
+                    <P class="SHOPPINGCARD_PRICE">$58</P>
+                </li>
+                <li class="SHOPPINGCARD  swiper-slide">
+                    <section class="SHOPPINGCARD_IMG">
+                        <span>
+                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
+                            <p>加入購物車</p>
+                        </span>
+                        <a href="#" class="CARDLINK">
+                            <img src="/img/shopping_list/healthy/04/healthy_04_01.jpg" alt="">
+                        </a>
+                    </section>
+                    <a href="#" class="CARDLINK">
+                        <p class="SHOPPINGCARD_TITLE">沛威狗保健-膚健康 30入/盒</p>
+                    </a>
+                    <P class="SHOPPINGCARD_PRICE">$1,280</P>
+                </li>
+                <li class="SHOPPINGCARD  swiper-slide">
+                    <section class="SHOPPINGCARD_IMG">
+                        <span>
+                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
+                            <p>加入購物車</p>
+                        </span>
+                        <a href="#" class="CARDLINK">
+                            <img src="/img/shopping_list/healthy/06/healthy_06_01.jpg" alt="">
+                        </a>
+                    </section>
+                    <a href="#" class="CARDLINK">
+                        <p class="SHOPPINGCARD_TITLE">沛威貓保健-好胃口益生菌 30入/盒</p>
+                    </a>
+                    <P class="SHOPPINGCARD_PRICE">$1,380</P>
+                </li>
             </ul>
+            </div class="swiper-button">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            </div>
         </section>
 
     </section>
@@ -211,7 +268,8 @@
 ‧採用天然寒天，不含瓜爾膠、卡拉膠等爭議膠類
 
 <b>全雞+鮭魚肉絲派佐薑黃（成犬 / 熟齡犬）</b>
-使用完整全雞營養：以高品質全雞（鮮肉+內臟+軟骨 / 骨骼）打造全面完整的營養，充分模擬野外獵食情境，還原貓狗原始飲食天性。搭配鮭魚、鮪魚、羊肉、綠貽貝等優質肉類食材，打造 98%高動物性蛋白含量，增加飲食豐富性。
+使用完整全雞營養：以高品質全雞（鮮肉+內臟+軟骨 / 骨骼）打造全面完整的營養，充分模擬野外獵食情境，還原貓狗原始飲食天性。搭配鮭魚、鮪魚、羊肉、綠貽貝等優質肉類食材，打造
+98%高動物性蛋白含量，增加飲食豐富性。
 
 <b>成份：</b>
 去骨鮮雞肉、鮮雞肉骨、鮮雞蛋、鮮鮭魚、鮮雞肝、天然纖維素、鮮雞心、奇亞籽、天然風味劑、寒天、豌豆蛋白、葵花籽油、雞脂肪、氯化膽鹼、寡醣、薑黃、綜合礦物質、綜合維生素
@@ -234,15 +292,14 @@
 
 <b>品牌簡介：</b>
 源野獵食新主張 FULL SOURCE：天然全肉骨
-貓狗生為肉食性動物，他們的野生始祖是天生的獵食者，在野外獲取獵物時，會將獵物的鮮肉、內臟同時攝取，甚至會將部分的骨骼 /
-軟骨也一起攝入，以達到最均衡、最完整好吸收的營養。耐吉斯源野獵食客正是主打「回歸貓狗原始自然習性」，將全雞精華都融入主食罐中，完整模擬野外狩獵情境，釋放貓狗天生原始食性。並採用多種不同肉種搭配超級食物，以綿密慕斯與嫩切肉絲打造豐富口感與層次。
+貓狗生為肉食性動物，他們的野生始祖是天生的獵食者，在野外獲取獵物時，會將獵物的鮮肉、內臟同時攝取，甚至會將部分的骨骼 /軟骨也一起攝入，以達到最均衡、最完整好吸收的營養。耐吉斯源野獵食客正是主打「回歸貓狗原始自然習性」，將全雞精華都融入主食罐中，完整模擬野外狩獵情境，釋放貓狗天生原始食性。並採用多種不同肉種搭配超級食物，以綿密慕斯與嫩切肉絲打造豐富口感與層次。
 
 <b>適用對象：全年齡犬皆適用</b>
 注意事項：開罐後請倒出餵食，剩餘部分請密封冷藏可保存1-2日
 保存方式：開封前請存放於乾燥陰涼處，若有膨罐請勿食用
 規格：85g或160g
-產地：泰國
-            </p>
+產地：泰國</p>
+            
             <img src="img/shopping_list/can/01/can_01_content.jpg" alt="">
         </section>
 
@@ -250,11 +307,11 @@
 
     <!-- ===============================回到TOP================================================ -->
 
-<button id="js-top" class="TOP_BTN"></button>
+    <!-- <button id="js-top" class="TOP_BTN"></button> -->
 
     <!-- ==================================FOOTER================================================= -->
 
-    <footer>
+    <!-- <footer>
         <div class="FOOTER_LOGO">
             <img src="img/H-LOGO.svg" alt="">
         </div>
@@ -305,12 +362,56 @@
     </footer>
     <div class="FOOTER_BOTTOM">
         <p>Copyright © 本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。</p>
-    </div>
+    </div> -->
 
 
     </section>
 
     <script src="top_btn.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            centeredSlides: false,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: true
+        });
+
+    </script>
+    <script>
+
+        $(function(){
+        let viewport = $(window).width();
+        if(viewport <= 414){
+        
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 2,
+                centeredSlides: false,
+                spaceBetween: 15,
+                freeMode: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "fraction",
+                },
+                loop: true
+                });
+        
+        
+        
+        
+            }
+        });
+    </script>
 
 </body>
 

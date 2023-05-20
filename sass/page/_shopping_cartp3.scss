@@ -3,8 +3,18 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    .PL{padding-left: 40px;}
-    .PR{padding-right: 40px;}
+    .PL{
+        padding-left: 40px;
+        @include m {
+            padding-left: 0px;
+        }
+    }
+    .PR{
+        padding-right: 40px;
+        @include m {
+            padding-right: 0px;
+        }
+    }
 
 // ================================================
 
@@ -30,6 +40,10 @@
             background-position: -4400px;
         }
     }
+
+    @include m {
+        transform: scale(.93);
+    }
     }
 
 
@@ -46,6 +60,7 @@
         .SHOPPINGCART_STEPAREA--SUCCESS{
             display: flex;
             justify-content: center;
+            align-items: center;
             margin-bottom: 75px;
 
             img{
@@ -85,6 +100,15 @@
             }
         }
     }
+
+    @include m {
+        div.ARC_TITLE{
+            width: 65px;
+            height: 65px;
+            line-height: 65px;
+        }
+    }
+
 
 // ===========================================================
 
@@ -147,10 +171,14 @@
     border-radius: 10px;
     border: 1px solid $gray;
     overflow: hidden;
-    width: 100%;
+    // width: 100%;
     padding-bottom: 130px;
-    margin-bottom: 300px;
+    margin-bottom: 200px;
     position: relative;
+
+    @include m {
+        padding-bottom: 110px;
+    }
 
     .SHOPPINGCARTP3_CONFIRMTITLE{
         width: 100%;
@@ -178,12 +206,31 @@
         
 
         .SHOPPINGCARTP3_CONFIRM--T{
+
+            @include m {
+                margin-top: 50px  ;
+                position: relative;
+            &::before{
+                content: '';
+                height: 1px;
+                width: 100%;
+                background-color: $gray;
+                position: absolute;
+                top: -25px;
+                left: 0px;
+            }
+            }
+
             span{
                 display: block;
                 font-size: $littleword;
                 font-weight: 400;
                 color: $blueblack;
                 margin-top: 25px;
+
+                @include m {
+                    margin-top: 0px;
+                }
             }
 
             .SHOPPINGCARTP3_CONFIRM--CONTENT{
@@ -196,15 +243,50 @@
                         font-size: $littleword;
                         font-weight: 300;
                         margin-top: 15px;
+
+                        @include m {
+                            font-size: 1.7rem;
+                        }
+                    }
+                }
+
+                @include m {
+
+                    margin-top: 0px;
+
+                    .SHOPPINGCARTP3_CONFIRM--TIT{
+                        width: 40%;
+                    }
+
+                    .SHOPPINGCARTP3_CONFIRM--CON{
+                        width: 60%;
+                        text-align: right;
                     }
                 }
             }
 
         }
+        @include m {
+            display: block;
+            padding: 0 20px;
+            .FIR{
+                margin-top: 25px;
+                &::before{
+                    position: inherit;
+                }
+            }
+        }
     }
+
+
     .CONFIRMZONE_DOWN{
         padding-bottom: 45px;
         margin-top: 20px;
+
+        @include m {
+            margin-top: 0px;
+            padding-bottom: 25px;
+        }
 
         .SHOPPINGCARTP3_CONFIRM--T{
             position: relative;
@@ -216,6 +298,10 @@
                 position: absolute;
                 top: 0px;
                 left: 0px;
+
+                @include m {
+                    top: -25px;
+                }
             }
         }
 
@@ -231,6 +317,10 @@
             background-color: $gray;
             position: absolute;
             top: -25px;
+
+            @include m {
+                width: 90%;
+            }
         }
         section{
             padding:0 40px;
@@ -245,6 +335,14 @@
                     
                 }
             }
+
+            @include m {
+                padding: 0px;
+            }
+        }
+
+        @include m {
+            padding: 0 20px;
         }
         
     }
@@ -257,6 +355,19 @@
         bottom: 35px;
         .BTN{
             width: 180px;
+
+            @include m {
+                width: 100%;
+            }
+        }
+
+        @include m {
+            display: block;
+            width: 100%;
+            right: 0px;
+            bottom: 25px;
+            padding: 0 20px;
+            box-sizing: border-box;
         }
     }
 

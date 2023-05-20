@@ -263,6 +263,10 @@
             color: $blueblack;
             font-size: $p;
             margin-left: 40px;
+
+            @include m {
+                margin-left: 20px;
+            }
         }
     }
 
@@ -277,17 +281,24 @@
                 width: 100%;
                 color: $blueblack;
                 font-weight: 400;
+                box-sizing: border-box;
 
                 option{
                     color: $blueblack;
                     font-weight: 400;
                 }
+
             }
             ::placeholder{
                 color: $blueblack;
                 font-weight: 400;
             }
         }
+
+        @include m {
+            padding: 0 20px;
+        }
+
     }
 
     
@@ -344,6 +355,13 @@
                 top: 40px;
                 left: -170px;
                 z-index: -1;
+
+                @include m {
+                    height: 4px;
+                    width: 120%;
+                    left: -82px;
+                    top: 33px;
+                }
             }
             &::after{
                 content:'';
@@ -355,6 +373,17 @@
                 top: 40px;
                 right: -170px;
                 z-index: -1;
+
+                @include m {
+                    height: 4px;
+                    width: 120%;
+                    top: 33px;
+                    right: -82px;
+                }
+            }
+
+            @include m {
+                margin: 0 65px;
             }
         }
 

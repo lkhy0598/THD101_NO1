@@ -43,6 +43,10 @@
                 transition: all .3s ease-in-out;
             }
         }
+
+        @include m {
+            display: none;
+        }
     }
 
 
@@ -64,6 +68,12 @@
             color: $blueblack;
             line-height: 62px;
             padding: 0 40px;
+
+            @include m {
+                padding:  20px 20px;
+                line-height: 36px;
+            }
+
         }
 
         span{
@@ -83,6 +93,15 @@
             &:hover{
                 background: $linear-darkblue-hover;
             }
+
+            @include m {
+                position: inherit;
+                width: 100%;
+            }
+        }
+
+        @include m {
+            height: auto;
         }
     }
 
@@ -90,6 +109,10 @@
 
 .SHOPPINGCART_STEP{
     margin-bottom: 200px;
+
+    .SHOPPINGCART_STEPAREA{
+        width: 100%;
+    }
 }
 
     .SHOPPINGCART_ITEMFORM{
@@ -120,6 +143,11 @@
         display: flex;
         height: 629px;
 
+        @include m {
+            display: block;
+            height: auto;
+        }
+
 
         .SHOPPINGCART_STEPONETEXT--LEFT{
 
@@ -138,13 +166,27 @@
                 }
                 .LASTBOTTOM{
                     padding: 35px;
+                    
+                    @include m {
+                        padding: 35px 20px;
+                    }
                 }
             }
+
+            @include m {
+                margin-bottom: 25px;
+            }
+
         }
 
         .SHOPPINGCART_STEPONETEXT--RIGHT{
             .SHOPPINGCART_STEPONETEXT--FORM{
                 height: 100%;
+
+                @include m {
+                    height: 400px;
+                }
+
                 .SHOPPINGCART_STEPONETEXT--INFO{
                     
                     .SHOPPINGCART_STEPONETEXT--ZONE{
@@ -160,6 +202,10 @@
                             b{
                                 font-weight: 400;
                             }
+                        }
+
+                        @include m {
+                            padding: 0 20px;
                         }
 
                     }
@@ -182,6 +228,11 @@
                             width: 100%;
                             font-weight: 700;
                         }
+
+                        @include m {
+                            padding: 0 20px;
+                            transform: translateY(70px);
+                        }
                     }
                 }
             }
@@ -189,5 +240,12 @@
         }
     }
 
+    @include m {
+        div.ARC_TITLE{
+            width: 65px;
+            height: 65px;
+            line-height: 65px;
+        }
+    }
 
 }
