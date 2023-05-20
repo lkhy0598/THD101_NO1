@@ -1,17 +1,17 @@
-
 //header nav設定
 
-.M_HEADER_NAV{
+.M_HEADER_NAV {
     display: none;
 }
 
-.M_FUNTION{
+.M_FUNTION {
     display: none;
 }
 
 .HEADER_NAV_SHADOW {
     box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.1);
 }
+
 .HEADER_NAV {
     background-image: url("../../img/HEADER-BG.jpg");
     background-repeat: no-repeat;
@@ -163,6 +163,7 @@
     @include m() {
         margin-bottom: 200px;
     }
+
     >ul {
 
         display: flex;
@@ -204,8 +205,8 @@
 }
 
 .BACK_NAV {
-  
-    
+
+
     transition: all 0.3s ease;
     background-image: url("../../img/HEADER-BG.jpg");
     background-repeat: no-repeat;
@@ -273,29 +274,29 @@
     @media screen and (max-width: 414px) {
         @content;
     }
-  }
+}
 
-@include m{
+@include m {
 
-
-    .HEADER_NAV{
+    .HEADER_NAV {
         display: none;
     }
 
-
- 
-    
     //header nav設定
+
     .M_HEADER_NAV {
         display: block;
-        background-image: url("");
-        background: linear-gradient(160deg, rgb(243, 145, 85, .9) 0%,  rgb(228, 170, 123, .9) 40%, rgba(126, 184, 196, 0.9) 80%, rgba(126, 184, 196, 0.8) 100%);
-        z-index: 9999;
+        background: rgba(255, 255, 255, 0);
         position: fixed;
+        height: 92px;
         width: 100%;
         top: 0;
+        z-index: 99;
         transition: all 0.3s ease;
-        > a {
+
+
+
+        >a {
 
             .M_HEADERLOGO_BG_BOX {
                 position: absolute;
@@ -305,11 +306,11 @@
                 display: flex;
                 flex-direction: column;
                 transition: all 0.3s ease;
-    
-                
-                img{
+
+
+                img {
                     width: 42px;
-                    
+
                 }
 
                 .M_HEADERLOGO_PAW {
@@ -321,12 +322,12 @@
                     transition: all 0.3s ease;
 
                 }
-    
+
                 .M_HEADERLOGO_CLAWS {
                     display: none;
-    
+
                 }
-    
+
                 .M_HEADER_LOGO_NAME {
                     position: absolute;
                     top: 55px;
@@ -334,89 +335,90 @@
                     margin: 10px auto;
                     margin-top: 0;
                     transition: all 0.4s ease;
-    
+
                 }
-    
+
                 // HEADER_LOGO_形變
                 .M_HEADERLOGO_S {
                     top: 17px;
                     left: 20px;
                     transform: scale(1.1);
                 }
-    
+
                 .M_HEADERNAME_S {
                     top: 41px;
                     left: 102px;
                     transform: scale(2.2);
                 }
-    
-    
+
+
             }
-    
+
             // HEADER_LOGO_BG形變
             .M_HEADERLOGE_BG_TOP {
                 width: 74px;
                 height: 92px;
                 border-radius: 0 0 45px 0;
             }
-    
+
             .M_HEADERLOGE_BG_SCROLL {
                 width: 188px;
                 height: 92px;
                 border-radius: 0 0 30px 0;
             }
-    
-    
+
+
         }
 
         >ul {
             display: none;
             height: 100vh;
             padding-top: 90px;
-            
-           
+
+
             >li {
-                
+
                 display: flex;
                 justify-content: center;
                 position: relative;
                 padding-bottom: 15px;
+
                 >a {
                     text-decoration: none;
                     margin: 20px 0;
                     color: $white;
                     display: block;
                     font-size: 15px;
-    
+
                     >span {
                         font-size: $p;
                         font-weight: 700;
                         line-height: 1.35;
                         letter-spacing: .1em;
-                       
+
                     }
 
                 }
 
-                .LOGIN_SHOPPING{
+                .LOGIN_SHOPPING {
                     width: 130px;
                     display: flex;
                     justify-content: space-between;
-                    
+
                     // border: 1px solid;
-                    .LOGIN{
+                    .LOGIN {
                         font-size: $p;
                         color: $white;
                     }
 
-                    i{
+                    i {
                         font-size: $p;
                         color: $white;
                     }
                 }
 
-                .RESERVE{
-                  
+                .RESERVE {
+
                     background: $linear-orange;
                     font-size: $p;
                     border-radius: 10px;
@@ -427,65 +429,74 @@
                     height: 50px;
                     cursor: pointer;
 
-       
+
                 }
             }
 
-            > li:nth-child(1)::after , li:nth-child(2)::after ,li:nth-child(3)::after, li:nth-child(4)::after, li:nth-child(5)::after{
-                    content: "";
-                    position: absolute;
-                    display: block;
-                    color: $white;
-                    width: 120px;
-                    border: 1px solid;
-                    bottom: 10px;
-                    left: 50%;
-                    transform: translate(-50%);
-                    
+            >li:nth-child(1)::after,
+            li:nth-child(2)::after,
+            li:nth-child(3)::after,
+            li:nth-child(4)::after,
+            li:nth-child(5)::after {
+                content: "";
+                position: absolute;
+                display: block;
+                color: $white;
+                width: 120px;
+                border: 1px solid;
+                bottom: 10px;
+                left: 50%;
+                transform: translate(-50%);
+
             }
 
-            > li:nth-child(6){
+            >li:nth-child(6) {
                 padding-top: 20px;
             }
-            
-        
-    
-    
-        
+
+
+
+
+
         }
+    }
+    // 導覽列底色
+    .M_HEADER_BG_ACTIVE {
+        background: rgba(255, 255, 255, 0.5);
     }
 
 
 
     // =============== RWD下方nav ============
 
-    .M_FUNTION{
+    .M_FUNTION {
         display: block;
         position: fixed;
         z-index: 100;
         bottom: 0;
 
-        ul{
+        ul {
             display: flex;
             justify-content: space-between;
-            width: 100vw;   
+            width: 100vw;
             height: 90px;
             background: linear-gradient(90deg, #F89F69 0%, #fc9a5e 40%, #A7CFD7 100%);
 
 
-            li{
+            li {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 color: $white;
                 text-align: center;
-                padding:  0 15px;
-                i{
+                padding: 0 15px;
+
+                i {
                     font-size: 25px;
                     padding-bottom: 15px;
                 }
 
-                .arrow{
+                .arrow {
                     font-size: 40px;
                 }
             }
