@@ -43,7 +43,7 @@ $(document).ready(function () {
 
 // css("display", "block") 
 
-// ========= RWD nav ==========
+// ========= RWD NAV的LOGO 變化==========
 $(document).ready(function () {
   
         $(".TOGGLE").click(function(){
@@ -67,3 +67,49 @@ $(document).ready(function () {
         });
 
 });
+
+
+
+// 按登入紐停止預設行為
+$(document).ready(function(e) {
+    $('.LOGIN').click(function(e){
+	e.preventDefault();
+    });
+});
+
+
+
+//手機板門診時間彈窗
+$(document).ready(function() {
+ var btn_el = document.getElementsByClassName("M_FUNTION_A2")[0];
+        btn_el.addEventListener("click", function(e){
+            // console.log("wdd");
+            e.preventDefault();
+            // var test = document.getElementsByClassName("bookwrapper")[0];
+            // test.classList.add("-on");
+            // test.classList.remove("-off");
+            $(".M_TIME_TABLE").fadeIn(400);
+            
+        });
+    var i = document.getElementsByClassName("CLOSE_TABLE")[0];
+        i.addEventListener("click", function(e){
+            // console.log("wdd");
+            // $(i).toggleClass('XXX');
+            e.preventDefault();
+            $(".M_TIME_TABLE").fadeOut(300);
+    
+
+        });
+
+    var c = document.getElementsByClassName("M_TIME_TABLE")[0];
+        c.addEventListener("click", function(e){
+            // console.log("wdd");
+            // $(i).toggleClass('XXX');
+            e.preventDefault();
+            $(".M_TIME_TABLE").fadeOut(300);
+    
+
+        });
+
+});
+

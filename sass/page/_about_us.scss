@@ -1,15 +1,52 @@
 .ABOUT{
     overflow-x: hidden;
-
-
-    
-
-   
-
-
+    z-index: 5;
 // ==================================================
-.BACKGROUND{
-    position: relative;
+
+.BACKGROUND {
+    background-image: url("../../img/BG.jpg");   
+    z-index: -1000;
+    .BG {}
+
+    .BG_CLOUDS {
+        z-index: -999;
+        .BG_CLOUD {}
+
+        .CLOUD_1 {
+            top: 300px;
+            left: 0;
+
+            .BG_CLOUD_IMG1 {
+                transform: scale(-5) rotate(330deg);
+
+                @include m() {
+                    transform: scale(-10) rotate(330deg);
+                }
+            }
+
+            @include m() {
+                top: 1600px;
+            }
+        }
+
+        .CLOUD_2 {
+            top: 3040px;
+            left: 322px;
+
+            .BG_CLOUD_IMG2 {
+                transform: scale(-2) rotate(340deg);
+
+                @include m() {
+                    transform: scale(-10) rotate(340deg);
+                }
+            }
+
+            @include m() {
+                top: 3830px;
+                left: 260px;
+            }
+        }
+    }
 }
 
 // .BACKGROUND::after{

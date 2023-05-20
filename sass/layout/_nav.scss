@@ -1,13 +1,15 @@
 
-//header nav設定
 
+// 手機板header nav
 .M_HEADER_NAV{
     display: none;
 }
 
-.M_FUNTION{
-    display: none;
-}
+
+
+
+
+//header nav設定
 
 .HEADER_NAV_SHADOW {
     box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.1);
@@ -175,6 +177,14 @@
         >li {
             padding: 2px 30px;
             width: 100px;
+            color: $white;
+            > .FOLLOW{
+                display: block;
+                margin: 20px 0;
+                font-size: $p;
+                font-weight: 500;
+            }
+            
 
             >a {
                 text-decoration: none;
@@ -372,36 +382,40 @@
         >ul {
             display: none;
             height: 100vh;
-            padding-top: 90px;
+            padding-top: 110px;
             
            
             >li {
                 
-                display: flex;
-                justify-content: center;
                 position: relative;
                 padding-bottom: 15px;
-                >a {
+                >.M_HEADER_LI {
                     text-decoration: none;
                     margin: 20px 0;
+                    padding-left: 26%;
                     color: $white;
-                    display: block;
+                    display: flex;
+                    align-items: end;
                     font-size: 15px;
+
+                    
     
                     >span {
                         font-size: $p;
                         font-weight: 700;
-                        line-height: 1.35;
                         letter-spacing: .1em;
+                        padding-right: 10px;
                        
                     }
-
+                    
+                 
                 }
 
                 .LOGIN_SHOPPING{
-                    width: 130px;
+                    width: 200px;
                     display: flex;
                     justify-content: space-between;
+                    margin: 0 auto;
                     
                     // border: 1px solid;
                     .LOGIN{
@@ -409,14 +423,14 @@
                         color: $white;
                     }
 
-                    i{
-                        font-size: $p;
+                    >a > i{
+                        font-size: 40px;
                         color: $white;
                     }
                 }
 
-                .RESERVE{
-                  
+                > .RESERVE{
+                    color: $white;
                     background: $linear-orange;
                     font-size: $p;
                     border-radius: 10px;
@@ -425,7 +439,7 @@
                     line-height: 50px;
                     width: 90%;
                     height: 50px;
-                    cursor: pointer;
+                    margin: 0 auto;
 
        
                 }
@@ -436,16 +450,18 @@
                     position: absolute;
                     display: block;
                     color: $white;
-                    width: 120px;
+                    width: 70%;
                     border: 1px solid;
-                    bottom: 10px;
+                    opacity: .3;
+                    bottom: 16px;
                     left: 50%;
                     transform: translate(-50%);
                     
             }
 
             > li:nth-child(6){
-                padding-top: 20px;
+                padding-top: 10px;
+                padding-bottom: 40px;
             }
             
         
@@ -457,39 +473,6 @@
 
 
 
-    // =============== RWD下方nav ============
-
-    .M_FUNTION{
-        display: block;
-        position: fixed;
-        z-index: 100;
-        bottom: 0;
-
-        ul{
-            display: flex;
-            justify-content: space-between;
-            width: 100vw;   
-            height: 90px;
-            background: linear-gradient(90deg, #F89F69 0%, #fc9a5e 40%, #A7CFD7 100%);
-
-
-            li{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                color: $white;
-                text-align: center;
-                padding:  0 15px;
-                i{
-                    font-size: 25px;
-                    padding-bottom: 15px;
-                }
-
-                .arrow{
-                    font-size: 40px;
-                }
-            }
-        }
-    }
+    
 
 }

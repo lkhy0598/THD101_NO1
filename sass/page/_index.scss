@@ -11,7 +11,10 @@
     
 
 
-    
+    .BACKGROUND{
+        background-image: url("../../img/BG.jpg");   
+        z-index: -10;
+    }
 // ============= 動物插畫區 =================
 
 
@@ -104,11 +107,7 @@
 
 
 // ==================================================
-.BACKGROUND{
-    position: relative;
-    background-image: url('../../img/index/index_bg.jpg');
-    
-}
+
 
 
 .CAROUSEL{
@@ -159,13 +158,9 @@
     justify-content: center;
     margin-top: 100px;
     margin-bottom: 120px;
-    transform: translateX(400%); 
-    transition: transform 0.6s ease;
+   
 }
 
-.CONSULTATION_UL.show{
-    transform: translateX(0);
-}
 
 .CONSULTATION_ITEM{
     padding: 0 90px;
@@ -343,30 +338,54 @@
 }
 
 
-.Services_UL{
+.SERVICES_UL{
     // border: 1px solid;
     display: flex;
     justify-content: space-between;
     margin: 80px 0;
     position: relative;
-   
-
+    // opacity: 0;
+    // transition: opacity 2s ease;
     
     
 }
 
+.SERVICES_ITEM:nth-child(1){
+    opacity: 0;
+    transition: opacity .5s linear;
+}
 
-.Services_ITEM{
+.SERVICES_ITEM:nth-child(2){
+    opacity: 0;
+    transition: opacity 1.5s linear;
+}
+
+.SERVICES_ITEM:nth-child(3){
+    opacity: 0;
+    transition: opacity 2s linear;
+}
+
+.SERVICES_ITEM:nth-child(4){
+    opacity: 0;
+    transition: opacity 2.5s linear;
+}
+
+
+.SERVICES_ITEM.SHOW{
+    opacity: 1;
+}
+
+.SERVICES_ITEM{
     padding: 0 40px;
     text-align: center;
     z-index:1;
 }
 
-.Services_ITEM > img{
+.SERVICES_ITEM > img{
     border-radius: 80px 10px 80px 10px;
 }
 
-.Services_ITEM h3{
+.SERVICES_ITEM h3{
     padding-top: 30px;
     padding-bottom: 15px;
 }
@@ -507,8 +526,9 @@
     text-align: center;
     color: $blueblack;
  
-    transition: all 0.3s ease;
-    &:hover{
+    
+    & > li >img:hover{
+        transition: all 0.5s ease;
         filter: drop-shadow(0px 0px 5px $blueblack);
         transform: scale(1.05);
     }
@@ -608,38 +628,6 @@
     }
 }
 
-    
-
-
-// ========== footer上小動畫 ==========
-
-    .FOOTER_ANI{
-        position: relative;
-        width: 165px;
-    }
-
-    .SHEEP{
-        background-image: url(../../img/index/footer.png);
-        width: 165px;
-        height: 400px;
-        background-size: 960px 400px;
-        animation:ANISHEEP 10s steps(6,end) infinite; 
-        position: absolute;
-        bottom: 50px;
-        right: 30px;
-        margin: 0;
-        padding: 0  ;
-    }
-
-    @keyframes ANISHEEP {
-        0%{
-            background-position-x: 0px;
-        }
-
-        100%{
-            background-position: -960px;
-        }
-    }
 
 }
 // =========================  RWD ===============================
@@ -909,17 +897,17 @@
         // =========== 服務項目 =============
 
 
-        .Services_UL{
+        .SERVICES_UL{
             
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin:  30px 0;
+            margin:  60px 0 20px;
             
         }
 
 
-        .Services_ITEM{
+        .SERVICES_ITEM{
             padding: 0 15px;
             text-align: center;
             width: 140px;
@@ -928,19 +916,19 @@
             
         }
 
-        .Services_ITEM > img{
+        .SERVICES_ITEM > img{
             width: 130px;
             height: 130px;
             border-radius: 50px 10px 50px 10px;
         }
 
-        .Services_ITEM h3{
+        .SERVICES_ITEM h3{
             padding-top: 10px;
             padding-bottom: 5px;
             font-size: $littleword;
             
         }
-        .Services_ITEM p{
+        .SERVICES_ITEM p{
             font-size: $initial;
         }
 
