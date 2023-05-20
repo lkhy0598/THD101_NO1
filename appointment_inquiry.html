@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>首頁 - 波波動物醫院</title>
+</head>
+
+<body>
+    <!-- =====appointment門診時間及預約======== -->
+
+    <div class="APPOINTMENT">
+        <p>門診時間&預約</p>
+    </div>
+
+    <!-- ===============================header================================= -->
+    <header>
+
+        <nav class="HEADER_NAV">
+
+            <a href="homepage.html">
+                <div class="HEADERLOGO_BG_BOX HEADERLOGE_BG_TOP">
+                    <div class="HEADERLOGO_PAW">
+                        <img src="./img/HEADERLOGO_PAW.svg" alt="">
+                        <div class="HEADERLOGO_CLAWS">
+                            <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="HEADER_LOGO_NAME">
+                        <img src="./img/HEADERLOGO_NAME.svg" alt="">
+                    </div>
+                </div>
+            </a>
+
+
+            <ul>
+                <li>
+                    <a href="about_us.html"><span>關於院所</span><br>About Us</a>
+                </li>
+                <li>
+                    <a href="information.html"><span>資訊導覽</span><br>Information</a>
+                </li>
+                <li>
+                    <a href="shopping.html"><span>線上購物</span><br>Shopping</a>
+                </li>
+                <li>
+                    <a href="qa.html"><span>常見問題</span><br>Q & A</a>
+                </li>
+                <li>
+                    <a href="member_center.html"><span>會員中心</span><br>Member Centre</a>
+                </li>
+                <li>
+                    <a href="#" class="RESERVE">立即預約</a>
+                </li>
+                <li>
+                    <a href="#" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
+                </li>
+                <li>
+                    <a href="#"><i class="bi bi-cart-fill"></i></a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+
+    <section class="BACKGROUND MEMBERCENTER">
+        <!-- ===================================麵包屑====================================== -->
+        <section class="MEMCENTOP">
+            <section class="BREAD WRAPPER">
+                <a href="#">首頁</a>
+                /
+                <a href="#">線上購物</a>
+            </section>
+
+            <section class="BIG_TITLE WRAPPER M_bigTitle">
+                <section class="BIG_TITLE_IMG">
+                    <div class="BIG_TITLE_LEFT">
+                        <h1>會員中心</h1>
+                        <p class="EN">Member Center</p>
+                    </div>
+
+                </section>
+                <div class="BIG_TITLE_RIGHT">
+                    <p class="HELLO">您好，范植鑫</p>
+                </div>
+            </section>
+
+        </section>
+
+        <section class="MEMBER_MAIN">
+            <aside class="MENU">
+                <a href="" style="text-decoration: underline;">
+                    <h2>預約查詢</h2>
+                </a>
+                <a href="">
+                    <h2>會員查詢</h2>
+                </a>
+                <a href="">
+                    <h3>會員基本資料</h3>
+                </a>
+                <a href="">
+                    <h3>密碼設定</h3>
+                </a>
+                <a href="" >
+                    <h2>寵物設定</h2>
+                </a>
+                <a href="">
+                    <h3>寵物基本資料</h3>
+                </a>
+                <a href="">
+                    <h3>寵物資料新增/修改</h3>
+                </a>
+                <a href="">
+                    <h3>病例查詢</h3>
+                </a>
+                <a href="">
+                    <h3>健康檢查資料查詢</h3>
+                </a>
+                <a href="">
+                    <h2>訂單資料</h2>
+                </a>
+                <a href="">
+                    <h3>訂單記錄查詢</h3>
+                </a>
+                <a href="">
+                    <h3>優惠卷</h3>
+                </a>
+                <a href="">
+                    <h3>購物車</h3>
+                </a>
+            </aside>
+            <section class="MEMCONTENT">
+                
+                <!-- --------預約查詢--------- -->
+                <div class="SUBTITLE">
+                    <h1>預約查詢</h1>
+                    <p>Appointment Inquiry</p>
+                </div>
+                <div class=" password ">
+                    
+                    <form method="post" action="./member_center.php">
+                        <ul >
+                            <li class="middlelong"><label for="">選擇寵物資料</label>
+                                <select name="petNameRecord" id="petNameRecord" class="select">
+                                    <option value="">請選擇寵物名稱</option>
+                                    <!-- php for -->
+                                </select>
+                            </li>
+                            <li class="middlelong"><label for="appointmentDate">預約日期</label>
+                                
+                                <select name="appointmentDate" id="appointmentDate" class="select">
+                                    <option value="">一個月以內</option>
+                                    <option value="">半年內</option>
+                                    <option value="">一年以上</option>
+                                    <!-- php for -->
+                                </select>
+                            </li>
+
+                        </ul>
+                        <div class="submit">
+                            <input type="submit" value="搜尋預約" class="BTN">
+                            
+                        </div>
+                    </form>
+                    
+                </div>
+                <table class="MEMTABLE">
+                        <thead>
+                            <tr>
+                                <td>預約編號</td>
+                                <td>看診時間</td>
+                                <td>寵物名字</td>
+                                <td>預約類型</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>第一診間<br>24號</td>
+                                <td>2023/10/24 <br>上午</td>
+                                <td>辛巴</td>
+                                <td>預防針</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                  
+                
+
+            </section>
+        </section>
+        <button id="js-top" class="TOP_BTN"></button>
+    </section>
+
+
+
+    <footer>
+        <div class="FOOTER_LOGO">
+            <img src="img/H-LOGO.svg" alt="" />
+        </div>
+        <div class="FOOTER_RIGHT">
+            <nav class="FOOTER_NAV">
+                <ul>
+                    <li>
+                        <a href="#"> <span>關於院所</span></a>
+                    </li>
+                    <li>
+                        <a href="#"> <span>立即預約</span></a>
+                    </li>
+                    <li>
+                        <a href="#"> <span>資訊導覽</span></a>
+                    </li>
+                    <li>
+                        <a href="#"> <span>會員中心</span></a>
+                    </li>
+                    <li>
+                        <a href="#"> <span>線上購物</span></a>
+                    </li>
+                    <li>
+                        <a href="#"> <span>購物車</span></a>
+                    </li>
+                    <li>
+                        <a href="#"> <span>常見問題</span></a>
+                    </li>
+                    <li>
+                        <a href="#"> <span>追蹤我們</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="FOOTER_ICON">
+            <a href=""><img src="img/FOOTER_FB_ICON.svg" alt="" /></a>
+            <a href=""><img src="img/FOOTER_INS_ICON.svg" alt="" /></a>
+        </div>
+    </footer>
+    <div class="FOOTER_BOTTOM">
+        <p>
+            Copyright ©
+            本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。
+        </p>
+    </div>
+</body>
+
+</html>
