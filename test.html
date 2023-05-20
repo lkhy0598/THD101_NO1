@@ -15,27 +15,36 @@
 
         <nav class="HEADER_NAV">
 
-            <a href="index.html">
-                <img src="img/V-HEADER-LOGO-HOVER.svg" alt="" />
-                <img src="img/V-HEADER-LOGO.svg" alt="" />
+            <a href="homepage.html">
+                <div class="HEADERLOGO_BG_BOX HEADERLOGE_BG_TOP">
+                    <div class="HEADERLOGO_PAW">
+                        <img src="./img/HEADERLOGO_PAW.svg" alt="">
+                        <div class="HEADERLOGO_CLAWS">
+                            <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="HEADER_LOGO_NAME">
+                        <img src="./img/HEADERLOGO_NAME.svg" alt="">
+                    </div>
+                </div>
             </a>
 
 
             <ul>
                 <li>
-                    <a href="#"><span>關於院所</span><br>About Us</a>
+                    <a href="about_us.html"><span>關於院所</span><br>About Us</a>
                 </li>
                 <li>
-                    <a href="#"><span>資訊導覽</span><br>Information</a>
+                    <a href="information.html"><span>資訊導覽</span><br>Information</a>
                 </li>
                 <li>
-                    <a href="#"><span>線上購物</span><br>Shopping</a>
+                    <a href="shopping.html"><span>線上購物</span><br>Shopping</a>
                 </li>
                 <li>
-                    <a href="#"><span>常見問題</span><br>Q & A</a>
+                    <a href="qa.html"><span>常見問題</span><br>Q & A</a>
                 </li>
                 <li>
-                    <a href="#"><span>會員中心</span><br>Member Centre</a>
+                    <a href="member_center.html"><span>會員中心</span><br>Member Centre</a>
                 </li>
                 <li>
                     <a href="#" class="RESERVE">立即預約</a>
@@ -87,7 +96,7 @@
             <!-- 卡片 -->
             <div class="CARD_BODY COL-12">
                 <div class="CARD_LEFT">
-                    <img src="img/20220227-A7401812_TP_V 1.jpg" alt="">
+                    <!-- <img src="img/20220227-A7401812_TP_V 1.jpg" alt=""> -->
                 </div>
                 <div class="card_right">
                     <div class="CARD_TITLE">最新消息</div>
@@ -201,7 +210,10 @@
         <div class="FOOTER_BOTTOM">
             <p>Copyright © 本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。</p>
         </div>
-
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="top_btn.js"></script>
+    <script src="nav.js"></script>
 </body>
 
 </html>
@@ -235,146 +247,79 @@
 
     
 
-  <!-- ======== 醫院簡介 TTILE ======== -->
-
-  <section class="WRAPPER">
-    <section class="SMALL_TITLE">
-      <h2>醫院簡介<span class="EN">Clinic Profile</span></h2>
-      <div class="DOT"></div>
-    </section>
-    
-  </section>
-
-  <!-- ======== 醫院簡介 內容 ======== -->
-
-  <section class="WRAPPER">
-    <div class="CLINIC_PROFILE">
-      <img src="img/about/about_logo.svg" alt="">
-      <p>波波動物醫院取自代表爪子、肉墊的英文單字「Paw」，代表我們對來診寵物的診治態度有如用可愛的掌心肉球輕輕托捧的悉心呵護。
-
-      <p>我們秉持著「讓您的寵物健康快樂，讓您安心無憂」的理念，為寵物提供全方位的醫療及健康管理服務。為了讓主人與寵物能夠更便利地享受到我們的服務，我們推出了線上預約系統，方便快速地預約、查詢及管理寵物就診，節省等候時間，提高了客戶的滿意度。</p>
-      <p>此外，我們擁有寵物溝通師，透過寵物溝通的方式，了解寵物的需求和狀況，讓主人能夠更深入地瞭解寵物，提高彼此之間的情感連結，並將這些訊息與醫師分享，提高醫療的準確性和有效性。</p>
-      <p>我們的醫師均為全能醫師（中西合併），精通多種動物疾病的診斷與治療，並注重病因探究、預防醫學，提供最完整、最適切的醫療服務。我們的住宿服務，則提供舒適、安全、親切的住宿環境，讓寵物可以在我們的醫護人員照顧下度過住院期間，讓主人安心無憂。</p>
-      <p>我們期許透過這些服務，讓主人與寵物能夠有更好的生活品質和健康狀態，並提高彼此之間的情感連結。我們將持續努力，不斷提升服務品質，成為寵物醫療與健康管理的最佳夥伴。</p>
-      
-    </div>
-    
-  </section>
-
-  <!-- ======= 醫師陣容 ======= -->
-  <section class="TEAM_BG">
-    <section class="BIG_TITLE WRAPPER">
-      <section class="BIG_TITLE_IMG">
-        <h1>醫師陣容</h1>
-        <p class="EN">Medical team</p>
-      </section>
-    </section>
-    <section class="TEAM_WRAPPER">
-      <P>我們認為「醫病更需醫心」的道理同樣適用於寵物們，因此除了集結各科頂尖醫師外更特別設有行為醫學科、寵物溝通師，讓您的愛寵能在身心兩方面都獲得最好的醫療資源。</P>
-    </section>
-
-  <div class="TEAM_WRAPPER_PRODUCERS">
-
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <section>
-            <img src="img/about/fan.jpg" alt="">
-          </section>
-        </div>
-        <div class="swiper-slide">
-          <section>
-            <img src="img/about/lai.jpg" alt="">
-          </section>
-          
-        </div>
-        <div class="swiper-slide">
-          <section>
-            <img src="img/about/lin.jpg" alt="">
-          </section>
-          
-        </div>
-        <div class="swiper-slide">
-          <section>
-            <img src="img/about/zhan.jpg" alt="">
-          </section>
-          
-        </div>
-        <div class="swiper-slide">
-          <section>
-            <img src="img/about/25413587_l.jpg" alt="">
-          </section>
-          
-        </div>
-        <div class="swiper-slide">
-          <section>
-            <img src="img/about/yu.jpg" alt="">
-          </section>
-          
-        </div>
-        <div class="swiper-slide">
-          <section>
-            <img src="img/about/wei.jpg" alt="">
-          </section>
-          
-        </div>
-
-        
-      </div>
  
-    
 
-     
-    
+    <!-- ======= 醫師陣容 ======= -->
+    <section class="TEAM_BG">
+      <section class="BIG_TITLE WRAPPER">
+        <section class="BIG_TITLE_IMG">
+          <h1>醫師陣容</h1>
+          <p class="EN">Medical team</p>
+        </section>
+      </section>
+      <section class="TEAM_WRAPPER">
+        <P>我們認為「醫病更需醫心」的道理同樣適用於寵物們，因此除了集結各科頂尖醫師外更特別設有行為醫學科、寵物溝通師，讓您的愛寵能在身心兩方面都獲得最好的醫療資源。</P>
+      </section>
 
-    </div>
-  </div>
-   
-  </section>
+    <div class="TEAM_WRAPPER_PRODUCERS">
 
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <section>
+              <img src="img/about/fan.jpg" alt="">
+            </section>
+          </div>
+          <div class="swiper-slide">
+            <section>
+              <img src="img/about/lai.jpg" alt="">
+            </section>
+            
+          </div>
+          <div class="swiper-slide">
+            <section>
+              <img src="img/about/lin.jpg" alt="">
+            </section>
+            
+          </div>
+          <div class="swiper-slide">
+            <section>
+              <img src="img/about/zhan.jpg" alt="">
+            </section>
+            
+          </div>
+          <div class="swiper-slide">
+            <section>
+              <img src="img/about/25413587_l.jpg" alt="">
+            </section>
+            
+          </div>
+          <div class="swiper-slide">
+            <section>
+              <img src="img/about/yu.jpg" alt="">
+            </section>
+            
+          </div>
+          <div class="swiper-slide">
+            <section>
+              <img src="img/about/wei.jpg" alt="">
+            </section>
+            
+          </div>
 
-
-
-
-  <!-- ======= 設備介紹 ======= -->
-  <section class="BIG_TITLE WRAPPER">
-    <section class="BIG_TITLE_IMG">
-      <h1>設備介紹</h1>
-      <p class="EN">Equipment Introduction</p>
-    </section>
-  </section>
-
-     <!-- ========MAIN======== -->
-          <!-- 設備介紹 -->
-
-  <section class="INTRODUCTION">
-    <p>波波團隊不只有仁心仁術的獸醫們，更引進了所有最新、最有效的診療設備，讓醫師們的醫術可以達到最好的發揮。</p>
-    
-    <div class="INTRODUCTION_PHOTO">
-      <div id="IMG_CONTAINER">
-        <img src="./img/about/01.png" alt="圖片">
-        <!-- <div id="magnifier"></div> -->
-      </div>
-
-      <div class="GALLERY">
-        <a href="./img/about/01.png" class="LIGHTBOX">
-            <img src="./img/about/01.png" alt="">
-        </a>
-        <a href="./img/about/02.jpg" class="LIGHTBOX">
-            <img src="./img/about/02.jpg" alt="">
-        </a>
-        <a href="./img/about/03.jpg" class="LIGHTBOX">
-            <img src="./img/about/03.jpg" alt="">
-        </a>
-
-        <a href="./img/about/05.png" class="LIGHTBOX">
-            <img src="./img/about/05.png" alt="">
-        </a>
-    </div>
-    </div>
+          
+        </div>
   
-  </section>
+      
+
+      
+      
+
+      </div>
+    </div>
+    
+    </section>

@@ -1,7 +1,75 @@
 .ABOUT{
     
+    .M_FUNTION{
+        display: none;
+    }
 
 
+    .TOGGLE {
+        position: relative;
+        height: 45px;
+        width: 45px;
+        cursor: pointer;
+    }
+    .TOGGLE:after, .TOGGLE:before{
+        content: "";
+        background: $white;
+        width: 33px;
+        height: 5px;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        transition: 1.3s cubic-bezier(0.53, 0, 0.15, 1.3);
+        border-radius: 5px;
+        
+    }
+    
+    .TOGGLE > span{
+        content: "";
+        background: $white;
+        width: 33px;
+        height: 5px;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border-radius: 5px;
+    }
+    
+    
+    .TOGGLE{
+        display: none;
+    }
+    
+    
+    
+    .TOGGLE:before {
+        top: -50%;
+    }
+    
+    .TOGGLE > span{
+        top: 10%;
+    }
+    
+    .TOGGLE:after {
+        top: 70%;
+    }
+    
+    .TOGGLE.close:before {
+        transform: rotate(-225deg);
+        top: 0;
+    }
+    .TOGGLE.close:after {
+        transform: rotate(225deg);
+        top: 0;
+    }
+
+   
 
 
 // ==================================================
@@ -19,15 +87,27 @@
 // }
 .CAROUSEL{
     position: relative;
+    .PAWPAW > picture > img{
+        position: absolute;
+        top: 50%;
+        left: 6vw;
+        width: 35vw;
+        
+    }
 }
 
-.DOT{
+.DOT1{
+    display: none;
+}
+
+.DOT2{
+    
     position: absolute;
     width: 200px;
     height: 200px;
-    right: 30px;
-    bottom: 40px;
-    z-index: 10;
+    left: -120px;
+    bottom: 0px;
+    z-index: 0;
 
 }
 
@@ -44,6 +124,7 @@
     z-index: 10;
     margin-top: 50px;
     margin-bottom: 40px;
+
     
 
     .ABOUTUS_TITLE_IMG {
@@ -76,7 +157,7 @@
 }
 
 
-.ABOUT_BG > img{
+.ABOUT_BG > picture > img{
     width: 100%;
     position: absolute;
     top: 145px;
@@ -88,7 +169,7 @@
 
 .SMALL_TITLE{
     display: flex;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     margin: 0 auto;
     max-width: 1200px;
     margin-top: 70px;
@@ -104,11 +185,12 @@
     position: absolute;
     width: 200px;
     height: 200px;
-    left: -120px;
-    bottom: 0;
-    z-index: 0;
-    
+    right: 30px;
+    bottom: 40px;
+    z-index: 10;
+
 }
+
 
 // ================= 醫院簡介 ====================
 
@@ -125,12 +207,20 @@
     padding-right: 60px;
 }
 
-.CLINIC_PROFILE > p{
+.CLINIC_PROFILE > .p1{
     padding-top: 38px;
     line-height: 160%;
     text-align: justify;
     color: $blueblack;
 
+}
+
+.CLINIC_PROFILE > .p2{
+    display: none;
+}
+
+.BTN_WRAAPER{
+    display: none;
 }
 
 // =================== 醫師陣容 ======================
@@ -439,12 +529,21 @@
         }
 
         .CAROUSEL{
+ 
+            .PAWPAW > picture > img{
+                position: absolute;
+                top: 5%;
+                left: 25vw;
 
-
+                width: 55vw;
+                
+            }
+            
             
         
 
             .DOT{
+                
                 position: absolute;
                 width: 120px;
                 height: 120px;
@@ -467,6 +566,7 @@
             }
             
             .DOT1{
+                display: block;
                 position: absolute;
                 width: 170px;
                 height: 170px;
@@ -513,248 +613,143 @@
 //             display: none;
 //         }
 
-        
-//         .BIG_TITLE{
-            
-
-//             .HIPPO_TURTLE1{
-//                 position: absolute;
-//                 width: 80px;
-//                 bottom:  0;
-//                 right: 0;
-            
-//             }
-
-//             .HIPPO_TURTLE2 , .HIPPO_TURTLE3{
-//                 display: none;
-//             }
-//         }
-
-
-//         // ==========看診進度==========
-//         .CONSULTATION_UL{
-//             margin-top: 50px;
-//             margin-bottom: 0px;        
-//             flex-direction: column;
-         
-//         }
-
-//         .CONSULTATION_ITEM{
-//             padding: 0 ;
-         
-//         }
-
-//         .TOPBACKGROUND_1 , .TOPBACKGROUND_2, .TOPBACKGROUND_3{
-//             width: auto;
-//         }
-
-
-//         .CONSULTATIONCARD{
-//             width: auto;
-//             height: auto;
-//             margin-bottom: 60px;
-            
-//             >p{
-//                 font-size: 25px;
-//                 padding: 10px 0;
-
-//             }
-//         }
-
-
-//         // ======== (資訊導覽) =======
-
-//         .IF{
-//             padding: 0;
-//             margin-bottom: 15px;
-//         }
-        
-//         .DINO_RABBIT{
-//             position: absolute;
-//             width: 60px;
-//             bottom: 4px;
-//             right: 0;
-//             left: auto;
-//             display: block;
-//             animation: walk 3s alternate infinite;
-//         }
-//         @keyframes walk {
-//             0%{
-//                 right: 0vw;
-                
-//             }
-
-//             100%{
-//                 right:10vw;
-//             }
-//         }
-
-
-//         .INFORMATION_CARD{
-//             padding-top: 10px;
-//         }
-        
-        
-//         .BTN_WRAAPER{
-//             margin-top: 20px;
-//             margin-bottom: 30px;
-//             text-align: center;
-//         }
-        
-//         .BTN{
-//             width: 135px;
-//             height: 50px;
-//             line-height: 50px;
-//             font-size: $bread;
-//         }
-
-        
-//         // =========== 服務項目 =============
-
-
-//         .Services_UL{
-            
-//             display: flex;
-//             flex-wrap: wrap;
-//             justify-content: center;
-//             margin:  30px 0;
-            
-//         }
-
-
-//         .Services_ITEM{
-//             padding: 0 15px;
-//             text-align: center;
-//             width: 140px;
-//             padding-bottom: 25px;
-            
-            
-//         }
-
-//         .Services_ITEM > img{
-//             width: 130px;
-//             height: 130px;
-//             border-radius: 50px 10px 50px 10px;
-//         }
-
-//         .Services_ITEM h3{
-//             padding-top: 10px;
-//             padding-bottom: 5px;
-//             font-size: $littleword;
-            
-//         }
-//         .Services_ITEM p{
-//             font-size: $initial;
-//         }
-
-//         .COL-3{
-//             margin-right: 0;
-//         }
-
-//         .COL-3:last-child{
-//             margin-right: 0;
-//         }
-
-
-
-//         // ============= 醫院特色 ===================
-
-//         .FEATURE_WRAPPER{
-//             display: flex;
-            
-//         }
-
-//         .FEATURE_LEFT{
-//             margin-bottom: 0px;
-//         }
-
-//         .FEATURE_ITEM{
-//             display: flex;
-//             justify-content: space-between;
-//             // padding: 60px 0;
-//             &:first-child{
-//                 padding-top: 40px;
-//                 padding-bottom: 20px;
-//             }
-            
-//             &:nth-child(2) {
-//                 padding-bottom: 20px;
-//             }
-            
-//             &:nth-child(3) {
-//                 padding-bottom: 20px;
-//             }
-
-//             &:last-child{
-//                 padding-bottom: 0;
- 
-//             }
-            
-//         }
-
-//         .FEATURE_ITEM > .P1{
-//             display: none;
-//         }
-
-//         .FEATURE_ITEM > .P2{
-//             display: block;
-//             font-size: 20px;
-//             line-height: 160%;
-//             padding-left: 20px;
-//         }
-
-
-//         .FEATURE_RIGHT > img{
-//             display: none;
-//         }
-
-//         .ARC_TITLE{
-        
-//             min-width: 40px;
-//             min-height: 40px;
-            
-//         }
-        
-
-//         // ============== 核心項目 ====================
-
-//         .CORE_CONTENT{
-//             width: auto;
-//             margin-top: 20px;
-//             display: flex;
-//             flex-direction: column;
-//             justify-content: center;
+    //============關於院所TITLE========== 
     
 
-//         }
+    .ABOUTUS_TITLE{
+
+        &::after {
+            content: "";
+            position: absolute;
+            border: 2px solid $lightblue;
+            width: 89vw;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    .FAKE_HIGH{
+        // height: 705px;
+    
+        height: 70vh;
+    }
 
 
-//         .CORE_CONTENT_ITEM{
-//             padding: 0 ;
-//             text-align: center;
-//         }
+    .ABOUT_BG > picture > img{
+        width: 100%;
+        position: absolute;
+        top:195px;
+    }
+
+
+    // ================= 醫院簡介 ====================
+
+
+    .DOT2{
+        display: none;
+    }
+
+    .CLINIC_PROFILE{
+        margin: 0 auto;
+        margin-top: 50px;
+        max-width: 1200px;
+        margin-bottom: 80px;
+
+    }
+
+    .CLINIC_PROFILE > img{
+        display: block;
+        float:none;
+        padding-right: 0px;
+        margin: 0 auto;
+        width: 166px;
+    }
+
+    .CLINIC_PROFILE > .p1{
+        display: none;
+    }
+
+    .CLINIC_PROFILE > .p2{
         
-//         .CORE_CONTENT_ITEM > img{
-//             border-radius: 80px 10px 80px 10px;
-//             width: 90vw;
-//         }
+        padding-top: 40px;
+        line-height: 160%;
+        display: block;
+        text-align: justify;
+     
+    }
+
+    .BTN_WRAAPER{
+        text-align: center;
+
+        .BTN{
+            width: 135px;
+            height: 50px;
+            font-size: 15px;
+            line-height: 50px;
+            
+        }
+    }
+
+    //======= 設備介紹 =======
+
+    .EN{
+        letter-spacing: 1px;
+    }
+
+
+    .INTRODUCTION{
+        margin: 0 auto;
+        text-align: center;
+        width: auto;
         
-//         .CORE_CONTENT_ITEM > h3{
-//             padding-top: 20px;
-//             padding-bottom: 5px;
-//             font-size: 30px;
-//         }
+    }
+    
+    .INTRODUCTION > p{
+        margin: 60px auto;
+        line-height: 160%;
+        text-align: justify;
+        letter-spacing: normal;
+        width: 90%;
+    }
+    
+    .INTRODUCTION_PHOTO{
+    
+        display: block;
 
-//         .CORE_CONTENT_ITEM > p {
-//             padding-bottom: 30px;
-//         }
+        #IMG_CONTAINER{
+            display: flex;
+            width: 96%;
+            height: 340px;
+
+            img{
+                border-radius: 0 100px 0 0 ;
+            }
+        }
+    }
+    
+   
+    
+    .GALLERY{
+        padding-top: 20px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 90%;
+        height: 80px;
         
-//         .COL-4{
-//             width: auto;
-//             margin-right: 0;
-//         }
-
-
+    }
+    
+    .GALLERY a{
+        margin:  0 ;
+    }
+    
+    .GALLERY img{
+        width: 80px;
+        height: 80px;
+        border-radius: 0 30px 0 0;
+    }
+    
 
         // ================= 交通位置及門診時刻表 ====================
 

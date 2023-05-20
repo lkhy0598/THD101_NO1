@@ -1,49 +1,49 @@
 // 背景雲裝飾
+<<<<<<< HEAD
 .QA .BACKGROUND {
     box-sizing: border-box;
     // overflow: hidden;
     background-image: none;
     position: relative;
+=======
+.BACKGROUND {
+    .BG {}
+    .BG_CLOUDS {
+>>>>>>> 9979e96d214bf5267096ee428df017e87e595f02
 
-    .BG {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -2;
-    }
+        .BG_CLOUD {}
 
-    .QA_BG_CLOUDS {
-        .BG_CLOUD {
-            width: 100%;
-            position: absolute;
-            z-index: -1;
-        }
-
-        .BG_CLOUD:first-child {
-            transform: scale(-3) rotate(330deg);
-            top: 700px;
+        .CLOUD_1 {
+            top: 900px;
             left: 0;
+            .BG_CLOUD_IMG1 {
+                transform: scale(-2) rotate(330deg);
 
+                @include m() {
+                    transform: scale(-10) rotate(330deg);
+                }
+            }
             @include m() {
-                transform: scale(-10) rotate(330deg);
                 top: 1600px;
             }
         }
-
-        .BG_CLOUD:last-child {
-            transform: scale(-3) rotate(340deg);
+        .CLOUD_2 {
             top: 3040px;
             left: 322px;
 
+            .BG_CLOUD_IMG2 {
+                transform: scale(-2) rotate(340deg);
+
+                @include m() {
+                    transform: scale(-10) rotate(340deg);
+                }
+            }
             @include m() {
-                transform: scale(-10) rotate(340deg);
                 top: 3830px;
                 left: 260px;
             }
-
         }
+
     }
 }
 
@@ -54,6 +54,7 @@
 
 // 內容寬度
 .WRAPPER {
+
     @include m() {
         width: 90%;
     }
@@ -73,52 +74,52 @@
         width: 380px;
         height: 120px;
         border-radius: 10px;
+        color: $white;
         font-size: $h2;
         text-align: center;
-        line-height: 120px;
+        align-items: center;
+        line-height: normal;
         background-image: url(../img/qa/QA_TITLEBG.jpg);
-
+        cursor: pointer;
         position: relative;
 
         @include m() {
             height: 115px;
         }
 
-        a {
+
+        .QA_TAB_TITLE {
+            justify-content: center;
             height: 100%;
             margin: 0 auto;
-            color: $white;
-            text-decoration: none;
-
             display: flex;
-            align-items: center;
 
-            .QA_TAB_TITLE {
-                margin: 0 auto;
-                display: flex;
+            @include m() {
+                flex-direction: column;
+            }
+
+            p {
+                line-height: 120px;
 
                 @include m() {
-                    flex-direction: column;
-                }
-
-                p {
                     line-height: normal;
-                }
-
-                p:nth-child(1) {
-                    @include m() {
-                        font-size: 3rem;
-                    }
-                }
-
-                p:nth-child(2) {
-                    @include m() {
-                        font-size: 1.5rem;
-                    }
                 }
             }
 
+            p:nth-child(1) {
+                @include m() {
+                    font-size: 3rem;
+                }
+            }
+
+            p:nth-child(2) {
+                @include m() {
+                    font-size: 1.5rem;
+                }
+            }
         }
+
+
 
         img {
             position: absolute;
@@ -311,6 +312,7 @@
 
                 p {
                     color: $blueblack;
+
                     @include m() {
                         font-size: 3rem;
                     }

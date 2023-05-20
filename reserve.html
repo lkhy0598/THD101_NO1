@@ -9,7 +9,7 @@
   <title>線上預約 - 波波動物醫院</title>
 </head>
 
-<body>
+<body class="RESERVE">
   <!-- =====appointment門診時間及預約======== -->
 
   <div class="APPOINTMENT">
@@ -56,6 +56,7 @@
   <!-- =================================MASTER_VISION====================================== -->
   <section class="CAROUSEL">
     <div class="MASTER_VISION"><img src="img/HEADER-TOP.png" alt="" /></div>
+    <div class="DOT"></div>
   </section>
 
   <!-- ============================================================================= -->
@@ -64,7 +65,7 @@
   <section class="BACKGROUND">
     <!-- ==========預約頁面共用資訊========== -->
 
-    <section class="WRAPPER BIG_TITLE">
+    <section class="WRAPPER BIG_TITLE RESERVE_INFO">
       <div class="BREAD">首頁 / 線上預約</div>
       <div class="FIRSTTIME_INFO">
         <h1>對於初診患者</h1>
@@ -91,177 +92,58 @@
         </ul>
         <p>如果您通過線上預約或電話，我們可以順利地為您提供指導。<br>
           如果您不確定，可以直接來訪。</p>
-        <p>預約專線 : 02-3322-2777 </p>
-
-        <div class="RESERVE_CIRCLE-S"></div>
-        <div class="RESERVE_CIRCLE-S"></div>
-        <div class="RESERVE_CIRCLE-S"></div>
-        <div class="RESERVE_CIRCLE-S"></div>
+        <p class="CALL"> <i class="bi bi-telephone"></i> 預約專線 : 02-3322-2777 </p>
       </div>
 
-    </section>
-
-    <!-- ========MAIN======== -->
-
-    <!-- 看診進度 -->
-    <div class="WRAPPER">
-
-    </div>
-
-
-    <!-- ================== 資訊導覽 TITLE ===============-->
-
-    <section class="BIG_TITLE WRAPPER">
-      <section class="BIG_TITLE_IMG">
-        <h1>資訊導覽</h1>
-        <p class="EN">Information</p>
+      <!-------  預約步驟 ------->
+      <section class="RESERVE_STEPAREA">
+        <section class="RESERVE_ARC" id="ARCONE">
+          <div class="ARC_TITLE">1</div>
+          <p>預約類型選擇</p>
+        </section>
+        <section class="RESERVE_ARC" id="ARCTWO">
+          <div class="ARC_TITLE">2</div>
+          <p>填寫資料</p>
+        </section>
+        <section class="RESERVE_ARC" id="ARCTHREE">
+          <div class="ARC_TITLE">3</div>
+          <p>確認預約資料</p>
+        </section>
+        <section class="RESERVE_ARC" id="ARCFOUR">
+          <div class="ARC_TITLE">4</div>
+          <p>預約成功</p>
+        </section>
       </section>
     </section>
 
-    <!-- ========MAIN======== -->
-    <!-- 資訊導覽 -->
+    <!-- ========月曆區塊======== -->
 
-
-    <div class="WRAPPER">
-      <ul class="INFORMATION_CARD">
-        <li class="CARD_BODY">
-          <div class="CARD_LEFT">
-            <img src="img/index/INDEX_CARD1.jpg" alt="">
-          </div>
-          <div class="CARD_RIGHT">
-            <div class="CARD_TITLE">最新消息</div>
-            <div class="CARD_DATE">2023 / 04 / 13</div>
-            <h3 class="CARD_CONTENT">COVID-19 毛孩家長就診須知！保護你我不憂慮</h3>
-            <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
-          </div>
-        </li>
-
-        <li class="CARD_BODY">
-          <div class="CARD_LEFT">
-            <img src="img/index/INDEX_CARD2.jpg" alt="">
-          </div>
-          <div class="CARD_RIGHT">
-            <div class="CARD_TITLE">衛教資訊</div>
-            <div class="CARD_DATE">2023 / 04 / 08</div>
-            <h3 class="CARD_CONTENT">毛小孩健檢的重要性</h3>
-            <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
-          </div>
-        </li>
-
-        <li class="CARD_BODY">
-          <div class="CARD_LEFT">
-            <img src="img/index/INDEX_CARD3.jpg" alt="">
-          </div>
-          <div class="CARD_RIGHT">
-            <div class="CARD_TITLE">衛教資訊</div>
-            <div class="CARD_DATE">2023 / 04 / 01</div>
-            <h3 class="CARD_CONTENT">別讓你的毛小孩吃錯東西 - 腸胃異物</h3>
-            <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
-          </div>
-        </li>
-
-
-      </ul>
-      <div class="BTN_WRAAPER">
-        <button class="BTN">查看更多</button>
-      </div>
-
-    </div>
-
-
-    <!-- ================== 服務項目 TITLE ===============-->
-
-    <section class="BIG_TITLE WRAPPER">
-      <section class="BIG_TITLE_IMG">
-        <h1>服務項目</h1>
-        <p class="EN">Services</p>
-      </section>
-    </section>
-
-
-    <!-- ========MAIN======== -->
-    <!-- 服務項目 -->
-
-
-    <div class="WRAPPER">
-      <ul class="Services_UL">
-        <li class="Services_ITEM">
-          <img src="/img/index/Vaccines.jpg" alt="">
-          <h3>預防針</h3>
-          <p class="BREAD">Pet Vaccines</p>
-        </li>
-
-        <li class="Services_ITEM">
-          <img src="/img/index/Health_Checks.jpg" alt="">
-          <h3>健康檢查</h3>
-          <p class="BREAD">Pet Health Checks</p>
-        </li>
-
-        <li class="Services_ITEM">
-          <img src="/img/index/Hotel.jpg" alt="">
-          <h3>住宿</h3>
-          <p class="BREAD">Pet Hotel</p>
-        </li>
-
-        <li class="Services_ITEM">
-          <img src="/img/index/Communication.jpg" alt="">
-          <h3>寵物溝通</h3>
-          <p class="BREAD">Communication</p>
-        </li>
-
-
-      </ul>
-    </div>
-
-    <!-- ================== 醫院特色 TITLE ===============-->
-
-    <section class="BIG_TITLE WRAPPER">
-      <section class="BIG_TITLE_IMG">
-        <h1>醫院特色</h1>
-        <p class="EN">Feature</p>
-      </section>
-    </section>
-
-
-    <!-- ========MAIN======== -->
-    <!-- 醫院特色 -->
-
-
-    <div class="WRAPPER">
-      <div class="FEATURE_WRAPPER">
-        <ul class="FEATURE_LEFT">
-          <li class="FEATURE_ITEM">
-            <div class="ARC_TITLE">1</div>
-            <p>方便快速地預約、查詢及管理寵物就診，節省等候時間，並提供隨時掌握的醫療進度和服務評價，增進客戶與醫院之間的互動與信任。</p>
-          </li>
-
-          <li class="FEATURE_ITEM">
-            <div class="ARC_TITLE">2</div>
-            <p>寵物溝通師Ella擁有世界級寵物溝通證照，擅長與寵物以通靈方式做溝通。</p>
-          </li>
-
-          <li class="FEATURE_ITEM">
-            <div class="ARC_TITLE">3</div>
-            <p>中西合併，精通多種動物疾病的診斷與治療，不只注重病因探究、預防醫學，以及提供全方位的寵物健康管理建議。</p>
-          </li>
-
-          <li class="FEATURE_ITEM">
-            <div class="ARC_TITLE">4 </div>
-            <p>我們提供每隻寵物獨立的空間，並設有監視器方便飼主隨時觀看寵物動態，力求達成寵物開心、飼主放心的住宿環境。</p>
-          </li>
-
-
-
-        </ul>
-
-        <div class="FEATURE_RIGHT">
-          <img src="/img/index/FEATURE.jpg" alt="">
+    <section class="CALENDAR">
+      <div class="CALENDAR_INFO">
+        <p>請點選欲預約的日期</p>
+        <div class="CALENDAR_COLOR_INFO">
+          <p>*紅色為休診日</p>
+          <p>*灰色為當日滿診</p>
         </div>
       </div>
 
-    </div>
+    </section>
 
 
+    <!-- ========表單區塊======== -->
+
+    <section class="RESERVE_FORM1">
+      <input type="text"> <input type="text">
+      <input type="text"><input type="text">
+
+      <button>上一步</button>
+      <button>下一步</button>
+    </section>
+
+
+
+    <!-- TOP按鈕 -->
+    <button id="js-top" class="TOP_BTN"></button>
   </section>
   <footer>
     <div class="FOOTER_LOGO">
