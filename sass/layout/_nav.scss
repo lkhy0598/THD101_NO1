@@ -96,17 +96,6 @@
             border-radius: 0 0 50px 0;
         }
 
-        // img {
-        //     width: 12.5%;
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        // }
-
-        // &:hover img[src="img/V-HEADER-LOGO.svg"] {
-        //     opacity: 0;
-        //     transition: all .1s;
-        // }
 
     }
 
@@ -283,16 +272,45 @@
     }
 
     //header nav設定
+    header .M_HEADER_NAV_BG_ACTIVE {
+        height: 100vh;
+        background: linear-gradient(160deg, rgb(243, 145, 85, .9) 0%, rgb(228, 170, 123, .9) 40%, rgba(126, 184, 196, 0.9) 80%, rgba(126, 184, 196, 0.8) 100%);
+        transition: all 0.3s ease;
+    }
+
+    // 導覽列底色
+    .M_HEADER_NAV_BG {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 90;
+        height: 92px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0);
+        transition: all 0.3s ease;
+
+    }
+
+// 導覽列底色啟動
+    .M_HEADER_BG_ACTIVE {
+        background: rgba(255, 255, 255, .3)
+    }
 
     .M_HEADER_NAV {
         display: block;
-        background: rgba(255, 255, 255, 0);
+        // background: rgba(255, 255, 255, 0);
         position: fixed;
-        height: 92px;
+        height: 0;
         width: 100%;
         top: 0;
         z-index: 99;
-        transition: all 0.3s ease;
+        transition: all 1s ease;
+
+        // 點擊時底色拉滿
+
+
+
+
 
 
 
@@ -374,6 +392,7 @@
             display: none;
             height: 100vh;
             padding-top: 90px;
+            background: linear-gradient(160deg, rgb(243, 145, 85, .9) 0%, rgb(228, 170, 123, .9) 40%, rgba(126, 184, 196, 0.9) 80%, rgba(126, 184, 196, 0.8) 100%);
 
 
             >li {
@@ -459,11 +478,10 @@
 
 
         }
+
     }
-    // 導覽列底色
-    .M_HEADER_BG_ACTIVE {
-        background: rgba(255, 255, 255, 0.5);
-    }
+
+
 
 
 
@@ -491,6 +509,13 @@
                 text-align: center;
                 padding: 0 15px;
 
+                a {
+                    //電話按鈕樣式
+                    display: flex;
+                    flex-direction: column;
+                    color: $white;
+                }
+
                 i {
                     font-size: 25px;
                     padding-bottom: 15px;
@@ -502,5 +527,4 @@
             }
         }
     }
-
 }
