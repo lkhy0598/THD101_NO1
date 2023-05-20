@@ -1,4 +1,8 @@
 .RESERVE {
+    .M_HEADER_NAV {
+        display: none;
+    }
+
     .CAROUSEL {
         position: relative;
     }
@@ -279,3 +283,13 @@
         cursor: default;
     }
 }
+
+// =========================  RWD ===============================
+
+@mixin m() {
+    @media screen and (max-width: 414px) {
+        @content;
+    }
+}
+
+// @include m {}
