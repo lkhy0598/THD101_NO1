@@ -1,3 +1,49 @@
+// 背景雲裝飾
+.BACKGROUND {
+    .BG {}
+
+    .BG_CLOUDS {
+
+        .BG_CLOUD {}
+
+        .CLOUD_1 {
+            top: 900px;
+            left: 0;
+
+            .BG_CLOUD_IMG1 {
+                transform: scaleX(-1);
+                top: 0;
+                left: 900px;
+
+                @include m() {
+                    transform: scale(-10) rotate(330deg);
+                }
+            }
+
+            @include m() {
+                top: 1600px;
+            }
+        }
+
+        .CLOUD_2 {
+            bottom: -400px;
+            left: -400px;
+            .BG_CLOUD_IMG2 {
+                transform: scale(-2) rotate(340deg);
+
+                @include m() {
+                    transform: scale(-10) rotate(340deg);
+                }
+            }
+
+            @include m() {
+                top: 3830px;
+                left: 260px;
+            }
+        }
+    }
+}
+
 .INFORMATION {
 
     // 標籤控制

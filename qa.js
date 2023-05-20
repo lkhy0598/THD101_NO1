@@ -1,9 +1,11 @@
 // QA索引跳轉的函式
 function smoothScrollTo(targetId) {
-    console.log($('#' + targetId).offset().top);
+    var targetOffset = $('#' + targetId).offset().top;
+    var scrollOffset = targetOffset - 200; // 到目標位置後再往上 200 像素
+
     $('html, body').animate({
-        scrollTop: $('#' + targetId).offset().top
-    }, 400); // 1000 是動畫的持續時間，以毫秒為單位
+        scrollTop: scrollOffset
+    }, 400);
 };
 
 $(document).ready(function () {
@@ -14,7 +16,6 @@ $(document).ready(function () {
         $('.ACCORDION_TITLE_BOX').removeClass('ACC_TITLE_ACTIVE');
         $('.ACCORDION_CONTENT_BOX').slideUp();
     });
-
 
 
     // QA手風琴
@@ -29,8 +30,8 @@ $(document).ready(function () {
             $(this).next().slideDown();
         }
     });
-    // 手機板時禁用HOVER效果
-    if ($(window).width() <= 414) {
-        $('.ACCORDION_TITLE_BOX').off('mouseenter mouseleave');
-    };
+    // // 手機板時禁用HOVER效果
+    // if ($(window).width() <= 414) {
+    //     $('.ACCORDION_TITLE_BOX').off('mouseenter mouseleave');
+    // };
 });
