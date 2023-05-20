@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href='css/style.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <title>線上購物 SHOPPING</title>
 </head>
 <body class="SHOPPING">
 <!-- ===============================header================================= -->
-    <header>
+    <!-- <header>
 
         <nav class="HEADER_NAV">
 
@@ -48,7 +49,7 @@
 
         </nav>
 
-    </header>
+    </header> -->
 
 <!-- =================================MASTER_VISION====================================== -->
     <section class="CAROUSEL">
@@ -74,12 +75,12 @@
 
     <!-- header下方區塊的背景 -->
     <section class="SHOPPINGBG">
-        <div class="DOT"></div>
+        <!-- <div class="DOT"></div> -->
 
 <!-- ===================================麵包屑====================================== -->
     
     <section class="BREAD WRAPPER">
-        <a href="#">首頁</a>
+        <a href="index.html">首頁</a>
         /
         <a href="#">線上購物</a>
     </section>
@@ -101,9 +102,9 @@
                 <span class="HIPPO2 ANI"></span>
             </section>
         </section>
-        <section class="SHOPPINGCARDAREA WRAPPER">
-            <ul class="SHOPPINGCARDAREA_UL">
-                <li class="SHOPPINGCARD COL-3">
+        <section class="SHOPPINGCARDAREA WRAPPER swiper mySwiper">
+            <ul class="SHOPPINGCARDAREA_UL swiper-wrapper">
+                <li class="SHOPPINGCARD COL-3 swiper-slide">
                     <section class="SHOPPINGCARD_IMG">
                         <span>
                             <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -118,7 +119,7 @@
                     </a>
                     <P class="SHOPPINGCARD_PRICE">$53</P>
                 </li>
-                <li class="SHOPPINGCARD COL-3">
+                <li class="SHOPPINGCARD COL-3 swiper-slide">
                     <section class="SHOPPINGCARD_IMG">
                         <span>
                             <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -133,7 +134,7 @@
                     </a>
                     <P class="SHOPPINGCARD_PRICE">$58</P>
                 </li>
-                <li class="SHOPPINGCARD COL-3">
+                <li class="SHOPPINGCARD COL-3 swiper-slide">
                     <section class="SHOPPINGCARD_IMG">
                         <span>
                             <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -148,7 +149,7 @@
                     </a>
                     <P class="SHOPPINGCARD_PRICE">$1,380</P>
                 </li>
-                <li class="SHOPPINGCARD COL-3">
+                <li class="SHOPPINGCARD COL-3 swiper-slide">
                         <section class="SHOPPINGCARD_IMG">
                             <span>
                                 <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -163,7 +164,71 @@
                         </a>
                             <P class="SHOPPINGCARD_PRICE">$1,380</P>
                 </li>
+                <li class="SHOPPINGCARD COL-3 swiper-slide">
+                    <section class="SHOPPINGCARD_IMG">
+                        <span>
+                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
+                            <p>加入購物車</p>
+                        </span>
+                        <a href="#" class="CARDLINK">
+                            <img src="/img/shopping_list/dryfood/07/dryfood_07_01.jpg" alt="">
+                        </a>
+                    </section>
+                    <a href="#" class="CARDLINK">
+                        <p class="SHOPPINGCARD_TITLE">【SC星益生趣】冷凍乾燥狗狗生食佐餐(鮭魚鱈魚) 3.5oz/99g</p>
+                    </a>
+                        <P class="SHOPPINGCARD_PRICE">$720</P>
+                </li>
+                <li class="SHOPPINGCARD COL-3 swiper-slide">
+                    <section class="SHOPPINGCARD_IMG">
+                        <span>
+                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
+                            <p>加入購物車</p>
+                        </span>
+                        <a href="#" class="CARDLINK">
+                            <img src="/img/shopping_list/can/08/can_08_01.jpg" alt="">
+                        </a>
+                    </section>
+                    <a href="#" class="CARDLINK">
+                        <p class="SHOPPINGCARD_TITLE">MDARYN麥德琳 喵樂-肉食控主食罐(嫩雞鮪魚) 80g</p>
+                    </a>
+                        <P class="SHOPPINGCARD_PRICE">$58</P>
+                </li>
+                <li class="SHOPPINGCARD COL-3 swiper-slide">
+                    <section class="SHOPPINGCARD_IMG">
+                        <span>
+                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
+                            <p>加入購物車</p>
+                        </span>
+                        <a href="#" class="CARDLINK">
+                            <img src="/img/shopping_list/healthy/04/healthy_04_01.jpg" alt="">
+                        </a>
+                    </section>
+                    <a href="#" class="CARDLINK">
+                        <p class="SHOPPINGCARD_TITLE">沛威狗保健-膚健康 30入/盒</p>
+                    </a>
+                        <P class="SHOPPINGCARD_PRICE">$1,280</P>
+                </li>
+                <li class="SHOPPINGCARD COL-3 swiper-slide">
+                    <section class="SHOPPINGCARD_IMG">
+                        <span>
+                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
+                            <p>加入購物車</p>
+                        </span>
+                        <a href="#" class="CARDLINK">
+                            <img src="/img/shopping_list/healthy/06/healthy_06_01.jpg" alt="">
+                        </a>
+                    </section>
+                    <a href="#" class="CARDLINK">
+                        <p class="SHOPPINGCARD_TITLE">沛威貓保健-好胃口益生菌 30入/盒</p>
+                    </a>
+                        <P class="SHOPPINGCARD_PRICE">$1,380</P>
+                </li>
             </ul>
+        </div class= "swiper-button">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
         </section>
         <section class="WRAPPER ">
             <button class="BTN SHOPPINGCARDBTN">查看全部熱門商品</button>
@@ -174,6 +239,16 @@
 <!-- ====================================商品列表搜尋================================================== -->
 
     <section class="SHOPPINGSELECT WRAPPER">
+
+        <section class="SEARCH_ALL_M">
+            <label for="search" class="INPUT">
+                <input type="text" id="search"placeholder="搜尋商品" class="SHOPPINGSELECT_SEARCH">
+            </label>
+        <section class="SEARCHBTN_ALL">
+            <button class="BTN SEARCHBTN"><i class="bi bi-search SEARCHICON"></i></button>
+        </section>
+        </section>
+
         <label for="pet_category" class="SELECT">
             <select id="pet_category" class="SELECTOP">
                 <option value="">全部商品</option>
@@ -197,7 +272,7 @@
 
     <section class="SHOPPINGITEM WRAPPER">
         <ul class="SHOPPINGITEM_UL">
-            <li class="SHOPPINGCARD COL-4">
+            <li class="SHOPPINGCARD COL-4 RWD-COL-6">
                 <section class="SHOPPINGCARD_IMG">
                     <span>
                         <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -212,7 +287,7 @@
                 </a>
                     <P class="SHOPPINGCARD_PRICE">$53</P>
             </li>
-            <li class="SHOPPINGCARD COL-4">
+            <li class="SHOPPINGCARD COL-4 RWD-COL-6">
                 <section class="SHOPPINGCARD_IMG">
                     <span>
                         <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -227,7 +302,7 @@
                 </a>
                     <P class="SHOPPINGCARD_PRICE">$53</P>
             </li>
-            <li class="SHOPPINGCARD COL-4">
+            <li class="SHOPPINGCARD COL-4 RWD-COL-6">
                 <section class="SHOPPINGCARD_IMG">
                     <span>
                         <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -242,7 +317,7 @@
                 </a>
                     <P class="SHOPPINGCARD_PRICE">$53</P>
             </li>
-            <li class="SHOPPINGCARD COL-4">
+            <li class="SHOPPINGCARD COL-4 RWD-COL-6">
                 <section class="SHOPPINGCARD_IMG">
                     <span>
                         <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -257,7 +332,7 @@
                 </a>
                     <P class="SHOPPINGCARD_PRICE">$53</P>
             </li>
-            <li class="SHOPPINGCARD COL-4">
+            <li class="SHOPPINGCARD COL-4 RWD-COL-6">
                 <section class="SHOPPINGCARD_IMG">
                     <span>
                         <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -272,7 +347,7 @@
                 </a>
                     <P class="SHOPPINGCARD_PRICE">$58</P>
             </li>
-            <li class="SHOPPINGCARD COL-4">
+            <li class="SHOPPINGCARD COL-4 RWD-COL-6">
                 <section class="SHOPPINGCARD_IMG">
                     <span>
                         <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -287,7 +362,7 @@
                 </a>
                     <P class="SHOPPINGCARD_PRICE">$58</P>
             </li>
-            <li class="SHOPPINGCARD COL-4">
+            <li class="SHOPPINGCARD COL-4 RWD-COL-6">
                 <section class="SHOPPINGCARD_IMG">
                     <span>
                         <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -302,7 +377,7 @@
                 </a>
                     <P class="SHOPPINGCARD_PRICE">$58</P>
             </li>
-            <li class="SHOPPINGCARD COL-4">
+            <li class="SHOPPINGCARD COL-4 RWD-COL-6">
                 <section class="SHOPPINGCARD_IMG">
                     <span>
                         <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -317,7 +392,7 @@
                 </a>
                     <P class="SHOPPINGCARD_PRICE">$58</P>
             </li>
-            <li class="SHOPPINGCARD COL-4">
+            <li class="SHOPPINGCARD COL-4 RWD-COL-6">
                 <section class="SHOPPINGCARD_IMG">
                     <span>
                         <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -332,7 +407,7 @@
                 </a>
                     <P class="SHOPPINGCARD_PRICE">$58</P>
             </li>
-            <li class="SHOPPINGCARD COL-4">
+            <li class="SHOPPINGCARD COL-4 RWD-COL-6">
                 <section class="SHOPPINGCARD_IMG">
                     <span>
                         <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -347,7 +422,7 @@
                 </a>
                     <P class="SHOPPINGCARD_PRICE">$58</P>
             </li>
-            <li class="SHOPPINGCARD COL-4">
+            <li class="SHOPPINGCARD COL-4 RWD-COL-6">
                 <section class="SHOPPINGCARD_IMG">
                     <span>
                         <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -362,7 +437,7 @@
                 </a>
                     <P class="SHOPPINGCARD_PRICE">$972</P>
             </li>
-            <li class="SHOPPINGCARD COL-4">
+            <li class="SHOPPINGCARD COL-4 RWD-COL-6">
                 <section class="SHOPPINGCARD_IMG">
                     <span>
                         <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
@@ -398,12 +473,12 @@
 <!-- ===============================回到TOP================================================ -->
 
 
-<button id="js-top" class="TOP_BTN"></button>
+<!-- <button id="js-top" class="TOP_BTN"></button> -->
 
 
 <!-- ==================================FOOTER================================================= -->
 
-<footer>
+<!-- <footer>
     <div class="FOOTER_LOGO">
         <img src="img/H-LOGO.svg" alt="">
     </div>
@@ -454,11 +529,56 @@
 </footer>
 <div class="FOOTER_BOTTOM">
     <p>Copyright © 本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。</p>
-</div>
+</div> -->
 
 </section>
 
 <script src="top_btn.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        centeredSlides: false,
+        spaceBetween: 30,
+        freeMode: true,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        loop: true
+        });
+
+</script>
+<script>
+
+$(function(){
+let viewport = $(window).width();
+if(viewport <= 414){
+
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        centeredSlides: false,
+        spaceBetween: 15,
+        freeMode: true,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        loop: true
+        });
+
+
+
+
+    }
+});
+</script>
 
 </body>
 </html>
