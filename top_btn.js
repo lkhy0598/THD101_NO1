@@ -17,32 +17,32 @@ $(document).ready(function() {
 
 
 
-// const scrollToTopButton = document.getElementById('js-top');
+const scrollToTopButton = document.getElementById('js-top');
 
-// const scrollFunc = () => {
+const scrollFunc = () => {
 
-//   let y = window.scrollY;
+  let y = window.scrollY;
 
-//   if (y > 500) {
-//     scrollToTopButton.className = "TOP_BTN SHOW";
-//   } else {
-//     scrollToTopButton.className = "TOP_BTN HIDE";
-//   }
+  if (y > 200) {
+    scrollToTopButton.className = "TOP_BTN SHOW";
+  } else {
+    scrollToTopButton.className = "TOP_BTN HIDE";
+  }
 
-// };
+};
 
-// window.addEventListener("scroll", scrollFunc);
+window.addEventListener("scroll", scrollFunc);
 
-// const scrollToTop = () => {
+const scrollToTop = () => {
 
-// const c = document.documentElement.scrollTop || document.body.scrollTop;
+const c = document.documentElement.scrollTop || document.body.scrollTop;
 
-//   if (c > 0) {
-//     window.requestAnimationFrame(scrollToTop);
-//     window.scrollTo(0, c - c / 10);
-//   }
+  if (c > 0) {
+    window.requestAnimationFrame(scrollToTop);
+    window.scrollTo(0, c - c / 10);
+  }
 
-// };
+};
 
 // scrollToTopButton.onclick = function(e) {
 //   e.preventDefault();

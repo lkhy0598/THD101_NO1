@@ -10,9 +10,7 @@
         position: relative;
     }
 
-    .M_FUNTION{
-        display: none;
-    }
+    
 
 
     .TOGGLE {
@@ -745,38 +743,7 @@
             display: none;
         }
 
-        .M_FUNTION{
-            display: block;
-            position: fixed;
-            z-index: 100;
-            bottom: 0;
-
-            ul{
-                display: flex;
-                justify-content: space-between;
-                width: 100vw;   
-                height: 90px;
-                background: linear-gradient(90deg, #F89F69 0%, #fc9a5e 40%, #A7CFD7 100%);
-
-
-                li{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    color: $white;
-                    text-align: center;
-                    padding:  0 15px;
-                    i{
-                        font-size: 25px;
-                        padding-bottom: 15px;
-                    }
-
-                    .arrow{
-                        font-size: 40px;
-                    }
-                }
-            }
-        }
+        
 
         // ============ header ===========
    
