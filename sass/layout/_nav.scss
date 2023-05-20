@@ -1,6 +1,10 @@
 
 //header nav設定
 
+.M_HEADER_NAV{
+    display: none;
+}
+
 .M_FUNTION{
     display: none;
 }
@@ -270,8 +274,18 @@
   }
 
 @include m{
+
+
+    .HEADER_NAV{
+        display: none;
+    }
+
+
+ 
+    
     //header nav設定
     .M_HEADER_NAV {
+        display: block;
         background-image: url("");
         background: linear-gradient(160deg, rgb(243, 145, 85, .9) 0%,  rgb(228, 170, 123, .9) 40%, rgba(126, 184, 196, 0.9) 80%, rgba(126, 184, 196, 0.8) 100%);
         z-index: 9999;

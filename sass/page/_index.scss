@@ -1,9 +1,7 @@
 .INDEX{
     overflow-x: hidden;
 
-    .M_HEADER_NAV{
-        display: none;
-    }
+    
 
     .BIG_TITLE { 
         padding-top: 100px;
@@ -115,6 +113,13 @@
 
 .CAROUSEL{
     position: relative;
+    .PAWPAW > picture > img{
+        position: absolute;
+        top: 50%;
+        left: 6vw;
+        width: 35vw;
+        
+    }
 }
 
 .DOT{
@@ -661,14 +666,7 @@
             position: relative;
         }
 
-        .HEADER_NAV{
-            display: none;
-        }
-
-
-        .M_HEADER_NAV{
-            display: block;
-        }
+       
 
         //================= 主視覺部分  ===================
         .APPOINTMENT{
@@ -690,7 +688,14 @@
        
 
         .CAROUSEL{
+            .PAWPAW > picture > img{
+                position: absolute;
+                top: 5%;
+                left: 25vw;
 
+                width: 55vw;
+                
+            }
 
             
         
@@ -1124,62 +1129,5 @@
 
             
 
-        // ================ footer ====================
-        .TOP_BTN{
-            display: none;
-        }
-        
-        .FOOTER_TOP_BTN{
-            display: block;
-        }
-
-        footer{
-    
-      
-            height: 162px;
-         
-        }
-
-        .FOOTER_LOGO{
-            margin-left: 11vw;
-            margin-top: 3.5vh;
-        }
-        
-
-        .FOOTER_NAV{
-            display: none;
-        
-        }
-
-        .FOOTER_ICON{
-            position: absolute;
-            top: 11%;
-            right: 5%;
-        }
-
-        .FOOTER_ICON > a > img{
-            padding: 15px;
-            width: 20px;
-        }
-
-
-      
-        .FOOTER_BOTTOM{
-            display: flex;
-            width: auto;
-            height: 87px;
-            background-color: #252F3A;
-            line-height: 87px;
-            align-items: center;
-            margin-bottom: 87px;
-        }
-
-        .FOOTER_BOTTOM > p{
-            padding: 0 15px;
-            font-size: 15px;
-            line-height: 150%;
-            font-weight: 400;
-        }
-        
     }
 }
