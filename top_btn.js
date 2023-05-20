@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(document).ready(function() {
   $("#js-top").click(function() {
       $('html, body').animate({
@@ -13,29 +12,6 @@ $(document).ready(function() {
     }, 1000);
   });
 });
-=======
-document.querySelector("#js-top").addEventListener('click', function (e) {
-  e.preventDefault();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// $(document).ready(function() {
-//   $("#js-top").click(function() {
-//       $('html, body').animate({
-//           scrollTop: $("body").offset().top
-//       }, 800);
-//   });
-// });
-
-
-// $(document).ready(function() {
-//   $("#js-f-top").click(function() {
-//       $('html, body').animate({
-//           scrollTop: $("body").offset().top
-//       }, 800);
-//   });
-// });
->>>>>>> HAO
 
 
 
