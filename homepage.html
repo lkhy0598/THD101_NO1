@@ -307,10 +307,17 @@
           <div id="TOGGLE" class="TOGGLE"><span></span></div>
         </nav>
     
-    </header>
+      </header>
     <!-- =================================MASTER_VISION====================================== -->
     <section class="CAROUSEL">
       <div class="MASTER_VISION"><img src="img/HEADER-TOP.png" alt="" /></div>
+      <div class="PAWPAW">
+        <picture>
+          <source srcset="./img/M_pawpaw.svg" media="(max-width: 414px)">
+          <img src="img/pawpaw.svg" alt="">
+        </picture>
+      
+      </div>
       <div class="DOT"></div>
       <div class="DOT1"></div>
       
@@ -718,17 +725,9 @@
     <script src="./sroll.js"></script>
     <script src="./nav.js"></script>
     <script src="user_popup.js"></script>
+    <script src="./toggle.js"></script>
     <script>
-      $(function(){
-        $(".TOGGLE").click(function(){
-            $('.TOGGLE > span').toggleClass('close');
-            $('.TOGGLE').toggleClass('close');
-            $(".M_HEADER_NAV > ul").slideToggle();
-            
-
-    
-        });
-      });
+     
 
 
       
