@@ -26,7 +26,7 @@ body .MODAL .POPUP_WRAP_ACTIVE {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 9000;
 
     // transition: all 1s ease;
     // pointer-events:none;
@@ -40,6 +40,10 @@ body .MODAL .POPUP_WRAP_ACTIVE {
         z-index: 1000;
         transition: all .3s ease;
 
+        @include m() {
+            top: 1%;
+            transform: scale(.5);
+        }
 
         &:hover {
             color: $white;
@@ -64,6 +68,10 @@ body .MODAL .POPUP_WRAP_ACTIVE {
         transform: translate(-50%, -50%);
         transition: all .3s ease;
 
+        @include m() {
+            width: 90%;
+            height: 85%;
+        }
 
 
         // overflow: hidden;
@@ -228,6 +236,10 @@ body .MODAL .POPUP_WRAP_ACTIVE {
             position: absolute;
             left: 6.7rem;
             bottom: .6rem;
+
+            @include m {
+                left: 4.7rem;
+            }
         }
 
         input {
