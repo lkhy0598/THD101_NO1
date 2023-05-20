@@ -160,7 +160,9 @@
 
 //footer nav設定
 .FOOTER_NAV {
-
+    @include m() {
+        margin-bottom: 200px;
+    }
     >ul {
 
         display: flex;
