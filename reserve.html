@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css" />
   <title>線上預約 - 波波動物醫院</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body class="RESERVE">
@@ -19,9 +20,18 @@
   <!-- ===============================header================================= -->
   <header>
     <nav class="HEADER_NAV">
-      <a href="index.html">
-        <img src="img/V-HEADER-LOGO-HOVER.svg" alt=""/>
-        <img src="img/V-HEADER-LOGO.svg" alt=""/>
+      <a href="homepage.html">
+        <div class="HEADERLOGO_BG_BOX HEADERLOGE_BG_TOP">
+          <div class="HEADERLOGO_PAW">
+            <img src="./img/HEADERLOGO_PAW.svg" alt="">
+            <div class="HEADERLOGO_CLAWS">
+              <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
+            </div>
+          </div>
+          <div class="HEADER_LOGO_NAME">
+            <img src="./img/HEADERLOGO_NAME.svg" alt="">
+          </div>
+        </div>
       </a>
 
       <ul>
@@ -63,6 +73,10 @@
 
   <!-- header下方區塊的背景 -->
   <section class="BACKGROUND">
+    <div class="INFORMATIN_BG_CLOUDS">
+      <img src="./img/CLOUD_BG.png" alt="" class="BG_CLOUD">
+      <img src="./img/CLOUD_BG.png" alt="" class="BG_CLOUD">
+    </div>
     <!-- ==========預約頁面共用資訊========== -->
 
     <section class="WRAPPER BIG_TITLE RESERVE_INFO">
@@ -132,12 +146,48 @@
 
     <!-- ========表單區塊======== -->
 
-    <section class="RESERVE_FORM1">
-      <input type="text"> <input type="text">
-      <input type="text"><input type="text">
+    <section class="RESERVE_FORM">
+      <ul>
+        <li>
+          <p>預約類型</p>
+          <select name="" id="">
+            <option value="" style="display: none"></option>
+            <option value="">一般掛號</option>
+            <option value="">寵物溝通</option>
+          </select>
+        </li>
+        <li>
+          <p>指定醫師</p>
+          <select name="" id="">
+            <option value="">不指定</option>
+            <option value="">林佳緯</option>
+            <option value="">詹宗豪</option>
+            <option value="">林育楣</option>
+            <option value="">汪玉婷</option>
+            <option value="">范植鑫</option>
+            <option value="">賴偉峰</option>
+          </select>
+        </li>
+        <li>
+          <p>預約日期</p>
+          <input type="date">
+        </li>
+        <li>
+          <p>預約時段</p>
+          <select name="" id="">
+            <option value="" style="display: none">請選擇時段</option>
+            <option value="1">09:00~12:00</option>
+            <option value="2">14:00~18:00</option>
+            <option value="3">19:00~21:00</option>
+          </select>
+        </li>
+      </ul>
 
-      <button>上一步</button>
-      <button>下一步</button>
+      <div class="STEPS">
+        <button>上一步</button>
+        <button>下一步</button>
+      </div>
+
     </section>
 
 
@@ -191,6 +241,9 @@
       本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。
     </p>
   </div>
+  <script src="./nav.js"></script>
+  <script src="./sroll.js"></script>
+  <script src="./top_btn.js"></script>
 </body>
 
 </html>

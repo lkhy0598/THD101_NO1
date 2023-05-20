@@ -1,39 +1,44 @@
 .RESERVE {
-    .CAROUSEL{
+    .CAROUSEL {
         position: relative;
     }
-    .DOT{
+
+    .DOT {
         position: absolute;
         width: 200px;
         height: 200px;
         right: 30px;
         bottom: 40px;
         z-index: 10;
-    
+
     }
-    
+
+    .BACKGROUND {
+        background-image: url(../../img/BG.jpg);
+    }
+
     .BACKGROUND>.BIG_TITLE::after {
         display: none;
     }
-    
+
     //-----預約頁面共用內容——對初診患者資訊區塊-----//
     .RESERVE_INFO {
         overflow: hidden;
         padding-bottom: 170px;
     }
-    
+
     .RESERVE_INFO>.BREAD {
         margin-top: 45px;
         margin-bottom: 50px;
     }
-    
+
     .FIRSTTIME_INFO {
         display: flex;
         align-content: center;
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     .FIRSTTIME_INFO>h1::before {
         background-color: #34424F;
         width: 400px;
@@ -45,7 +50,7 @@
         top: 20px;
         left: 150px;
     }
-    
+
     .FIRSTTIME_INFO>h1 {
         color: #34424F;
         width: 1440px;
@@ -53,7 +58,7 @@
         text-align: center;
         margin-bottom: 80px;
     }
-    
+
     .FIRSTTIME_INFO>h1::after {
         background-color: #34424F;
         width: 400px;
@@ -65,14 +70,14 @@
         top: 20px;
         right: 150px;
     }
-    
+
     .RESERVE_TYPE_UL {
         display: flex;
         width: 77%;
         justify-content: space-between;
         margin-bottom: 85px;
     }
-    
+
     .TITLE_NO {
         background-color: #FFFFFF;
         color: #428AA9;
@@ -80,7 +85,7 @@
         top: 0;
         left: 0;
     }
-    
+
     .RESERVE_TYPE {
         background-color: #428AA9;
         color: #FFFFFF;
@@ -91,7 +96,7 @@
         justify-content: center;
         line-height: 250px;
     }
-    
+
     .FIRSTTIME_INFO>p {
         color: #34424F;
         text-align: center;
@@ -99,10 +104,11 @@
         width: 100%;
         margin-bottom: 20px;
     }
-    
+
     .FIRSTTIME_INFO .CALL {
         font-weight: 700;
     }
+
     //----- 預約步驟區塊 -----//
     .RESERVE_STEPAREA {
         color: #34424F;
@@ -117,7 +123,7 @@
         position: relative;
         flex-grow: 1;
         display: flex;
-        justify-content:center;
+        justify-content: center;
     }
 
     .RESERVE_ARC>.ARC_TITLE {
@@ -177,6 +183,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 10;
     }
 
     .CALENDAR_INFO p {
@@ -190,7 +197,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 10;
     }
+
     .CALENDAR_COLOR_INFO p {
         font-size: 12px;
         margin-left: -10px;
@@ -198,13 +207,76 @@
     }
 
     //----- 表單區塊 -----//
-    .RESERVE_FORM1 {
-        border: 1px solid;
-        margin: 0 auto;
+    .RESERVE_FORM {
+        margin: 30px auto;
         width: 80%;
         display: flex;
         align-items: center;
         justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        z-index: 10;
+    }
+
+    .RESERVE_FORM ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 1000px;
+        margin-bottom: 90px;
+    }
+
+    .RESERVE_FORM ul li {
+        width: 350px;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+    }
+
+    .RESERVE_FORM ul p {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .RESERVE_FORM ul li select {
+        width: 330px;
+        height: 30px;
+        border-radius: 5px;
+    }
+
+    .RESERVE_FORM ul li input {
+        width: 325px;
+        height: 27px;
+        border-radius: 5px;
+    }
+
+    .RESERVE_FORM .STEPS {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .STEPS button {
+        width: 180px;
+        height: 60px;
+        font-size: 20px;
+        color: #FFF;
+        background-color: #34424F;
+        border-radius: 8px;
+        margin-left: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .STEPS button:first-child {
+        background-color: transparent;
+        border: none;
+        color: #000;
+        text-decoration-line: underline;
+        cursor: default;
     }
 }
-
