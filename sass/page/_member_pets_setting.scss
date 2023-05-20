@@ -1,3 +1,4 @@
+
 .MEMBERCENTER {
     padding-top: 300px;
 
@@ -79,6 +80,35 @@
 
 .MEMCONTENT {
     width: 1000px;
+
+    .MEMTABLE {
+        margin-top: 50px;
+        font-size: 25px;
+        line-height: 2;
+        text-align: center;
+
+        
+        border-collapse: separate;
+        border-spacing: 0;
+        border: 1px solid $blueblack;  
+        border-radius: 10px;
+        overflow: hidden;
+        
+
+       
+
+        tbody {
+            background-color: $lightyellow;
+            tr {
+                
+
+                td {
+                    border: 1px solid $blueblack;
+                }
+            }
+
+        }
+    }
 }
 
 .SUBTITLE {
@@ -156,6 +186,7 @@
                     font-size: 25px;
                     padding-left: 20px;
 
+
                 }
 
                 .comment {
@@ -198,5 +229,5 @@
 
     }
 
-
+    
 }

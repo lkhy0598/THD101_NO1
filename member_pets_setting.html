@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,41 +19,54 @@
 
     <!-- ===============================header================================= -->
     <header>
+
         <nav class="HEADER_NAV">
-    
-          <a href="index.html">
-            <img src="img/V-HEADER-LOGO-HOVER.svg" alt=""/>
-            <img src="img/V-HEADER-LOGO.svg" alt="" />
-          </a>
-    
-          <ul>
-            <li>
-              <a href="about_us.html"><span>關於院所</span><br>About Us</a>
-            </li>
-            <li>
-              <a href="#"><span>資訊導覽</span><br>Information</a>
-            </li>
-            <li>
-              <a href="#"><span>線上購物</span><br>Shopping</a>
-            </li>
-            <li>
-              <a href="#"><span>常見問題</span><br>Q & A</a>
-            </li>
-            <li>
-              <a href="#"><span>會員中心</span><br>Member Centre</a>
-            </li>
-            <li>
-              <a href="#" class="RESERVE">立即預約</a>
-            </li>
-            <li>
-              <a href="#" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
-            </li>
-            <li>
-              <a href="#"><i class="bi bi-cart-fill"></i></a>
-            </li>
-          </ul>
+
+            <a href="homepage.html">
+                <div class="HEADERLOGO_BG_BOX HEADERLOGE_BG_TOP">
+                    <div class="HEADERLOGO_PAW">
+                        <img src="./img/HEADERLOGO_PAW.svg" alt="">
+                        <div class="HEADERLOGO_CLAWS">
+                            <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="HEADER_LOGO_NAME">
+                        <img src="./img/HEADERLOGO_NAME.svg" alt="">
+                    </div>
+                </div>
+            </a>
+
+
+            <ul>
+                <li>
+                    <a href="about_us.html"><span>關於院所</span><br>About Us</a>
+                </li>
+                <li>
+                    <a href="information.html"><span>資訊導覽</span><br>Information</a>
+                </li>
+                <li>
+                    <a href="shopping.html"><span>線上購物</span><br>Shopping</a>
+                </li>
+                <li>
+                    <a href="qa.html"><span>常見問題</span><br>Q & A</a>
+                </li>
+                <li>
+                    <a href="member_center.html"><span>會員中心</span><br>Member Centre</a>
+                </li>
+                <li>
+                    <a href="#" class="RESERVE">立即預約</a>
+                </li>
+                <li>
+                    <a href="#" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
+                </li>
+                <li>
+                    <a href="#"><i class="bi bi-cart-fill"></i></a>
+                </li>
+            </ul>
+
         </nav>
-      </header>
+
+    </header>
 
 
 
@@ -182,18 +196,20 @@
                     </div>
                     <form method="post" action="./member_center.php">
                         <ul>
-                            <li class="short"><label for="name">寵物名稱</label>
-                                <input type="text" name="name">
+                            <li class="short"><label for="name1" >寵物名稱</label>
+                                <input type="text" name="name1" placeholder="請輸入寵物名稱">
                             </li>
                             <li class="short"><label for="gender">寵物性別</label>
                                 
                                 <select name="gender" id="gender" class="select">
+                                    <option value="">請選擇</option>
                                     <option value="male">公</option>
                                     <option value="female">母</option>
                                 </select>
                             </li>
                             <li class="short"><label for="category">寵物類別</label>
                                 <select name="category" id="category" class="select">
+                                    <option value="">請選擇</option>
                                     <option value="dog">狗</option>
                                     <option value="cat">貓</option>
                                     <option value="others">其他</option>
@@ -202,6 +218,7 @@
                             <li class="short"><label for="size">寵物體型</label>
                                 
                                 <select name="size" id="size" class="select">
+                                    <option value="">請選擇</option>
                                     <option value="small">小型</option>                                    
                                     <option value="medium">中型</option>                                    
                                     <option value="large">大型</option>                                    
@@ -230,6 +247,108 @@
                     </form>
                 </div>
 
+                <!-- --------病歷查詢--------- -->
+                <div class="SUBTITLE">
+                    <h1>病歷查詢</h1>
+                    <p>Medical Record Inquiry</p>
+                </div>
+                <div class=" password ">
+                    
+                    <form method="post" action="./member_center.php">
+                        <ul >
+                            <li class="middlelong"><label for="">選擇寵物資料</label>
+                                <select name="petNameRecord" id="petNameRecord" class="select">
+                                    <option value="">請選擇寵物名稱</option>
+                                    <!-- php for -->
+                                </select>
+                            </li>
+                            <li class="middlelong"><label for="appointmentDate">看診日期</label>
+                                
+                                <select name="appointmentDate" id="appointmentDate" class="select">
+                                    <option value="">一個月以內</option>
+                                    <option value="">半年內</option>
+                                    <option value="">一年以上</option>
+                                    <!-- php for -->
+                                </select>
+                            </li>
+
+                        </ul>
+                        <div class="submit">
+                            <input type="submit" value="搜尋病歷" class="BTN">
+                            
+                        </div>
+                    </form>
+                    
+                </div>
+                <table class="MEMTABLE">
+                        <thead>
+                            <tr>
+                                <td>病歷編號</td>
+                                <td>看診日期</td>
+                                <td>寵物名字</td>
+                                <td>看診內容</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>25252525</td>
+                                <td>2023/10/24</td>
+                                <td>辛巴</td>
+                                <td>預防針</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                     <!-- --------健康檢查報告查詢--------- -->
+                <div class="SUBTITLE">
+                    <h1>健康檢查報告查詢</h1>
+                    <p> Health Check Report Inquiry</p>
+                </div>
+                <div class=" password ">
+                    
+                    <form method="post" action="./member_center.php">
+                        <ul >
+                            <li class="middlelong"><label for="">選擇寵物資料</label>
+                                <select name="petNameHealth" id="petNameHealth" class="select">
+                                    <option value="">請選擇寵物名稱</option>
+                                    <!-- php for -->
+                                </select>
+                            </li>
+                            <li class="middlelong"><label for="appointmentDateHealth">健康檢查日期</label>
+                                
+                                <select name="appointmentDateHealth" id="appointmentDateHealth" class="select">
+                                    <option value="">一年以內</option>
+                                    <option value="">一年到兩年</option>
+                                    <option value="">兩年以上</option>
+                                    <!-- php for -->
+                                </select>
+                            </li>
+
+                        </ul>
+                        <div class="submit">
+                            <input type="submit" value="搜尋病歷" class="BTN">
+                            
+                        </div>
+                    </form>
+                    
+                </div>
+                <table class="MEMTABLE">
+                        <thead>
+                            <tr>
+                                <td>病例編號</td>
+                                <td>看診日期</td>
+                                <td>寵物名字</td>
+                                <td>看診內容</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>25252525</td>
+                                <td>2023/10/24</td>
+                                <td>辛巴</td>
+                                <td>預防針</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
             </section>
         </section>
