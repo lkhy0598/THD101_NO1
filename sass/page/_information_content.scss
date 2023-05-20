@@ -1,39 +1,49 @@
 .IMFORMATION_CONTENT{
     // 背景雲裝飾
     .BACKGROUND {
-        box-sizing: border-box;
-        overflow: hidden;
-        background-image: none;
-        position: relative;
+        .BG {}
 
-        .BG {
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -2;
-        }
+        .BG_CLOUDS {
 
-        .INFOMATION_BG_CLOUDS {
-            .BG_CLOUD {
-                width: 100%;
-                position: absolute;
-                z-index: -1;
-            }
+            .BG_CLOUD {}
 
-            .BG_CLOUD:first-child {
-                transform: scaleX(-1);
+            .CLOUD_1 {
                 top: 0;
                 left: 900px;
+
+                .BG_CLOUD_IMG1 {
+                    transform: scaleX(-1);
+
+                    @include m() {
+                        // transform: scale(-10) rotate(330deg);
+                    }
+                }
+
+                @include m() {
+                    // top: 1600px;
+                }
             }
 
-            .BG_CLOUD:last-child {
+            .CLOUD_2 {
                 bottom: -400px;
                 left: -400px;
+
+                .BG_CLOUD_IMG2 {
+                    transform: scale(-2) rotate(340deg);
+
+                    @include m() {
+                        // transform: scale(-10) rotate(340deg);
+                    }
+                }
+
+                @include m() {
+                    // top: 3830px;
+                    // left: 260px;
+                }
             }
         }
     }
+
 
     // 文章內容
     .INFOMATION_CONTENT_BOX {
