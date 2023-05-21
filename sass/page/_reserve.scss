@@ -1,7 +1,7 @@
 .RESERVE {
-    .M_HEADER_NAV {
-        display: none;
-    }
+    // .M_HEADER_NAV {
+    //     display: none;
+    // }
 
     .CAROUSEL {
         position: relative;
@@ -181,12 +181,26 @@
         font-weight: bold;
     }
 
+    .RESERVE_TYPE_UL_M {
+        display: none;
+    }
+
     //----- 月曆區塊 -----//
-    .CALENDAR {
+    .CALENDAR_AREA {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         z-index: 10;
+        // border: 1px solid;
+    }
+
+    #calendar {
+        width: 70%;
+    }
+
+    .CALENDAR_INFO {
+        padding-left: 10px;
     }
 
     .CALENDAR_INFO p {
@@ -219,6 +233,7 @@
         display: flex;
         flex-wrap: wrap;
         z-index: 10;
+        // border: 1px solid;
     }
 
     .RESERVE_FORM ul {
@@ -228,6 +243,8 @@
         flex-wrap: wrap;
         width: 1000px;
         margin-bottom: 90px;
+        // border: 1px solid;
+        padding-left: 20px;
     }
 
     .RESERVE_FORM ul li {
@@ -235,26 +252,24 @@
         height: 80px;
         display: flex;
         flex-direction: column;
-        // align-items: center;
         justify-content: center;
+        // border: 1px solid;
     }
 
-    .RESERVE_FORM ul p {
-        font-size: 18px;
+    .RESERVE_FORM ul li {
         margin-bottom: 8px;
     }
 
-    .RESERVE_FORM ul li select {
-        width: 330px;
-        height: 30px;
-        border-radius: 5px;
+    .RESERVE_FORM ul li label {
+        font-size: 20px;
     }
 
-    .RESERVE_FORM ul li input {
-        width: 325px;
-        height: 27px;
-        border-radius: 5px;
+
+    .RESERVE_FORM ul li:nth-child(3) {
+        padding-top: 9px;
     }
+
+
 
     .RESERVE_FORM .STEPS {
         display: flex;
@@ -287,9 +302,123 @@
 // =========================  RWD ===============================
 
 @mixin m() {
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: 415px) {
         @content;
     }
 }
 
-// @include m {}
+@include m {
+    .RESERVE {
+        .APPOINTMENT {
+            display: none;
+        }
+
+        .RESERVE_INFO {
+            width: 93%;
+            padding-bottom: 70px;
+
+            .FIRSTTIME_INFO>h1::before {
+                background-color: #34424F;
+                width: 40px;
+                height: 2px;
+                content: "";
+                box-sizing: border-box;
+                position: absolute;
+                top: 20px;
+                left: 40px;
+                display: block;
+            }
+
+            .FIRSTTIME_INFO>h1::after {
+                background-color: #34424F;
+                width: 40px;
+                height: 2px;
+                content: "";
+                box-sizing: border-box;
+                position: absolute;
+                top: 20px;
+                right: 40px;
+                display: block;
+            }
+
+            .RESERVE_TYPE_UL {
+                display: none;
+            }
+
+            .RESERVE_TYPE_UL_M {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                .TITLE_NO {
+                    font-size: 14px;
+                }
+
+                .RESERVE_TYPE {
+                    width: 120px;
+                    height: 120px;
+                    position: relative;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 120px;
+                    font-size: 14px;
+                }
+            }
+
+            .RESERVE_STEPAREA {
+                width: 100%;
+                display: flex;
+                flex-grow: 1;
+                margin-top: 30px;
+
+                .RESERVE_ARC {
+                    p {
+                        font-size: 12px;
+                        bottom: -25px;
+                    }
+                }
+
+                .RESERVE_ARC::before {
+                    background-color: #FFF;
+                    width: 40px;
+                    height: 6px;
+                    content: "";
+                    box-sizing: border-box;
+                    display: block;
+                    position: absolute;
+                    top: 19px;
+                    left: 0px;
+                }
+
+                .RESERVE_ARC::after {
+                    background-color: #FFF;
+                    width: 40px;
+                    height: 6px;
+                    content: "";
+                    box-sizing: border-box;
+                    display: block;
+                    position: absolute;
+                    top: 19px;
+                    right: 0px;
+                }
+
+            }
+        }
+
+        .CALENDAR_AREA {
+            .CALENDAR_INFO {
+                padding-top: 20px;
+                padding-left: 50px;
+            }
+        }
+
+        .RESERVE_FORM ul li {
+            padding-left: 50px;
+        }
+
+        .FOOTER_BOTTOM {
+            margin-bottom: 0px;
+        }
+    }
+
+}
