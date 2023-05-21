@@ -73,6 +73,7 @@
             }
             p{
                font-size: $littleword;
+               line-height: 1.5;
             }
             h1{
                float: right;
@@ -80,9 +81,11 @@
          }
       }
       .DISTINGUISH{
+
          .DISTINGUISH_BOX{
             margin: 10px;
          }
+
          span{
             display: inline-block;
             width: 15px;

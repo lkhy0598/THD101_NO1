@@ -316,7 +316,7 @@
                                 </label>
                             </li>
                             <li>
-                                <label for="reserve_date"  class="INPUT">預約日期<br>
+                                <label for="reserve_date" class="INPUT">預約日期<br>
                                     <input type="date" name="date" id="date">
                                 </label>
                             </li>
@@ -373,7 +373,7 @@
                                     </textarea>
                                 </label>
                             </li>
-                            
+
                         </ul>
                         <button class="BTN_BACK RESERVE_REVISE" type="submit">修改病歷</button>
                     </form>
@@ -385,6 +385,7 @@
     </section>
 
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js'></script>
+    <script src="fullcalendar/locales-all.global.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 
@@ -393,32 +394,37 @@
         document.addEventListener('DOMContentLoaded', function () {
             var calendarEl = document.getElementById('calendar');
             var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth'
+                initialView: 'dayGridMonth',
+                locale: 'zh-tw',
+                navLinks: true,
+                
             });
+
             calendar.render();
+
         });
 
-        $(document).ready(function(){
+        $(document).ready(function () {
             $('.RESERVE_REVISE_BTN').click(function () {
                 // console.log('aaa');
-                $('.RESERVE_BOX').css('display','block');
+                $('.RESERVE_BOX').css('display', 'block');
                 $('.MASK').show();
             })
 
-            $('.ESC_BTN').click(function(){
-                $('.RESERVE_BOX').css('display','none');
+            $('.ESC_BTN').click(function () {
+                $('.RESERVE_BOX').css('display', 'none');
                 $('.MASK').hide();
             })
-            $('.MASK').click(function(){
-                $('.RESERVE_BOX').css('display','none');
+            $('.MASK').click(function () {
+                $('.RESERVE_BOX').css('display', 'none');
                 $('.MASK').hide();
             })
-            $('.MASK').click(function(){
-                $('.RESERVE_BOX').css('display','none');
+            $('.MASK').click(function () {
+                $('.RESERVE_BOX').css('display', 'none');
                 $('.MASK').hide();
             })
-            $('.RESERVE_REVISE').click(function(){
-                $('.RESERVE_BOX').css('display','none');
+            $('.RESERVE_REVISE').click(function () {
+                $('.RESERVE_BOX').css('display', 'none');
                 $('.MASK').hide();
                 event.preventDefault();
             })
