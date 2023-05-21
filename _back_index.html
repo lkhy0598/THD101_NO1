@@ -21,27 +21,12 @@
 
             <ul>
                 <li>
-                    <a href="#">
-                        <i class="bi bi-plus-square"></i>
-                        新增會員 / 寵物</a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="bi bi-plus-square"></i>
-                        新增消息</a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="bi bi-plus-square"></i>
-                        新增商品</a>
-                </li>
-                <li>
-                    <a href="#">
+                    <a href="_back_user_settings.html">
                         <i class="bi bi-person-circle"></i>
                         USER 你好</a>
                 </li>
                 <li>
-                    <a href="web_login.html">登出後台</a>
+                    <a href="index.html">登出後台</a>
                 </li>
             </ul>
 
@@ -219,12 +204,14 @@
         </main>
     </section>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
     <script>
         var canvas = document.getElementById("pieChart");
         var ctx = canvas.getContext("2d");
 
         var data = [25, 25, 25, 25]; // 饼图的数据，以百分比表示
-        var colors = ["#CB5656", "#34424F", "#F89F69", "#428AA9"]; // 饼图每个部分的颜色
+        var colors = ["#F89F69", "#428AA9", "#CB5656", "#34424F"]; // 饼图每个部分的颜色
         var total = data.reduce((a, b) => a + b, 0); // 数据总和
 
         var startAngle = 0; // 起始角度
@@ -250,9 +237,8 @@
 
         drawPieChart();
 
-
-
     </script>
+
 </body>
 
 </html>

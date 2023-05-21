@@ -81,3 +81,34 @@
     }
 
 }
+
+#calendar {
+    color: $blueblack;
+    font-size: $littleword;
+    letter-spacing: 1px;
+    
+
+    thead {
+        color: $white;
+        background-color: $red;
+        font-size: $littleword;
+        letter-spacing: 1px;
+        line-height: 50px;
+        min-height: 50px;
+    }
+
+    tbody {
+
+        tr {
+
+            .fc-day-sun,
+            .fc-day-sat {
+                background-color: #EBE3DD;
+            }
+
+        }
+
+    }
+
+
+}

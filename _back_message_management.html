@@ -21,11 +21,9 @@
             </a>
 
             <ul>
-                <li><a href="#"><i class="bi bi-plus-square"></i> 新增會員 / 寵物</a></li>
-                <li><a href="#"><i class="bi bi-plus-square"></i> 新增消息</a></li>
-                <li><a href="#"><i class="bi bi-plus-square"></i> 新增商品</a></li>
-                <li><a href="#"><i class="bi bi-person-circle"></i> USER 你好</a></li>
-                <li><a href="web_login.html">登出後台</a></li>
+                <li><a href="_back_message_management.html"><i class="bi bi-plus-square"></i> 新增消息</a></li>
+                <li><a href="_back_user_settings.html"><i class="bi bi-person-circle"></i> USER 你好</a></li>
+                <li><a href="index.html">登出後台</a></li>
             </ul>
 
         </nav>
@@ -194,7 +192,8 @@
                     <p>消息內容</p>
                     <div id="summernote" class="SUMMERNOTE"></div>
 
-                    <button class="BTN_BACK" type="submit">發布消息</button>
+                        <button class="BTN_BACK" type="submit">發布消息</button>
+                        <button class="BTN_BACK CANCEL" type="submit">取消</button>
 
                 </section>
 
@@ -210,6 +209,23 @@
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 
     <script>
+
+        $(document).ready(function () {
+
+            $('.BACK_ADD_MESSAGE').hide();
+
+            $('.BACK_NAV ul li').eq(0).click(function () {
+                $('.BACK_ADD_MESSAGE').show();
+                $('.BACK_MESSAGE_MANAGEMENT').hide();
+                event.preventDefault();
+            })
+
+            $('.CANCEL').eq(0).click(function () {
+                $('.BACK_MESSAGE_MANAGEMENT').show();
+                $('.BACK_ADD_MESSAGE').hide();
+            })
+
+        })
 
         $('#summernote').summernote({
             height: 400,                 // set editor height
