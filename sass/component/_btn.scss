@@ -76,12 +76,12 @@ a {
     border-radius: 10px;
     position: relative;
     border: unset;
-    background-color: $red;
+    background-color: $linear-red;
     color: $white;
     cursor: pointer;
 
     &:hover{
-        opacity: .7;
+        background-color: $linear-red-hover;
     }
 }
 

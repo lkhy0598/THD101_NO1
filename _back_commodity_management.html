@@ -21,11 +21,9 @@
             </a>
 
             <ul>
-                <li><a href="_back_member_profile.html"><i class="bi bi-plus-square"></i> 新增會員 / 寵物</a></li>
-                <li><a href="_back_message_management.html"><i class="bi bi-plus-square"></i> 新增消息</a></li>
                 <li><a href="_back_commodity_management.html"><i class="bi bi-plus-square"></i> 新增商品</a></li>
                 <li><a href="_back_user_settings.html"><i class="bi bi-person-circle"></i> USER 你好</a></li>
-                <li><a href="web_login.html">登出後台</a></li>
+                <li><a href="index.html">登出後台</a></li>
             </ul>
 
         </nav>
@@ -194,89 +192,93 @@
 
             <!-- 新增商品區塊 "會更動區塊" -->
 
-            <h2>新增商品</h2>
+            <section class="BACK_ADD_COMMODITY_SECTION">
 
-            <section class="BACK_ADD_COMMODITY">
+                <h2>新增商品</h2>
 
-                <div class="BACK_BANNER">
-                    <h3>商品名稱</h3>
-                </div>
+                <section class="BACK_ADD_COMMODITY">
 
-                <form action="" class="ADD_COMMODITY">
+                    <div class="BACK_BANNER">
+                        <h3>商品名稱</h3>
+                    </div>
 
-                    <label for="commodity_title" class="INPUT">商品名稱<br>
-                        <input type="text" name="commodity_title" id="commodity_title">
-                    </label>
+                    <form action="" class="ADD_COMMODITY">
 
-                </form>
+                        <label for="commodity_title" class="INPUT">商品名稱<br>
+                            <input type="text" name="commodity_title" id="commodity_title">
+                        </label>
 
-                <div class="BACK_BANNER">
-                    <h3>商品規格</h3>
-                </div>
+                    </form>
 
-                <form action="" class="ADD_COMMODITY">
+                    <div class="BACK_BANNER">
+                        <h3>商品規格</h3>
+                    </div>
 
-                    <label for="message_classification" class="SELECT">類別<br>
-                        <select id="message_classification">
-                            <option value="">請選擇商品類別</option>
-                            <option value="">罐頭</option>
-                            <option value="">乾糧</option>
-                            <option value="">保健食品</option>
-                        </select>
-                        <br><br><br>
-                    </label>
+                    <form action="" class="ADD_COMMODITY">
 
-                    <label for="price" class="INPUT">價格<br>
-                        <input type="text" name="price" id="price">
-                        <br><br><br>
-                    </label>
+                        <label for="message_classification" class="SELECT">類別<br>
+                            <select id="message_classification">
+                                <option value="">請選擇商品類別</option>
+                                <option value="">罐頭</option>
+                                <option value="">乾糧</option>
+                                <option value="">保健食品</option>
+                            </select>
+                            <br><br><br>
+                        </label>
 
-                    <label for="stock" class="INPUT">庫存<br>
-                        <input type="text" name="stock" id="stock">
-                    </label>
+                        <label for="price" class="INPUT">價格<br>
+                            <input type="text" name="price" id="price">
+                            <br><br><br>
+                        </label>
 
-                </form>
+                        <label for="stock" class="INPUT">庫存<br>
+                            <input type="text" name="stock" id="stock">
+                        </label>
 
-                <div class="BACK_BANNER">
-                    <h3>商品圖片</h3>
-                </div>
+                    </form>
 
-                <section class="COMMODITY_IMAGE">
+                    <div class="BACK_BANNER">
+                        <h3>商品圖片</h3>
+                    </div>
 
-                    <section class="COMMODITY_IMAGE_TOP">
-                        <div class="MAIN_IMAGE IMAGE_TOP">
-                            <img src="img/backend/01.png" alt="">
-                        </div>
-                        <div class="SECONDARY_IMAGE IMAGE_TOP">
-                            <img src="img/backend/02.jpg" alt="">
-                        </div>
-                        <div class="THIRD_IMAGE IMAGE_TOP">
-                            <img src="img/backend/03.jpg" alt="">
-                        </div>
-                        <div class="FORTH_IMAGE IMAGE_TOP">
+                    <section class="COMMODITY_IMAGE">
+
+                        <section class="COMMODITY_IMAGE_TOP">
+                            <div class="MAIN_IMAGE IMAGE_TOP">
+                                <img src="img/backend/01.png" alt="">
+                            </div>
+                            <div class="SECONDARY_IMAGE IMAGE_TOP">
+                                <img src="img/backend/02.jpg" alt="">
+                            </div>
+                            <div class="THIRD_IMAGE IMAGE_TOP">
+                                <img src="img/backend/03.jpg" alt="">
+                            </div>
+                            <div class="FORTH_IMAGE IMAGE_TOP">
+                                <i class="bi bi-image"></i>
+                                <input type="button" id="member_pic" value="上傳照片" class="BTN_BACK">
+                            </div>
+                        </section>
+
+                        <section class="COMMODITY_IMAGE_BOTTOM">
                             <i class="bi bi-image"></i>
                             <input type="button" id="member_pic" value="上傳照片" class="BTN_BACK">
-                        </div>
+                        </section>
+
                     </section>
 
-                    <section class="COMMODITY_IMAGE_BOTTOM">
-                        <i class="bi bi-image"></i>
-                        <input type="button" id="member_pic" value="上傳照片" class="BTN_BACK">
+                    <div class="BACK_BANNER">
+                        <h3>商品描述</h3>
+                    </div>
+
+                    <section class="COMMODITY_CONTENT">
+
+                        <p>商品內容</p>
+                        <div id="summernote" class="SUMMERNOTE"></div>
+
+                        <button class="BTN_BACK" type="submit">新增商品</button>
+                        <button class="BTN_BACK CANCEL" type="submit">取消</button>
+
                     </section>
-
-                </section>
-
-                <div class="BACK_BANNER">
-                    <h3>商品描述</h3>
-                </div>
-
-                <section class="COMMODITY_CONTENT">
-
-                    <p>商品內容</p>
-                    <div id="summernote" class="SUMMERNOTE"></div>
-
-                    <button class="BTN_BACK" type="submit">新增商品</button>
-                    <button class="BTN_BACK" type="submit">取消</button>
 
                 </section>
 
@@ -292,6 +294,24 @@
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 
     <script>
+
+        $(document).ready(function () {
+
+            $('.BACK_ADD_COMMODITY_SECTION').hide();
+
+            $('.BACK_NAV ul li').eq(0).click(function () {
+                $('.BACK_ADD_COMMODITY_SECTION').show();
+                $('.BACK_COMMODITY_MANAGEMENT').hide();
+                event.preventDefault();
+            })
+
+            $('.CANCEL').eq(0).click(function () {
+                $('.BACK_COMMODITY_MANAGEMENT').show();
+                $('.BACK_ADD_COMMODITY_SECTION').hide();
+            })
+
+        })
+
 
         $('#summernote').summernote({
             height: 400,                 // set editor height

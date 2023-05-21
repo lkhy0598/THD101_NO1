@@ -216,17 +216,12 @@
 }
 
 .BACK_NAV {
-
-
     transition: all 0.3s ease;
     background-image: url("../../img/HEADER-BG.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     position: relative;
-    // position: fixed;
-    // z-index: 99;
-    // top: 0;
 
     a {
 
@@ -243,8 +238,6 @@
         }
 
     }
-
-
 
     ul {
         display: flex;
@@ -272,12 +265,6 @@
         }
     }
 }
-
-
-
-
-
-
 
 //=============================================================
 // 手機版414px
