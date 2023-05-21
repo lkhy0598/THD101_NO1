@@ -1,7 +1,57 @@
 .SHOPPINGLIST{
-    background-image: url('../../img/shopping_list/SHOPPING_LIST_BG.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    .SHOPPINGLISTBG{
+        background-image: url('../../img/shopping_list/SHOPPING_LIST_ALLBG.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 20;
+
+        .BG {}
+        .BG_CLOUDS {
+
+            .BG_CLOUD {
+            }
+
+            .CLOUD_1 {
+                top: 800px;
+                left: 0;
+                .BG_CLOUD_IMG1 {
+                    transform: scale(-2) rotate(330deg);
+
+                    @include m() {
+                        transform: scale(-8) rotate(230deg);
+                    }
+                }
+                @include m() {
+                    img{
+                        width: 100%;
+                        filter: saturate(3.5),
+                    }
+                    top: 300px;
+                }
+            }
+            .CLOUD_2 {
+                top: 1540px;
+                left: 322px;
+
+                .BG_CLOUD_IMG2 {
+                    transform: scale(-2) rotate(340deg);
+
+                    @include m() {
+                        transform: scale(-10) rotate(40deg);
+                    }
+                }
+                @include m() {
+                    img{
+                        width: 100%;
+                        filter: saturate(3),contrast(.5);
+                    }
+                    top: 1860px;
+                    left: 0px;
+                }
+            }
+
+        }
+    }
 
     .BREAD{
         padding-top:361px ;
@@ -295,7 +345,7 @@
 // ===================================================================
 
     .SHOPPINGLIST_CONTENT{
-        margin-bottom: 200px;
+        margin-bottom: 100px;
         .SMALL_TITLE{
             margin-bottom: 40px;
         }
@@ -316,6 +366,14 @@
         img{
             width: 100%;
         }
+    }
+
+    .SHOPPINGLISTBTN_BACK{
+        width: 320px;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        margin-bottom: 200px;
     }
 
 }

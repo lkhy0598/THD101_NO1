@@ -421,6 +421,98 @@
     }
 
     100%{
-        background-position: -600px;
+        background-position-x: -600px;
     }
 }
+
+// =========================購物車LIST_M==================================
+
+@include m{
+        .SHOPPINGCART_ITEM--M{
+            display: flex;
+            position: relative;
+            &::after{
+                content: '';
+                height: 1px;
+                width: 100%;
+                background-color: $gray;
+                position: absolute;
+                bottom: 0px;
+            }
+
+            .SHOPPINGCART_ITEMIMG--M{
+                width: 30%;
+                padding: 20px;
+                img{
+                    border-radius:5px;
+                    width: 100%;
+                }
+            }
+            .SHOPPINGCART_ITEMWORD--M{
+                width: 70%;
+                padding: 20px 0px;
+                padding-right: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .SHOPPINGCART_ITEMWORD--TOPM{
+                    display: flex;
+                    .SHOPPINGCART_ITEMWORD--NAMEM{
+                        width: 85%;
+                        font-size: 1.7rem;
+                        line-height: 20px;
+                    }
+                    .SHOPPINGCART_ITEMWORD--DELM{
+                        width: 15%;
+                        text-align:right;
+                        color: $blueblack;
+                        font-size: $littleword;
+                    }
+                }
+                .SHOPPINGCART_ITEMWORD--BOTTOMM{
+                    display: flex;
+                    justify-content: space-between;
+
+                    .SHOPPINGCART_ITEMWORD--COUNTM{
+                        display: flex;
+                        align-items: center;
+                        .ITEM_COUNT--MINUS{
+                            display: block;
+                            width: 18px;
+                            height: 18px;
+                            border: 1px solid $blueblack;
+                            border-radius: 50%;
+                            line-height: 18px;
+                            font-size: 16px;
+                            color: $white;
+                            background-color: $blueblack;
+                            text-align: center;
+                        }
+                        .ITEM_COUNT--NUM{
+                            font-size: 20px;
+                            line-height: 20px;
+                            color: $blueblack;
+                            margin: 0 15px;
+                        }
+                        .ITEM_COUNT--PLUS{
+                            display: block;
+                            width: 18px;
+                            height: 18px;
+                            border: 1px solid $blueblack;
+                            border-radius: 50%;
+                            line-height: 18px;
+                            font-size: 16px;
+                            color: $white;
+                            background-color: $blueblack;
+                            text-align: center;
+                        }
+                    }
+                    .SHOPPINGCART_ITEMWORD--PRICEM{
+                        font-weight: 700;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }

@@ -1,9 +1,60 @@
 .SHOPPINGCART{
+    .SHOPPINGCARTBG{
     background-image: url(../../img/shopping_cart/shopping_cart_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 20;
+
+    .BG {}
+        .BG_CLOUDS {
+
+            .BG_CLOUD {}
+
+            .CLOUD_1 {
+                top: 500px;
+                left: 0;
+                .BG_CLOUD_IMG1 {
+                    transform: scale(-2) rotate(320deg);
+
+                    @include m() {
+                        transform: scale(-8) rotate(40deg);
+                    }
+                }
+                @include m() {
+                    img{
+                        width: 100%;
+                        filter: saturate(1.5);
+                        
+                    }
+                    top: -1000px;
+                }
+            }
+            .CLOUD_2 {
+                top: 1240px;
+                left: 322px;
+
+                .BG_CLOUD_IMG2 {
+                    transform: scale(-2) rotate(150deg);
+
+                    @include m() {
+                        transform: scale(-10) rotate(340deg);
+                    }
+                }
+                @include m() {
+                    img{
+                        width: 100%;
+                        filter: saturate(2);
+                    }
+                    top: 2360px;
+                    left: 0px;
+                }
+            }
+
+        }
+    }
 
 
+    
 //=========================================================================== 
 
     .CART01_SLOGANALL{
@@ -28,9 +79,26 @@
         }
 
         .JELLYFISH{
-            display: block;
+            display: inline-block;
+            background-image: url(../../img/shopping_cart/jellyfish01.png);
+            width: 100px;
+            height: 100px;
+            background-repeat: no-repeat;
+            background-position-x: 0px;
+            background-size: 600px 100px;
             padding-bottom: 30px;
-            transition: all .3s ease-in-out;
+
+            animation:ANIF 1.5s steps(6,end) infinite; 
+        }
+
+        @keyframes ANIF {
+            0%{
+                background-position-x: 0px;
+            }
+        
+            100%{
+                background-position: -600px;
+            }
         }
 
         .SLOGAN01{
@@ -122,6 +190,11 @@
         overflow: hidden;
         width: 100%;
         margin-bottom: 25px;
+
+        @include m {
+            display: none;
+        }
+
         .SHOPPINGCART_ITEMtitle{
             height: 60px;
             background-color: #fff;
@@ -245,6 +318,18 @@
             width: 65px;
             height: 65px;
             line-height: 65px;
+        }
+    }
+
+
+    .SHOPPINGCART_ITEMLIST--M{
+        display: none;
+        @include m{
+            display: block;   
+            background-color: rgba(255, 255, 255, 0.5);
+            border-top: 1px solid $gray;
+            margin-top: 10px;
+            margin-bottom: 25px;
         }
     }
 
