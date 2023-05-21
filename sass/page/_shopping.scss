@@ -7,7 +7,7 @@
     background-position: center center;
     background-size: cover;
     border-radius: 250px 0 0 0;
-    width: 88%;
+    width: 87.5%;
     height: 830px;
     float: right;
     // margin-left: 282.5px;
@@ -172,17 +172,73 @@
     height: 425px;
     right: 0px;
     bottom:-120px;
-    z-index: 10;
+    z-index: 21;
+
+    @include m {
+        display: none;
+    }
 
 }
 
 // ============================================================
 
 .SHOPPINGBG{
-    background-image: url('../../img/shopping/SHOPPING_BG.jpg');
+    background-image: url('../../img/shopping/SHOPPING_BGALL2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 20;
+
 }
+
+
+.BACKGROUND {
+    .BG {}
+    .BG_CLOUDS {
+        .BG_CLOUD {
+        }
+
+        .CLOUD_1 {
+            top: 1200px;
+            left: 0;
+            .BG_CLOUD_IMG1 {
+                transform: scale(-2) rotate(330deg);
+
+                @include m() {
+                    transform: scale(-8) rotate(330deg);
+                }
+            }
+            @include m() {
+                img{
+                    width: 100%;
+                    filter: saturate(3),contrast(.5);
+                }
+                top: 400px;
+            }
+        }
+        .CLOUD_2 {
+            top: 2040px;
+            left: 322px;
+
+            .BG_CLOUD_IMG2 {
+                transform: scale(-2) rotate(340deg);
+
+                @include m() {
+                    transform: scale(-10) rotate(340deg);
+                }
+            }
+            @include m() {
+                img{
+                    width: 100%;
+                    filter: saturate(3),contrast(.5);
+                }
+                top: 1360px;
+                left: 0px;
+            }
+        }
+
+    }
+}
+
 
 .BREAD{
     padding-top:55px ;
@@ -414,7 +470,7 @@ select option{
 .SHOPPINGITEM{
     box-sizing: border-box;
     padding: 0 135px;
-    padding-top: 100px;
+    padding-top: 50px;
 
     @include m {
         padding: 0px;
