@@ -31,6 +31,12 @@
             height: 90px;
             background: linear-gradient(90deg, #F89F69 0%, #fc9a5e 40%, #A7CFD7 100%);
     
+            .M_FUNTION_A1{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
             .M_FUNTION_A2{
                 display: flex;
                 flex-direction: column;
@@ -57,6 +63,7 @@
                 color: $white;
                 text-align: center;
                 padding:  0 15px;
+
                 i{
                     font-size: 25px;
                     padding-bottom: 15px;
