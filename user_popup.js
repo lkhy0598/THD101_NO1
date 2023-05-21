@@ -19,6 +19,7 @@ $(document).ready(function () {
     // ====== 彈跳視窗控制 ======
     // 打開彈跳視窗
     $('.LOGIN').click(function () {
+        console.log("aaaa");
         // 載入登入頁
         POPUP_READY();
         LOGIN_SIGNUP_TABS_READY();
