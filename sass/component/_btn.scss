@@ -87,6 +87,10 @@ a {
 
 // top紐
 
+.TOP_BTN.HIDE{
+    opacity: 0;
+}
+
 .TOP_BTN{
     background-image: url(/img/TOP-BTN.svg);
     width: 100px;
@@ -94,8 +98,13 @@ a {
     cursor: pointer;
     border: unset;
     border-radius: 50%;
-    cursor: pointer;
-    
+    position: fixed;
+    left: 93%;
+    bottom: 50px;
+    opacity: .6;
+    z-index: 3000;
+    display: none;
+
 
     &:hover{
         background-image: url(/img/TOP-BTN-HOVER.svg);
@@ -104,6 +113,8 @@ a {
         cursor: pointer;
         border: unset;
         border-radius: 50%;
+        opacity: 1;
+        transition: opacity .1s linear;
     }
 }
 
@@ -126,6 +137,14 @@ a {
 }
 
 @include m{
+
+    #js-top{
+        display: none;
+    }
+    #js-top{
+        left: 500%;
+    }
+    
     .FOOTER_TOP_BTN{
         display: block;
     }

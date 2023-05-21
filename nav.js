@@ -30,6 +30,10 @@ $(document).ready(function () {
             $('.M_HEADER_NAV')
                 .addClass('M_HEADER_BG_ACTIVE ');
 
+            // RWD TOGGLE變色
+            $('.TOGGLE::before')
+                .addClass('M_HEADER_TOGGLE_ACTIVE');
+
             // LOGO形變
             $('.HEADERLOGO_BG_BOX')
                 .addClass('HEADERLOGE_BG_SCROLL ')
@@ -67,6 +71,7 @@ function startTimer() {
     // 执行需要的操作，例如移除class
     $('.M_HEADER_NAV').removeClass('M_HEADER_BG_ACTIVE');
     $('.M_HEADER_NAV').removeClass('HEADER_NAV_SHADOW');
+    $('.TOGGLE::before').removeClass('M_HEADER_TOGGLE_ACTIVE');
   }, 2000);
 }
 

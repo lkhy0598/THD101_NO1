@@ -11,38 +11,60 @@ $(document).ready(function() {
         scrollTop: $("body").offset().top
     }, 1000);
   });
+
+  
+
+  $(window).scroll(function(){
+    let scrollTop = $(this).scrollTop();
+    console.log(scrollTop);
+    let bg = $('.BACKGROUND').height();
+
+    if(scrollTop > 200){
+      $("#js-top").fadeIn();
+    }else {
+      $("#js-top").fadeOut(10);
+    };
+
+    
+    
+    
+  })
 });
 
 
 
 
 
-const scrollToTopButton = document.getElementById('js-top');
 
-const scrollFunc = () => {
 
-  let y = window.scrollY;
+// const scrollToTopButton = document.getElementById('js-top');
 
-  if (y > 200) {
-    scrollToTopButton.className = "TOP_BTN SHOW";
-  } else {
-    scrollToTopButton.className = "TOP_BTN HIDE";
-  }
+// const scrollFunc = () => {
 
-};
+//   let y = document.getElementsByClassName('BACKGROUND')[0].scrollY;
 
-window.addEventListener("scroll", scrollFunc);
+//   if (y = 0) {
+//     scrollToTopButton.className = "TOP_BTN SHOW";
+//   } else {
+//     scrollToTopButton.className = "TOP_BTN HIDE";
+//   }
 
-  const scrollToTop = () => {
+// };
 
-  const c = document.documentElement.scrollTop || document.body.scrollTop;
 
-    if (c > 0) {
-      window.requestAnimationFrame(scrollToTop);
-      window.scrollTo(0, c - c / 20);
-    }
+// var g = document.getElementsByClassName('BACKGROUND')[0];
+// g.addEventListener("scroll", scrollFunc);
 
-  };
+//   const scrollToTop = () => {
+
+//   const c = document.documentElement.scrollTop || document.body.scrollTop;
+//     console.log(c);
+//     if (c > 0) {
+//       g.requestAnimationFrame(scrollToTop);
+//       g.scrollTo(0, c - c / 10);
+//     }
+
+//   };
 
 // scrollToTopButton.onclick = function(e) {
 //   e.preventDefault();

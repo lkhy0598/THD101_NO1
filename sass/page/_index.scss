@@ -576,10 +576,10 @@
         height: 420px;
       
         top: 40px;
-    
+        
         left: -235px;
         transform: translate(0,-45%);
-        z-index: 0;
+        z-index: -1;
         &::before {
             content: "";
             display: block;
