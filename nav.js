@@ -62,7 +62,7 @@ function resetTimer() {
 
 // 开始计时器函数
 function startTimer() {
-  // 设置5秒后执行移除class的函数
+  // 设置2秒后执行移除class的函数
   timer = setTimeout(function() {
     // 执行需要的操作，例如移除class
     $('.M_HEADER_NAV').removeClass('M_HEADER_BG_ACTIVE');
@@ -107,36 +107,36 @@ $(document).ready(function(e) {
 
 
 //手機板門診時間彈窗
-$(document).ready(function() {
- var btn_el = document.getElementsByClassName("M_FUNTION_A2")[0];
-        btn_el.addEventListener("click", function(e){
-            // console.log("wdd");
-            e.preventDefault();
-            // var test = document.getElementsByClassName("bookwrapper")[0];
-            // test.classList.add("-on");
-            // test.classList.remove("-off");
-            $(".M_TIME_TABLE").fadeIn(400);
+// $(document).ready(function() {
+//  var btn_el = document.getElementsByClassName("M_FUNTION_A2")[0];
+//         btn_el.addEventListener("click", function(e){
+//             // console.log("wdd");
+//             e.preventDefault();
+//             // var test = document.getElementsByClassName("bookwrapper")[0];
+//             // test.classList.add("-on");
+//             // test.classList.remove("-off");
+//             $(".M_TIME_TABLE").fadeIn(400);
             
-        });
-    var i = document.getElementsByClassName("CLOSE_TABLE")[0];
-        i.addEventListener("click", function(e){
-            // console.log("wdd");
-            // $(i).toggleClass('XXX');
-            e.preventDefault();
-            $(".M_TIME_TABLE").fadeOut(300);
+//         });
+//     var i = document.getElementsByClassName("CLOSE_TABLE")[0];
+//         i.addEventListener("click", function(e){
+//             // console.log("wdd");
+//             // $(i).toggleClass('XXX');
+//             e.preventDefault();
+//             $(".M_TIME_TABLE").fadeOut(300);
     
 
-        });
+//         });
 
-    var c = document.getElementsByClassName("M_TIME_TABLE")[0];
-        c.addEventListener("click", function(e){
-            // console.log("wdd");
-            // $(i).toggleClass('XXX');
-            e.preventDefault();
-            $(".M_TIME_TABLE").fadeOut(300);
+//     var c = document.getElementsByClassName("M_TIME_TABLE")[0];
+//         c.addEventListener("click", function(e){
+//             // console.log("wdd");
+//             // $(i).toggleClass('XXX');
+//             e.preventDefault();
+//             $(".M_TIME_TABLE").fadeOut(300);
     
 
-        });
+//         });
 
-});
+// });
 

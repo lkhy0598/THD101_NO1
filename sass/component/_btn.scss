@@ -5,7 +5,7 @@ a {
 }
 // 立即預約按鈕
 .HEADER_NAV .RESERVE {
-    background-color: $orange;
+    background: $linear-orange;
     font-size: $p;
     border-radius: 10px;
     font-weight: 700;
@@ -16,7 +16,7 @@ a {
     cursor: pointer;
 
     &:hover{
-        background-color: $red;
+        background: $linear-orange-hover;
         color: $white;
     }
 }
@@ -36,33 +36,35 @@ a {
     border-radius: 10px;
     position: relative;
     border: unset;
-    background-color: $blueblack;
+    background: $linear-darkblue;
     color: $white;
     cursor: pointer;
-    
-    &:after{
-        content: '';
-        width: 100%;
-        height: 110%;
-        padding: 2px;
-        border: 1px solid $blueblack;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        border-radius: 15px;
-        transition:all 1s;
-        transform: translate(-50% , -50%);
-        transform-origin: center;
-        opacity: 0;
+    &:hover{
+        background: $linear-darkblue-hover;
+    }
+    // &:after{
+    //     content: '';
+    //     width: 100%;
+    //     height: 110%;
+    //     padding: 2px;
+    //     border: 1px solid $blueblack;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     border-radius: 15px;
+    //     transition:all 1s;
+    //     transform: translate(-50% , -50%);
+    //     transform-origin: center;
+    //     opacity: 0;
         
-    }
+    // }
     
-    &:hover::after{
-        transform: translate(-50% , -50%) scale(1.04, 1.11);
-        transform-origin: center;
-        opacity: 1;
-        transition:all .8s;
-    }
+    // &:hover::after{
+    //     transform: translate(-50% , -50%) scale(1.04, 1.11);
+    //     transform-origin: center;
+    //     opacity: 1;
+    //     transition:all .8s;
+    // }
 
 }
 
