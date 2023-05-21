@@ -11,10 +11,7 @@
     
 
 
-    .BACKGROUND{
-        background-image: url("../../img/BG.jpg");   
-        z-index: -10;
-    }
+  
 // ============= 動物插畫區 =================
 
 
@@ -82,7 +79,7 @@
 }
 
 
-// ======== (資訊導覽) =======
+// ======== (資訊導覽的動物) =======
 .DINO_RABBIT{
     position: absolute;
     width: 120px;
@@ -102,23 +99,28 @@
     }
 }
 
-//========== (服務項目) =========
 
 
 
-// ==================================================
+
+// ======================== MASTER_VISION ==========================
 
 
 
 .CAROUSEL{
     position: relative;
-    .PAWPAW > picture > img{
+    
+    .PAWPAW{
         position: absolute;
         top: 50%;
         left: 6vw;
-        width: 35vw;
+        > picture > img{
         
-    }
+            width: 35vw;
+            
+            
+        }
+    } 
 }
 
 .DOT{
@@ -150,6 +152,8 @@
     z-index: 10;
 
 }
+
+
 
 
 // ==========看診進度==========
@@ -676,14 +680,17 @@
        
 
         .CAROUSEL{
-            .PAWPAW > picture > img{
+            .PAWPAW{
                 position: absolute;
                 top: 5%;
                 left: 25vw;
-
-                width: 55vw;
+                > picture > img{
                 
-            }
+                    width: 55vw;
+                    
+                }
+
+            } 
 
             
         
@@ -742,16 +749,6 @@
 
 
 
-        .BACKGROUND_BG{
-            
-     
-            >img{
-                position: absolute;
-                width: 500px;
-                height: 500px;
-                bottom: 0;
-            }
-        }
 
         .DOT2{
             display: none;

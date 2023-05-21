@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.css">  
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <title>關於院所 - 波波動物醫院</title>
 
   </head>
@@ -361,10 +365,10 @@
     <!-- =================================MASTER_VISION====================================== -->
     <section class="CAROUSEL">
       <div class="MASTER_VISION"><img src="img/HEADER-TOP.png" alt="" /></div>
-      <div class="PAWPAW">
+      <div class="PAWPAW animate__animated animate__bounceInLeft">
         <picture>
           <source srcset="./img/about/M_about/about_banner_bg.svg" media="(max-width: 414px)">
-          <img src="img/pawpaw.svg" alt="">
+          <img src="img/about/about_baneer.svg" alt="">
         </picture>
       
       </div>
@@ -378,6 +382,9 @@
 
     <!-- header下方區塊的背景 -->
     <section class="BACKGROUND">
+
+      <img class="BG" src="./img/BG.jpg" alt="">
+
       <div class="BG_CLOUDS">
         <div class="BG_CLOUD CLOUD_1">
             <img class="BG_CLOUD_IMG1" src="./img/CLOUD_BG.png" alt="">
@@ -390,9 +397,9 @@
     <!-- ===================================麵包屑====================================== -->
     
       <section class="BREAD WRAPPER">
-        <a href="#">首頁</a>
-        /
-        <a href="#">關於院所</a>
+        <a href="homepage.html">首頁</a>
+        / 
+        <a>關於院所</a>
       </section>
 
   
@@ -680,7 +687,9 @@
         e.preventDefault();
         var img_url = $(this).attr("href");
         // e.preventDefault()
-        $("#IMG_CONTAINER img").attr("src", img_url);
+        setTimeout(() => {
+          $("#IMG_CONTAINER img").attr("src", img_url);
+        }, 50);
     });
 
 
