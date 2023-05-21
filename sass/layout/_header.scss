@@ -17,7 +17,7 @@
     // margin-left: 282.5px;
     margin-top: 105px;
 
-    animation: image_carousel 30s ease-in-out infinite;
+    animation: image_carousel 30s linear infinite;
 
     >img {
         width: 100%;
@@ -52,75 +52,6 @@
     100% {
         background-image: url('../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg');
     }
-}
-
-
-
-//手機板漢堡線
-
-
-.TOGGLE {
-    position: relative;
-    height: 45px;
-    width: 45px;
-    cursor: pointer;
-}
-.TOGGLE:after, .TOGGLE:before{
-    content: "";
-    background: $white;
-    width: 33px;
-    height: 5px;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    transition: 1.3s cubic-bezier(0.53, 0, 0.15, 1.3);
-    border-radius: 5px;
-    
-}
-
-.TOGGLE > span{
-    content: "";
-    background: $white;
-    width: 33px;
-    height: 5px;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    border-radius: 5px;
-}
-
-
-.TOGGLE{
-    display: none;
-}
-
-
-
-.TOGGLE:before {
-    top: -50%;
-}
-
-.TOGGLE > span{
-    top: 10%;
-}
-
-.TOGGLE:after {
-    top: 70%;
-}
-
-.TOGGLE.close:before {
-    transform: rotate(-225deg);
-    top: 0;
-}
-.TOGGLE.close:after {
-    transform: rotate(225deg);
-    top: 0;
 }
 
 
