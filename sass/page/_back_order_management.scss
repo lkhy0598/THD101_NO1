@@ -74,6 +74,7 @@
 
         .bi-plus-circle {
             cursor: pointer;
+
         }
 
     }
@@ -108,23 +109,27 @@
 
 .ORDER_MANAGEMENT_TABLE_TOGGLE {
 
-    .ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(3) li:nth-child(1),
-    .ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(4) li:nth-child(1) {
+    .ORDER_MANAGEMENT_TABLE_TITLE {
+        border-radius: 0;
+    }
+
+    ul:nth-child(1) li:nth-child(1),
+    ul:nth-child(2) li:nth-child(1) {
         width: 40%;
     }
 
-    .ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(3) li:nth-child(2),
-    .ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(4) li:nth-child(2) {
+    ul:nth-child(1) li:nth-child(2),
+    ul:nth-child(2) li:nth-child(2) {
         width: 25%;
     }
 
-    .ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(3) li:nth-child(3),
-    .ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(4) li:nth-child(3) {
+    ul:nth-child(1) li:nth-child(3),
+    ul:nth-child(2) li:nth-child(3) {
         width: 10%;
     }
 
-    .ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(3) li:nth-child(4),
-    .ORDER_MANAGEMENT_TABLE_ALL ul:nth-child(4) li:nth-child(4) {
+    ul:nth-child(1) li:nth-child(4),
+    ul:nth-child(2) li:nth-child(4) {
         width: 25%;
         border-right: none;
     }
