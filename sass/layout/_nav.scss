@@ -415,14 +415,13 @@
         >ul {
             display: none;
             height: 100vh;
-            padding-top: 110px;
-            background: linear-gradient(160deg, rgb(243, 145, 85, .9) 0%, rgb(228, 170, 123, .9) 40%, rgba(126, 184, 196, 0.9) 80%, rgba(126, 184, 196, 0.8) 100%);
-
+            padding-top: 90px;
+            background: linear-gradient(160deg, rgb(243, 145, 85, .9) 0%,  rgb(228, 170, 123, .9) 40%, rgba(126, 184, 196, 0.9) 80%, rgba(126, 184, 196, 0.8) 100%);
+           
             >li {
 
                 position: relative;
-                padding-bottom: 15px;
-
+                padding-bottom: 10px;
                 >.M_HEADER_LI {
                     text-decoration: none;
                     margin: 20px 0;
@@ -513,10 +512,6 @@
     // 導覽列底色
     .M_HEADER_BG_ACTIVE {
         background: rgba(255, 255, 255, 0.5);
-    }
-
-    .M_HEADER_TOGGLE_ACTIVE {
-        background: $red;
     }
 
 

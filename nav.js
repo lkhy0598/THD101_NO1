@@ -31,8 +31,12 @@ $(document).ready(function () {
                 .addClass('M_HEADER_BG_ACTIVE ');
 
             // RWD TOGGLE變色
-            $('.TOGGLE::before')
-                .addClass('M_HEADER_TOGGLE_ACTIVE');
+            
+            $('.SPAN1').addClass('M_HEADER_TOGGLE_ACTIVE');
+            $('.SPAN2').addClass('M_HEADER_TOGGLE_ACTIVE');
+            $('.SPAN3').addClass('M_HEADER_TOGGLE_ACTIVE');
+            
+
 
             // LOGO形變
             $('.HEADERLOGO_BG_BOX')
@@ -47,6 +51,8 @@ $(document).ready(function () {
         }
     });
 });
+
+var element = $('.TOGGLE');
 
 // 畫面停止3秒自動移除RWD導覽列的底色
 // 計時器
@@ -71,8 +77,17 @@ function startTimer() {
     // 执行需要的操作，例如移除class
     $('.M_HEADER_NAV').removeClass('M_HEADER_BG_ACTIVE');
     $('.M_HEADER_NAV').removeClass('HEADER_NAV_SHADOW');
-    $('.TOGGLE::before').removeClass('M_HEADER_TOGGLE_ACTIVE');
+    // $('.TOGGLE > span').css("background", "white");
   }, 2000);
+
+  timer = setTimeout(function() {
+    // 执行需要的操作，例如移除class
+    $('.SPAN1').removeClass('M_HEADER_TOGGLE_ACTIVE')
+    $('.SPAN2').removeClass('M_HEADER_TOGGLE_ACTIVE')
+    $('.SPAN3').removeClass('M_HEADER_TOGGLE_ACTIVE')
+    
+ 
+  }, 700);
 }
 
 // ========= RWD NAV的LOGO 變化==========

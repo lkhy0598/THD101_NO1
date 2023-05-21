@@ -15,12 +15,13 @@
 // ============= 動物插畫區 =================
 
 
-.SHOPPINGHOT_ANI{
+.CONSULTATION_ANI{
     animation:ANI 15s  linear infinite; 
     
    
 
     .HIPPO{
+        display: inline-block;
         background-image: url(../../img/index/test.png);
         width: 300px;
         height: 200px;
@@ -44,6 +45,7 @@
     }
     
     .HIPPO2{
+        display: inline-block;
         background-image: url(../../img/index/test.png);
         width: 150px;
         height: 100px;
@@ -101,6 +103,195 @@
 
 
 
+// =========== 服務項目的動物(長頸鹿) ==============
+.INFORMATION_ANI{
+   
+    z-index: 50;
+    position: absolute;
+
+    .GIRAFFE{
+        display: inline-block;
+        background-image: url(../../img/index/Giraffe.png);
+        width: 135px;
+        height: 900px;
+        background-size: 1215px 900px;
+        animation:ANI20 4s steps(9,end) infinite; 
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position-x: 0px;
+        top: 0px;
+        left: -150px;
+        margin: 0;
+        padding: 0  ;
+
+        @include m {
+            display: none;
+        }
+    }
+    
+    @keyframes ANI20 {
+        0%{
+            background-position-x: 0px;
+        }
+    
+        100%{
+            background-position: -1215px;
+        }
+    }
+    
+    
+    
+}
+
+// =========== 服務項目的動物 ==============
+
+.SERVICES_ANI{
+    animation: SERVICES 30s  linear infinite; 
+    z-index: 50;
+   
+    @include m {
+        animation: none;
+    }
+    .KOALA{
+        display: inline-block;
+        background-image: url(../../img/index/koala.png);
+        width: 120px;
+        height: 110px;
+        background-size: 720px 110px;
+        animation:ANI10 8s steps(6,end) infinite; 
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position-x: 0px;
+        bottom: -20px;
+        right: 220px;
+        margin: 0;
+        padding: 0  ;
+
+        @include m{
+            width: 60px;
+            height: 50px;
+            bottom: 3px;
+            right: 30px;
+            background-size: 360px 50px;
+            background-repeat: repeat;
+
+            @keyframes ANI10 {
+                0%{
+                    background-position-x: 0px;
+                }
+            
+                100%{
+                    background-position: -360px;
+                }
+            }
+        }
+    }
+
+    
+    @keyframes ANI10 {
+        0%{
+            background-position-x: 0px;
+        }
+    
+        100%{
+            background-position: -720px;
+        }
+    }
+    
+    
+    
+}
+
+@keyframes SERVICES {
+    0%{
+        transform: translate(800px);
+    }
+
+    100%{
+        transform: translate(1200px);
+    }
+}
+
+// =========== 醫院特色的動物 ==============
+
+.FEATURE_ANI{
+    animation: FEATURE 30s  linear infinite; 
+    z-index: 50;
+    @include m {
+        animation: none;
+    }
+
+    .BIRD1{
+        display: inline-block;
+        background-image: url(../../img/index/bird.png);
+       
+        width: 100px;
+        height: 200px;
+        background-size: 600px 200px;
+        animation:ANI15 8s steps(6,end) infinite; 
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position-x: 0px;
+        bottom: 5px;
+        left: 20vw;
+        margin: 0;
+        padding: 0  ;
+        @include m{
+            width: 50px;
+            height: 100px;
+            bottom: 4px;
+            left: 69vw;
+            background-size: 300px 100px;
+            background-repeat: repeat;
+            @keyframes ANI15 {
+                0%{
+                    background-position-x: 0px;
+                }
+            
+                100%{
+                    background-position: -300px;
+                }
+        
+                
+            }
+        }
+    }
+    
+    @keyframes ANI15 {
+        0%{
+            background-position-x: 0px;
+        }
+    
+        100%{
+            background-position: -600px;
+        }
+
+        
+    }
+    
+    .BIRD2{
+        display: inline-block;
+        background-image: url(../../img/index/bird2.png);
+     
+        width: 100px;
+        height: 200px;
+        background-size: 600px 200px;
+        animation:ANI15 8s steps(6,end) infinite; 
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position-x: 0px;
+        bottom: 100px;
+        left: 10vw;
+        margin: 0;
+        padding: 0  ;
+        @include m {
+            display: none;
+        }
+    }
+    
+    
+}
+
 
 
 // ======================== MASTER_VISION ==========================
@@ -155,7 +346,50 @@
 
 
 
+// ==================== 背景雲裝飾 =======================
+.BACKGROUND {
+    // .BG {}
 
+    .BG_CLOUDS {
+
+        // .BG_CLOUD {}
+
+        .CLOUD_1 {
+            top: 500px;
+            left: 0;
+
+            .BG_CLOUD_IMG1 {
+                transform: scale(-2) rotate(330deg);
+
+                @include m() {
+                    transform: scale(-10) rotate(330deg);
+                }
+            }
+
+            @include m() {
+                top: 1600px;
+            }
+        }
+
+        .CLOUD_2 {
+            top: 3040px;
+            left: 322px;
+
+            .BG_CLOUD_IMG2 {
+                transform: scale(-2) rotate(340deg);
+
+                @include m() {
+                    transform: scale(-10) rotate(340deg);
+                }
+            }
+
+            @include m() {
+                top: 3830px;
+                left: 260px;
+            }
+        }
+    }
+}
 // ==========看診進度==========
 .CONSULTATION_UL{
     display: flex;
@@ -317,6 +551,16 @@
     z-index: 0;
 }
 
+.DOCTOR{
+    position: absolute;
+    top: -28px;
+    left: 250px;
+    @include m{
+        display: none;
+    }
+}
+
+
 .DOT4{
    
     position: absolute;
@@ -470,21 +714,32 @@
     &:first-child{
         padding-top: 100px;
         padding-bottom: 90px;
+        opacity: 0;
+        transition: opacity .3s linear;
     }
     
     &:nth-child(2) {
         padding-bottom: 90px;
+        opacity: 0;
+        transition: opacity .5s linear;
     }
     
     &:nth-child(3) {
         padding-bottom: 90px;
+        opacity: 0;
+        transition: opacity .7s linear;
     }
 
     &:last-child{
         padding-bottom: 100px;
+        opacity: 0;
+        transition: opacity .9s linear;
         // padding-top: 60px;
     }
     
+}
+.FEATURE_ITEM.SHOW{
+    opacity: 1;
 }
 
 .FEATURE_ITEM > .P1{
@@ -683,10 +938,10 @@
             .PAWPAW{
                 position: absolute;
                 top: 5%;
-                left: 25vw;
+                left: 28vw;
                 > picture > img{
                 
-                    width: 55vw;
+                    width: 45vw;
                     
                 }
 
@@ -774,13 +1029,12 @@
 
         // ==========看診進度==========
 
-        .SHOPPINGHOT_ANI{
+        .CONSULTATION_ANI{
             animation:none; 
 
-            .ANI{
-                background-repeat: repeat;
-            }
+          
             .HIPPO{
+                display: inline-block;
                 background-image: url(../../img/index/test.png);
                 width: 100px;
                 height: 80px;
@@ -791,6 +1045,8 @@
                 right: 0px;
                 margin: 0;
                 padding: 0  ;
+                background-repeat: repeat;
+                background-position-x: 0px;
             }
             
             @keyframes ANI4 {
@@ -968,7 +1224,7 @@
             }
 
             &:last-child{
-                padding-bottom: 0;
+                padding-bottom: 30px;
  
             }
             
