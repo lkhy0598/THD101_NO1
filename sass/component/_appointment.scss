@@ -1,25 +1,141 @@
-.APPOINTMENT{
-    width: 100px;
-    height: 300px;
-    border-radius: 10px 0 0 10px;
+
+// 啟用樣式
+body .APPOINTMENT_ACTIVE {
+    transform: translate(0%, -50%);
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
+}
+
+// HOVER樣式
+body .APPOINTMENT_HOVER {
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
+    transform: translate(80%, -50%);
+
+    .APPOINTMENT_TAG {
+        filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0));
+    }
+}
+
+.APPOINTMENT {
+    width: 55%;
+    height: 500px;
+    display: flex;
+    transition: all 0.4s ease;
+
     position: fixed;
     top: 50%;
     right: 0;
-    background-color: #34424F;
-    transform: translateY(-50%);
+    transform: translate(91.7%, -50%);
     z-index: 999;
-    line-height: 100px;
-    display: flex;
-    align-items: center;
-    
-  
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0));
 
-       >p{
+
+
+    .APPOINTMENT_TAG {
+        cursor: pointer;
+        width: 100px;
+        height: 300px;
+        background-color: #34424F;
+        border-radius: 10px 0 0 10px;
+        line-height: 100px;
+        display: flex;
+        align-items: center;
+        transition: all 0.4s ease;
+        filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.25));
+
+        >p {
             color: $white;
             font-weight: 700;
             writing-mode: vertical-lr;
-            text-orientation: upright;  
+            text-orientation: upright;
             letter-spacing: 10px;
-      
+
         }
+    }
+
+    .APPOINTMENT_BOX {
+        flex-grow: 1;
+        background: linear-gradient(180deg, #FFFFFF 0%, #F2F2DB 100%);
+        border-radius: 0px 0px 0px 50px;
+        position: relative;
+
+        .APPOINTMENT_CONTENT {
+            width: 773px;
+            margin: 0 auto;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            img {
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 40px;
+            }
+
+            .APPOINTMENT_RESERVE_PHONE {
+                display: flex;
+                justify-content: space-between;
+                margin: 0 auto;
+
+                .RESERVE {
+                    color: $white;
+                    background: $linear-orange;
+                    font-size: $p;
+                    border-radius: 10px;
+                    font-weight: 700;
+                    text-align: center;
+                    line-height: 50px;
+                    width: 270px;
+                    height: 50px;
+
+                    &:hover {
+                        background: $linear-orange-hover;
+                    }
+                }
+
+                .APPOINTMENT_PHONE {
+                    color: $blue;
+                    font-size: $h3;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    @include m {
+        display: none;
+    }
 }
+
+// .APPOINTMENT{
+//     width: 100px;
+//     height: 300px;
+//     border-radius: 10px 0 0 10px;
+//     position: fixed;
+//     top: 50%;
+//     right: 0;
+//     background-color: #34424F;
+//     transform: translateY(-50%);
+//     z-index: 999;
+//     line-height: 100px;
+//     display: flex;
+//     align-items: center;
+
+//     @include m{
+//         display: none;
+//     }
+
+
+//        >p{
+//             color: $white;
+//             font-weight: 700;
+//             writing-mode: vertical-lr;
+//             text-orientation: upright;  
+//             letter-spacing: 10px;
+
+//         }
+// }

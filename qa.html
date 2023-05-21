@@ -183,8 +183,28 @@
     </div>
     <!-- =====appointment門診時間及預約======== -->
     <div class="APPOINTMENT">
-        <p>門診時間&預約</p>
+        <div class="APPOINTMENT_TAG">
+            <p>門診時間&預約</p>
+        </div>
+        <div class="APPOINTMENT_BOX">
+            <div class="APPOINTMENT_CONTENT">
+                <img src="./img/appointment/TIMETABLE_PC.png" alt="">
+                <div class="APPOINTMENT_RESERVE_PHONE">
+                    <a href="reserve.html" class="RESERVE">立即預約</a>
+                    <a class="APPOINTMENT_PHONE" href="tel:+886900000000">
+                        <i class="bi bi-telephone"></i>
+                        預約專線 : 02-3322-2777
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- =====RWD 功能列及小時刻表======== -->
+    <!-- RWD功能列內的時刻表 -->
+    <div class="M_TIME_TABLE">
+        <img src="./img/appointment/TIMETABLE_RWD.png" alt="" class="">
+    </div>
+    <!-- RWD下方功能列 -->
     <div class="M_FUNTION">
         <ul>
             <a class="M_FUNTION_A1" href="tel:+886900000000">
@@ -199,14 +219,12 @@
                     <p class="CLINIC_HOURS">門診時間</p>
                 </li>
             </a>
-
             <a href="reserve.html" class="M_FUNTION_A3">
                 <li>
                     <i class="bi bi-arrow-right"></i>
                     <p>立即預約</p>
                 </li>
             </a>
-
         </ul>
     </div>
     <!-- ===== header ===== -->
@@ -746,11 +764,12 @@
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="qa.js"></script>
-    <script src="top_btn.js"></script>
+    <!-- <script src="top_btn.js"></script> -->
     <!-- <script src="sroll.js"></script> -->
     <script src="nav.js"></script>
     <script src="user_popup.js"></script>
     <script src="toggle.js"></script>
+    <script src="appointment.js"></script>
 
 </body>
 

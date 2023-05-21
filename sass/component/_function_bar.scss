@@ -3,7 +3,11 @@
     display: none;
 }
 
-.M_TIME_TABLE.-off{
+// .M_TIME_TABLE.-off{
+//     display: none;
+// }
+
+.M_TIME_TABLE{
     display: none;
 }
 
@@ -30,7 +34,9 @@
             width: 100vw;   
             height: 90px;
             background: linear-gradient(90deg, #F89F69 0%, #fc9a5e 40%, #A7CFD7 100%);
-    
+            box-shadow: 0px -2px 5px 3px rgba(0, 0, 0, 0.1);
+
+
             .M_FUNTION_A1{
                 display: flex;
                 flex-direction: column;
@@ -75,52 +81,67 @@
             }
         }
     }
-    
-    
+    // 小時刻表 此功能的JS寫在appointment.js內
+    body .M_TIME_TABLE_ACTIVE{
+        bottom: 13%;
+    }
+
     .M_TIME_TABLE{
-        text-align: center;
-        
-        width: 100vw;
-        height: 100vh;
+        width: 90%;
         position: fixed;
-        border: 1px solid;
-        background: linear-gradient(180deg, rgb(248, 159, 105,.8) 0%, rgb(252, 155, 94,.8) 40%, rgb(167, 207, 215,.8) 100%);
-        z-index: 9999;
-        >div{
-            margin-top: 28vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            // justify-content: center;
-            h1{
-                color: $white;
-            }
-            img{
-                
-                padding-top: 50px;
-                
-                
-            }
+        bottom: -30%;
+        left: 50%;
+        z-index: 90;
+        transform: translateX(-50%);
+        transition: all 0.4s ease;
+        filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
 
-            .CLOSE_TABLE{
-                i{
-                    font-size: 5rem;
-                    color: $white ;
-    
-                    position: fixed;
-                    top: 20%;
-                    right: 4%;
-                    z-index: 1000;
-                    transition: all .3s ease;
-                    transform: scale(.6);
-                   
-                }
-            } 
+        display: none;
 
+        @include m{
+            display: block;
+        }
+        img{
+            width: -webkit-fill-available;
 
         }
-        
     }
+
+    // .M_TIME_TABLE{
+    //     text-align: center;
+    //     width: 100vw;
+    //     height: 100vh;
+    //     position: fixed;
+    //     border: 1px solid;
+    //     background: linear-gradient(180deg, rgb(248, 159, 105,.8) 0%, rgb(252, 155, 94,.8) 40%, rgb(167, 207, 215,.8) 100%);
+    //     z-index: 9999;
+    //     >div{
+    //         margin-top: 28vh;
+    //         display: flex;
+    //         flex-direction: column;
+    //         align-items: center;
+    //         position: relative;
+    //         // justify-content: center;
+    //         h1{
+    //             color: $white;
+    //         }
+    //         img{
+    //             padding-top: 50px;
+    //         }
+    //         .CLOSE_TABLE{
+    //             i{
+    //                 font-size: 5rem;
+    //                 color: $white ;
+    //                 position: fixed;
+    //                 top: 20%;
+    //                 right: 4%;
+    //                 z-index: 1000;
+    //                 transition: all .3s ease;
+    //                 transform: scale(.6);
+                   
+    //             }
+    //         } 
+    //     }
+    // }
 }
 

@@ -343,6 +343,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
+                z-index: 200;
                 background-color: $red;
                 display: flex;
                 flex-direction: column;
