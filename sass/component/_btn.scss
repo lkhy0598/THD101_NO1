@@ -5,8 +5,7 @@ a {
 }
 // 立即預約按鈕
 .HEADER_NAV .RESERVE {
-    cursor: pointer;
-    background: $linear-orange;
+    background-color: $orange;
     font-size: $p;
     border-radius: 10px;
     font-weight: 700;
