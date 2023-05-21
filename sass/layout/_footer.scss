@@ -1,5 +1,5 @@
 footer{
-    
+   
     display: flex;
     width: 100%;
     height: 326px;
@@ -37,6 +37,7 @@ footer{
     width: 100%;
     height: 100px;
     background-color: #252F3A;
+    z-index: 10;
 }
 
 
@@ -45,4 +46,84 @@ footer{
     text-align: center;
     line-height: 100px;
     font-weight: 400;
+    
+}
+
+
+
+
+
+// =========================  RWD ===============================
+
+// 手機版414px
+@mixin m() {
+    @media screen and (max-width: 414px) {
+        @content;
+    }
+}
+
+
+@include m{
+    // ================ footer ====================
+    .TOP_BTN{
+        display: none;
+    }
+    
+
+    footer{
+
+  
+        height: auto;
+     
+    }
+
+    .FOOTER_LOGO{
+        margin: 20px 0;
+        margin-left: 9vw;
+        picture{
+
+            img{
+                width: 70px;
+            }
+        }
+    }
+    
+
+    .FOOTER_NAV{
+        display: none;
+    
+    }
+
+    .FOOTER_ICON{
+        display: flex;
+        position: absolute;
+        bottom: 25%;
+        left: 38%;
+    }
+
+    .FOOTER_ICON > a > img{
+        padding-right: 30px;
+        width: 40px;
+    }
+
+
+  
+    .FOOTER_BOTTOM{
+        display: flex;
+        width: auto;
+        height: 87px;
+        background-color: #252F3A;
+        line-height: 87px;
+        align-items: center;
+        margin-bottom: 87px;
+    }
+
+    .FOOTER_BOTTOM > p{
+        padding: 0 15px;
+        font-size: 15px;
+        line-height: 150%;
+        font-weight: 400;
+    }
+    
+
 }

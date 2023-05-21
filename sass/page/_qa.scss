@@ -9,6 +9,7 @@
 =======
 .BACKGROUND {
     .BG {}
+
     .BG_CLOUDS {
 >>>>>>> 9979e96d214bf5267096ee428df017e87e595f02
 =======
@@ -22,6 +23,7 @@
         .CLOUD_1 {
             top: 900px;
             left: 0;
+
             .BG_CLOUD_IMG1 {
                 transform: scale(-2) rotate(330deg);
 
@@ -29,10 +31,12 @@
                     transform: scale(-10) rotate(330deg);
                 }
             }
+
             @include m() {
                 top: 1600px;
             }
         }
+
         .CLOUD_2 {
             top: 3040px;
             left: 322px;
@@ -44,6 +48,7 @@
                     transform: scale(-10) rotate(340deg);
                 }
             }
+
             @include m() {
                 top: 3830px;
                 left: 260px;
@@ -252,13 +257,7 @@
                 background: $lightblue;
                 color: $white;
                 transition: all 0.3s ease;
-                // @include m() {
-                //     background: $blue;
-                //     color: $white;
-                //     border-top: 1px solid $blueblack;
-                //     border-bottom: 1px solid $blueblack;
-                //     transition: all 0.3s ease;
-                // }
+
             }
 
 
@@ -275,6 +274,21 @@
                 transition: all 0.3s ease;
             }
 
+            @include m() {
+                &:hover {
+                    background: $blue;
+                    color: $white;
+                    border-top: 1px solid $blueblack;
+                    border-bottom: 1px solid $blueblack;
+                    transition: all 0.3s ease;
+
+                    &::after {
+                        color: $white;
+                    }
+                }
+
+
+            }
         }
 
         // TITLE點選時樣式

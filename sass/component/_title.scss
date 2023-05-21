@@ -2,11 +2,17 @@
 .BREAD {
     // 中間"/"的顏色
     color: $blueblack;
-
+    
     a {
         display: initial;
         color: $blueblack;
         text-decoration: none;
+        
+    }
+
+    a:nth-child(2){
+        
+        border-bottom: 1px solid $blueblack;
     }
 
 }

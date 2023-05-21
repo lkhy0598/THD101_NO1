@@ -1,15 +1,66 @@
 .SHOPPINGCARTP2{
-    background-image: url(../../img/shopping_cart/shopping_cartp2_bg.jpg);
+
+    .SHOPPINGCARTP2BG{
+
+    background-image: url(../../img/shopping_cart/shopping_cartp2_bgALL.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 20;
+
+    .BG {}
+    .BG_CLOUDS {
+
+        .BG_CLOUD {}
+
+        .CLOUD_1 {
+            top: 500px;
+            left: -200px;
+            .BG_CLOUD_IMG1 {
+                transform: scale(-2) rotate(160deg);
+
+                @include m() {
+                    transform: scale(-8) rotate(220deg);
+                }
+            }
+            @include m() {
+                img{
+                    width: 100%;
+                    filter: saturate(1.5);
+                    
+                }
+                top: -1000px;
+            }
+        }
+        .CLOUD_2 {
+            top: 1640px;
+            left: 22px;
+
+            .BG_CLOUD_IMG2 {
+                transform: scale(-2) rotate(20deg);
+
+                @include m() {
+                    transform: scale(-11) rotate(150deg);
+                }
+            }
+            @include m() {
+                img{
+                    width: 100%;
+                    filter: saturate(1.5);
+                }
+                top: 2860px;
+                left: 0px;
+            }
+        }
+
+    }
 
     .ITEM_PRODUCT--W{
         width: 40%;
     }
 
-    .COL-7{
-        margin-right: 0;
-    }
+    // .COL-7{
+    //     margin-right: 0;
+    // }
 
 // =========================================
 
@@ -416,6 +467,35 @@
     }
 
 
+}
 
+    .SHOPPINGCART_ITEMLIST--M{
+        display: none;
+        @include m{
+            display: block;   
+            background-color: rgba(255, 255, 255, 0.5);
+            border-top: 1px solid $gray;
+            margin-bottom: 25px;
+        }
+        .SHOPPINGCART_ITEMWORD--BOTTOMM{
+            .SHOPPINGCART_ITEMWORD--COUNTM{
+                span.ITEM_COUNT--NUM{
+                    @include m {
+                        margin: 0px;
+                        font-size: 1.7rem;
+                        padding-top: 2px;
+                    }
+                }
+            }
+        }
+    }
+
+    .SHOPPINGCART_ALLLIST{
+        @include m {
+            display: none;
+        }
+    }
+
+    
 
 }

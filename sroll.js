@@ -1,4 +1,4 @@
-let boxes = document.querySelectorAll('.CONSULTATION_UL')
+let boxes = document.querySelectorAll('.SERVICES_ITEM')
 
       window.addEventListener('scroll', checkBoxes)
       checkBoxes();
@@ -9,9 +9,9 @@ let boxes = document.querySelectorAll('.CONSULTATION_UL')
               const boxTop = box.getBoundingClientRect().top
 
               if(boxTop < triggerBottom) {
-                  box.classList.add('show')
+                  box.classList.add('SHOW')
               } else {
-                  box.classList.remove('show')
+                  box.classList.remove('SHOW')
               }
           })
       }

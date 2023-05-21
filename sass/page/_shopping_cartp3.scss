@@ -1,7 +1,56 @@
 .SHOPPINGCARTP3{
+    .SHOPPINGCARTP3BG{
     background-image: url(../../img/shopping_cart/shopping_cartp3_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 20;
+
+    .BG {}
+    .BG_CLOUDS {
+
+        .BG_CLOUD {}
+
+        .CLOUD_1 {
+            top: 600px;
+            left: -200px;
+            .BG_CLOUD_IMG1 {
+                transform: scale(-2) rotate(330deg);
+
+                @include m() {
+                    transform: scale(-8) rotate(330deg);
+                }
+            }
+            @include m() {
+                img{
+                    width: 100%;
+                    filter: saturate(1.5);
+                }
+                top: -500px;
+            }
+        }
+        .CLOUD_2 {
+            top: 1640px;
+            left: 22px;
+
+            .BG_CLOUD_IMG2 {
+                transform: scale(-2) rotate(145deg);
+
+                @include m() {
+                    transform: scale(-10) rotate(300deg);
+                }
+            }
+            @include m() {
+                img{
+                    width: 100%;
+                    filter: saturate(1.5);
+                }
+                top: 2860px;
+                left: 0px;
+            }
+        }
+
+    }
+
 
     .PL{
         padding-left: 40px;
@@ -255,11 +304,11 @@
                     margin-top: 0px;
 
                     .SHOPPINGCARTP3_CONFIRM--TIT{
-                        width: 40%;
+                        width: 35%;
                     }
 
                     .SHOPPINGCARTP3_CONFIRM--CON{
-                        width: 60%;
+                        width: 65%;
                         text-align: right;
                     }
                 }
@@ -371,5 +420,35 @@
         }
     }
 
+    }
+
+    .SHOPPINGCART_ITEMLIST--M{
+        display: none;
+        @include m{
+            display: block;   
+            background-color: rgba(255, 255, 255, 0.5);
+            border-top: 1px solid $gray;
+            margin-bottom: 25px;
+        }
+        .SHOPPINGCART_ITEMWORD--BOTTOMM{
+            .SHOPPINGCART_ITEMWORD--COUNTM{
+                span.ITEM_COUNT--NUM{
+                    @include m {
+                        margin: 0px;
+                        font-size: 1.7rem;
+                        padding-top: 2px;
+                    }
+                }
+            }
+        }
+    }
+
+    .SHOPPINGCART_ALLLIST{
+        @include m {
+            display: none;
+        }
+    }
+
+    
 }
 }

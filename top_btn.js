@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(document).ready(function() {
   $("#js-top").click(function() {
       $('html, body').animate({
@@ -12,30 +11,27 @@ $(document).ready(function() {
         scrollTop: $("body").offset().top
     }, 1000);
   });
+
+  
+
+  $(window).scroll(function(){
+    let scrollTop = $(this).scrollTop();
+    console.log(scrollTop);
+    let bg = $('.BACKGROUND').height();
+
+    if(scrollTop > 200){
+      $("#js-top").fadeIn();
+    }else {
+      $("#js-top").fadeOut(10);
+    };
+
+    
+    
+    
+  })
 });
-=======
-document.querySelector("#js-top").addEventListener('click', function (e) {
-  e.preventDefault();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// $(document).ready(function() {
-//   $("#js-top").click(function() {
-//       $('html, body').animate({
-//           scrollTop: $("body").offset().top
-//       }, 800);
-//   });
-// });
 
 
-// $(document).ready(function() {
-//   $("#js-f-top").click(function() {
-//       $('html, body').animate({
-//           scrollTop: $("body").offset().top
-//       }, 800);
-//   });
-// });
->>>>>>> LAI
 
 
 
@@ -45,9 +41,9 @@ document.querySelector("#js-top").addEventListener('click', function (e) {
 
 // const scrollFunc = () => {
 
-//   let y = window.scrollY;
+//   let y = document.getElementsByClassName('BACKGROUND')[0].scrollY;
 
-//   if (y > 500) {
+//   if (y = 0) {
 //     scrollToTopButton.className = "TOP_BTN SHOW";
 //   } else {
 //     scrollToTopButton.className = "TOP_BTN HIDE";
@@ -55,18 +51,20 @@ document.querySelector("#js-top").addEventListener('click', function (e) {
 
 // };
 
-// window.addEventListener("scroll", scrollFunc);
 
-// const scrollToTop = () => {
+// var g = document.getElementsByClassName('BACKGROUND')[0];
+// g.addEventListener("scroll", scrollFunc);
 
-// const c = document.documentElement.scrollTop || document.body.scrollTop;
+//   const scrollToTop = () => {
 
-//   if (c > 0) {
-//     window.requestAnimationFrame(scrollToTop);
-//     window.scrollTo(0, c - c / 10);
-//   }
+//   const c = document.documentElement.scrollTop || document.body.scrollTop;
+//     console.log(c);
+//     if (c > 0) {
+//       g.requestAnimationFrame(scrollToTop);
+//       g.scrollTo(0, c - c / 10);
+//     }
 
-// };
+//   };
 
 // scrollToTopButton.onclick = function(e) {
 //   e.preventDefault();

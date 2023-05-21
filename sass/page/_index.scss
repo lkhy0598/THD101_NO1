@@ -1,89 +1,17 @@
 .INDEX{
     overflow-x: hidden;
 
-    .M_HEADER_NAV{
-        display: none;
-    }
+    
 
     .BIG_TITLE { 
         padding-top: 100px;
         position: relative;
     }
 
-    .M_FUNTION{
-        display: none;
-    }
+    
 
 
-    .TOGGLE {
-        position: relative;
-        height: 45px;
-        width: 45px;
-        cursor: pointer;
-    }
-    .TOGGLE:after, .TOGGLE:before{
-        content: "";
-        background: $white;
-        width: 33px;
-        height: 5px;
-        margin: auto;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        transition: 1.3s cubic-bezier(0.53, 0, 0.15, 1.3);
-        border-radius: 5px;
-        
-    }
-
-    .TOGGLE > span{
-        content: "";
-        background: $white;
-        width: 33px;
-        height: 5px;
-        margin: auto;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        border-radius: 5px;
-    }
-
-
-    .TOGGLE{
-        display: none;
-    }
-
-
-
-    .TOGGLE:before {
-        top: -50%;
-
-    }
-
-    .TOGGLE > span{
-        top: 10%;
-        transition: all 1.5s;
-    }
-
-    .TOGGLE:after {
-        top: 70%;
-    }
-
-    .TOGGLE.close:before {
-        transform: rotate(-225deg);
-        top: 0;
-        background: $red;
-    }
-    .TOGGLE.close:after {
-        transform: rotate(225deg);
-        top: 0;
-        background: $red;
-    }
-
-
+  
 // ============= 動物插畫區 =================
 
 
@@ -151,7 +79,7 @@
 }
 
 
-// ======== (資訊導覽) =======
+// ======== (資訊導覽的動物) =======
 .DINO_RABBIT{
     position: absolute;
     width: 120px;
@@ -171,20 +99,28 @@
     }
 }
 
-//========== (服務項目) =========
 
 
 
-// ==================================================
-.BACKGROUND{
-    position: relative;
-    background-image: url('../../img/index/index_bg.jpg');
-    
-}
+
+// ======================== MASTER_VISION ==========================
+
 
 
 .CAROUSEL{
     position: relative;
+    
+    .PAWPAW{
+        position: absolute;
+        top: 50%;
+        left: 6vw;
+        > picture > img{
+        
+            width: 35vw;
+            
+            
+        }
+    } 
 }
 
 .DOT{
@@ -218,19 +154,17 @@
 }
 
 
+
+
 // ==========看診進度==========
 .CONSULTATION_UL{
     display: flex;
     justify-content: center;
     margin-top: 100px;
     margin-bottom: 120px;
-    transform: translateX(400%); 
-    transition: transform 0.6s ease;
+   
 }
 
-.CONSULTATION_UL.show{
-    transform: translateX(0);
-}
 
 .CONSULTATION_ITEM{
     padding: 0 90px;
@@ -408,30 +342,54 @@
 }
 
 
-.Services_UL{
+.SERVICES_UL{
     // border: 1px solid;
     display: flex;
     justify-content: space-between;
     margin: 80px 0;
     position: relative;
-   
-
+    // opacity: 0;
+    // transition: opacity 2s ease;
     
     
 }
 
+.SERVICES_ITEM:nth-child(1){
+    opacity: 0;
+    transition: opacity .5s linear;
+}
 
-.Services_ITEM{
+.SERVICES_ITEM:nth-child(2){
+    opacity: 0;
+    transition: opacity 1.5s linear;
+}
+
+.SERVICES_ITEM:nth-child(3){
+    opacity: 0;
+    transition: opacity 2s linear;
+}
+
+.SERVICES_ITEM:nth-child(4){
+    opacity: 0;
+    transition: opacity 2.5s linear;
+}
+
+
+.SERVICES_ITEM.SHOW{
+    opacity: 1;
+}
+
+.SERVICES_ITEM{
     padding: 0 40px;
     text-align: center;
     z-index:1;
 }
 
-.Services_ITEM > img{
+.SERVICES_ITEM > img{
     border-radius: 80px 10px 80px 10px;
 }
 
-.Services_ITEM h3{
+.SERVICES_ITEM h3{
     padding-top: 30px;
     padding-bottom: 15px;
 }
@@ -572,8 +530,9 @@
     text-align: center;
     color: $blueblack;
  
-    transition: all 0.3s ease;
-    &:hover{
+    
+    & > li >img:hover{
+        transition: all 0.5s ease;
         filter: drop-shadow(0px 0px 5px $blueblack);
         transform: scale(1.05);
     }
@@ -617,10 +576,10 @@
         height: 420px;
       
         top: 40px;
-    
+        
         left: -235px;
         transform: translate(0,-45%);
-        z-index: 0;
+        z-index: -1;
         &::before {
             content: "";
             display: block;
@@ -673,38 +632,6 @@
     }
 }
 
-    
-
-
-// ========== footer上小動畫 ==========
-
-    .FOOTER_ANI{
-        position: relative;
-        width: 165px;
-    }
-
-    .SHEEP{
-        background-image: url(../../img/index/footer.png);
-        width: 165px;
-        height: 400px;
-        background-size: 960px 400px;
-        animation:ANISHEEP 10s steps(6,end) infinite; 
-        position: absolute;
-        bottom: 50px;
-        right: 30px;
-        margin: 0;
-        padding: 0  ;
-    }
-
-    @keyframes ANISHEEP {
-        0%{
-            background-position-x: 0px;
-        }
-
-        100%{
-            background-position: -960px;
-        }
-    }
 
 }
 // =========================  RWD ===============================
@@ -731,52 +658,14 @@
             position: relative;
         }
 
-        .HEADER_NAV{
-            display: none;
-        }
-
-
-        .M_HEADER_NAV{
-            display: block;
-        }
+       
 
         //================= 主視覺部分  ===================
         .APPOINTMENT{
             display: none;
         }
 
-        .M_FUNTION{
-            display: block;
-            position: fixed;
-            z-index: 100;
-            bottom: 0;
-
-            ul{
-                display: flex;
-                justify-content: space-between;
-                width: 100vw;   
-                height: 90px;
-                background: linear-gradient(90deg, #F89F69 0%, #fc9a5e 40%, #A7CFD7 100%);
-
-
-                li{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    color: $white;
-                    text-align: center;
-                    padding:  0 15px;
-                    i{
-                        font-size: 25px;
-                        padding-bottom: 15px;
-                    }
-
-                    .arrow{
-                        font-size: 40px;
-                    }
-                }
-            }
-        }
+        
 
         // ============ header ===========
    
@@ -788,32 +677,20 @@
             display: none;
         }
 
-        .M_HEADER_NAV > .TOGGLE{
-            display: block;
-            margin-top: 14px;
-            text-align: right;
-            position: absolute;
-            right:   15px;
-            top: 0;
-            z-index: 100;
-     
-        }
-        .M_HEADER_NAV .TOGGLE > span.close{
-            transition: opacity 1s ;
-            opacity: 0;
-        }
-
-        .M_HEADER_NAV .TOGGLE.close:before {
-            transform: rotate(-225deg);
-            top: 0;
-        }
-        .M_HEADER_NAV .TOGGLE.close:after {
-            transform: rotate(225deg);
-            top: 0;
-        }
+       
 
         .CAROUSEL{
+            .PAWPAW{
+                position: absolute;
+                top: 5%;
+                left: 25vw;
+                > picture > img{
+                
+                    width: 55vw;
+                    
+                }
 
+            } 
 
             
         
@@ -872,16 +749,6 @@
 
 
 
-        .BACKGROUND_BG{
-            
-     
-            >img{
-                position: absolute;
-                width: 500px;
-                height: 500px;
-                bottom: 0;
-            }
-        }
 
         .DOT2{
             display: none;
@@ -1027,17 +894,17 @@
         // =========== 服務項目 =============
 
 
-        .Services_UL{
+        .SERVICES_UL{
             
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin:  30px 0;
+            margin:  60px 0 20px;
             
         }
 
 
-        .Services_ITEM{
+        .SERVICES_ITEM{
             padding: 0 15px;
             text-align: center;
             width: 140px;
@@ -1046,19 +913,19 @@
             
         }
 
-        .Services_ITEM > img{
+        .SERVICES_ITEM > img{
             width: 130px;
             height: 130px;
             border-radius: 50px 10px 50px 10px;
         }
 
-        .Services_ITEM h3{
+        .SERVICES_ITEM h3{
             padding-top: 10px;
             padding-bottom: 5px;
             font-size: $littleword;
             
         }
-        .Services_ITEM p{
+        .SERVICES_ITEM p{
             font-size: $initial;
         }
 
@@ -1247,62 +1114,5 @@
 
             
 
-        // ================ footer ====================
-        .TOP_BTN{
-            display: none;
-        }
-        
-        .FOOTER_TOP_BTN{
-            display: block;
-        }
-
-        footer{
-    
-      
-            height: 162px;
-         
-        }
-
-        .FOOTER_LOGO{
-            margin-left: 11vw;
-            margin-top: 3.5vh;
-        }
-        
-
-        .FOOTER_NAV{
-            display: none;
-        
-        }
-
-        .FOOTER_ICON{
-            position: absolute;
-            top: 11%;
-            right: 5%;
-        }
-
-        .FOOTER_ICON > a > img{
-            padding: 15px;
-            width: 20px;
-        }
-
-
-      
-        .FOOTER_BOTTOM{
-            display: flex;
-            width: auto;
-            height: 87px;
-            background-color: #252F3A;
-            line-height: 87px;
-            align-items: center;
-            margin-bottom: 87px;
-        }
-
-        .FOOTER_BOTTOM > p{
-            padding: 0 15px;
-            font-size: 15px;
-            line-height: 150%;
-            font-weight: 400;
-        }
-        
     }
 }

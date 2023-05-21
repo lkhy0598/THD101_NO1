@@ -1,8 +1,20 @@
 
+
+// 手機板header nav
+.M_HEADER_NAV{
+    display: none;
+}
+
+
+
+
+
 //header nav設定
+
 .HEADER_NAV_SHADOW {
     box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.1);
 }
+
 .HEADER_NAV {
     background-image: url("../../img/HEADER-BG.jpg");
     background-repeat: no-repeat;
@@ -151,6 +163,9 @@
 
 //footer nav設定
 .FOOTER_NAV {
+    @include m() {
+        margin-bottom: 200px;
+    }
 
     >ul {
 
@@ -164,6 +179,14 @@
         >li {
             padding: 2px 30px;
             width: 100px;
+            color: $white;
+            > .FOLLOW{
+                display: block;
+                margin: 20px 0;
+                font-size: $p;
+                font-weight: 500;
+            }
+            
 
             >a {
                 text-decoration: none;
@@ -193,8 +216,8 @@
 }
 
 .BACK_NAV {
-  
-    
+
+
     transition: all 0.3s ease;
     background-image: url("../../img/HEADER-BG.jpg");
     background-repeat: no-repeat;
@@ -262,19 +285,29 @@
     @media screen and (max-width: 414px) {
         @content;
     }
-  }
+}
 
-@include m{
+@include m {
+
+    .HEADER_NAV {
+        display: none;
+    }
+
     //header nav設定
+
     .M_HEADER_NAV {
-        background-image: url("");
-        background: linear-gradient(160deg, rgb(243, 145, 85, .9) 0%,  rgb(228, 170, 123, .9) 40%, rgba(126, 184, 196, 0.9) 80%, rgba(126, 184, 196, 0.8) 100%);
-        z-index: 9999;
+        display: block;
+        background: rgba(255, 255, 255, 0);
         position: fixed;
+        height: 92px;
         width: 100%;
         top: 0;
+        z-index: 9999;
         transition: all 0.3s ease;
-        > a {
+
+
+
+        >a {
 
             .M_HEADERLOGO_BG_BOX {
                 position: absolute;
@@ -284,11 +317,11 @@
                 display: flex;
                 flex-direction: column;
                 transition: all 0.3s ease;
-    
-                
-                img{
+
+
+                img {
                     width: 42px;
-                    
+
                 }
 
                 .M_HEADERLOGO_PAW {
@@ -300,12 +333,12 @@
                     transition: all 0.3s ease;
 
                 }
-    
+
                 .M_HEADERLOGO_CLAWS {
                     display: none;
-    
+
                 }
-    
+
                 .M_HEADER_LOGO_NAME {
                     position: absolute;
                     top: 55px;
@@ -313,88 +346,94 @@
                     margin: 10px auto;
                     margin-top: 0;
                     transition: all 0.4s ease;
-    
+
                 }
-    
+
                 // HEADER_LOGO_形變
                 .M_HEADERLOGO_S {
                     top: 17px;
                     left: 20px;
                     transform: scale(1.1);
                 }
-    
+
                 .M_HEADERNAME_S {
                     top: 41px;
                     left: 102px;
                     transform: scale(2.2);
                 }
-    
-    
+
+
             }
-    
+
             // HEADER_LOGO_BG形變
             .M_HEADERLOGE_BG_TOP {
                 width: 74px;
                 height: 92px;
                 border-radius: 0 0 45px 0;
             }
-    
+
             .M_HEADERLOGE_BG_SCROLL {
                 width: 188px;
                 height: 92px;
                 border-radius: 0 0 30px 0;
             }
-    
-    
+
+
         }
 
         >ul {
-            
+            display: none;
             height: 100vh;
-            padding-top: 90px;
-            
+            padding-top: 110px;
+            background: linear-gradient(160deg, rgb(243, 145, 85, .9) 0%,  rgb(228, 170, 123, .9) 40%, rgba(126, 184, 196, 0.9) 80%, rgba(126, 184, 196, 0.8) 100%);
            
             >li {
                 
-                display: flex;
-                justify-content: center;
                 position: relative;
                 padding-bottom: 15px;
-                >a {
+                >.M_HEADER_LI {
                     text-decoration: none;
                     margin: 20px 0;
+                    padding-left: 26%;
                     color: $white;
-                    display: block;
+                    display: flex;
+                    align-items: end;
                     font-size: 15px;
+                    height: 30px;
+
+                    
     
                     >span {
                         font-size: $p;
                         font-weight: 700;
-                        line-height: 1.35;
                         letter-spacing: .1em;
+                        padding-right: 10px;
                        
                     }
-
+                    
+                 
                 }
 
                 .LOGIN_SHOPPING{
-                    width: 120px;
+                    width: 200px;
                     display: flex;
                     justify-content: space-between;
-                    border: 1px solid;
-                    .LOGIN{
+                    margin: 0 auto;
+                    
+                    // border: 1px solid;
+                    .LOGIN {
                         font-size: $p;
                         color: $white;
                     }
 
-                    i{
-                        font-size: $p;
+                    >a > i{
+                        font-size: 40px;
                         color: $white;
                     }
                 }
 
-                .RESERVE{
-                  
+                > .RESERVE{
+                    color: $white;
                     background: $linear-orange;
                     font-size: $p;
                     border-radius: 10px;
@@ -403,9 +442,9 @@
                     line-height: 50px;
                     width: 90%;
                     height: 50px;
-                    cursor: pointer;
+                    margin: 0 auto;
 
-       
+
                 }
             }
 
@@ -414,19 +453,37 @@
                     position: absolute;
                     display: block;
                     color: $white;
-                    width: 120px;
+                    width: 70%;
                     border: 1px solid;
-                    bottom: 10px;
+                    opacity: .3;
+                    bottom: 16px;
                     left: 50%;
                     transform: translate(-50%);
                     
             }
-            
-        
-    
-    
-        
+
+            > li:nth-child(6){
+                padding-top: 10px;
+                padding-bottom: 40px;
+            }
+
+
+
+
+
         }
     }
+    // 導覽列底色
+    .M_HEADER_BG_ACTIVE {
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    .M_HEADER_TOGGLE_ACTIVE{
+        background: $red;
+    }
+
+
+
+    
 
 }
