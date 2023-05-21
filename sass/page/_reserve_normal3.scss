@@ -1,4 +1,4 @@
-.RESERVE {
+.RESERVE_NORMAL3 {
 
 
     .CAROUSEL {
@@ -175,50 +175,30 @@
         z-index: 10;
     }
 
+    #ARCTWO>.ARC_TITLE {
+        background-color: #428AA9;
+        color: #FFF;
+        z-index: 10;
+    }
+
+    #ARCONE::after {
+        background-color: #428AA9;
+    }
+
+    #ARCTWO::before {
+        background-color: #428AA9;
+    }
+
     #ARCONE>p {
+        font-weight: bold;
+    }
+
+    #ARCTWO>p {
         font-weight: bold;
     }
 
     .RESERVE_TYPE_UL_M {
         display: none;
-    }
-
-    //----- 月曆區塊 -----//
-    .CALENDAR_AREA {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 10;
-        // border: 1px solid;
-    }
-
-    #calendar {
-        width: 70%;
-    }
-
-    .CALENDAR_INFO {
-        padding-left: 10px;
-    }
-
-    .CALENDAR_INFO p {
-        font-size: 18px;
-        color: #34424F;
-        margin: 10px;
-    }
-
-    .CALENDAR_COLOR_INFO {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 10;
-    }
-
-    .CALENDAR_COLOR_INFO p {
-        font-size: 12px;
-        margin-left: -10px;
-        margin-right: 40px;
     }
 
     //----- 表單區塊 -----//
@@ -293,7 +273,6 @@
         border: none;
         color: #000;
         text-decoration-line: underline;
-        cursor: default;
     }
 }
 
@@ -306,7 +285,7 @@
 }
 
 @include m {
-    .RESERVE {
+    .RESERVE_NORMAL3 {
         .APPOINTMENT {
             display: none;
         }
