@@ -284,9 +284,12 @@
         margin-right: 45px;
         margin-bottom: 20px;
         border: 1px solid #9E9E9E;
-        height: 45px;
+        height: 65px;
         width: 300px;
         cursor: pointer;
+        &:hover{
+            background: $linear-darkblue-hover;
+        }
     }
 
     .ILLNESS_SIGN_BTN {
