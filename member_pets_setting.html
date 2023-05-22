@@ -8,11 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/shortcut_logo.png">
-    <title>波波動物醫院 - 寵物設定 MEMBER_CENTER</title>
+    <title>寵物設定 MEMBER_CENTER</title>
 </head>
 
 <body>
-    
     <!-- =====appointment門診時間及預約======== -->
 
     <div class="APPOINTMENT">
@@ -20,6 +19,7 @@
     </div>
 
     <!-- ===============================header================================= -->
+   
     <header>
 
         <nav class="HEADER_NAV">
@@ -41,35 +41,140 @@
 
             <ul>
                 <li>
-                    <a href="about_us.html"><span>關於院所</span><br>About Us</a>
+                    <a href="about_us.html">
+                        <span>關於院所</span>
+                        <br>About Us
+                    </a>
                 </li>
                 <li>
-                    <a href="information.html"><span>資訊導覽</span><br>Information</a>
+                    <a href="information.html">
+                        <span>資訊導覽</span>
+                        <br>Information
+                    </a>
                 </li>
                 <li>
-                    <a href="shopping.html"><span>線上購物</span><br>Shopping</a>
+                    <a href="shopping.html">
+                        <span>線上購物</span>
+                        <br>Shopping
+                    </a>
                 </li>
                 <li>
-                    <a href="qa.html"><span>常見問題</span><br>Q & A</a>
+                    <a href="qa.html">
+                        <span>常見問題</span>
+                        <br>Q & A
+                    </a>
                 </li>
                 <li>
-                    <a href="member_center.html"><span>會員中心</span><br>Member Center</a>
+                    <a href="member_center.html">
+                        <span>會員中心</span>
+                        <br>Member Center
+                    </a>
                 </li>
                 <li>
-                    <a href="#" class="RESERVE">立即預約</a>
+                    <a href="reserve.html" class="RESERVE">立即預約</a>
                 </li>
                 <li>
-                    <a href="#" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
+                    <a href="" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
                 </li>
                 <li>
-                    <a href="#"><i class="bi bi-cart-fill"></i></a>
+                    <a href="shopping_cart.html"><i class="bi bi-cart-fill"></i></a>
                 </li>
             </ul>
 
         </nav>
 
+
+
+
+        <nav class="M_HEADER_NAV">
+
+            <a href="homepage.html">
+                <div class="M_HEADERLOGO_BG_BOX M_HEADERLOGE_BG_TOP">
+                    <div class="M_HEADERLOGO_PAW">
+                        <img src="./img/HEADERLOGO_PAW.svg" alt="">
+                        <div class="M_HEADERLOGO_CLAWS">
+                            <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="M_HEADER_LOGO_NAME">
+                        <img src="./img/HEADERLOGO_NAME.svg" alt="">
+                    </div>
+                </div>
+            </a>
+
+
+            <ul>
+                <li>
+                    <a class="M_HEADER_LI" href="about_us.html">
+                        <span>關於院所</span>
+                        <P class="EN">About Us</P>
+                    </a>
+                </li>
+                <li>
+                    <a class="M_HEADER_LI" href="information.html">
+                        <span>資訊導覽</span>
+                        <p class="EN">Information</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="M_HEADER_LI" href="shopping.html">
+                        <span>線上購物</span>
+                        <p class="EN">Shopping</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="M_HEADER_LI" href="qa.html">
+                        <span>常見問題</span>
+                        <p class="EN">Q & A</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="M_HEADER_LI" href="member_center.html">
+                        <span>會員中心</span>
+                        <p class="EN">Member Center</p>
+                    </a>
+                </li>
+
+                <li>
+                    <div class="LOGIN_SHOPPING">
+                        <a href="" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
+                        <a href="shopping_cart.html"><i class="bi bi-cart-fill"></i></a>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="reserve.html" class="RESERVE">立即預約</a>
+                </li>
+            </ul>
+
+
+
+
+            <div id="TOGGLE" class="TOGGLE">
+                <span class="SPAN1"></span>
+                <span class="SPAN2"></span>
+                <span class="SPAN3"></span>
+            </div>
+        </nav>
+        </nav>
+
     </header>
 
+
+    <section class="BACKGROUND MEMBERCENTER">
+        <div class="DOT2"></div>
+        <!-- 背景 -->
+        <img class="BG" src="./img/BG.jpg" alt="">
+
+        <!-- 背景雲裝飾 -->
+        <div class="BG_CLOUDS">
+            <div class="BG_CLOUD CLOUD_1">
+                <img class="BG_CLOUD_IMG1" src="./img/CLOUD_BG.png" alt="">
+            </div>
+            <div class="BG_CLOUD CLOUD_2">
+                <img class="BG_CLOUD_IMG2" src="./img/CLOUD_BG.png" alt="">
+            </div>
+        </div>
 
 
 
@@ -77,9 +182,11 @@
         <!-- ===================================麵包屑====================================== -->
         <section class="MEMCENTOP">
             <section class="BREAD WRAPPER">
-                <a href="#">首頁</a>
+                <a href="index.html">首頁</a>
                 /
-                <a href="#">會員中心</a>
+                <a href="member_center.html">會員中心</a>
+                /
+                <a href="member_pets_setting.html">會員設定</a>
             </section>
 
             <section class="BIG_TITLE WRAPPER M_bigTitle">
@@ -140,10 +247,11 @@
                 </a>
             </aside>
             <section class="MEMCONTENT">
-                <div class="SUBTITLE">
-                    <h1>寵物基本資料</h1>
-                    <p>Member settings</p>
+                <div class="SMALL_TITLE WRAPPER df">
+                    <h2>寵物基本資料</h2>
+                    <span class="EN">Member settings</span>
                 </div>
+                
                 <div class="MEMBERSETTINGS ">
                     <div class="avatar">
                         <img src="./img/member_center/pets_avatar_default.png" alt="">
@@ -187,9 +295,10 @@
                     </form>
 
                 </div>
-                <div class="SUBTITLE">
-                    <h1>新增寵物資料</h1>
-                    <p>Add Pets Information</p>
+                
+                <div class="SMALL_TITLE WRAPPER df">
+                    <h2>新增寵物資料</h2>
+                    <span class="EN">Add Pets Information</span>
                 </div>
                 <div class="MEMBERSETTINGS ">
                     <div class="avatar">
@@ -250,9 +359,10 @@
                 </div>
 
                 <!-- --------病歷查詢--------- -->
-                <div class="SUBTITLE">
-                    <h1>病歷查詢</h1>
-                    <p>Medical Record Inquiry</p>
+               
+                <div class="SMALL_TITLE WRAPPER df">
+                    <h2>病歷查詢</h2>
+                    <span class="EN">Medical Record Inquiry</span>
                 </div>
                 <div class=" password ">
                     
@@ -405,6 +515,14 @@
             本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。
         </p>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="qa.js"></script>
+    <!-- <script src="top_btn.js"></script> -->
+    <!-- <script src="sroll.js"></script> -->
+    <script src="nav.js"></script>
+    <script src="user_popup.js"></script>
+    <script src="toggle.js"></script>
+    <script src="appointment.js"></script>
 </body>
 
 </html>

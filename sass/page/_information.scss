@@ -24,12 +24,15 @@
     .INFORMATION_NAVS {
         display: flex;
         font-size: $littleword;
-        background-color: $white;
+        // background-color: $white;
         height: 45px;
-        border-radius: 20px 20px 0 0;
+        // border-radius: 20px 20px 0 0;
+        border-radius: 20px;
         box-sizing: border-box;
         overflow: hidden;
         margin-bottom: 30px;
+
+        position: relative;
 
         @include m() {
             height: 65px;
@@ -50,18 +53,61 @@
             }
 
             &:hover {
-                background-color: $lightblue;
+                // background-color: $lightblue;
+                // border-radius: 20px;
+                color: $blue;
+                text-decoration: underline;
             }
         }
 
         .INFORTAB_ACTIVE {
-            background-color: $blue;
+            // background-color: $blue;
             pointer-events: none;
 
             a {
                 color: $white;
             }
         }
+
+        .INFORMATION_NAV_WBG {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .INFORMATION_NAV_BG {
+            background-color: $blue;
+            width: 33.3%;
+            height: 100%;
+            border-radius: 20px;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+
+            transition: all .3s ease;
+        }
+
+        // .INFORMATION_BG_ACTIVE_LEFT {
+        //     transition: all .3s ease;
+        //     left: 0%;
+        //     transform: translateX(0%);
+        // }
+
+        // .INFORMATION_BG_ACTIVE_CENTER {
+        //     transition: all .3s ease;
+        //     left: 50%;
+        //     transform: translateX(-50%);
+        // }
+
+        // .INFORMATION_BG_ACTIVE_RIGHT {
+        //     transition: all .3s ease;
+        //     left: 100%;
+        //     transform: translateX(-100%);
+        // }
     }
 
     // 背景雲裝飾
