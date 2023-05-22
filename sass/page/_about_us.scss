@@ -265,7 +265,7 @@
         @include m {
             top:300px;
             left: 250px;
-        
+            z-index: 10;
         }
     }
 
@@ -278,7 +278,7 @@
         @include m {
             top:300px;
             left: 320px;
-      
+            z-index: 10;
         }
     }
     
@@ -326,7 +326,7 @@
     margin-right: 120px;
 
     @include m {
-        width: 100px;
+        width: 120px;
         height:  300px;
         margin-right: 125px;
     }
@@ -360,17 +360,26 @@
         animation: m_width .5s linear;
 
        
+        padding: 20px 0;
+
+        width: 90vw;
+        display: inline-block;
+        position: absolute;
+        top: -260px;
+        left: 10px;
+        z-index: -100;
+   
     }
     @keyframes m_width {
         0%{
-            transform: scale(0 , 1);
+            transform: scale(1, 0);
             left: 0px;
         }
     
         
         100%{
-            transform: scale(1 , 1);
-            left: 100px;
+            transform: scale(1);
+            left: 10px;
         }
       }
 
@@ -429,7 +438,7 @@
         position: absolute;
         top: -260px;
         left: 13px;
-      
+        z-index: -100;
     }
     
     h3{
