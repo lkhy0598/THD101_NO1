@@ -1,6 +1,7 @@
 .IMFORMATION_CONTENT{
     // 背景雲裝飾
     .BACKGROUND {
+        
         .BG {}
 
         .BG_CLOUDS {
@@ -44,7 +45,17 @@
         }
     }
 
+    // 麵包屑
+    .MEMCENTOP{
+        margin-top: 200px;
+    }
 
+
+    
+    .WRAPPER{
+        max-width: 1320px;
+       
+    }
     // 文章內容
     .INFOMATION_CONTENT_BOX {
         margin-top: 90px;
@@ -79,7 +90,7 @@
         width: 300px;
         margin: 0 auto;
         text-decoration: none;
-        margin-bottom: 300px;
+        margin-bottom: 200px;
         @include m{
             margin-bottom: 90px;
         }

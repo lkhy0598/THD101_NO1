@@ -1,4 +1,15 @@
-.INFORMATION {
+    .INFORMATION {
+
+    //圓點裝飾
+    .DOT{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        right: 30px;
+        bottom: 40px;
+        z-index: 10;
+        
+    }
 
     // 背景雲裝飾
     .BACKGROUND {
@@ -56,6 +67,7 @@
 
     // 麵包屑
     .MEMCENTOP {
+        padding-top:55px ;
         margin-bottom: 25px;
     }
 
@@ -361,7 +373,7 @@
 // 分頁器
 .PGAENUMBER {
     padding-top: 120px;
-    margin-bottom: 335px;
+    margin-bottom: 200px;
     display: flex;
     justify-content: center;
 }
