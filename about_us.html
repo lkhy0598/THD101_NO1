@@ -1,188 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.css">  
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-    <title>關於院所 - 波波動物醫院</title>
 
-  </head>
-  <body class="ABOUT">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="shortcut icon" type="image/png" href="img/shortcut_logo.png">
+  <title>關於院所 ABOUT_US</title>
 
-    <div id="modal" class="MODAL">
-      <!-- 關閉按鈕 -->
-      <a class="POPUP_CLOSEBTN" href="#">
-          <i class="bi bi-x-circle"></i>
-      </a>
-      <!-- 彈跳視窗_註冊/登入 -->
-      <div id="popup-wrap" class="POPUP_WRAP">
-          <div class="BG_CLOUD_BOX">
-              <img class="BG_CLOUD" src="./img/user_popup/USER_BG_CLOUD.png" alt="">
+</head>
+
+<body class="ABOUT">
+
+  <div id="modal" class="MODAL">
+    <!-- 關閉按鈕 -->
+    <a class="POPUP_CLOSEBTN" href="#">
+      <i class="bi bi-x-circle"></i>
+    </a>
+    <!-- 彈跳視窗_註冊/登入 -->
+    <div id="popup-wrap" class="POPUP_WRAP">
+      <div class="BG_CLOUD_BOX">
+        <img class="BG_CLOUD" src="./img/user_popup/USER_BG_CLOUD.png" alt="">
+      </div>
+      <!-- 導覽列 -->
+      <ul class="POPUP_NAVS">
+        <li class="POPUP_TABS "><a href="#POPUP_LOGIN">登入會員</a></li>
+        <li class="POPUP_TABS "><a href="#POPUP_SIGNUP">註冊會員</a></li>
+        <li class="POPUP_TABS FORGETTABS CLOSETABS"><a href="#">忘記密碼</a></li>
+        <li class="POPUP_TABS CHANGETABS CLOSETABS"><a href="#">修改密碼</a></li>
+
+      </ul>
+      <!-- 登入視窗 -->
+      <div class="POPUP_TABS_CONTENT">
+        <div id="POPUP_LOGIN" class="POPUP_BOX">
+          <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+
+          <form class="USER_FORM" method="post" action="Login.php">
+            <div class="INPUT_GROUP">
+              <i class="bi bi-envelope"></i>
+              <input type="email" id="account" name="account" placeholder="請輸入電子信箱" /></br>
+            </div>
+            <div class="INPUT_GROUP">
+              <i class="bi bi-lock-fill"></i>
+              <input type="password" id="password" name="password" placeholder="請輸入密碼" /></br>
+            </div>
+            <div class="FORGET_BOX">
+              <button type="button" class="FORGET_BTN">忘記密碼？</button>
+            </div>
+            <div class="INPUT_GROUP">
+              <input type="submit" id="send-btn" class="BTN" value="登入" />
+            </div>
+
+            <div class="DIVIDING">
+              <span>or</span>
+            </div>
+            <button type="submit" class="OTHERLOGIN_BTN">
+              <span class="OTHERLOGIN_ICON">
+                <img src="./img/user_popup/GOOGLE.svg" alt="">
+              </span>
+              <span>使用GOOGLE登入</span>
+            </button>
+          </form>
+          <div class="BTN SIGNUP_BTN">註冊會員</div>
+        </div>
+        <!-- 註冊視窗 -->
+        <div id="POPUP_SIGNUP" class="POPUP_BOX ">
+          <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+
+          <form class="USER_FORM" method="post" action="SIGNUP.php">
+            <div class="SIGNUP_INPUTS">
+              <div class="INPUT_GROUP">
+                <i class="bi bi-person-circle"></i>
+                <input type="text" id="name" name="name" placeholder="請輸入真實姓名" />
+              </div>
+              <div class="INPUT_GROUP">
+                <i class="bi bi-lock-fill"></i>
+                <input type="password" id="password" name="password" placeholder="請輸入密碼" />
+              </div>
+              <div class="INPUT_GROUP">
+                <i class="bi bi-lock"></i>
+                <input type="password" id="password" name="password" placeholder="請再確認一次密碼" />
+              </div>
+              <div class="INPUT_GROUP">
+                <i class="bi bi-phone"></i>
+                <input type="number" id="phone" name="phone" placeholder="請輸入手機號碼" />
+              </div>
+              <div class="INPUT_GROUP">
+                <i class="bi bi-envelope"></i>
+                <input type="email" id="account" name="account" class="VERIFYINPUT" placeholder="請輸入電子信箱" />
+                <button class="VERIFBTN BTN">
+                  發送驗證信
+                </button>
+              </div>
+              <div class="INPUT_GROUP">
+                <i class="bi bi-key"></i>
+                <input type="number" id="verifyNum" name="verifyNum" class="VERIFYINPUT" placeholder="請輸入驗證碼" />
+                <button class="VERIFBTN BTN">
+                  驗證
+                </button>
+              </div>
+            </div>
+
+            <p>＊送出即同意「會員服務條款、隱私權保護聲明」</p>
+            <div class="INPUT_GROUP">
+              <input type="submit" id="send-btn" class=" SIGNUP_SUB BTN" value="送出" />
+            </div>
+          </form>
+        </div>
+        <!-- 忘記密碼 -->
+        <div id="popup_forgetpass" class="POPUP_BOX ">
+          <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+          <form class="USER_FORM" method="post" action="SIGNUP.php">
+            <div class="INPUT_GROUP">
+              <i class="bi bi-envelope"></i>
+              <input type="email" id="account" name="account" class="VERIFYINPUT" placeholder="請輸入電子信箱" />
+              <button class="VERIFBTN BTN">
+                發送驗證信
+              </button>
+            </div>
+            <div class="INPUT_GROUP">
+              <i class="bi bi-key"></i>
+              <input type="number" id="verifyNum" name="verifyNum" class="VERIFYINPUT" placeholder="請輸入驗證碼" />
+              <button class="VERIFBTN BTN">
+                驗證
+              </button>
+            </div>
+            <div class="BACKLOGIN_BOX">
+              <button type="button" class="BACKLOGIN_BTN">返回登入</button>
+            </div>
+            <div class="FORGETPASS_DESC">
+              <p>＊系統已寄出驗證信，請至信箱收取。</p>
+              <p>＊若過久未收到驗證信件，請至垃圾信件匣或其他收件匣確認。</p>
+            </div>
+          </form>
+          <div class="PASS_SEND_BOX">
+            <p>＊送出後會直接跳轉到修改密碼頁</p>
+            <div class="INPUT_GROUP">
+              <input type="submit" id="send-btn" class="PASS_SUB BTN" value="送出" />
+            </div>
           </div>
-          <!-- 導覽列 -->
-          <ul class="POPUP_NAVS">
-              <li class="POPUP_TABS "><a href="#POPUP_LOGIN">登入會員</a></li>
-              <li class="POPUP_TABS "><a href="#POPUP_SIGNUP">註冊會員</a></li>
-              <li class="POPUP_TABS FORGETTABS CLOSETABS"><a href="#">忘記密碼</a></li>
-              <li class="POPUP_TABS CHANGETABS CLOSETABS"><a href="#">修改密碼</a></li>
-
-          </ul>
-          <!-- 登入視窗 -->
-          <div class="POPUP_TABS_CONTENT">
-              <div id="POPUP_LOGIN" class="POPUP_BOX">
-                  <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
-
-                  <form class="USER_FORM" method="post" action="Login.php">
-                      <div class="INPUT_GROUP">
-                          <i class="bi bi-envelope"></i>
-                          <input type="email" id="account" name="account" placeholder="請輸入電子信箱" /></br>
-                      </div>
-                      <div class="INPUT_GROUP">
-                          <i class="bi bi-lock-fill"></i>
-                          <input type="password" id="password" name="password" placeholder="請輸入密碼" /></br>
-                      </div>
-                      <div class="FORGET_BOX">
-                          <button type="button" class="FORGET_BTN">忘記密碼？</button>
-                      </div>
-                      <div class="INPUT_GROUP">
-                          <input type="submit" id="send-btn" class="BTN" value="登入" />
-                      </div>
-
-                      <div class="DIVIDING">
-                          <span>or</span>
-                      </div>
-                      <button type="submit" class="OTHERLOGIN_BTN">
-                          <span class="OTHERLOGIN_ICON">
-                              <img src="./img/user_popup/GOOGLE.svg" alt="">
-                          </span>
-                          <span>使用GOOGLE登入</span>
-                      </button>
-                  </form>
-                  <div class="BTN SIGNUP_BTN">註冊會員</div>
-              </div>
-              <!-- 註冊視窗 -->
-              <div id="POPUP_SIGNUP" class="POPUP_BOX ">
-                  <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
-
-                  <form class="USER_FORM" method="post" action="SIGNUP.php">
-                      <div class="SIGNUP_INPUTS">
-                          <div class="INPUT_GROUP">
-                              <i class="bi bi-person-circle"></i>
-                              <input type="text" id="name" name="name" placeholder="請輸入真實姓名" />
-                          </div>
-                          <div class="INPUT_GROUP">
-                              <i class="bi bi-lock-fill"></i>
-                              <input type="password" id="password" name="password" placeholder="請輸入密碼" />
-                          </div>
-                          <div class="INPUT_GROUP">
-                              <i class="bi bi-lock"></i>
-                              <input type="password" id="password" name="password" placeholder="請再確認一次密碼" />
-                          </div>
-                          <div class="INPUT_GROUP">
-                              <i class="bi bi-phone"></i>
-                              <input type="number" id="phone" name="phone" placeholder="請輸入手機號碼" />
-                          </div>
-                          <div class="INPUT_GROUP">
-                              <i class="bi bi-envelope"></i>
-                              <input type="email" id="account" name="account" class="VERIFYINPUT"
-                                  placeholder="請輸入電子信箱" />
-                              <button class="VERIFBTN BTN">
-                                  發送驗證信
-                              </button>
-                          </div>
-                          <div class="INPUT_GROUP">
-                              <i class="bi bi-key"></i>
-                              <input type="number" id="verifyNum" name="verifyNum" class="VERIFYINPUT"
-                                  placeholder="請輸入驗證碼" />
-                              <button class="VERIFBTN BTN">
-                                  驗證
-                              </button>
-                          </div>
-                      </div>
-
-                      <p>＊送出即同意「會員服務條款、隱私權保護聲明」</p>
-                      <div class="INPUT_GROUP">
-                          <input type="submit" id="send-btn" class=" SIGNUP_SUB BTN" value="送出" />
-                      </div>
-                  </form>
-              </div>
-              <!-- 忘記密碼 -->
-              <div id="popup_forgetpass" class="POPUP_BOX ">
-                  <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
-                  <form class="USER_FORM" method="post" action="SIGNUP.php">
-                      <div class="INPUT_GROUP">
-                          <i class="bi bi-envelope"></i>
-                          <input type="email" id="account" name="account" class="VERIFYINPUT" placeholder="請輸入電子信箱" />
-                          <button class="VERIFBTN BTN">
-                              發送驗證信
-                          </button>
-                      </div>
-                      <div class="INPUT_GROUP">
-                          <i class="bi bi-key"></i>
-                          <input type="number" id="verifyNum" name="verifyNum" class="VERIFYINPUT"
-                              placeholder="請輸入驗證碼" />
-                          <button class="VERIFBTN BTN">
-                              驗證
-                          </button>
-                      </div>
-                      <div class="BACKLOGIN_BOX">
-                          <button type="button" class="BACKLOGIN_BTN">返回登入</button>
-                      </div>
-                      <div class="FORGETPASS_DESC">
-                          <p>＊系統已寄出驗證信，請至信箱收取。</p>
-                          <p>＊若過久未收到驗證信件，請至垃圾信件匣或其他收件匣確認。</p>
-                      </div>
-                  </form>
-                  <div class="PASS_SEND_BOX">
-                      <p>＊送出後會直接跳轉到修改密碼頁</p>
-                      <div class="INPUT_GROUP">
-                          <input type="submit" id="send-btn" class="PASS_SUB BTN" value="送出" />
-                      </div>
-                  </div>
-              </div>
-              <!-- 修改密碼 -->
-              <div id="popup_changepass" class="POPUP_BOX">
-                  <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
-                  <form class="USER_FORM" method="post" action="SIGNUP.php">
-                      <div class="INPUT_GROUP">
-                          <i class="bi bi-lock-fill"></i>
-                          <input type="password" id="password" name="password" placeholder="請輸入密碼" />
-                      </div>
-                      <div class="INPUT_GROUP">
-                          <i class="bi bi-lock"></i>
-                          <input type="password" id="password" name="password" placeholder="請再確認一次密碼" />
-                      </div>
-                  </form>
-                  <div class="PASS_SEND_BOX">
-                      <p>＊送出後會直接跳轉到修改密碼頁</p>
-                      <div class="INPUT_GROUP">
-                          <input type="submit" id="send-btn" class="PASS_SUB BTN" value="修改密碼" />
-                      </div>
-                  </div>
-              </div>
-              <!-- 修改完成畫面 -->
-              <div id="popup_changepass_succ" class="POPUP_BOX">
-                  <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
-                  <div class="USER_FORM">
-                      <img class="CHANGEPASS_SUCC" src="./img/user_popup/CHANGEPASS_SUCC.png" alt="">
-                  </div>
-                  <div class="BACKTOLOGIN_BOX">
-                      <p>＊三秒後將跳轉到登入頁，如果沒跳轉請點選按鈕</p>
-                      <div class="INPUT_GROUP">
-                          <input type="submit" id="login-btn" class="BTN CHANGE_SUCC_BTN BACKLOGIN_BTN"
-                              value="登入會員" />
-                      </div>
-                  </div>
-              </div>
-
+        </div>
+        <!-- 修改密碼 -->
+        <div id="popup_changepass" class="POPUP_BOX">
+          <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+          <form class="USER_FORM" method="post" action="SIGNUP.php">
+            <div class="INPUT_GROUP">
+              <i class="bi bi-lock-fill"></i>
+              <input type="password" id="password" name="password" placeholder="請輸入密碼" />
+            </div>
+            <div class="INPUT_GROUP">
+              <i class="bi bi-lock"></i>
+              <input type="password" id="password" name="password" placeholder="請再確認一次密碼" />
+            </div>
+          </form>
+          <div class="PASS_SEND_BOX">
+            <p>＊送出後會直接跳轉到修改密碼頁</p>
+            <div class="INPUT_GROUP">
+              <input type="submit" id="send-btn" class="PASS_SUB BTN" value="修改密碼" />
+            </div>
           </div>
+        </div>
+        <!-- 修改完成畫面 -->
+        <div id="popup_changepass_succ" class="POPUP_BOX">
+          <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+          <div class="USER_FORM">
+            <img class="CHANGEPASS_SUCC" src="./img/user_popup/CHANGEPASS_SUCC.png" alt="">
+          </div>
+          <div class="BACKTOLOGIN_BOX">
+            <p>＊三秒後將跳轉到登入頁，如果沒跳轉請點選按鈕</p>
+            <div class="INPUT_GROUP">
+              <input type="submit" id="login-btn" class="BTN CHANGE_SUCC_BTN BACKLOGIN_BTN" value="登入會員" />
+            </div>
+          </div>
+        </div>
+
+      </div>
 
       </div>
     </div>
@@ -239,236 +235,242 @@
     <!-- ===============================header================================= -->
     <header>
 
-      <nav class="HEADER_NAV">
-  
-          <a href="homepage.html">
-              <div class="HEADERLOGO_BG_BOX HEADERLOGE_BG_TOP">
-                  <div class="HEADERLOGO_PAW">
-                      <img src="./img/HEADERLOGO_PAW.svg" alt="">
-                      <div class="HEADERLOGO_CLAWS">
-                          <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
-                      </div>
-                  </div>
-                  <div class="HEADER_LOGO_NAME">
-                      <img src="./img/HEADERLOGO_NAME.svg" alt="">
-                  </div>
-              </div>
-          </a>
-  
-  
-          <ul>
-              <li>
-                  <a href="about_us.html">
-                    <span>關於院所</span>
-                    <br>About Us
-                  </a>
-              </li>
-              <li>
-                  <a href="information.html">
-                    <span>資訊導覽</span>
-                    <br>Information
-                  </a>
-              </li>
-              <li>
-                  <a href="shopping.html">
-                    <span>線上購物</span>
-                    <br>Shopping
-                  </a>
-              </li>
-              <li>
-                  <a href="qa.html">
-                    <span>常見問題</span>
-                    <br>Q & A
-                  </a>
-              </li>
-              <li>
-                  <a href="member_center.html">
-                    <span>會員中心</span>
-                    <br>Member Centre
-                  </a>
-              </li>
-              <li>
-                  <a href="reserve.html" class="RESERVE">立即預約</a>
-              </li>
-              <li>
-                  <a href="" class="LOGIN"><i class="bi bi-person-fill" ></i>登入</a>
-              </li>
-              <li>
-                  <a href="shopping_cart.html"><i class="bi bi-cart-fill"></i></a>
-              </li>
-          </ul>
-          
-      </nav>
-  
-  
-  
-  
-      <nav class="M_HEADER_NAV">
-  
-        <a href="homepage.html">
-            <div class="M_HEADERLOGO_BG_BOX M_HEADERLOGE_BG_TOP">
-                <div class="M_HEADERLOGO_PAW">
-                    <img src="./img/HEADERLOGO_PAW.svg" alt="">
-                    <div class="M_HEADERLOGO_CLAWS">
-                        <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
-                    </div>
-                </div>
-                <div class="M_HEADER_LOGO_NAME">
-                    <img src="./img/HEADERLOGO_NAME.svg" alt="">
-                </div>
+    <nav class="HEADER_NAV">
+
+      <a href="homepage.html">
+        <div class="HEADERLOGO_BG_BOX HEADERLOGE_BG_TOP">
+          <div class="HEADERLOGO_PAW">
+            <img src="./img/HEADERLOGO_PAW.svg" alt="">
+            <div class="HEADERLOGO_CLAWS">
+              <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
             </div>
-        </a>
-  
-  
-        <ul>
-            <li>
-                <a class="M_HEADER_LI" href="about_us.html">
-                  <span>關於院所</span>
-                  <P class="EN">About Us</P>
-                </a>
-            </li>
-            <li>
-                <a class="M_HEADER_LI" href="information.html">
-                  <span>資訊導覽</span>
-                  <p class="EN">Information</p>
-                </a>
-            </li>
-            <li>
-                <a class="M_HEADER_LI" href="shopping.html">
-                  <span>線上購物</span>
-                  <p class="EN">Shopping</p>
-                </a>
-            </li>
-            <li>
-                <a class="M_HEADER_LI" href="qa.html">
-                  <span>常見問題</span>
-                  <p class="EN">Q & A</p>
-                </a>
-            </li>
-            <li>
-                <a class="M_HEADER_LI" href="member_center.html">
-                  <span>會員中心</span>
-                  <p class="EN">Member Centre</p>
-                </a>
-            </li>
-  
-            <li>
-              <div class="LOGIN_SHOPPING">
-                <a href="" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
-                <a href="shopping_cart.html"><i class="bi bi-cart-fill"></i></a>
-              </div>
-            </li>
-         
-            <li>
-              <a href="reserve.html" class="RESERVE">立即預約</a>
-            </li>
-        </ul>
-  
-  
-            
-            
-        <div id="TOGGLE" class="TOGGLE">
-          <span class="SPAN1"></span>
-          <span class="SPAN2"></span>
-          <span class="SPAN3"></span>
+          </div>
+          <div class="HEADER_LOGO_NAME">
+            <img src="./img/HEADERLOGO_NAME.svg" alt="">
+          </div>
         </div>
-      </nav>
-  
-    </header>
-    <!-- =================================MASTER_VISION====================================== -->
-    <section class="CAROUSEL">
-      <div class="MASTER_VISION"><img src="img/HEADER-TOP.png" alt="" /></div>
-      <div class="PAWPAW animate__animated animate__bounceInLeft">
-        <picture>
-          <source srcset="./img/about/M_about/about_banner_bg.svg" media="(max-width: 414px)">
-          <img src="img/about/about_baneer.svg" alt="">
-        </picture>
-      
+      </a>
+
+
+      <ul>
+        <li>
+          <a href="about_us.html">
+            <span>關於院所</span>
+            <br>About Us
+          </a>
+        </li>
+        <li>
+          <a href="information.html">
+            <span>資訊導覽</span>
+            <br>Information
+          </a>
+        </li>
+        <li>
+          <a href="shopping.html">
+            <span>線上購物</span>
+            <br>Shopping
+          </a>
+        </li>
+        <li>
+          <a href="qa.html">
+            <span>常見問題</span>
+            <br>Q & A
+          </a>
+        </li>
+        <li>
+          <a href="member_center.html">
+            <span>會員中心</span>
+            <br>Member Center
+          </a>
+        </li>
+        <li>
+          <a href="reserve.html" class="RESERVE">立即預約</a>
+        </li>
+        <li>
+          <a href="" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
+        </li>
+        <li>
+          <a href="shopping_cart.html"><i class="bi bi-cart-fill"></i></a>
+        </li>
+      </ul>
+
+    </nav>
+
+
+
+
+    <nav class="M_HEADER_NAV">
+
+      <a href="homepage.html">
+        <div class="M_HEADERLOGO_BG_BOX M_HEADERLOGE_BG_TOP">
+          <div class="M_HEADERLOGO_PAW">
+            <img src="./img/HEADERLOGO_PAW.svg" alt="">
+            <div class="M_HEADERLOGO_CLAWS">
+              <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
+            </div>
+          </div>
+          <div class="M_HEADER_LOGO_NAME">
+            <img src="./img/HEADERLOGO_NAME.svg" alt="">
+          </div>
+        </div>
+      </a>
+
+
+      <ul>
+        <li>
+          <a class="M_HEADER_LI" href="about_us.html">
+            <span>關於院所</span>
+            <P class="EN">About Us</P>
+          </a>
+        </li>
+        <li>
+          <a class="M_HEADER_LI" href="information.html">
+            <span>資訊導覽</span>
+            <p class="EN">Information</p>
+          </a>
+        </li>
+        <li>
+          <a class="M_HEADER_LI" href="shopping.html">
+            <span>線上購物</span>
+            <p class="EN">Shopping</p>
+          </a>
+        </li>
+        <li>
+          <a class="M_HEADER_LI" href="qa.html">
+            <span>常見問題</span>
+            <p class="EN">Q & A</p>
+          </a>
+        </li>
+        <li>
+          <a class="M_HEADER_LI" href="member_center.html">
+            <span>會員中心</span>
+            <p class="EN">Member Center</p>
+          </a>
+        </li>
+
+        <li>
+          <div class="LOGIN_SHOPPING">
+            <a href="" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
+            <a href="shopping_cart.html"><i class="bi bi-cart-fill"></i></a>
+          </div>
+        </li>
+
+        <li>
+          <a href="reserve.html" class="RESERVE">立即預約</a>
+        </li>
+      </ul>
+
+
+
+
+      <div id="TOGGLE" class="TOGGLE">
+        <span class="SPAN1"></span>
+        <span class="SPAN2"></span>
+        <span class="SPAN3"></span>
       </div>
-      <div class="DOT"></div>
-      <div class="DOT1"></div>
-      
-      
-    </section>
+    </nav>
 
-    <!-- ============================================================================= -->
+  </header>
+  <!-- =================================MASTER_VISION====================================== -->
+  <section class="CAROUSEL">
+    <div class="MASTER_VISION"><img src="img/HEADER-TOP.png" alt="" /></div>
+    <div class="PAWPAW animate__animated animate__bounceInLeft">
+      <picture>
+        <source srcset="./img/about/M_about/about_banner_bg.svg" media="(max-width: 414px)">
+        <img src="img/about/about_baneer.svg" alt="">
+      </picture>
 
-    <!-- header下方區塊的背景 -->
-    <section class="BACKGROUND">
+    </div>
+    <div class="DOT"></div>
+    <div class="DOT1"></div>
 
-      <img class="BG" src="./img/BG.jpg" alt="">
 
-      <div class="BG_CLOUDS">
-        <div class="BG_CLOUD CLOUD_1">
-            <img class="BG_CLOUD_IMG1" src="./img/CLOUD_BG.png" alt="">
-        </div>
-        <div class="BG_CLOUD CLOUD_2">
-            <img class="BG_CLOUD_IMG2" src="./img/CLOUD_BG.png" alt="">
-        </div>
+  </section>
+
+  <!-- ============================================================================= -->
+
+  <!-- header下方區塊的背景 -->
+  <section class="BACKGROUND">
+
+    <img class="BG" src="./img/BG.jpg" alt="">
+
+    <div class="BG_CLOUDS">
+      <div class="BG_CLOUD CLOUD_1">
+        <img class="BG_CLOUD_IMG1" src="./img/CLOUD_BG.png" alt="">
       </div>
+      <div class="BG_CLOUD CLOUD_2">
+        <img class="BG_CLOUD_IMG2" src="./img/CLOUD_BG.png" alt="">
+      </div>
+    </div>
 
     <!-- ===================================麵包屑====================================== -->
-    
-      <section class="BREAD WRAPPER">
-        <a href="homepage.html">首頁</a>
-        / 
-        <a>關於院所</a>
+
+    <section class="BREAD WRAPPER">
+      <a href="homepage.html">首頁</a>
+      /
+      <a>關於院所</a>
+    </section>
+
+
+
+
+    <!-- ============關於院所TITLE========== -->
+
+    <section class="ABOUTUS_TITLE WRAPPER">
+      <section class="ABOUTUS_TITLE_IMG">
+        <h1>關於院所</h1>
+        <p class="EN">About Us</p>
       </section>
 
-  
+    </section>
+    <div class="ABOUT_BG">
+      <picture>
+        <source srcset="./img/about/M_about/about_bg.jpg" media="(max-width: 414px)">
+        <img src="img/about/about_us_bg.jpg" alt="">
+      </picture>
 
+    </div>
+    <div class="FAKE_HIGH"></div>
 
-      <!-- ============關於院所TITLE========== -->
-      
-      <section class="ABOUTUS_TITLE WRAPPER">
-        <section class="ABOUTUS_TITLE_IMG">
-          <h1>關於院所</h1>
-          <p class="EN">About Us</p>
-        </section>
-        
+    <!-- ======== 醫院簡介 TTILE ======== -->
+
+    <section class="WRAPPER">
+      <section class="SMALL_TITLE">
+        <h2>醫院簡介<span class="EN">Clinic Profile</span></h2>
+        <div class="DOT2"></div>
       </section>
-      <div class="ABOUT_BG">
-        <picture>
-          <source srcset="./img/about/M_about/about_bg.jpg" media="(max-width: 414px)">
-          <img src="img/about/about_us_bg.jpg" alt="">
-        </picture>
-        
+
+    </section>
+
+    <!-- ======== 醫院簡介 內容 ======== -->
+
+    <section class="WRAPPER">
+      <div class="CLINIC_PROFILE">
+        <img src="img/about/about_logo.svg" alt="">
+        <p class="p1">波波動物醫院取自代表爪子、肉墊的英文單字「Paw」，代表我們對來診寵物的診治態度有如用可愛的掌心肉球輕輕托捧的悉心呵護。
+        <p class="p1">
+          我們秉持著「讓您的寵物健康快樂，讓您安心無憂」的理念，為寵物提供全方位的醫療及健康管理服務。為了讓主人與寵物能夠更便利地享受到我們的服務，我們推出了線上預約系統，方便快速地預約、查詢及管理寵物就診，節省等候時間，提高了客戶的滿意度。
+        </p>
+        <p class="p1">此外，我們擁有寵物溝通師，透過寵物溝通的方式，了解寵物的需求和狀況，讓主人能夠更深入地瞭解寵物，提高彼此之間的情感連結，並將這些訊息與醫師分享，提高醫療的準確性和有效性。</p>
+        <p class="p1">
+          我們的醫師均為全能醫師（中西合併），精通多種動物疾病的診斷與治療，並注重病因探究、預防醫學，提供最完整、最適切的醫療服務。我們的住宿服務，則提供舒適、安全、親切的住宿環境，讓寵物可以在我們的醫護人員照顧下度過住院期間，讓主人安心無憂。
+        </p>
+        <p class="p1">我們期許透過這些服務，讓主人與寵物能夠有更好的生活品質和健康狀態，並提高彼此之間的情感連結。我們將持續努力，不斷提升服務品質，成為寵物醫療與健康管理的最佳夥伴。</p>
+
+        <p class="p2">
+          波波動物醫院取自代表爪子、肉墊的英文單字「Paw」，代表我們對來診寵物的診治態度有如用可愛的掌心肉球輕輕托捧的悉心呵護。我們秉持著「讓您的寵物健康快樂，讓您安心無憂」的理念，為寵物提供全方位的醫療及健康管理服務。為了讓主人與寵物能夠更便利地享受到我們的服務，我們推出了線上預約系統，方便快速地預約、查詢及管理寵物就診節省等候時間，提高了客戶的滿意度。
+        </p>
       </div>
-      <div class="FAKE_HIGH"></div>
- 
-     <!-- ======== 醫院簡介 TTILE ======== -->
 
-      <section class="WRAPPER">
-        <section class="SMALL_TITLE">
-          <h2>醫院簡介<span class="EN">Clinic Profile</span></h2>
-          <div class="DOT2"></div>
-        </section>
-        
-      </section>
 
-      <!-- ======== 醫院簡介 內容 ======== -->
+      <div class="BTN_WRAAPER">
+        <a href="#"><button class="BTN">查看更多</button></a>
+      </div>
+    </section>
 
-      <section class="WRAPPER">
-        <div class="CLINIC_PROFILE">
-          <img src="img/about/about_logo.svg" alt="">
-          <p class="p1">波波動物醫院取自代表爪子、肉墊的英文單字「Paw」，代表我們對來診寵物的診治態度有如用可愛的掌心肉球輕輕托捧的悉心呵護。
-          <p class="p1">我們秉持著「讓您的寵物健康快樂，讓您安心無憂」的理念，為寵物提供全方位的醫療及健康管理服務。為了讓主人與寵物能夠更便利地享受到我們的服務，我們推出了線上預約系統，方便快速地預約、查詢及管理寵物就診，節省等候時間，提高了客戶的滿意度。</p>
-          <p class="p1">此外，我們擁有寵物溝通師，透過寵物溝通的方式，了解寵物的需求和狀況，讓主人能夠更深入地瞭解寵物，提高彼此之間的情感連結，並將這些訊息與醫師分享，提高醫療的準確性和有效性。</p>
-          <p class="p1">我們的醫師均為全能醫師（中西合併），精通多種動物疾病的診斷與治療，並注重病因探究、預防醫學，提供最完整、最適切的醫療服務。我們的住宿服務，則提供舒適、安全、親切的住宿環境，讓寵物可以在我們的醫護人員照顧下度過住院期間，讓主人安心無憂。</p>
-          <p class="p1">我們期許透過這些服務，讓主人與寵物能夠有更好的生活品質和健康狀態，並提高彼此之間的情感連結。我們將持續努力，不斷提升服務品質，成為寵物醫療與健康管理的最佳夥伴。</p>
-          
-          <p class="p2">波波動物醫院取自代表爪子、肉墊的英文單字「Paw」，代表我們對來診寵物的診治態度有如用可愛的掌心肉球輕輕托捧的悉心呵護。我們秉持著「讓您的寵物健康快樂，讓您安心無憂」的理念，為寵物提供全方位的醫療及健康管理服務。為了讓主人與寵物能夠更便利地享受到我們的服務，我們推出了線上預約系統，方便快速地預約、查詢及管理寵物就診節省等候時間，提高了客戶的滿意度。</p>
-        </div>
-        
 
-        <div class="BTN_WRAAPER">
-          <a href="#"><button class="BTN">查看更多</button></a>
-        </div>
-      </section>
 
-      
-    
-      
+
     <!-- ======= 醫師陣容 ======= -->
     <section class="TEAM_BG">
       <section class="BIG_TITLE WRAPPER">
@@ -498,7 +500,7 @@
                     <h3>年資　35年</h3>
                     <h3>經歷　北海道大學獸醫學院博士<br>東京大學獸醫學部碩士</h3>
                   </div>
-                 
+
                   <img src="img/about/fan.jpg" alt="">
                 </section>
               </div>
@@ -513,7 +515,7 @@
                   </div>
                   <img src="img/about/lai.jpg" alt="">
                 </section>
-                
+
               </div>
               <div class="swiper-slide">
                 <section class="swiper-item">
@@ -525,7 +527,7 @@
                   </div>
                   <img src="img/about/lin.jpg" alt="">
                 </section>
-                
+
               </div>
               <div class="swiper-slide">
                 <section class="swiper-item">
@@ -537,7 +539,7 @@
                   </div>
                   <img src="img/about/zhan.jpg" alt="">
                 </section>
-                
+
               </div>
               <div class="swiper-slide">
                 <section class="swiper-item">
@@ -549,7 +551,7 @@
                   </div>
                   <img src="img/about/25413587_l.jpg" alt="">
                 </section>
-                
+
               </div>
               <div class="swiper-slide">
                 <section class="swiper-item">
@@ -561,7 +563,7 @@
                   </div>
                   <img src="img/about/yu.jpg" alt="">
                 </section>
-                
+
               </div>
               <div class="swiper-slide">
                 <section class="swiper-item">
@@ -573,22 +575,22 @@
                   </div>
                   <img src="img/about/wei.jpg" alt="">
                 </section>
-                
+
               </div>
-  
-              
+
+
             </div>
-      
-          
-  
-          
-          
-  
+
+
+
+
+
+
           </div>
         </div>
       </div>
-      
-    
+
+
     </section>
 
 
@@ -602,12 +604,12 @@
       </section>
     </section>
 
-      <!-- ========MAIN======== -->
-            <!-- 設備介紹 -->
+    <!-- ========MAIN======== -->
+    <!-- 設備介紹 -->
 
     <section class="INTRODUCTION ">
       <p>波波團隊不只有仁心仁術的獸醫們，更引進了所有最新、最有效的診療設備，讓醫師們的醫術可以達到最好的發揮。</p>
-      
+
       <div class="INTRODUCTION_PHOTO">
         <div id="IMG_CONTAINER">
           <img src="./img/about/01.png" alt="圖片">
@@ -616,129 +618,132 @@
 
         <div class="GALLERY">
           <a href="./img/about/01.png" class="LIGHTBOX">
-              <img src="./img/about/01.png" alt="">
+            <img src="./img/about/01.png" alt="">
           </a>
           <a href="./img/about/02.jpg" class="LIGHTBOX">
-              <img src="./img/about/02.jpg" alt="">
+            <img src="./img/about/02.jpg" alt="">
           </a>
           <a href="./img/about/03.jpg" class="LIGHTBOX">
-              <img src="./img/about/03.jpg" alt="">
+            <img src="./img/about/03.jpg" alt="">
           </a>
 
           <a href="./img/about/05.png" class="LIGHTBOX">
-              <img src="./img/about/05.png" alt="">
+            <img src="./img/about/05.png" alt="">
           </a>
-      </div>
-      </div>
-    
-    </section>
-
-
-
-
-      <!-- ========MAIN======== -->
-      <!-- location -->
-
-
-      <section class="WRAPPER">
-        <div class="LOCATION_WRAPPER">
-          <div class="LOCATION_LEFT">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1278.0129118998307!2d121.52466683154347!3d25.04200095528725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a970a11a84ad%3A0x58e05f2528812097!2z5ZyL56uL6Ie65YyX5ZWG5qWt5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1683701812809!5m2!1szh-TW!2stw" width="700" height="525" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-            
-          <div class="LOCATION_RIGHT">
-            <div class="LOCATION_LOGO">
-              <img src="img/index/locationLOGO.svg" alt="">
-            </div>
-          
-            <div class="LOCATION_INFORMATION">
-              <i class="bi bi-telephone"></i>
-              <p>連絡電話：02-3322-2777</p>
-            </div>
-            <div class="LOCATION_INFORMATION">
-              <i class="bi bi-geo-alt"></i>
-              <p>地址：100台北市中正區濟南路一段321號</p>
-            </div>
-
-
-            <div class="LOCATION_TIMETABLE">
-              <picture>
-                <source srcset="./img/index/M_index/M_TIMETABLE.jpg" media="(max-width: 414px)">
-                <img src="img/index/TIMETABLE.jpg" alt="">
-              </picture>
-            </div>
-          </div>
-         
         </div>
-        
-      </section>
-      
+      </div>
+
     </section>
-    <!-- ===============================回到TOP================================================ -->
-  
-   
-    <button id="js-top" class="TOP_BTN"></button>
 
-    <!-- ==================================FOOTER================================================= -->
 
-    <footer>
-      <div class="FOOTER_LOGO">
-        <picture>
-          <source srcset="./img/index/M_index/M_FOOTERLOGO.svg" media="(max-width: 414px)">
-          <img src="img/H-LOGO.svg" alt="" />
-        </picture>
-      </div>
-      <div class="FOOTER_RIGHT">
-        <nav class="FOOTER_NAV">
-          <ul>
-            <li>
-              <a href="#"> <span>關於院所</span></a>
-            </li>
-            <li>
-              <a href="#"> <span>立即預約</span></a>
-            </li>
-            <li>
-              <a href="#"> <span>資訊導覽</span></a>
-            </li>
-            <li>
-              <a href="#"> <span>會員中心</span></a>
-            </li>
-            <li>
-              <a href="#"> <span>線上購物</span></a>
-            </li>
-            <li>
-              <a href="#"> <span>購物車</span></a>
-            </li>
-            <li>
-              <a href="#"> <span>常見問題</span></a>
-            </li>
-            <li>
-              <a href="#"> <span>追蹤我們</span></a>
-            </li>
-          </ul>
-        </nav>
+
+
+    <!-- ========MAIN======== -->
+    <!-- location -->
+
+
+    <section class="WRAPPER">
+      <div class="LOCATION_WRAPPER">
+        <div class="LOCATION_LEFT">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1278.0129118998307!2d121.52466683154347!3d25.04200095528725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a970a11a84ad%3A0x58e05f2528812097!2z5ZyL56uL6Ie65YyX5ZWG5qWt5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1683701812809!5m2!1szh-TW!2stw"
+            width="700" height="525" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="LOCATION_RIGHT">
+          <div class="LOCATION_LOGO">
+            <img src="img/index/locationLOGO.svg" alt="">
+          </div>
+
+          <div class="LOCATION_INFORMATION">
+            <i class="bi bi-telephone"></i>
+            <p>連絡電話：02-3322-2777</p>
+          </div>
+          <div class="LOCATION_INFORMATION">
+            <i class="bi bi-geo-alt"></i>
+            <p>地址：100台北市中正區濟南路一段321號</p>
+          </div>
+
+
+          <div class="LOCATION_TIMETABLE">
+            <picture>
+              <source srcset="./img/index/M_index/M_TIMETABLE.jpg" media="(max-width: 414px)">
+              <img src="img/index/TIMETABLE.jpg" alt="">
+            </picture>
+          </div>
+        </div>
+
       </div>
 
-      <div class="FOOTER_ICON">
-        <a href=""><img src="img/FOOTER_FB_ICON.svg" alt="" /></a>
-        <a href=""><img src="img/FOOTER_INS_ICON.svg" alt="" /></a>
-      </div>
+    </section>
 
-      <div class="FOOTER_TOP_BTN" id="js-f-top">
-        <i class="bi bi-caret-up-fill"></i>
-        <p>回到頂部</p>
-      </div>
-    </footer>
+  </section>
+  <!-- ===============================回到TOP================================================ -->
 
 
+  <button id="js-top" class="TOP_BTN"></button>
 
+  <!-- ==================================FOOTER================================================= -->
 
-    <div class="FOOTER_BOTTOM">
-      <p>
-        Copyright ©
-        本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。
-      </p>
+  <footer>
+    <div class="FOOTER_LOGO">
+      <picture>
+        <source srcset="./img/index/M_index/M_FOOTERLOGO.svg" media="(max-width: 414px)">
+        <img src="img/H-LOGO.svg" alt="" />
+      </picture>
     </div>
+    <div class="FOOTER_RIGHT">
+      <nav class="FOOTER_NAV">
+        <ul>
+          <li>
+            <a href="#"> <span>關於院所</span></a>
+          </li>
+          <li>
+            <a href="#"> <span>立即預約</span></a>
+          </li>
+          <li>
+            <a href="#"> <span>資訊導覽</span></a>
+          </li>
+          <li>
+            <a href="#"> <span>會員中心</span></a>
+          </li>
+          <li>
+            <a href="#"> <span>線上購物</span></a>
+          </li>
+          <li>
+            <a href="#"> <span>購物車</span></a>
+          </li>
+          <li>
+            <a href="#"> <span>常見問題</span></a>
+          </li>
+          <li>
+            <a href="#"> <span>追蹤我們</span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="FOOTER_ICON">
+      <a href=""><img src="img/FOOTER_FB_ICON.svg" alt="" /></a>
+      <a href=""><img src="img/FOOTER_INS_ICON.svg" alt="" /></a>
+    </div>
+
+    <div class="FOOTER_TOP_BTN" id="js-f-top">
+      <i class="bi bi-caret-up-fill"></i>
+      <p>回到頂部</p>
+    </div>
+  </footer>
+
+
+
+
+  <div class="FOOTER_BOTTOM">
+    <p>
+      Copyright ©
+      本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。
+    </p>
+  </div>
 
     <script src="./top_btn.js"></script>
     <script src="./nav.js"></script>
@@ -747,20 +752,20 @@
     <script src="./toggle.js"></script>
     <script src="./appointment.js"></script>
 
-    <script>
-      $('.LIGHTBOX').click(function(e){
-        e.preventDefault();
-        var img_url = $(this).attr("href");
-        // e.preventDefault()
-        setTimeout(() => {
-          $("#IMG_CONTAINER img").attr("src", img_url);
-        }, 50);
+  <script>
+    $('.LIGHTBOX').click(function (e) {
+      e.preventDefault();
+      var img_url = $(this).attr("href");
+      // e.preventDefault()
+      setTimeout(() => {
+        $("#IMG_CONTAINER img").attr("src", img_url);
+      }, 50);
     });
 
 
-    var mySwiper = new Swiper('.swiper',{
-      
-      
+    var mySwiper = new Swiper('.swiper', {
+
+
       loop: true,
       slidesPerView: 'auto',
 
@@ -773,14 +778,15 @@
       pagination: {
         el: '.swiper-pagination',
       }
-      
-    }) 
+
+    })
 
     //如果你初始化时没有定义Swiper实例，后面也可以通过Swiper的HTML元素来获取该实例
     // new Swiper('.swiper')
     // var mySwiper = document.querySelector('.swiper').swiper
     // mySwiper.slideNext();
-    </script>
+  </script>
 
-  </body>
+</body>
+
 </html>
