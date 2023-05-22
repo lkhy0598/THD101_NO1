@@ -83,7 +83,7 @@ exports.t = html;
 // =============================================　壓縮圖片
 const imagemin = require('gulp-imagemin');
 function img(){
-    return src('./img/*.*')
+    return src('./img/**/*.*')
     .pipe(imagemin([
          // 壓縮品質      quality越低 -> 壓縮越大 -> 品質越差 
         imagemin.mozjpeg({quality: 70, progressive: true})
