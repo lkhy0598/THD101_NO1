@@ -1,0 +1,95 @@
+// 訂單管理_表格
+
+.ORDER_RECORD_TABLE_ALL {
+    width: 100%;
+    margin: 30px auto 75px;
+    border: 1px solid black;
+    border-radius: 10px;
+    
+    
+
+    ul {
+        display: flex;
+        font-size: $p;
+        list-style: none;
+    }
+
+    .BACK_TABLE_TITLE {
+        background-color: $lightblue;
+        color: $blueblack;
+        height: 55px;
+        text-align: center;
+        line-height: 55px;
+        outline: 2px solid $lightblue;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .BACK_TABLE_CONTENT {
+        color: $blueblack;
+        text-align: center;
+        line-height: 80px;
+        min-height: 80px;
+
+        li {
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+        }
+
+        .bi-plus-circle {
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+.ORDER_RECORD_TABLE_ALL .ORDER_MANAGEMENT_TABLE_TITLE:nth-child(3){
+    border-radius: 0;
+}
+
+.ORDER_RECORD_TABLE_ALL ul:nth-child(1) li:nth-child(1),
+.ORDER_RECORD_TABLE_ALL ul:nth-child(2) li:nth-child(1),
+.ORDER_RECORD_TABLE_ALL ul:nth-child(1) li:nth-child(2),
+.ORDER_RECORD_TABLE_ALL ul:nth-child(2) li:nth-child(2),
+.ORDER_RECORD_TABLE_ALL ul:nth-child(1) li:nth-child(3),
+.ORDER_RECORD_TABLE_ALL ul:nth-child(2) li:nth-child(3) {
+    width: 20%;
+}
+
+.ORDER_RECORD_TABLE_ALL ul:nth-child(2) li:nth-child(3) select{
+    width: 90%;
+}
+
+.ORDER_RECORD_TABLE_ALL ul:nth-child(1) li:nth-child(4),
+.ORDER_RECORD_TABLE_ALL ul:nth-child(2) li:nth-child(4),
+.ORDER_RECORD_TABLE_ALL ul:nth-child(1) li:nth-child(5),
+.ORDER_RECORD_TABLE_ALL ul:nth-child(2) li:nth-child(5){
+    width: 15%;
+} 
+
+.ORDER_RECORD_TABLE_ALL ul:nth-child(1) li:nth-child(6),
+.ORDER_RECORD_TABLE_ALL ul:nth-child(2) li:nth-child(6){
+    width: 10%;
+    border-right: none;
+}
+
+.ORDER_RECORD_TABLE_ALL ul:nth-child(3) li:nth-child(1),
+.ORDER_RECORD_TABLE_ALL ul:nth-child(4) li:nth-child(1) {
+    width: 40%;
+}
+
+.ORDER_RECORD_TABLE_ALL ul:nth-child(3) li:nth-child(2),
+.ORDER_RECORD_TABLE_ALL ul:nth-child(4) li:nth-child(2) {
+    width: 25%;
+}
+
+.ORDER_RECORD_TABLE_ALL ul:nth-child(3) li:nth-child(3),
+.ORDER_RECORD_TABLE_ALL ul:nth-child(4) li:nth-child(3) {
+    width: 10%;
+}
+
+.ORDER_RECORD_TABLE_ALL ul:nth-child(3) li:nth-child(4),
+.ORDER_RECORD_TABLE_ALL ul:nth-child(4) li:nth-child(4) {
+    width: 25%;
+    border-right: none;
+}
