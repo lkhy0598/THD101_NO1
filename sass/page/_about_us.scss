@@ -229,8 +229,9 @@
     display: flex;
     margin-left: 400px;
     padding-right: 1250px;
-    justify-content: end;
-    flex-direction: column;
+    align-items: end;
+    // justify-content: end;
+    // flex-direction: column;
     border: 1px solid;
 
 }
@@ -270,10 +271,9 @@
     width: 300px; 
     height: 500px;
     overflow: visible;
+    margin-right: 50px;
     
-    .swiper-slide .swiper-slide-next {
-        margin-left: 50px;
-}
+
   }
   .swiper-slide.swiper-slide-active  > .swiper-item >img{
     width: 330px; 
@@ -294,16 +294,20 @@
     padding: 0 10px;
   }
 
-  .swiper-slide > .swiper-item{
+  .swiper-slide{
     
-    position: relative;
+    // position: relative;
     
   }
 
   .asd{
+    
+    width: 600px;
     position: absolute;
-    top: -300px;
-    left: 0;
+    top: 0px;
+    left: 380px;
+    display: flex;
+    flex-direction: column;
     opacity: 0;
   }
 
