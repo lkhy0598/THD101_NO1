@@ -446,7 +446,7 @@
                 box-sizing: border-box;
                 position: absolute;
                 top: 20px;
-                left: 40px;
+                left: 25px;
                 display: block;
             }
 
@@ -458,7 +458,7 @@
                 box-sizing: border-box;
                 position: absolute;
                 top: 20px;
-                right: 40px;
+                right: 25px;
                 display: block;
             }
 
@@ -466,9 +466,6 @@
                 display: none;
             }
 
-            .LOCATION_WRAPPER_M {
-                display: none;
-            }
             .RESERVE_TYPE_UL_M {
                 width: 100%;
                 display: flex;
@@ -480,12 +477,12 @@
                 }
 
                 .RESERVE_TYPE {
-                    width: 120px;
-                    height: 120px;
+                    width: 110px;
+                    height: 110px;
                     position: relative;
                     align-items: center;
                     justify-content: center;
-                    line-height: 120px;
+                    line-height: 110px;
                     font-size: 14px;
                 }
             }
@@ -534,7 +531,7 @@
             .RESERVE_SUCCESS {
                 margin-bottom: 0;
                 h2 {
-                    font-size: 23px;
+                    font-size: 22px;
                 }
             }
             .STEPS {
@@ -548,36 +545,62 @@
         }
 
         .WRAPPER {
-            .LOCATION_WRAPPER {
-                display: none;
+            .LOCATION_WRAPPER{
+                margin-top: 30px;
+                padding-bottom: 50px;
+                flex-direction: column;
             }
-            .LOCATION_WRAPPER_M {
-                display: block;
-                .LOCATION_RIGHT {
-                    padding-left: 0;
-                    .LOCATION_INFORMATION {
-                        width: 360px;
-                        p {
-                            font-size: 15px;
-                        }
-                    }
-                    .LOCATION_TIMETABLE {
-                        margin-top: -25px;
-                        width: 375px;
-                        img{
-                            scale: 0.55;
-                            margin-left: -163px;
-                        }
-                    }
+    
+            .LOCATION_LEFT{
+                width: auto;
+                order: 1;
+                margin-top: 30px;
+                iframe{
+                    width: 100%;
+                    height: 33vh;
                 }
-                .LOCATION_LEFT {
-                    margin-top: -20px;
-                    margin-bottom: 50px;
+                // border: 1px solid;
+            }
+    
+            .LOCATION_RIGHT{
+                width: auto;
+                padding-left: 0;
+                order: 0;
+            }
+    
+            .LOCATION_LOGO{
+                margin-bottom: 20px;
+                >img{
+                    width: 260px;
+                    height: 80px;
+                }
+            }
+    
+            .LOCATION_INFORMATION{
+                display: flex;
+                padding: 10px 0;
+                i{
+                    font-size: 18px;
+                }
+                p{
+                    line-height: 20px;
+                    font-size: 15px;
+                }
+            }
+    
+            .LOCATION_TIMETABLE{
+                margin-top: 0;
+                >picture{
+                    >img{
+                        margin-top: 20px;
+                        width: 90vw;
+                        border-radius: 10px;
+                    }
                 }
             }
                 
-
         }
+
         .FOOTER_BOTTOM {
             margin-bottom: 0px;
         }
