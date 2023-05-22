@@ -1,7 +1,5 @@
-
-
 // 手機板header nav
-.M_HEADER_NAV{
+.M_HEADER_NAV {
     display: none;
 }
 
@@ -180,13 +178,14 @@
             padding: 2px 30px;
             width: 100px;
             color: $white;
-            > .FOLLOW{
+
+            >.FOLLOW {
                 display: block;
                 margin: 20px 0;
                 font-size: $p;
                 font-weight: 500;
             }
-            
+
 
             >a {
                 text-decoration: none;
@@ -216,17 +215,12 @@
 }
 
 .BACK_NAV {
-
-
     transition: all 0.3s ease;
     background-image: url("../../img/HEADER-BG.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     position: relative;
-    // position: fixed;
-    // z-index: 99;
-    // top: 0;
 
     a {
 
@@ -234,7 +228,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            height: 22.5vh;
+            min-height: 22.5vh;
         }
 
         &:hover img[src="img/BACK-LOGO.svg"] {
@@ -242,9 +236,50 @@
             transition: all .1s;
         }
 
+        // .HEADERLOGO_BG_BOX {
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     background-color: $red;
+        //     display: flex;
+        //     flex-direction: column;
+        //     transition: all 0.3s ease;
+
+        //     &:hover .HEADERLOGO_PAW .HEADERLOGO_CLAWS {
+        //         top: 0;
+        //     }
+
+        //     .HEADERLOGO_PAW {
+        //         margin: 10px auto;
+        //         position: absolute;
+        //         top: 0px;
+        //         left: 45px;
+        //         z-index: 1;
+        //         transition: all 0.3s ease;
+        //     }
+
+        //     .HEADERLOGO_CLAWS {
+        //         position: absolute;
+        //         top: 45px;
+        //         left: 0px;
+        //         z-index: -1;
+        //         transition: all 0.3s ease;
+
+        //     }
+
+        //     .HEADER_LOGO_NAME {
+        //         position: absolute;
+        //         top: 220px;
+        //         left: 45px;
+        //         margin: 10px auto;
+        //         margin-top: 0;
+        //         transition: all 0.3s ease;
+
+        //     }
+
+        // }
+
     }
-
-
 
     ul {
         display: flex;
@@ -272,11 +307,6 @@
         }
     }
 }
-
-
-
-
-
 
 
 //=============================================================
@@ -313,6 +343,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
+                z-index: 200;
                 background-color: $red;
                 display: flex;
                 flex-direction: column;
@@ -384,13 +415,13 @@
         >ul {
             display: none;
             height: 100vh;
-            padding-top: 110px;
+            padding-top: 90px;
             background: linear-gradient(160deg, rgb(243, 145, 85, .9) 0%,  rgb(228, 170, 123, .9) 40%, rgba(126, 184, 196, 0.9) 80%, rgba(126, 184, 196, 0.8) 100%);
            
             >li {
-                
+
                 position: relative;
-                padding-bottom: 15px;
+                padding-bottom: 10px;
                 >.M_HEADER_LI {
                     text-decoration: none;
                     margin: 20px 0;
@@ -401,38 +432,38 @@
                     font-size: 15px;
                     height: 30px;
 
-                    
-    
+
+
                     >span {
                         font-size: $p;
                         font-weight: 700;
                         letter-spacing: .1em;
                         padding-right: 10px;
-                       
+
                     }
-                    
-                 
+
+
                 }
 
-                .LOGIN_SHOPPING{
+                .LOGIN_SHOPPING {
                     width: 200px;
                     display: flex;
                     justify-content: space-between;
                     margin: 0 auto;
-                    
+
                     // border: 1px solid;
                     .LOGIN {
                         font-size: $p;
                         color: $white;
                     }
 
-                    >a > i{
+                    >a>i {
                         font-size: 40px;
                         color: $white;
                     }
                 }
 
-                > .RESERVE{
+                >.RESERVE {
                     color: $white;
                     background: $linear-orange;
                     font-size: $p;
@@ -448,21 +479,25 @@
                 }
             }
 
-            > li:nth-child(1)::after , li:nth-child(2)::after ,li:nth-child(3)::after, li:nth-child(4)::after, li:nth-child(5)::after{
-                    content: "";
-                    position: absolute;
-                    display: block;
-                    color: $white;
-                    width: 70%;
-                    border: 1px solid;
-                    opacity: .3;
-                    bottom: 16px;
-                    left: 50%;
-                    transform: translate(-50%);
-                    
+            >li:nth-child(1)::after,
+            li:nth-child(2)::after,
+            li:nth-child(3)::after,
+            li:nth-child(4)::after,
+            li:nth-child(5)::after {
+                content: "";
+                position: absolute;
+                display: block;
+                color: $white;
+                width: 70%;
+                border: 1px solid;
+                opacity: .3;
+                bottom: 16px;
+                left: 50%;
+                transform: translate(-50%);
+
             }
 
-            > li:nth-child(6){
+            >li:nth-child(6) {
                 padding-top: 10px;
                 padding-bottom: 40px;
             }
@@ -473,17 +508,14 @@
 
         }
     }
+
     // 導覽列底色
     .M_HEADER_BG_ACTIVE {
         background: rgba(255, 255, 255, 0.5);
     }
 
-    .M_HEADER_TOGGLE_ACTIVE{
-        background: $red;
-    }
 
 
 
-    
 
 }

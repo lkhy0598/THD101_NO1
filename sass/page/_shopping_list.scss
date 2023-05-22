@@ -374,6 +374,10 @@
         left:50%;
         transform: translate(-50%, -50%);
         margin-bottom: 200px;
+
+        @include m {
+            margin-bottom: 150px;
+        }
     }
 
 }

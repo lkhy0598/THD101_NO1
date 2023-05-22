@@ -69,10 +69,29 @@
         padding-top: 130px;
         position: relative;
 
+        @include m {
+            padding-top: 110px;
+        }
+
         .SLOGAN02{
             display: block;
             margin: 0 auto;
+
+            @include m {
+                display: none;
+            }
         }
+
+        .SLOGAN02M{
+            display: none;
+            margin: 0 auto;
+
+            @include m {
+                display: block;
+                padding-left: 5px;
+            }
+        }
+
 
         .CAT{
             background-image: url(../../img/shopping_cart/cat01.png);
@@ -83,6 +102,10 @@
             position: absolute;
             right: 266px;
             bottom: -31px;
+
+            @include m {
+                right: 60px;
+            }
         }
 
         @keyframes ANI2 {
@@ -94,10 +117,6 @@
                 background-position: -900px;
             }
         }
-
-        @include m {
-            display: none;
-        }
     }
 
 // ======================================
@@ -106,7 +125,7 @@
         padding-top:14px ;
 
         @include m {
-            padding-top: 53px;
+            padding-top: 20px;
         }
     }
 
@@ -423,7 +442,7 @@
         background-color: #fff;
         border-top: 1px solid $gray;
         border-bottom: 1px solid $gray;
-        margin-bottom: 120px;
+        margin-bottom: 150px;
         
         @include m {
             height: 100px;

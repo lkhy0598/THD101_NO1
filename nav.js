@@ -31,8 +31,12 @@ $(document).ready(function () {
                 .addClass('M_HEADER_BG_ACTIVE ');
 
             // RWD TOGGLE變色
-            $('.TOGGLE::before')
-                .addClass('M_HEADER_TOGGLE_ACTIVE');
+            
+            $('.SPAN1').addClass('M_HEADER_TOGGLE_ACTIVE');
+            $('.SPAN2').addClass('M_HEADER_TOGGLE_ACTIVE');
+            $('.SPAN3').addClass('M_HEADER_TOGGLE_ACTIVE');
+            
+
 
             // LOGO形變
             $('.HEADERLOGO_BG_BOX')
@@ -47,6 +51,8 @@ $(document).ready(function () {
         }
     });
 });
+
+var element = $('.TOGGLE');
 
 // 畫面停止3秒自動移除RWD導覽列的底色
 // 計時器
@@ -66,13 +72,22 @@ function resetTimer() {
 
 // 开始计时器函数
 function startTimer() {
-  // 设置5秒后执行移除class的函数
+  // 设置2秒后执行移除class的函数
   timer = setTimeout(function() {
     // 执行需要的操作，例如移除class
     $('.M_HEADER_NAV').removeClass('M_HEADER_BG_ACTIVE');
     $('.M_HEADER_NAV').removeClass('HEADER_NAV_SHADOW');
-    $('.TOGGLE::before').removeClass('M_HEADER_TOGGLE_ACTIVE');
+    // $('.TOGGLE > span').css("background", "white");
   }, 2000);
+
+  timer = setTimeout(function() {
+    // 执行需要的操作，例如移除class
+    $('.SPAN1').removeClass('M_HEADER_TOGGLE_ACTIVE')
+    $('.SPAN2').removeClass('M_HEADER_TOGGLE_ACTIVE')
+    $('.SPAN3').removeClass('M_HEADER_TOGGLE_ACTIVE')
+    
+ 
+  }, 700);
 }
 
 // ========= RWD NAV的LOGO 變化==========
@@ -112,36 +127,36 @@ $(document).ready(function(e) {
 
 
 //手機板門診時間彈窗
-$(document).ready(function() {
- var btn_el = document.getElementsByClassName("M_FUNTION_A2")[0];
-        btn_el.addEventListener("click", function(e){
-            // console.log("wdd");
-            e.preventDefault();
-            // var test = document.getElementsByClassName("bookwrapper")[0];
-            // test.classList.add("-on");
-            // test.classList.remove("-off");
-            $(".M_TIME_TABLE").fadeIn(400);
+// $(document).ready(function() {
+//  var btn_el = document.getElementsByClassName("M_FUNTION_A2")[0];
+//         btn_el.addEventListener("click", function(e){
+//             // console.log("wdd");
+//             e.preventDefault();
+//             // var test = document.getElementsByClassName("bookwrapper")[0];
+//             // test.classList.add("-on");
+//             // test.classList.remove("-off");
+//             $(".M_TIME_TABLE").fadeIn(400);
             
-        });
-    var i = document.getElementsByClassName("CLOSE_TABLE")[0];
-        i.addEventListener("click", function(e){
-            // console.log("wdd");
-            // $(i).toggleClass('XXX');
-            e.preventDefault();
-            $(".M_TIME_TABLE").fadeOut(300);
+//         });
+//     var i = document.getElementsByClassName("CLOSE_TABLE")[0];
+//         i.addEventListener("click", function(e){
+//             // console.log("wdd");
+//             // $(i).toggleClass('XXX');
+//             e.preventDefault();
+//             $(".M_TIME_TABLE").fadeOut(300);
     
 
-        });
+//         });
 
-    var c = document.getElementsByClassName("M_TIME_TABLE")[0];
-        c.addEventListener("click", function(e){
-            // console.log("wdd");
-            // $(i).toggleClass('XXX');
-            e.preventDefault();
-            $(".M_TIME_TABLE").fadeOut(300);
+//     var c = document.getElementsByClassName("M_TIME_TABLE")[0];
+//         c.addEventListener("click", function(e){
+//             // console.log("wdd");
+//             // $(i).toggleClass('XXX');
+//             e.preventDefault();
+//             $(".M_TIME_TABLE").fadeOut(300);
     
 
-        });
+//         });
 
-});
+// });
 

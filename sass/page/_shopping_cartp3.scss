@@ -71,6 +71,10 @@
     width: 100%;
     padding-top: 130px;
 
+    @include m {
+        padding-top: 110px;
+    }
+
     .DINO{
         display: block;
         margin: 0 auto;
@@ -101,6 +105,10 @@
     .BREAD{
         // padding-top:200px ;
         margin-bottom: 50px;
+
+        @include m {
+            margin-top: 10px;
+        }
     }
 
     .SHOPPINGCART_STEP{

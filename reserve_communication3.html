@@ -5,17 +5,32 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="img/shortcut_logo.png">
   <link rel="stylesheet" href="css/style.css" />
-  <title>線上預約 - 波波動物醫院</title>
+  <title>確認預約資料 RESERVE</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js"></script>
 </head>
 
-<body class="RESERVE_COMPLETE">
+<body class="RESERVE_COMMUNICATION3">
   <!-- =====appointment門診時間及預約======== -->
 
   <div class="APPOINTMENT">
-    <p>門診時間&預約</p>
+    <div class="APPOINTMENT_TAG">
+      <p>門診時間&預約</p>
+    </div>
+    <div class="APPOINTMENT_BOX">
+      <div class="APPOINTMENT_CONTENT">
+        <img src="./img/appointment/TIMETABLE_PC.png" alt="">
+        <div class="APPOINTMENT_RESERVE_PHONE">
+          <a href="reserve.html" class="RESERVE">立即預約</a>
+          <a class="APPOINTMENT_PHONE" href="tel:+886900000000">
+            <i class="bi bi-telephone"></i>
+            預約專線 : 02-3322-2777
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- ===============================header================================= -->
@@ -66,7 +81,7 @@
         <li>
           <a href="member_center.html">
             <span>會員中心</span>
-            <br>Member Centre
+            <br>Member Center
           </a>
         </li>
         <li>
@@ -130,7 +145,7 @@
         <li>
           <a class="M_HEADER_LI" href="member_center.html">
             <span>會員中心</span>
-            <p class="EN">Member Centre</p>
+            <p class="EN">Member Center</p>
           </a>
         </li>
 
@@ -157,7 +172,14 @@
   <!-- =================================MASTER_VISION====================================== -->
   <section class="CAROUSEL">
     <div class="MASTER_VISION"><img src="img/HEADER-TOP.png" alt="" /></div>
+    <div class="PAWPAW animate__animated animate__bounceInLeft">
+      <picture>
+        <source srcset="./img/M_pawpaw.svg" media="(max-width: 414px)">
+        <img src="img/pawpaw.svg" alt="">
+      </picture>
+    </div>
     <div class="DOT"></div>
+    <div class="DOT1" style="display: none;"></div>
   </section>
 
   <!-- ============================================================================= -->
@@ -252,50 +274,34 @@
     <!-- ========表單區塊======== -->
 
     <section class="RESERVE_FORM">
-      <ul>
-        <li>
-          <label for="reserve_type" class="SELECT">預約類型<br>
-            <select name="reserve_type" id="reserve_type">
-              <option value="" style="display: none"></option>
-              <option value="">一般掛號</option>
-              <option value="">寵物溝通</option>
-            </select>
-          </label>
-        </li>
-        <li>
-          <label for="doctor_choices" class="SELECT">指定醫師<br>
-            <select name="doctor_choices" id="doctor_choices">
-              <option value="">不指定</option>
-              <option value="">林佳緯</option>
-              <option value="">詹宗豪</option>
-              <option value="">林育楣</option>
-              <option value="">汪玉婷</option>
-              <option value="">范植鑫</option>
-              <option value="">賴偉峰</option>
-            </select>
-          </label>
-        </li>
-        <li>
-          <label for="reserve_date" class="INPUT">預約日期<br>
-            <input type="date" name="reserve_date" id="reserve_date">
-          </label>
-        </li>
+      <h1>確認預約資料</h1>
+      <div class="COMFIRM_TABLE" id="COMFIRM_TABLE">
+        <ul>
+          <li>預約類型： 寵物溝通</li>
+          <li>指定醫師：羅婉瑜 溝通師</li>
+          <li>預約日期：2023 年 4 月 30 日</li>
+          <li>預約時段：上午</li>
+          <li>主人姓名：范植鑫</li>
+          <li>手機號碼：0912345678</li>
+          <li>寵物姓名：范植鑫 </li>
+          <li>寵物類型：院長</li>
+          <li>寵物年齡：100 歲</li>
+          <li>是否打過預防針：否</li>
+          <li>病徵類型：精神不振, 跛行, 發燒, 皮毛脫落</li>
+          <li>其他病徵：不好說......有點.....然後也.......總之........哀..........</li>
+        </ul>
+      </div>
 
-        <li>
-          <label for="reserve_time" class="SELECT">預約時段<br>
-            <select name="reserve_time" id="reserve_time">
-              <option value="" style="display: none">請選擇時段</option>
-              <option value="1">09:00~12:00</option>
-              <option value="2">14:00~18:00</option>
-              <option value="3">19:00~21:00</option>
-            </select>
-          </label>
-        </li>
-      </ul>
+      <h1>預約注意事項告知</h1>
+      <div class="FYI">
+        <p>■　預約成功後，系統會自動發送確認信或簡訊至您留下的聯絡方式，請注意查收。</p><br>
+        <p>■　預約時間無法轉讓他人，需自行取消預約，並重新選擇預約時間。</p><br>
+        <p>■　如看診號碼已過號，請至櫃台告知，並等候院所人員協助重新等候叫號。</p><br>
+      </div>
 
       <div class="STEPS">
-        <input type="button" value="上一步" onclick="location.href='reserve_normal2.html'">
-        <input type="button" value="下一步" onclick="location.href='reserve_normal2.html'">
+        <input type="button" value="上一步" onclick="location.href='reserve_communication2.html'">
+        <input type="button" value="確認預約" onclick="location.href='reserve_communication_complete.html'">
       </div>
 
     </section>
@@ -368,6 +374,7 @@
   <script src="./user_popup.js"></script>
   <script src="./toggle.js"></script>
   <script src="./top_btn.js"></script>
+  <script src="./appointment.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var calendarEl = document.getElementById('calendar');

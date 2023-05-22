@@ -144,19 +144,32 @@
 .ADD_MESSAGE {
     width: 80%;
     margin: 85px auto 50px;
+    text-align: center;
+
+    .INPUT{
+        display: block;
+        text-align: left;
+    }
 
     input {
         width: 100%;
         margin-bottom: 25px;
+        text-align: left;
     }
 
     p {
         color: $blueblack;
         margin: 20px 0 10px;
+        text-align: left;
+    }
+
+    div{
+        text-align: left;
     }
 
     .BTN_BACK {
-        margin-top: 40px;
+        display: inline-block;
+        margin: 40px 20px;
     }
 
 }

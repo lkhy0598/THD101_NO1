@@ -16,7 +16,7 @@ $(document).ready(function() {
 
   $(window).scroll(function(){
     let scrollTop = $(this).scrollTop();
-    console.log(scrollTop);
+
     let bg = $('.BACKGROUND').height();
 
     if(scrollTop > 200){

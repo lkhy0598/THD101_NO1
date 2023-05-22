@@ -4,8 +4,8 @@
     width: 45px;
     cursor: pointer;
 }
-.TOGGLE:after, .TOGGLE:before{
-    content: "";
+.TOGGLE > .SPAN1, .TOGGLE > .SPAN3{
+
     background: $white;
     width: 33px;
     height: 5px;
@@ -15,13 +15,13 @@
     bottom: 0;
     right: 0;
     left: 0;
-    transition: 1.3s cubic-bezier(0.53, 0, 0.15, 1.3);
+    transition: 1s cubic-bezier(0.53, 0, 0.15, 1.3);
     border-radius: 5px;
     
 }
 
-.TOGGLE > span{
-    content: "";
+.TOGGLE > .SPAN2{
+
     background: $white;
     width: 33px;
     height: 5px;
@@ -41,30 +41,25 @@
 
 
 
-.TOGGLE:before {
+.TOGGLE > .SPAN1 {
     top: -50%;
+    transition: all 1s;
+
 
 }
 
-.TOGGLE > span{
+.TOGGLE > .SPAN2 {
     top: 10%;
-    transition: all 1.5s;
+    transition: all 1s;
 }
 
-.TOGGLE:after {
+.TOGGLE > .SPAN3 {
     top: 70%;
+    transition: all 1s;
+
 }
 
-.TOGGLE.close:before {
-    transform: rotate(-225deg);
-    top: 0;
-    background: $red;
-}
-.TOGGLE.close:after {
-    transform: rotate(225deg);
-    top: 0;
-    background: $red;
-}
+
 
 
 // 手機版414px
@@ -85,17 +80,24 @@
         z-index: 100;
  
     }
-    .M_HEADER_NAV .TOGGLE > span.close{
+    .TOGGLE > .SPAN2.close{
         transition: opacity 1s ;
         opacity: 0;
     }
 
-    .M_HEADER_NAV .TOGGLE.close:before {
+    .TOGGLE > .SPAN1.close {
         transform: rotate(-225deg);
         top: 0;
+        background: $red;
     }
-    .M_HEADER_NAV .TOGGLE.close:after {
+    .TOGGLE > .SPAN3.close {
         transform: rotate(225deg);
         top: 0;
+        background: $red;
     }
+}
+
+
+.SPAN1.M_HEADER_TOGGLE_ACTIVE ,.SPAN2.M_HEADER_TOGGLE_ACTIVE ,.SPAN3.M_HEADER_TOGGLE_ACTIVE {
+    background: $red;
 }

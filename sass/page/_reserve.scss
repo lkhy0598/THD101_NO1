@@ -1,8 +1,16 @@
 .RESERVE {
 
 
-    .CAROUSEL {
+    .CAROUSEL{
         position: relative;
+        .PAWPAW{
+            position: absolute;
+            top: 50%;
+            left: 6vw;
+            > picture > img{
+                width: 35vw;
+            }
+        } 
     }
 
     .DOT {
@@ -255,7 +263,7 @@
     }
 
     .RESERVE_FORM ul li {
-        margin-bottom: 8px;
+        margin-bottom: 30px;
     }
 
     .RESERVE_FORM ul li label {
@@ -311,6 +319,63 @@
             display: none;
         }
 
+        .CAROUSEL{
+            .PAWPAW{
+                position: absolute;
+                top: 5%;
+                left: 25vw;
+                > picture > img{
+                    width: 55vw;
+                }
+            } 
+
+            .DOT{
+                position: absolute;
+                width: 120px;
+                height: 120px;
+                left: -62px;
+                top: 25vh;
+                z-index: 10;
+                
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: radial-gradient(circle, $white 0%, $white 20%, transparent 25%, transparent 100%);
+                    background-size: 10px 10px;
+                    background-position: 0 0;
+                }
+            }
+            
+            .DOT1{
+                display: block;
+                position: absolute;
+                width: 170px;
+                height: 170px;
+                left: auto;
+                right: 10px;
+                bottom: -10px;
+                z-index: 10;
+    
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: radial-gradient(circle, $white 0%, $white 20%, transparent 0%, transparent 100%);
+                    background-size: 14px 14px;
+                    background-position: 0 0;
+                }
+            }
+        }
+
         .RESERVE_INFO {
             width: 93%;
             padding-bottom: 70px;
@@ -347,6 +412,7 @@
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
+                margin: 20px auto;
 
                 .TITLE_NO {
                     font-size: 14px;
@@ -367,7 +433,7 @@
                 width: 100%;
                 display: flex;
                 flex-grow: 1;
-                margin-top: 30px;
+                margin-top: 20px;
 
                 .RESERVE_ARC {
                     p {
@@ -411,7 +477,7 @@
         }
 
         .RESERVE_FORM ul li {
-            padding-left: 50px;
+            padding-left: 32px;
         }
 
         .FOOTER_BOTTOM {

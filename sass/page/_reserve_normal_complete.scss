@@ -1,8 +1,18 @@
-.RESERVE_COMPLETE {
+.RESERVE_NORMAL_COMPLETE {
 
 
     .CAROUSEL {
         position: relative;
+
+        .PAWPAW {
+            position: absolute;
+            top: 50%;
+            left: 6vw;
+
+            >picture>img {
+                width: 35vw;
+            }
+        }
     }
 
     .DOT {
@@ -181,6 +191,18 @@
         z-index: 10;
     }
 
+    #ARCTHREE>.ARC_TITLE {
+        background-color: #428AA9;
+        color: #FFF;
+        z-index: 10;
+    }
+
+    #ARCFOUR>.ARC_TITLE {
+        background-color: #428AA9;
+        color: #FFF;
+        z-index: 10;
+    }
+
     #ARCONE::after {
         background-color: #428AA9;
     }
@@ -189,11 +211,35 @@
         background-color: #428AA9;
     }
 
+    #ARCTWO::after {
+        background-color: #428AA9;
+    }
+
+    #ARCTHREE::before {
+        background-color: #428AA9;
+    }
+
+    #ARCTHREE::after {
+        background-color: #428AA9;
+    }
+
+    #ARCFOUR::before {
+        background-color: #428AA9;
+    }
+
     #ARCONE>p {
         font-weight: bold;
     }
 
     #ARCTWO>p {
+        font-weight: bold;
+    }
+
+    #ARCTHREE>p {
+        font-weight: bold;
+    }
+
+    #ARCFOUR>p {
         font-weight: bold;
     }
 
@@ -209,45 +255,42 @@
         align-items: center;
         justify-content: center;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         z-index: 10;
         // border: 1px solid;
     }
 
-    .RESERVE_FORM ul {
+    .RESERVE_FORM h1 {
+        color: #CB5656;
+    }
+
+    .RESERVE_SUCCESS {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
-        width: 1000px;
+        width: 85%;
         margin-bottom: 90px;
         // border: 1px solid;
         padding-left: 20px;
     }
 
-    .RESERVE_FORM ul li {
-        width: 350px;
-        height: 80px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        // border: 1px solid;
+    .RESERVE_SUCCESS {
+        span {
+            margin-left: -20px;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            margin-left: -20px;
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            margin-left: -20px;
+            margin-bottom: 30px;
+        }
     }
-
-    .RESERVE_FORM ul li {
-        margin-bottom: 8px;
-    }
-
-    .RESERVE_FORM ul li label {
-        font-size: 20px;
-    }
-
-
-    .RESERVE_FORM ul li:nth-child(3) {
-        padding-top: 9px;
-    }
-
-
 
     .RESERVE_FORM .STEPS {
         display: flex;
@@ -268,11 +311,54 @@
         cursor: pointer;
     }
 
-    .STEPS input:first-child {
-        background-color: transparent;
-        border: none;
-        color: #000;
-        text-decoration-line: underline;
+    .LOCATION_WRAPPER {
+        margin-top: 150px;
+        padding-bottom: 200px;
+        display: flex;
+
+    }
+
+    .LOCATION_LEFT {
+        width: 50%;
+        // border: 1px solid;
+    }
+
+    .LOCATION_RIGHT {
+        width: 50%;
+        padding-left: 30px;
+    }
+
+    .LOCATION_LOGO {
+        margin-bottom: 20px;
+    }
+
+    .LOCATION_INFORMATION {
+        display: flex;
+        padding: 10px 0;
+
+        i {
+            font-size: 35px;
+            color: $blueblack;
+            padding-right: 15px;
+        }
+
+        p {
+            line-height: 35px;
+            color: $blueblack;
+        }
+    }
+
+
+    .LOCATION_TIMETABLE {
+        margin-top: 20px;
+
+        img {
+            border-radius: 10px;
+        }
+    }
+
+    .LOCATION_WRAPPER_M {
+        display: none;
     }
 }
 
@@ -285,9 +371,67 @@
 }
 
 @include m {
-    .RESERVE_COMPLETE {
+    .RESERVE_NORMAL_COMPLETE {
         .APPOINTMENT {
             display: none;
+        }
+
+        .CAROUSEL {
+            .PAWPAW {
+                position: absolute;
+                top: 5%;
+                left: 25vw;
+
+                >picture>img {
+                    width: 55vw;
+                }
+            }
+
+            .DOT {
+                position: absolute;
+                width: 120px;
+                height: 120px;
+                left: -62px;
+                top: 25vh;
+                z-index: 10;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: radial-gradient(circle, $white 0%, $white 20%, transparent 25%, transparent 100%);
+                    background-size: 10px 10px;
+                    background-position: 0 0;
+                }
+            }
+
+            .DOT1 {
+                display: block;
+                position: absolute;
+                width: 170px;
+                height: 170px;
+                left: auto;
+                right: 10px;
+                bottom: -10px;
+                z-index: 10;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: radial-gradient(circle, $white 0%, $white 20%, transparent 0%, transparent 100%);
+                    background-size: 14px 14px;
+                    background-position: 0 0;
+                }
+            }
         }
 
         .RESERVE_INFO {
@@ -322,10 +466,14 @@
                 display: none;
             }
 
+            .LOCATION_WRAPPER_M {
+                display: none;
+            }
             .RESERVE_TYPE_UL_M {
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
+                margin: 20px auto;
 
                 .TITLE_NO {
                     font-size: 14px;
@@ -346,7 +494,7 @@
                 width: 100%;
                 display: flex;
                 flex-grow: 1;
-                margin-top: 30px;
+                margin-top: 20px;
 
                 .RESERVE_ARC {
                     p {
@@ -382,17 +530,54 @@
             }
         }
 
-        .CALENDAR_AREA {
-            .CALENDAR_INFO {
-                padding-top: 20px;
-                padding-left: 50px;
+        .RESERVE_FORM {
+            .RESERVE_SUCCESS {
+                margin-bottom: 0;
+                h2 {
+                    font-size: 23px;
+                }
+            }
+            .STEPS {
+                flex-direction: column;
+                margin-bottom: 30px;
+                input {
+                    width: 100%;
+                    margin: 10px auto;
+                }
             }
         }
 
-        .RESERVE_FORM ul li {
-            padding-left: 50px;
-        }
+        .WRAPPER {
+            .LOCATION_WRAPPER {
+                display: none;
+            }
+            .LOCATION_WRAPPER_M {
+                display: block;
+                .LOCATION_RIGHT {
+                    padding-left: 0;
+                    .LOCATION_INFORMATION {
+                        width: 360px;
+                        p {
+                            font-size: 15px;
+                        }
+                    }
+                    .LOCATION_TIMETABLE {
+                        margin-top: -25px;
+                        width: 375px;
+                        img{
+                            scale: 0.55;
+                            margin-left: -163px;
+                        }
+                    }
+                }
+                .LOCATION_LEFT {
+                    margin-top: -20px;
+                    margin-bottom: 50px;
+                }
+            }
+                
 
+        }
         .FOOTER_BOTTOM {
             margin-bottom: 0px;
         }

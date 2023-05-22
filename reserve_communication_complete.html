@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="img/shortcut_logo.png">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>預約成功 RESERVE</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js"></script>
+</head>
+
+<body class="RESERVE_COMMUNICATION_COMPLETE">
+  <!-- =====appointment門診時間及預約======== -->
+
+  <div class="APPOINTMENT">
+    <div class="APPOINTMENT_TAG">
+      <p>門診時間&預約</p>
+    </div>
+    <div class="APPOINTMENT_BOX">
+      <div class="APPOINTMENT_CONTENT">
+        <img src="./img/appointment/TIMETABLE_PC.png" alt="">
+        <div class="APPOINTMENT_RESERVE_PHONE">
+          <a href="reserve.html" class="RESERVE">立即預約</a>
+          <a class="APPOINTMENT_PHONE" href="tel:+886900000000">
+            <i class="bi bi-telephone"></i>
+            預約專線 : 02-3322-2777
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===============================header================================= -->
+  <header>
+
+    <nav class="HEADER_NAV">
+
+      <a href="homepage.html">
+        <div class="HEADERLOGO_BG_BOX HEADERLOGE_BG_TOP">
+          <div class="HEADERLOGO_PAW">
+            <img src="./img/HEADERLOGO_PAW.svg" alt="">
+            <div class="HEADERLOGO_CLAWS">
+              <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
+            </div>
+          </div>
+          <div class="HEADER_LOGO_NAME">
+            <img src="./img/HEADERLOGO_NAME.svg" alt="">
+          </div>
+        </div>
+      </a>
+
+
+      <ul>
+        <li>
+          <a href="about_us.html">
+            <span>關於院所</span>
+            <br>About Us
+          </a>
+        </li>
+        <li>
+          <a href="information.html">
+            <span>資訊導覽</span>
+            <br>Information
+          </a>
+        </li>
+        <li>
+          <a href="shopping.html">
+            <span>線上購物</span>
+            <br>Shopping
+          </a>
+        </li>
+        <li>
+          <a href="qa.html">
+            <span>常見問題</span>
+            <br>Q & A
+          </a>
+        </li>
+        <li>
+          <a href="member_center.html">
+            <span>會員中心</span>
+            <br>Member Center
+          </a>
+        </li>
+        <li>
+          <a href="reserve.html" class="RESERVE">立即預約</a>
+        </li>
+        <li>
+          <a href="" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
+        </li>
+        <li>
+          <a href="shopping_cart.html"><i class="bi bi-cart-fill"></i></a>
+        </li>
+      </ul>
+
+    </nav>
+
+
+
+
+    <nav class="M_HEADER_NAV">
+
+      <a href="homepage.html">
+        <div class="M_HEADERLOGO_BG_BOX M_HEADERLOGE_BG_TOP">
+          <div class="M_HEADERLOGO_PAW">
+            <img src="./img/HEADERLOGO_PAW.svg" alt="">
+            <div class="M_HEADERLOGO_CLAWS">
+              <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
+            </div>
+          </div>
+          <div class="M_HEADER_LOGO_NAME">
+            <img src="./img/HEADERLOGO_NAME.svg" alt="">
+          </div>
+        </div>
+      </a>
+
+
+      <ul>
+        <li>
+          <a class="M_HEADER_LI" href="about_us.html">
+            <span>關於院所</span>
+            <P class="EN">About Us</P>
+          </a>
+        </li>
+        <li>
+          <a class="M_HEADER_LI" href="information.html">
+            <span>資訊導覽</span>
+            <p class="EN">Information</p>
+          </a>
+        </li>
+        <li>
+          <a class="M_HEADER_LI" href="shopping.html">
+            <span>線上購物</span>
+            <p class="EN">Shopping</p>
+          </a>
+        </li>
+        <li>
+          <a class="M_HEADER_LI" href="qa.html">
+            <span>常見問題</span>
+            <p class="EN">Q & A</p>
+          </a>
+        </li>
+        <li>
+          <a class="M_HEADER_LI" href="member_center.html">
+            <span>會員中心</span>
+            <p class="EN">Member Center</p>
+          </a>
+        </li>
+
+        <li>
+          <div class="LOGIN_SHOPPING">
+            <a href="" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
+            <a href="shopping_cart.html"><i class="bi bi-cart-fill"></i></a>
+          </div>
+        </li>
+
+        <li>
+          <a href="reserve.html" class="RESERVE">立即預約</a>
+        </li>
+      </ul>
+
+
+
+
+      <div id="TOGGLE" class="TOGGLE"><span></span></div>
+    </nav>
+
+  </header>
+
+  <!-- =================================MASTER_VISION====================================== -->
+  <section class="CAROUSEL">
+    <div class="MASTER_VISION"><img src="img/HEADER-TOP.png" alt="" /></div>
+    <div class="PAWPAW animate__animated animate__bounceInLeft">
+      <picture>
+        <source srcset="./img/M_pawpaw.svg" media="(max-width: 414px)">
+        <img src="img/pawpaw.svg" alt="">
+      </picture>
+    </div>
+    <div class="DOT"></div>
+  </section>
+
+  <!-- ============================================================================= -->
+
+  <!-- header下方區塊的背景 -->
+  <section class="BACKGROUND">
+    <img class="BG" src="./img/BG.jpg" alt="">
+    <!-- 背景雲裝飾 -->
+    <div class="BG_CLOUDS">
+      <div class="BG_CLOUD CLOUD_1">
+        <img class="BG_CLOUD_IMG1" src="./img/CLOUD_BG.png" alt="">
+      </div>
+      <div class="BG_CLOUD CLOUD_2">
+        <img class="BG_CLOUD_IMG2" src="./img/CLOUD_BG.png" alt="">
+      </div>
+    </div>
+
+    <!-- ==========預約頁面共用資訊========== -->
+
+    <section class="WRAPPER BIG_TITLE RESERVE_INFO">
+      <div class="BREAD"><a href="./homepage.html">首頁</a> / <a>線上預約</a></div>
+      <div class="FIRSTTIME_INFO">
+        <h1>對於初診患者</h1>
+
+        <ul class="RESERVE_TYPE_UL">
+          <li>
+            <div class="ARC_TITLE RESERVE_TYPE">
+              線上預約
+              <div class="ARC_TITLE TITLE_NO">1</div>
+            </div>
+          </li>
+          <li>
+            <div class="ARC_TITLE RESERVE_TYPE">
+              現場掛號
+              <div class="ARC_TITLE TITLE_NO">2</div>
+            </div>
+          </li>
+          <li>
+            <div class="ARC_TITLE RESERVE_TYPE">
+              電話預約
+              <div class="ARC_TITLE TITLE_NO">3</div>
+            </div>
+          </li>
+        </ul>
+        <p>如果您通過線上預約或電話，我們可以順利地為您提供指導。<br>
+          如果您不確定，可以直接來訪。</p>
+        <p class="CALL"> <i class="bi bi-telephone"></i> 預約專線 : 02-3322-2777 </p>
+
+        <ul class="RESERVE_TYPE_UL_M">
+          <li>
+            <div class="ARC_TITLE RESERVE_TYPE">
+              線上預約
+              <div class="ARC_TITLE TITLE_NO">1</div>
+            </div>
+          </li>
+          <li>
+            <div class="ARC_TITLE RESERVE_TYPE">
+              現場掛號
+              <div class="ARC_TITLE TITLE_NO">2</div>
+            </div>
+          </li>
+          <li>
+            <div class="ARC_TITLE RESERVE_TYPE">
+              電話預約
+              <div class="ARC_TITLE TITLE_NO">3</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-------  預約步驟 ------->
+      <section class="RESERVE_STEPAREA">
+        <section class="RESERVE_ARC" id="ARCONE">
+          <div class="ARC_TITLE">1</div>
+          <p>預約類型選擇</p>
+        </section>
+        <section class="RESERVE_ARC" id="ARCTWO">
+          <div class="ARC_TITLE">2</div>
+          <p>填寫資料</p>
+        </section>
+        <section class="RESERVE_ARC" id="ARCTHREE">
+          <div class="ARC_TITLE">3</div>
+          <p>確認預約資料</p>
+        </section>
+        <section class="RESERVE_ARC" id="ARCFOUR">
+          <div class="ARC_TITLE">4</div>
+          <p>預約成功</p>
+        </section>
+      </section>
+    </section>
+
+    <!-- ========表單區塊======== -->
+
+    <section class="RESERVE_FORM">
+      <section class="RESERVE_SUCCESS">
+        <span>
+          <img src="./img/shopping_cart/pay_success.png" alt="">
+        </span>
+        <h1>預約成功</h1>
+        <h2>寵物溝通</h2>
+        <h2>預約時間：2023 / 04 / 30</h2>
+        <h2>預約時段：上午</h2>
+      </section>
+
+      <div class="STEPS">
+        <input type="button" value="前往會員中心" onclick="location.href='member_center.html'">
+        <input type="button" value="修改/取消預約" onclick="location.href='appointment_inquiry.html'">
+      </div>
+
+    </section>
+
+    <section class="WRAPPER">
+      <div class="LOCATION_WRAPPER">
+        <div class="LOCATION_LEFT">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1278.0129118998307!2d121.52466683154347!3d25.04200095528725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a970a11a84ad%3A0x58e05f2528812097!2z5ZyL56uL6Ie65YyX5ZWG5qWt5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1683701812809!5m2!1szh-TW!2stw"
+            width="700" height="525" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="LOCATION_RIGHT">
+          <div class="LOCATION_LOGO">
+            <img src="img/index/locationLOGO.svg" alt="">
+          </div>
+
+          <div class="LOCATION_INFORMATION">
+            <i class="bi bi-telephone"></i>
+            <p>連絡電話：02-3322-2777</p>
+          </div>
+          <div class="LOCATION_INFORMATION">
+            <i class="bi bi-geo-alt"></i>
+            <p>地址：100台北市中正區濟南路一段321號</p>
+          </div>
+
+          <div class="LOCATION_TIMETABLE">
+            <img src="img/index/TIMETABLE.jpg" alt="">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="LOCATION_WRAPPER_M">
+        <div class="LOCATION_RIGHT">
+          <div class="LOCATION_LOGO">
+            <img src="img/index/locationLOGO.svg" alt="">
+          </div>
+
+          <div class="LOCATION_INFORMATION">
+            <i class="bi bi-telephone"></i>
+            <p>連絡電話：02-3322-2777</p>
+          </div>
+          <div class="LOCATION_INFORMATION">
+            <i class="bi bi-geo-alt"></i>
+            <p>地址：100台北市中正區濟南路一段321號</p>
+          </div>
+
+          <div class="LOCATION_TIMETABLE">
+            <img src="img/index/TIMETABLE.jpg" alt="">
+          </div>
+        </div>
+        <div class="LOCATION_LEFT">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1278.0129118998307!2d121.52466683154347!3d25.04200095528725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a970a11a84ad%3A0x58e05f2528812097!2z5ZyL56uL6Ie65YyX5ZWG5qWt5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1683701812809!5m2!1szh-TW!2stw"
+            width="372" height="252" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOP按鈕 -->
+    <button id="js-top" class="TOP_BTN"></button>
+  </section>
+  <footer>
+    <div class="FOOTER_LOGO">
+      <a href="">
+        <picture>
+          <source srcset="./img/index/M_index/M_FOOTERLOGO.svg" media="(max-width: 414px)">
+          <img src="img/H-LOGO.svg" alt="" />
+        </picture>
+
+      </a>
+
+    </div>
+    <div class="FOOTER_RIGHT">
+      <nav class="FOOTER_NAV">
+        <ul>
+          <li>
+            <a href="about_us.html"> <span>關於院所</span></a>
+          </li>
+          <li>
+            <a href="reserve.html"> <span>立即預約</span></a>
+          </li>
+          <li>
+            <a href="information.html"> <span>資訊導覽</span></a>
+          </li>
+          <li>
+            <a href="member_center.html"> <span>會員中心</span></a>
+          </li>
+          <li>
+            <a href="shopping.html"> <span>線上購物</span></a>
+          </li>
+          <li>
+            <a href="shopping_cart.html"> <span>購物車</span></a>
+          </li>
+          <li>
+            <a href="qa.html"> <span>常見問題</span></a>
+          </li>
+          <li>
+            <span class="FOLLOW">追蹤我們</span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="FOOTER_ICON">
+      <a href="https://www.facebook.com/"><img src="img/FOOTER_FB_ICON.svg" alt="" /></a>
+      <a href="https://www.instagram.com/"><img src="img/FOOTER_INS_ICON.svg" alt="" /></a>
+    </div>
+
+    <div class="FOOTER_TOP_BTN" id="js-f-top">
+      <i class="bi bi-caret-up-fill"></i>
+      <p>回到頂部</p>
+    </div>
+
+  </footer>
+  <div class="FOOTER_BOTTOM">
+    <p>
+      Copyright ©
+      本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。
+    </p>
+  </div>
+  <script src="./nav.js"></script>
+  <script src="./user_popup.js"></script>
+  <script src="./toggle.js"></script>
+  <script src="./top_btn.js"></script>
+  <script src="./appointment.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth'
+      });
+      calendar.render();
+    });
+  </script>
+</body>
+
+</html>
