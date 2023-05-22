@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/shortcut_logo.png">
-    <title>資訊內容 INFORMATION</title>
+    <title>波波動物醫院 - 資訊內容 INFORMATION</title>
 </head>
 
 <body class="IMFORMATION_CONTENT">
@@ -88,25 +88,25 @@
                             </div>
                             <div class="INPUT_GROUP">
                                 <i class="bi bi-envelope"></i>
-                                <input type="email" id="account" name="account" class="VERIFYINPUT"
+                                <input type="email" id="account" name="account"
                                     placeholder="請輸入電子信箱" />
-                                <button class="VERIFBTN BTN">
+                                <!-- <button class="VERIFBTN BTN">
                                     發送驗證信
-                                </button>
+                                </button> -->
                             </div>
                             <div class="INPUT_GROUP">
                                 <i class="bi bi-key"></i>
                                 <input type="number" id="verifyNum" name="verifyNum" class="VERIFYINPUT"
                                     placeholder="請輸入驗證碼" />
                                 <button class="VERIFBTN BTN">
-                                    驗證
+                                    發送驗證碼
                                 </button>
                             </div>
                         </div>
 
                         <p>＊送出即同意「會員服務條款、隱私權保護聲明」</p>
                         <div class="INPUT_GROUP">
-                            <input type="submit" id="send-btn" class=" SIGNUP_SUB BTN" value="送出" />
+                            <input type="submit" id="send-btn" class=" SIGNUP_SUB BTN" value="驗證並送出" />
                         </div>
                     </form>
                 </div>
@@ -404,7 +404,7 @@
             <div class="INFOMATION_CONTENT_BOX">
                 <p class="INFOMATION_CONTENT_DATE">2022-10-28</p>
                 <p class="INFOMATION_CONTENT_TITLE">寵物健檢的重要性</p>
-                <img class="INFORMATION_IMG" src="./img/information/INFORMATION_HEALTHCHECK.jpg" alt="">
+                <img class="INFORMATION_IMG" src="./img/information/content/INFORMATION_HEALTHCHECK.jpg" alt="">
                 <p class="INFOMATION_CONTENT_TEXT">
                     身為毛孩家長的你知道嗎？據家中犬貓死因統計，繼癌症之後，狗狗的心血管疾病，貓咪的慢性腎病為前三名常見致死疾病。毛小孩不會說話，所以當他們不舒服時，我們無從得知，唯有「定期的健康檢查」才能早點發現潛在疾病或慢性病的早期變化，讓醫療即時開始並延緩疾病的惡化。
                 </p>
@@ -435,7 +435,7 @@
             <a class="INFORMATION_BTN BTN" href="./information.html">返回</a>
         </section>
         <!-- ===============================回到TOP================================================ -->
-        <!-- <button id="js-top" class="TOP_BTN HIDE"></button> -->
+        <button id="js-top" class="TOP_BTN"></button>
         <!-- ===== footer ===== -->
         <footer>
             <div class="FOOTER_LOGO">
@@ -498,8 +498,7 @@
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- <script src="top_btn.js"></script> -->
-    <!-- <script src="sroll.js"></script> -->
+    <script src="top_btn.js"></script>
     <script src="nav.js"></script>
     <script src="user_popup.js"></script>
     <script src="toggle.js"></script>

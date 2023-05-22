@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    // 強制漢堡線都是紅色
+    $('.SPAN1').addClass('M_HEADER_TOGGLE_ACTIVE');
+    $('.SPAN2').addClass('M_HEADER_TOGGLE_ACTIVE');
+    $('.SPAN3').addClass('M_HEADER_TOGGLE_ACTIVE');
+
     $(window).scroll(function () {
         if ($(window).scrollTop() === 0) {
             // 導覽列陰影
@@ -31,10 +36,9 @@ $(document).ready(function () {
                 .addClass('M_HEADER_BG_ACTIVE ');
 
             // RWD TOGGLE變色
-            
-            $('.SPAN1').addClass('M_HEADER_TOGGLE_ACTIVE');
-            $('.SPAN2').addClass('M_HEADER_TOGGLE_ACTIVE');
-            $('.SPAN3').addClass('M_HEADER_TOGGLE_ACTIVE');
+            // $('.SPAN1').addClass('M_HEADER_TOGGLE_ACTIVE');
+            // $('.SPAN2').addClass('M_HEADER_TOGGLE_ACTIVE');
+            // $('.SPAN3').addClass('M_HEADER_TOGGLE_ACTIVE');
             
 
 
@@ -77,17 +81,11 @@ function startTimer() {
     // 执行需要的操作，例如移除class
     $('.M_HEADER_NAV').removeClass('M_HEADER_BG_ACTIVE');
     $('.M_HEADER_NAV').removeClass('HEADER_NAV_SHADOW');
-    // $('.TOGGLE > span').css("background", "white");
-  }, 2000);
 
-  timer = setTimeout(function() {
-    // 执行需要的操作，例如移除class
-    $('.SPAN1').removeClass('M_HEADER_TOGGLE_ACTIVE')
-    $('.SPAN2').removeClass('M_HEADER_TOGGLE_ACTIVE')
-    $('.SPAN3').removeClass('M_HEADER_TOGGLE_ACTIVE')
-    
- 
-  }, 700);
+    // $('.SPAN1').removeClass('M_HEADER_TOGGLE_ACTIVE')
+    // $('.SPAN2').removeClass('M_HEADER_TOGGLE_ACTIVE')
+    // $('.SPAN3').removeClass('M_HEADER_TOGGLE_ACTIVE')
+  }, 2000);
 }
 
 // ========= RWD NAV的LOGO 變化==========
