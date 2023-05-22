@@ -5,8 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="img/shortcut_logo.png">
   <link rel="stylesheet" href="css/style.css" />
-  <title>線上預約 - 波波動物醫院</title>
+  <title>線上預約 - 日期選擇 - 波波動物醫院</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js"></script>
 </head>
@@ -157,7 +158,14 @@
   <!-- =================================MASTER_VISION====================================== -->
   <section class="CAROUSEL">
     <div class="MASTER_VISION"><img src="img/HEADER-TOP.png" alt="" /></div>
+    <div class="PAWPAW animate__animated animate__bounceInLeft">
+      <picture>
+        <source srcset="./img/M_pawpaw.svg" media="(max-width: 414px)">
+        <img src="img/pawpaw.svg" alt="">
+      </picture>
+    </div>
     <div class="DOT"></div>
+    <div class="DOT1" style="display: none;"></div>
   </section>
 
   <!-- ============================================================================= -->
@@ -270,7 +278,7 @@
         <li>
           <label for="reserve_type" class="SELECT">預約類型<br>
             <select name="reserve_type" id="reserve_type">
-              <option value="" style="display: none"></option>
+              <option value="" style="display: none">請選擇類型</option>
               <option value="">一般掛號</option>
               <option value="">寵物溝通</option>
             </select>
@@ -308,7 +316,7 @@
       </ul>
 
       <div class="STEPS">
-        <input type="button" value="上一步" >
+        <input type="button" value="上一步" onclick="location.href='reserve_communication2.html'">
         <input type="button" value="下一步" onclick="location.href='reserve_normal2.html'">
       </div>
 
@@ -382,6 +390,7 @@
   <script src="./user_popup.js"></script>
   <script src="./toggle.js"></script>
   <script src="./top_btn.js"></script>
+  <script src="./appointment.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var calendarEl = document.getElementById('calendar');

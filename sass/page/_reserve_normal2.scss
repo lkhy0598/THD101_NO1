@@ -1,8 +1,17 @@
 .RESERVE_NORMAL2 {
 
-
     .CAROUSEL {
         position: relative;
+
+        .PAWPAW {
+            position: absolute;
+            top: 50%;
+            left: 6vw;
+
+            >picture>img {
+                width: 35vw;
+            }
+        }
     }
 
     .DOT {
@@ -211,7 +220,6 @@
         display: flex;
         flex-wrap: wrap;
         z-index: 10;
-        // border: 1px solid;
     }
 
     .RESERVE_FORM ul {
@@ -221,7 +229,6 @@
         flex-wrap: wrap;
         width: 1000px;
         margin-bottom: 90px;
-        // border: 1px solid;
         padding-left: 20px;
     }
 
@@ -231,24 +238,84 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        // border: 1px solid;
     }
 
     .RESERVE_FORM ul li {
-        margin-bottom: 8px;
+        margin-bottom: 30px;
     }
 
     .RESERVE_FORM ul li label {
         font-size: 20px;
     }
 
-
-    .RESERVE_FORM ul li:nth-child(3) {
-        padding-top: 9px;
+    .RESERVE_FORM ul li label input {
+        font-family: "Noto Sans";
+        font-size: 2rem;
+        color: #34424F;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #9E9E9E;
+        height: 45px;
+        width: 300px;
     }
 
+    .RESERVE_FORM ul li label input:focus {
+        outline: none;
+    }
+    
+    .ILLNESS_SIGN {
+        margin-top: -80px;
+        margin-left: 50px;
+        margin-bottom: 50px;
+        width: 48%;
+        font-size: 20px;
+    }
 
+    .ILLNESS_SIGN input {
+        font-family: "Noto Sans";
+        font-size: 2rem;
+        color: #FFF;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-top: 10px;
+        margin-right: 45px;
+        margin-bottom: 20px;
+        border: 1px solid #9E9E9E;
+        height: 45px;
+        width: 300px;
+        cursor: pointer;
+    }
 
+    .ILLNESS_SIGN_BTN {
+        background-color: #34424F;
+    }
+
+    .ILLNESS_SIGN_BTN.ACTIVE {
+        background-color: #428AA9;
+    }    
+
+    .OTHER_ILLNESS_SIGN {
+        width: 100%;
+        margin-top: -20px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .TEXT_AREA {
+        width: 43%;
+        margin-left: -22px;
+    }
+
+    .TEXTAREA {
+        margin: 20px auto;
+        width: 98%;
+        margin-bottom: 50px;
+        font-size: 18px;
+    }
     .RESERVE_FORM .STEPS {
         display: flex;
         align-items: center;
@@ -267,6 +334,8 @@
         margin-right: 10px;
         cursor: pointer;
     }
+
+
 
     .STEPS input:first-child {
         background-color: transparent;
@@ -288,6 +357,64 @@
     .RESERVE_NORMAL2 {
         .APPOINTMENT {
             display: none;
+        }
+
+        .CAROUSEL {
+            .PAWPAW {
+                position: absolute;
+                top: 5%;
+                left: 25vw;
+
+                >picture>img {
+                    width: 55vw;
+                }
+            }
+
+            .DOT {
+                position: absolute;
+                width: 120px;
+                height: 120px;
+                left: -62px;
+                top: 25vh;
+                z-index: 10;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: radial-gradient(circle, $white 0%, $white 20%, transparent 25%, transparent 100%);
+                    background-size: 10px 10px;
+                    background-position: 0 0;
+                }
+            }
+
+            .DOT1 {
+                display: block;
+                position: absolute;
+                width: 170px;
+                height: 170px;
+                left: auto;
+                right: 10px;
+                bottom: -10px;
+                z-index: 10;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: radial-gradient(circle, $white 0%, $white 20%, transparent 0%, transparent 100%);
+                    background-size: 14px 14px;
+                    background-position: 0 0;
+                }
+            }
         }
 
         .RESERVE_INFO {
@@ -326,6 +453,7 @@
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
+                margin: 20px auto;
 
                 .TITLE_NO {
                     font-size: 14px;
@@ -346,7 +474,7 @@
                 width: 100%;
                 display: flex;
                 flex-grow: 1;
-                margin-top: 30px;
+                margin-top: 20px;
 
                 .RESERVE_ARC {
                     p {
@@ -382,15 +510,34 @@
             }
         }
 
-        .CALENDAR_AREA {
-            .CALENDAR_INFO {
-                padding-top: 20px;
-                padding-left: 50px;
+        .ILLNESS_SIGN {
+            margin-top: -80px;
+            margin-left: 18px;
+            margin-bottom: 50px;
+            width: 98%;
+            font-size: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            div {
+                width: 100%;
+            }
+            .ILLNESS_SIGN_BTN {
+                font-size: 16px;
+                width: 45%;
+                margin-right: 15px;
+            }
+        }
+
+        .TEXT_AREA {
+            width: 90%;
+            margin-left: 10px;
+            .TEXTAREA {
+                font-size: 16px;
             }
         }
 
         .RESERVE_FORM ul li {
-            padding-left: 50px;
+            padding-left: 32px;
         }
 
         .FOOTER_BOTTOM {
