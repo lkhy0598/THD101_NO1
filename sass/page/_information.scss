@@ -113,13 +113,83 @@
 
     // 文章區塊
     .INFORMATION_BOX {
+
+        // 文章圖片
+
+        // 消息圖片
+        #INFORMATION_NEWS a:nth-child(1) .NEWSIMG {
+            background-image: url(../img/INFORMATION/NEWS_IMG_1.jpg)
+        }
+
+        #INFORMATION_NEWS a:nth-child(2) .NEWSIMG {
+            background-image: url(../img/INFORMATION/NEWS_IMG_2.jpg)
+        }
+
+        #INFORMATION_NEWS a:nth-child(3) .NEWSIMG {
+            background-image: url(../img/INFORMATION/NEWS_IMG_3.jpg)
+        }
+
+        #INFORMATION_NEWS a:nth-child(4) .NEWSIMG {
+            background-image: url(../img/INFORMATION/NEWS_IMG_4.jpg)
+        }
+
+        #INFORMATION_NEWS a:nth-child(5) .NEWSIMG {
+            background-image: url(../img/INFORMATION/NEWS_IMG_5.jpg)
+        }
+
+        // 衛教圖片
+        #INFORMATION_HEALTH a:nth-child(1) .HEALTHIMG {
+            background-image: url(../img/INFORMATION/HEALTH_IMG_1.jpg)
+        }
+
+        #INFORMATION_HEALTH a:nth-child(2) .HEALTHIMG {
+            background-image: url(../img/INFORMATION/HEALTH_IMG_2.jpg)
+        }
+
+        #INFORMATION_HEALTH a:nth-child(3) .HEALTHIMG {
+            background-image: url(../img/INFORMATION/HEALTH_IMG_3.jpg)
+        }
+
+        #INFORMATION_HEALTH a:nth-child(4) .HEALTHIMG {
+            background-image: url(../img/INFORMATION/HEALTH_IMG_4.jpg)
+        }
+
+        #INFORMATION_HEALTH a:nth-child(5) .HEALTHIMG {
+            background-image: url(../img/INFORMATION/HEALTH_IMG_5.jpg)
+        }
+
+        // 連結圖片
+        #INFORMATION_LINKS a:nth-child(1) .LINKIMG {
+            background-image: url(../img/INFORMATION/LINK_IMG_1.jpg)
+        }
+
+        #INFORMATION_LINKS a:nth-child(2) .LINKIMG {
+            background-image: url(../img/INFORMATION/LINK_IMG_2.jpg)
+        }
+
+        #INFORMATION_LINKS a:nth-child(3) .LINKIMG {
+            background-image: url(../img/INFORMATION/LINK_IMG_3.jpg)
+        }
+
+        #INFORMATION_LINKS a:nth-child(4) .LINKIMG {
+            background-image: url(../img/INFORMATION/LINK_IMG_4.jpg)
+        }
+
+        #INFORMATION_LINKS a:nth-child(5) .LINKIMG {
+            background-image: url(../img/INFORMATION/LINK)
+        }
+
         .INFORMATION_CARD {
             display: none;
+
+
 
             a {
                 text-decoration: none;
                 color: $blueblack;
                 transition: all 0.3s ease;
+
+
 
                 .CARD_BODY {
                     width: 100%;
@@ -152,19 +222,20 @@
                     }
 
                     // 文章圖片
-                    .NEWSIMG {
-                        background-image: url(../img/index/INDEX_CARD1.jpg);
+                    // .NEWSIMG {
+                    //     background-image: url(../img/INFORMATION/NEWS_IMG_1.jpg);
+                    // }
 
-                    }
+                    // .HEALTHIMG {
+                    //     background-image: url(../img/INFORMATION/HEALTH_IMG_1.jpg);
+                    // }
 
-                    .HEALTHIMG {
-                        background-image: url(../img/index/INDEX_CARD2.jpg);
-                    }
+                    // .LINKIMG {
+                    //     background-image: url(../img/INFORMATION/LINK_IMG_1.jpg);
 
-                    .LINKIMG {
-                        background-image: url(../img/index/INDEX_CARD3.jpg);
+                    // }
 
-                    }
+                    // 文章圖片
 
 
                     // 右邊區塊
