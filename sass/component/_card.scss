@@ -57,6 +57,9 @@
     right: 30px;
     font-size: 40px;
     color:$blueblack ;
+    @include m {
+        display: none;
+    }
 }
 
 
