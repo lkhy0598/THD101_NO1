@@ -68,6 +68,10 @@
 
         .INFOMATION_CONTENT_TEXT {
             font-size: $p;
+            line-height: normal;
+        }
+        p{
+            line-height: normal;
         }
     }
 
@@ -75,5 +79,9 @@
         width: 300px;
         margin: 0 auto;
         text-decoration: none;
+        margin-bottom: 300px;
+        @include m{
+            margin-bottom: 90px;
+        }
     }
 }

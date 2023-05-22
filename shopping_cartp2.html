@@ -16,142 +16,68 @@
 <body class="SHOPPINGCARTP2">
 
 <!-- ========================= 彈跳視窗 ========================= -->
-    <!-- 壓底黑色塊 -->
-    <div id="modal" class="MODAL">
-        <!-- 關閉按鈕 -->
-        <a class="POPUP_CLOSEBTN" href="#">
-            <i class="bi bi-x-circle"></i>
-        </a>
-        <!-- 彈跳視窗_註冊/登入 -->
-        <div id="popup-wrap" class="POPUP_WRAP">
-            <div class="BG_CLOUD_BOX">
-                <img class="BG_CLOUD" src="./img/user_popup/USER_BG_CLOUD.png" alt="">
-            </div>
-            <!-- 導覽列 -->
-            <ul class="POPUP_NAVS">
-                <li class="POPUP_TABS "><a href="#POPUP_LOGIN">登入會員</a></li>
-                <li class="POPUP_TABS "><a href="#POPUP_SIGNUP">註冊會員</a></li>
-                <li class="POPUP_TABS FORGETTABS CLOSETABS"><a href="#">忘記密碼</a></li>
-                <li class="POPUP_TABS CHANGETABS CLOSETABS"><a href="#">修改密碼</a></li>
+<!-- 壓底黑色塊 -->
+<div id="modal" class="MODAL">
+    <!-- 關閉按鈕 -->
+    <a class="POPUP_CLOSEBTN" href="#">
+        <i class="bi bi-x-circle"></i>
+    </a>
+    <!-- 彈跳視窗_註冊/登入 -->
+    <div id="popup-wrap" class="POPUP_WRAP">
+        <div class="BG_CLOUD_BOX">
+            <img class="BG_CLOUD" src="./img/user_popup/USER_BG_CLOUD.png" alt="">
+        </div>
+        <!-- 導覽列 -->
+        <ul class="POPUP_NAVS">
+            <li class="POPUP_TABS "><a href="#POPUP_LOGIN">登入會員</a></li>
+            <li class="POPUP_TABS "><a href="#POPUP_SIGNUP">註冊會員</a></li>
+            <li class="POPUP_TABS FORGETTABS CLOSETABS"><a href="#">忘記密碼</a></li>
+            <li class="POPUP_TABS CHANGETABS CLOSETABS"><a href="#">修改密碼</a></li>
 
-            </ul>
-            <!-- 登入視窗 -->
-            <div class="POPUP_TABS_CONTENT">
-                <div id="POPUP_LOGIN" class="POPUP_BOX">
-                    <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+        </ul>
+        <!-- 登入視窗 -->
+        <div class="POPUP_TABS_CONTENT">
+            <div id="POPUP_LOGIN" class="POPUP_BOX">
+                <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
 
-                    <form class="USER_FORM" method="post" action="Login.php">
-                        <div class="INPUT_GROUP">
-                            <i class="bi bi-envelope"></i>
-                            <input type="email" id="account" name="account" placeholder="請輸入電子信箱" /></br>
-                        </div>
-                        <div class="INPUT_GROUP">
-                            <i class="bi bi-lock-fill"></i>
-                            <input type="password" id="password" name="password" placeholder="請輸入密碼" /></br>
-                        </div>
-                        <div class="FORGET_BOX">
-                            <button type="button" class="FORGET_BTN">忘記密碼？</button>
-                        </div>
-                        <div class="INPUT_GROUP">
-                            <input type="submit" id="send-btn" class="BTN" value="登入" />
-                        </div>
-
-                        <div class="DIVIDING">
-                            <span>or</span>
-                        </div>
-                        <button type="submit" class="OTHERLOGIN_BTN">
-                            <span class="OTHERLOGIN_ICON">
-                                <img src="./img/user_popup/GOOGLE.svg" alt="">
-                            </span>
-                            <span>使用GOOGLE登入</span>
-                        </button>
-                    </form>
-                    <div class="BTN SIGNUP_BTN">註冊會員</div>
-                </div>
-                <!-- 註冊視窗 -->
-                <div id="POPUP_SIGNUP" class="POPUP_BOX ">
-                    <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
-
-                    <form class="USER_FORM" method="post" action="SignUp.php">
-                        <div class="SIGNUP_INPUTS">
-                            <div class="INPUT_GROUP">
-                                <i class="bi bi-person-circle"></i>
-                                <input type="text" id="name" name="name" placeholder="請輸入真實姓名" />
-                            </div>
-                            <div class="INPUT_GROUP">
-                                <i class="bi bi-lock-fill"></i>
-                                <input type="password" id="password" name="password" placeholder="請輸入密碼" />
-                            </div>
-                            <div class="INPUT_GROUP">
-                                <i class="bi bi-lock"></i>
-                                <input type="password" id="password" name="password" placeholder="請再確認一次密碼" />
-                            </div>
-                            <div class="INPUT_GROUP">
-                                <i class="bi bi-phone"></i>
-                                <input type="number" id="phone" name="phone" placeholder="請輸入手機號碼" />
-                            </div>
-                            <div class="INPUT_GROUP">
-                                <i class="bi bi-envelope"></i>
-                                <input type="email" id="account" name="account" class="VERIFYINPUT"
-                                    placeholder="請輸入電子信箱" />
-                                <button class="VERIFBTN BTN">
-                                    發送驗證信
-                                </button>
-                            </div>
-                            <div class="INPUT_GROUP">
-                                <i class="bi bi-key"></i>
-                                <input type="number" id="verifyNum" name="verifyNum" class="VERIFYINPUT"
-                                    placeholder="請輸入驗證碼" />
-                                <button class="VERIFBTN BTN">
-                                    驗證
-                                </button>
-                            </div>
-                        </div>
-
-                        <p>＊送出即同意「會員服務條款、隱私權保護聲明」</p>
-                        <div class="INPUT_GROUP">
-                            <input type="submit" id="send-btn" class=" SIGNUP_SUB BTN" value="送出" />
-                        </div>
-                    </form>
-                </div>
-                <!-- 忘記密碼 -->
-                <div id="popup_forgetpass" class="POPUP_BOX ">
-                    <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
-                    <form class="USER_FORM" method="post" action="ForgetPass.php">
-                        <div class="INPUT_GROUP">
-                            <i class="bi bi-envelope"></i>
-                            <input type="email" id="account" name="account" class="VERIFYINPUT" placeholder="請輸入電子信箱" />
-                            <button class="VERIFBTN BTN">
-                                發送驗證信
-                            </button>
-                        </div>
-                        <div class="INPUT_GROUP">
-                            <i class="bi bi-key"></i>
-                            <input type="number" id="verifyNum" name="verifyNum" class="VERIFYINPUT"
-                                placeholder="請輸入驗證碼" />
-                            <button class="VERIFBTN BTN">
-                                驗證
-                            </button>
-                        </div>
-                        <div class="BACKLOGIN_BOX">
-                            <button type="button" class="BACKLOGIN_BTN">返回登入</button>
-                        </div>
-                        <div class="FORGETPASS_DESC">
-                            <p>＊系統已寄出驗證信，請至信箱收取。</p>
-                            <p>＊若過久未收到驗證信件，請至垃圾信件匣或其他收件匣確認。</p>
-                        </div>
-                    </form>
-                    <div class="PASS_SEND_BOX">
-                        <p>＊送出後會直接跳轉到修改密碼頁</p>
-                        <div class="INPUT_GROUP">
-                            <input type="submit" id="send-btn" class="PASS_SUB BTN" value="送出" />
-                        </div>
+                <form class="USER_FORM" method="post" action="Login.php">
+                    <div class="INPUT_GROUP">
+                        <i class="bi bi-envelope"></i>
+                        <input type="email" id="account" name="account" placeholder="請輸入電子信箱" /></br>
                     </div>
-                </div>
-                <!-- 修改密碼 -->
-                <div id="popup_changepass" class="POPUP_BOX">
-                    <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
-                    <form class="USER_FORM" method="post" action="ChangePass.php">
+                    <div class="INPUT_GROUP">
+                        <i class="bi bi-lock-fill"></i>
+                        <input type="password" id="password" name="password" placeholder="請輸入密碼" /></br>
+                    </div>
+                    <div class="FORGET_BOX">
+                        <button type="button" class="FORGET_BTN">忘記密碼？</button>
+                    </div>
+                    <div class="INPUT_GROUP">
+                        <input type="submit" id="send-btn" class="BTN" value="登入" />
+                    </div>
+
+                    <div class="DIVIDING">
+                        <span>or</span>
+                    </div>
+                    <button type="submit" class="OTHERLOGIN_BTN">
+                        <span class="OTHERLOGIN_ICON">
+                            <img src="./img/user_popup/GOOGLE.svg" alt="">
+                        </span>
+                        <span>使用GOOGLE登入</span>
+                    </button>
+                </form>
+                <div class="BTN SIGNUP_BTN">註冊會員</div>
+            </div>
+            <!-- 註冊視窗 -->
+            <div id="POPUP_SIGNUP" class="POPUP_BOX ">
+                <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+
+                <form class="USER_FORM" method="post" action="SIGNUP.php">
+                    <div class="SIGNUP_INPUTS">
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-person-circle"></i>
+                            <input type="text" id="name" name="name" placeholder="請輸入真實姓名" />
+                        </div>
                         <div class="INPUT_GROUP">
                             <i class="bi bi-lock-fill"></i>
                             <input type="password" id="password" name="password" placeholder="請輸入密碼" />
@@ -160,31 +86,103 @@
                             <i class="bi bi-lock"></i>
                             <input type="password" id="password" name="password" placeholder="請再確認一次密碼" />
                         </div>
-                    </form>
-                    <div class="PASS_SEND_BOX">
-                        <p>＊送出後會直接跳轉到修改密碼頁</p>
                         <div class="INPUT_GROUP">
-                            <input type="submit" id="send-btn" class="PASS_SUB BTN" value="修改密碼" />
+                            <i class="bi bi-phone"></i>
+                            <input type="number" id="phone" name="phone" placeholder="請輸入手機號碼" />
+                        </div>
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-envelope"></i>
+                            <input type="email" id="account" name="account" placeholder="請輸入電子信箱" />
+                            <!-- <button class="VERIFBTN BTN">
+                                    發送驗證信
+                                </button> -->
+                        </div>
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-key"></i>
+                            <input type="number" id="verifyNum" name="verifyNum" class="VERIFYINPUT"
+                                placeholder="請輸入驗證碼" />
+                            <button class="VERIFBTN BTN">
+                                發送驗證碼
+                            </button>
                         </div>
                     </div>
-                </div>
-                <!-- 修改完成畫面 -->
-                <div id="popup_changepass_succ" class="POPUP_BOX">
-                    <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
-                    <div class="USER_FORM">
-                        <img class="CHANGEPASS_SUCC" src="./img/user_popup/CHANGEPASS_SUCC.png" alt="">
+
+                    <p>＊送出即同意「會員服務條款、隱私權保護聲明」</p>
+                    <div class="INPUT_GROUP">
+                        <input type="submit" id="send-btn" class=" SIGNUP_SUB BTN" value="驗證並送出" />
                     </div>
-                    <div class="BACKTOLOGIN_BOX">
-                        <p>＊三秒後將跳轉到登入頁，如果沒跳轉請點選按鈕</p>
-                        <div class="INPUT_GROUP">
-                            <input type="submit" id="login-btn" class="BTN CHANGE_SUCC_BTN BACKLOGIN_BTN"
-                                value="登入會員" />
-                        </div>
+                </form>
+            </div>
+            <!-- 忘記密碼 -->
+            <div id="popup_forgetpass" class="POPUP_BOX ">
+                <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+                <form class="USER_FORM" method="post" action="SIGNUP.php">
+                    <div class="INPUT_GROUP">
+                        <i class="bi bi-envelope"></i>
+                        <input type="email" id="account" name="account" class="VERIFYINPUT" placeholder="請輸入電子信箱" />
+                        <button class="VERIFBTN BTN">
+                            發送驗證信
+                        </button>
+                    </div>
+                    <div class="INPUT_GROUP">
+                        <i class="bi bi-key"></i>
+                        <input type="number" id="verifyNum" name="verifyNum" class="VERIFYINPUT" placeholder="請輸入驗證碼" />
+                        <button class="VERIFBTN BTN">
+                            驗證
+                        </button>
+                    </div>
+                    <div class="BACKLOGIN_BOX">
+                        <button type="button" class="BACKLOGIN_BTN">返回登入</button>
+                    </div>
+                    <div class="FORGETPASS_DESC">
+                        <p>＊系統已寄出驗證信，請至信箱收取。</p>
+                        <p>＊若過久未收到驗證信件，請至垃圾信件匣或其他收件匣確認。</p>
+                    </div>
+                </form>
+                <div class="PASS_SEND_BOX">
+                    <p>＊送出後會直接跳轉到修改密碼頁</p>
+                    <div class="INPUT_GROUP">
+                        <input type="submit" id="send-btn" class="PASS_SUB BTN" value="送出" />
                     </div>
                 </div>
             </div>
+            <!-- 修改密碼 -->
+            <div id="popup_changepass" class="POPUP_BOX">
+                <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+                <form class="USER_FORM" method="post" action="SIGNUP.php">
+                    <div class="INPUT_GROUP">
+                        <i class="bi bi-lock-fill"></i>
+                        <input type="password" id="password" name="password" placeholder="請輸入密碼" />
+                    </div>
+                    <div class="INPUT_GROUP">
+                        <i class="bi bi-lock"></i>
+                        <input type="password" id="password" name="password" placeholder="請再確認一次密碼" />
+                    </div>
+                </form>
+                <div class="PASS_SEND_BOX">
+                    <p>＊送出後會直接跳轉到修改密碼頁</p>
+                    <div class="INPUT_GROUP">
+                        <input type="submit" id="send-btn" class="PASS_SUB BTN" value="修改密碼" />
+                    </div>
+                </div>
+            </div>
+            <!-- 修改完成畫面 -->
+            <div id="popup_changepass_succ" class="POPUP_BOX">
+                <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+                <div class="USER_FORM">
+                    <img class="CHANGEPASS_SUCC" src="./img/user_popup/CHANGEPASS_SUCC.png" alt="">
+                </div>
+                <div class="BACKTOLOGIN_BOX">
+                    <p>＊三秒後將跳轉到登入頁，如果沒跳轉請點選按鈕</p>
+                    <div class="INPUT_GROUP">
+                        <input type="submit" id="login-btn" class="BTN CHANGE_SUCC_BTN BACKLOGIN_BTN" value="登入會員" />
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
+</div>
 
 <!-- ===============================header================================= -->
 <header>
