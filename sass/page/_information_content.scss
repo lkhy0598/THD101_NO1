@@ -15,12 +15,12 @@
                     transform: scaleX(-1);
 
                     @include m() {
-                        // transform: scale(-10) rotate(330deg);
+                        transform: scaleX(-1);
                     }
                 }
 
                 @include m() {
-                    // top: 1600px;
+                    top: 1600px;
                 }
             }
 
@@ -32,13 +32,13 @@
                     transform: scale(-2) rotate(340deg);
 
                     @include m() {
-                        // transform: scale(-10) rotate(340deg);
+                        transform: scale(-10) rotate(340deg);
                     }
                 }
 
                 @include m() {
-                    // top: 3830px;
-                    // left: 260px;
+                    top: 3830px;
+                    left: 260px;
                 }
             }
         }

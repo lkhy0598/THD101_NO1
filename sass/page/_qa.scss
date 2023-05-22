@@ -17,7 +17,7 @@
                 transform: scale(-2) rotate(330deg);
 
                 @include m() {
-                    transform: scale(-10) rotate(330deg);
+                    transform: scale(-3) rotate(330deg);
                 }
             }
 
@@ -34,13 +34,13 @@
                 transform: scale(-2) rotate(340deg);
 
                 @include m() {
-                    transform: scale(-10) rotate(340deg);
+                    transform: scale(-2) rotate(340deg);
                 }
             }
 
             @include m() {
-                top: 3830px;
-                left: 260px;
+                top: 3070px;
+                left: 0px;
             }
         }
     }
