@@ -7,12 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="img/shortcut_logo.png">
   <link rel="stylesheet" href="css/style.css" />
-  <title>線上預約 - 一般預約 - 波波動物醫院</title>
+  <title>線上預約 - 完成一般預約 - 波波動物醫院</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js"></script>
 </head>
 
-<body class="RESERVE_NORMAL2">
+<body class="RESERVE_NORMAL_COMPLETE">
   <!-- =====appointment門診時間及預約======== -->
 
   <div class="APPOINTMENT">
@@ -165,7 +165,6 @@
       </picture>
     </div>
     <div class="DOT"></div>
-    <div class="DOT1" style="display: none;"></div>
   </section>
 
   <!-- ============================================================================= -->
@@ -260,80 +259,80 @@
     <!-- ========表單區塊======== -->
 
     <section class="RESERVE_FORM">
-      <ul>
-        <li>
-          <label for="owner_name" class="SELECT">飼主姓名<br>
-            <input class="SELECT" type="text" placeholder="請輸入飼主姓名">
-          </label>
-        </li>
-        <li>
-          <label for="phone_number" class="SELECT">手機號碼<br>
-            <input type="tel" placeholder="請輸入手機號碼">
-          </label>
-        </li>
-        <li>
-          <label for="pet_name" class="SELECT">寵物名字<br>
-            <input class="SELECT" type="text" placeholder="請輸入寵物的名字">
-          </label>
-        </li>
-        <li>
-          <label for="pet_specie" class="SELECT">寵物種類<br>
-            <select name="reserve_time" id="reserve_time">
-              <option value="" style="display: none">請選擇種類</option>
-              <option value="1">犬</option>
-              <option value="2">貓</option>
-              <option value="3">兔</option>
-              <option value="3">鼠</option>
-              <option value="3">其他動物</option>
-            </select>
-          </label>
-        </li>
-        <li>
-          <label for="pet_age" class="SELECT">寵物年齡<br>
-            <input type="number" min="0" placeholder="請輸入寵物年齡">
-          </label>
-        </li>
-        <li>
-          <label for="pet_specie" class="SELECT">是否打過預防針<br>
-            <select name="reserve_time" id="reserve_time">
-              <option value="" style="display: none">請選擇</option>
-              <option value="1">是</option>
-              <option value="2">否</option>
-            </select>
-          </label>
-        </li>
-      </ul>
-
-      <label for="illness_sign" class="ILLNESS_SIGN"><div>病徵類型</div><br>
-        <input type="button" class="ILLNESS_SIGN_BTN" value="食慾不振" id="ill1" >
-        <input type="button" class="ILLNESS_SIGN_BTN" value="精神不振" id="ill2" >
-        <input type="button" class="ILLNESS_SIGN_BTN" value="異常搔抓皮膚" id="ill3" >
-        <input type="button" class="ILLNESS_SIGN_BTN" value="嘔吐腹瀉" id="ill4" >
-        <input type="button" class="ILLNESS_SIGN_BTN" value="跛行" id="ill5" >
-        <input type="button" class="ILLNESS_SIGN_BTN" value="發燒" id="ill6" >
-        <input type="button" class="ILLNESS_SIGN_BTN" value="咳嗽" id="ill7" >
-        <input type="button" class="ILLNESS_SIGN_BTN" value="眼鼻分泌物增加" id="ill8" >
-        <input type="button" class="ILLNESS_SIGN_BTN" value="皮毛脫落" id="ill9" >
-        <input type="button" class="ILLNESS_SIGN_BTN" value="排泄問題" id="ill10" >
-      </label>
-
-      <label for="other_illness_sign" class="OTHER_ILLNESS_SIGN">
-        <div class="TEXT_AREA">
-          其他病徵<br>
-          <textarea cols="30" rows="10" class="TEXTAREA" placeholder="請簡述寵物病徵狀況......"></textarea>
-        </div>
-      
-        
-      </label>
+      <section class="RESERVE_SUCCESS">
+        <span>
+          <img src="./img/shopping_cart/pay_success.png" alt="">
+        </span>
+        <h1>預約成功</h1>
+        <h2>第一診間</h2>
+        <h2>預約時間：2023 / 04 / 25</h2>
+        <h2>預約號碼：1號</h2>
+      </section>
 
       <div class="STEPS">
-        <input type="button" value="上一步" onclick="location.href='reserve.html'">
-        <input type="button" value="下一步" onclick="location.href='reserve_normal3.html'">
+        <input type="button" value="前往會員中心" onclick="location.href='member_center.html'">
+        <input type="button" value="修改/取消預約" onclick="location.href='appointment_inquiry.html'">
       </div>
 
     </section>
 
+    <section class="WRAPPER">
+      <div class="LOCATION_WRAPPER">
+        <div class="LOCATION_LEFT">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1278.0129118998307!2d121.52466683154347!3d25.04200095528725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a970a11a84ad%3A0x58e05f2528812097!2z5ZyL56uL6Ie65YyX5ZWG5qWt5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1683701812809!5m2!1szh-TW!2stw"
+            width="700" height="525" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 
+        <div class="LOCATION_RIGHT">
+          <div class="LOCATION_LOGO">
+            <img src="img/index/locationLOGO.svg" alt="">
+          </div>
+
+          <div class="LOCATION_INFORMATION">
+            <i class="bi bi-telephone"></i>
+            <p>連絡電話：02-3322-2777</p>
+          </div>
+          <div class="LOCATION_INFORMATION">
+            <i class="bi bi-geo-alt"></i>
+            <p>地址：100台北市中正區濟南路一段321號</p>
+          </div>
+
+          <div class="LOCATION_TIMETABLE">
+            <img src="img/index/TIMETABLE.jpg" alt="">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="LOCATION_WRAPPER_M">
+        <div class="LOCATION_RIGHT">
+          <div class="LOCATION_LOGO">
+            <img src="img/index/locationLOGO.svg" alt="">
+          </div>
+
+          <div class="LOCATION_INFORMATION">
+            <i class="bi bi-telephone"></i>
+            <p>連絡電話：02-3322-2777</p>
+          </div>
+          <div class="LOCATION_INFORMATION">
+            <i class="bi bi-geo-alt"></i>
+            <p>地址：100台北市中正區濟南路一段321號</p>
+          </div>
+
+          <div class="LOCATION_TIMETABLE">
+            <img src="img/index/TIMETABLE.jpg" alt="">
+          </div>
+        </div>
+        <div class="LOCATION_LEFT">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1278.0129118998307!2d121.52466683154347!3d25.04200095528725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a970a11a84ad%3A0x58e05f2528812097!2z5ZyL56uL6Ie65YyX5ZWG5qWt5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1683701812809!5m2!1szh-TW!2stw"
+            width="372" height="252" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
 
     <!-- TOP按鈕 -->
     <button id="js-top" class="TOP_BTN"></button>
@@ -402,7 +401,6 @@
   <script src="./toggle.js"></script>
   <script src="./top_btn.js"></script>
   <script src="./appointment.js"></script>
-  <script src="./illness_sign.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var calendarEl = document.getElementById('calendar');

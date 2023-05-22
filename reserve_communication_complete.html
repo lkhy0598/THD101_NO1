@@ -5,13 +5,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="img/shortcut_logo.png">
   <link rel="stylesheet" href="css/style.css" />
-  <title>線上預約 - 波波動物醫院</title>
+  <title>線上預約 - 完成寵物溝通預約 - 波波動物醫院</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js"></script>
 </head>
 
-<body class="RESERVE_COMPLETE">
+<body class="RESERVE_COMMUNICATION_COMPLETE">
   <!-- =====appointment門診時間及預約======== -->
 
   <div class="APPOINTMENT">
@@ -157,6 +158,12 @@
   <!-- =================================MASTER_VISION====================================== -->
   <section class="CAROUSEL">
     <div class="MASTER_VISION"><img src="img/HEADER-TOP.png" alt="" /></div>
+    <div class="PAWPAW animate__animated animate__bounceInLeft">
+      <picture>
+        <source srcset="./img/M_pawpaw.svg" media="(max-width: 414px)">
+        <img src="img/pawpaw.svg" alt="">
+      </picture>
+    </div>
     <div class="DOT"></div>
   </section>
 
@@ -252,55 +259,80 @@
     <!-- ========表單區塊======== -->
 
     <section class="RESERVE_FORM">
-      <ul>
-        <li>
-          <label for="reserve_type" class="SELECT">預約類型<br>
-            <select name="reserve_type" id="reserve_type">
-              <option value="" style="display: none"></option>
-              <option value="">一般掛號</option>
-              <option value="">寵物溝通</option>
-            </select>
-          </label>
-        </li>
-        <li>
-          <label for="doctor_choices" class="SELECT">指定醫師<br>
-            <select name="doctor_choices" id="doctor_choices">
-              <option value="">不指定</option>
-              <option value="">林佳緯</option>
-              <option value="">詹宗豪</option>
-              <option value="">林育楣</option>
-              <option value="">汪玉婷</option>
-              <option value="">范植鑫</option>
-              <option value="">賴偉峰</option>
-            </select>
-          </label>
-        </li>
-        <li>
-          <label for="reserve_date" class="INPUT">預約日期<br>
-            <input type="date" name="reserve_date" id="reserve_date">
-          </label>
-        </li>
-
-        <li>
-          <label for="reserve_time" class="SELECT">預約時段<br>
-            <select name="reserve_time" id="reserve_time">
-              <option value="" style="display: none">請選擇時段</option>
-              <option value="1">09:00~12:00</option>
-              <option value="2">14:00~18:00</option>
-              <option value="3">19:00~21:00</option>
-            </select>
-          </label>
-        </li>
-      </ul>
+      <section class="RESERVE_SUCCESS">
+        <span>
+          <img src="./img/shopping_cart/pay_success.png" alt="">
+        </span>
+        <h1>預約成功</h1>
+        <h2>寵物溝通</h2>
+        <h2>預約時間：2023 / 04 / 30</h2>
+        <h2>預約時段：上午</h2>
+      </section>
 
       <div class="STEPS">
-        <input type="button" value="上一步" onclick="location.href='reserve_normal2.html'">
-        <input type="button" value="下一步" onclick="location.href='reserve_normal2.html'">
+        <input type="button" value="前往會員中心" onclick="location.href='member_center.html'">
+        <input type="button" value="修改/取消預約" onclick="location.href='appointment_inquiry.html'">
       </div>
 
     </section>
 
+    <section class="WRAPPER">
+      <div class="LOCATION_WRAPPER">
+        <div class="LOCATION_LEFT">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1278.0129118998307!2d121.52466683154347!3d25.04200095528725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a970a11a84ad%3A0x58e05f2528812097!2z5ZyL56uL6Ie65YyX5ZWG5qWt5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1683701812809!5m2!1szh-TW!2stw"
+            width="700" height="525" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 
+        <div class="LOCATION_RIGHT">
+          <div class="LOCATION_LOGO">
+            <img src="img/index/locationLOGO.svg" alt="">
+          </div>
+
+          <div class="LOCATION_INFORMATION">
+            <i class="bi bi-telephone"></i>
+            <p>連絡電話：02-3322-2777</p>
+          </div>
+          <div class="LOCATION_INFORMATION">
+            <i class="bi bi-geo-alt"></i>
+            <p>地址：100台北市中正區濟南路一段321號</p>
+          </div>
+
+          <div class="LOCATION_TIMETABLE">
+            <img src="img/index/TIMETABLE.jpg" alt="">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="LOCATION_WRAPPER_M">
+        <div class="LOCATION_RIGHT">
+          <div class="LOCATION_LOGO">
+            <img src="img/index/locationLOGO.svg" alt="">
+          </div>
+
+          <div class="LOCATION_INFORMATION">
+            <i class="bi bi-telephone"></i>
+            <p>連絡電話：02-3322-2777</p>
+          </div>
+          <div class="LOCATION_INFORMATION">
+            <i class="bi bi-geo-alt"></i>
+            <p>地址：100台北市中正區濟南路一段321號</p>
+          </div>
+
+          <div class="LOCATION_TIMETABLE">
+            <img src="img/index/TIMETABLE.jpg" alt="">
+          </div>
+        </div>
+        <div class="LOCATION_LEFT">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1278.0129118998307!2d121.52466683154347!3d25.04200095528725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a970a11a84ad%3A0x58e05f2528812097!2z5ZyL56uL6Ie65YyX5ZWG5qWt5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1683701812809!5m2!1szh-TW!2stw"
+            width="372" height="252" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
 
     <!-- TOP按鈕 -->
     <button id="js-top" class="TOP_BTN"></button>
@@ -368,6 +400,7 @@
   <script src="./user_popup.js"></script>
   <script src="./toggle.js"></script>
   <script src="./top_btn.js"></script>
+  <script src="./appointment.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var calendarEl = document.getElementById('calendar');

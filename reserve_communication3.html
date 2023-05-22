@@ -7,12 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="img/shortcut_logo.png">
   <link rel="stylesheet" href="css/style.css" />
-  <title>線上預約 - 一般預約 - 波波動物醫院</title>
+  <title>線上預約 - 確認預約 - 波波動物醫院</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js"></script>
 </head>
 
-<body class="RESERVE_NORMAL2">
+<body class="RESERVE_COMMUNICATION3">
   <!-- =====appointment門診時間及預約======== -->
 
   <div class="APPOINTMENT">
@@ -260,75 +260,34 @@
     <!-- ========表單區塊======== -->
 
     <section class="RESERVE_FORM">
-      <ul>
-        <li>
-          <label for="owner_name" class="SELECT">飼主姓名<br>
-            <input class="SELECT" type="text" placeholder="請輸入飼主姓名">
-          </label>
-        </li>
-        <li>
-          <label for="phone_number" class="SELECT">手機號碼<br>
-            <input type="tel" placeholder="請輸入手機號碼">
-          </label>
-        </li>
-        <li>
-          <label for="pet_name" class="SELECT">寵物名字<br>
-            <input class="SELECT" type="text" placeholder="請輸入寵物的名字">
-          </label>
-        </li>
-        <li>
-          <label for="pet_specie" class="SELECT">寵物種類<br>
-            <select name="reserve_time" id="reserve_time">
-              <option value="" style="display: none">請選擇種類</option>
-              <option value="1">犬</option>
-              <option value="2">貓</option>
-              <option value="3">兔</option>
-              <option value="3">鼠</option>
-              <option value="3">其他動物</option>
-            </select>
-          </label>
-        </li>
-        <li>
-          <label for="pet_age" class="SELECT">寵物年齡<br>
-            <input type="number" min="0" placeholder="請輸入寵物年齡">
-          </label>
-        </li>
-        <li>
-          <label for="pet_specie" class="SELECT">是否打過預防針<br>
-            <select name="reserve_time" id="reserve_time">
-              <option value="" style="display: none">請選擇</option>
-              <option value="1">是</option>
-              <option value="2">否</option>
-            </select>
-          </label>
-        </li>
-      </ul>
+      <h1>確認預約資料</h1>
+      <div class="COMFIRM_TABLE" id="COMFIRM_TABLE">
+        <ul>
+          <li>預約類型： 寵物溝通</li>
+          <li>指定醫師：羅婉瑜 溝通師</li>
+          <li>預約日期：2023 年 4 月 30 日</li>
+          <li>預約時段：上午</li>
+          <li>主人姓名：范植鑫</li>
+          <li>手機號碼：0912345678</li>
+          <li>寵物姓名：范植鑫 </li>
+          <li>寵物類型：院長</li>
+          <li>寵物年齡：100 歲</li>
+          <li>是否打過預防針：否</li>
+          <li>病徵類型：精神不振, 跛行, 發燒, 皮毛脫落</li>
+          <li>其他病徵：不好說......有點.....然後也.......總之........哀..........</li>
+        </ul>
+      </div>
 
-      <label for="illness_sign" class="ILLNESS_SIGN"><div>病徵類型</div><br>
-        <input type="button" class="ILLNESS_SIGN_BTN" value="食慾不振" id="ill1" >
-        <input type="button" class="ILLNESS_SIGN_BTN" value="精神不振" id="ill2" >
-        <input type="button" class="ILLNESS_SIGN_BTN" value="異常搔抓皮膚" id="ill3" >
-        <input type="button" class="ILLNESS_SIGN_BTN" value="嘔吐腹瀉" id="ill4" >
-        <input type="button" class="ILLNESS_SIGN_BTN" value="跛行" id="ill5" >
-        <input type="button" class="ILLNESS_SIGN_BTN" value="發燒" id="ill6" >
-        <input type="button" class="ILLNESS_SIGN_BTN" value="咳嗽" id="ill7" >
-        <input type="button" class="ILLNESS_SIGN_BTN" value="眼鼻分泌物增加" id="ill8" >
-        <input type="button" class="ILLNESS_SIGN_BTN" value="皮毛脫落" id="ill9" >
-        <input type="button" class="ILLNESS_SIGN_BTN" value="排泄問題" id="ill10" >
-      </label>
-
-      <label for="other_illness_sign" class="OTHER_ILLNESS_SIGN">
-        <div class="TEXT_AREA">
-          其他病徵<br>
-          <textarea cols="30" rows="10" class="TEXTAREA" placeholder="請簡述寵物病徵狀況......"></textarea>
-        </div>
-      
-        
-      </label>
+      <h1>預約注意事項告知</h1>
+      <div class="FYI">
+        <p>■　預約成功後，系統會自動發送確認信或簡訊至您留下的聯絡方式，請注意查收。</p><br>
+        <p>■　預約時間無法轉讓他人，需自行取消預約，並重新選擇預約時間。</p><br>
+        <p>■　如看診號碼已過號，請至櫃台告知，並等候院所人員協助重新等候叫號。</p><br>
+      </div>
 
       <div class="STEPS">
-        <input type="button" value="上一步" onclick="location.href='reserve.html'">
-        <input type="button" value="下一步" onclick="location.href='reserve_normal3.html'">
+        <input type="button" value="上一步" onclick="location.href='reserve_communication2.html'">
+        <input type="button" value="確認預約" onclick="location.href='reserve_communication_complete.html'">
       </div>
 
     </section>
@@ -402,7 +361,6 @@
   <script src="./toggle.js"></script>
   <script src="./top_btn.js"></script>
   <script src="./appointment.js"></script>
-  <script src="./illness_sign.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var calendarEl = document.getElementById('calendar');
