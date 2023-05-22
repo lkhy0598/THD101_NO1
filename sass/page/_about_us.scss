@@ -81,7 +81,8 @@
 
 // =================  麵包屑  =====================
 .BREAD{
-    padding-top:30px ;
+    padding-top:55px ;
+    margin-bottom: 25px;
 }
 
 // ================================
@@ -90,7 +91,7 @@
     position: relative;
     color: $white;
     z-index: 10;
-    margin-top: 50px;
+  
     margin-bottom: 40px;
 
     
@@ -352,10 +353,8 @@
   .swiper-slide.swiper-slide-active > .swiper-item > .introduce{
     display: block;
     opacity: 1;
-   
-
     background: rgb(255, 255, 255, .3);
-    animation: p_width .5s linear;
+    animation: p_width .6s linear;
     @include m {
         animation: m_width .5s linear;
 
@@ -390,12 +389,20 @@
     0%{
         transform: scale(0 , 1);
         left: 0px;
+        opacity: 0;
+    }
+
+    50%{
+        transform: scale(0.5 , 1);
+        left: 200px;
+        opacity: .5;
     }
 
     
     100%{
         transform: scale(1 , 1);
         left: 435px;
+        opacity: 1;
     }
   }
 

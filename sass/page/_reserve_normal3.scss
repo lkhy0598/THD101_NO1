@@ -37,8 +37,8 @@
     }
 
     .RESERVE_INFO>.BREAD {
-        margin-top: 45px;
-        margin-bottom: 50px;
+        padding-top:55px ;
+        margin-bottom: 25px;
     }
 
     .FIRSTTIME_INFO {
@@ -46,6 +46,7 @@
         align-content: center;
         flex-wrap: wrap;
         justify-content: center;
+        margin-top: 50px;
     }
 
     .FIRSTTIME_INFO>h1::before {
@@ -282,6 +283,10 @@
         align-items: center;
         justify-content: center;
         width: 100%;
+    }
+
+    .STEPS{
+        margin-bottom: 170px;
     }
 
     .STEPS input {

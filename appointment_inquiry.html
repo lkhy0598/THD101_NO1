@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/shortcut_logo.png">
-    <title>預約查詢 MEMBER_CENTER</title>
+    <title>預約查詢 MEMBER_CENTER - 波波動物醫院</title>
 </head>
 
 <body>
@@ -161,7 +161,7 @@
 
 
     <section class="BACKGROUND MEMBERCENTER">
-        <div class="DOT2"></div>
+        <!-- <div class="DOT2"></div> -->
         <!-- 背景 -->
         <img class="BG" src="./img/BG.jpg" alt="">
 
@@ -175,13 +175,13 @@
             </div>
         </div>
         <!-- ===================================麵包屑====================================== -->
-        <section class="MEMCENTOP">
+        <section class="MEMCENTOP1">
             <section class="BREAD WRAPPER">
-                <a href="index.html">首頁</a>
+                <a href="homepage.html">首頁</a>
                 /
-                <a href="member_center.html">會員中心</a>
+                <a>會員中心</a>
                 /
-                <a href="appointment_inquiry.html">預約查詢</a>
+                <a>預約查詢</a>
             </section>
 
             <section class="BIG_TITLE WRAPPER M_bigTitle">
@@ -201,10 +201,10 @@
 
         <section class="MEMBER_MAIN">
             <aside class="MENU">
-                <a href="" style="text-decoration: underline;">
+                <a href="appointment_inquiry.html" style="text-decoration: underline;">
                     <h2>預約查詢</h2>
                 </a>
-                <a href="">
+                <a href="member_center.html">
                     <h2>會員查詢</h2>
                 </a>
                 <a href="">
@@ -213,7 +213,7 @@
                 <a href="">
                     <h3>密碼設定</h3>
                 </a>
-                <a href="" >
+                <a href="member_pets_setting.html" >
                     <h2>寵物設定</h2>
                 </a>
                 <a href="">
@@ -228,7 +228,7 @@
                 <a href="">
                     <h3>健康檢查資料查詢</h3>
                 </a>
-                <a href="">
+                <a href="order_record_inquiry.html">
                     <h2>訂單資料</h2>
                 </a>
                 <a href="">
@@ -237,7 +237,7 @@
                 <a href="">
                     <h3>優惠卷</h3>
                 </a>
-                <a href="">
+                <a href="shopping_cart.html">
                     <h3>購物車</h3>
                 </a>
             </aside>
@@ -302,47 +302,60 @@
         <button id="js-top" class="TOP_BTN"></button>
     </section>
 
-
+    <button id="js-top" class="TOP_BTN"></button>
 
     <footer>
         <div class="FOOTER_LOGO">
-            <img src="img/H-LOGO.svg" alt="" />
+            <a href="">
+                <picture>
+                    <source srcset="./img/index/M_index/M_FOOTERLOGO.svg" media="(max-width: 414px)">
+                    <img src="img/H-LOGO.svg" alt="" />
+                </picture>
+
+            </a>
+
         </div>
         <div class="FOOTER_RIGHT">
             <nav class="FOOTER_NAV">
                 <ul>
                     <li>
-                        <a href="#"> <span>關於院所</span></a>
+                        <a href="about_us.html"> <span>關於院所</span></a>
                     </li>
                     <li>
-                        <a href="#"> <span>立即預約</span></a>
+                        <a href="reserve.html"> <span>立即預約</span></a>
                     </li>
                     <li>
-                        <a href="#"> <span>資訊導覽</span></a>
+                        <a href="information.html"> <span>資訊導覽</span></a>
                     </li>
                     <li>
-                        <a href="#"> <span>會員中心</span></a>
+                        <a href="member_center.html"> <span>會員中心</span></a>
                     </li>
                     <li>
-                        <a href="#"> <span>線上購物</span></a>
+                        <a href="shopping.html"> <span>線上購物</span></a>
                     </li>
                     <li>
-                        <a href="#"> <span>購物車</span></a>
+                        <a href="shopping_cart.html"> <span>購物車</span></a>
                     </li>
                     <li>
-                        <a href="#"> <span>常見問題</span></a>
+                        <a href="qa.html"> <span>常見問題</span></a>
                     </li>
                     <li>
-                        <a href="#"> <span>追蹤我們</span></a>
+                        <span class="FOLLOW">追蹤我們</span>
                     </li>
                 </ul>
             </nav>
         </div>
 
         <div class="FOOTER_ICON">
-            <a href=""><img src="img/FOOTER_FB_ICON.svg" alt="" /></a>
-            <a href=""><img src="img/FOOTER_INS_ICON.svg" alt="" /></a>
+            <a href="https://www.facebook.com/"><img src="img/FOOTER_FB_ICON.svg" alt="" /></a>
+            <a href="https://www.instagram.com/"><img src="img/FOOTER_INS_ICON.svg" alt="" /></a>
         </div>
+
+        <div class="FOOTER_TOP_BTN" id="js-f-top">
+            <i class="bi bi-caret-up-fill"></i>
+            <p>回到頂部</p>
+        </div>
+
     </footer>
     <div class="FOOTER_BOTTOM">
         <p>
@@ -352,7 +365,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="qa.js"></script>
-    <!-- <script src="top_btn.js"></script> -->
+    <script src="top_btn.js"></script>
     <!-- <script src="sroll.js"></script> -->
     <script src="nav.js"></script>
     <script src="user_popup.js"></script>

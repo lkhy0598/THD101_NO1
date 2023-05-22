@@ -46,8 +46,21 @@
     }
 }
 
+//圓點裝飾
+
+.DOT{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 30px;
+    bottom: 40px;
+    z-index: 10;
+
+}
+
 // 麵包屑
 .MEMCENTOP {
+    padding-top:55px ;
     margin-bottom: 25px;
 }
 
