@@ -1,0 +1,1015 @@
+.ABOUT{
+    overflow-x: hidden;
+    z-index: 5;
+// ==================================================
+// 背景雲裝飾
+.BACKGROUND {
+    .BG {}
+
+    .BG_CLOUDS {
+
+        .BG_CLOUD {}
+
+        .CLOUD_1 {
+            top: 1350px;
+            left: 0;
+
+            .BG_CLOUD_IMG1 {
+                transform: scale(-2) rotate(330deg);
+
+                @include m() {
+                    transform: scale(-10) rotate(330deg);
+                }
+            }
+
+            @include m() {
+                top: 1600px;
+            }
+        }
+
+        .CLOUD_2 {
+            top: 3300px;
+            left: 300px;
+
+            .BG_CLOUD_IMG2 {
+                transform: scale(-2) rotate(340deg);
+
+                @include m() {
+                    transform: scale(-10) rotate(340deg);
+                }
+            }
+
+            @include m() {
+                top: 3830px;
+                left: 260px;
+            }
+        }
+    }
+}
+
+
+// ================================================
+
+.CAROUSEL{
+    position: relative;
+    .PAWPAW{
+        position: absolute;
+        top: 50%;
+        left: 6vw;
+        > picture > img{
+        
+            width: 35vw;
+            
+        }
+    }
+}
+
+.DOT1{
+    display: none;
+}
+
+.DOT2{
+    
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: -120px;
+    bottom: 0px;
+    z-index: 0;
+
+}
+
+// =================  麵包屑  =====================
+.BREAD{
+    padding-top:55px ;
+    margin-bottom: 25px;
+}
+
+// ================================
+
+.ABOUTUS_TITLE{
+    position: relative;
+    color: $white;
+    z-index: 10;
+  
+    margin-bottom: 40px;
+
+    
+
+    .ABOUTUS_TITLE_IMG {
+        background-image: url(../../img/TITLE-BG.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 280px;
+        height: 100px;
+        padding: 5px 20px;
+        box-sizing: border-box;
+
+        h1{
+            text-align: left;
+            padding-top: 10px;
+        }
+
+        p {
+            padding-top: 5px;
+            padding-left: 5px;
+        }
+
+    }
+
+}
+
+
+.FAKE_HIGH{
+    // height: 705px;
+    height: 75.4vh;
+}
+
+
+.ABOUT_BG > picture > img{
+    width: 100%;
+    position: absolute;
+    top: 145px;
+}
+
+// ======================================
+
+
+
+.SMALL_TITLE{
+    display: flex;
+    padding-bottom: 5px;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 70px;
+    position: relative;
+    
+}
+
+.SMALL_TITLE > h2{
+    z-index: 10;
+}
+
+.DOT{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 30px;
+    bottom: 40px;
+    z-index: 10;
+
+}
+
+
+// ================= 醫院簡介 ====================
+
+.CLINIC_PROFILE{
+    margin: 0 auto;
+    margin-top: 50px;
+    max-width: 1200px;
+    margin-bottom: 80px;
+
+}
+
+.CLINIC_PROFILE > img{
+    float: left;
+    padding-right: 60px;
+}
+
+.CLINIC_PROFILE > .p1{
+    padding-top: 38px;
+    line-height: 160%;
+    text-align: justify;
+    color: $blueblack;
+
+}
+
+.CLINIC_PROFILE > .p2{
+    display: none;
+}
+
+.BTN_WRAAPER{
+    display: none;
+}
+
+// =================== 醫師陣容 ======================
+
+.TEAM_BG{
+    background-image: url('/img/about/teambg.jpg');
+    padding-top: 100px;
+}
+
+.TEAM_WRAPPER{
+    max-width: 900px;
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    
+}
+
+.TEAM_WRAPPER > p{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    line-height: 160%;
+    color: $blueblack;
+    text-align: left;
+}
+
+// =========== 醫師陣容輪播 ============
+.TEAM_MAIN_WRAPPER_PRODUCERS{
+    width: 95vw;
+    
+    margin-left: 225px;
+    margin-bottom: 100px;
+    
+    @include m {
+        width: auto;
+        margin: 0;
+        margin-bottom: 50px;
+       
+    }
+}
+
+
+.TEAM_WRAPPER_PRODUCERS{
+    width: 1440px;
+    height: 610px;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    margin-left: 280px;
+    align-items: end;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    // margin-right: 200px;
+    // justify-content: end;
+    // flex-direction: column;
+    // border: 1px solid;
+    @include m {
+        height:  550px;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        padding-top: 100px;
+    }
+
+
+    .swiper-button-prev{
+        position: absolute;
+        top: 200px;
+        left: 1070px;
+        font-size: 50px;
+        cursor: pointer;
+
+        @include m {
+            top:300px;
+            left: 250px;
+            z-index: 10;
+        }
+    }
+
+    .swiper-button-next{
+        position: absolute;
+        top: 200px;
+        right: 210px;
+        font-size: 50px;
+        cursor: pointer;
+        @include m {
+            top:300px;
+            left: 320px;
+            z-index: 10;
+        }
+    }
+    
+
+}
+
+
+
+
+.swiper {
+    width: 240px;
+    height: 600px;
+    align-items: center;
+    overflow:visible;
+    // padding-left: 190px;
+    @include m {
+        width: 150px;
+        height:  299px;
+        
+    }
+
+  }
+
+.TEAM_WRAPPER_PRODUCERS > .swiper > .swiper-wrapper{
+    position: relative;
+    width: 100%;
+    // height: 0%;
+    padding-right: 50px;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: border-box;
+    align-items: end;
+    @include m {
+        width: auto;
+        height:  auto;
+    }
+    
+}
+
+.swiper-slide-active > section{
+    width: 300px; 
+    height: 601px;
+    overflow: visible;
+    margin-right: 120px;
+
+    @include m {
+        width: 120px;
+        height:  300px;
+        margin-right: 125px;
+    }
+    
+
+  }
+  .swiper-slide.swiper-slide-active  > .swiper-item >img{
+    width: 390px; 
+    height: 570px;
+    transform-origin: top left;
+    border-radius: 0 100px 0 0;
+    display: flex;
+    align-items: baseline;
+    transition: all .5s linear;
+
+    @include m {
+        width: 195px;
+        height:  270px;
+    }
+  }
+
+  
+  .swiper-slide.swiper-slide-active > .swiper-item > .introduce{
+    display: block;
+    opacity: 1;
+    background: rgb(255, 255, 255, .3);
+    animation: p_width .6s linear;
+    @include m {
+        animation: m_width .5s linear;
+
+       
+        padding: 20px 0;
+
+        width: 90vw;
+        display: inline-block;
+        position: absolute;
+        top: -260px;
+        left: 10px;
+        z-index: -100;
+   
+    }
+    @keyframes m_width {
+        0%{
+            transform: scale(1, 0);
+            left: 0px;
+        }
+    
+        
+        100%{
+            transform: scale(1);
+            left: 10px;
+        }
+      }
+
+  }
+  
+
+  @keyframes p_width {
+    0%{
+        transform: scale(0 , 1);
+        left: 0px;
+        opacity: 0;
+    }
+
+    50%{
+        transform: scale(0.5 , 1);
+        left: 200px;
+        opacity: .5;
+    }
+
+    
+    100%{
+        transform: scale(1 , 1);
+        left: 435px;
+        opacity: 1;
+    }
+  }
+
+ 
+
+  .swiper-slide{
+    
+    position: relative;
+    padding: 0 5px;
+
+    @include m {
+        padding: 0 1px;
+        
+    }
+  }
+
+
+
+
+
+  .swiper-item{
+    position: relative;
+  }
+
+  .introduce{
+    padding: 20px 0;
+    opacity: 0;
+    width: 600px;
+    position: absolute;
+    top: 0px;
+    left: 430px;
+    display: flex;
+    flex-direction: column;
+
+    @include m {
+        padding: 20px 0;
+        opacity: 0;
+        width: 370px;
+        display: inline-block;
+        position: absolute;
+        top: -260px;
+        left: 13px;
+        z-index: -100;
+    }
+    
+    h3{
+        font-weight: 700;
+        padding-bottom: 20px;
+    }
+    .p1{
+        display: flex;
+        padding-bottom: 20px;
+        p:first-child{
+            font-weight: 700;
+            padding-right: 10px;
+        }
+
+        p:last-child{
+            font-weight: 500;
+        }
+    }
+
+    .p2{
+        display: flex;
+        padding-bottom: 20px;
+        p:first-child{
+            font-weight: 700;
+            padding-right: 10px;
+        
+        }
+        p:last-child{
+            line-height: 40px;
+
+        }
+
+       
+    }
+
+    .expertise{
+        display: flex;
+    
+        padding-left: 100px;
+
+        p{
+            margin: 0 10px;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: $bread;
+            background-color: $orange;
+        
+        }
+
+        .p3{
+            width: auto;
+            padding: 0 30px;
+            letter-spacing: .1em;
+
+            @include m {
+               letter-spacing: normal;
+         
+               margin-left: 33px;
+            }
+        }
+
+        @include m {
+            // display: none;
+            padding-left: 0;
+            
+            p{
+                margin: 0 10px;
+                width: 105px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                border-radius: 50px;
+                font-weight: 500;
+                font-size: $bread;
+                background-color: $orange;
+            
+            }
+            
+        }
+    }
+
+
+    
+}
+    
+
+
+
+  .introduce > *{
+
+    padding-left: 50px;
+   
+  }
+
+  
+
+  .swiper-slide-next.swiper-slide > section > img{
+    transition: transform .2s ease-in-out;
+  }
+
+  .swiper-slide > section > img{
+    width: 200px;
+    height: 300px;
+    border-radius: 0 50px 0 0;
+    border: 15px solid rgb(255, 255, 255, .5);
+    transform: scale(1);
+
+    @include m {
+        width: 100px;
+        height:  150px;
+    }
+    
+ 
+  }
+
+
+// ============== 設備介紹 ==============
+.INTRODUCTION{
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.INTRODUCTION > p{
+    margin: 100px 0;
+    color: $blueblack;
+}
+
+.INTRODUCTION_PHOTO{
+    display: flex;
+}
+
+
+.GALLERY{
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    height: 600px;
+    
+    
+}
+
+.GALLERY a{
+    margin:  0 15px 44px;
+}
+
+.GALLERY img{
+    width: 277px;
+    height: 277px;
+    border-radius: 0 50px 0 0;
+}
+
+
+
+
+#IMG_CONTAINER{
+    position: relative;
+    width: 1070px;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 0 100px 0 0;
+}
+
+#IMG_CONTAINER > img{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+
+
+
+
+
+// ================= 交通位置及門診時刻表 ====================
+
+
+.LOCATION_WRAPPER{
+    margin-top: 150px;
+    padding-bottom: 200px;
+    display: flex;
+
+}
+
+.LOCATION_LEFT{
+    width: 50%;
+    // border: 1px solid;
+}
+
+.LOCATION_RIGHT{
+    width: 50%;
+    padding-left: 30px;
+}
+
+.LOCATION_LOGO{
+    margin-bottom: 20px;
+}
+
+.LOCATION_INFORMATION{
+    display: flex;
+    padding: 10px 0;
+
+    i{
+        font-size: 35px;
+        color: $blueblack;
+        padding-right: 15px;
+    }
+
+    p{
+        line-height: 35px;
+        color: $blueblack;
+    }
+}
+
+
+.LOCATION_TIMETABLE{
+    margin-top: 20px;
+
+    img{
+        border-radius: 10px ;
+    }
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// =========================  RWD ===============================
+
+// 手機版414px
+@mixin m() {
+    @media screen and (max-width: 414px) {
+        @content;
+    }
+}
+
+
+@include m {
+    .ABOUT{
+
+
+        
+        .BIG_TITLE { 
+            padding-top: 30px;
+            position: relative;
+        }
+
+        //================= 主視覺部分  ===================
+        .APPOINTMENT{
+            display: none;
+        }
+
+        
+
+        //  ============ header ===========
+   
+        .M_HEADER_NAV > img{
+            width: 75px;
+        }
+       
+        .M_HEADER_NAV > ul{
+            display: none;
+        }
+
+        
+
+        .CAROUSEL{
+ 
+            .PAWPAW{
+                position: absolute;
+                top: 5%;
+                left: 28vw;
+                > picture > img{
+                
+                    width: 45vw;
+                    
+                }
+
+            } 
+            
+            
+        
+
+            .DOT{
+                
+                position: absolute;
+                width: 120px;
+                height: 120px;
+                left: -62px;
+                top: 25vh;
+                z-index: 10;
+                
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: radial-gradient(circle, $white 0%, $white 20%, transparent 25%, transparent 100%);
+                    background-size: 10px 10px;
+                    background-position: 0 0;
+                }
+            }
+            
+            .DOT1{
+                display: block;
+                position: absolute;
+                width: 170px;
+                height: 170px;
+                left: auto;
+                right: 10px;
+                bottom: -10px;
+                z-index: 10;
+    
+
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: radial-gradient(circle, $white 0%, $white 20%, transparent 0%, transparent 100%);
+                    background-size: 14px 14px;
+                    background-position: 0 0;
+                }
+            
+            }
+
+        }
+        
+
+
+    //============關於院所TITLE========== 
+    
+
+    .ABOUTUS_TITLE{
+
+        &::after {
+            content: "";
+            position: absolute;
+            border: 2px solid $lightblue;
+            width: 89vw;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    .FAKE_HIGH{
+        // height: 705px;
+    
+        height: 70vh;
+    }
+
+
+    .ABOUT_BG > picture > img{
+        width: 100%;
+        position: absolute;
+        top:195px;
+    }
+
+
+    // ================= 醫院簡介 ====================
+
+
+    .DOT2{
+        display: none;
+    }
+
+    .CLINIC_PROFILE{
+        margin: 0 auto;
+        margin-top: 50px;
+        max-width: 1200px;
+        margin-bottom: 80px;
+
+    }
+
+    .CLINIC_PROFILE > img{
+        display: block;
+        float:none;
+        padding-right: 0px;
+        margin: 0 auto;
+        width: 166px;
+    }
+
+    .CLINIC_PROFILE > .p1{
+        display: none;
+    }
+
+    .CLINIC_PROFILE > .p2{
+        
+        padding-top: 40px;
+        line-height: 160%;
+        display: block;
+        text-align: justify;
+     
+    }
+
+    .BTN_WRAAPER{
+        text-align: center;
+
+        .BTN{
+            width: 135px;
+            height: 50px;
+            font-size: 15px;
+            line-height: 50px;
+            
+        }
+    }
+
+    //======= 設備介紹 =======
+
+    .EN{
+        letter-spacing: 1px;
+    }
+
+
+    .INTRODUCTION{
+        margin: 0 auto;
+        text-align: center;
+        width: auto;
+        
+    }
+    
+    .INTRODUCTION > p{
+        margin: 60px auto;
+        line-height: 160%;
+        text-align: justify;
+        letter-spacing: normal;
+        width: 90%;
+    }
+    
+    .INTRODUCTION_PHOTO{
+    
+        display: block;
+
+        #IMG_CONTAINER{
+            display: flex;
+            width: 96%;
+            height: 340px;
+
+            img{
+                border-radius: 0 100px 0 0 ;
+            }
+        }
+    }
+    
+   
+    
+    .GALLERY{
+        padding-top: 20px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 90%;
+        height: 80px;
+        
+    }
+    
+    .GALLERY a{
+        margin:  0 ;
+    }
+    
+    .GALLERY img{
+        width: 80px;
+        height: 80px;
+        border-radius: 0 30px 0 0;
+    }
+    
+
+        // ================= 交通位置及門診時刻表 ====================
+
+
+        .LOCATION_WRAPPER{
+            
+            margin-top: 80px;
+            padding-bottom: 50px;
+            flex-direction: column;
+            
+        }
+
+        .LOCATION_LEFT{
+            width: auto;
+            order: 1;
+            margin-top: 30px;
+            
+            iframe{
+                width: 100%;
+                height: 33vh;
+            }
+            // border: 1px solid;
+        }
+
+        .LOCATION_RIGHT{
+            width: auto;
+            padding-left: 0;
+            order: 0;
+        }
+
+        .LOCATION_LOGO{
+            margin-bottom: 20px;
+
+            >img{
+                width: 260px;
+                height: 80px;
+            }
+        }
+
+        .LOCATION_INFORMATION{
+            display: flex;
+            padding: 10px 0;
+
+            i{
+                font-size: 18px;
+              
+            }
+
+            p{
+                line-height: 20px;
+
+                font-size: 15px;
+            }
+        }
+
+
+        .LOCATION_TIMETABLE{
+            margin-top: 0;
+            >picture{
+
+                >img{
+                    margin-top: 20px;
+                    width: 90vw;
+                    border-radius: 10px;
+                }
+            }
+            
+        
+        }
+
+            
+
+        
+    }
+}

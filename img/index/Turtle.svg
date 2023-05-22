@@ -1,0 +1,19 @@
+<svg width="116" height="74" viewBox="0 0 116 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="25.7891" width="46.9787" height="37.4852" rx="18.7426" transform="rotate(-0.0744137 0 25.7891)" fill="#07A55A"/>
+<rect width="17.6897" height="13" rx="6.5" transform="matrix(-4.01042e-07 -1 -1 4.2936e-08 91.0566 72.6895)" fill="#016D3A"/>
+<rect width="17.6897" height="12" rx="6" transform="matrix(-4.85012e-07 -1 -1 3.55026e-08 46.0566 72.6895)" fill="#016D3A"/>
+<rect width="19" height="12" rx="5.99999" transform="matrix(-5.38294e-07 -1 -1 3.19457e-08 97.0566 74)" fill="#07A55A"/>
+<rect width="19" height="13" rx="6.5" transform="matrix(-5.0985e-07 -1 -1 3.37279e-08 53.0566 74)" fill="#07A55A"/>
+<path d="M111.057 45.5C111.057 70.629 90.6856 61 65.5566 61C40.4277 61 20.0566 70.629 20.0566 45.5C20.0566 20.371 40.4277 0 65.5566 0C90.6856 0 111.057 20.371 111.057 45.5Z" fill="#07A55A"/>
+<path d="M31.0566 43H100.557" stroke="black" stroke-width="5" stroke-linecap="round"/>
+<path d="M38.0566 26H94.0566" stroke="black" stroke-width="5" stroke-linecap="round"/>
+<path d="M31.0566 43H101.057" stroke="black" stroke-width="5" stroke-linecap="round"/>
+<path d="M38.0566 26H94.0566" stroke="black" stroke-width="5" stroke-linecap="round"/>
+<path d="M66.0566 10L66.0566 51.5893" stroke="black" stroke-width="5" stroke-linecap="round"/>
+<path d="M85.0566 15.3984L85.0566 51.9998" stroke="black" stroke-width="5" stroke-linecap="round"/>
+<path d="M47.0566 15.3984L47.0566 51.9998" stroke="black" stroke-width="5" stroke-linecap="round"/>
+<path d="M101.057 57.6641C104.603 59.3822 112.012 62.1669 113.275 59.5599C114.538 56.953 107.808 52.7661 104.286 50.9986" stroke="black" stroke-width="5" stroke-linecap="round"/>
+<ellipse cx="2.67856" cy="3.74998" rx="2.67856" ry="3.74998" transform="matrix(-1 0 0 1 20.4141 34)" fill="black"/>
+<ellipse cx="2.67856" cy="3.74998" rx="2.67856" ry="3.74998" transform="matrix(-1 0 0 1 12.4141 34)" fill="black"/>
+<path d="M21.5078 49.0004C18.5078 54.0004 8.00781 49.0004 8.00781 49.0004" stroke="black" stroke-width="5" stroke-linecap="round"/>
+</svg>

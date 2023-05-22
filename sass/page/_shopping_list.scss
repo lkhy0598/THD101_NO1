@@ -1,0 +1,383 @@
+.SHOPPINGLIST{
+    .SHOPPINGLISTBG{
+        background-image: url('../../img/shopping_list/SHOPPING_LIST_ALLBG.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 20;
+
+        .BG {}
+        .BG_CLOUDS {
+
+            .BG_CLOUD {
+            }
+
+            .CLOUD_1 {
+                top: 800px;
+                left: 0;
+                .BG_CLOUD_IMG1 {
+                    transform: scale(-2) rotate(330deg);
+
+                    @include m() {
+                        transform: scale(-8) rotate(230deg);
+                    }
+                }
+                @include m() {
+                    img{
+                        width: 100%;
+                        filter: saturate(3.5),
+                    }
+                    top: 300px;
+                }
+            }
+            .CLOUD_2 {
+                top: 1540px;
+                left: 322px;
+
+                .BG_CLOUD_IMG2 {
+                    transform: scale(-2) rotate(340deg);
+
+                    @include m() {
+                        transform: scale(-10) rotate(40deg);
+                    }
+                }
+                @include m() {
+                    img{
+                        width: 100%;
+                        filter: saturate(3),contrast(.5);
+                    }
+                    top: 1860px;
+                    left: 0px;
+                }
+            }
+
+        }
+    }
+
+    .BREAD{
+        padding-top:361px ;
+
+        @include m {
+            padding-top: 130px;
+        }
+    }
+
+    .SHOPPINGLIST_TOP{
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 160px;
+
+        @include m {
+            flex-wrap: wrap;
+            margin-bottom: 100px;
+        }
+
+        .SHOPPINGLIST_SMALLIMG{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 8.5%;
+            margin-right: 10px;
+
+            section{
+                cursor: pointer;
+                background-color: #fff;
+                width: 100%;
+
+                @include m {
+                    margin-right: 10px;
+
+                }
+
+                &:hover{
+                        outline: 3px solid $blueblack;
+
+                        img{
+                            opacity: 1;
+                            transition: all .3s ease-in-out;
+                        }
+                }
+
+
+                    img{
+                        opacity: .5;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        transition: all .3s ease-in-out;
+                    }
+            }
+
+            @include m {
+                order: 2;
+                width: auto;
+                flex-direction: row;
+                padding-top: 15px;
+                margin-right: 0;
+
+                :last-child{
+                    margin: 0px;
+                }
+
+            }
+        }
+
+        .SHOPPINGLIST_BIGIMG{
+            overflow: hidden;
+            border-radius: 10px 80px 10px 10px;
+            position: relative;
+            cursor: pointer;
+            &:hover{
+                .SHOPPINGLIST_MAGNIFIER{
+                    background-image: url(/img/shopping_list/magnifier_hover.png);
+                    width: 90px;
+                    height: 90px;
+                }
+
+                .SHOPPINGLIST_IMG{
+                    img{
+                        transform: scale(1.2);
+                        transition: all .5s ease-in-out ;
+                    }
+                }
+
+
+            }
+            
+            .SHOPPINGLIST_MAGNIFIER{
+                transform: scale(.8);
+                position: absolute;
+                right: 30px;
+                bottom: 10px;
+                z-index: 6;
+
+                @include m {
+                    transform: scale(.6);
+                    right: 0px;
+                    bottom: 0px;
+                }
+            }
+
+            .SHOPPINGLIST_IMG{
+                display: block;
+                height: 100%;
+                background-color: #fff;
+                img{
+                    // width: 100%;
+                    display: block;
+                    margin: 0 auto;
+                    // height: 100%;
+                    // object-fit: contain;
+                    transform: scale(1);
+                    transition: all .5s ease-in-out ;
+
+                    @include m {
+                        height: auto;
+                        width: 100%;
+                    }
+                }
+            }
+
+            @include m {
+                order: 0;
+                margin-right: 0px;
+            }
+
+        }
+
+        .SHOPPINGLIST_TOPTEXT{
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: space-between;
+
+            h2{
+                color: $blueblack;
+                line-height: 58px;
+                margin-bottom: 45px;
+            }
+
+            h1{
+                color:$redprice;
+                margin-bottom: 53px;
+            }
+
+            h3{
+                color: $blueblack;
+                margin-bottom: 20px;
+            }
+
+            .ITEMCOUNT_BTN{
+                margin-bottom: 20px;
+            }
+
+            .SHOPPINGLIST_CARTBTN{
+                margin-bottom: 40px;
+                .BTN{
+                width: 100%;
+                background: $linear-orange;
+                font-weight: 700;
+                &:hover{
+                    background: $linear-orange-hover;
+                    color: $white;
+                }
+
+                i{
+                    margin-right: 10px;
+                }
+                }
+            }
+
+            .SHOPPINGLIST_SHARE{
+                display: flex;
+                p{
+                    margin-right: 20px;
+                }
+
+                a{  
+                    display: inline-block;
+                    margin-right: 20px;
+                    width: 25px;
+                    
+                    img{
+                        display: inline-block;
+                        width: 100%;
+
+                    }
+                }
+            }
+
+            @include m {
+                order: 2;
+                padding-top: 20px;
+
+                h2{
+                    line-height: 45px;
+                }
+            }
+        }
+        
+    }
+
+// ======================================================================
+
+    .SHOPPINGHOT{
+        width: 100%;
+        margin-bottom: 70px;
+    }
+
+    .SMALL_TITLE{
+        margin: 0 auto;
+        // padding-top: 45px;
+        position: relative;
+
+        .DOG{
+            background-image: url(../../img/shopping_list/dog01.png);
+            width: 600px;
+            height: 150px;
+            background-repeat: no-repeat;
+            background-position-x: 0px;
+            background-size: 3600px 150px;
+            position: absolute;
+            bottom: -28px;
+            left: 380px;
+
+            &:hover{
+                animation:ANIDOG 2s steps(5,start) forwards; 
+            }
+
+            @keyframes ANIDOG {
+                0%{
+                    background-position-x: 0px;
+                }
+            
+                100%{
+                    background-position: -3000px;
+                }
+            }
+
+            @include m {
+                display: none;
+            }
+
+        }
+        .DOGFOOD{
+            position: absolute;
+            display: inline-block;
+            width: 50px;
+            bottom: 0px;
+            right: 0px;
+
+            img{
+                width: 100%;
+            }
+
+            @include m {
+                display: none;
+            }
+        }
+    }
+
+    .swiper-button-prev{
+        top: var(--swiper-navigation-top-offset,38%);
+        left: 5px;
+        color: $orange;
+        font-weight: 600;
+
+        @include m {
+            display: none;
+        }
+    
+    }
+    
+    .swiper-button-next{
+        top: var(--swiper-navigation-top-offset,38%);
+        color: $orange;
+        right: 5px;
+        font-weight: 600;
+
+        @include m {
+            display: none;
+        }
+    
+    }
+
+
+// ===================================================================
+
+    .SHOPPINGLIST_CONTENT{
+        margin-bottom: 100px;
+        .SMALL_TITLE{
+            margin-bottom: 40px;
+        }
+
+        p{
+            white-space: pre-wrap;
+            line-height: 40px;
+            color: $blueblack;
+            margin-bottom: 40px;
+
+            b{
+                font-weight: bold;
+            }
+        }
+    }
+
+    .SHOPPINGLIST_ARTICLE{
+        img{
+            width: 100%;
+        }
+    }
+
+    .SHOPPINGLISTBTN_BACK{
+        width: 320px;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        margin-bottom: 200px;
+
+        @include m {
+            margin-bottom: 150px;
+        }
+    }
+
+}

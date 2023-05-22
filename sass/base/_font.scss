@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@mixin m() {
+    @media screen and (max-width: 414px) {
+        @content;
+    }
+}
+
+$h1: 4.5rem;
+$h2: 3.5rem;
+$h3: 3rem;
+$p: 2.5rem;
+$littleword:2rem;
+$bread: 1.5rem;
+$initial:10px;
+
+h1{
+    font-size: $h1;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    @include m(){
+        font-size: $h2;
+    }
+}
+h2{
+    font-size: $h2;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    @include m(){
+        font-size: $h3;
+    }
+}
+h3{
+    font-size: $h3;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    @include m(){
+        font-size: $p;
+    }
+}
+p{
+    font-size: $p;
+    letter-spacing: 1.5px;
+    @include m(){
+        font-size: $littleword;
+    }
+}
+
+.BREAD{
+    font-size: $bread;
+    // font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+.EN{
+    font-size: $bread;
+    font-weight: 400;
+    font-family: Arial;
+}

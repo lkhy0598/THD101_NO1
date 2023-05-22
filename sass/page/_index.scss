@@ -1,0 +1,1374 @@
+.INDEX{
+    overflow-x: hidden;
+
+    
+
+    .BIG_TITLE { 
+        padding-top: 100px;
+        position: relative;
+    }
+
+    
+
+
+  
+// ============= 動物插畫區 =================
+
+
+.CONSULTATION_ANI{
+    animation:ANI 15s  linear infinite; 
+    
+   
+
+    .HIPPO{
+        display: inline-block;
+        background-image: url(../../img/index/test.png);
+        width: 300px;
+        height: 200px;
+        background-size: 1800px 200px;
+        animation:ANI4 2.5s steps(6,end) infinite; 
+        position: absolute;
+        bottom: -20px;
+        right: 220px;
+        margin: 0;
+        padding: 0  ;
+    }
+    
+    @keyframes ANI4 {
+        0%{
+            background-position-x: 0px;
+        }
+    
+        100%{
+            background-position: -1800px;
+        }
+    }
+    
+    .HIPPO2{
+        display: inline-block;
+        background-image: url(../../img/index/test.png);
+        width: 150px;
+        height: 100px;
+        background-size: 900px 100px;
+        animation:ANI5 2.5s steps(6,end) infinite; 
+        position: absolute;
+        bottom: -20px;
+        right: 30px;
+        margin: 0;
+        padding: 0  ;
+    }
+    
+    @keyframes ANI5 {
+        0%{
+            background-position-x: 0px;
+        }
+    
+        100%{
+            background-position: -900px;
+        }
+    }
+    
+}
+
+@keyframes ANI {
+    0%{
+        transform: translate(1200px);
+    }
+
+    100%{
+        transform: translate(600px);
+    }
+}
+
+
+// ======== (資訊導覽的動物) =======
+.DINO_RABBIT{
+    position: absolute;
+    width: 120px;
+    bottom: 4px;
+    left: 25vw;
+    display: block;
+    animation: walk 5s alternate infinite;
+}
+@keyframes walk {
+    0%{
+        left: 25vw;
+        
+    }
+
+    100%{
+        left: 60vw;
+    }
+}
+
+
+
+// =========== 服務項目的動物(長頸鹿) ==============
+.INFORMATION_ANI{
+   
+    z-index: 50;
+    position: absolute;
+
+    .GIRAFFE{
+        display: inline-block;
+        background-image: url(../../img/index/Giraffe.png);
+        width: 135px;
+        height: 900px;
+        background-size: 1215px 900px;
+        animation:ANI20 4s steps(9,end) infinite; 
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position-x: 0px;
+        top: 0px;
+        left: -150px;
+        margin: 0;
+        padding: 0  ;
+
+        @include m {
+            display: none;
+        }
+    }
+    
+    @keyframes ANI20 {
+        0%{
+            background-position-x: 0px;
+        }
+    
+        100%{
+            background-position: -1215px;
+        }
+    }
+    
+    
+    
+}
+
+// =========== 服務項目的動物 ==============
+
+.SERVICES_ANI{
+    animation: SERVICES 30s  linear infinite; 
+    z-index: 50;
+   
+    @include m {
+        animation: none;
+    }
+    .KOALA{
+        display: inline-block;
+        background-image: url(../../img/index/koala.png);
+        width: 120px;
+        height: 110px;
+        background-size: 720px 110px;
+        animation:ANI10 8s steps(6,end) infinite; 
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position-x: 0px;
+        bottom: -20px;
+        right: 220px;
+        margin: 0;
+        padding: 0  ;
+
+        @include m{
+            width: 60px;
+            height: 50px;
+            bottom: 3px;
+            right: 30px;
+            background-size: 360px 50px;
+            background-repeat: repeat;
+
+            @keyframes ANI10 {
+                0%{
+                    background-position-x: 0px;
+                }
+            
+                100%{
+                    background-position: -360px;
+                }
+            }
+        }
+    }
+
+    
+    @keyframes ANI10 {
+        0%{
+            background-position-x: 0px;
+        }
+    
+        100%{
+            background-position: -720px;
+        }
+    }
+    
+    
+    
+}
+
+@keyframes SERVICES {
+    0%{
+        transform: translate(800px);
+    }
+
+    100%{
+        transform: translate(1200px);
+    }
+}
+
+// =========== 醫院特色的動物 ==============
+
+.FEATURE_ANI{
+    animation: FEATURE 30s  linear infinite; 
+    z-index: 50;
+    @include m {
+        animation: none;
+    }
+
+    .BIRD1{
+        display: inline-block;
+        background-image: url(../../img/index/bird.png);
+       
+        width: 100px;
+        height: 200px;
+        background-size: 600px 200px;
+        animation:ANI15 8s steps(6,end) infinite; 
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position-x: 0px;
+        bottom: 5px;
+        left: 20vw;
+        margin: 0;
+        padding: 0  ;
+        @include m{
+            width: 50px;
+            height: 100px;
+            bottom: 4px;
+            left: 69vw;
+            background-size: 300px 100px;
+            background-repeat: repeat;
+            @keyframes ANI15 {
+                0%{
+                    background-position-x: 0px;
+                }
+            
+                100%{
+                    background-position: -300px;
+                }
+        
+                
+            }
+        }
+    }
+    
+    @keyframes ANI15 {
+        0%{
+            background-position-x: 0px;
+        }
+    
+        100%{
+            background-position: -600px;
+        }
+
+        
+    }
+    
+    .BIRD2{
+        display: inline-block;
+        background-image: url(../../img/index/bird2.png);
+     
+        width: 100px;
+        height: 200px;
+        background-size: 600px 200px;
+        animation:ANI15 8s steps(6,end) infinite; 
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position-x: 0px;
+        bottom: 100px;
+        left: 10vw;
+        margin: 0;
+        padding: 0  ;
+        @include m {
+            display: none;
+        }
+    }
+    
+    
+}
+
+
+
+// ======================== MASTER_VISION ==========================
+
+
+
+.CAROUSEL{
+    position: relative;
+    
+    .PAWPAW{
+        position: absolute;
+        top: 50%;
+        left: 6vw;
+        > picture > img{
+        
+            width: 35vw;
+            
+            
+        }
+    } 
+}
+
+.DOT{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 30px;
+    bottom: 40px;
+    z-index: 10;
+    
+}
+
+.DOT1{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 0px;
+    bottom: 0px;
+    z-index: 10;
+
+}
+
+.DOT2{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 0px;
+    top: 5px;
+    z-index: 10;
+
+}
+
+
+
+// ==================== 背景雲裝飾 =======================
+.BACKGROUND {
+    // .BG {}
+
+    .BG_CLOUDS {
+
+        // .BG_CLOUD {}
+
+        .CLOUD_1 {
+            top: 500px;
+            left: 0;
+
+            .BG_CLOUD_IMG1 {
+                transform: scale(-2) rotate(330deg);
+
+                @include m() {
+                    transform: scale(-10) rotate(330deg);
+                }
+            }
+
+            @include m() {
+                top: 1600px;
+            }
+        }
+
+        .CLOUD_2 {
+            top: 3040px;
+            left: 322px;
+
+            .BG_CLOUD_IMG2 {
+                transform: scale(-2) rotate(340deg);
+
+                @include m() {
+                    transform: scale(-10) rotate(340deg);
+                }
+            }
+
+            @include m() {
+                top: 3830px;
+                left: 260px;
+            }
+        }
+    }
+}
+// ==========看診進度==========
+.CONSULTATION_UL{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 120px;
+   
+}
+
+
+.CONSULTATION_ITEM{
+    padding: 0 90px;
+}
+
+.TOPBACKGROUND_1 , .TOPBACKGROUND_2, .TOPBACKGROUND_3{
+    width: 293px;
+    height: 55px;
+    background-color: $lightblue;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+
+.TOPBACKGROUND_1::after{
+    content: "第一診間";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+    width: 182px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border-radius: 100px;
+    background-color: $orange;
+}
+
+.TOPBACKGROUND_2::after{
+    content: "第二診間";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+    width: 182px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border-radius: 100px;
+    background-color: $orange;
+}
+
+.TOPBACKGROUND_3::after{
+    content: "第三診間";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+    width: 182px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border-radius: 100px;
+    background-color: $orange;
+}
+
+
+.CONSULTATIONCARD{
+    width: 293px;
+    height: 296px;
+    background-color: $white;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+
+    >p{
+        padding: 20px 0;
+        font-weight: 500;
+        color: $blueblack;
+    }
+
+    
+
+    .CONSULTATION_NUM{
+        font-size: 80px;
+        font-weight: 700;
+        color: $orange;
+    }
+}
+
+
+// ======== 資訊導覽 ========
+
+.INFORMATION_CARD{
+    padding-top: 50px;
+    position: relative;
+
+}
+
+.DOT3{
+   
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -230px;
+    top: 50%;
+    transform: translate(0,-45%);
+    z-index: 0;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(circle, $white 10%, $white 28%, transparent 0%, transparent 100%);
+        background-size: 17px 17px;
+        background-position: 0 0;
+    }
+
+}
+
+.INFORMATION_CARD_A{
+    color: $blueblack;
+    transition: all 0.3s ease;
+    &:hover{
+        filter: drop-shadow(0px 0px 5px $blueblack);
+        transform: scale(1.05);
+    }
+}
+
+
+.BTN_WRAAPER{
+    margin-top: 80px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.BTN{
+    width: 320px;
+    
+}
+
+// =========== 服務項目 =============
+.BIG_TITLE{
+    z-index: 0;
+}
+
+.DOCTOR{
+    position: absolute;
+    top: -28px;
+    left: 250px;
+    @include m{
+        display: none;
+    }
+}
+
+
+.DOT4{
+   
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: -100px;
+    top: 70%;
+    transform: translate(0,-45%);
+    z-index: -1;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(circle, $white 0%, $white 28%, transparent 0%, transparent 100%);
+        background-size: 17px 17px;
+        background-position: 0 0;
+    }
+
+}
+
+
+.SERVICES_UL{
+    // border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+    position: relative;
+    // opacity: 0;
+    // transition: opacity 2s ease;
+    
+    
+}
+
+.SERVICES_ITEM:nth-child(1){
+    opacity: 0;
+    transition: opacity .5s linear;
+}
+
+.SERVICES_ITEM:nth-child(2){
+    opacity: 0;
+    transition: opacity 1.5s linear;
+}
+
+.SERVICES_ITEM:nth-child(3){
+    opacity: 0;
+    transition: opacity 2s linear;
+}
+
+.SERVICES_ITEM:nth-child(4){
+    opacity: 0;
+    transition: opacity 2.5s linear;
+}
+
+
+.SERVICES_ITEM.SHOW{
+    opacity: 1;
+}
+
+.SERVICES_ITEM{
+    padding: 0 40px;
+    text-align: center;
+    z-index:1;
+}
+
+.SERVICES_ITEM > img{
+    border-radius: 80px 10px 80px 10px;
+}
+
+.SERVICES_ITEM h3{
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+
+// ============= 醫院特色 ===================
+
+
+.DOT5{
+   
+    position: absolute;
+    width: 200px;
+    height: 200px;
+  
+    top:135px;
+
+    right: 190px;
+    transform: translate(0,-45%);
+    z-index: 0;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(circle, $white 0%, $white 28%, transparent 0%, transparent 100%);
+        background-size: 17px 17px;
+        background-position: 0 0;
+    }
+
+}
+
+
+.DOT6{
+   
+    position: absolute;
+    width: 420px;
+    height: 420px;
+  
+    top:13.45px;
+
+    right: -235px;
+    transform: translate(0,-45%);
+    z-index: -1;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(circle, $white 0%, $white 28%, transparent 0%, transparent 100%);
+        background-size: 17px 17px;
+        background-position: 0 0;
+    }
+
+}
+
+
+
+.FEATURE_WRAPPER{
+    display: flex;
+  
+    
+}
+
+.FEATURE_LEFT{
+    margin-bottom: 120px;
+}
+
+.FEATURE_ITEM{
+    display: flex;
+    justify-content: space-between;
+    // padding: 60px 0;
+    &:first-child{
+        padding-top: 100px;
+        padding-bottom: 90px;
+        opacity: 0;
+        transition: opacity .3s linear;
+    }
+    
+    &:nth-child(2) {
+        padding-bottom: 90px;
+        opacity: 0;
+        transition: opacity .5s linear;
+    }
+    
+    &:nth-child(3) {
+        padding-bottom: 90px;
+        opacity: 0;
+        transition: opacity .7s linear;
+    }
+
+    &:last-child{
+        padding-bottom: 100px;
+        opacity: 0;
+        transition: opacity .9s linear;
+        // padding-top: 60px;
+    }
+    
+}
+.FEATURE_ITEM.SHOW{
+    opacity: 1;
+}
+
+.FEATURE_ITEM > .P1{
+    line-height: 160%;
+    padding: 0 50px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.FEATURE_ITEM .P2{
+    display: none;
+}
+
+.FEATURE_RIGHT {
+    z-index: 0;
+}
+.FEATURE_RIGHT > img{
+    border-radius: 100px 0 0 100px;
+    
+}
+
+.ARC_TITLE{
+  
+    min-width: 80px;
+    min-height: 80px;
+    
+}
+
+// ============== 核心項目 ====================
+
+.CORE_CONTENT{
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+   
+    
+}
+
+
+.CORE_CONTENT_ITEM{
+    padding: 0 20px;
+    text-align: center;
+    color: $blueblack;
+ 
+    
+    & > li >img:hover{
+        transition: all 0.5s ease;
+        filter: drop-shadow(0px 0px 5px $blueblack);
+        transform: scale(1.05);
+    }
+}
+
+.CORE_CONTENT_ITEM.COL-4{
+    width: 400px;
+}
+
+.CORE_CONTENT_ITEM > li >img{
+    border-radius: 80px 10px 80px 10px;
+}
+
+.CORE_CONTENT_ITEM > li > h3{
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+
+
+// ================= 交通位置及門診時刻表 ====================
+
+
+.LOCATION_WRAPPER{
+    margin-top: 150px;
+    padding-bottom: 200px;
+    display: flex;
+
+}
+
+.LOCATION_LEFT{
+    width: 50%;
+    // border: 1px solid;
+    position: relative;
+
+
+    .DOT7{
+   
+        position: absolute;
+        width: 420px;
+        height: 420px;
+      
+        top: 40px;
+        
+        left: -235px;
+        transform: translate(0,-45%);
+        z-index: -1;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, $white 0%, $white 28%, transparent 0%, transparent 100%);
+            background-size: 17px 17px;
+            background-position: 0 0;
+        }
+    
+    }
+}
+
+.LOCATION_RIGHT{
+    width: 50%;
+    padding-left: 30px;
+}
+
+.LOCATION_LOGO{
+    margin-bottom: 20px;
+}
+
+.LOCATION_INFORMATION{
+    display: flex;
+    padding: 10px 0;
+
+    i{
+        font-size: 35px;
+        color: $blueblack;
+        padding-right: 15px;
+    }
+
+    p{
+        line-height: 35px;
+        color: $blueblack;
+    }
+}
+
+
+.LOCATION_TIMETABLE{
+    margin-top: 22.5px;
+
+    >picture{
+        >img{
+            border-radius: 10px ;
+        }
+    }
+}
+
+
+}
+// =========================  RWD ===============================
+
+// 手機版414px
+@mixin m() {
+    @media screen and (max-width: 414px) {
+        @content;
+    }
+}
+
+
+@include m {
+
+    
+    .INDEX{
+        .DOT3, .DOT4, .DOT5, .DOT6, .DOT7{
+            display: none;
+        }
+
+        
+        .BIG_TITLE { 
+            padding-top: 30px;
+            position: relative;
+        }
+
+       
+
+        //================= 主視覺部分  ===================
+        .APPOINTMENT{
+            display: none;
+        }
+
+        
+
+        // ============ header ===========
+   
+        .M_HEADER_NAV > img{
+            width: 75px;
+        }
+       
+        .M_HEADER_NAV > ul{
+            display: none;
+        }
+
+       
+
+        .CAROUSEL{
+            .PAWPAW{
+                position: absolute;
+                top: 5%;
+                left: 28vw;
+                > picture > img{
+                
+                    width: 45vw;
+                    
+                }
+
+            } 
+
+            
+        
+
+            .DOT{
+                position: absolute;
+                width: 120px;
+                height: 120px;
+                left: -62px;
+                top: 25vh;
+                z-index: 10;
+                
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: radial-gradient(circle, $white 0%, $white 20%, transparent 25%, transparent 100%);
+                    background-size: 10px 10px;
+                    background-position: 0 0;
+                }
+            }
+            
+            .DOT1{
+                position: absolute;
+                width: 170px;
+                height: 170px;
+                left: auto;
+                right: 10px;
+                bottom: -10px;
+                z-index: 10;
+    
+
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: radial-gradient(circle, $white 0%, $white 20%, transparent 0%, transparent 100%);
+                    background-size: 14px 14px;
+                    background-position: 0 0;
+                }
+            
+            }
+
+        }
+        
+
+        //  ========= header下方區塊的背景 ==========
+
+
+
+
+        .DOT2{
+            display: none;
+        }
+
+        
+        .BIG_TITLE{
+            
+
+            .HIPPO_TURTLE1{
+                position: absolute;
+                width: 80px;
+                bottom:  0;
+                right: 0;
+            
+            }
+
+            .HIPPO_TURTLE2 , .HIPPO_TURTLE3{
+                display: none;
+            }
+        }
+
+
+        // ==========看診進度==========
+
+        .CONSULTATION_ANI{
+            animation:none; 
+
+          
+            .HIPPO{
+                display: inline-block;
+                background-image: url(../../img/index/test.png);
+                width: 100px;
+                height: 80px;
+                background-size: 600px 80px;
+                animation:ANI4 2.5s steps(6,end) infinite; 
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                margin: 0;
+                padding: 0  ;
+                background-repeat: repeat;
+                background-position-x: 0px;
+            }
+            
+            @keyframes ANI4 {
+                0%{
+                    background-position-x: 0px;
+                }
+            
+                100%{
+                    background-position-x: -600px;
+                }
+            }
+            
+            .HIPPO2{
+                display: none;
+            }
+            
+        }
+
+      
+        
+        
+        
+      
+        .CONSULTATION_UL{
+            margin-top: 50px;
+            margin-bottom: 0px;        
+            flex-direction: column;
+         
+        }
+
+        .CONSULTATION_ITEM{
+            padding: 0 ;
+         
+        }
+
+        .TOPBACKGROUND_1 , .TOPBACKGROUND_2, .TOPBACKGROUND_3{
+            width: auto;
+        }
+
+
+        .CONSULTATIONCARD{
+            width: auto;
+            height: auto;
+            margin-bottom: 60px;
+            
+            >p{
+                font-size: 25px;
+                padding: 10px 0;
+
+            }
+        }
+
+
+        // ======== (資訊導覽) =======
+
+        .IF{
+            padding: 0;
+            margin-bottom: 15px;
+        }
+        
+        .DINO_RABBIT{
+            position: absolute;
+            width: 60px;
+            bottom: 4px;
+            right: 0;
+            left: auto;
+            display: block;
+            animation: walk 3s alternate infinite;
+        }
+        @keyframes walk {
+            0%{
+                right: 0vw;
+                
+            }
+
+            100%{
+                right:10vw;
+            }
+        }
+
+
+        .INFORMATION_CARD{
+            padding-top: 10px;
+        }
+        
+        
+        .BTN_WRAAPER{
+            margin-top: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .BTN{
+            width: 135px;
+            height: 50px;
+            line-height: 50px;
+            font-size: $bread;
+        }
+
+        
+        // =========== 服務項目 =============
+
+
+        .SERVICES_UL{
+            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin:  60px 0 20px;
+            
+        }
+
+
+        .SERVICES_ITEM{
+            padding: 0 15px;
+            text-align: center;
+            width: 140px;
+            padding-bottom: 25px;
+            
+            
+        }
+
+        .SERVICES_ITEM > img{
+            width: 130px;
+            height: 130px;
+            border-radius: 50px 10px 50px 10px;
+        }
+
+        .SERVICES_ITEM h3{
+            padding-top: 10px;
+            padding-bottom: 5px;
+            font-size: $littleword;
+            
+        }
+        .SERVICES_ITEM p{
+            font-size: $initial;
+        }
+
+        .COL-3{
+            margin-right: 0;
+        }
+
+        .COL-3:last-child{
+            margin-right: 0;
+        }
+
+
+
+        // ============= 醫院特色 ===================
+
+        .FEATURE_WRAPPER{
+            display: flex;
+            
+        }
+
+        .FEATURE_LEFT{
+            margin-bottom: 0px;
+        }
+
+        .FEATURE_ITEM{
+            display: flex;
+            justify-content: space-between;
+            // padding: 60px 0;
+            &:first-child{
+                padding-top: 40px;
+                padding-bottom: 20px;
+            }
+            
+            &:nth-child(2) {
+                padding-bottom: 20px;
+            }
+            
+            &:nth-child(3) {
+                padding-bottom: 20px;
+            }
+
+            &:last-child{
+                padding-bottom: 30px;
+ 
+            }
+            
+        }
+
+        .FEATURE_ITEM > .P1{
+            display: none;
+        }
+
+        .FEATURE_ITEM > .P2{
+            display: block;
+            font-size: 20px;
+            line-height: 160%;
+            padding-left: 20px;
+        }
+
+
+        .FEATURE_RIGHT > img{
+            display: none;
+        }
+
+        .ARC_TITLE{
+        
+            min-width: 40px;
+            min-height: 40px;
+            
+        }
+        
+
+        // ============== 核心項目 ====================
+
+        .CORE_CONTENT{
+            width: auto;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+    
+
+        }
+
+
+        .CORE_CONTENT_ITEM{
+            padding: 0 ;
+            text-align: center;
+            &:hover{
+                filter: drop-shadow(0px 0px 0px $blueblack);
+                transform: scale(1);
+            }
+        }
+
+        .CORE_CONTENT_ITEM.COL-4{
+            width: auto;
+            margin-right: 0;
+        }
+        
+        .CORE_CONTENT_ITEM > li > img{
+            border-radius: 80px 10px 80px 10px;
+            width: 90vw;
+        }
+        
+        .CORE_CONTENT_ITEM > li > h3{
+            padding-top: 20px;
+            padding-bottom: 5px;
+            font-size: 30px;
+        }
+
+        .CORE_CONTENT_ITEM > li > p {
+            padding-bottom: 30px;
+        }
+        
+   
+
+
+        // ================= 交通位置及門診時刻表 ====================
+
+
+        .LOCATION_WRAPPER{
+            
+            margin-top: 80px;
+            padding-bottom: 50px;
+            flex-direction: column;
+            
+        }
+
+        .LOCATION_LEFT{
+            width: auto;
+            order: 1;
+            margin-top: 30px;
+            
+            iframe{
+                width: 100%;
+                height: 33vh;
+            }
+            // border: 1px solid;
+        }
+
+        .LOCATION_RIGHT{
+            width: auto;
+            padding-left: 0;
+            order: 0;
+        }
+
+        .LOCATION_LOGO{
+            margin-bottom: 20px;
+
+            >img{
+                width: 260px;
+                height: 80px;
+            }
+        }
+
+        .LOCATION_INFORMATION{
+            display: flex;
+            padding: 10px 0;
+
+            i{
+                font-size: 18px;
+              
+            }
+
+            p{
+                line-height: 20px;
+
+                font-size: 15px;
+            }
+        }
+
+
+        .LOCATION_TIMETABLE{
+            margin-top: 0;
+            >picture{
+
+                >img{
+                    margin-top: 20px;
+                    width: 90vw;
+                    border-radius: 10px;
+                }
+            }
+            
+        
+        }
+
+            
+
+    }
+}

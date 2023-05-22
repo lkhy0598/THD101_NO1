@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("/css/reset.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+@import url("https://code.jquery.com/jquery-3.6.4.js");
+
+@import 'mixin/mixin';
+
+@import 'base/font';
+@import 'base/color';
+
+@import 'component/body';
+@import "component/btn";
+@import 'component/card';
+@import 'component/form';
+@import 'component/title';
+@import 'component/dot';
+@import 'component/appointment';
+@import 'component/toggle';
+@import 'component/function_bar';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/login';
+@import 'layout/nav';
+@import 'layout/pop_up';
+@import 'layout/aside';
+@import 'layout/bgcloud';
+
+@import 'page/back_reserve_page';
+@import 'page/back_index';
+@import 'page/back_medical_record';
+@import 'page/back_member_profile';
+@import 'page/back_commodity_management';
+@import 'page/back_message_management';
+@import 'page/back_order_management';
+@import 'page/back_user_settings';
+@import 'page/back_appointment_schedule';
+@import 'page/index';
+@import 'page/about_us';
+@import 'page/information';
+@import 'page/member_center';
+@import 'page/member_pets_setting';
+@import 'page/order_record_inquiry';
+@import 'page/qa';  
+@import 'page/reserve';
+@import 'page/reserve_normal2';
+@import 'page/reserve_normal3';
+@import 'page/reserve_communication2';
+@import 'page/reserve_communication3';
+@import 'page/reserve_normal_complete';
+@import 'page/reserve_communication_complete';
+@import 'page/shopping';
+@import 'page/shopping_cart';
+@import 'page/shopping_cartp2';
+@import 'page/shopping_cartp3';
+@import 'page/shopping_list';
+@import 'page/web_login';
+@import 'page/information_content';
+

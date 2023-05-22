@@ -1,0 +1,232 @@
+/* 下方內容 */
+.BACK_MAIN_CONTENT{
+   display: flex;
+
+   /* 下方右側 */
+   .BACK_MAIN_CONTENT_RIGHT{
+      width: 82%;
+      padding: 55px 65px;
+      position: relative;
+      // box-sizing: border-box;
+
+
+      /* --------病歷搜尋表單---------- */
+      .MEDICAL_RECORD_SEARCH{
+         width: 74%;
+         margin: 0 auto;
+      
+         ul{
+            margin-top: 85px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            align-items: end;
+            padding: 0;
+      
+            input{
+               width: 100%;
+            }
+         }
+      
+         p{
+            width: 5%;
+            // margin-right: px;
+            margin-bottom: 20px;
+         }
+      
+      }
+      .MEDICAL_RECORD_SEARCH li:nth-child(1){
+         width: 20%;
+      }
+      .MEDICAL_RECORD_SEARCH li:nth-child(2){
+         width: 20%;
+      }
+      .MEDICAL_RECORD_SEARCH li:nth-child(3){
+         width: 14%;
+      }
+      .MEDICAL_RECORD_SEARCH li:nth-child(5){
+         width: 14%;
+      }
+
+      /* 病歷搜尋結果 */
+      .MEDICAL_RECORD_TABLE_ALL{
+         width: 74%;
+         margin: 0 auto 75px;
+         border: 1px solid black;
+         border-radius: 10px;
+
+         ul{
+            display: flex;
+            font-size: $p;
+
+            .bi-pencil, .bi-x-lg{
+               cursor: pointer;
+            }
+         }
+
+         .BACK_TABLE_TITLE{
+            background-color: $red;
+            color: $white;
+            height: 55px;
+            text-align: center;
+            line-height: 55px;
+            outline: 2px solid $red;
+            border-radius: 10px 10px 0 0;
+         }
+         .BACK_TABLE_CONTENT{
+            color: $blueblack;
+            text-align: center;
+            line-height: 80px;
+            min-height: 80px;
+         
+            li{
+               border-top: 1px solid black;
+               border-right:1px solid black;
+            }
+         }
+      }
+
+      .MEDICAL_RECORD_TABLE_ALL li:nth-child(1){
+         width: 20%;
+      }
+      .MEDICAL_RECORD_TABLE_ALL li:nth-child(2){
+         width: 17%;
+      }
+      .MEDICAL_RECORD_TABLE_ALL li:nth-child(3){
+         width: 17%;
+      }
+      .MEDICAL_RECORD_TABLE_ALL li:nth-child(4){
+         width: 30%;
+      }
+      .MEDICAL_RECORD_TABLE_ALL li:nth-child(5){
+         width: 8%;
+      }
+      .MEDICAL_RECORD_TABLE_ALL li:nth-child(6){
+         width: 8%;
+         border-right: none;
+      }
+
+
+      /*----------新增病歷----------*/
+      .BACK_ADD_MEDICAL_RECORD{
+         top: 55px;
+         left: 65px;
+         display: none;
+
+
+         .ADD_MEDICAL_RECORD{
+            width: 55%;
+            margin: 0 auto;
+   
+            .ADD_MEDICAL_RECORD_FORM{
+               display: flex;
+               flex-wrap: wrap;
+               list-style: none;
+               justify-content: space-between;
+               align-content: center;
+               margin-top: 85px;
+               margin-bottom: 70px;
+   
+               p{
+                  margin: 10px 0;
+               }
+               input{
+                  width: 100%;
+               }
+               select{
+                  width: 100%;
+               }
+   
+               /* 上傳檔案input */
+               .FILEBOX{
+                  position: relative;
+                  font-size: $p;
+                  color: $blueblack;
+   
+                  /* 檔案名稱 */
+                  .FILENAME{
+                     width: 100%;
+                     padding: 10px;
+                     border-radius: 10px;
+                     box-sizing: border-box;
+                     height: 45px;
+                     font-size: $littleword;
+                     color: $blueblack;
+                     border: 1px solid #9E9E9E;
+                     margin: 10px 0;
+                  }
+                  /* 選取檔案按鈕 */
+                  .FILEBUTTON{
+                     font-size: $littleword;
+                     font-family: Arial, "Noto Sans TC";
+                     background-color: #D9D9D9;
+                     width: 145px;
+                     height: 45px;
+                     border:0;
+                     border-radius:0 10px 10px 0;
+                     
+                     position:absolute;
+                     top: 35px;
+                     right:0px;
+                     cursor:pointer;
+                  }
+   
+                  /* 隱藏原按鈕 */
+                  .FILE{
+                     width: 145px;
+                     height: 45px;
+   
+                     position:absolute;
+                     top: 35px;
+                     right:0;
+                     cursor:pointer;
+   
+                     /* filter:alpha( opacity : 0); */
+                     opacity: 0;
+                  }
+   
+               }
+               
+            }
+            .ADD_MEDICAL_RECORD_FORM li:nth-child(1){
+               flex-basis: 100%;
+               margin-bottom: 20px ;
+            }
+            .ADD_MEDICAL_RECORD_FORM li:nth-child(8){
+               flex-basis: 100%;
+            }
+            .ADD_MEDICAL_RECORD_FORM li:nth-child(9){
+               flex-basis: 100%;
+            }
+            .ADD_MEDICAL_RECORD_FORM li{
+               width: 45%;
+            }
+            textarea{
+               width: 100%;
+            }
+            .BTN_BOX{
+               display: flex;
+            }
+         }
+   
+
+         
+
+      }
+
+      
+   }
+
+   .BTN_BACK{
+      width: 200px;
+      margin: 0 auto;
+      display: block;
+   }
+}
+
+
+
+
+
+

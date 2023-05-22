@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='css/style.css'>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <link rel="shortcut icon" type="image/png" href="img/shortcut_logo.png">
+    <title>填寫資料 SHOPPING_CART - 波波動物醫院</title>
+</head>
+
+<body class="SHOPPINGCARTP2">
+
+<!-- ========================= 彈跳視窗 ========================= -->
+<!-- 壓底黑色塊 -->
+<div id="modal" class="MODAL">
+    <!-- 關閉按鈕 -->
+    <a class="POPUP_CLOSEBTN" href="#">
+        <i class="bi bi-x-circle"></i>
+    </a>
+    <!-- 彈跳視窗_註冊/登入 -->
+    <div id="popup-wrap" class="POPUP_WRAP">
+        <div class="BG_CLOUD_BOX">
+            <img class="BG_CLOUD" src="./img/user_popup/USER_BG_CLOUD.png" alt="">
+        </div>
+        <!-- 導覽列 -->
+        <ul class="POPUP_NAVS">
+            <li class="POPUP_TABS "><a href="#POPUP_LOGIN">登入會員</a></li>
+            <li class="POPUP_TABS "><a href="#POPUP_SIGNUP">註冊會員</a></li>
+            <li class="POPUP_TABS FORGETTABS CLOSETABS"><a href="#">忘記密碼</a></li>
+            <li class="POPUP_TABS CHANGETABS CLOSETABS"><a href="#">修改密碼</a></li>
+
+        </ul>
+        <!-- 登入視窗 -->
+        <div class="POPUP_TABS_CONTENT">
+            <div id="POPUP_LOGIN" class="POPUP_BOX">
+                <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+
+                <form class="USER_FORM" method="post" action="Login.php">
+                    <div class="INPUT_GROUP">
+                        <i class="bi bi-envelope"></i>
+                        <input type="email" id="account" name="account" placeholder="請輸入電子信箱" /></br>
+                    </div>
+                    <div class="INPUT_GROUP">
+                        <i class="bi bi-lock-fill"></i>
+                        <input type="password" id="password" name="password" placeholder="請輸入密碼" /></br>
+                    </div>
+                    <div class="FORGET_BOX">
+                        <button type="button" class="FORGET_BTN">忘記密碼？</button>
+                    </div>
+                    <div class="INPUT_GROUP">
+                        <input type="submit" id="send-btn" class="BTN" value="登入" />
+                    </div>
+
+                    <div class="DIVIDING">
+                        <span>or</span>
+                    </div>
+                    <button type="submit" class="OTHERLOGIN_BTN">
+                        <span class="OTHERLOGIN_ICON">
+                            <img src="./img/user_popup/GOOGLE.svg" alt="">
+                        </span>
+                        <span>使用GOOGLE登入</span>
+                    </button>
+                </form>
+                <div class="BTN SIGNUP_BTN">註冊會員</div>
+            </div>
+            <!-- 註冊視窗 -->
+            <div id="POPUP_SIGNUP" class="POPUP_BOX ">
+                <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+
+                <form class="USER_FORM" method="post" action="SIGNUP.php">
+                    <div class="SIGNUP_INPUTS">
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-person-circle"></i>
+                            <input type="text" id="name" name="name" placeholder="請輸入真實姓名" />
+                        </div>
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-lock-fill"></i>
+                            <input type="password" id="password" name="password" placeholder="請輸入密碼" />
+                        </div>
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-lock"></i>
+                            <input type="password" id="password" name="password" placeholder="請再確認一次密碼" />
+                        </div>
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-phone"></i>
+                            <input type="number" id="phone" name="phone" placeholder="請輸入手機號碼" />
+                        </div>
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-envelope"></i>
+                            <input type="email" id="account" name="account" placeholder="請輸入電子信箱" />
+                            <!-- <button class="VERIFBTN BTN">
+                                    發送驗證信
+                                </button> -->
+                        </div>
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-key"></i>
+                            <input type="number" id="verifyNum" name="verifyNum" class="VERIFYINPUT"
+                                placeholder="請輸入驗證碼" />
+                            <button class="VERIFBTN BTN">
+                                發送驗證碼
+                            </button>
+                        </div>
+                    </div>
+
+                    <p>＊送出即同意「會員服務條款、隱私權保護聲明」</p>
+                    <div class="INPUT_GROUP">
+                        <input type="submit" id="send-btn" class=" SIGNUP_SUB BTN" value="驗證並送出" />
+                    </div>
+                </form>
+            </div>
+            <!-- 忘記密碼 -->
+            <div id="popup_forgetpass" class="POPUP_BOX ">
+                <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+                <form class="USER_FORM" method="post" action="SIGNUP.php">
+                    <div class="INPUT_GROUP">
+                        <i class="bi bi-envelope"></i>
+                        <input type="email" id="account" name="account" class="VERIFYINPUT" placeholder="請輸入電子信箱" />
+                        <button class="VERIFBTN BTN">
+                            發送驗證信
+                        </button>
+                    </div>
+                    <div class="INPUT_GROUP">
+                        <i class="bi bi-key"></i>
+                        <input type="number" id="verifyNum" name="verifyNum" class="VERIFYINPUT" placeholder="請輸入驗證碼" />
+                        <button class="VERIFBTN BTN">
+                            驗證
+                        </button>
+                    </div>
+                    <div class="BACKLOGIN_BOX">
+                        <button type="button" class="BACKLOGIN_BTN">返回登入</button>
+                    </div>
+                    <div class="FORGETPASS_DESC">
+                        <p>＊系統已寄出驗證信，請至信箱收取。</p>
+                        <p>＊若過久未收到驗證信件，請至垃圾信件匣或其他收件匣確認。</p>
+                    </div>
+                </form>
+                <div class="PASS_SEND_BOX">
+                    <p>＊送出後會直接跳轉到修改密碼頁</p>
+                    <div class="INPUT_GROUP">
+                        <input type="submit" id="send-btn" class="PASS_SUB BTN" value="送出" />
+                    </div>
+                </div>
+            </div>
+            <!-- 修改密碼 -->
+            <div id="popup_changepass" class="POPUP_BOX">
+                <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+                <form class="USER_FORM" method="post" action="SIGNUP.php">
+                    <div class="INPUT_GROUP">
+                        <i class="bi bi-lock-fill"></i>
+                        <input type="password" id="password" name="password" placeholder="請輸入密碼" />
+                    </div>
+                    <div class="INPUT_GROUP">
+                        <i class="bi bi-lock"></i>
+                        <input type="password" id="password" name="password" placeholder="請再確認一次密碼" />
+                    </div>
+                </form>
+                <div class="PASS_SEND_BOX">
+                    <p>＊送出後會直接跳轉到修改密碼頁</p>
+                    <div class="INPUT_GROUP">
+                        <input type="submit" id="send-btn" class="PASS_SUB BTN" value="修改密碼" />
+                    </div>
+                </div>
+            </div>
+            <!-- 修改完成畫面 -->
+            <div id="popup_changepass_succ" class="POPUP_BOX">
+                <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+                <div class="USER_FORM">
+                    <img class="CHANGEPASS_SUCC" src="./img/user_popup/CHANGEPASS_SUCC.png" alt="">
+                </div>
+                <div class="BACKTOLOGIN_BOX">
+                    <p>＊三秒後將跳轉到登入頁，如果沒跳轉請點選按鈕</p>
+                    <div class="INPUT_GROUP">
+                        <input type="submit" id="login-btn" class="BTN CHANGE_SUCC_BTN BACKLOGIN_BTN" value="登入會員" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- ===============================header================================= -->
+<header>
+
+    <nav class="HEADER_NAV">
+
+        <a href="homepage.html">
+            <div class="HEADERLOGO_BG_BOX HEADERLOGE_BG_TOP">
+                <div class="HEADERLOGO_PAW">
+                    <img src="./img/HEADERLOGO_PAW.svg" alt="">
+                    <div class="HEADERLOGO_CLAWS">
+                        <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
+                    </div>
+                </div>
+                <div class="HEADER_LOGO_NAME">
+                    <img src="./img/HEADERLOGO_NAME.svg" alt="">
+                </div>
+            </div>
+        </a>
+
+
+        <ul>
+            <li>
+                <a href="about_us.html">
+                <span>關於院所</span>
+                <br>About Us
+                </a>
+            </li>
+            <li>
+                <a href="information.html">
+                <span>資訊導覽</span>
+                <br>Information
+                </a>
+            </li>
+            <li>
+                <a href="shopping.html">
+                <span>線上購物</span>
+                <br>Shopping
+                </a>
+            </li>
+            <li>
+                <a href="qa.html">
+                <span>常見問題</span>
+                <br>Q & A
+                </a>
+            </li>
+            <li>
+                <a href="member_center.html">
+                <span>會員中心</span>
+                <br>Member Center
+                </a>
+            </li>
+            <li>
+                <a href="reserve.html" class="RESERVE">立即預約</a>
+            </li>
+            <li>
+                <a href="" class="LOGIN" id="LOGINPOPUP"><i class="bi bi-person-fill" ></i>登入</a>
+            </li>
+            <li>
+                <a href="shopping_cart.html"><i class="bi bi-cart-fill"></i></a>
+            </li>
+        </ul>
+        
+    </nav>
+
+
+
+
+    <nav class="M_HEADER_NAV">
+
+    <a href="homepage.html">
+        <div class="M_HEADERLOGO_BG_BOX M_HEADERLOGE_BG_TOP">
+            <div class="M_HEADERLOGO_PAW">
+                <img src="./img/HEADERLOGO_PAW.svg" alt="">
+                <div class="M_HEADERLOGO_CLAWS">
+                    <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
+                </div>
+            </div>
+            <div class="M_HEADER_LOGO_NAME">
+                <img src="./img/HEADERLOGO_NAME.svg" alt="">
+            </div>
+        </div>
+    </a>
+
+
+    <ul>
+        <li>
+            <a class="M_HEADER_LI" href="about_us.html">
+                <span>關於院所</span>
+                <P class="EN">About Us</P>
+            </a>
+        </li>
+        <li>
+            <a class="M_HEADER_LI" href="information.html">
+                <span>資訊導覽</span>
+                <p class="EN">Information</p>
+            </a>
+        </li>
+        <li>
+            <a class="M_HEADER_LI" href="shopping.html">
+                <span>線上購物</span>
+                <p class="EN">Shopping</p>
+            </a>
+        </li>
+        <li>
+            <a class="M_HEADER_LI" href="qa.html">
+                <span>常見問題</span>
+                <p class="EN">Q & A</p>
+            </a>
+        </li>
+        <li>
+            <a class="M_HEADER_LI" href="member_center.html">
+                <span>會員中心</span>
+                <p class="EN">Member Center</p>
+            </a>
+        </li>
+
+        <li>
+            <div class="LOGIN_SHOPPING">
+            <a href="" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
+            <a href="shopping_cart.html"><i class="bi bi-cart-fill"></i></a>
+            </div>
+        </li>
+    
+        <li>
+            <a href="reserve.html" class="RESERVE">立即預約</a>
+        </li>
+    </ul>
+
+
+        
+        
+    <div id="TOGGLE" class="TOGGLE">
+        <span class="SPAN1"></span>
+        <span class="SPAN2"></span>
+        <span class="SPAN3"></span>
+      </div>
+    </nav>
+    </nav>
+
+</header>
+
+<!-- =============================================================================== -->
+
+<section class="SHOPPINGCARTP2BG BACKGROUND">
+    <div class="BG_CLOUDS">
+        <div class="BG_CLOUD CLOUD_1">
+            <img class="BG_CLOUD_IMG1" src="./img/CLOUD_BG.png" alt="">
+        </div>
+        <div class="BG_CLOUD CLOUD_2">
+            <img class="BG_CLOUD_IMG2" src="./img/CLOUD_BG.png" alt="">
+        </div>
+    </div>
+<!-- ====================================================================================== -->
+
+<section class="CART02_SLOGANALL WRAPPER">
+    <span>
+        <img src="./img/shopping_cart/cartp2_slogan01.png" alt="" class="SLOGAN02">
+        <img src="./img/shopping_cart/cartp2_slogan01M.png" alt="" class="SLOGAN02M">
+    </span>
+    <span class="CAT ANI"></span>
+</section>
+
+<!-- ======================================麵包屑========================================== -->
+
+    <section class="BREAD WRAPPER">
+        <a href="homepage.html">首頁</a>
+        /
+        <a>購物車</a>
+    </section>
+
+    <!-- ====================================購物車第二步驟=========================================== -->
+    <section class="SHOPPINGCART_STEP WRAPPER">
+        <section class="SHOPPINGCART_STEPAREA">
+            <section class="SHOPPINGCART_ARCONE">
+                <div class="ARC_TITLE">1</div>
+                <p>購物車</p>
+            </section>
+            <section class="SHOPPINGCART_ARCTWO">
+                <div class="ARC_TITLE">2</div>
+                <p>填寫資料</p>
+            </section>
+            <section class="SHOPPINGCART_ARCTHREE">
+                <div class="ARC_TITLE">3</div>
+                <p>結帳成功</p>
+            </section>
+        </section>
+    </section>
+    <!-- ========================================價格商品明細================================================= -->
+
+    <section class="SHOPPINGCARTP2_ORDER WRAPPER">
+        <section class="SHOPPINGCARTP2_ORDERTEXTALL">
+            <section class="SHOPPINGCARTP2_ORDERTEXT">
+                <p>合計：NT$ 3,740</p>
+                <span>購物車:(3件)
+                    <span class="SHOPPINGCARTP2_ORDERARR">
+                    <img src="/img/shopping/🦆 icon _angle-right-b_.svg" alt="">
+                    </span>
+                </span>
+            </section>
+
+            <section class="SHOPPINGCART_ALLLIST">
+
+                <section class="SHOPPINGCART_ITEMFORM ORDERITEM">
+                    <section class="SHOPPINGCART_ITEMtitle">
+                        <span class="ITEM_PRODUCT--W">商品</span>
+                        <span class="ITEM_PRICE--W">單件價格</span>
+                        <span class="ITEM_COUNT--W">數量</span>
+                        <span class="ITEM_SUBTOTAL--W">小計</span>
+                    </section>
+
+                    <section class="SHOPPINGCART_ITEM">
+                        <section class="ITEM_PRODUCT ITEM_PRODUCT--W">
+                            <section class="ITEM_PRODUCT--IMG">
+                                <img src="/img/shopping_list/healthy/01/healthy_01_01.jpg" alt="">
+                            </section>
+                            <span>沛威貓狗保健-護眼亮晶晶 30入/盒</span>
+                        </section>
+                        <section class="ITEM_PRICE ITEM_PRICE--W">
+                            <p>NT＄1,380</p>
+                        </section>
+                        <section class="ITEM_COUNT ITEM_COUNT--W">
+                            <span class="ITEM_COUNT--NUM">2</span>
+                        </section>
+                        <section class="ITEM_SUBTOTAL ITEM_SUBTOTAL--W">
+                            <p>NT＄2,760</p>
+                        </section>
+                    </section>
+
+                    <section class="SHOPPINGCART_ITEM">
+                        <section class="ITEM_PRODUCT ITEM_PRODUCT--W">
+                            <section class="ITEM_PRODUCT--IMG">
+                                <img src="/img/shopping_list/dryfood/09/dryfood_09_01.jpg" alt="">
+                            </section>
+                            <span>【SC星益生趣】無穀貓糧(鮭魚配方) 2.5磅/1.1kg</span>
+                        </section>
+                        <section class="ITEM_PRICE ITEM_PRICE--W">
+                            <p>NT＄980</p>
+                        </section>
+                        <section class="ITEM_COUNT ITEM_COUNT--W">
+                            <span class="ITEM_COUNT--NUM">1</span>
+                        </section>
+                        <section class="ITEM_SUBTOTAL ITEM_SUBTOTAL--W">
+                            <p>NT＄980</p>
+                        </section>
+                    </section>
+                </section>
+
+            </section>
+
+<!-- ========================================手機板LIST================================================== -->
+
+            <section class="SHOPPINGCART_ITEMLIST--M">
+                <section class="SHOPPINGCART_ITEM--M">
+                    <section class="SHOPPINGCART_ITEMIMG--M">
+                        <img src="/img/shopping_list/healthy/01/healthy_01_01.jpg" alt="">
+                    </section>
+                    <section class="SHOPPINGCART_ITEMWORD--M">
+                        <section class="SHOPPINGCART_ITEMWORD--TOPM">
+                            <section class="SHOPPINGCART_ITEMWORD--NAMEM">
+                                <span>沛威貓狗保健-護眼亮晶晶 30入/盒</span>
+                            </section>
+                            <section class="SHOPPINGCART_ITEMWORD--DELM">
+                                <i class="bi bi-trash3"></i>
+                            </section>
+
+                        </section>
+                        <section class="SHOPPINGCART_ITEMWORD--BOTTOMM">
+                            <section class="SHOPPINGCART_ITEMWORD--COUNTM">
+                                <span class="ITEM_COUNT--NUM">數量:2</span>
+                            </section>
+                            <section class="SHOPPINGCART_ITEMWORD--PRICEM">
+                                <p>NT＄2,760</p>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+
+                <section class="SHOPPINGCART_ITEM--M">
+                    <section class="SHOPPINGCART_ITEMIMG--M">
+                        <img src="/img/shopping_list/dryfood/09/dryfood_09_01.jpg" alt="">
+                    </section>
+                    <section class="SHOPPINGCART_ITEMWORD--M">
+                        <section class="SHOPPINGCART_ITEMWORD--TOPM">
+                            <section class="SHOPPINGCART_ITEMWORD--NAMEM">
+                                <span>【SC星益生趣】無穀貓糧(鮭魚配方) 2.5磅/1.1kg</span>
+                            </section>
+                            <section class="SHOPPINGCART_ITEMWORD--DELM">
+                                <i class="bi bi-trash3"></i>
+                            </section>
+
+                        </section>
+                        <section class="SHOPPINGCART_ITEMWORD--BOTTOMM">
+                            <section class="SHOPPINGCART_ITEMWORD--COUNTM">
+                                <span class="ITEM_COUNT--NUM">數量:1</span>
+                            </section>
+                            <section class="SHOPPINGCART_ITEMWORD--PRICEM">
+                                <p>NT＄980</p>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            
+        </section>
+
+ <!-- =========================================g購物車P2表單左上=============================================== -->
+
+ <section class="SHOPPINGCARTP2_TEXT">
+    <section class="SHOPPINGCARTP2_TEXT--TOP">
+        <section class="SHOPPINGCARTP2_STEPTEXT--FORM P2MEMBER COL-6 RWD-COL-12">
+            <section class="SHOPPINGCARTP2_STEPTEXT--TITLE">
+                <span>會員資料</span>
+            </section>
+            <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
+                <label for="pet_name" class="INPUT">姓名<br>
+                    <input type="text" id="pet_name" class="INPUTENTER"
+                    placeholder="請輸入會員名稱">
+                </label>
+            </section>
+
+            <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
+                <label for="pet_name" class="INPUT">電子信箱<br>
+                    <input type="text" id="pet_name" class="INPUTENTER"
+                    placeholder="請輸入電子信箱">
+                </label>
+            </section>
+
+            <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
+                <label for="pet_name" class="INPUT">連絡電話<br>
+                    <input type="text" id="pet_name" class="INPUTENTER"
+                    placeholder="請輸入電話號碼">
+                </label>
+            </section>
+
+            <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
+                <span>若會員資料有誤，建議前往會員中心進行修改，以防之後仍帶入錯誤資訊。</span>
+                <div>
+                    <button class="BTN">前往會員中心</button>
+                </div>
+            </section>
+
+        </section>
+
+<!-- ==========================================購物車P2表單右上============================================= -->
+
+
+        <section class="SHOPPINGCARTP2_STEPTEXT--FORM P2MEMBER COL-6 RWD-COL-12">
+            <section class="SHOPPINGCARTP2_STEPTEXT--TITLE">
+                <span>收件資料</span>
+            </section>
+            <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
+                <label for="pet_name" class="INPUT">姓名<br>
+                    <input type="text" id="pet_name" class="INPUTENTER"
+                    placeholder="請輸入收件人名稱">
+                </label>
+
+                <label for="samemember" class="SAMEMEMBER">
+                    <input type="radio" value="ture" id="samemember" name="MEMBERINFO">
+                    <span class="CHECKMEMBER"></span>
+                    同會員資料
+                </label>
+            </section>
+
+            <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
+                <label for="pet_name" class="INPUT">電子信箱<br>
+                    <input type="text" id="pet_name" class="INPUTENTER"
+                    placeholder="請輸入收件人電子信箱">
+                </label>
+            </section>
+
+            <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
+                <label for="pet_name" class="INPUT">連絡電話<br>
+                    <input type="text" id="pet_name" class="INPUTENTER"
+                    placeholder="請輸入收件人電話號碼">
+                </label>
+            </section>
+
+            <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
+                <span>選擇門市</span>
+                <div>
+                    <button class="BTN">搜尋門市</button>
+                </div>
+            </section>
+
+        </section>
+
+
+
+    </section>
+
+
+
+    <section class="SHOPPINGCARTP2_TEXT--BOTTOM">
+
+
+        <!-- =========================================購物車P2表單左下=============================================== -->
+
+        <section class="SHOPPINGCARTP2_STEPTEXT--FORM COL-6 RWD-COL-12">
+            <section class="SHOPPINGCARTP2_STEPTEXT--TITLE">
+                <span>付款資料</span>
+            </section>
+
+            <span class="SHOPPINGCARTP2_STEPTEXT--REMIND">
+                已選擇的送貨方式：7-11店到店取貨付款
+            </span>
+            <section class="SHOPPINGCARTP2_STEPTEXT--HALF">
+
+                <section class="SHOPPINGCARTP2_STEPTEXT--HALFINPUT">
+                    <label for="pet_name" class="INPUT">持卡人姓名<br>
+                        <input type="text" id="pet_name" class="INPUTENTER"
+                        placeholder="請輸入持卡人姓名">
+                    </label>
+                </section>
+
+                <section class="SHOPPINGCARTP2_STEPTEXT--HALFINPUT">
+                    <label for="pet_name" class="INPUT">信用卡卡號<br>
+                        <input type="text" id="pet_name" class="INPUTENTER"
+                        placeholder="0000-0000-0000-0000">
+                    </label>
+                </section>
+
+                <section class="SHOPPINGCARTP2_STEPTEXT--HALFINPUT">
+                    <label for="pet_name" class="INPUT">有效日期<br>
+                        <input type="text" id="pet_name" class="INPUTENTER"
+                        placeholder="MM/YY">
+                    </label>
+                </section>
+
+                <section class="SHOPPINGCARTP2_STEPTEXT--HALFINPUT">
+                    <label for="pet_name" class="INPUT">安全碼(CVC)<br>
+                        <input type="text" id="pet_name" class="INPUTENTER"
+                        placeholder="請輸入三位數安全碼">
+                    </label>
+                </section>
+
+            </section>
+
+            <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
+                <span class="CREDITREMIND">我們使用「綠界科技ECPay支付平台系統」，網頁將會轉往綠界信用卡授權頁面；交易全程使用SSL安全機制，確保交易資料不會外洩，請您安心付款！</span>
+            </section>
+
+        </section>
+
+
+<!-- =========================================購物車P2表單右下=============================================== -->
+
+        <section class="SHOPPINGCARTP2_STEPTEXT--FORM COL-6 RWD-COL-12">
+            <section class="SHOPPINGCARTP2_STEPTEXT--TITLE">
+                <span>訂單備註</span>
+            </section>
+
+            <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
+                <label for="memo" class="TEXTAREA">備註<br>
+                    <textarea id="memo" placeholder="有什麼想告訴賣家的..." class="TEXTAREA_CONTENT"></textarea>
+                </label>
+            </section>
+
+    </section>
+
+</section>
+
+</section>
+<!-- ===================================結帳頁最後============================================= -->
+
+    <section class="SHOPPINGCARTP2_FINALLINK">
+        <section>
+            <a href="./shopping_cart.html">返回購物車</a>
+            <a href="./shopping_cartp3.html">
+            <button class="BTN">付款</button>
+            </a>
+        </section>
+
+
+
+
+    </section>
+
+</section>
+
+
+
+<script src="./top_btn.js"></script>
+<script src="./nav.js"></script>
+<script src="./user_popup.js"></script>
+<script src="./toggle.js"></script>
+<script src="./user_popup.js"></script>
+
+<script>
+    let a = 0
+    $(function(){
+        let viewport = $(window).width();
+        if(viewport > 414){
+            $(function(){
+                $('.SHOPPINGCART_ALLLIST').hide();
+                $(".SHOPPINGCARTP2_ORDERTEXT").click(function(){
+                    $(".SHOPPINGCART_ALLLIST").slideToggle("slow");
+                    if(a === 0){
+                        $('.SHOPPINGCARTP2_ORDERARR').css({transform:"rotate(-180deg)"});
+                        a = 1;
+                    }else{
+                        $('.SHOPPINGCARTP2_ORDERARR').css({transform:"rotate(0deg)"});
+                        a = 0;
+                    }
+                })
+            })
+        }
+    })
+
+    $(function(){
+        let viewport = $(window).width();
+        if(viewport <= 414){
+            $('.SHOPPINGCART_ITEMLIST--M').hide();
+            $(".SHOPPINGCARTP2_ORDERTEXT").click(function(){
+            $(".SHOPPINGCART_ITEMLIST--M").slideToggle("slow");
+            if(a === 0){
+                $('.SHOPPINGCARTP2_ORDERARR').css({transform:"rotate(-180deg)"});
+                a = 1;
+            }else{
+                $('.SHOPPINGCARTP2_ORDERARR').css({transform:"rotate(0deg)"});
+                a = 0;
+            }
+        })
+            
+        }
+        })
+</script>
+
+
+
+</body>
+
+</html>

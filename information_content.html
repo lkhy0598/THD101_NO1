@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/shortcut_logo.png">
+    <title>資訊內容 INFORMATION - 波波動物醫院</title>
+</head>
+
+<body class="IMFORMATION_CONTENT">
+    <!-- ========================= 彈跳視窗 ========================= -->
+    <!-- 壓底黑色塊 -->
+    <div id="modal" class="MODAL">
+        <!-- 關閉按鈕 -->
+        <a class="POPUP_CLOSEBTN" href="#">
+            <i class="bi bi-x-circle"></i>
+        </a>
+        <!-- 彈跳視窗_註冊/登入 -->
+        <div id="popup-wrap" class="POPUP_WRAP">
+            <div class="BG_CLOUD_BOX">
+                <img class="BG_CLOUD" src="./img/user_popup/USER_BG_CLOUD.png" alt="">
+            </div>
+            <!-- 導覽列 -->
+            <ul class="POPUP_NAVS">
+                <li class="POPUP_TABS "><a href="#POPUP_LOGIN">登入會員</a></li>
+                <li class="POPUP_TABS "><a href="#POPUP_SIGNUP">註冊會員</a></li>
+                <li class="POPUP_TABS FORGETTABS CLOSETABS"><a href="#">忘記密碼</a></li>
+                <li class="POPUP_TABS CHANGETABS CLOSETABS"><a href="#">修改密碼</a></li>
+
+            </ul>
+            <!-- 登入視窗 -->
+            <div class="POPUP_TABS_CONTENT">
+                <div id="POPUP_LOGIN" class="POPUP_BOX">
+                    <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+
+                    <form class="USER_FORM" method="post" action="Login.php">
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-envelope"></i>
+                            <input type="email" id="account" name="account" placeholder="請輸入電子信箱" /></br>
+                        </div>
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-lock-fill"></i>
+                            <input type="password" id="password" name="password" placeholder="請輸入密碼" /></br>
+                        </div>
+                        <div class="FORGET_BOX">
+                            <button type="button" class="FORGET_BTN">忘記密碼？</button>
+                        </div>
+                        <div class="INPUT_GROUP">
+                            <input type="submit" id="send-btn" class="BTN" value="登入" />
+                        </div>
+
+                        <div class="DIVIDING">
+                            <span>or</span>
+                        </div>
+                        <button type="submit" class="OTHERLOGIN_BTN">
+                            <span class="OTHERLOGIN_ICON">
+                                <img src="./img/user_popup/GOOGLE.svg" alt="">
+                            </span>
+                            <span>使用GOOGLE登入</span>
+                        </button>
+                    </form>
+                    <div class="BTN SIGNUP_BTN">註冊會員</div>
+                </div>
+                <!-- 註冊視窗 -->
+                <div id="POPUP_SIGNUP" class="POPUP_BOX ">
+                    <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+
+                    <form class="USER_FORM" method="post" action="SIGNUP.php">
+                        <div class="SIGNUP_INPUTS">
+                            <div class="INPUT_GROUP">
+                                <i class="bi bi-person-circle"></i>
+                                <input type="text" id="name" name="name" placeholder="請輸入真實姓名" />
+                            </div>
+                            <div class="INPUT_GROUP">
+                                <i class="bi bi-lock-fill"></i>
+                                <input type="password" id="password" name="password" placeholder="請輸入密碼" />
+                            </div>
+                            <div class="INPUT_GROUP">
+                                <i class="bi bi-lock"></i>
+                                <input type="password" id="password" name="password" placeholder="請再確認一次密碼" />
+                            </div>
+                            <div class="INPUT_GROUP">
+                                <i class="bi bi-phone"></i>
+                                <input type="number" id="phone" name="phone" placeholder="請輸入手機號碼" />
+                            </div>
+                            <div class="INPUT_GROUP">
+                                <i class="bi bi-envelope"></i>
+                                <input type="email" id="account" name="account"
+                                    placeholder="請輸入電子信箱" />
+                                <!-- <button class="VERIFBTN BTN">
+                                    發送驗證信
+                                </button> -->
+                            </div>
+                            <div class="INPUT_GROUP">
+                                <i class="bi bi-key"></i>
+                                <input type="number" id="verifyNum" name="verifyNum" class="VERIFYINPUT"
+                                    placeholder="請輸入驗證碼" />
+                                <button class="VERIFBTN BTN">
+                                    發送驗證碼
+                                </button>
+                            </div>
+                        </div>
+
+                        <p>＊送出即同意「會員服務條款、隱私權保護聲明」</p>
+                        <div class="INPUT_GROUP">
+                            <input type="submit" id="send-btn" class=" SIGNUP_SUB BTN" value="驗證並送出" />
+                        </div>
+                    </form>
+                </div>
+                <!-- 忘記密碼 -->
+                <div id="popup_forgetpass" class="POPUP_BOX ">
+                    <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+                    <form class="USER_FORM" method="post" action="SIGNUP.php">
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-envelope"></i>
+                            <input type="email" id="account" name="account" class="VERIFYINPUT" placeholder="請輸入電子信箱" />
+                            <button class="VERIFBTN BTN">
+                                發送驗證信
+                            </button>
+                        </div>
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-key"></i>
+                            <input type="number" id="verifyNum" name="verifyNum" class="VERIFYINPUT"
+                                placeholder="請輸入驗證碼" />
+                            <button class="VERIFBTN BTN">
+                                驗證
+                            </button>
+                        </div>
+                        <div class="BACKLOGIN_BOX">
+                            <button type="button" class="BACKLOGIN_BTN">返回登入</button>
+                        </div>
+                        <div class="FORGETPASS_DESC">
+                            <p>＊系統已寄出驗證信，請至信箱收取。</p>
+                            <p>＊若過久未收到驗證信件，請至垃圾信件匣或其他收件匣確認。</p>
+                        </div>
+                    </form>
+                    <div class="PASS_SEND_BOX">
+                        <p>＊送出後會直接跳轉到修改密碼頁</p>
+                        <div class="INPUT_GROUP">
+                            <input type="submit" id="send-btn" class="PASS_SUB BTN" value="送出" />
+                        </div>
+                    </div>
+                </div>
+                <!-- 修改密碼 -->
+                <div id="popup_changepass" class="POPUP_BOX">
+                    <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+                    <form class="USER_FORM" method="post" action="SIGNUP.php">
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-lock-fill"></i>
+                            <input type="password" id="password" name="password" placeholder="請輸入密碼" />
+                        </div>
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-lock"></i>
+                            <input type="password" id="password" name="password" placeholder="請再確認一次密碼" />
+                        </div>
+                    </form>
+                    <div class="PASS_SEND_BOX">
+                        <p>＊送出後會直接跳轉到修改密碼頁</p>
+                        <div class="INPUT_GROUP">
+                            <input type="submit" id="send-btn" class="PASS_SUB BTN" value="修改密碼" />
+                        </div>
+                    </div>
+                </div>
+                <!-- 修改完成畫面 -->
+                <div id="popup_changepass_succ" class="POPUP_BOX">
+                    <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+                    <div class="USER_FORM">
+                        <img class="CHANGEPASS_SUCC" src="./img/user_popup/CHANGEPASS_SUCC.png" alt="">
+                    </div>
+                    <div class="BACKTOLOGIN_BOX">
+                        <p>＊三秒後將跳轉到登入頁，如果沒跳轉請點選按鈕</p>
+                        <div class="INPUT_GROUP">
+                            <input type="submit" id="login-btn" class="BTN CHANGE_SUCC_BTN BACKLOGIN_BTN"
+                                value="登入會員" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- =====appointment門診時間及預約======== -->
+    <div class="APPOINTMENT">
+        <div class="APPOINTMENT_TAG">
+            <p>門診時間&預約</p>
+        </div>
+        <div class="APPOINTMENT_BOX">
+            <div class="APPOINTMENT_CONTENT">
+                <img src="./img/appointment/TIMETABLE_PC.png" alt="">
+                <div class="APPOINTMENT_RESERVE_PHONE">
+                    <a href="reserve.html" class="RESERVE">立即預約</a>
+                    <a class="APPOINTMENT_PHONE" href="tel:+886900000000">
+                        <i class="bi bi-telephone"></i>
+                        預約專線 : 02-3322-2777
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =====RWD 功能列及小時刻表======== -->
+    <!-- RWD功能列內的時刻表 -->
+    <div class="M_TIME_TABLE">
+        <img src="./img/appointment/TIMETABLE_RWD.png" alt="" class="">
+    </div>
+    <!-- RWD下方功能列 -->
+    <div class="M_FUNTION">
+        <!-- RWD功能列內的時刻表 -->
+        <div class="M_TIME_TABLE">
+            <img src="./img/appointment/TIMETABLE_RWD.png" alt="" class="">
+        </div>
+        <ul>
+            <a class="M_FUNTION_A1" href="tel:+886900000000">
+                <li>
+                    <i class="bi bi-telephone"></i>
+                    <p>電話預約</p>
+                </li>
+            </a>
+            <a href="" class="M_FUNTION_A2">
+                <li>
+                    <i class="bi bi-calendar-plus"></i>
+                    <p class="CLINIC_HOURS">門診時間</p>
+                </li>
+            </a>
+            <a href="reserve.html" class="M_FUNTION_A3">
+                <li>
+                    <i class="bi bi-arrow-right"></i>
+                    <p>立即預約</p>
+                </li>
+            </a>
+        </ul>
+    </div>
+    <!-- ===== header ===== -->
+    <header>
+
+        <nav class="HEADER_NAV">
+
+            <a href="homepage.html">
+                <div class="HEADERLOGO_BG_BOX HEADERLOGE_BG_TOP">
+                    <div class="HEADERLOGO_PAW">
+                        <img src="./img/HEADERLOGO_PAW.svg" alt="">
+                        <div class="HEADERLOGO_CLAWS">
+                            <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="HEADER_LOGO_NAME">
+                        <img src="./img/HEADERLOGO_NAME.svg" alt="">
+                    </div>
+                </div>
+            </a>
+
+
+            <ul>
+                <li>
+                    <a href="about_us.html">
+                        <span>關於院所</span>
+                        <br>About Us
+                    </a>
+                </li>
+                <li>
+                    <a href="information.html">
+                        <span>資訊導覽</span>
+                        <br>Information
+                    </a>
+                </li>
+                <li>
+                    <a href="shopping.html">
+                        <span>線上購物</span>
+                        <br>Shopping
+                    </a>
+                </li>
+                <li>
+                    <a href="qa.html">
+                        <span>常見問題</span>
+                        <br>Q & A
+                    </a>
+                </li>
+                <li>
+                    <a href="member_center.html">
+                        <span>會員中心</span>
+                        <br>Member Center
+                    </a>
+                </li>
+                <li>
+                    <a href="reserve.html" class="RESERVE">立即預約</a>
+                </li>
+                <li>
+                    <a href="" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
+                </li>
+                <li>
+                    <a href="shopping_cart.html"><i class="bi bi-cart-fill"></i></a>
+                </li>
+            </ul>
+
+        </nav>
+
+
+
+
+        <nav class="M_HEADER_NAV">
+
+            <a href="homepage.html">
+                <div class="M_HEADERLOGO_BG_BOX M_HEADERLOGE_BG_TOP">
+                    <div class="M_HEADERLOGO_PAW">
+                        <img src="./img/HEADERLOGO_PAW.svg" alt="">
+                        <div class="M_HEADERLOGO_CLAWS">
+                            <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="M_HEADER_LOGO_NAME">
+                        <img src="./img/HEADERLOGO_NAME.svg" alt="">
+                    </div>
+                </div>
+            </a>
+
+
+            <ul>
+                <li>
+                    <a class="M_HEADER_LI" href="about_us.html">
+                        <span>關於院所</span>
+                        <P class="EN">About Us</P>
+                    </a>
+                </li>
+                <li>
+                    <a class="M_HEADER_LI" href="information.html">
+                        <span>資訊導覽</span>
+                        <p class="EN">Information</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="M_HEADER_LI" href="shopping.html">
+                        <span>線上購物</span>
+                        <p class="EN">Shopping</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="M_HEADER_LI" href="qa.html">
+                        <span>常見問題</span>
+                        <p class="EN">Q & A</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="M_HEADER_LI" href="member_center.html">
+                        <span>會員中心</span>
+                        <p class="EN">Member Center</p>
+                    </a>
+                </li>
+
+                <li>
+                    <div class="LOGIN_SHOPPING">
+                        <a href="" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
+                        <a href="shopping_cart.html"><i class="bi bi-cart-fill"></i></a>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="reserve.html" class="RESERVE">立即預約</a>
+                </li>
+            </ul>
+
+
+
+
+            <div id="TOGGLE" class="TOGGLE">
+                <span class="SPAN1"></span>
+                <span class="SPAN2"></span>
+                <span class="SPAN3"></span>
+              </div>
+            </nav>
+        </nav>
+
+    </header>
+    <!-- ============================================================================= -->
+
+    <!-- header下方區塊的背景 -->
+    <section class="BACKGROUND">
+        <!-- <div class="DOT2"></div> -->
+        <!-- 背景 -->
+        <img class="BG" src="./img/BG.jpg" alt="">
+        <!-- 背景雲裝飾 -->
+        <div class="BG_CLOUDS">
+            <div class="BG_CLOUD CLOUD_1">
+                <img class="BG_CLOUD_IMG1" src="./img/CLOUD_BG.png" alt="">
+            </div>
+            <div class="BG_CLOUD CLOUD_2">
+                <img class="BG_CLOUD_IMG2" src="./img/CLOUD_BG.png" alt="">
+            </div>
+        </div>
+        <!-- ===== 麵包屑 ===== -->
+        <section class="MEMCENTOP">
+            <section class="BREAD WRAPPER">
+                <a href="/index.html">首頁</a>
+                /
+                <a href="/information.html">資訊導覽</a>
+                /
+                <a>衛教資訊 - 寵物健檢的重要性</a>
+            </section>
+        </section>
+        <!-- ===== 網頁內容 ===== -->
+        <!-- 網頁 -->
+        <section class="WRAPPER">
+            <div class="INFOMATION_CONTENT_BOX">
+                <p class="INFOMATION_CONTENT_DATE">2022-10-28</p>
+                <p class="INFOMATION_CONTENT_TITLE">寵物健檢的重要性</p>
+                <img class="INFORMATION_IMG" src="./img/information/content/INFORMATION_HEALTHCHECK.jpg" alt="">
+                <p class="INFOMATION_CONTENT_TEXT">
+                    身為毛孩家長的你知道嗎？據家中犬貓死因統計，繼癌症之後，狗狗的心血管疾病，貓咪的慢性腎病為前三名常見致死疾病。毛小孩不會說話，所以當他們不舒服時，我們無從得知，唯有「定期的健康檢查」才能早點發現潛在疾病或慢性病的早期變化，讓醫療即時開始並延緩疾病的惡化。
+                </p>
+
+                <p>健檢常發現的隱藏疾病：</p>
+                <p>1.牙周病：由於大部分飼主無法輕易將毛孩的的嘴巴打開來檢查，因此口腔衛生及保健常是最容易被忽略的。若平時沒有讓毛孩養成刷牙的習慣，也沒有定期洗牙，隨著牙菌斑和牙結石的累積，牙齦會退縮、齒根暴露。通常到很嚴重時才出現臨床症狀導致延遲就醫、治療困難。
+                </p>
+
+                <p>2.傳染病：常見的傳染病有通過蚊子、壁蝨傳播的心絲蟲、艾利希體、焦蟲等體內寄生蟲，也有透過糞便、體液感染的貓瘟、皰疹、卡里西病毒等。第一次健康檢查或是家裡剛收編的新成員都建議進行血液寄生蟲或病毒的快篩檢測，確保身體狀況的同時也保護家裡其他的毛成員。
+                </p>
+
+                <p>3.心臟病：貓的肥厚性心肌病是一種任何年齡都有可能發生的疾病，與品種和遺傳有關，所以很多品種貓都需要進行心超檢查診斷是否有此疾病。而狗狗的心血管疾病最常見的是心臟瓣膜退化，好發於小型犬，像是瑪爾濟斯犬、貴賓犬、臘腸犬及查理斯王小獵犬等等，且這種疾病的患病率會隨著年齡而顯著增加，有高達85%的13歲齡小型犬都有瓣膜病變的證據呢！從理學檢查，獸醫師可聽診判斷有無心雜音，若有需要可拍攝Ｘ光看整體心臟有無擴大，或是肺臟血管有無異常，更進一步可進行心臟超音波檢查，實際看心房心室的大小、瓣膜有無增厚、脫垂，並進行心臟病分級和後續治療計畫。心臟病早期沒有任何臨床症狀，當出現咳嗽、氣喘、呼吸困難時，可能已經進入心臟衰竭第三期了。
+                </p>
+
+                <p>4.慢性腎病：老年犬貓的腎臟會漸漸衰退，腎指數會緩緩上升成慢性腎病，在犬貓中是十分常見的。多數發展病程緩慢，沒有明顯臨床症狀，在家中飼主除了要觀察貓咪的精神食慾以外，喝水及尿量也是需要特別觀察的，建議7歲以上的貓咪每6個月進行一次體重、血壓及身體狀況評分(BCS)，看看貓咪有無因多渴多尿造成脫水，或是整體變削瘦，有些腎病貓咪也會出現高血壓的狀況，高血壓又會造成特定器官的傷害，包含腦、心、眼及腎臟。以及至少每年要進行一次血液學檢查、尿液分析及腎臟超音波追蹤。
+                </p>
+
+                <p>5.內分泌疾病：糖尿病、庫興氏症、甲狀腺低下或亢進等都是毛孩們常見的內分泌失調疾病。臨床症狀大部分會出現多渴、多尿、多吃的症狀，若發現或是懷疑自家毛孩有以上症狀建議儘早到醫院檢查！一旦確診，就需要長期服藥和定期追蹤來控制哦！
+                </p>
+
+                <p>6.腫瘤：5歲以上的中老年犬貓罹患腫瘤的風險較高。體表的腫塊容易在觸摸時被發現，但在體內臟器的團塊無法觸摸且早期在日常生活中很難出現徵兆。因此健檢時除了一般的理學檢查、血液學檢查之外，影像學檢查也十分重要，及早發現腫瘤才能掌握治療黃金時機。
+                </p>
+
+                <p>建議7歲以下的小型犬和貓咪應該每年進行一次健康檢查，7歲以上半年一次; 大型犬則建議6歲以下一年一次，6歲以上半年安排一次健康檢查。預防勝於治療，早期發現早期治療，避免毛小孩受疾病之苦。</p>
+
+                <p>毛小孩不會說話，伊甸動物醫院陪你一起守護他/她們的健康</p>
+            </div>
+            <a class="INFORMATION_BTN BTN" href="./information.html">返回</a>
+        </section>
+        <!-- ===============================回到TOP================================================ -->
+        <button id="js-top" class="TOP_BTN"></button>
+        <!-- ===== footer ===== -->
+        <footer>
+            <div class="FOOTER_LOGO">
+                <a href="">
+                    <picture>
+                        <source srcset="./img/index/M_index/M_FOOTERLOGO.svg" media="(max-width: 414px)">
+                        <img src="img/H-LOGO.svg" alt="" />
+                    </picture>
+
+                </a>
+
+            </div>
+            <div class="FOOTER_RIGHT">
+                <nav class="FOOTER_NAV">
+                    <ul>
+                        <li>
+                            <a href="about_us.html"> <span>關於院所</span></a>
+                        </li>
+                        <li>
+                            <a href="reserve.html"> <span>立即預約</span></a>
+                        </li>
+                        <li>
+                            <a href="information.html"> <span>資訊導覽</span></a>
+                        </li>
+                        <li>
+                            <a href="member_center.html"> <span>會員中心</span></a>
+                        </li>
+                        <li>
+                            <a href="shopping.html"> <span>線上購物</span></a>
+                        </li>
+                        <li>
+                            <a href="shopping_cart.html"> <span>購物車</span></a>
+                        </li>
+                        <li>
+                            <a href="qa.html"> <span>常見問題</span></a>
+                        </li>
+                        <li>
+                            <span class="FOLLOW">追蹤我們</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="FOOTER_ICON">
+                <a href="https://www.facebook.com/"><img src="img/FOOTER_FB_ICON.svg" alt="" /></a>
+                <a href="https://www.instagram.com/"><img src="img/FOOTER_INS_ICON.svg" alt="" /></a>
+            </div>
+
+            <div class="FOOTER_TOP_BTN" id="js-f-top">
+                <i class="bi bi-caret-up-fill"></i>
+                <p>回到頂部</p>
+            </div>
+
+        </footer>
+        <div class="FOOTER_BOTTOM">
+            <p>
+                Copyright ©
+                本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。
+            </p>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="top_btn.js"></script>
+    <script src="nav.js"></script>
+    <script src="user_popup.js"></script>
+    <script src="toggle.js"></script>
+    <script src="appointment.js"></script>
+
+</body>
+
+</html>

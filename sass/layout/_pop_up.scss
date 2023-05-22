@@ -1,0 +1,449 @@
+// 會員功能 modal 彈窗
+
+// 啟用
+body .MODAL_ACTIVE {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+body .MODAL .POPUP_WRAP_ACTIVE {
+    display: block;
+    top: 50%;
+    pointer-events: auto;
+    transition: all .3s ease;
+}
+
+// 整體設定及關閉按鈕設定
+.MODAL {
+    opacity: 0;
+    pointer-events: none;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+
+    // transition: all 1s ease;
+    // pointer-events:none;
+    .POPUP_CLOSEBTN {
+        font-size: 5rem;
+        color: $lightblue ;
+
+        position: fixed;
+        top: 5%;
+        right: 5%;
+        z-index: 1000;
+        transition: all .3s ease;
+
+        @include m() {
+            top: 1%;
+            transform: scale(.5);
+        }
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    .POPUP_WRAP {
+        display: none;
+        pointer-events: none;
+
+        background-image: url(/img/user_popup/USER_BG.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 414px;
+        height: 768px;
+        margin: auto;
+        border-radius: 20px;
+        box-sizing: border-box;
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all .3s ease;
+
+        @include m() {
+            width: 90%;
+            height: 85%;
+        }
+
+
+        // overflow: hidden;
+        .BG_CLOUD_BOX {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: -0;
+            z-index: -1;
+            box-sizing: border-box;
+            overflow: hidden;
+
+            .BG_CLOUD {
+                position: absolute;
+                top: 65px;
+                left: -170px;
+                z-index: -1;
+                animation: move 3s 0s infinite;
+            }
+
+            @keyframes move {
+
+                0% {
+                    transform: rotate(-3deg);
+                    animation-timing-function: ease;
+
+                }
+
+
+                50% {
+                    transform: rotate(3deg);
+                    animation-timing-function: ease-in-out;
+
+                }
+
+
+                100% {
+                    transform: rotate(-3deg);
+                    animation-timing-function: ease;
+
+                }
+
+            }
+        }
+    }
+}
+
+// TAB標籤
+.POPUP_NAVS {
+    display: flex;
+    font-size: 2rem;
+    height: 5rem;
+    line-height: 5rem;
+    border-radius: 20px 20px 0 0;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    li {
+        flex-grow: 1;
+        height: 5.5rem;
+        line-height: 5rem;
+        background: linear-gradient(180deg, #D28555 0%, #BF523A 99.48%);
+
+        // &:hover {
+        //     background: linear-gradient(180deg, #D28555 0%, #BF523A 99.48%);
+        // }
+
+        a {
+            color: #000000;
+            text-align: center;
+            vertical-align: middle;
+            text-decoration: none;
+            position: relative;
+
+            &::after {
+                display: block;
+                content: '';
+                border-top: 1px solid black;
+                width: 00%;
+                margin: 0 auto;
+                position: absolute;
+                bottom: 16%;
+                left: 25%;
+                transition: all .3s ease;
+            }
+
+            &:hover {
+                &::after {
+                    width: 50%;
+
+                }
+            }
+
+
+        }
+    }
+
+    .TAB_ACTIVE {
+        pointer-events: none;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    .FORGETTABS,
+    .CHANGETABS {
+        pointer-events: none;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+
+    }
+}
+
+// 各頁面設定
+.POPUP_TABS_CONTENT {
+    height: 100%;
+
+    .POPUP_BOX {
+        display: none;
+        width: 100%;
+        height: calc(100% - 5rem);
+        border-top: 1px solid #00000025;
+        flex-direction: column;
+        transition: all .3s ease;
+
+
+
+        .USER_LOGO {
+            display: block;
+            margin: 26px auto;
+
+            // &:hover img[src="img/V-HEADER-LOGO.svg"] {
+            //     opacity: 0;
+            //     transition: all .1s;
+            // }
+        }
+
+    }
+
+    .POPUPACTIVE {
+        display: flex;
+        pointer-events: auto;
+    }
+
+}
+
+// 帳密
+.USER_FORM {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .INPUT_GROUP {
+        position: relative;
+        text-align: center;
+        margin-bottom: 16px;
+
+
+        .bi {
+            color: #9D9D9D;
+            background: white;
+            font-size: 3rem;
+            position: absolute;
+            left: 6.7rem;
+            bottom: .6rem;
+
+            @include m {
+                left: 4.7rem;
+            }
+        }
+
+        input {
+            font-family: 'Noto Sans';
+            font-size: 15px;
+            color: $blueblack;
+            border-radius: 10px;
+            box-sizing: border-box;
+            padding: 10px;
+            margin: 0px;
+            border: 1px solid #9E9E9E;
+            height: 45px;
+            width: 300px;
+            text-indent: 40px;
+
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        // 消除input number的數字箭頭 
+        input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .BTN {
+            font-size: 2rem;
+            width: 300px;
+            margin: 0 auto;
+            color: white;
+            text-indent: 0;
+            line-height: 0;
+            font-weight: bold;
+
+        }
+
+        .SIGNUP_SUB {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .VERIFYINPUT {
+            width: 170px;
+            margin-right: 10px;
+        }
+
+        .VERIFBTN {
+            width: 120px;
+            height: 45px;
+            font-size: 15px;
+        }
+
+
+
+    }
+
+    p {
+        text-align: left;
+        width: 300px;
+        margin: 0 auto;
+        font-size: 1rem;
+        color: $blueblack;
+        line-height: 2rem;
+
+    }
+}
+
+.SIGNUP_INPUTS {
+    flex-grow: 1;
+}
+
+// 登入頁中的忘記密碼按鈕
+.FORGET_BOX,
+.BACKLOGIN_BOX {
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+
+    .FORGET_BTN,
+    .BACKLOGIN_BTN {
+        background: none;
+        border: none;
+        color: $blueblack;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// 分隔線
+.DIVIDING {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 16px;
+
+    &::before,
+    &::after {
+        display: block;
+        content: '';
+        border-bottom: 1px solid $blueblack;
+        flex-grow: 1;
+        height: 0.5em;
+        margin: 0;
+    }
+
+    span {
+        color: $blueblack;
+        text-align: center;
+        padding: 0 20px;
+        margin: 0;
+    }
+}
+
+// 其他登入用按鈕
+.OTHERLOGIN_BTN {
+    margin: 0 auto;
+    margin-bottom: 16px;
+    display: flex;
+    height: 45px;
+    width: 300px;
+    font-size: 1rem;
+    line-height: 45px;
+    border-radius: 10px;
+    border: 1px solid #9E9E9E;
+    background: white;
+    cursor: pointer;
+
+    position: relative;
+
+    &:hover {
+        background: linear-gradient(180deg, #CBCBCB 0%, #F0F0F0 100%);
+    }
+
+    .OTHERLOGIN_ICON {
+        height: 45px;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+
+        img {
+            height: 50%;
+        }
+    }
+
+    span {
+        margin: 0 auto;
+        letter-spacing: 2px;
+        font-size: 2rem;
+        text-indent: 40px;
+    }
+}
+
+// 註冊按鈕
+.SIGNUP_BTN {
+    font-weight: unset;
+    margin: 0 auto;
+    margin-bottom: 26px;
+    height: 45px;
+    width: 300px;
+    font-size: 2rem;
+    line-height: 45px;
+    cursor: pointer;
+}
+
+// 忘記密碼彈跳視窗&修改完成
+.CLOSETABS {
+    display: none;
+}
+
+.CHANGEPASS_SUCC {
+    width: 172px;
+    height: 163px;
+    margin: auto;
+}
+
+.PASS_SEND_BOX,
+.BACKTOLOGIN_BOX {
+    width: 300px;
+    margin: 0 auto;
+
+    p {
+        width: 300px;
+        margin: 0 auto;
+        font-size: 1rem;
+        color: $blueblack;
+        line-height: 2rem;
+    }
+
+    .PASS_SUB,
+    .CHANGE_SUCC_BTN {
+        width: 300px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 2rem;
+        margin-top: 10px;
+        margin-bottom: 26px;
+    }
+}

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/shortcut_logo.png">
+    <title>波波動物醫院後台 - 預約時刻表</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="BACK_NAV">
+
+            <a href="_back_index.html">
+                <img src="img/BACK-LOGO-HOVER.svg" alt="">
+                <img src="img/BACK-LOGO.svg" alt="">
+            </a>
+
+            <ul>
+                <li><a href="_back_user_settings.html"><i class="bi bi-person-circle"></i> USER 你好</a></li>
+                <li><a href="index.html">登出後台</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <section class="BACK_MAIN_CONTENT">
+
+        <!-- 左側內容 -->
+        <aside class="BACK_MAIN_CONTENT_LEFT">
+
+            <div class="ASIDE_TOP">
+
+                <label for="clinic_room" class="SELECT"><br>
+                    <select id="clinic_room">
+                        <option value="">第一診間</option>
+                        <option value="">第二診間</option>
+                        <option value="">第三診間</option>
+                    </select>
+                </label>
+
+                <h3>目前叫號</h3>
+                <h3><span>10</span>號</h3>
+
+                <button class="BTN_BACK">呼叫下一號<i class="bi bi-arrow-right-circle"></i></button><br>
+
+                <button class="BTN_BACK">過號<i class="bi bi-arrow-right-circle"></i></button>
+
+            </div>
+
+            <div class="ASIDE_BUTTON">
+                <ul>
+                    <li>
+                        <a href="_back_appointment_schedule.html" class="ON"><i class="bi bi-calendar"></i> 預約時刻表<i
+                                class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="_back_medical_record.html"><i class="bi bi-receipt-cutoff"></i> 病歷紀錄管理<i
+                                class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="_back_member_profile.html"><i class="bi bi-people-fill"></i> 會員管理<i
+                                class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="_back_message_management.html"><i class="bi bi-megaphone"></i> 消息管理<i
+                                class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="_back_commodity_management.html"><i class="bi bi-cart-fill"> </i>商品管理<i
+                                class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="_back_order_management.html"><i class="bi bi-truck"></i> 訂單管理<i
+                                class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="_back_user_settings.html"><i class="bi bi-gear"></i> 使用者設定<i
+                                class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </aside>
+
+        <!-- 右側內容 "主要" 不會更動 -->
+        <main class="BACK_MAIN_CONTENT_RIGHT">
+
+            <!-- 商品管理區塊 "會更動區塊" -->
+            <section class="BACK_APPOINTMENT_SCHEDULE_ALL">
+
+                <h2>預約時刻表</h2>
+
+                <section class="APPOINTMENT_SCHEDULE">
+
+                    <ul class="APPOINTMENT_SCHEDULE_SEARCH">
+
+                        <li>
+                            <label for="appointment_type" class="SELECT">預約類型<br>
+                                <select id="appointment_type">
+                                    <option value="">請選擇預約類型</option>
+                                    <option value="">一般掛號</option>
+                                    <option value="">預防針</option>
+                                    <option value="">寵物溝通</option>
+                                    <option value="">寵物住宿</option>
+                                </select>
+                            </label>
+                        </li>
+
+                        <li>
+                            <label for="room_number" class="SELECT">診間編號<br>
+                                <select id="room_number">
+                                    <option value="">請選擇診間編號</option>
+                                    <option value="">第一診間</option>
+                                    <option value="">第二診間</option>
+                                    <option value="">第三診間</option>
+                                </select>
+                            </label>
+                        </li>
+
+                    </ul>
+
+                    <section class="APPOINTMENT_SCHEDULE_LEFT">
+
+                        <div id='calendar' class="CALENDAR"></div>
+
+                    </section>
+
+                    <section class="APPOINTMENT_SCHEDULE_RIGHT">
+
+                        <p>預約列表</p>
+                        <section class="APPOINTMENT_DATE">
+                            <p>04/01 (週六)</p>
+                            <p>一般掛號</p>
+                            <p>第一診間</p>
+                        </section>
+
+                        <section class="APPOINTMENT_LIST">
+
+                            <ul class="APPOINTMENT_CONTENT">
+
+                                <li>
+                                    號碼: 001號
+                                </li>
+                                <li>
+                                    狀態: 看診結束
+                                </li>
+                                <li>
+                                    時間: 夜診
+                                </li>
+                                <li>
+                                    飼主: 范植鑫
+                                </li>
+                                <li>
+                                    寵物: 范植鑫
+                                </li>
+                                <li>
+                                    電話: 0912345678
+                                </li>
+                                <li>
+                                    <i class="bi bi-pencil RESERVE_REVISE_BTN"></i>
+                                </li>
+
+                            </ul>
+
+                            <ul class="APPOINTMENT_CONTENT">
+
+                                <li>
+                                    號碼: 002號
+                                </li>
+                                <li>
+                                    狀態: 看診結束
+                                </li>
+                                <li>
+                                    時間: 夜診
+                                </li>
+                                <li>
+                                    飼主: 范植鑫
+                                </li>
+                                <li>
+                                    寵物: 范植鑫
+                                </li>
+                                <li>
+                                    電話: 0912345678
+                                </li>
+                                <li>
+                                    <i class="bi bi-pencil RESERVE_REVISE_BTN"></i>
+                                </li>
+
+                            </ul>
+
+                            <ul class="APPOINTMENT_CONTENT">
+
+                                <li>
+                                    號碼: 003號
+                                </li>
+                                <li>
+                                    狀態: 看診結束
+                                </li>
+                                <li>
+                                    時間: 夜診
+                                </li>
+                                <li>
+                                    飼主: 范植鑫
+                                </li>
+                                <li>
+                                    寵物: 范植鑫
+                                </li>
+                                <li>
+                                    電話: 0912345678
+                                </li>
+                                <li>
+                                    <i class="bi bi-pencil RESERVE_REVISE_BTN"></i>
+                                </li>
+
+                            </ul>
+
+                            <ul class="APPOINTMENT_CONTENT">
+
+                                <li>
+                                    號碼: 004號
+                                </li>
+                                <li>
+                                    狀態: 看診結束
+                                </li>
+                                <li>
+                                    時間: 夜診
+                                </li>
+                                <li>
+                                    飼主: 范植鑫
+                                </li>
+                                <li>
+                                    寵物: 范植鑫
+                                </li>
+                                <li>
+                                    電話: 0912345678
+                                </li>
+                                <li>
+                                    <i class="bi bi-pencil RESERVE_REVISE_BTN"></i>
+                                </li>
+
+                            </ul>
+
+                            <ul class="APPOINTMENT_CONTENT">
+
+                                <li>
+                                    號碼: 005號
+                                </li>
+                                <li>
+                                    狀態: 看診結束
+                                </li>
+                                <li>
+                                    時間: 夜診
+                                </li>
+                                <li>
+                                    飼主: 范植鑫
+                                </li>
+                                <li>
+                                    寵物: 范植鑫
+                                </li>
+                                <li>
+                                    電話: 0912345678
+                                </li>
+                                <li>
+                                    <i class="bi bi-pencil RESERVE_REVISE_BTN"></i>
+                                </li>
+
+                            </ul>
+
+                        </section>
+
+                    </section>
+
+                </section>
+
+                <!-- 修改病歷 -->
+                <div class="MASK"></div>
+                <section class="RESERVE_BOX">
+                    <i class="bi bi-x-lg ESC_BTN"></i>
+                    <form action="get">
+
+                        <ul class="RESERVE_LIST">
+                            <li>
+                                <label for="reserve_type" class="SELECT">預約類型<br>
+                                    <select id="reserve_type">
+                                        <option value="general">一般掛號</option>
+                                        <option value="vaccines">預防針</option>
+                                        <option value="health_checks">健康檢查</option>
+                                        <option value="communication">寵物溝通</option>
+                                        <option value="hotel">寵物住宿</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="reserve_doctor" class="SELECT">指定醫師<br>
+                                    <select id="reserve_doctor">
+                                        <option value="not_specify">不指定</option>
+                                        <option value="范植鑫院長">范植鑫院長</option>
+                                        <option value="賴偉峰醫師">賴偉峰醫師</option>
+                                        <option value="林佳緯醫師">林佳緯醫師</option>
+                                        <option value="詹宗豪醫師">詹宗豪醫師</option>
+                                        <option value="汪玉婷醫師">汪玉婷醫師</option>
+                                        <option value="林育楣醫師">林育楣醫師</option>
+                                        <option value="羅婉瑜溝通師">羅婉瑜溝通師</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="reserve_date" class="INPUT">預約日期<br>
+                                    <input type="date" name="date" id="date">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="reserve_datetime" class="SELECT">預約時段<br>
+                                    <select id="reserve_datetime">
+                                        <option value="morning">上午 09:00 ~ 12:00</option>
+                                        <option value="afternoon">下午 14:00 ~ 18:00</option>
+                                        <option value="night">晚上 19:00 ~ 21:00</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="owner_name" class="INPUT">主人姓名<br>
+                                    <input type="text" name="owner_name" id="owner_name">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="phone" class="INPUT">手機號碼<br>
+                                    <input type="text" name="phone" id="phone">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="pet_name" class="INPUT">寵物姓名<br>
+                                    <input type="text" name="pet_name" id="pet_name">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="pet_category" class="SELECT">寵物類型<br>
+                                    <select id="pet_category">
+                                        <option value="dog">狗狗</option>
+                                        <option value="cat">貓貓</option>
+                                        <option value="rabbit">兔子</option>
+                                        <option value="other">其他</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="pet_age" class="INPUT">寵物年齡<br>
+                                    <input type="text" name="pet_age" id="pet_age">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="vaccines" class="SELECT">是否打過預防針<br>
+                                    <select id="vaccines">
+                                        <option value="yes">是</option>
+                                        <option value="no">否</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="symptom_type" class="TEXTAREA">病徵類型<br>
+                                    <textarea name="symptom_type" id="symptom_type" cols="30" rows="10">請簡述寵物病情
+                                    </textarea>
+                                </label>
+                            </li>
+
+                        </ul>
+                        <button class="BTN_BACK RESERVE_REVISE" type="submit">修改病歷</button>
+                    </form>
+
+                </section>
+
+        </main>
+
+    </section>
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js'></script>
+    <script src="fullcalendar/locales-all.global.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                locale: 'zh-tw',
+                navLinks: true,
+                
+            });
+
+            calendar.render();
+
+        });
+
+        $(document).ready(function () {
+            $('.RESERVE_REVISE_BTN').click(function () {
+                // console.log('aaa');
+                $('.RESERVE_BOX').css('display', 'block');
+                $('.MASK').show();
+            })
+
+            $('.ESC_BTN').click(function () {
+                $('.RESERVE_BOX').css('display', 'none');
+                $('.MASK').hide();
+            })
+            $('.MASK').click(function () {
+                $('.RESERVE_BOX').css('display', 'none');
+                $('.MASK').hide();
+            })
+            $('.MASK').click(function () {
+                $('.RESERVE_BOX').css('display', 'none');
+                $('.MASK').hide();
+            })
+            $('.RESERVE_REVISE').click(function () {
+                $('.RESERVE_BOX').css('display', 'none');
+                $('.MASK').hide();
+                event.preventDefault();
+            })
+        })
+
+
+
+    </script>
+
+</body>

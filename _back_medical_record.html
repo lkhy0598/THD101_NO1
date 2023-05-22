@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/shortcut_logo.png">
+    <title>波波動物醫院後台 - 病歷紀錄管理</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="BACK_NAV">
+
+            <a href="_back_index.html">
+                <img src="img/BACK-LOGO-HOVER.svg" alt="">
+                <img src="img/BACK-LOGO.svg" alt="">
+            </a>
+
+            <ul>
+                <li><a href="_back_user_settings.html"><i class="bi bi-person-circle"></i> USER 你好</a></li>
+                <li><a href="index.html">登出後台</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <section class="BACK_MAIN_CONTENT">
+
+        <!-- 左側內容 -->
+        <aside class="BACK_MAIN_CONTENT_LEFT">
+
+            <div class="ASIDE_TOP">
+
+                <label for="clinic_room" class="SELECT"><br>
+                    <select id="clinic_room">
+                        <option value="">第一診間</option>
+                        <option value="">第二診間</option>
+                        <option value="">第三診間</option>
+                    </select>
+                </label>
+
+                <h3>目前叫號</h3>
+                <h3><span>10</span>號</h3>
+
+                <button class="BTN_BACK">呼叫下一號<i class="bi bi-arrow-right-circle"></i></button><br>
+
+                <button class="BTN_BACK">過號<i class="bi bi-arrow-right-circle"></i></button>
+
+            </div>
+
+            <div class="ASIDE_BUTTON">
+                <ul>
+                    <li>
+                        <a href="_back_appointment_schedule.html"><i class="bi bi-calendar"></i> 預約時刻表<i class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="_back_medical_record.html" class="ON"><i class="bi bi-receipt-cutoff"></i> 病歷紀錄管理<i class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="_back_member_profile.html"><i class="bi bi-people-fill"></i> 會員管理<i class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="_back_message_management.html"><i class="bi bi-megaphone"></i> 消息管理<i class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="_back_commodity_management.html"><i class="bi bi-cart-fill"> </i>商品管理<i class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="_back_order_management.html"><i class="bi bi-truck"></i> 訂單管理<i class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="_back_user_settings.html"><i class="bi bi-gear"></i> 使用者設定<i class="bi bi-chevron-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </aside>
+
+        <!-- 右側內容 "主要" 不會更動 -->
+        <main class="BACK_MAIN_CONTENT_RIGHT">
+
+            <!-- 病歷紀錄管理區塊 "會更動區塊" -->
+            <section class="BACK_MEDICAL_RECORD">
+
+                <h2>病歷紀錄管理</h2>
+
+                <section class="MEDICAL_RECORD_SEARCH">
+                    <form action="">
+
+                        <ul>
+                            <li>
+                                <label for="phone" class="INPUT">手機號碼<br>
+                                    <input type="text" name="phone" id="phone">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="pet_name" class="INPUT">寵物姓名<br>
+                                    <input type="text" name="pet_name" id="pet_name">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="consultation_date" class="INPUT">看診日期<br>
+                                    <input type="date" name="consultation_date" id="consultation_date">
+                                </label>
+                            </li>
+                            <li>
+                                <p>~</p>
+                            </li>
+                            <li>
+                                <label for="consultation_date" class="INPUT">
+                                    <input type="date" name="consultation_date" id="consultation_date">
+                                </label>
+                            </li>
+                            <li>
+                                <button class="BTN_BACK" type="submit">搜尋病歷</button>
+                            </li>
+                        </ul>
+
+                    </form>
+                </section>
+
+                <section class="MEDICAL_RECORD_TABLE_ALL">
+                    <ul class="MEDICAL_RECORD_TITLE BACK_TABLE_TITLE">
+                        <li>手機號碼</li>
+                        <li>寵物姓名</li>
+                        <li>看診日期</li>
+                        <li>看診內容</li>
+                        <li>修改</li>
+                        <li>刪除</li>
+                    </ul>
+
+                    <ul class="MEDICAL_RECORD_CONTENT BACK_TABLE_CONTENT">
+                        <li>0988192839</li>
+                        <li>范植鑫</li>
+                        <li>2023/04/01</li>
+                        <li>一般掛號</li>
+                        <li><i class="bi bi-pencil"></i></li>
+                        <li><i class="bi bi-x-lg"></i></li>
+                    </ul>
+                    <ul class="MEDICAL_RECORD_CONTENT BACK_TABLE_CONTENT">
+                        <li>0988192839</li>
+                        <li>范植鑫</li>
+                        <li>2023/04/05</li>
+                        <li>預防針</li>
+                        <li><i class="bi bi-pencil"></i></li>
+                        <li><i class="bi bi-x-lg"></i></li>
+                    </ul>
+                    <ul class="MEDICAL_RECORD_CONTENT BACK_TABLE_CONTENT">
+                        <li>0988192839</li>
+                        <li>范植鑫</li>
+                        <li>2023/04/01</li>
+                        <li>寵物溝通</li>
+                        <li><i class="bi bi-pencil"></i></li>
+                        <li><i class="bi bi-x-lg"></i></li>
+                    </ul>
+                </section>
+                <section>
+                    <button class="BTN_BACK MEDICAL_RECORD_TABLE_BTN" type="submit">新增病歷</button>   
+                </section>
+            </section>
+
+            <!-- 新增病歷區塊 "會更動區塊" -->
+            <section class="BACK_ADD_MEDICAL_RECORD">
+
+                <h2>新增 / 修改病歷</h2>
+
+                <section class="ADD_MEDICAL_RECORD">
+                    <form action="">
+
+                        <ul class="ADD_MEDICAL_RECORD_FORM">
+                            <li>
+                                <p>診斷醫師：USER</p>
+                                <p>診斷日期：2023 年 04 月 01 日</p>
+                            </li>
+
+                            <li>
+                                <label for="owner_name" class="INPUT">主人姓名<br>
+                                    <input type="text" name="owner_name"" id=" owner_name"">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="phone" class="INPUT">手機號碼<br>
+                                    <input type="text" name="phone" id="phone">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="pet_name" class="INPUT">寵物姓名<br>
+                                    <input type="text" name="pet_name" id="pet_name">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="pet_category" class="SELECT">寵物類型<br>
+                                    <select id="pet_category">
+                                        <option value="dog">狗狗</option>
+                                        <option value="cat">貓貓</option>
+                                        <option value="rabbit">兔子</option>
+                                        <option value="other">其他</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="pet_age" class="INPUT">寵物年齡<br>
+                                    <input type="text" name="pet_age" id="pet_age">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="vaccines" class="SELECT">是否打過預防針<br>
+                                    <select id="vaccines">
+                                        <option value="yes">是</option>
+                                        <option value="no">否</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li class="FILEBOX">
+                                <label for="textfield">上傳檔案<br>
+                                    <input name="textfield" id="textfield" class="FILENAME">
+
+                                    <!-- 上傳按鈕 -->
+                                    <input type="button" class="FILEBUTTON" value="選取檔案 ">
+
+                                    <!-- 原按鈕隱藏 -->
+                                    <input type="file" name="file" class="FILE"
+                                        onchange="document.getElementById('textfield').value=this.value">
+                                </label>
+
+                            </li>
+                            <li>
+                                <label for="symptom_type" class="TEXTAREA">病徵類型<br>
+                                    <textarea name="symptom_type" id="symptom_type" cols="30" rows="10">請簡述寵物病情
+                                    </textarea>
+                                </label>
+                            </li>
+                        </ul>
+                        <section class="BTN_BOX">
+                            <button class="BTN_BACK REVISE_MEDICAL_RECORD_BTN" type="submit">修改病歷</button>
+                            <button class="BTN_BACK ADD_MEDICAL_RECORD_BTN" type="submit">新增病歷</button>
+                        </section>
+
+                    </form>
+                </section>
+            </section>
+
+        </main>
+    </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+
+        <script>
+            $(document).ready(function () {
+                // 修改紐
+                $('.bi-pencil').click(function () {
+                    $('.BACK_ADD_MEDICAL_RECORD').show();
+                    $('.BACK_MEDICAL_RECORD').hide();
+                })
+                // 新增紐
+                $('.MEDICAL_RECORD_TABLE_BTN').click(function () {
+                    $('.BACK_ADD_MEDICAL_RECORD').show();
+                    $('.BACK_MEDICAL_RECORD').hide();
+                })
+
+                $('.ADD_MEDICAL_RECORD_BTN').click(function () {
+                    $('.BACK_MEDICAL_RECORD').show();
+                    $('.BACK_ADD_MEDICAL_RECORD').hide();
+                    event.preventDefault();
+                })
+                
+                $('.REVISE_MEDICAL_RECORD_BTN').click(function () {
+                    $('.BACK_MEDICAL_RECORD').show();
+                    $('.BACK_ADD_MEDICAL_RECORD').hide();
+                    event.preventDefault();
+                })
+            });
+        </script>
+</body>
+
+</html>

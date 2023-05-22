@@ -1,0 +1,44 @@
+// 手機版414px
+@mixin m() {
+    @media screen and (max-width: 414px) {
+        @content;
+    }
+}
+
+@mixin flex-container($direction: row, $wrap: wrap, $justify-content: center, $align-items: center) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+$column-gap: 20px;
+
+@for $i from 1 through 12 {
+    .COL-#{$i} {
+      width: calc((100% - #{$column-gap * 11}) / 12 * #{$i} + #{$column-gap} * (#{$i} - 1));
+      margin-right: $column-gap;
+      // float: left;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@include m(){
+  $column-gap: 10px;
+  @for $i from 1 through 12 {
+    .RWD-COL-#{$i} {
+    width: calc((100% - #{$column-gap * 11}) / 12 * #{$i} + #{$column-gap} * (#{$i} - 1));
+    margin-right: $column-gap;
+    // float: left;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  }
+}
+

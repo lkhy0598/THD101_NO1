@@ -1,0 +1,486 @@
+.RESERVE_COMMUNICATION3 {
+
+    .CAROUSEL{
+        position: relative;
+        .PAWPAW{
+            position: absolute;
+            top: 50%;
+            left: 6vw;
+            > picture > img{
+                width: 35vw;
+            }
+        } 
+    }
+
+    .DOT {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        right: 30px;
+        bottom: 40px;
+        z-index: 10;
+
+    }
+
+    // .BACKGROUND {
+    // }
+
+    .BACKGROUND>.BIG_TITLE::after {
+        display: none;
+    }
+
+    //-----預約頁面共用內容——對初診患者資訊區塊-----//
+    .RESERVE_INFO {
+        overflow: hidden;
+        padding-bottom: 170px;
+    }
+
+    .RESERVE_INFO>.BREAD {
+        margin-top: 45px;
+        margin-bottom: 50px;
+    }
+
+    .FIRSTTIME_INFO {
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .FIRSTTIME_INFO>h1::before {
+        background-color: #34424F;
+        width: 400px;
+        height: 2px;
+        content: "";
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        top: 24px;
+        left: 150px;
+    }
+
+    .FIRSTTIME_INFO>h1 {
+        color: #34424F;
+        width: 1440px;
+        position: relative;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    .FIRSTTIME_INFO>h1::after {
+        background-color: #34424F;
+        width: 400px;
+        height: 2px;
+        content: "";
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        top: 24px;
+        right: 150px;
+    }
+
+    .RESERVE_TYPE_UL {
+        display: flex;
+        width: 77%;
+        justify-content: space-between;
+        margin-bottom: 85px;
+    }
+
+    .TITLE_NO {
+        background-color: #FFFFFF;
+        color: #428AA9;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .RESERVE_TYPE {
+        background-color: #428AA9;
+        color: #FFFFFF;
+        width: 250px;
+        height: 250px;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        line-height: 250px;
+    }
+
+    .FIRSTTIME_INFO>p {
+        color: #34424F;
+        text-align: center;
+        line-height: 1.6;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .FIRSTTIME_INFO .CALL {
+        font-weight: 700;
+    }
+
+    //----- 預約步驟區塊 -----//
+    .RESERVE_STEPAREA {
+        color: #34424F;
+        margin: 0 auto;
+        display: flex;
+        width: 67%;
+        justify-content: space-between;
+        margin-top: 100px;
+    }
+
+    .RESERVE_ARC {
+        position: relative;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .RESERVE_ARC>.ARC_TITLE {
+        color: #428AA9;
+        background-color: #fff;
+    }
+
+    .RESERVE_ARC>p {
+        position: absolute;
+        bottom: -60px;
+    }
+
+    .RESERVE_ARC::before {
+        background-color: #FFF;
+        width: 100px;
+        height: 6px;
+        content: "";
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        top: 35px;
+        left: 0px;
+    }
+
+    .RESERVE_ARC::after {
+        background-color: #FFF;
+        width: 100px;
+        height: 6px;
+        content: "";
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        top: 35px;
+        right: 0px;
+    }
+
+    #ARCONE::before {
+        display: none;
+    }
+
+    #ARCFOUR::after {
+        display: none;
+    }
+
+    #ARCONE>.ARC_TITLE {
+        background-color: #428AA9;
+        color: #FFF;
+        z-index: 10;
+    }
+
+    #ARCTWO>.ARC_TITLE {
+        background-color: #428AA9;
+        color: #FFF;
+        z-index: 10;
+    }
+
+    #ARCTHREE>.ARC_TITLE {
+        background-color: #428AA9;
+        color: #FFF;
+        z-index: 10;
+    }
+
+    #ARCONE::after {
+        background-color: #428AA9;
+    }
+
+    #ARCTWO::before {
+        background-color: #428AA9;
+    }
+
+    #ARCTWO::after {
+        background-color: #428AA9;
+    }
+
+    #ARCTHREE::before {
+        background-color: #428AA9;
+    }
+
+    #ARCONE>p {
+        font-weight: bold;
+    }
+
+    #ARCTWO>p {
+        font-weight: bold;
+    }
+
+    #ARCTHREE>p {
+        font-weight: bold;
+    }
+
+    .RESERVE_TYPE_UL_M {
+        display: none;
+    }
+
+    //----- 表單區塊 -----//
+    .RESERVE_FORM {
+        margin: 30px auto;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        z-index: 10;
+        h1 {
+            font-size: 25px;
+            margin: 20px 0;
+        }
+    }
+
+    .RESERVE_FORM ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 98%;
+        margin:0 auto 50px;
+        border: 1px solid #888888;
+        border-radius: 10px;
+        background-color: #fff;
+        padding: 10px;
+    }
+
+    .RESERVE_FORM ul li {
+        width: 99%;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 10px;
+        font-size: 20px;
+    }
+
+    .RESERVE_FORM ul li:nth-child(even) {
+        background-color: #D9D9D9;
+    }
+
+    .FYI {
+        width: 100%;
+        margin: 20px auto 50px;
+    }
+    
+
+
+
+    .RESERVE_FORM .STEPS {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .STEPS input {
+        width: 180px;
+        height: 60px;
+        font-size: 20px;
+        color: #FFF;
+        background-color: #34424F;
+        border-radius: 8px;
+        margin-left: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .STEPS input:first-child {
+        background-color: transparent;
+        border: none;
+        color: #000;
+        text-decoration-line: underline;
+    }
+}
+
+// =========================  RWD ===============================
+
+@mixin m() {
+    @media screen and (max-width: 415px) {
+        @content;
+    }
+}
+
+@include m {
+    .RESERVE_COMMUNICATION3 {
+        .APPOINTMENT {
+            display: none;
+        }
+
+        .CAROUSEL{
+            .PAWPAW{
+                position: absolute;
+                top: 5%;
+                left: 25vw;
+                > picture > img{
+                    width: 55vw;
+                }
+            } 
+
+            .DOT{
+                position: absolute;
+                width: 120px;
+                height: 120px;
+                left: -62px;
+                top: 25vh;
+                z-index: 10;
+                
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: radial-gradient(circle, $white 0%, $white 20%, transparent 25%, transparent 100%);
+                    background-size: 10px 10px;
+                    background-position: 0 0;
+                }
+            }
+            
+            .DOT1{
+                display: block;
+                position: absolute;
+                width: 170px;
+                height: 170px;
+                left: auto;
+                right: 10px;
+                bottom: -10px;
+                z-index: 10;
+    
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: radial-gradient(circle, $white 0%, $white 20%, transparent 0%, transparent 100%);
+                    background-size: 14px 14px;
+                    background-position: 0 0;
+                }
+            }
+        }
+
+        .RESERVE_INFO {
+            width: 93%;
+            padding-bottom: 70px;
+
+            .FIRSTTIME_INFO>h1::before {
+                background-color: #34424F;
+                width: 40px;
+                height: 2px;
+                content: "";
+                box-sizing: border-box;
+                position: absolute;
+                top: 20px;
+                left: 25px;
+                display: block;
+            }
+
+            .FIRSTTIME_INFO>h1::after {
+                background-color: #34424F;
+                width: 40px;
+                height: 2px;
+                content: "";
+                box-sizing: border-box;
+                position: absolute;
+                top: 20px;
+                right: 25px;
+                display: block;
+            }
+
+            .RESERVE_TYPE_UL {
+                display: none;
+            }
+
+            .RESERVE_TYPE_UL_M {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin: 20px auto;
+
+                .TITLE_NO {
+                    font-size: 14px;
+                }
+
+                .RESERVE_TYPE {
+                    width: 110px;
+                    height: 110px;
+                    position: relative;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 110px;
+                    font-size: 14px;
+                }
+            }
+
+            .RESERVE_STEPAREA {
+                width: 100%;
+                display: flex;
+                flex-grow: 1;
+                margin-top: 20px;
+
+                .RESERVE_ARC {
+                    p {
+                        font-size: 12px;
+                        bottom: -25px;
+                    }
+                }
+
+                .RESERVE_ARC::before {
+                    background-color: #FFF;
+                    width: 40px;
+                    height: 6px;
+                    content: "";
+                    box-sizing: border-box;
+                    display: block;
+                    position: absolute;
+                    top: 19px;
+                    left: 0px;
+                }
+
+                .RESERVE_ARC::after {
+                    background-color: #FFF;
+                    width: 40px;
+                    height: 6px;
+                    content: "";
+                    box-sizing: border-box;
+                    display: block;
+                    position: absolute;
+                    top: 19px;
+                    right: 0px;
+                }
+
+            }
+        }
+
+        .CALENDAR_AREA {
+            .CALENDAR_INFO {
+                padding-top: 20px;
+                padding-left: 50px;
+            }
+        }
+
+        .RESERVE_FORM ul li {
+            padding-left: 32px;
+        }
+
+        .FOOTER_BOTTOM {
+            margin-bottom: 0px;
+        }
+    }
+
+}

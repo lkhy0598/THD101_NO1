@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/shortcut_logo.png">
+    <title>資訊導覽 INFORMATION - 波波動物醫院</title>
+</head>
+
+<body class="INFORMATION">
+    <!-- ========================= 彈跳視窗 ========================= -->
+    <!-- 壓底黑色塊 -->
+    <div id="modal" class="MODAL">
+        <!-- 關閉按鈕 -->
+        <a class="POPUP_CLOSEBTN" href="#">
+            <i class="bi bi-x-circle"></i>
+        </a>
+        <!-- 彈跳視窗_註冊/登入 -->
+        <div id="popup-wrap" class="POPUP_WRAP">
+            <div class="BG_CLOUD_BOX">
+                <img class="BG_CLOUD" src="./img/user_popup/USER_BG_CLOUD.png" alt="">
+            </div>
+            <!-- 導覽列 -->
+            <ul class="POPUP_NAVS">
+                <li class="POPUP_TABS "><a href="#POPUP_LOGIN">登入會員</a></li>
+                <li class="POPUP_TABS "><a href="#POPUP_SIGNUP">註冊會員</a></li>
+                <li class="POPUP_TABS FORGETTABS CLOSETABS"><a href="#">忘記密碼</a></li>
+                <li class="POPUP_TABS CHANGETABS CLOSETABS"><a href="#">修改密碼</a></li>
+
+            </ul>
+            <!-- 登入視窗 -->
+            <div class="POPUP_TABS_CONTENT">
+                <div id="POPUP_LOGIN" class="POPUP_BOX">
+                    <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+
+                    <form class="USER_FORM" method="post" action="Login.php">
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-envelope"></i>
+                            <input type="email" id="account" name="account" placeholder="請輸入電子信箱" /></br>
+                        </div>
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-lock-fill"></i>
+                            <input type="password" id="password" name="password" placeholder="請輸入密碼" /></br>
+                        </div>
+                        <div class="FORGET_BOX">
+                            <button type="button" class="FORGET_BTN">忘記密碼？</button>
+                        </div>
+                        <div class="INPUT_GROUP">
+                            <input type="submit" id="send-btn" class="BTN" value="登入" />
+                        </div>
+
+                        <div class="DIVIDING">
+                            <span>or</span>
+                        </div>
+                        <button type="submit" class="OTHERLOGIN_BTN">
+                            <span class="OTHERLOGIN_ICON">
+                                <img src="./img/user_popup/GOOGLE.svg" alt="">
+                            </span>
+                            <span>使用GOOGLE登入</span>
+                        </button>
+                    </form>
+                    <div class="BTN SIGNUP_BTN">註冊會員</div>
+                </div>
+                <!-- 註冊視窗 -->
+                <div id="POPUP_SIGNUP" class="POPUP_BOX ">
+                    <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+
+                    <form class="USER_FORM" method="post" action="SIGNUP.php">
+                        <div class="SIGNUP_INPUTS">
+                            <div class="INPUT_GROUP">
+                                <i class="bi bi-person-circle"></i>
+                                <input type="text" id="name" name="name" placeholder="請輸入真實姓名" />
+                            </div>
+                            <div class="INPUT_GROUP">
+                                <i class="bi bi-lock-fill"></i>
+                                <input type="password" id="password" name="password" placeholder="請輸入密碼" />
+                            </div>
+                            <div class="INPUT_GROUP">
+                                <i class="bi bi-lock"></i>
+                                <input type="password" id="password" name="password" placeholder="請再確認一次密碼" />
+                            </div>
+                            <div class="INPUT_GROUP">
+                                <i class="bi bi-phone"></i>
+                                <input type="number" id="phone" name="phone" placeholder="請輸入手機號碼" />
+                            </div>
+                            <div class="INPUT_GROUP">
+                                <i class="bi bi-envelope"></i>
+                                <input type="email" id="account" name="account" placeholder="請輸入電子信箱" />
+                                <!-- <button class="VERIFBTN BTN">
+                                    發送驗證信
+                                </button> -->
+                            </div>
+                            <div class="INPUT_GROUP">
+                                <i class="bi bi-key"></i>
+                                <input type="number" id="verifyNum" name="verifyNum" class="VERIFYINPUT"
+                                    placeholder="請輸入驗證碼" />
+                                <button class="VERIFBTN BTN">
+                                    發送驗證碼
+                                </button>
+                            </div>
+                        </div>
+
+                        <p>＊送出即同意「會員服務條款、隱私權保護聲明」</p>
+                        <div class="INPUT_GROUP">
+                            <input type="submit" id="send-btn" class=" SIGNUP_SUB BTN" value="驗證並送出" />
+                        </div>
+                    </form>
+                </div>
+                <!-- 忘記密碼 -->
+                <div id="popup_forgetpass" class="POPUP_BOX ">
+                    <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+                    <form class="USER_FORM" method="post" action="SIGNUP.php">
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-envelope"></i>
+                            <input type="email" id="account" name="account" class="VERIFYINPUT" placeholder="請輸入電子信箱" />
+                            <button class="VERIFBTN BTN">
+                                發送驗證信
+                            </button>
+                        </div>
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-key"></i>
+                            <input type="number" id="verifyNum" name="verifyNum" class="VERIFYINPUT"
+                                placeholder="請輸入驗證碼" />
+                            <button class="VERIFBTN BTN">
+                                驗證
+                            </button>
+                        </div>
+                        <div class="BACKLOGIN_BOX">
+                            <button type="button" class="BACKLOGIN_BTN">返回登入</button>
+                        </div>
+                        <div class="FORGETPASS_DESC">
+                            <p>＊系統已寄出驗證信，請至信箱收取。</p>
+                            <p>＊若過久未收到驗證信件，請至垃圾信件匣或其他收件匣確認。</p>
+                        </div>
+                    </form>
+                    <div class="PASS_SEND_BOX">
+                        <p>＊送出後會直接跳轉到修改密碼頁</p>
+                        <div class="INPUT_GROUP">
+                            <input type="submit" id="send-btn" class="PASS_SUB BTN" value="送出" />
+                        </div>
+                    </div>
+                </div>
+                <!-- 修改密碼 -->
+                <div id="popup_changepass" class="POPUP_BOX">
+                    <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+                    <form class="USER_FORM" method="post" action="SIGNUP.php">
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-lock-fill"></i>
+                            <input type="password" id="password" name="password" placeholder="請輸入密碼" />
+                        </div>
+                        <div class="INPUT_GROUP">
+                            <i class="bi bi-lock"></i>
+                            <input type="password" id="password" name="password" placeholder="請再確認一次密碼" />
+                        </div>
+                    </form>
+                    <div class="PASS_SEND_BOX">
+                        <p>＊送出後會直接跳轉到修改密碼頁</p>
+                        <div class="INPUT_GROUP">
+                            <input type="submit" id="send-btn" class="PASS_SUB BTN" value="修改密碼" />
+                        </div>
+                    </div>
+                </div>
+                <!-- 修改完成畫面 -->
+                <div id="popup_changepass_succ" class="POPUP_BOX">
+                    <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+                    <div class="USER_FORM">
+                        <img class="CHANGEPASS_SUCC" src="./img/user_popup/CHANGEPASS_SUCC.png" alt="">
+                    </div>
+                    <div class="BACKTOLOGIN_BOX">
+                        <p>＊三秒後將跳轉到登入頁，如果沒跳轉請點選按鈕</p>
+                        <div class="INPUT_GROUP">
+                            <input type="submit" id="login-btn" class="BTN CHANGE_SUCC_BTN BACKLOGIN_BTN"
+                                value="登入會員" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- =====appointment門診時間及預約======== -->
+    <div class="APPOINTMENT">
+        <div class="APPOINTMENT_TAG">
+            <p>門診時間&預約</p>
+        </div>
+        <div class="APPOINTMENT_BOX">
+            <div class="APPOINTMENT_CONTENT">
+                <img src="./img/appointment/TIMETABLE_PC.png" alt="">
+                <div class="APPOINTMENT_RESERVE_PHONE">
+                    <a href="reserve.html" class="RESERVE">立即預約</a>
+                    <a class="APPOINTMENT_PHONE" href="tel:+886900000000">
+                        <i class="bi bi-telephone"></i>
+                        預約專線 : 02-3322-2777
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =====RWD 功能列及小時刻表======== -->
+    <!-- RWD功能列內的時刻表 -->
+    <div class="M_TIME_TABLE">
+        <img src="./img/appointment/TIMETABLE_RWD.png" alt="" class="">
+    </div>
+    <!-- RWD下方功能列 -->
+    <div class="M_FUNTION">
+        <!-- RWD功能列內的時刻表 -->
+        <div class="M_TIME_TABLE">
+            <img src="./img/appointment/TIMETABLE_RWD.png" alt="" class="">
+        </div>
+        <ul>
+            <a class="M_FUNTION_A1" href="tel:+886900000000">
+                <li>
+                    <i class="bi bi-telephone"></i>
+                    <p>電話預約</p>
+                </li>
+            </a>
+            <a href="" class="M_FUNTION_A2">
+                <li>
+                    <i class="bi bi-calendar-plus"></i>
+                    <p class="CLINIC_HOURS">門診時間</p>
+                </li>
+            </a>
+            <a href="reserve.html" class="M_FUNTION_A3">
+                <li>
+                    <i class="bi bi-arrow-right"></i>
+                    <p>立即預約</p>
+                </li>
+            </a>
+        </ul>
+    </div>
+    <!-- ===== header ===== -->
+    <header>
+
+        <nav class="HEADER_NAV">
+
+            <a href="homepage.html">
+                <div class="HEADERLOGO_BG_BOX HEADERLOGE_BG_TOP">
+                    <div class="HEADERLOGO_PAW">
+                        <img src="./img/HEADERLOGO_PAW.svg" alt="">
+                        <div class="HEADERLOGO_CLAWS">
+                            <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="HEADER_LOGO_NAME">
+                        <img src="./img/HEADERLOGO_NAME.svg" alt="">
+                    </div>
+                </div>
+            </a>
+
+
+            <ul>
+                <li>
+                    <a href="about_us.html">
+                        <span>關於院所</span>
+                        <br>About Us
+                    </a>
+                </li>
+                <li>
+                    <a href="information.html">
+                        <span>資訊導覽</span>
+                        <br>Information
+                    </a>
+                </li>
+                <li>
+                    <a href="shopping.html">
+                        <span>線上購物</span>
+                        <br>Shopping
+                    </a>
+                </li>
+                <li>
+                    <a href="qa.html">
+                        <span>常見問題</span>
+                        <br>Q & A
+                    </a>
+                </li>
+                <li>
+                    <a href="member_center.html">
+                        <span>會員中心</span>
+                        <br>Member Center
+                    </a>
+                </li>
+                <li>
+                    <a href="reserve.html" class="RESERVE">立即預約</a>
+                </li>
+                <li>
+                    <a href="" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
+                </li>
+                <li>
+                    <a href="shopping_cart.html"><i class="bi bi-cart-fill"></i></a>
+                </li>
+            </ul>
+
+        </nav>
+
+
+
+
+        <nav class="M_HEADER_NAV">
+
+            <a href="homepage.html">
+                <div class="M_HEADERLOGO_BG_BOX M_HEADERLOGE_BG_TOP">
+                    <div class="M_HEADERLOGO_PAW">
+                        <img src="./img/HEADERLOGO_PAW.svg" alt="">
+                        <div class="M_HEADERLOGO_CLAWS">
+                            <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="M_HEADER_LOGO_NAME">
+                        <img src="./img/HEADERLOGO_NAME.svg" alt="">
+                    </div>
+                </div>
+            </a>
+
+
+            <ul>
+                <li>
+                    <a class="M_HEADER_LI" href="about_us.html">
+                        <span>關於院所</span>
+                        <P class="EN">About Us</P>
+                    </a>
+                </li>
+                <li>
+                    <a class="M_HEADER_LI" href="information.html">
+                        <span>資訊導覽</span>
+                        <p class="EN">Information</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="M_HEADER_LI" href="shopping.html">
+                        <span>線上購物</span>
+                        <p class="EN">Shopping</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="M_HEADER_LI" href="qa.html">
+                        <span>常見問題</span>
+                        <p class="EN">Q & A</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="M_HEADER_LI" href="member_center.html">
+                        <span>會員中心</span>
+                        <p class="EN">Member Center</p>
+                    </a>
+                </li>
+
+                <li>
+                    <div class="LOGIN_SHOPPING">
+                        <a href="" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
+                        <a href="shopping_cart.html"><i class="bi bi-cart-fill"></i></a>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="reserve.html" class="RESERVE">立即預約</a>
+                </li>
+            </ul>
+
+
+
+
+            <div id="TOGGLE" class="TOGGLE">
+                <span class="SPAN1"></span>
+                <span class="SPAN2"></span>
+                <span class="SPAN3"></span>
+            </div>
+        </nav>
+        </nav>
+
+    </header>
+    <!-- =================================MASTER_VISION====================================== -->
+    <section class="CAROUSEL">
+        <div class="MASTER_VISION"><img src="img/HEADER-TOP.png" alt="" /></div>
+        <div class="DOT"></div>
+   
+
+    </section>
+    <!-- ============================================================================= -->
+
+    <!-- header下方區塊的背景 -->
+    <section class="BACKGROUND">
+
+        <!-- 背景 -->
+        <img class="BG" src="./img/BG.jpg" alt="">
+        <!-- 背景雲裝飾 -->
+        <div class="BG_CLOUDS">
+            <div class="BG_CLOUD CLOUD_1">
+                <img class="BG_CLOUD_IMG1" src="./img/CLOUD_BG.png" alt="">
+            </div>
+            <div class="BG_CLOUD CLOUD_2">
+                <img class="BG_CLOUD_IMG2" src="./img/CLOUD_BG.png" alt="">
+            </div>
+        </div>
+        <!-- ===== 麵包屑 ===== -->
+        <section class="MEMCENTOP">
+            <section class="BREAD WRAPPER">
+                <a href="/homepage.html">首頁</a>
+                /
+                <a>資訊導覽</a>
+            </section>
+        </section>
+        <!-- ===== 網頁內容 ===== -->
+        <!-- 區塊TITLE -->
+        <section class="BIG_TITLE WRAPPER">
+            <section class="BIG_TITLE_IMG">
+                <h1>資訊導覽</h1>
+                <p class="EN">Information</p>
+            </section>
+        </section>
+
+        <!-- 網頁 -->
+        <section class="WRAPPER">
+            <!-- 導覽列 -->
+            <ul class="INFORMATION_NAVS">
+                <li class="INFORMATION_TAB TABL"><a href="#INFORMATION_NEWS">最新消息</a></li>
+                <li class="INFORMATION_TAB TABC"><a href="#INFORMATION_HEALTH">衛教文章</a></li>
+                <li class="INFORMATION_TAB TABR"><a href="#INFORMATION_LINKS">相關連結</a></li>
+                <div class="INFORMATION_NAV_BG" style="position: absolute;
+                top: 0;left: 0%; transform: translateX(-0%);"></div>
+                <div class="INFORMATION_NAV_WBG"></div>
+            </ul>
+
+            <div class="INFORMATION_BOX">
+                <!-- 最新消息 -->
+                <ul id="INFORMATION_NEWS" class="INFORMATION_CARD">
+
+                    <a href="./information_content.html">
+                        <li class="CARD_BODY">
+                            <div class="CARD_LEFT NEWSIMG">
+                                <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
+                            </div>
+                            <div class="CARD_RIGHT">
+                                <div class="TITLE_DATE_BOX">
+                                    <div class="CARD_TITLE">最新消息</div>
+                                    <div class="CARD_DATE">2023 / 04 / 13</div>
+                                </div>
+                                <h3 class="CARD_CONTENT">COVID-19 毛孩家長就診須知！保護你我不憂慮</h3>
+                                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="./information_content.html">
+                        <li class="CARD_BODY">
+                            <div class="CARD_LEFT NEWSIMG">
+                                <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
+                            </div>
+                            <div class="CARD_RIGHT">
+                                <div class="TITLE_DATE_BOX">
+                                    <div class="CARD_TITLE">最新消息</div>
+                                    <div class="CARD_DATE">2023 / 04 / 13</div>
+                                </div>
+                                <h3 class="CARD_CONTENT">COVID-19 毛孩家長就診須知！保護你我不憂慮</h3>
+                                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="./information_content.html">
+                        <li class="CARD_BODY">
+                            <div class="CARD_LEFT NEWSIMG">
+                                <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
+                            </div>
+                            <div class="CARD_RIGHT">
+                                <div class="TITLE_DATE_BOX">
+                                    <div class="CARD_TITLE">最新消息</div>
+                                    <div class="CARD_DATE">2023 / 04 / 13</div>
+                                </div>
+                                <h3 class="CARD_CONTENT">COVID-19 毛孩家長就診須知！保護你我不憂慮</h3>
+                                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="./information_content.html">
+                        <li class="CARD_BODY">
+                            <div class="CARD_LEFT NEWSIMG">
+                                <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
+                            </div>
+                            <div class="CARD_RIGHT">
+                                <div class="TITLE_DATE_BOX">
+                                    <div class="CARD_TITLE">最新消息</div>
+                                    <div class="CARD_DATE">2023 / 04 / 13</div>
+                                </div>
+                                <h3 class="CARD_CONTENT">COVID-19 毛孩家長就診須知！保護你我不憂慮</h3>
+                                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="./information_content.html">
+                        <li class="CARD_BODY">
+                            <div class="CARD_LEFT NEWSIMG">
+                                <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
+                            </div>
+                            <div class="CARD_RIGHT">
+                                <div class="TITLE_DATE_BOX">
+                                    <div class="CARD_TITLE">最新消息</div>
+                                    <div class="CARD_DATE">2023 / 04 / 13</div>
+                                </div>
+                                <h3 class="CARD_CONTENT">COVID-19 毛孩家長就診須知！保護你我不憂慮</h3>
+                                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
+                            </div>
+                        </li>
+                    </a>
+
+                </ul>
+                <!-- 衛教資訊 -->
+                <ul id="INFORMATION_HEALTH" class="INFORMATION_CARD">
+
+                    <a href="./information_content.html">
+                        <li class="CARD_BODY">
+                            <div class="CARD_LEFT HEALTHIMG">
+                                <!-- <img src="img/index/INDEX_CARD2.jpg" alt=""> -->
+                            </div>
+                            <div class="CARD_RIGHT">
+                                <div class="TITLE_DATE_BOX">
+                                    <div class="CARD_TITLE">衛教資訊</div>
+                                    <div class="CARD_DATE">2023 / 04 / 08</div>
+                                </div>
+                                <div class="CARD_CONTENT_LINK_BOX">
+                                    <h3 class="CARD_CONTENT">毛小孩健檢的重要性</h3>
+                                    <i Class="bi bi-arrow-right-circle-fill ALLOW"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="./information_content.html">
+                        <li class="CARD_BODY">
+                            <div class="CARD_LEFT HEALTHIMG">
+                                <!-- <img src="img/index/INDEX_CARD2.jpg" alt=""> -->
+                            </div>
+                            <div class="CARD_RIGHT">
+                                <div class="TITLE_DATE_BOX">
+                                    <div class="CARD_TITLE">衛教資訊</div>
+                                    <div class="CARD_DATE">2023 / 04 / 08</div>
+                                </div>
+                                <div class="CARD_CONTENT_LINK_BOX">
+                                    <h3 class="CARD_CONTENT">毛小孩健檢的重要性</h3>
+                                    <i Class="bi bi-arrow-right-circle-fill ALLOW"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="./information_content.html">
+                        <li class="CARD_BODY">
+                            <div class="CARD_LEFT HEALTHIMG">
+                                <!-- <img src="img/index/INDEX_CARD2.jpg" alt=""> -->
+                            </div>
+                            <div class="CARD_RIGHT">
+                                <div class="TITLE_DATE_BOX">
+                                    <div class="CARD_TITLE">衛教資訊</div>
+                                    <div class="CARD_DATE">2023 / 04 / 08</div>
+                                </div>
+                                <div class="CARD_CONTENT_LINK_BOX">
+                                    <h3 class="CARD_CONTENT">毛小孩健檢的重要性</h3>
+                                    <i Class="bi bi-arrow-right-circle-fill ALLOW"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="./information_content.html">
+                        <li class="CARD_BODY">
+                            <div class="CARD_LEFT HEALTHIMG">
+                                <!-- <img src="img/index/INDEX_CARD2.jpg" alt=""> -->
+                            </div>
+                            <div class="CARD_RIGHT">
+                                <div class="TITLE_DATE_BOX">
+                                    <div class="CARD_TITLE">衛教資訊</div>
+                                    <div class="CARD_DATE">2023 / 04 / 08</div>
+                                </div>
+                                <div class="CARD_CONTENT_LINK_BOX">
+                                    <h3 class="CARD_CONTENT">毛小孩健檢的重要性</h3>
+                                    <i Class="bi bi-arrow-right-circle-fill ALLOW"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="./information_content.html">
+                        <li class="CARD_BODY">
+                            <div class="CARD_LEFT HEALTHIMG">
+                                <!-- <img src="img/index/INDEX_CARD2.jpg" alt=""> -->
+                            </div>
+                            <div class="CARD_RIGHT">
+                                <div class="TITLE_DATE_BOX">
+                                    <div class="CARD_TITLE">衛教資訊</div>
+                                    <div class="CARD_DATE">2023 / 04 / 08</div>
+                                </div>
+                                <div class="CARD_CONTENT_LINK_BOX">
+                                    <h3 class="CARD_CONTENT">毛小孩健檢的重要性</h3>
+                                    <i Class="bi bi-arrow-right-circle-fill ALLOW"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </a>
+
+                </ul>
+                <!-- 相關連結 -->
+                <ul id="INFORMATION_LINKS" class="INFORMATION_CARD">
+
+                    <a href="./information_content.html">
+                        <li class="CARD_BODY">
+                            <div class="CARD_LEFT LINKIMG">
+                                <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
+                            </div>
+                            <div class="CARD_RIGHT">
+                                <div class="TITLE_DATE_BOX">
+                                    <div class="CARD_TITLE">相關連結</div>
+                                    <div class="CARD_DATE">2023 / 04 / 13</div>
+                                </div>
+                                <h3 class="CARD_CONTENT">[推薦]微電影：無家的孩子</h3>
+                                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
+                            </div>
+                        </li>
+                    </a>
+
+                    <a href="./information_content.html">
+                        <li class="CARD_BODY">
+                            <div class="CARD_LEFT LINKIMG">
+                                <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
+                            </div>
+                            <div class="CARD_RIGHT">
+                                <div class="TITLE_DATE_BOX">
+                                    <div class="CARD_TITLE">相關連結</div>
+                                    <div class="CARD_DATE">2023 / 04 / 13</div>
+                                </div>
+                                <h3 class="CARD_CONTENT">[推薦]微電影：無家的孩子</h3>
+                                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="./information_content.html">
+                        <li class="CARD_BODY">
+                            <div class="CARD_LEFT LINKIMG">
+                                <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
+                            </div>
+                            <div class="CARD_RIGHT">
+                                <div class="TITLE_DATE_BOX">
+                                    <div class="CARD_TITLE">相關連結</div>
+                                    <div class="CARD_DATE">2023 / 04 / 13</div>
+                                </div>
+                                <h3 class="CARD_CONTENT">[推薦]微電影：無家的孩子</h3>
+                                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="./information_content.html">
+                        <li class="CARD_BODY">
+                            <div class="CARD_LEFT LINKIMG">
+                                <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
+                            </div>
+                            <div class="CARD_RIGHT">
+                                <div class="TITLE_DATE_BOX">
+                                    <div class="CARD_TITLE">相關連結</div>
+                                    <div class="CARD_DATE">2023 / 04 / 13</div>
+                                </div>
+                                <h3 class="CARD_CONTENT">[推薦]微電影：無家的孩子</h3>
+                                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="./information_content.html">
+                        <li class="CARD_BODY">
+                            <div class="CARD_LEFT LINKIMG">
+                                <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
+                            </div>
+                            <div class="CARD_RIGHT">
+                                <div class="TITLE_DATE_BOX">
+                                    <div class="CARD_TITLE">相關連結</div>
+                                    <div class="CARD_DATE">2023 / 04 / 13</div>
+                                </div>
+                                <h3 class="CARD_CONTENT">[推薦]微電影：無家的孩子</h3>
+                                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
+                            </div>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </section>
+        <!-- =======================================頁碼========================================== -->
+        <section class="PGAENUMBER WRAPPER">
+            <span>
+                <img src="/img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN LEFT">
+            </span>
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+            <span>
+                <img src="/img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN RIGHT">
+            </span>
+        </section>
+        <!-- ===============================回到TOP================================================ -->
+        <button id="js-top" class="TOP_BTN"></button>
+        <!-- ===== footer ===== -->
+        <footer>
+            <div class="FOOTER_LOGO">
+                <a href="">
+                    <picture>
+                        <source srcset="./img/index/M_index/M_FOOTERLOGO.svg" media="(max-width: 414px)">
+                        <img src="img/H-LOGO.svg" alt="" />
+                    </picture>
+
+                </a>
+
+            </div>
+            <div class="FOOTER_RIGHT">
+                <nav class="FOOTER_NAV">
+                    <ul>
+                        <li>
+                            <a href="about_us.html"> <span>關於院所</span></a>
+                        </li>
+                        <li>
+                            <a href="reserve.html"> <span>立即預約</span></a>
+                        </li>
+                        <li>
+                            <a href="information.html"> <span>資訊導覽</span></a>
+                        </li>
+                        <li>
+                            <a href="member_center.html"> <span>會員中心</span></a>
+                        </li>
+                        <li>
+                            <a href="shopping.html"> <span>線上購物</span></a>
+                        </li>
+                        <li>
+                            <a href="shopping_cart.html"> <span>購物車</span></a>
+                        </li>
+                        <li>
+                            <a href="qa.html"> <span>常見問題</span></a>
+                        </li>
+                        <li>
+                            <span class="FOLLOW">追蹤我們</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="FOOTER_ICON">
+                <a href="https://www.facebook.com/"><img src="img/FOOTER_FB_ICON.svg" alt="" /></a>
+                <a href="https://www.instagram.com/"><img src="img/FOOTER_INS_ICON.svg" alt="" /></a>
+            </div>
+
+            <div class="FOOTER_TOP_BTN" id="js-f-top">
+                <i class="bi bi-caret-up-fill"></i>
+                <p>回到頂部</p>
+            </div>
+
+        </footer>
+        <div class="FOOTER_BOTTOM">
+            <p>
+                Copyright ©
+                本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。
+            </p>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="infor.js"></script>
+    <script src="top_btn.js"></script>
+    <script src="nav.js"></script>
+    <script src="user_popup.js"></script>
+    <script src="toggle.js"></script>
+    <script src="appointment.js"></script>
+
+</body>
+
+</html>

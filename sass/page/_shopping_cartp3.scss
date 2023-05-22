@@ -1,0 +1,462 @@
+.SHOPPINGCARTP3{
+    .SHOPPINGCARTP3BG{
+    background-image: url(../../img/shopping_cart/shopping_cartp3_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 20;
+
+    .BG {}
+    .BG_CLOUDS {
+
+        .BG_CLOUD {}
+
+        .CLOUD_1 {
+            top: 600px;
+            left: -200px;
+            .BG_CLOUD_IMG1 {
+                transform: scale(-2) rotate(330deg);
+
+                @include m() {
+                    transform: scale(-8) rotate(330deg);
+                }
+            }
+            @include m() {
+                img{
+                    width: 100%;
+                    filter: saturate(1.5);
+                }
+                top: -500px;
+            }
+        }
+        .CLOUD_2 {
+            top: 1640px;
+            left: 22px;
+
+            .BG_CLOUD_IMG2 {
+                transform: scale(-2) rotate(145deg);
+
+                @include m() {
+                    transform: scale(-10) rotate(300deg);
+                }
+            }
+            @include m() {
+                img{
+                    width: 100%;
+                    filter: saturate(1.5);
+                }
+                top: 2860px;
+                left: 0px;
+            }
+        }
+
+    }
+
+
+    .PL{
+        padding-left: 40px;
+        @include m {
+            padding-left: 0px;
+        }
+    }
+    .PR{
+        padding-right: 40px;
+        @include m {
+            padding-right: 0px;
+        }
+    }
+
+// ================================================
+
+.CART03_SLOGANALL{
+    width: 100%;
+    padding-top: 130px;
+
+    @include m {
+        padding-top: 110px;
+    }
+
+    .DINO{
+        display: block;
+        margin: 0 auto;
+        background-image: url(../../img/shopping_cart/dino02.png);
+        animation:ANI3 5s steps(11,end) infinite; 
+        width: 400px;
+        height: 300px;
+        background-size: 4400px 300px;
+    }
+    @keyframes ANI3 {
+        0%{
+            background-position-x: 0px;
+        }
+    
+        100%{
+            background-position: -4400px;
+        }
+    }
+
+    @include m {
+        transform: scale(.93);
+    }
+    }
+
+
+// ========================================
+
+    .BREAD{
+        // padding-top:200px ;
+        margin-bottom: 50px;
+
+        @include m {
+            margin-top: 10px;
+        }
+    }
+
+    .SHOPPINGCART_STEP{
+        margin-bottom: 75px;
+        
+        .SHOPPINGCART_STEPAREA--SUCCESS{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 75px;
+
+            img{
+                width: 50px;
+                margin-right: 20px;
+            }
+
+            h1{
+                color: $red;
+            }
+        }
+        
+        .SHOPPINGCART_ARCTWO{
+            &::before{
+                background-color: $blueblack;
+            }
+            .ARC_TITLE{
+                background-color: $blueblack;
+                color: $white;
+            }
+            p{
+                font-weight: 700;
+            }
+
+            &::after{
+                background-color: $blueblack;
+            }
+        }
+
+        .SHOPPINGCART_ARCTHREE{
+            .ARC_TITLE{
+                background-color: $blueblack;
+                color: $white;
+            }
+            p{
+                font-weight: 700;
+            }
+        }
+    }
+
+    @include m {
+        div.ARC_TITLE{
+            width: 65px;
+            height: 65px;
+            line-height: 65px;
+        }
+    }
+
+
+// ===========================================================
+
+.SHOPPINGCARTP2_ORDER{
+    margin-bottom: 35px;
+    .SHOPPINGCARTP2_ORDERTEXT{
+        width: 100%;
+        background-color:rgba(255, 255, 255, 0.5);
+        height: 120px;
+        padding-top: 35px;
+        box-sizing: border-box;
+
+        p{
+            font-weight: 700;
+            color: $blueblack;
+            text-align: center;
+            margin-bottom: 15px;
+            
+        }
+        span{
+            display:inline-block;
+            width: 100%;
+            text-align: center;
+            margin-left: 5px;
+            font-size: $littleword;
+            color: $blueblack;
+            vertical-align: middle;
+
+            .SHOPPINGCARTP2_ORDERARR{
+                display: inline-block;
+                width: 15px;
+                margin-left: 10px;
+                vertical-align: middle;
+                cursor: pointer;
+                transition: all .3s ease-in-out;
+                img{
+                    width: 100%;
+                    transform: rotate(90deg);
+                    
+                }
+            }
+
+            
+        }
+    }
+}
+
+.ORDERITEM{
+    border-radius: 0px;
+    border: 0px;
+    border-top: 1px solid $gray;
+    margin-bottom: 0;
+
+}
+
+// ======================================================================
+
+.SHOPPINGCARTP3_CONFIRM{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    border: 1px solid $gray;
+    overflow: hidden;
+    // width: 100%;
+    padding-bottom: 130px;
+    margin-bottom: 200px;
+    position: relative;
+
+    @include m {
+        padding-bottom: 110px;
+    }
+
+    .SHOPPINGCARTP3_CONFIRMTITLE{
+        width: 100%;
+        height: 60px;
+        background-color: #ffffff;
+        border-bottom: 1px solid $gray;
+
+        span{
+            display: block;
+            line-height: 60px;
+            color: $blueblack;
+            font-size: $p;
+            text-align: center;
+            
+        }
+    }
+
+
+// ==============================================================================
+
+    .SHOPPINGCARTP3_CONFIRMZONE{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        
+
+        .SHOPPINGCARTP3_CONFIRM--T{
+
+            @include m {
+                margin-top: 50px  ;
+                position: relative;
+            &::before{
+                content: '';
+                height: 1px;
+                width: 100%;
+                background-color: $gray;
+                position: absolute;
+                top: -25px;
+                left: 0px;
+            }
+            }
+
+            span{
+                display: block;
+                font-size: $littleword;
+                font-weight: 400;
+                color: $blueblack;
+                margin-top: 25px;
+
+                @include m {
+                    margin-top: 0px;
+                }
+            }
+
+            .SHOPPINGCARTP3_CONFIRM--CONTENT{
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+                section{
+                    width: 50%;
+                    span{
+                        font-size: $littleword;
+                        font-weight: 300;
+                        margin-top: 15px;
+
+                        @include m {
+                            font-size: 1.7rem;
+                        }
+                    }
+                }
+
+                @include m {
+
+                    margin-top: 0px;
+
+                    .SHOPPINGCARTP3_CONFIRM--TIT{
+                        width: 35%;
+                    }
+
+                    .SHOPPINGCARTP3_CONFIRM--CON{
+                        width: 65%;
+                        text-align: right;
+                    }
+                }
+            }
+
+        }
+        @include m {
+            display: block;
+            padding: 0 20px;
+            .FIR{
+                margin-top: 25px;
+                &::before{
+                    position: inherit;
+                }
+            }
+        }
+    }
+
+
+    .CONFIRMZONE_DOWN{
+        padding-bottom: 45px;
+        margin-top: 20px;
+
+        @include m {
+            margin-top: 0px;
+            padding-bottom: 25px;
+        }
+
+        .SHOPPINGCARTP3_CONFIRM--T{
+            position: relative;
+            &::before{
+                content: '';
+                height: 1px;
+                width: 100%;
+                background-color: $gray;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+
+                @include m {
+                    top: -25px;
+                }
+            }
+        }
+
+    }
+
+// ===================================================
+    .SHOPPINGCARTP3_MEMO{
+        position: relative;
+        &::before{
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: $gray;
+            position: absolute;
+            top: -25px;
+
+            @include m {
+                width: 90%;
+            }
+        }
+        section{
+            padding:0 40px;
+            margin-top: 25px;
+            .TEXTAREA{
+                font-size: $littleword;
+                font-weight: 400;
+                .TEXTAREA_CONTENT{
+                    width: 100%;
+                    height: 225px;
+                    margin-top: 25px;
+                    
+                }
+            }
+
+            @include m {
+                padding: 0px;
+            }
+        }
+
+        @include m {
+            padding: 0 20px;
+        }
+        
+    }
+
+// ========================================================================
+
+    .SHOPPINGCARTP3_SENDMESSAGE{
+        position: absolute;
+        right: 40px;
+        bottom: 35px;
+        .BTN{
+            width: 180px;
+
+            @include m {
+                width: 100%;
+            }
+        }
+
+        @include m {
+            display: block;
+            width: 100%;
+            right: 0px;
+            bottom: 25px;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+    }
+
+    }
+
+    .SHOPPINGCART_ITEMLIST--M{
+        display: none;
+        @include m{
+            display: block;   
+            background-color: rgba(255, 255, 255, 0.5);
+            border-top: 1px solid $gray;
+            margin-bottom: 25px;
+        }
+        .SHOPPINGCART_ITEMWORD--BOTTOMM{
+            .SHOPPINGCART_ITEMWORD--COUNTM{
+                span.ITEM_COUNT--NUM{
+                    @include m {
+                        margin: 0px;
+                        font-size: 1.7rem;
+                        padding-top: 2px;
+                    }
+                }
+            }
+        }
+    }
+
+    .SHOPPINGCART_ALLLIST{
+        @include m {
+            display: none;
+        }
+    }
+
+    
+}
+}

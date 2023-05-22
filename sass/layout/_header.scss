@@ -1,0 +1,155 @@
+.CAROUSEL {
+    background-image: url("../../img/HEADER-BG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+// 背景圖片統一裁成1920*1080
+.MASTER_VISION {
+    background-image: url('../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 250px 0 0 0;
+    width: 87.5%;
+    height: 830px;
+    float: right;
+    // margin-left: 282.5px;
+    margin-top: 105px;
+
+    animation: image_carousel 30s linear infinite;
+
+    >img {
+        width: 100%;
+        height: 830px;
+    }
+
+}
+
+}
+
+@keyframes image_carousel {
+    0% {
+        background-image: url('../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg');
+    }
+
+    20% {
+        background-image: url('../../img/header/leslie-low-0lzAa5raUso-unsplash.png');
+    }
+
+    40% {
+        background-image: url('../../img/header/flouffy-7hEXd9kYPCY-unsplash.jpg');
+    }
+
+    60% {
+        background-image: url('../../img/header/alicja-gancarz-e3EHK9pzmLU-unsplash.jpg');
+    }
+
+    80% {
+        background-image: url('../../img/header/peri-stojnic-5Vr_RVPfbMI-unsplash.jpg');
+    }
+
+    100% {
+        background-image: url('../../img/header/victor-grabarczyk-N04FIfHhv_k-unsplash.jpg');
+    }
+}
+
+
+
+
+// =========================  RWD ===============================
+
+// 手機版414px
+@mixin m() {
+    @media screen and (max-width: 414px) {
+        @content;
+    }
+}
+
+
+
+
+@include m{
+    .CAROUSEL{
+        background-image: url("");
+
+        > .MASTER_VISION{
+            border-radius: 0px;
+            width: 100%;
+            height: 90vh;
+            margin-top: 0;
+            background-image: url('../../img/header/header-m/1.jpg');
+            animation: image_carousel 30s ease-in-out infinite;
+            >img{
+                display: none;
+            }
+        }
+
+
+        
+
+
+
+        
+    }
+
+    
+    @keyframes image_carousel {
+        // 0% {
+        //     background-image: url('../../img/header/header-m/1.jpg');
+        // }
+    
+        // 20% {
+        //     background-image: url('../../img/header/header-m/2.jpg');
+        // }
+    
+        // 40% {
+        //     background-image: url('../../img/header/header-m/3.jpg');
+        // }
+    
+        // 60% {
+        //     background-image: url('../../img/header/header-m/4.jpg');
+        // }
+    
+        // 80% {
+        //     background-image: url('../../img/header/header-m/5.jpg');
+        // }
+    
+        // 100% {
+        //     background-image: url('../../img/header/header-m/1.jpg');
+        // }
+        0%{
+            background-image: url('../../img/header/header-m/1.jpg');
+        }
+    
+        23%{
+            background-image: url('../../img/header/header-m/1.jpg');
+        }
+        
+        25%{
+            background-image: url('../../img/header/header-m/2.jpg');
+    
+        }
+    
+        48%{
+            background-image: url('../../img/header/header-m/2.jpg');
+        }
+    
+        50%{
+            background-image: url('../../img/header/header-m/3.jpg');
+        }
+    
+        73%{
+            background-image: url('../../img/header/header-m/3.jpg');
+        }
+    
+        75%{
+            background-image: url('../../img/header/header-m/4.jpg');
+        }
+    
+        98%{
+            background-image: url('../../img/header/header-m/4.jpg');
+        }
+    }
+
+}

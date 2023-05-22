@@ -1,0 +1,142 @@
+// 麵包屑
+.BREAD {
+    // 中間"/"的顏色
+    color: $blueblack;
+    
+    a {
+        display: initial;
+        color: $blueblack;
+        text-decoration: none;
+        
+    }
+
+    a:last-child{
+        
+        border-bottom: 1px solid $blueblack;
+    }
+
+}
+
+// 大標題
+.BIG_TITLE {
+    position: relative;
+    color: $white;
+    
+    &::after {
+        content: "";
+        position: absolute;
+        border: 2px solid $lightblue;
+        width: 59.6vw;
+        bottom: 0;
+        left: 280px;
+    }
+
+    .BIG_TITLE_IMG {
+        background-image: url(../../img/TITLE-BG.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 280px;
+        height: 100px;
+        padding: 5px 20px;
+        box-sizing: border-box;
+
+        h1{
+            text-align: left;
+            padding-top: 10px;
+        }
+
+        p {
+            padding-top: 5px;
+            padding-left: 5px;
+        }
+
+    }
+
+}
+
+// 小標題
+.SMALL_TITLE {
+    border-bottom: 2px solid $blueblack;
+    margin: 0 70px;
+    padding-bottom: 5px;
+
+    h2 {
+        color: $blueblack;
+    }
+    span{
+        margin-left: 10px;
+    }
+
+}
+
+// 球形title
+.ARC_TITLE {
+    font-size: $h2;
+    width: 80px;
+    height: 80px;
+    background-color: $orange;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 50%;
+    color: $white;
+
+    // @include m(){
+    //     font-size: $p;
+    //     height: 65px;
+    //     width: 65px;
+    //     line-height: 65px;
+        
+    // }
+}
+
+
+
+//=============================================================
+// 手機版414px
+@mixin m() {
+    @media screen and (max-width: 414px) {
+        @content;
+    }
+  }
+  
+  @include m {
+
+    .BIG_TITLE{
+
+
+
+        &::after {
+            content: "";
+            position: absolute;
+            border: 2px solid $lightblue;
+            width: 89vw;
+            bottom: 0;
+            left: 0;
+        }
+    
+
+        .BIG_TITLE_IMG {
+            background-image: url(../../img/M_TITLE-BG.jpg);
+            width: 230px;
+            height: 80px;
+        }
+    }
+
+
+    .ARC_TITLE {
+        font-size: $littleword;
+        width: 40px;
+        height: 40px;
+        background-color: $orange;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+        color: $white;
+    
+    }
+    
+  
+    
+  
+  
+  }

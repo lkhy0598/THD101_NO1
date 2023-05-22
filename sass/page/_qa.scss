@@ -1,0 +1,344 @@
+// 背景雲裝飾
+.BACKGROUND {
+    .DOT2{
+        
+    }
+    .BG {}
+
+    .BG_CLOUDS {
+
+        .BG_CLOUD {}
+
+        .CLOUD_1 {
+            top: 900px;
+            left: 0;
+
+            .BG_CLOUD_IMG1 {
+                transform: scale(-2) rotate(330deg);
+
+                @include m() {
+                    transform: scale(-3) rotate(330deg);
+                }
+            }
+
+            @include m() {
+                top: 1600px;
+            }
+        }
+
+        .CLOUD_2 {
+            top: 3040px;
+            left: 322px;
+
+            .BG_CLOUD_IMG2 {
+                transform: scale(-2) rotate(340deg);
+
+                @include m() {
+                    transform: scale(-2) rotate(340deg);
+                }
+            }
+
+            @include m() {
+                top: 3070px;
+                left: 0px;
+            }
+        }
+    }
+}
+
+//圓點裝飾
+
+.DOT{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 30px;
+    bottom: 40px;
+    z-index: 10;
+
+}
+
+// 麵包屑
+.MEMCENTOP {
+    padding-top:55px ;
+    margin-bottom: 25px;
+}
+
+// 內容寬度
+.WRAPPER {
+
+    @include m() {
+        width: 90%;
+    }
+}
+
+// 導覽列
+.QA_NAVS {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    gap: 10%;
+
+    .QA_TAB {
+        width: 380px;
+        height: 120px;
+        border-radius: 10px;
+        color: $white;
+        font-size: $h2;
+        text-align: center;
+        align-items: center;
+        line-height: normal;
+        background-image: url(../img/qa/QA_TITLEBG.jpg);
+        cursor: pointer;
+        position: relative;
+
+        @include m() {
+            height: 115px;
+        }
+
+
+        .QA_TAB_TITLE {
+            justify-content: center;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+
+            @include m() {
+                flex-direction: column;
+            }
+
+            p {
+                line-height: 120px;
+
+                @include m() {
+                    line-height: normal;
+                }
+            }
+
+            p:nth-child(1) {
+                @include m() {
+                    font-size: 3rem;
+                }
+            }
+
+            p:nth-child(2) {
+                @include m() {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+
+
+        img {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+    }
+}
+
+// 初診注意事項
+.FIRSTVISIT_BOX {
+    width: 70%;
+    margin: 0 auto;
+
+    @include m() {
+        width: 90%;
+    }
+
+    .FIRSTVISIT_TITLE {
+        text-align: center;
+        margin-bottom: 120px;
+    }
+
+    .FIRSTVISIT_ITEM {
+        display: flex;
+        margin-bottom: 60px;
+
+        .ARC_TITLE {
+            min-width: 80px;
+            margin-right: 40px;
+
+            @include m() {
+                min-width: 40px;
+                width: 40px;
+                height: 40px;
+                font-size: 2rem;
+                line-height: 40px;
+
+                margin-right: 20px;
+            }
+        }
+
+        .FIRSTVISIT_DESC_BOX {
+            min-height: 80px;
+            height: 100%;
+            line-height: normal;
+
+
+            .FIRSTVISIT_DESC_TITLE {
+                font-weight: bold;
+                flex-wrap: nowrap;
+
+                @include m() {
+                    font-size: 3rem;
+                }
+
+                .FIRSTVISIT_DESC {
+                    @include m() {
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// QA區塊
+.QA_BOX {
+    margin-bottom: 120px;
+
+    .QA_TITLE {
+        margin-bottom: 80px;
+
+        @include m() {
+            margin-bottom: 40px;
+            padding-left: 20px;
+        }
+    }
+
+    // 手風琴
+    .ACCORDION_ITEM:last-child {
+        border-bottom: 1px solid $blue;
+    }
+
+    .ACCORDION_ITEM {
+
+        // 標題
+        .ACCORDION_TITLE_BOX {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border-top: 1px solid $blue;
+            border-bottom: 1px solid rgba(0, 0, 0, 0);
+            line-height: 80px;
+            color: $blueblack;
+            transition: all 0.3s ease;
+
+            cursor: pointer;
+
+            .ACCORDION_TITLE {
+                display: flex;
+                line-height: normal;
+
+
+                img {
+                    margin-right: 40px;
+                    max-width: 80px;
+                    max-height: 80px;
+
+                    @include m() {
+                        display: none;
+                    }
+                }
+
+
+                h3 {
+                    font-size: $h3;
+                }
+
+            }
+
+            &:hover {
+                border-top: 1px solid $blue;
+                border-bottom: 1px solid $blue;
+                background: $lightblue;
+                color: $white;
+                transition: all 0.3s ease;
+
+            }
+
+
+            &:hover img {
+                filter: drop-shadow(0px 0px 5px $blue);
+                transition: all 0.3s ease;
+            }
+
+            &::after {
+                content: '\FF0B';
+                font-size: 45px;
+                font-weight: bold;
+                color: $blue;
+                transition: all 0.3s ease;
+            }
+
+            @include m() {
+                &:hover {
+                    background: $blue;
+                    color: $white;
+                    border-top: 1px solid $blueblack;
+                    border-bottom: 1px solid $blueblack;
+                    transition: all 0.3s ease;
+
+                    &::after {
+                        color: $white;
+                    }
+                }
+
+
+            }
+        }
+
+        // TITLE點選時樣式
+        .ACC_TITLE_ACTIVE {
+            background: $blue;
+            color: $white;
+            border-top: 1px solid $blueblack;
+            border-bottom: 1px solid $blueblack;
+            transition: all 0.3s ease;
+        }
+
+        // TITLE點選時 '+' 樣式
+        .ACC_TITLE_ACTIVE::after {
+            color: $white;
+            transform: rotate(45deg);
+        }
+
+        // 手風琴內文
+        .ACCORDION_CONTENT_BOX {
+            display: none;
+
+            .ACCORDION_CONTENT {
+                display: flex;
+                padding: 20px;
+                padding-right: 50px;
+                // border-bottom: 1px solid $blue;
+                background-color: rgba(255, 255, 255, 0.5);
+
+                line-height: normal;
+
+                img {
+                    margin-right: 40px;
+                    max-width: 80px;
+                    max-height: 80px;
+
+                    @include m() {
+                        display: none;
+                    }
+                }
+
+                p {
+                    color: $blueblack;
+
+                    @include m() {
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}

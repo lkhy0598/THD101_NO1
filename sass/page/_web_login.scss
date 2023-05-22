@@ -1,0 +1,104 @@
+/* 前後台登入頁 */
+
+.WEB_LOGIN{
+   background-image: url(../../img/HEADER-BG.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+
+   main{
+      width: 100%;
+      height: 100vh;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+      .FRONT{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: 20px 0;
+      }
+      .BACK{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+   }
+}
+
+
+
+.BACKEND{
+   display: none;
+   height: 100vh;
+   width: 100%;
+
+   .BACKEND_LOGIN {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 95vh;
+      width: 73%;
+      
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .LEFT_LOGO {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      
+         width: 50%;
+         height: 85%;
+         background-color: $red;
+         border-radius: 30px 0 0 30px;
+   
+         img {
+            display: block;
+            margin: 0 auto;
+            width: 55%;
+         }
+      }
+   }
+
+   .RIGHT_LOGIN {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   
+      width: 50%;
+      height: 85%;
+      background-color: #EBE3DD;
+      border-radius: 0 30px 30px 0;
+
+      .INPUT{
+         display: block;
+
+         input{
+            width: 350px;
+            margin: 10px 0;
+         }
+        
+      }
+      .BTN_BACK{
+         margin: 70px 5px 0;
+         width: 163px;
+         display: inline-block;
+
+         a{
+            color: $white;
+         }
+      }
+   }
+
+}
+
+
+
+

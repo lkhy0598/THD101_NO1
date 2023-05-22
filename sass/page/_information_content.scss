@@ -1,0 +1,98 @@
+.IMFORMATION_CONTENT{
+    // 背景雲裝飾
+    .BACKGROUND {
+        
+        .BG {}
+
+        .BG_CLOUDS {
+
+            .BG_CLOUD {}
+
+            .CLOUD_1 {
+                top: 0;
+                left: 900px;
+
+                .BG_CLOUD_IMG1 {
+                    transform: scaleX(-1);
+
+                    @include m() {
+                        transform: scaleX(-1);
+                    }
+                }
+
+                @include m() {
+                    top: 1600px;
+                }
+            }
+
+            .CLOUD_2 {
+                bottom: -400px;
+                left: -400px;
+
+                .BG_CLOUD_IMG2 {
+                    transform: scale(-2) rotate(340deg);
+
+                    @include m() {
+                        transform: scale(-10) rotate(340deg);
+                    }
+                }
+
+                @include m() {
+                    top: 3830px;
+                    left: 260px;
+                }
+            }
+        }
+    }
+
+    // 麵包屑
+    .MEMCENTOP{
+        margin-top: 200px;
+    }
+
+
+    
+    .WRAPPER{
+        max-width: 1320px;
+       
+    }
+    // 文章內容
+    .INFOMATION_CONTENT_BOX {
+        margin-top: 90px;
+        margin-bottom: 110px;
+        color: $blueblack;
+        .INFORMATION_IMG{
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        p{
+            margin-bottom: 40px;
+        }
+        .INFOMATION_CONTENT_DATE {
+            font-size: $p;
+            margin-bottom: 10px;
+        }
+
+        .INFOMATION_CONTENT_TITLE {
+            font-size: 3.5rem;
+        }
+
+        .INFOMATION_CONTENT_TEXT {
+            font-size: $p;
+            line-height: normal;
+        }
+        p{
+            line-height: normal;
+        }
+    }
+
+    .INFORMATION_BTN{
+        width: 300px;
+        margin: 0 auto;
+        text-decoration: none;
+        margin-bottom: 200px;
+        @include m{
+            margin-bottom: 90px;
+        }
+    }
+}
