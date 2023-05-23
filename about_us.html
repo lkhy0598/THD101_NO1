@@ -15,364 +15,29 @@
 </head>
 
 <body class="ABOUT">
+  <!-- =============== 共用元件 =============== -->
 
-  <!-- ========================= 彈跳視窗 ========================= -->
-  <!-- 壓底黑色塊 -->
-  <div id="modal" class="MODAL">
-    <!-- 關閉按鈕 -->
-    <a class="POPUP_CLOSEBTN" href="#">
-      <i class="bi bi-x-circle"></i>
-    </a>
-    <!-- 彈跳視窗_註冊/登入 -->
-    <div id="popup-wrap" class="POPUP_WRAP">
-      <div class="BG_CLOUD_BOX">
-        <img class="BG_CLOUD" src="./img/user_popup/USER_BG_CLOUD.png" alt="">
-      </div>
-      <!-- 導覽列 -->
-      <ul class="POPUP_NAVS">
-        <li class="POPUP_TABS "><a href="#POPUP_LOGIN">登入會員</a></li>
-        <li class="POPUP_TABS "><a href="#POPUP_SIGNUP">註冊會員</a></li>
-        <li class="POPUP_TABS FORGETTABS CLOSETABS"><a href="#">忘記密碼</a></li>
-        <li class="POPUP_TABS CHANGETABS CLOSETABS"><a href="#">修改密碼</a></li>
+  <!-- ===== 會員彈窗 ===== -->
+  <!-- user_popup -->
+  @@include('./layout/user_popup.html')
+  <!-- user_popup end -->
 
-      </ul>
-      <!-- 登入視窗 -->
-      <div class="POPUP_TABS_CONTENT">
-        <div id="POPUP_LOGIN" class="POPUP_BOX">
-          <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+  <!-- ===== 預約浮動視窗 ===== -->
+  <!-- appointment -->
+  @@include('./layout/appointment.html')
+  <!-- appointment end -->
 
-          <form class="USER_FORM" method="post" action="Login.php">
-            <div class="INPUT_GROUP">
-              <i class="bi bi-envelope"></i>
-              <input type="email" id="account" name="account" placeholder="請輸入電子信箱" /></br>
-            </div>
-            <div class="INPUT_GROUP">
-              <i class="bi bi-lock-fill"></i>
-              <input type="password" id="password" name="password" placeholder="請輸入密碼" /></br>
-            </div>
-            <div class="FORGET_BOX">
-              <button type="button" class="FORGET_BTN">忘記密碼？</button>
-            </div>
-            <div class="INPUT_GROUP">
-              <input type="submit" id="send-btn" class="BTN" value="登入" />
-            </div>
+  <!-- ===== 手機板下功能列 ===== -->
+  <!-- RWD_FUNTIONBAR -->
+  @@include('./layout/RWD_FUNTIONBAR.html')
+  <!-- RWD_FUNTIONBAR end -->
 
-            <div class="DIVIDING">
-              <span>or</span>
-            </div>
-            <button type="submit" class="OTHERLOGIN_BTN">
-              <span class="OTHERLOGIN_ICON">
-                <img src="./img/user_popup/GOOGLE.svg" alt="">
-              </span>
-              <span>使用GOOGLE登入</span>
-            </button>
-          </form>
-          <div class="BTN SIGNUP_BTN">註冊會員</div>
-        </div>
-        <!-- 註冊視窗 -->
-        <div id="POPUP_SIGNUP" class="POPUP_BOX ">
-          <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+  <!-- =============== header =============== -->
+  <!-- header -->
+  @@include('./layout/header.html')
+  <!-- header end -->
 
-          <form class="USER_FORM" method="post" action="SIGNUP.php">
-            <div class="SIGNUP_INPUTS">
-              <div class="INPUT_GROUP">
-                <i class="bi bi-person-circle"></i>
-                <input type="text" id="name" name="name" placeholder="請輸入真實姓名" />
-              </div>
-              <div class="INPUT_GROUP">
-                <i class="bi bi-lock-fill"></i>
-                <input type="password" id="password" name="password" placeholder="請輸入密碼" />
-              </div>
-              <div class="INPUT_GROUP">
-                <i class="bi bi-lock"></i>
-                <input type="password" id="password" name="password" placeholder="請再確認一次密碼" />
-              </div>
-              <div class="INPUT_GROUP">
-                <i class="bi bi-phone"></i>
-                <input type="number" id="phone" name="phone" placeholder="請輸入手機號碼" />
-              </div>
-              <div class="INPUT_GROUP">
-                <i class="bi bi-envelope"></i>
-                <input type="email" id="account" name="account" placeholder="請輸入電子信箱" />
-                <!-- <button class="VERIFBTN BTN">
-                                  發送驗證信
-                              </button> -->
-              </div>
-              <div class="INPUT_GROUP">
-                <i class="bi bi-key"></i>
-                <input type="number" id="verifyNum" name="verifyNum" class="VERIFYINPUT" placeholder="請輸入驗證碼" />
-                <button class="VERIFBTN BTN">
-                  發送驗證碼
-                </button>
-              </div>
-            </div>
-
-            <p>＊送出即同意「會員服務條款、隱私權保護聲明」</p>
-            <div class="INPUT_GROUP">
-              <input type="submit" id="send-btn" class=" SIGNUP_SUB BTN" value="驗證並送出" />
-            </div>
-          </form>
-        </div>
-        <!-- 忘記密碼 -->
-        <div id="popup_forgetpass" class="POPUP_BOX ">
-          <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
-          <form class="USER_FORM" method="post" action="SIGNUP.php">
-            <div class="INPUT_GROUP">
-              <i class="bi bi-envelope"></i>
-              <input type="email" id="account" name="account" class="VERIFYINPUT" placeholder="請輸入電子信箱" />
-              <button class="VERIFBTN BTN">
-                發送驗證信
-              </button>
-            </div>
-            <div class="INPUT_GROUP">
-              <i class="bi bi-key"></i>
-              <input type="number" id="verifyNum" name="verifyNum" class="VERIFYINPUT" placeholder="請輸入驗證碼" />
-              <button class="VERIFBTN BTN">
-                驗證
-              </button>
-            </div>
-            <div class="BACKLOGIN_BOX">
-              <button type="button" class="BACKLOGIN_BTN">返回登入</button>
-            </div>
-            <div class="FORGETPASS_DESC">
-              <p>＊系統已寄出驗證信，請至信箱收取。</p>
-              <p>＊若過久未收到驗證信件，請至垃圾信件匣或其他收件匣確認。</p>
-            </div>
-          </form>
-          <div class="PASS_SEND_BOX">
-            <p>＊送出後會直接跳轉到修改密碼頁</p>
-            <div class="INPUT_GROUP">
-              <input type="submit" id="send-btn" class="PASS_SUB BTN" value="送出" />
-            </div>
-          </div>
-        </div>
-        <!-- 修改密碼 -->
-        <div id="popup_changepass" class="POPUP_BOX">
-          <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
-          <form class="USER_FORM" method="post" action="SIGNUP.php">
-            <div class="INPUT_GROUP">
-              <i class="bi bi-lock-fill"></i>
-              <input type="password" id="password" name="password" placeholder="請輸入密碼" />
-            </div>
-            <div class="INPUT_GROUP">
-              <i class="bi bi-lock"></i>
-              <input type="password" id="password" name="password" placeholder="請再確認一次密碼" />
-            </div>
-          </form>
-          <div class="PASS_SEND_BOX">
-            <p>＊送出後會直接跳轉到修改密碼頁</p>
-            <div class="INPUT_GROUP">
-              <input type="submit" id="send-btn" class="PASS_SUB BTN" value="修改密碼" />
-            </div>
-          </div>
-        </div>
-        <!-- 修改完成畫面 -->
-        <div id="popup_changepass_succ" class="POPUP_BOX">
-          <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
-          <div class="USER_FORM">
-            <img class="CHANGEPASS_SUCC" src="./img/user_popup/CHANGEPASS_SUCC.png" alt="">
-          </div>
-          <div class="BACKTOLOGIN_BOX">
-            <p>＊三秒後將跳轉到登入頁，如果沒跳轉請點選按鈕</p>
-            <div class="INPUT_GROUP">
-              <input type="submit" id="login-btn" class="BTN CHANGE_SUCC_BTN BACKLOGIN_BTN" value="登入會員" />
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <!-- =====appointment門診時間及預約======== -->
-  <div class="APPOINTMENT">
-    <div class="APPOINTMENT_TAG">
-      <p>門診時間&預約</p>
-    </div>
-    <div class="APPOINTMENT_BOX">
-      <div class="APPOINTMENT_CONTENT">
-        <img src="./img/appointment/TIMETABLE_PC.png" alt="">
-        <div class="APPOINTMENT_RESERVE_PHONE">
-          <a href="reserve.html" class="RESERVE">立即預約</a>
-          <a class="APPOINTMENT_PHONE" href="tel:+886900000000">
-            <i class="bi bi-telephone"></i>
-            預約專線 : 02-3322-2777
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- =====RWD 功能列及小時刻表======== -->
-  <!-- RWD功能列內的時刻表 -->
-  <div class="M_TIME_TABLE">
-    <img src="./img/appointment/TIMETABLE_RWD.png" alt="" class="">
-  </div>
-  <!-- RWD下方功能列 -->
-  <div class="M_FUNTION">
-    <!-- RWD功能列內的時刻表 -->
-    <div class="M_TIME_TABLE">
-      <img src="./img/appointment/TIMETABLE_RWD.png" alt="" class="">
-    </div>
-    <ul>
-      <a class="M_FUNTION_A1" href="tel:+886900000000">
-        <li>
-          <i class="bi bi-telephone"></i>
-          <p>電話預約</p>
-        </li>
-      </a>
-      <a href="" class="M_FUNTION_A2">
-        <li>
-          <i class="bi bi-calendar-plus"></i>
-          <p class="CLINIC_HOURS">門診時間</p>
-        </li>
-      </a>
-      <a href="reserve.html" class="M_FUNTION_A3">
-        <li>
-          <i class="bi bi-arrow-right"></i>
-          <p>立即預約</p>
-        </li>
-      </a>
-    </ul>
-  </div>
-  <!-- ===============================header================================= -->
-  <header>
-
-    <nav class="HEADER_NAV">
-
-      <a href="homepage.html">
-        <div class="HEADERLOGO_BG_BOX HEADERLOGE_BG_TOP">
-          <div class="HEADERLOGO_PAW">
-            <img src="./img/HEADERLOGO_PAW.svg" alt="">
-            <div class="HEADERLOGO_CLAWS">
-              <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
-            </div>
-          </div>
-          <div class="HEADER_LOGO_NAME">
-            <img src="./img/HEADERLOGO_NAME.svg" alt="">
-          </div>
-        </div>
-      </a>
-
-
-      <ul>
-        <li>
-          <a href="about_us.html">
-            <span>關於院所</span>
-            <br>About Us
-          </a>
-        </li>
-        <li>
-          <a href="information.html">
-            <span>資訊導覽</span>
-            <br>Information
-          </a>
-        </li>
-        <li>
-          <a href="shopping.html">
-            <span>線上購物</span>
-            <br>Shopping
-          </a>
-        </li>
-        <li>
-          <a href="qa.html">
-            <span>常見問題</span>
-            <br>Q & A
-          </a>
-        </li>
-        <li>
-          <a href="member_center.html">
-            <span>會員中心</span>
-            <br>Member Center
-          </a>
-        </li>
-        <li>
-          <a href="reserve.html" class="RESERVE">立即預約</a>
-        </li>
-        <li>
-          <a href="" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
-        </li>
-        <li>
-          <a href="shopping_cart.html"><i class="bi bi-cart-fill"></i></a>
-        </li>
-      </ul>
-
-    </nav>
-
-
-
-
-    <nav class="M_HEADER_NAV">
-
-      <a href="homepage.html">
-        <div class="M_HEADERLOGO_BG_BOX M_HEADERLOGE_BG_TOP">
-          <div class="M_HEADERLOGO_PAW">
-            <img src="./img/HEADERLOGO_PAW.svg" alt="">
-            <div class="M_HEADERLOGO_CLAWS">
-              <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
-            </div>
-          </div>
-          <div class="M_HEADER_LOGO_NAME">
-            <img src="./img/HEADERLOGO_NAME.svg" alt="">
-          </div>
-        </div>
-      </a>
-
-
-      <ul>
-        <li>
-          <a class="M_HEADER_LI" href="about_us.html">
-            <span>關於院所</span>
-            <P class="EN">About Us</P>
-          </a>
-        </li>
-        <li>
-          <a class="M_HEADER_LI" href="information.html">
-            <span>資訊導覽</span>
-            <p class="EN">Information</p>
-          </a>
-        </li>
-        <li>
-          <a class="M_HEADER_LI" href="shopping.html">
-            <span>線上購物</span>
-            <p class="EN">Shopping</p>
-          </a>
-        </li>
-        <li>
-          <a class="M_HEADER_LI" href="qa.html">
-            <span>常見問題</span>
-            <p class="EN">Q & A</p>
-          </a>
-        </li>
-        <li>
-          <a class="M_HEADER_LI" href="member_center.html">
-            <span>會員中心</span>
-            <p class="EN">Member Center</p>
-          </a>
-        </li>
-
-        <li>
-          <div class="LOGIN_SHOPPING">
-            <a href="" class="LOGIN"><i class="bi bi-person-fill"></i>登入</a>
-            <a href="shopping_cart.html"><i class="bi bi-cart-fill"></i></a>
-          </div>
-        </li>
-
-        <li>
-          <a href="reserve.html" class="RESERVE">立即預約</a>
-        </li>
-      </ul>
-
-
-
-
-      <div id="TOGGLE" class="TOGGLE">
-        <span class="SPAN1"></span>
-        <span class="SPAN2"></span>
-        <span class="SPAN3"></span>
-      </div>
-    </nav>
-
-  </header>
-  <!-- =================================MASTER_VISION====================================== -->
+  <!-- =============== 頁首主視覺 =============== -->
   <section class="CAROUSEL">
     <div class="MASTER_VISION"><img src="./img/HEADER-TOP.png" alt="" /></div>
     <div class="PAWPAW animate__animated animate__bounceInLeft">
@@ -388,8 +53,7 @@
 
   </section>
 
-  <!-- ============================================================================= -->
-
+  <!-- =============== 網頁內容 =============== -->
   <!-- header下方區塊的背景 -->
   <section class="BACKGROUND">
 
@@ -509,7 +173,7 @@
                     <div class="p2">
                       <p>經歷</p>
                       <p>北海道大學獸醫學院博士<br>東京大學獸醫學部碩士</p>
-                   
+
                     </div>
                     <div class="expertise">
                       <p>貓科</p>
@@ -517,7 +181,7 @@
                       <p>心臟科</p>
                       <p>進階外科</p>
                     </div>
-                    
+
                   </div>
 
                   <img src="./img/about/fan.jpg" alt="">
@@ -536,13 +200,13 @@
                     <div class="p2">
                       <p>經歷</p>
                       <p> 台北商業社區大學獸醫學系學士</p>
-                   
+
                     </div>
                     <div class="expertise">
                       <p>影像科</p>
-                     
+
                     </div>
-                    
+
                   </div>
                   <img src="./img/about/lai.jpg" alt="">
                 </section>
@@ -560,14 +224,14 @@
                     <div class="p2">
                       <p>經歷</p>
                       <p>康乃爾大學碩士<br>戴維斯加利福尼亞大學博士</p>
-                   
+
                     </div>
                     <div class="expertise">
                       <p>貓科</p>
                       <p>內分泌科</p>
 
                     </div>
-                    
+
                   </div>
                   <img src="./img/about/lin.jpg" alt="">
                 </section>
@@ -585,14 +249,14 @@
                     <div class="p2">
                       <p>經歷</p>
                       <p>臺灣大學獸醫學系學士<br>根特大學獸醫學院碩士博士</p>
-                   
+
                     </div>
                     <div class="expertise">
                       <p>骨關節科</p>
                       <p>進階外科</p>
                       <p>貓科</p>
                     </div>
-                    
+
                   </div>
                   <img src="./img/about/zhan.jpg" alt="">
                 </section>
@@ -610,13 +274,13 @@
                     <div class="p2">
                       <p>經歷</p>
                       <p>國立屏東科技大學獸醫系學士</p>
-                   
+
                     </div>
                     <div class="expertise">
                       <p>麻醉科</p>
-          
+
                     </div>
-                    
+
                   </div>
                   <img src="./img/about/wang.jpg" alt="">
                 </section>
@@ -634,13 +298,13 @@
                     <div class="p2">
                       <p>經歷</p>
                       <p>美國挖溝大學獸醫系學士<br>日本早安大學獸醫系碩士</p>
-                   
+
                     </div>
                     <div class="expertise">
                       <p class="p3">寵物諮商，配合主人與寵物關係維護</p>
-                   
+
                     </div>
-                    
+
                   </div>
                   <img src="./img/about/yu.jpg" alt="">
                 </section>
@@ -651,21 +315,21 @@
 
                   <div class="introduce">
                     <h3>獸醫師　林佳緯</h3>
-                    <div class="p1">  
+                    <div class="p1">
                       <p>年資</p>
                       <p>16年</p>
                     </div>
                     <div class="p2">
                       <p>經歷</p>
                       <p>惠比獸大學獸醫學院博士</p>
-                   
+
                     </div>
                     <div class="expertise">
                       <p>行為醫學科</p>
                       <p>兔科</p>
-                  
+
                     </div>
-                    
+
                   </div>
                   <img src="./img/about/wei.jpg" alt="">
                 </section>
@@ -773,71 +437,16 @@
     </section>
 
   </section>
-  <!-- ===============================回到TOP================================================ -->
 
+  <!-- ===== TOP按鈕 ===== -->
+  <!-- top_btn -->
+  @@include('./layout/top_btn.html')
+  <!-- top_btn end -->
 
-  <button id="js-top" class="TOP_BTN"></button>
-
-  <!-- ==================================FOOTER================================================= -->
-
-  <footer>
-    <div class="FOOTER_LOGO">
-      <picture>
-        <source srcset="./img/index/M_index/M_FOOTERLOGO.svg" media="(max-width: 414px)">
-        <img src="./img/H-LOGO.svg" alt="" />
-      </picture>
-    </div>
-    <div class="FOOTER_RIGHT">
-      <nav class="FOOTER_NAV">
-        <ul>
-          <li>
-            <a href="#"> <span>關於院所</span></a>
-          </li>
-          <li>
-            <a href="#"> <span>立即預約</span></a>
-          </li>
-          <li>
-            <a href="#"> <span>資訊導覽</span></a>
-          </li>
-          <li>
-            <a href="#"> <span>會員中心</span></a>
-          </li>
-          <li>
-            <a href="#"> <span>線上購物</span></a>
-          </li>
-          <li>
-            <a href="#"> <span>購物車</span></a>
-          </li>
-          <li>
-            <a href="#"> <span>常見問題</span></a>
-          </li>
-          <li>
-            <a href="#"> <span>追蹤我們</span></a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="FOOTER_ICON">
-      <a href=""><img src="./img/FOOTER_FB_ICON.svg" alt="" /></a>
-      <a href=""><img src="./img/FOOTER_INS_ICON.svg" alt="" /></a>
-    </div>
-
-    <div class="FOOTER_TOP_BTN" id="js-f-top">
-      <i class="bi bi-caret-up-fill"></i>
-      <p>回到頂部</p>
-    </div>
-  </footer>
-
-
-
-
-  <div class="FOOTER_BOTTOM">
-    <p>
-      Copyright ©
-      本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。
-    </p>
-  </div>
+  <!-- ===== footer ===== -->
+  <!-- footer -->
+  @@include('./layout/footer.html')
+  <!-- footer end -->
 
   <script src="./js/top_btn.js"></script>
   <script src="./js/nav.js"></script>
@@ -861,7 +470,7 @@
       centeredSlides: true,
       slidesPerView: 'auto',
       loop: true,
-      
+
 
 
       navigation: {

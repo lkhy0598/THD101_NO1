@@ -12,41 +12,47 @@
 </head>
 
 <body class="INFORMATION">
+    <!-- =============== 共用元件 =============== -->
+
+    <!-- ===== 會員彈窗 ===== -->
     <!-- user_popup -->
     @@include('./layout/user_popup.html')
     <!-- user_popup end -->
 
+    <!-- ===== 預約浮動視窗 ===== -->
     <!-- appointment -->
     @@include('./layout/appointment.html')
     <!-- appointment end -->
 
+    <!-- ===== 手機板下功能列 ===== -->
     <!-- RWD_FUNTIONBAR -->
     @@include('./layout/RWD_FUNTIONBAR.html')
     <!-- RWD_FUNTIONBAR end -->
 
-    <!-- ===============================header================================= -->
+    <!-- =============== header =============== -->
     <!-- header -->
     @@include('./layout/header.html')
     <!-- header end -->
-    <!-- =================================MASTER_VISION====================================== -->
-    <section class="CAROUSEL">
+
+  <!-- =============== 頁首主視覺 =============== -->
+  <section class="CAROUSEL">
         <div class="MASTER_VISION"><img src="./img/HEADER-TOP.png" alt="" /></div>
 
         <div class="PAWPAW animate__animated animate__bounceInLeft">
-
             <picture>
-              <source srcset="./img/information/M_information/information_banner_bg.svg" media="(max-width: 414px)">
-              <img src="./img/information/information_banner.svg" alt="">
+
+                <source srcset="./img/information/M_information/information_banner_bg.svg" media="(max-width: 414px)">
+                <img src="./img/information/information_banner.svg" alt="">
+            
             </picture>
-      
-          </div>
+
+        </div>
 
         <div class="DOT"></div>
-
-
+        
     </section>
-    <!-- ============================================================================= -->
 
+    <!-- =============== 網頁內容 =============== -->
     <!-- header下方區塊的背景 -->
     <section class="BACKGROUND">
 
@@ -367,13 +373,18 @@
                 <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN RIGHT">
             </span>
         </section>
-        <!-- ===============================回到TOP================================================ -->
-        <button id="js-top" class="TOP_BTN"></button>
-        <!-- ===== footer ===== -->
-        <!-- footer -->
-        @@include('./layout/footer.html')
-        <!-- footer end -->
     </section>
+
+    <!-- ===== TOP按鈕 ===== -->
+    <!-- top_btn -->
+    @@include('./layout/top_btn.html')
+    <!-- top_btn end -->
+
+    <!-- ===== footer ===== -->
+    <!-- footer -->
+    @@include('./layout/footer.html')
+    <!-- footer end -->
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/infor.js"></script>
     <script src="./js/top_btn.js"></script>

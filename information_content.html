@@ -11,24 +11,29 @@
 </head>
 
 <body class="IMFORMATION_CONTENT">
+    <!-- =============== 共用元件 =============== -->
+
+    <!-- ===== 會員彈窗 ===== -->
     <!-- user_popup -->
     @@include('./layout/user_popup.html')
     <!-- user_popup end -->
 
+    <!-- ===== 預約浮動視窗 ===== -->
     <!-- appointment -->
     @@include('./layout/appointment.html')
     <!-- appointment end -->
 
+    <!-- ===== 手機板下功能列 ===== -->
     <!-- RWD_FUNTIONBAR -->
     @@include('./layout/RWD_FUNTIONBAR.html')
     <!-- RWD_FUNTIONBAR end -->
 
-    <!-- ===============================header================================= -->
+    <!-- =============== header =============== -->
     <!-- header -->
     @@include('./layout/header.html')
     <!-- header end -->
-    <!-- ============================================================================= -->
 
+    <!-- =============== 網頁內容 =============== -->
     <!-- header下方區塊的背景 -->
     <section class="BACKGROUND">
         <!-- <div class="DOT2"></div> -->
@@ -89,13 +94,18 @@
             </div>
             <a class="INFORMATION_BTN BTN" href="./information.html">返回</a>
         </section>
-        <!-- ===============================回到TOP================================================ -->
-        <button id="js-top" class="TOP_BTN"></button>
-        <!-- ===== footer ===== -->
-        <!-- footer -->
-        @@include('./layout/footer.html')
-        <!-- footer end -->
     </section>
+
+    <!-- ===== TOP按鈕 ===== -->
+    <!-- top_btn -->
+    @@include('./layout/top_btn.html')
+    <!-- top_btn end -->
+
+    <!-- ===== footer ===== -->
+    <!-- footer -->
+    @@include('./layout/footer.html')
+    <!-- footer end -->
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/top_btn.js"></script>
     <script src="./js/nav.js"></script>

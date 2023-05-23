@@ -25,7 +25,7 @@ function sassstyle(){
     // return src("./sass/style.scss").pipe(dest("./dist/css"));
     // 複製資料夾
 
-    return src("./sass/style.scss","./css/reset.css")
+    return src(['./sass/style.scss','./css/reset.css'])
     // 追溯開始
     .pipe(sourcemaps.init())
 
