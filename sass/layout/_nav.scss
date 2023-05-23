@@ -231,7 +231,7 @@
             height: 100%;
         }
 
-        &:hover img[src="img/BACK-LOGO.svg"] {
+        &:hover img[src="./img/BACK-LOGO.svg"] {
             opacity: 0;
             transition: all .1s;
         }
