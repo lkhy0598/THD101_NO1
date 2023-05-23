@@ -220,7 +220,7 @@
 .TEAM_MAIN_WRAPPER_PRODUCERS{
     width: 95vw;
     
-    margin-left: 225px;
+    margin-left: 220px;
     margin-bottom: 100px;
     
     @include m {
@@ -387,20 +387,29 @@
 
   @keyframes p_width {
     0%{
-        transform: scale(0 , 1);
+        // transform: scale(0 , 1);
         left: 0px;
         opacity: 0;
     }
 
-    50%{
-        transform: scale(0.5 , 1);
-        left: 200px;
-        opacity: .5;
+    25%{
+        left: 150px;
+        opacity: .2;
     }
 
+    50%{
+        // transform: scale(0.5 , 1);
+        left: 300px;
+        opacity: .5;
+    }
+    
+    75%{
+        left: 380px;
+        opacity: .7;
+    }
     
     100%{
-        transform: scale(1 , 1);
+        // transform: scale(1 , 1);
         left: 435px;
         opacity: 1;
     }
@@ -459,6 +468,9 @@
         p:first-child{
             font-weight: 700;
             padding-right: 10px;
+            @include m {
+                padding-right: 20px;
+            }
         }
 
         p:last-child{
@@ -472,11 +484,19 @@
         p:first-child{
             font-weight: 700;
             padding-right: 10px;
+
+            @include m {
+            padding-right: 15px;
+                
+            }
         
         }
         p:last-child{
             line-height: 40px;
-
+            @include m {
+                font-size: 16px;
+                line-height: 20px;
+            }
         }
 
        
@@ -486,7 +506,9 @@
         display: flex;
     
         padding-left: 100px;
-
+        @include m{
+            justify-content: center;
+        }
         p{
             margin: 0 10px;
             width: 100px;
@@ -507,8 +529,8 @@
 
             @include m {
                letter-spacing: normal;
-         
-               margin-left: 33px;
+               
+            //    margin-left: 33px;
             }
         }
 
@@ -907,8 +929,9 @@
 
         #IMG_CONTAINER{
             display: flex;
-            width: 96%;
+            width: 90%;
             height: 340px;
+            margin: 0 auto;
 
             img{
                 border-radius: 0 100px 0 0 ;
