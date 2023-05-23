@@ -1,16 +1,32 @@
 .RESERVE {
 
+    //歡迎BANNER 
+    .CAROUSEL {
 
-    .CAROUSEL{
-        position: relative;
-        .PAWPAW{
+        .PAWPAW {
             position: absolute;
-            top: 50%;
+            top: 48%;
             left: 6vw;
-            > picture > img{
-                width: 35vw;
+
+            @include m() {
+                position: absolute;
+                top: 4.5%;
+                left: 28vw;
             }
-        } 
+
+            >picture>img {
+
+                width: 35vw;
+
+                @include m() {
+                    width: 45vw;
+                }
+
+
+            }
+
+        }
+
     }
 
     .DOT {
