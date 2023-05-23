@@ -43,7 +43,7 @@ $(document).ready(function () {
     $(window).on('scroll', function () {
         var scrollPosition = $(window).scrollTop();
         var initialLeft = 300; // 初始 left 值
-        var maxLeft = 1200; // 停止的 left 值
+        var maxLeft = 1500; // 停止的 left 值
         var MinitialLeft = 0; // 初始 left 值
         var MmaxLeft = 240; // 停止的 left 值
 
