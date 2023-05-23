@@ -13,21 +13,6 @@ function defaultTask(cb) {
 
 exports.do = defaultTask
 
-// 任務A
-function TaskA(cb){
-    console.log("taskA")
-    cb();
-}
-
-// 任務B
-function TaskB(cb){
-    console.log("taskB")
-    cb();
-}
-
-exports.s = series(TaskA , TaskB);//不同步執行
-exports.d = parallel(TaskA , TaskB);//同步執行
-
 // =============================================  src / dest  ============================================= //
 
 const sass = require('gulp-sass')(require('sass'));
@@ -40,7 +25,7 @@ function sassstyle(){
     // return src("./sass/style.scss").pipe(dest("./dist/css"));
     // 複製資料夾
 
-    return src("./sass/style.scss")
+    return src("./sass/style.scss","./css/reset.css")
     // 追溯開始
     .pipe(sourcemaps.init())
 
@@ -63,38 +48,38 @@ function sassstyle(){
 exports.style = sassstyle;
 
 // =============================================　監看檔案(有修改就變更)
-function watchTask(){
-    watch(['./sass/style.scss'],sassstyle);
-    watch(['./*.html' , './layout/ *.html'], html)
+function watchTask() {
+    watch(['./sass/style.scss'], sassstyle);
+    watch(['./*.html', './layout/ *.html'], html)
 }
 exports.w = watchTask;
 
 // html template
-function html(){
-    return src('./*.html')
-    .pipe(fileinclude({
-        prefix: '@@',
-        basepath: '@file'
-    }))
-    .pipe(dest('./dist/'));
+function html() {
+    return src(['./*.html', '!./test.html', '!./user_test.html']) //排除的html寫在這裡
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(dest('./dist/'));
 }
 exports.t = html;
 
 // =============================================　壓縮圖片
 const imagemin = require('gulp-imagemin');
-function img(){
+function img() {
     return src('./img/**/*.*')
-    .pipe(imagemin([
-         // 壓縮品質      quality越低 -> 壓縮越大 -> 品質越差 
-        imagemin.mozjpeg({quality: 70, progressive: true})
-    ]))
-    .pipe(dest('dist/img'))
+        .pipe(imagemin([
+            // 壓縮品質      quality越低 -> 壓縮越大 -> 品質越差 
+            imagemin.mozjpeg({ quality: 70, progressive: true })
+        ]))
+        .pipe(dest('dist/img'))
 }
 
 exports.p = img;
 
 // =============================================　沒有壓縮的圖片，開發用(純搬家)
-function img_orgin(){
+function img_orgin() {
     return src('./img/*.*').pipe(dest('dist/img'))
 }
 
@@ -104,11 +89,11 @@ const rename = require('gulp-rename');
 
 function ugjs() {
     return src('js/*.js')
-    .pipe(uglify())
-    // .pipe(rename({
-    //   extname: '.min.js'
-    // }))
-    .pipe(dest('dist/js'))
+        .pipe(uglify())
+        .pipe(rename({
+            extname: '.min.js'
+        }))
+        .pipe(dest('dist/js'))
 }
 
 exports.jsmin = ugjs;
@@ -130,9 +115,9 @@ const clean = require('gulp-clean');
 
 function clear() {
     // 不去讀檔案結構，增加刪除效率  / allowEmpty : 允許刪除空的檔案
-    return src('dist' ,{ read: false ,allowEmpty: true })
-    //強制刪除檔案 
-    .pipe(clean({force: true})); 
+    return src('dist', { read: false, allowEmpty: true })
+        //強制刪除檔案 
+        .pipe(clean({ force: true }));
 }
 exports.c = clear;
 
@@ -149,10 +134,10 @@ function browser(done) {
         },
         port: 3000
     });
-    watch(['./sass/style.scss'],sassstyle).on("change", reload);
-    watch(['./*.html' , './layout/ *.html'], html).on("change", reload);
-    watch(['./img/*.*' , './img/**/*.*'], img_orgin).on("change", reload);
-    watch(['./js/*.js' , './js/**/*.js'], ugjs).on("change", reload);
+    watch(['./sass/style.scss'], sassstyle).on("change", reload);
+    watch(['./*.html', './layout/ *.html'], html).on("change", reload);
+    watch(['./img/*.*', './img/**/*.*'], img_orgin).on("change", reload);
+    watch(['./js/*.js', './js/**/*.js'], ugjs).on("change", reload);
     done();
 }
 
