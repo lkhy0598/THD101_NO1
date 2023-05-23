@@ -85,9 +85,9 @@ body .APPOINTMENT_HOVER {
                     border-radius: 10px;
                     font-weight: 700;
                     text-align: center;
-                    line-height: 50px;
+                    line-height: 65px;
                     width: 270px;
-                    height: 50px;
+                    height: 65px;
 
                     &:hover {
                         background: $linear-orange-hover;
@@ -97,6 +97,7 @@ body .APPOINTMENT_HOVER {
                 .APPOINTMENT_PHONE {
                     color: $blue;
                     font-size: $h3;
+                    margin-top: 15px;
 
                     &:hover {
                         text-decoration: underline;
