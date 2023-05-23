@@ -265,7 +265,8 @@
         @include m {
             top:300px;
             left: 250px;
-        
+            cursor: pointer;
+            z-index: 10;
         }
     }
 
@@ -278,7 +279,8 @@
         @include m {
             top:300px;
             left: 320px;
-      
+            cursor: pointer;
+            z-index: 10;
         }
     }
     
@@ -358,7 +360,7 @@
     animation: p_width .5s linear;
     @include m {
         animation: m_width .5s linear;
-
+        display: block;
        
     }
     @keyframes m_width {
@@ -423,7 +425,8 @@
 
     @include m {
         padding: 20px 0;
-        opacity: 0;
+     
+        display: none;
         width: 370px;
         display: inline-block;
         position: absolute;
