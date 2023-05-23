@@ -264,7 +264,7 @@
         cursor: pointer;
 
         @include m {
-            top:300px;
+            top:250px;
             left: 250px;
             z-index: 10;
         }
@@ -277,7 +277,7 @@
         font-size: 50px;
         cursor: pointer;
         @include m {
-            top:300px;
+            top:250px;
             left: 320px;
             z-index: 10;
         }
@@ -329,7 +329,8 @@
     @include m {
         width: 120px;
         height:  300px;
-        margin-right: 125px;
+        margin-right: 113px;
+        margin-left: 15px;
     }
     
 
@@ -344,8 +345,9 @@
     transition: all .5s linear;
 
     @include m {
-        width: 195px;
+        width: 205px;
         height:  270px;
+        border-radius: 0;
     }
   }
 
@@ -360,12 +362,12 @@
         display: block;
        
         padding: 20px 0;
-
-        width: 90vw;
+    
+        width: 100vw;
         display: inline-block;
         position: absolute;
-        top: -260px;
-        left: 10px;
+        top: -215px;
+        left: 0;
         z-index: -100;
    
     }
@@ -582,8 +584,11 @@
     transform: scale(1);
 
     @include m {
-        width: 100px;
-        height:  150px;
+        width: 150px;
+        height:  auto;
+        transition: none;
+        transform: scale(1);
+        border-radius: 0;
     }
     
  
