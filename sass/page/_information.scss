@@ -1,14 +1,14 @@
-    .INFORMATION {
+.INFORMATION {
 
     //圓點裝飾
-    .DOT{
+    .DOT {
         position: absolute;
         width: 200px;
         height: 200px;
         right: 30px;
         bottom: 40px;
         z-index: 10;
-        
+
     }
 
     // 背景雲裝飾
@@ -56,6 +56,31 @@
         }
     }
 
+    // 主標題後動畫
+
+    .DOG_ANI1 {
+        position: absolute;
+        top: 100px;
+        left: 300px;
+        z-index: -1;
+        transform: scale(.7);
+        @include m {
+            display: none;
+        }
+    }
+    .DOG_ANI2 {
+        display: none;
+        position: absolute;
+        top: 90px;
+        left: 0px;
+        z-index: -1;
+        transform: scale(0.5);
+        @include m {
+            display: block;
+        }
+    }
+
+
     // 標籤控制
     .BACKGROUND .WRAPPER .INFORACTIVE {
         display: block;
@@ -67,7 +92,7 @@
 
     // 麵包屑
     .MEMCENTOP {
-        padding-top:55px ;
+        padding-top: 55px;
         margin-bottom: 25px;
     }
 
