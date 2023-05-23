@@ -39,4 +39,21 @@ $(document).ready(function () {
             'transform': 'translateX(-100%)'
         });
     });
+    // 主標後面動畫
+    $(window).on('scroll', function () {
+        var scrollPosition = $(window).scrollTop();
+        var initialLeft = 300; // 初始 left 值
+        var maxLeft = 1200; // 停止的 left 值
+        var MinitialLeft = 0; // 初始 left 值
+        var MmaxLeft = 240; // 停止的 left 值
+
+        var newLeft = initialLeft + scrollPosition;
+        var MnewLeft = MinitialLeft + scrollPosition;
+        if (newLeft <= maxLeft) {
+            $('.DOG_ANI1').css('left', newLeft + 'px');
+        }
+        if (MnewLeft <= MmaxLeft) {
+            $('.DOG_ANI2').css('left', MnewLeft + 'px');
+        }
+    });
 });
