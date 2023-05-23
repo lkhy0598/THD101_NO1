@@ -1,5 +1,8 @@
 // 背景雲裝飾
 .BACKGROUND {
+    .DOT2{
+        
+    }
     .BG {}
 
     .BG_CLOUDS {
@@ -14,7 +17,7 @@
                 transform: scale(-2) rotate(330deg);
 
                 @include m() {
-                    transform: scale(-10) rotate(330deg);
+                    transform: scale(-3) rotate(330deg);
                 }
             }
 
@@ -31,20 +34,33 @@
                 transform: scale(-2) rotate(340deg);
 
                 @include m() {
-                    transform: scale(-10) rotate(340deg);
+                    transform: scale(-2) rotate(340deg);
                 }
             }
 
             @include m() {
-                top: 3830px;
-                left: 260px;
+                top: 3070px;
+                left: 0px;
             }
         }
     }
 }
 
+//圓點裝飾
+
+.DOT{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 30px;
+    bottom: 40px;
+    z-index: 10;
+
+}
+
 // 麵包屑
 .MEMCENTOP {
+    padding-top:55px ;
     margin-bottom: 25px;
 }
 

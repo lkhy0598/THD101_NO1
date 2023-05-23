@@ -1,4 +1,60 @@
-.INFORMATION {
+    .INFORMATION {
+
+    //圓點裝飾
+    .DOT{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        right: 30px;
+        bottom: 40px;
+        z-index: 10;
+        
+    }
+
+    // 背景雲裝飾
+    .BACKGROUND {
+        .BG {}
+
+        .BG_CLOUDS {
+
+            .BG_CLOUD {}
+
+            .CLOUD_1 {
+                top: 0;
+
+                .BG_CLOUD_IMG1 {
+                    transform: scale(-1);
+
+                    @include m() {
+                        transform: scale(-1);
+                    }
+                }
+
+                @include m() {
+                    top: 0px;
+                    left: -400px;
+                }
+            }
+
+            .CLOUD_2 {
+                bottom: -400px;
+                left: -400px;
+
+                .BG_CLOUD_IMG2 {
+                    transform: scale(-2) rotate(340deg);
+
+                    @include m() {
+                        transform: scale(-1);
+                    }
+                }
+
+                @include m() {
+                    top: 900px;
+                    left: -300px;
+                }
+            }
+        }
+    }
 
     // 標籤控制
     .BACKGROUND .WRAPPER .INFORACTIVE {
@@ -11,6 +67,7 @@
 
     // 麵包屑
     .MEMCENTOP {
+        padding-top:55px ;
         margin-bottom: 25px;
     }
 
@@ -24,12 +81,15 @@
     .INFORMATION_NAVS {
         display: flex;
         font-size: $littleword;
-        background-color: $white;
-        height: 45px;
-        border-radius: 20px 20px 0 0;
+        // background-color: $white;
+        height: 65px;
+        // border-radius: 20px 20px 0 0;
+        border-radius: 50px;
         box-sizing: border-box;
         overflow: hidden;
         margin-bottom: 30px;
+
+        position: relative;
 
         @include m() {
             height: 65px;
@@ -42,7 +102,7 @@
                 text-decoration: none;
                 color: $blue;
                 text-align: center;
-                line-height: 45px;
+                line-height: 65px;
 
                 @include m() {
                     line-height: 65px;
@@ -50,65 +110,61 @@
             }
 
             &:hover {
-                background-color: $lightblue;
+                // background-color: $lightblue;
+                // border-radius: 20px;
+                color: $blue;
+                text-decoration: underline;
             }
         }
 
         .INFORTAB_ACTIVE {
-            background-color: $blue;
+            // background-color: $blue;
             pointer-events: none;
 
             a {
                 color: $white;
             }
         }
-    }
 
-    // 背景雲裝飾
-    .BACKGROUND {
-        .BG {}
-
-        .BG_CLOUDS {
-
-            .BG_CLOUD {}
-
-            .CLOUD_1 {
-                top: 900px;
-                left: 0;
-
-                .BG_CLOUD_IMG1 {
-                    transform: scaleX(-1);
-                    top: 0;
-                    left: 900px;
-
-                    @include m() {
-                        transform: scale(-10) rotate(330deg);
-                    }
-                }
-
-                @include m() {
-                    top: 1600px;
-                }
-            }
-
-            .CLOUD_2 {
-                bottom: -400px;
-                left: -400px;
-
-                .BG_CLOUD_IMG2 {
-                    transform: scale(-2) rotate(340deg);
-
-                    @include m() {
-                        transform: scale(-10) rotate(340deg);
-                    }
-                }
-
-                @include m() {
-                    top: 3830px;
-                    left: 260px;
-                }
-            }
+        .INFORMATION_NAV_WBG {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
+            background-color: rgba(255, 255, 255, 0.3);
         }
+
+        .INFORMATION_NAV_BG {
+            background-color: $blue;
+            width: 33.3%;
+            height: 100%;
+            border-radius: 50px;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+
+            transition: all .3s ease;
+        }
+
+        // .INFORMATION_BG_ACTIVE_LEFT {
+        //     transition: all .3s ease;
+        //     left: 0%;
+        //     transform: translateX(0%);
+        // }
+
+        // .INFORMATION_BG_ACTIVE_CENTER {
+        //     transition: all .3s ease;
+        //     left: 50%;
+        //     transform: translateX(-50%);
+        // }
+
+        // .INFORMATION_BG_ACTIVE_RIGHT {
+        //     transition: all .3s ease;
+        //     left: 100%;
+        //     transform: translateX(-100%);
+        // }
     }
 
     // 文章區塊
@@ -317,7 +373,7 @@
 // 分頁器
 .PGAENUMBER {
     padding-top: 120px;
-    margin-bottom: 335px;
+    margin-bottom: 200px;
     display: flex;
     justify-content: center;
 }

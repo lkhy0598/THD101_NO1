@@ -1,8 +1,8 @@
 .MEMBERCENTER {
-    padding-top: 300px;
+    
 
-    .MEMCENTOP {
-        margin-top: 50px;
+    .MEMCENTOP1 {
+        margin-top: 400px;
 
         .BREAD {
             margin-bottom: 30px;
@@ -44,11 +44,12 @@
     display: flex;
     justify-content: space-between;
     color: #34424F;
+    
 
 }
 
 .MENU {
-
+    margin-bottom: 130px;
     a {
         text-decoration: none;
         color: #34424F;
@@ -79,6 +80,7 @@
 
 .MEMCONTENT {
     width: 1000px;
+    margin-bottom: 100px;
 }
 
 .SUBTITLE {
@@ -218,6 +220,7 @@
                     overflow: hidden;
                     font-size: 25px;
                     padding-left: 20px;
+                    margin-right: 40px;
             
                 }
 
@@ -277,4 +280,9 @@
     thead{
         background-color: $lightblue;
     }
+}
+
+.df{
+display: flex;
+align-items: baseline;
 }

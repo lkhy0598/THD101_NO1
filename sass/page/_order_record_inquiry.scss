@@ -1,10 +1,41 @@
+.MEMBERCENTER {
+    
+    
+    .MEMCENTOP3 {
+        margin-top: 400px;
+
+        .BREAD {
+            margin-bottom: 30px;
+        }
+
+        .BIG_TITLE_IMG {
+
+            align-items: end;
+            // width: 100%;
+
+
+        }
+
+        .HELLO {
+            color: #34424F;
+            font-size: 20 px;
+            margin-left: 20px;
+
+
+        }
+    }
+
+}
+
+
 // 訂單管理_表格
 
 .ORDER_RECORD_TABLE_ALL {
     width: 100%;
     margin: 30px auto 75px;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 10px;
+    
     
     
 
@@ -12,6 +43,9 @@
         display: flex;
         font-size: $p;
         list-style: none;
+        margin: 0;
+    
+
     }
 
     .BACK_TABLE_TITLE {
@@ -20,8 +54,17 @@
         height: 55px;
         text-align: center;
         line-height: 55px;
-        outline: 2px solid $lightblue;
+        outline: 2px solid black;
         border-radius: 10px 10px 0 0;
+    }
+    .BACK_TABLE_SUBTITLE {
+        background-color: $lightblue;
+        color: $blueblack;
+        height: 55px;
+        text-align: center;
+        line-height: 55px;
+        outline: 2px solid black;
+        
     }
 
     .BACK_TABLE_CONTENT {
@@ -29,10 +72,11 @@
         text-align: center;
         line-height: 80px;
         min-height: 80px;
+        
 
         li {
-            border-top: 1px solid black;
-            border-right: 1px solid black;
+            border-top: 2px solid black;
+            border-right: 2px solid black;
         }
 
         .bi-plus-circle {
@@ -51,9 +95,10 @@
 .ORDER_RECORD_TABLE_ALL ul:nth-child(2) li:nth-child(1),
 .ORDER_RECORD_TABLE_ALL ul:nth-child(1) li:nth-child(2),
 .ORDER_RECORD_TABLE_ALL ul:nth-child(2) li:nth-child(2),
-.ORDER_RECORD_TABLE_ALL ul:nth-child(1) li:nth-child(3),
-.ORDER_RECORD_TABLE_ALL ul:nth-child(2) li:nth-child(3) {
+.ORDER_RECORD_TABLE_ALL ul:nth-child(1) li:nth-child(5),
+.ORDER_RECORD_TABLE_ALL ul:nth-child(2) li:nth-child(5) {
     width: 20%;
+    // outline: 1px solid tomato;
 }
 
 .ORDER_RECORD_TABLE_ALL ul:nth-child(2) li:nth-child(3) select{

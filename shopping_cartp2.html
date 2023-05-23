@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
     <link rel="shortcut icon" type="image/png" href="img/shortcut_logo.png">
-    <title>波波動物醫院 - 填寫資料 SHOPPING_CART</title>
+    <title>填寫資料 SHOPPING_CART - 波波動物醫院</title>
 </head>
 
 <body class="SHOPPINGCARTP2">
@@ -665,11 +665,11 @@
 
 
 
-<script src="./top_btn.js"></script>
-<script src="./nav.js"></script>
-<script src="./user_popup.js"></script>
-<script src="./toggle.js"></script>
-<script src="./user_popup.js"></script>
+<script src="./js/top_btn.js"></script>
+<script src="./js/nav.js"></script>
+<script src="./js/user_popup.js"></script>
+<script src="./js/toggle.js"></script>
+<script src="./js/user_popup.js"></script>
 
 <script>
     let a = 0
@@ -678,7 +678,7 @@
         if(viewport > 414){
             $(function(){
                 $('.SHOPPINGCART_ALLLIST').hide();
-                $(".SHOPPINGCARTP2_ORDERARR").click(function(){
+                $(".SHOPPINGCARTP2_ORDERTEXT").click(function(){
                     $(".SHOPPINGCART_ALLLIST").slideToggle("slow");
                     if(a === 0){
                         $('.SHOPPINGCARTP2_ORDERARR').css({transform:"rotate(-180deg)"});
@@ -696,7 +696,7 @@
         let viewport = $(window).width();
         if(viewport <= 414){
             $('.SHOPPINGCART_ITEMLIST--M').hide();
-            $(".SHOPPINGCARTP2_ORDERARR").click(function(){
+            $(".SHOPPINGCARTP2_ORDERTEXT").click(function(){
             $(".SHOPPINGCART_ITEMLIST--M").slideToggle("slow");
             if(a === 0){
                 $('.SHOPPINGCARTP2_ORDERARR').css({transform:"rotate(-180deg)"});

@@ -81,7 +81,8 @@
 
 // =================  麵包屑  =====================
 .BREAD{
-    padding-top:30px ;
+    padding-top:55px ;
+    margin-bottom: 25px;
 }
 
 // ================================
@@ -90,7 +91,7 @@
     position: relative;
     color: $white;
     z-index: 10;
-    margin-top: 50px;
+  
     margin-bottom: 40px;
 
     
@@ -265,7 +266,10 @@
         @include m {
             top:300px;
             left: 250px;
+<<<<<<< HEAD
             cursor: pointer;
+=======
+>>>>>>> 617a98b2c0ed1cfe2fd9984a265cc58970fbc42d
             z-index: 10;
         }
     }
@@ -279,7 +283,10 @@
         @include m {
             top:300px;
             left: 320px;
+<<<<<<< HEAD
             cursor: pointer;
+=======
+>>>>>>> 617a98b2c0ed1cfe2fd9984a265cc58970fbc42d
             z-index: 10;
         }
     }
@@ -328,7 +335,7 @@
     margin-right: 120px;
 
     @include m {
-        width: 100px;
+        width: 120px;
         height:  300px;
         margin-right: 125px;
     }
@@ -354,25 +361,32 @@
   .swiper-slide.swiper-slide-active > .swiper-item > .introduce{
     display: block;
     opacity: 1;
-   
-
     background: rgb(255, 255, 255, .3);
-    animation: p_width .5s linear;
+    animation: p_width .6s linear;
     @include m {
         animation: m_width .5s linear;
         display: block;
        
+        padding: 20px 0;
+
+        width: 90vw;
+        display: inline-block;
+        position: absolute;
+        top: -260px;
+        left: 10px;
+        z-index: -100;
+   
     }
     @keyframes m_width {
         0%{
-            transform: scale(0 , 1);
+            transform: scale(1, 0);
             left: 0px;
         }
     
         
         100%{
-            transform: scale(1 , 1);
-            left: 100px;
+            transform: scale(1);
+            left: 10px;
         }
       }
 
@@ -383,12 +397,20 @@
     0%{
         transform: scale(0 , 1);
         left: 0px;
+        opacity: 0;
+    }
+
+    50%{
+        transform: scale(0.5 , 1);
+        left: 200px;
+        opacity: .5;
     }
 
     
     100%{
         transform: scale(1 , 1);
         left: 435px;
+        opacity: 1;
     }
   }
 
@@ -432,7 +454,7 @@
         position: absolute;
         top: -260px;
         left: 13px;
-      
+        z-index: -100;
     }
     
     h3{
