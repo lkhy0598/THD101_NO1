@@ -126,7 +126,7 @@ a {
 }
 
 .TOP_BTN{
-    background-image: url(/img/TOP-BTN.svg);
+    background-image: url(../img/TOP-BTN.svg);
     width: 100px;
     height: 100px;
     cursor: pointer;
@@ -141,7 +141,7 @@ a {
 
 
     &:hover{
-        background-image: url(/img/TOP-BTN-HOVER.svg);
+        background-image: url(../img/TOP-BTN-HOVER.svg);
         width: 100px;
         height: 100px;
         cursor: pointer;
@@ -205,7 +205,7 @@ a {
 
 .SHOPPINGLIST_MAGNIFIER{
     cursor: pointer;
-    background-image: url(/img/shopping_list/magnifier.png);
+    background-image: url(../img/shopping_list/magnifier.png);
     background-repeat: no-repeat;
     width: 90px;
     height: 90px;

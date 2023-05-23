@@ -1,6 +1,6 @@
 .SHOPPINGCARTP3{
     .SHOPPINGCARTP3BG{
-    background-image: url(../../img/shopping_cart/shopping_cartp3_bg.jpg);
+    background-image: url(../img/shopping_cart/shopping_cartp3_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 20;
@@ -78,7 +78,7 @@
     .DINO{
         display: block;
         margin: 0 auto;
-        background-image: url(../../img/shopping_cart/dino02.png);
+        background-image: url(../img/shopping_cart/dino02.png);
         animation:ANI3 5s steps(11,end) infinite; 
         width: 400px;
         height: 300px;
