@@ -48,6 +48,49 @@
 }
 
 
+// ===================== 動物逐格動畫區 =====================
+
+// 醫師陣容
+
+.MEDICAL_ANI{
+   
+    z-index: 50;
+    position: absolute;
+
+    .GOAT{
+        display: inline-block;
+        background-image: url(../img/about/goat.png);
+        width: 300px;
+        height: 250px;
+        background-size: 2100px 250px;
+        animation:ANI1 4s steps(7,end) infinite; 
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position-x: 0px;
+        bottom: -50px;
+        left: 1200px;
+        margin: 0;
+        padding: 0  ;
+
+        @include m {
+            display: none;
+        }
+    }
+    
+    @keyframes ANI1 {
+        0%{
+            background-position-x: 0px;
+        }
+    
+        100%{
+            background-position: -2100px;
+        }
+    }
+    
+    
+    
+}
+
 // ================================================
 
 .CAROUSEL{
