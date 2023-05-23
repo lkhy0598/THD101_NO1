@@ -1,6 +1,6 @@
 .SHOPPINGLIST{
     .SHOPPINGLISTBG{
-        background-image: url('../../img/shopping_list/SHOPPING_LIST_ALLBG.jpg');
+        background-image: url('../img/shopping_list/SHOPPING_LIST_ALLBG.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 20;
@@ -129,7 +129,7 @@
             cursor: pointer;
             &:hover{
                 .SHOPPINGLIST_MAGNIFIER{
-                    background-image: url(/img/shopping_list/magnifier_hover.png);
+                    background-image: url(../img/shopping_list/magnifier_hover.png);
                     width: 90px;
                     height: 90px;
                 }
@@ -271,7 +271,7 @@
         position: relative;
 
         .DOG{
-            background-image: url(../../img/shopping_list/dog01.png);
+            background-image: url(../img/shopping_list/dog01.png);
             width: 600px;
             height: 150px;
             background-repeat: no-repeat;
