@@ -27,6 +27,7 @@
         position: fixed;
         z-index: 100;
         bottom: 0;
+        left: 0;
     
         ul{
             display: flex;
@@ -89,7 +90,7 @@
     .M_TIME_TABLE{
         width: 90%;
         position: fixed;
-        bottom: -30%;
+        bottom: -50%;
         left: 50%;
         z-index: 90;
         transform: translateX(-50%);
