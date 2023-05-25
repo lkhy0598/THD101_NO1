@@ -1,0 +1,154 @@
+//-----預約頁面共用內容——對初診患者資訊區塊-----//
+.BACKGROUND {
+    .RESERVE_INFO {
+        overflow: hidden;
+        padding-bottom: 20px;
+    }
+    
+    .RESERVE_INFO>.BREAD {
+        padding-top: 55px;
+        margin-bottom: 25px;
+    }
+    
+    .FIRSTTIME_INFO {
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    
+    .FIRSTTIME_INFO>h1::before {
+        background-color: #34424F;
+        width: 400px;
+        height: 2px;
+        content: "";
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        top: 24px;
+        left: 150px;
+    }
+    
+    .FIRSTTIME_INFO>h1 {
+        color: #34424F;
+        width: 1440px;
+        position: relative;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+    
+    .FIRSTTIME_INFO>h1::after {
+        background-color: #34424F;
+        width: 400px;
+        height: 2px;
+        content: "";
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        top: 24px;
+        right: 150px;
+    }
+    
+    .RESERVE_TYPE_UL {
+        display: flex;
+        width: 77%;
+        justify-content: space-between;
+        margin-bottom: 85px;
+    }
+    
+    .TITLE_NO {
+        background-color: #FFFFFF;
+        color: #428AA9;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .RESERVE_TYPE {
+        background-color: #428AA9;
+        color: #FFFFFF;
+        width: 250px;
+        height: 250px;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        line-height: 250px;
+    }
+    
+    .FIRSTTIME_INFO>p {
+        color: #34424F;
+        text-align: center;
+        line-height: 1.6;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .FIRSTTIME_INFO .CALL {
+        font-weight: 700;
+    }
+}
+
+
+@mixin m() {
+    @media screen and (max-width: 415px) {
+        @content;
+    }
+}
+
+@include m {
+    .BACKGROUND {
+        .RESERVE_INFO {
+            width: 93%;
+
+            .FIRSTTIME_INFO>h1::before {
+                background-color: #34424F;
+                width: 40px;
+                height: 2px;
+                content: "";
+                box-sizing: border-box;
+                position: absolute;
+                top: 20px;
+                left: 25px;
+                display: block;
+            }
+    
+            .FIRSTTIME_INFO>h1::after {
+                background-color: #34424F;
+                width: 40px;
+                height: 2px;
+                content: "";
+                box-sizing: border-box;
+                position: absolute;
+                top: 20px;
+                right: 25px;
+                display: block;
+            }
+    
+            .RESERVE_TYPE_UL {
+                display: none;
+            }
+    
+            .RESERVE_TYPE_UL_M {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin: 20px auto;
+    
+                .TITLE_NO {
+                    font-size: 14px;
+                }
+    
+                .RESERVE_TYPE {
+                    width: 110px;
+                    height: 110px;
+                    position: relative;
+                    align-items: center;
+                    justify-content: center;
+                    line-height: 110px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
