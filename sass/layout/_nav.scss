@@ -416,12 +416,13 @@
             display: none;
             height: 100vh;
             padding-top: 90px;
-            background: linear-gradient(160deg, rgb(243, 145, 85, .9) 0%,  rgb(228, 170, 123, .9) 40%, rgba(126, 184, 196, 0.9) 80%, rgba(126, 184, 196, 0.8) 100%);
-           
+            background: linear-gradient(160deg, rgb(243, 145, 85, .9) 0%, rgb(228, 170, 123, .9) 40%, rgba(126, 184, 196, 0.9) 80%, rgba(126, 184, 196, 0.8) 100%);
+
             >li {
 
                 position: relative;
                 padding-bottom: 10px;
+
                 >.M_HEADER_LI {
                     text-decoration: none;
                     margin: 20px 0;
@@ -432,7 +433,9 @@
                     font-size: 15px;
                     height: 30px;
 
-
+                    &:active {
+                        background-color: transparent;
+                    }
 
                     >span {
                         font-size: $p;
