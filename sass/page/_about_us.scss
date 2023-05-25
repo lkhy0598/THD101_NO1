@@ -249,6 +249,12 @@
     margin: 0 auto;
     position: relative;
     
+    @include m {
+
+        max-width: auto;   
+        width: 90%;   
+        margin: 0 auto;
+    }
 }
 
 .TEAM_WRAPPER > p{
@@ -257,6 +263,11 @@
     line-height: 160%;
     color: $blueblack;
     text-align: left;
+    @include m {
+
+   
+    }
+
 }
 
 // =========== 醫師陣容輪播 ============
