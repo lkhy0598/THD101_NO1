@@ -62,22 +62,22 @@
 
         <section class="WRAPPER SHOPPINGLIST_TOP">
             <section class="SHOPPINGLIST_SMALLIMG COL-1 RWD-COL-12">
-                <section>
+                <section class="LIGHTBOX">
                     <img src="./img/shopping_list/can/01/can_01_01.jpg" alt="">
                 </section>
-                <section>
+                <section class="LIGHTBOX">
                     <img src="./img/shopping_list/can/01/can_01_02.jpg" alt="">
                 </section>
-                <section>
+                <section class="LIGHTBOX">
                     <img src="./img/shopping_list/can/01/can_01_03.jpg" alt="">
                 </section>
-                <section>
+                <section class="LIGHTBOX">
                     <img src="./img/shopping_list/can/01/can_01_04.jpg" alt="">
                 </section>
             </section>
             <section class="COL-6 SHOPPINGLIST_BIGIMG RWD-COL-12">
                 <span class="SHOPPINGLIST_MAGNIFIER"></span>
-                <section class="SHOPPINGLIST_IMG">
+                <section class="SHOPPINGLIST_IMG" id="IMG_CONTAINER">
                     <img src="./img/shopping_list/can/01/can_01_01.jpg" alt="">
                 </section>
             </section>
@@ -306,6 +306,15 @@
         </section>
     </section>
 
+    <section class="LIGHTBOXBIG_BG">
+        <section class="LIGHTBOXBIG_IMGAREA">
+            <section class="LIGHTBOXBIG_IMGOUT">
+                <i class="bi bi-x-circle LIGHTBOXCLOSE"></i>
+                <img src="" alt="">
+            </section>
+        </section>
+    </section>
+
     <!-- ===== TOP按鈕 ===== -->
     <!-- top_btn -->
     @@include('./layout/top_btn.html')
@@ -338,6 +347,30 @@
             },
             loop: true
         });
+
+    $('.LIGHTBOX').click(function (e) {
+        var img_url = $(this).find("img").attr("src");
+        $(this).addClass("CLICKED");
+        $(this).siblings().removeClass("CLICKED");
+        $("#IMG_CONTAINER img").attr("src", img_url);
+    });
+
+    $('#IMG_CONTAINER').click(function (e) {
+        var img_url = $(this).find("img").attr("src");
+        $(".LIGHTBOXBIG_IMGOUT img").attr("src", img_url);
+        $(".LIGHTBOXBIG_BG").addClass("SHOWLIGHTBOX");
+    });
+
+    $(document).on('click', function (e) {
+        var target = $(e.target);
+        if (!target.closest('#IMG_CONTAINER').length && !target.hasClass('LIGHTBOXBIG_IMGAREA')) {
+            $(".LIGHTBOXBIG_BG").removeClass("SHOWLIGHTBOX");
+        }
+    });
+
+    $('.LIGHTBOXCLOSE').click(function (e) {
+        $(".LIGHTBOXBIG_BG").removeClass("SHOWLIGHTBOX");
+    });
 
     </script>
     <script>

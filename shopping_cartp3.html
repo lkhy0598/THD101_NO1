@@ -331,7 +331,7 @@
             if (viewport > 414) {
                 $(function () {
                     $('.SHOPPINGCART_ALLLIST').hide();
-                    $(".SHOPPINGCARTP2_ORDERARR").click(function () {
+                    $(".SHOPPINGCARTP2_ORDERTEXT").click(function () {
                         $(".SHOPPINGCART_ALLLIST").slideToggle("slow");
                         if (a === 0) {
                             $('.SHOPPINGCARTP2_ORDERARR').css({ transform: "rotate(-180deg)" });
@@ -349,7 +349,7 @@
             let viewport = $(window).width();
             if (viewport <= 414) {
                 $('.SHOPPINGCART_ITEMLIST--M').hide();
-                $(".SHOPPINGCARTP2_ORDERARR").click(function () {
+                $(".SHOPPINGCARTP2_ORDERTEXT").click(function () {
                     $(".SHOPPINGCART_ITEMLIST--M").slideToggle("slow");
                     if (a === 0) {
                         $('.SHOPPINGCARTP2_ORDERARR').css({ transform: "rotate(-180deg)" });
