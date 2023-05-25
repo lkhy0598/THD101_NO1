@@ -224,6 +224,25 @@
       margin: 85px auto 50px;
    }
 
+   #preview_member_pic, #preview_pet_pic, #preview_member_pic_revise, #preview_pet_pic_revise{
+      border-radius: 50%;
+      width: 220px;
+      height: 220px;
+      overflow: hidden;
+      margin: 0 auto 35px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+   }
+
+   .PREVIEW_IMG{
+
+      width: 220px; 
+      height: 220px; 
+      border-radius: 50%; 
+      object-fit: cover; 
+   }
+
    .ADD_NEW_MEMBER,
    .ADD_NEW_PET,
    .MODIFY_MEMBER_FORM,
@@ -255,7 +274,7 @@
       .ADD_PIC_IMG {
          width: 75%;
          display: block;
-         margin: 0 auto 35px;
+         margin: 0 auto;
       }
 
       .PIC_FILE_BOX {
