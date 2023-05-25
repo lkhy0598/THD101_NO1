@@ -16,8 +16,8 @@ body .APPOINTMENT_HOVER {
 }
 
 .APPOINTMENT {
-    width: 55%;
-    height: 500px;
+    width: 60vw;
+    height: 60vh;
     display: flex;
     transition: all 0.4s ease;
 
@@ -32,8 +32,8 @@ body .APPOINTMENT_HOVER {
 
     .APPOINTMENT_TAG {
         cursor: pointer;
-        width: 100px;
-        height: 300px;
+        width: 5vw;
+        height: 40vh;
         background-color: #34424F;
         border-radius: 10px 0 0 10px;
         line-height: 100px;
@@ -48,6 +48,9 @@ body .APPOINTMENT_HOVER {
             writing-mode: vertical-lr;
             text-orientation: upright;
             letter-spacing: 10px;
+            font-size: 2rem;
+            text-align: center;
+            line-height:5vw;
 
         }
     }
@@ -83,13 +86,13 @@ body .APPOINTMENT_HOVER {
                 .RESERVE {
                     color: $white;
                     background: $linear-orange;
-                    font-size: $p;
+                    font-size: 2rem;
                     border-radius: 10px;
                     font-weight: 700;
                     text-align: center;
-                    line-height: 65px;
-                    width: 270px;
-                    height: 65px;
+                    line-height: 8vh;
+                    width: 15vw;
+                    height: 8vh;
 
                     &:hover {
                         background: $linear-orange-hover;
@@ -98,8 +101,9 @@ body .APPOINTMENT_HOVER {
 
                 .APPOINTMENT_PHONE {
                     color: $blue;
-                    font-size: $h3;
-                    margin-top: 15px;
+                    font-size: 2rem;
+                    margin-top: 1rem;
+                    line-height:4rem;
 
                     &:hover {
                         text-decoration: underline;
