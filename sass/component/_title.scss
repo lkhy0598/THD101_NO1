@@ -23,7 +23,7 @@
     color: $white;
     
     &::after {
-        content: "";
+        content: ""; 
         position: absolute;
         border: 2px solid $lightblue;
         width: 59.6vw;
