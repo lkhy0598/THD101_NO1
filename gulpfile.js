@@ -80,7 +80,7 @@ exports.p = img;
 
 // =============================================　沒有壓縮的圖片，開發用(純搬家)
 function img_orgin() {
-    return src('./img/*.*').pipe(dest('dist/img'))
+    return src('./img/**/*.*').pipe(dest('dist/img'))
 }
 
 // =============================================　壓縮JS檔　JSMIN
