@@ -17,8 +17,17 @@
         <nav class="BACK_NAV">
 
             <a href="_back_index.html">
-                <img src="img/BACK-LOGO-HOVER.svg" alt="">
-                <img src="img/BACK-LOGO.svg" alt="">
+                <div class="HEADERLOGO_BG_BOX">
+                    <div class="HEADERLOGO_PAW">
+                        <img src="./img/HEADERLOGO_PAW.svg" alt="">
+                        <div class="HEADERLOGO_CLAWS">
+                            <img src="./img/HEADERLOGO_CLAWS.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="HEADER_LOGO_NAME">
+                        <img src="./img/HEADERLOGO_NAME.svg" alt="">
+                    </div>
+                </div>
             </a>
 
             <ul>
@@ -39,18 +48,22 @@
 
                 <label for="clinic_room" class="SELECT"><br>
                     <select id="clinic_room">
-                        <option value="">第一診間</option>
-                        <option value="">第二診間</option>
-                        <option value="">第三診間</option>
+                        <option value="1">第一診間</option>
+                        <option value="2">第二診間</option>
+                        <option value="3">第三診間</option>
                     </select>
                 </label>
 
                 <h3>目前叫號</h3>
-                <h3><span>10</span>號</h3>
+                <h3>
+                    <span id="counter">0</span>號
+                </h3>
 
-                <button class="BTN_BACK">呼叫下一號<i class="bi bi-arrow-right-circle"></i></button><br>
+                <button id="nextButton" class="BTN_BACK">呼叫下一號<i class="bi bi-arrow-right-circle"></i>
+                </button><br>
 
-                <button class="BTN_BACK">過號<i class="bi bi-arrow-right-circle"></i></button>
+                <button id="passButton" class="BTN_BACK">過號<i class="bi bi-arrow-right-circle"></i>
+                </button>
 
             </div>
 
@@ -293,6 +306,7 @@
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <script src="./js/back_call_system.js"></script>
 
     <script>
 
@@ -312,7 +326,6 @@
             })
 
         })
-
 
         $('#summernote').summernote({
             height: 400,                 // set editor height

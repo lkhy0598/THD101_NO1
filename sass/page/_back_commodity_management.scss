@@ -82,13 +82,14 @@
     .BACK_TABLE_CONTENT {
         color: $blueblack;
         text-align: center;
-        line-height: 150px;
-        height: 150px;
+        line-height: 80px;
+        min-height: 80px;
 
         li {
             border-top: 1px solid black;
             border-right: 1px solid black;
-            overflow: hidden;
+            padding: 10px;
+            box-sizing: border-box;
         }
 
         .bi-pencil {
@@ -112,7 +113,8 @@
     width: 15%;
 
     img {
-        height: 100%;
+        display: block;
+        width: 100%;
     }
 
 }
@@ -127,7 +129,7 @@
 }
 
 .COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(6) {
-    width: 10%;
+    width: 12.5%;
 }
 
 .COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(7),
@@ -138,9 +140,6 @@
 .COMMODITY_MANAGEMENT_TABLE_ALL li:nth-child(8) {
     border-right: none;
 }
-
-.COMMODITY_MANAGEMENT_TABLE_CONTENT:nth-child(2),
-.COMMODITY_MANAGEMENT_TABLE_CONTENT:nth-child(4) {}
 
 // 新增商品
 
