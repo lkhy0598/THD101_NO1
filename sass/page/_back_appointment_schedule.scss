@@ -24,6 +24,7 @@
 
         .CALENDAR {
             width: 100%;
+
         }
 
     }
@@ -52,7 +53,7 @@
         .APPOINTMENT_LIST {
             border: 1px solid black;
             border-radius: 10px 0 0 10px;
-            height: 730px;
+            height: 750px;
             overflow-y: auto;
             color: $blueblack;
 
@@ -86,7 +87,6 @@
     color: $blueblack;
     font-size: $littleword;
     letter-spacing: 1px;
-    
 
     thead {
         color: $white;

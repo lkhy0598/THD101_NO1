@@ -220,64 +220,67 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    position: relative;
 
     a {
 
-        >img {
+        .HEADERLOGO_BG_BOX {
             position: absolute;
             top: 0;
             left: 0;
-            height: 100%;
+            min-width: 350px;
+            min-height: 220px;
+            z-index: 1;
+            background-color: $red;
+            border-radius: 0 0 80px 0;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+
+            &:hover .HEADERLOGO_PAW .HEADERLOGO_CLAWS {
+                top: 0;
+            }
+
+            .HEADERLOGO_PAW {
+                margin: 10px auto;
+                position: absolute;
+                top: 0px;
+                left: 118px;
+                z-index: 1;
+                transition: all 0.3s ease;
+
+                img {
+                    width: 65%;
+                }
+            }
+
+            .HEADERLOGO_CLAWS {
+                position: absolute;
+                top: 45px;
+                left: 0px;
+                z-index: -1;
+                transition: all 0.3s ease;
+
+                img {
+                    width: 65%;
+                }
+
+            }
+
+            .HEADER_LOGO_NAME {
+                position: absolute;
+                top: 145px;
+                left: 115px;
+                margin: 10px auto;
+                margin-top: 0;
+                transition: all 0.3s ease;
+
+                img {
+                    width: 65%;
+                }
+
+            }
+
         }
-
-        &:hover img[src="./img/BACK-LOGO.svg"] {
-            opacity: 0;
-            transition: all .1s;
-        }
-
-        // .HEADERLOGO_BG_BOX {
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     background-color: $red;
-        //     display: flex;
-        //     flex-direction: column;
-        //     transition: all 0.3s ease;
-
-        //     &:hover .HEADERLOGO_PAW .HEADERLOGO_CLAWS {
-        //         top: 0;
-        //     }
-
-        //     .HEADERLOGO_PAW {
-        //         margin: 10px auto;
-        //         position: absolute;
-        //         top: 0px;
-        //         left: 45px;
-        //         z-index: 1;
-        //         transition: all 0.3s ease;
-        //     }
-
-        //     .HEADERLOGO_CLAWS {
-        //         position: absolute;
-        //         top: 45px;
-        //         left: 0px;
-        //         z-index: -1;
-        //         transition: all 0.3s ease;
-
-        //     }
-
-        //     .HEADER_LOGO_NAME {
-        //         position: absolute;
-        //         top: 220px;
-        //         left: 45px;
-        //         margin: 10px auto;
-        //         margin-top: 0;
-        //         transition: all 0.3s ease;
-
-        //     }
-
-        // }
 
     }
 
@@ -416,12 +419,13 @@
             display: none;
             height: 100vh;
             padding-top: 90px;
-            background: linear-gradient(160deg, rgb(243, 145, 85, .9) 0%,  rgb(228, 170, 123, .9) 40%, rgba(126, 184, 196, 0.9) 80%, rgba(126, 184, 196, 0.8) 100%);
-           
+            background: linear-gradient(160deg, rgb(243, 145, 85, .9) 0%, rgb(228, 170, 123, .9) 40%, rgba(126, 184, 196, 0.9) 80%, rgba(126, 184, 196, 0.8) 100%);
+
             >li {
 
                 position: relative;
                 padding-bottom: 10px;
+
                 >.M_HEADER_LI {
                     text-decoration: none;
                     margin: 20px 0;
