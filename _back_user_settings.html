@@ -94,11 +94,13 @@
 
                             <section class="USER_SETTINGS_PIC ADD_PIC">
 
-                                <img id="preview_member_pic" src="./img/backend/MENBER_PIC.svg" class="ADD_PIC_IMG" />
+                                <div id="preview_user_pic">
+                                    <img src="./img/backend/MENBER_PIC.svg" class="ADD_PIC_IMG" />
+                                </div>
 
-                                <label for="member_pic" class="PIC_FILE_BOX">
-                                    <input type="button" id="member_pic" value="上傳照片" class="BTN_BACK">
-                                    <input name="member_pic" type="file" id="member_pic" class="PIC_FILE"
+                                <label for="user_pic" class="PIC_FILE_BOX">
+                                    <input type="button" id="user_pic_btn" value="上傳照片" class="BTN_BACK">
+                                    <input name="user_pic" type="file" id="user_pic" class="PIC_FILE"
                                         accept="image/gif, image/jpeg, image/png" />
                                 </label>
 
@@ -180,5 +182,23 @@
         </main>
 
     </section>
-
+    <script>
+        // 修改使用者照片
+        var userPic = document.getElementById('user_pic');
+        var previewUserPic = document.getElementById('preview_user_pic');
+        userPic.addEventListener('change',function (e) {
+            var file = e.target.files[0];
+            // console.log(file);
+            var reader = new FileReader();
+            // console.log(reader);
+            reader.onload = function(e){
+                var img = document.createElement('img');
+                img.src = e.target.result;
+                img.classList.add('PREVIEW_IMG');
+                previewUserPic.innerHTML = '';
+                previewUserPic.appendChild(img);
+            }
+            reader.readAsDataURL(file);
+        })
+    </script>
 </body>
