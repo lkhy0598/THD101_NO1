@@ -136,7 +136,7 @@ function browser(done) {
         },
         port: 3000
     });
-    watch(['./sass/style.scss'], sassstyle).on("change", reload);
+    watch(['./sass/*.scss', './sass/**/*.scss'], sassstyle).on("change", reload);
     watch(['./*.html', './layout/ *.html'], html).on("change", reload);
     watch(['./img/*.*', './img/**/*.*'], img_orgin).on("change", reload);
     watch(['./js/*.js', './js/**/*.js'], ugjs).on("change", reload);
