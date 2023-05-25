@@ -26,90 +26,15 @@
   @@include('./layout/header.html')
   <!-- header end -->
 
-  <!-- =============== 頁首主視覺 =============== -->
-  <section class="CAROUSEL">
-    <div class="MASTER_VISION"><img src="./img/HEADER-TOP.png" alt="" /></div>
-    <div class="PAWPAW animate__animated animate__bounceInLeft">
+  <!-- =============== 主視覺 =============== -->
+  @@include('./layout/reserve_top_module.html')
 
-      <picture>
-        <source srcset="./img/reserve/M_reserve/reserve_banner_bg.svg" media="(max-width: 414px)">
-        <img src="./img/reserve/reserve_banner.svg" alt="">
-      </picture>
-
-    </div>
-    <div class="DOT"></div>
-    <div class="DOT1" style="display: none;"></div>
-  </section>
-
-  <!-- =============== 網頁內容 =============== -->
-
-  <!-- header下方區塊的背景 -->
+  <!-- ==============主視覺下方區塊============== -->
   <section class="BACKGROUND">
-    <img class="BG" src="./img/BG.jpg" alt="">
-    <!-- 背景雲裝飾 -->
-    <div class="BG_CLOUDS">
-      <div class="BG_CLOUD CLOUD_1">
-        <img class="BG_CLOUD_IMG1" src="./img/CLOUD_BG.png" alt="">
-      </div>
-      <div class="BG_CLOUD CLOUD_2">
-        <img class="BG_CLOUD_IMG2" src="./img/CLOUD_BG.png" alt="">
-      </div>
-    </div>
-
     <!-- ==========預約頁面共用資訊========== -->
+    @@include('./layout/reserve_info_module.html')
 
-    <section class="WRAPPER BIG_TITLE RESERVE_INFO">
-      <div class="BREAD"><a href="./homepage.html">首頁</a> / <a>線上預約</a></div>
-      <div class="FIRSTTIME_INFO">
-        <h1>對於初診患者</h1>
-
-        <ul class="RESERVE_TYPE_UL">
-          <li>
-            <div class="ARC_TITLE RESERVE_TYPE">
-              線上預約
-              <div class="ARC_TITLE TITLE_NO">1</div>
-            </div>
-          </li>
-          <li>
-            <div class="ARC_TITLE RESERVE_TYPE">
-              現場掛號
-              <div class="ARC_TITLE TITLE_NO">2</div>
-            </div>
-          </li>
-          <li>
-            <div class="ARC_TITLE RESERVE_TYPE">
-              電話預約
-              <div class="ARC_TITLE TITLE_NO">3</div>
-            </div>
-          </li>
-        </ul>
-        <p>如果您通過線上預約或電話，我們可以順利地為您提供指導。<br>
-          如果您不確定，可以直接來訪。</p>
-        <p class="CALL"> <i class="bi bi-telephone"></i> 預約專線 : 02-3322-2777 </p>
-
-        <ul class="RESERVE_TYPE_UL_M">
-          <li>
-            <div class="ARC_TITLE RESERVE_TYPE">
-              線上預約
-              <div class="ARC_TITLE TITLE_NO">1</div>
-            </div>
-          </li>
-          <li>
-            <div class="ARC_TITLE RESERVE_TYPE">
-              現場掛號
-              <div class="ARC_TITLE TITLE_NO">2</div>
-            </div>
-          </li>
-          <li>
-            <div class="ARC_TITLE RESERVE_TYPE">
-              電話預約
-              <div class="ARC_TITLE TITLE_NO">3</div>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-------  預約步驟 ------->
+    <!-------  預約步驟 ------->
       <section class="RESERVE_STEPAREA">
         <section class="RESERVE_ARC" id="ARCONE">
           <div class="ARC_TITLE">1</div>
@@ -128,7 +53,7 @@
           <p>預約成功</p>
         </section>
       </section>
-    </section>
+    
 
     <!-- ========月曆區塊======== -->
     <section class="CALENDAR_AREA">
