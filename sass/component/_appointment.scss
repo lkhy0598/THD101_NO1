@@ -59,7 +59,7 @@ body .APPOINTMENT_HOVER {
         position: relative;
 
         .APPOINTMENT_CONTENT {
-            width: 773px;
+            width: 80%;
             margin: 0 auto;
 
             position: absolute;
@@ -71,12 +71,14 @@ body .APPOINTMENT_HOVER {
                 display: block;
                 margin: 0 auto;
                 margin-bottom: 40px;
+                width: 100%;
             }
 
             .APPOINTMENT_RESERVE_PHONE {
                 display: flex;
                 justify-content: space-between;
                 margin: 0 auto;
+                width: 100%;
 
                 .RESERVE {
                     color: $white;

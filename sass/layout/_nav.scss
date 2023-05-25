@@ -436,7 +436,9 @@
                     font-size: 15px;
                     height: 2.5vh;
 
-
+                    &:active {
+                        background-color: transparent;
+                    }
 
                     >span {
                         font-size: 6.66vw;
