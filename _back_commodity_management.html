@@ -245,24 +245,36 @@
                     <section class="COMMODITY_IMAGE">
 
                         <section class="COMMODITY_IMAGE_TOP">
-                            <div class="MAIN_IMAGE IMAGE_TOP">
-                                <img src="./img/backend/01.png" alt="">
-                            </div>
-                            <div class="SECONDARY_IMAGE IMAGE_TOP">
-                                <img src="./img/backend/02.jpg" alt="">
-                            </div>
-                            <div class="THIRD_IMAGE IMAGE_TOP">
-                                <img src="./img/backend/03.jpg" alt="">
-                            </div>
-                            <div class="FORTH_IMAGE IMAGE_TOP">
+
+                            <div class="MAIN_IMAGE IMAGE_TOP " >
                                 <i class="bi bi-image"></i>
-                                <input type="button" id="member_pic" value="上傳照片" class="BTN_BACK">
+                                
+                                <!-- <img src="./img/backend/01.png" alt=""> -->
                             </div>
+                            <div class="SECONDARY_IMAGE IMAGE_TOP " >
+                                <i class="bi bi-image"></i>
+                                
+                                <!-- <img src="./img/backend/02.jpg" alt=""> -->
+                            </div>
+                            <div class="THIRD_IMAGE IMAGE_TOP " >
+                                <i class="bi bi-image"></i>
+                                
+                                <!-- <img src="./img/backend/03.jpg" alt=""> -->
+                            </div>
+                            <div class="FORTH_IMAGE IMAGE_TOP ">
+                                <i class="bi bi-image"></i>
+                                
+                            </div>
+                            
                         </section>
 
                         <section class="COMMODITY_IMAGE_BOTTOM">
                             <i class="bi bi-image"></i>
-                            <input type="button" id="member_pic" value="上傳照片" class="BTN_BACK">
+                            <label for="commodity_pic"" class="PIC_FILE_BOX">
+                                <input type="button" id="commodity_pic_btn" value="上傳照片" class="BTN_BACK">
+                                <input name="commodity_pic"" type="file" id="commodity_pic"" class="PIC_FILE"
+                                    accept="image/gif, image/jpeg, image/png" multiple/>
+                            </label>
                         </section>
 
                     </section>
@@ -293,6 +305,7 @@
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <script src="./js/back_commodity_management.js"></script>
 
     <script>
 

@@ -233,15 +233,16 @@
       display: flex;
       justify-content: center;
       align-content: center;
+
+      .PREVIEW_IMG{
+         width: 220px; 
+         height: 220px; 
+         border-radius: 50%; 
+         object-fit: cover; 
+      }
    }
 
-   .PREVIEW_IMG{
-
-      width: 220px; 
-      height: 220px; 
-      border-radius: 50%; 
-      object-fit: cover; 
-   }
+   
 
    .ADD_NEW_MEMBER,
    .ADD_NEW_PET,
