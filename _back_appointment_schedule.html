@@ -123,10 +123,10 @@
                             <label for="appointment_type" class="SELECT">預約類型<br>
                                 <select id="appointment_type">
                                     <option value="">請選擇預約類型</option>
-                                    <option value="">一般掛號</option>
-                                    <option value="">預防針</option>
-                                    <option value="">寵物溝通</option>
-                                    <option value="">寵物住宿</option>
+                                    <option value="一般掛號">一般掛號</option>
+                                    <option value="預防針">預防針</option>
+                                    <option value="寵物溝通">寵物溝通</option>
+                                    <option value="寵物住宿">寵物住宿</option>
                                 </select>
                             </label>
                         </li>
@@ -135,9 +135,9 @@
                             <label for="room_number" class="SELECT">診間編號<br>
                                 <select id="room_number">
                                     <option value="">請選擇診間編號</option>
-                                    <option value="">第一診間</option>
-                                    <option value="">第二診間</option>
-                                    <option value="">第三診間</option>
+                                    <option value="第一診間">第一診間</option>
+                                    <option value="第二診間">第二診間</option>
+                                    <option value="第三診間">第三診間</option>
                                 </select>
                             </label>
                         </li>
@@ -153,8 +153,8 @@
                     <section class="APPOINTMENT_SCHEDULE_RIGHT">
 
                         <p>預約列表</p>
-                        <section class="APPOINTMENT_DATE">
-                            <p>04/01 (週六)</p>
+                        <section id="selectedAppointmentDate" class="APPOINTMENT_DATE">
+                            <p>04/01 (星期六)</p>
                             <p>一般掛號</p>
                             <p>第一診間</p>
                         </section>
@@ -402,21 +402,9 @@
     <script src="./js/locales-all.global.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="./js/back_call_system.js"></script>
-    
+    <script src="./js/back_appointment_schedule.js"></script>
+
     <script>
-
-        document.addEventListener('DOMContentLoaded', function () {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',
-                locale: 'zh-tw',
-                navLinks: true,
-
-            });
-
-            calendar.render();
-
-        });
 
         $(document).ready(function () {
             $('.RESERVE_REVISE_BTN').click(function () {
