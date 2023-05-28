@@ -1,6 +1,6 @@
 .MEMBERCENTER {
-    
-    
+
+
     .MEMCENTOP3 {
         margin-top: 400px;
 
@@ -35,16 +35,16 @@
     margin: 30px auto 75px;
     border: 2px solid black;
     border-radius: 10px;
-    
-    
-    
+
+
+
 
     ul {
         display: flex;
         font-size: $p;
         list-style: none;
         margin: 0;
-    
+
 
     }
 
@@ -57,6 +57,7 @@
         outline: 2px solid black;
         border-radius: 10px 10px 0 0;
     }
+
     .BACK_TABLE_SUBTITLE {
         background-color: $lightblue;
         color: $blueblack;
@@ -64,7 +65,7 @@
         text-align: center;
         line-height: 55px;
         outline: 2px solid black;
-        
+
     }
 
     .BACK_TABLE_CONTENT {
@@ -72,7 +73,7 @@
         text-align: center;
         line-height: 80px;
         min-height: 80px;
-        
+
 
         li {
             border-top: 2px solid black;
@@ -87,7 +88,7 @@
 
 }
 
-.ORDER_RECORD_TABLE_ALL .ORDER_MANAGEMENT_TABLE_TITLE:nth-child(3){
+.ORDER_RECORD_TABLE_ALL .ORDER_MANAGEMENT_TABLE_TITLE:nth-child(3) {
     border-radius: 0;
 }
 
@@ -100,6 +101,7 @@
     width: 20%;
     // outline: 1px solid tomato;
 }
+
 .ORDER_RECORD_TABLE_ALL ul:nth-child(1) li:nth-child(3),
 .ORDER_RECORD_TABLE_ALL ul:nth-child(2) li:nth-child(3),
 .ORDER_RECORD_TABLE_ALL ul:nth-child(1) li:nth-child(4),
@@ -150,3 +152,46 @@
 //     width: 25%;
 //     border-right: none;
 // }
+
+// 優惠券
+.VOUCHER_CARD {
+    margin: 0 auto;
+
+    ul {
+        margin: 0 auto;
+        margin-top: 50px;
+        display: flex;
+        width: 100%;
+        justify-content: start;
+        li {
+            border-radius: 20px;
+            border: 1px solid $blueblack;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            font-size: 25px;
+            height: 120px;
+            
+            
+
+            .V_TYPE {
+                background-color: $blueblack;
+                color: $white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                i{
+                    font-size: 40px;
+                    margin-bottom: 20px;
+                }
+               
+            }
+            .V_DF{
+                display: flex;
+                align-items: center;
+                padding: 20px;
+            }
+        }
+
+    }
+}
