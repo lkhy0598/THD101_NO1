@@ -410,6 +410,7 @@
     display: block;
     opacity: 1;
     background: rgb(255, 255, 255, .3);
+    height: 24.5vh;
     animation: p_width .6s linear;
     @include m {
         animation: m_width .5s linear;
@@ -418,9 +419,10 @@
         padding: 20px 0;
     
         width: 100vw;
+        height: 20.1vh;
         display: inline-block;
         position: absolute;
-        top: -215px;
+        top: -220px;
         left: 0;
         z-index: -100;
    
