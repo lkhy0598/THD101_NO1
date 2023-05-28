@@ -1,0 +1,79 @@
+// 預約管理_表格
+
+.AAPMT_RECORD_TABLE_ALL {
+    width: 100%;
+    margin: 50px auto 75px;
+    border: 2px solid black;
+    border-radius: 10px;
+
+
+
+
+    ul {
+        display: flex;
+        font-size: $p;
+        list-style: none;
+        margin: 0;
+       
+       
+       
+
+
+    }
+
+    .BACK_TABLE_TITLE {
+        background-color: $lightblue;
+        color: $blueblack;
+        height: 55px;
+        text-align: center;
+        line-height: 55px;
+        outline: 2px solid black;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .BACK_TABLE_SUBTITLE {
+        background-color: $lightblue;
+        color: $blueblack;
+        height: 55px;
+        text-align: center;
+        line-height: 55px;
+        outline: 2px solid black;
+
+    }
+
+    .BACK_TABLE_CONTENT {
+        color: $blueblack;
+        text-align: center;
+        line-height: 80px;
+        min-height: 80px;
+
+
+        li {
+            // border-top: 2px solid black;
+            border-right: 2px solid black;
+            
+            
+           
+           i{
+            font-size: 25px;
+           }
+            
+
+        }
+
+        .bi-plus-circle {
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+.AAPMT_RECORD_TABLE_ALL .APPMT_MANAGEMENT_TABLE_TITLE:nth-child(3) {
+    border-radius: 0;
+}
+
+.AAPMT_RECORD_TABLE_ALL ul li {
+    width: 25%;
+    // outline: 1px solid tomato;
+}
