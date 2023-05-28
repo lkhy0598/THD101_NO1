@@ -433,7 +433,7 @@
                     color: $white;
                     display: flex;
                     align-items: end;
-                    font-size: 15px;
+                    font-size: 25px;
                     height: 2.5vh;
 
                     &:active {
@@ -441,7 +441,7 @@
                     }
 
                     >span {
-                        font-size: 6.66vw;
+                        font-size: 25px;
                         font-weight: 700;
                         letter-spacing: .1em;
                         padding-right: 10px;
@@ -463,7 +463,7 @@
 
                     // border: 1px solid;
                     .LOGIN {
-                        font-size: $p;
+                        font-size: 25px;
                         color: $white;
                     }
 
@@ -476,7 +476,7 @@
                 >.RESERVE {
                     color: $white;
                     background: $linear-orange;
-                    font-size: $p;
+                    font-size: 25px;
                     border-radius: 10px;
                     font-weight: 700;
                     text-align: center;
