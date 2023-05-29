@@ -21,6 +21,7 @@
     .RESERVE_ARC>.ARC_TITLE {
         color: #428AA9;
         background-color: #fff;
+        z-index: 10;
     }
 
     .RESERVE_ARC>p {
@@ -30,7 +31,7 @@
 
     .RESERVE_ARC::before {
         background-color: #FFF;
-        width: 100px;
+        width: 10vw;
         height: 6px;
         content: "";
         box-sizing: border-box;
@@ -42,7 +43,7 @@
 
     .RESERVE_ARC::after {
         background-color: #FFF;
-        width: 100px;
+        width: 10vw;
         height: 6px;
         content: "";
         box-sizing: border-box;

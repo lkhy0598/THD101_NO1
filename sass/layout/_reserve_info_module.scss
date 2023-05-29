@@ -20,14 +20,12 @@
     
     .FIRSTTIME_INFO>h1::before {
         background-color: #34424F;
-        width: 400px;
+        width: 20vw;
         height: 2px;
         content: "";
-        box-sizing: border-box;
-        display: block;
         position: absolute;
         top: 24px;
-        left: 150px;
+        left: 160px;
     }
     
     .FIRSTTIME_INFO>h1 {
@@ -40,14 +38,12 @@
     
     .FIRSTTIME_INFO>h1::after {
         background-color: #34424F;
-        width: 400px;
+        width: 20vw;
         height: 2px;
         content: "";
-        box-sizing: border-box;
-        display: block;
         position: absolute;
         top: 24px;
-        right: 150px;
+        right: 160px;
     }
     
     .RESERVE_TYPE_UL {
