@@ -254,7 +254,7 @@
 
     .SHOPPINGCART_STEPONETEXT{
         display: flex;
-        height: 629px;
+        // height: 629px;
 
         @include m {
             display: block;
@@ -314,6 +314,9 @@
 
                             b{
                                 font-weight: 400;
+                                .CARTITEMPRICE_SUB{
+                                    font-weight: 400;
+                                }
                             }
                         }
 
@@ -329,6 +332,10 @@
                             b{
                             font-size: $p;
                             font-weight: 600;
+                            .CARTITEMPRICE_TOTAL{
+                                font-size: $p;
+                                font-weight: 600;
+                            }
                             }
                         }
                     }
@@ -373,4 +380,12 @@
         }
     }
 
+    .ERROROUTLINE{
+        border: 0px;
+        outline: 2px solid $redprice;
+    }
+
+    .TRUEOUTLINE{
+        border: 1px solid #9E9E9E;
+    }
 }

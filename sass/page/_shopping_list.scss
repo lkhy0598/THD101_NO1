@@ -6,7 +6,7 @@
         background-size: cover;
         z-index: 20;
 
-        .BG {}
+        // .BG {}
         .BG_CLOUDS {
 
             .BG_CLOUD {
@@ -136,6 +136,8 @@
             border-radius: 10px 80px 10px 10px;
             position: relative;
             cursor: pointer;
+
+            @media (min-width:768px){
             &:hover{
                 .SHOPPINGLIST_MAGNIFIER{
                     background-image: url(../img/shopping_list/magnifier_hover.png);
@@ -149,6 +151,7 @@
                         transition: all .5s ease-in-out ;
                     }
                 }
+            }
 
 
             }
@@ -182,7 +185,7 @@
 
                     @include m {
                         height: auto;
-                        width: 100%;
+                        // width: 100%;
                     }
                 }
             }
@@ -213,10 +216,12 @@
             h3{
                 color: $blueblack;
                 margin-bottom: 20px;
+
             }
 
             .ITEMCOUNT_BTN{
                 margin-bottom: 20px;
+
             }
 
             .SHOPPINGLIST_CARTBTN{
@@ -408,6 +413,10 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
+
+        @include  m{
+            width: 90%;
+        }
     }
 
 
@@ -421,6 +430,7 @@
         img{
             width: 100%;
         }
+
         
     }
 
@@ -434,9 +444,9 @@
         cursor: pointer;
     }
 
-    .LIGHTBOXBIG_IMGOUT{
-        width: 100%;
-    }
+    // .LIGHTBOXBIG_IMGOUT{
+    //     width: 100%;
+    // }
 
     .SHOWLIGHTBOX{
         display: block;

@@ -199,20 +199,20 @@
                             <span>會員資料</span>
                         </section>
                         <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
-                            <label for="pet_name" class="INPUT">姓名<br>
-                                <input type="text" id="pet_name" class="INPUTENTER" placeholder="請輸入會員名稱">
+                            <label for="MEMBERNAME" class="INPUT">姓名<br>
+                                <input type="text" id="MEMBERNAME" class="INPUTENTER" placeholder="請輸入會員名稱">
                             </label>
                         </section>
 
                         <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
-                            <label for="pet_name" class="INPUT">電子信箱<br>
-                                <input type="text" id="pet_name" class="INPUTENTER" placeholder="請輸入電子信箱">
+                            <label for="MEMBERMAIL" class="INPUT">電子信箱<br>
+                                <input type="text" id="MEMBERMAIL" class="INPUTENTER" placeholder="請輸入電子信箱">
                             </label>
                         </section>
 
                         <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
-                            <label for="pet_name" class="INPUT">連絡電話<br>
-                                <input type="text" id="pet_name" class="INPUTENTER" placeholder="請輸入電話號碼">
+                            <label for="MEMBERPHONE" class="INPUT">連絡電話<br>
+                                <input type="text" id="MEMBERPHONE" class="INPUTENTER" placeholder="請輸入電話號碼">
                             </label>
                         </section>
 
@@ -231,28 +231,33 @@
                     <section class="SHOPPINGCARTP2_STEPTEXT--FORM P2MEMBER COL-6 RWD-COL-12">
                         <section class="SHOPPINGCARTP2_STEPTEXT--TITLE">
                             <span>收件資料</span>
-                        </section>
-                        <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
-                            <label for="pet_name" class="INPUT">姓名<br>
-                                <input type="text" id="pet_name" class="INPUTENTER" placeholder="請輸入收件人名稱">
-                            </label>
-
                             <label for="samemember" class="SAMEMEMBER">
-                                <input type="radio" value="ture" id="samemember" name="MEMBERINFO">
+                                <input type="checkbox" value="ture" id="samemember" name="MEMBERINFO">
                                 <span class="CHECKMEMBER"></span>
                                 同會員資料
                             </label>
                         </section>
-
                         <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
-                            <label for="pet_name" class="INPUT">電子信箱<br>
-                                <input type="text" id="pet_name" class="INPUTENTER" placeholder="請輸入收件人電子信箱">
+                            <label for="RECIPIENT" class="INPUT">姓名
+                                <span class="INPUTERROR">姓名不可為空白</span>
+                                <span class="INPUTERROR2">請輸入正確姓名</span><br>
+                                <input type="text" id="RECIPIENT" class="INPUTENTER" placeholder="請輸入收件人名稱">
                             </label>
                         </section>
 
                         <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
-                            <label for="pet_name" class="INPUT">連絡電話<br>
-                                <input type="text" id="pet_name" class="INPUTENTER" placeholder="請輸入收件人電話號碼">
+                            <label for="CARTINBOX" class="INPUT">電子信箱
+                                <span class="INPUTERROR">信箱不可為空白</span>
+                                <span class="INPUTERROR2">請輸入正確電子信箱</span><br>
+                                <input type="text" id="CARTINBOX" class="INPUTENTER" placeholder="請輸入收件人電子信箱">
+                            </label>
+                        </section>
+
+                        <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
+                            <label for="RECIPIENTPHONE" class="INPUT">連絡手機
+                                <span class="INPUTERROR">連絡電話不可為空白</span>
+                                <span class="INPUTERROR2">請輸入正確連絡電話</span><br>
+                                <input type="text" id="RECIPIENTPHONE" class="INPUTENTER" placeholder="請輸入收件人電話號碼">
                             </label>
                         </section>
 
@@ -287,27 +292,35 @@
                         <section class="SHOPPINGCARTP2_STEPTEXT--HALF">
 
                             <section class="SHOPPINGCARTP2_STEPTEXT--HALFINPUT">
-                                <label for="pet_name" class="INPUT">持卡人姓名<br>
-                                    <input type="text" id="pet_name" class="INPUTENTER" placeholder="請輸入持卡人姓名">
+                                <label for="CARDOWNER" class="INPUT">持卡人姓名
+                                    <span class="INPUTERROR">姓名不可為空白</span>
+                                    <span class="INPUTERROR2">請輸入正確姓名</span><br>
+                                    <input type="text" id="CARDOWNER" class="INPUTENTER" placeholder="請輸入持卡人姓名">
                                 </label>
                             </section>
 
                             <section class="SHOPPINGCARTP2_STEPTEXT--HALFINPUT">
-                                <label for="pet_name" class="INPUT">信用卡卡號<br>
-                                    <input type="text" id="pet_name" class="INPUTENTER"
+                                <label for="CARDNUMBER" class="INPUT">信用卡卡號
+                                    <span class="INPUTERROR">卡號不可為空白</span>
+                                    <span class="INPUTERROR2">請輸入正確卡號</span><br>
+                                    <input type="text" id="CARDNUMBER" class="INPUTENTER"
                                         placeholder="0000-0000-0000-0000">
                                 </label>
                             </section>
 
                             <section class="SHOPPINGCARTP2_STEPTEXT--HALFINPUT">
-                                <label for="pet_name" class="INPUT">有效日期<br>
-                                    <input type="text" id="pet_name" class="INPUTENTER" placeholder="MM/YY">
+                                <label for="CARDEXPIRYDATE" class="INPUT">有效日期
+                                    <span class="INPUTERROR">日期不可為空白</span>
+                                    <span class="INPUTERROR2">請輸入正確日期</span><br>
+                                    <input type="text" id="CARDEXPIRYDATE" class="INPUTENTER" placeholder="MM/YY">
                                 </label>
                             </section>
 
                             <section class="SHOPPINGCARTP2_STEPTEXT--HALFINPUT">
-                                <label for="pet_name" class="INPUT">安全碼(CVC)<br>
-                                    <input type="text" id="pet_name" class="INPUTENTER" placeholder="請輸入三位數安全碼">
+                                <label for="CARDCVC" class="INPUT">安全碼(CVC)
+                                    <span class="INPUTERROR">安全碼不可為空白</span>
+                                    <span class="INPUTERROR2">請輸入正確安全碼</span><br>
+                                    <input type="text" id="CARDCVC" class="INPUTENTER" placeholder="請輸入三位數安全碼">
                                 </label>
                             </section>
 
@@ -345,53 +358,34 @@
                 <section>
                     <a href="./shopping_cart.html">返回購物車</a>
                     <a href="./shopping_cartp3.html">
-                        <button class="BTN">付款</button>
+                        <button class="BTN" id="SHOPPINGCARTP2PAY">付款</button>
                     </a>
                 </section>
-
-
-
-
             </section>
+
+
+
         </section>
         <!-- ===== TOP按鈕 ===== -->
         <!-- top_btn -->
         @@include('./layout/top_btn.html')
         <!-- top_btn end -->
 
-        <script src="./js/top_btn.js"></script>
-        <script src="./js/nav.js"></script>
-        <script src="./js/user_popup.js"></script>
-        <script src="./js/toggle.js"></script>
-        <script src="./js/user_popup.js"></script>
+    <script src="./js/top_btn.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/user_popup.js"></script>
+    <script src="./js/toggle.js"></script>
+    <script src="./js/user_popup.js"></script>
 
-        <script>
-            let a = 0
-            $(function () {
-                let viewport = $(window).width();
-                if (viewport > 414) {
-                    $(function () {
-                        $('.SHOPPINGCART_ALLLIST').hide();
-                        $(".SHOPPINGCARTP2_ORDERTEXT").click(function () {
-                            $(".SHOPPINGCART_ALLLIST").slideToggle("slow");
-                            if (a === 0) {
-                                $('.SHOPPINGCARTP2_ORDERARR').css({ transform: "rotate(-180deg)" });
-                                a = 1;
-                            } else {
-                                $('.SHOPPINGCARTP2_ORDERARR').css({ transform: "rotate(0deg)" });
-                                a = 0;
-                            }
-                        })
-                    })
-                }
-            })
-
-            $(function () {
-                let viewport = $(window).width();
-                if (viewport <= 414) {
-                    $('.SHOPPINGCART_ITEMLIST--M').hide();
+    <script>
+        let a = 0
+        $(function () {
+            let viewport = $(window).width();
+            if (viewport > 414) {
+                $(function () {
+                    $('.SHOPPINGCART_ALLLIST').hide();
                     $(".SHOPPINGCARTP2_ORDERTEXT").click(function () {
-                        $(".SHOPPINGCART_ITEMLIST--M").slideToggle("slow");
+                        $(".SHOPPINGCART_ALLLIST").slideToggle("slow");
                         if (a === 0) {
                             $('.SHOPPINGCARTP2_ORDERARR').css({ transform: "rotate(-180deg)" });
                             a = 1;
@@ -400,10 +394,517 @@
                             a = 0;
                         }
                     })
+                })
+            }
+        })
 
+        $(function () {
+            let viewport = $(window).width();
+            if (viewport <= 414) {
+                $('.SHOPPINGCART_ITEMLIST--M').hide();
+                $(".SHOPPINGCARTP2_ORDERTEXT").click(function () {
+                    $(".SHOPPINGCART_ITEMLIST--M").slideToggle("slow");
+                    if (a === 0) {
+                        $('.SHOPPINGCARTP2_ORDERARR').css({ transform: "rotate(-180deg)" });
+                        a = 1;
+                    } else {
+                        $('.SHOPPINGCARTP2_ORDERARR').css({ transform: "rotate(0deg)" });
+                        a = 0;
+                    }
+                })
+
+            }
+        })
+    </script>
+
+            
+    <script>
+        $(document).ready(function() {
+            $('#RECIPIENT').on('blur', function() {
+                var recipientInput = $(this);
+                var recipientValue = recipientInput.val().trim();
+                var errorElement1 = recipientInput.siblings('.INPUTERROR');
+                var errorElement2 = recipientInput.siblings('.INPUTERROR2');
+
+                var recipientRegex = /^[\u4E00-\u9FFFa-zA-Z\s]+$/;
+                if (recipientValue === '') {
+                errorElement1.addClass('WRONG');
+                errorElement2.removeClass('WRONG');
+                } else if (recipientValue.length < 2 || !recipientRegex.test(recipientValue)) {
+                errorElement1.removeClass('WRONG');
+                errorElement2.addClass('WRONG');
+                } else {
+                errorElement1.removeClass('WRONG');
+                errorElement2.removeClass('WRONG');
+                $('#RECIPIENT').addClass('TRUEOUTLINE').removeClass('ERROROUTLINE');
                 }
-            })
-        </script>
+            });
+
+            $('#CARTINBOX').on('blur', function() {
+                var emailInput = $(this);
+                var emailValue = emailInput.val().trim();
+                var errorElement1 = emailInput.siblings('.INPUTERROR');
+                var errorElement2 = emailInput.siblings('.INPUTERROR2');
+
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (emailValue === '') {
+                errorElement1.addClass('WRONG');
+                errorElement2.removeClass('WRONG');
+                } else if (!emailRegex.test(emailValue)) {
+                errorElement1.removeClass('WRONG');
+                errorElement2.addClass('WRONG');
+                } else {
+                errorElement1.removeClass('WRONG');
+                errorElement2.removeClass('WRONG');
+                $('#CARTINBOX').addClass('TRUEOUTLINE').removeClass('ERROROUTLINE');
+                }
+            });
+
+            $('#RECIPIENTPHONE').on('blur', function() {
+                var phoneInput = $(this);
+                var phoneValue = phoneInput.val().trim();
+                var errorElement1 = phoneInput.siblings('.INPUTERROR');
+                var errorElement2 = phoneInput.siblings('.INPUTERROR2');
+
+                var phoneRegex = /^(\+?886-?|0)?9\d{8}$/;
+
+                if (phoneValue === '') {
+                errorElement1.addClass('WRONG');
+                errorElement2.removeClass('WRONG');
+                } else if (!phoneRegex.test(phoneValue)) {
+                errorElement1.removeClass('WRONG');
+                errorElement2.addClass('WRONG');
+                } else {
+                errorElement1.removeClass('WRONG');
+                errorElement2.removeClass('WRONG');
+                $('#RECIPIENTPHONE').addClass('TRUEOUTLINE').removeClass('ERROROUTLINE');
+                }
+            });
+        });
+
+// ===========================================================================
+
+    $(document).ready(function() {
+        $('#samemember').change(function() {
+            if ($(this).is(':checked')) {
+            var memberNameValue = $('#MEMBERNAME').val();
+            var memberMailValue = $('#MEMBERMAIL').val();
+            var memberPhoneValue = $('#MEMBERPHONE').val();
+
+            $('#RECIPIENT').val(memberNameValue).siblings('.INPUTERROR, .INPUTERROR2').removeClass('WRONG');
+            $('#CARTINBOX').val(memberMailValue).siblings('.INPUTERROR, .INPUTERROR2').removeClass('WRONG');
+            $('#RECIPIENTPHONE').val(memberPhoneValue).siblings('.INPUTERROR, .INPUTERROR2').removeClass('WRONG');
+            } else {
+            $('#RECIPIENT').val('');
+            $('#CARTINBOX').val('');
+            $('#RECIPIENTPHONE').val('');
+            }
+        });
+    });
+
+// ======================================================================================
+
+    $(document).ready(function() {
+        $('#CARDNUMBER').on('input', function() {
+            var cardNumber = $(this).val().replace(/-/g, ''); // 移除所有现有的连字符
+
+            if (cardNumber.length > 0) {
+            // 每四个数字插入连字符
+            var formattedCardNumber = cardNumber.match(/.{1,4}/g).join('-');
+
+            // 如果数字长度超过16位，则移除最后的连字符
+            if (cardNumber.length > 16) {
+                formattedCardNumber = formattedCardNumber.slice(0, -1);
+            }
+
+            // 如果格式化后的卡号长度超过19位，则截取前19位
+            if (formattedCardNumber.length > 19) {
+                formattedCardNumber = formattedCardNumber.slice(0, 19);
+            }
+
+            $(this).val(formattedCardNumber);
+            }
+        });
+    });
+
+// =======================================================================================
+
+    $(document).ready(function() {
+            $('#CARDOWNER').on('blur', function() {
+                var cardownerInput = $(this);
+                var cardownerValue = cardownerInput.val().trim();
+                var errorElement1 = cardownerInput.siblings('.INPUTERROR');
+                var errorElement2 = cardownerInput.siblings('.INPUTERROR2');
+
+                var cardownerRegex = /^[\u4E00-\u9FFFa-zA-Z\s]+$/;
+                if (cardownerValue === '') {
+                errorElement1.addClass('WRONG');
+                errorElement2.removeClass('WRONG');
+                } else if (cardownerValue.length < 2 || !cardownerRegex.test(cardownerValue)) {
+                errorElement1.removeClass('WRONG');
+                errorElement2.addClass('WRONG');
+                } else {
+                errorElement1.removeClass('WRONG');
+                errorElement2.removeClass('WRONG');
+                $('#CARDOWNER').addClass('TRUEOUTLINE').removeClass('ERROROUTLINE');
+                }
+            });
+
+            $('#CARDEXPIRYDATE').on('input', function() {
+                var cardexpirydateInput = $(this).val();
+                var numbers = cardexpirydateInput.replace(/\D/g, ''); // 移除非數字字符
+
+                
+                // 每兩個數字插入斜線
+                var formatted = numbers.match(/.{1,2}/g).join('/');
+
+                // 如果長度超過5個字元，則截斷
+                if (formatted.length > 5) {
+                formatted = formatted.substr(0, 5);
+                }
+
+                $(this).val(formatted);
+            });
+
+            $('#CARDEXPIRYDATE').on('blur', function() {
+                var cardexpirydateInput = $(this);
+                var cardexpirydateValue = cardexpirydateInput.val().trim();
+                var errorElement1 = cardexpirydateInput.siblings('.INPUTERROR');
+                var errorElement2 = cardexpirydateInput.siblings('.INPUTERROR2');
+
+                if (cardexpirydateValue === '') {
+                errorElement1.addClass('WRONG');
+                errorElement2.removeClass('WRONG');
+                } else if (cardexpirydateValue.length < 4 ) {
+                errorElement1.removeClass('WRONG');
+                errorElement2.addClass('WRONG');
+                } else {
+                errorElement1.removeClass('WRONG');
+                errorElement2.removeClass('WRONG');
+                $('#CARDEXPIRYDATE').addClass('TRUEOUTLINE').removeClass('ERROROUTLINE');
+                }
+            });
+
+            $('#CARDEXPIRYDATE').on('keydown', function(event) {
+                var key = event.which || event.keyCode;
+                
+                // 只允許數字、刪除鍵和方向鍵的使用
+                if (!(key >= 48 && key <= 57) && key !== 8 && key !== 37 && key !== 39) {
+                    event.preventDefault();
+                }
+            });
+
+            $('#CARDCVC').on('input', function() {
+                var cardcvcInput = $(this).val();
+                var numbers = cardcvcInput.replace(/\D/g, ''); // 移除非數字字符
+
+                // 如果長度超過5個字元，則截斷
+                if (numbers.length > 3) {
+                    numbers = numbers.substr(0, 3);
+                }
+
+                $(this).val(numbers);
+            });
+
+            $('#CARDCVC').on('blur', function() {
+                var cardcvcInput = $(this);
+                var cardcvcValue = cardcvcInput.val().trim();
+                var errorElement1 = cardcvcInput.siblings('.INPUTERROR');
+                var errorElement2 = cardcvcInput.siblings('.INPUTERROR2');
+
+                if (cardcvcValue === '') {
+                errorElement1.addClass('WRONG');
+                errorElement2.removeClass('WRONG');
+                } else if (cardcvcValue.length < 3 ) {
+                errorElement1.removeClass('WRONG');
+                errorElement2.addClass('WRONG');
+                } else {
+                errorElement1.removeClass('WRONG');
+                errorElement2.removeClass('WRONG');
+                $('#CARDCVC').addClass('TRUEOUTLINE').removeClass('ERROROUTLINE');
+                }
+            });
+
+            $('#CARDCVC').on('keydown', function(event) {
+                var key = event.which || event.keyCode;
+                
+                // 只允許數字、刪除鍵和方向鍵的使用
+                if (!(key >= 48 && key <= 57) && key !== 8 && key !== 37 && key !== 39) {
+                    event.preventDefault();
+                }
+            });
+
+// =======================================================================================
+
+            $("#CARDNUMBER").on("input", function() {
+                let cardNum = $(this).val();
+                let newCardNum = cardNum.replace(/-/g, "");
+                let sum = evenNum(newCardNum) + oddNum(newCardNum);
+                let resultNum = sum % 10;
+                if (resultNum !== 0) {
+                    resultNum = 10 - resultNum;
+                }
+
+                var errorElement1 = $(this).siblings('.INPUTERROR');
+                var errorElement2 = $(this).siblings('.INPUTERROR2');
+                if (resultNum !== newCardNum[15] * 1) {
+                    errorElement1.removeClass('WRONG');
+                    errorElement2.addClass("WRONG");
+                } else {
+                    errorElement2.removeClass("WRONG");
+                    $('#CARDNUMBER').addClass('TRUEOUTLINE').removeClass('ERROROUTLINE');
+                }
+                });
+
+                // 偶数位加总
+                function evenNum(newCardNum) {
+                let sum = 0;
+                for (let i = 1; i <= 13; i += 2) {
+                    let resultNum = Number(newCardNum[i]);
+                    sum += resultNum;
+                }
+                return sum;
+                }
+
+                // 奇数位加总
+                function oddNum(newCardNum) {
+                let sum = 0;
+                for (let i = 0; i <= 15; i += 2) {
+                    let resultNum = Number(newCardNum[i]) * 2;
+                    if (resultNum >= 10) {
+                    resultNum -= 9;
+                    }
+                    sum += resultNum;
+                }
+                return sum;
+                }
+
+                $('#CARDNUMBER').on('blur', function() {
+                    var errorElement1 = $(this).siblings('.INPUTERROR');
+                    var errorElement2 = $(this).siblings('.INPUTERROR2');
+
+                    if ($(this).val().trim() === '') {
+                        errorElement1.addClass('WRONG');
+                        errorElement2.removeClass('WRONG');
+                    } else if (!errorElement2.hasClass('WRONG')) {
+                        errorElement1.removeClass('WRONG');
+                        $('#CARDNUMBER').addClass('TRUEOUTLINE').removeClass('ERROROUTLINE');
+                    }
+                });
+        });
+
+
+    </script>
+
+    <script>//下一頁按鈕驗證
+        $(document).ready(function() {
+            // 點擊 SHOPPINGCARTP2PAY 按鈕時觸發事件
+            $('#SHOPPINGCARTP2PAY').click(function(event) {
+                // 停止表單的預設提交行為
+                event.preventDefault();
+
+                // 再次執行驗證並檢查是否通過
+                if (validateForm()) {
+                // 驗證通過，跳轉到下一頁
+                window.location.href = './shopping_cartp3.html';
+                }
+            });
+
+            function validateForm() {
+                var isValid = true;
+
+                // 進行收件人姓名(RECIPIENT)的驗證
+                var recipientInput = $('#RECIPIENT');
+                var recipientValue = recipientInput.val().trim();
+                var errorElement1 = recipientInput.siblings('.INPUTERROR');
+                var errorElement2 = recipientInput.siblings('.INPUTERROR2');
+
+                var recipientRegex = /^[\u4E00-\u9FFFa-zA-Z\s]+$/;
+                if (recipientValue.trim() === '') {
+                errorElement1.addClass('WRONG');
+                errorElement2.removeClass('WRONG');
+                $('#RECIPIENT').addClass('ERROROUTLINE').removeClass('TRUEOUTLINE');
+                isValid = false;
+                } else if (recipientValue.length < 2 || !recipientRegex.test(recipientValue)) {
+                errorElement1.removeClass('WRONG');
+                errorElement2.addClass('WRONG');
+                $('#RECIPIENT').addClass('ERROROUTLINE').removeClass('TRUEOUTLINE');
+                isValid = false;
+                } else {
+                errorElement1.removeClass('WRONG');
+                errorElement2.removeClass('WRONG');
+                }
+
+                // 進行電子信箱(CARTINBOX)的驗證
+                var emailInput = $('#CARTINBOX');
+                var emailValue = emailInput.val().trim();
+                var emailErrorElement1 = emailInput.siblings('.INPUTERROR');
+                var emailErrorElement2 = emailInput.siblings('.INPUTERROR2');
+
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (emailValue === '') {
+                emailErrorElement1.addClass('WRONG');
+                emailErrorElement2.removeClass('WRONG');
+                $('#CARTINBOX').addClass('ERROROUTLINE').removeClass('TRUEOUTLINE');
+                isValid = false;
+                } else if (!emailRegex.test(emailValue)) {
+                emailErrorElement1.removeClass('WRONG');
+                emailErrorElement2.addClass('WRONG');
+                $('#CARTINBOX').addClass('ERROROUTLINE').removeClass('TRUEOUTLINE');
+                isValid = false;
+                } else {
+                emailErrorElement1.removeClass('WRONG');
+                emailErrorElement2.removeClass('WRONG');
+                }
+
+                // 進行連絡手機(RECIPIENTPHONE)的驗證
+                var phoneInput = $('#RECIPIENTPHONE');
+                var phoneValue = phoneInput.val().trim();
+                var phoneErrorElement1 = phoneInput.siblings('.INPUTERROR');
+                var phoneErrorElement2 = phoneInput.siblings('.INPUTERROR2');
+
+                var phoneRegex = /^(\+?886-?|0)?9\d{8}$/;
+                if (phoneValue === '') {
+                phoneErrorElement1.addClass('WRONG');
+                phoneErrorElement2.removeClass('WRONG');
+                $('#RECIPIENTPHONE').addClass('ERROROUTLINE').removeClass('TRUEOUTLINE');
+                isValid = false;
+                } else if (!phoneRegex.test(phoneValue)) {
+                phoneErrorElement1.removeClass('WRONG');
+                phoneErrorElement2.addClass('WRONG');
+                $('#RECIPIENTPHONE').addClass('ERROROUTLINE').removeClass('TRUEOUTLINE');
+                isValid = false;
+                } else {
+                phoneErrorElement1.removeClass('WRONG');
+                phoneErrorElement2.removeClass('WRONG');
+                }
+
+                var cardNumberInput = $('#CARDNUMBER');
+                var cardNumberValue = cardNumberInput.val().replace(/-/g, ''); // 移除所有現有的連字符
+                var cardNumberErrorElement1 = cardNumberInput.siblings('.INPUTERROR');
+                var cardNumberErrorElement2 = cardNumberInput.siblings('.INPUTERROR2');
+
+                if (cardNumberValue === '') {
+                cardNumberErrorElement1.addClass('WRONG');
+                cardNumberErrorElement2.removeClass('WRONG');
+                $('#CARDNUMBER').addClass('ERROROUTLINE').removeClass('TRUEOUTLINE');
+                isValid = false;
+                } else if (!isValidLuhn(cardNumberValue)) {
+                cardNumberErrorElement1.removeClass('WRONG');
+                cardNumberErrorElement2.addClass('WRONG');
+                $('#CARDNUMBER').addClass('ERROROUTLINE').removeClass('TRUEOUTLINE');
+                isValid = false;
+                } else {
+                cardNumberErrorElement1.removeClass('WRONG');
+                cardNumberErrorElement2.removeClass('WRONG');
+                }
+
+                function isValidLuhn(cardNumber) {
+                    let newCardNum = cardNumber.replace(/-/g, "");
+                    let sum = evenNum(newCardNum) + oddNum(newCardNum);
+                    let resultNum = sum % 10;
+                    if (resultNum !== 0) {
+                        resultNum = 10 - resultNum;
+                    }
+                    return resultNum === newCardNum[15] * 1;
+                    }
+
+                    // 偶数位加总
+                    function evenNum(newCardNum) {
+                    let sum = 0;
+                    for (let i = 1; i <= 13; i += 2) {
+                        let resultNum = Number(newCardNum[i]);
+                        sum += resultNum;
+                    }
+                    return sum;
+                    }
+
+                    // 奇数位加总
+                    function oddNum(newCardNum) {
+                    let sum = 0;
+                    for (let i = 0; i <= 15; i += 2) {
+                        let resultNum = Number(newCardNum[i]) * 2;
+                        if (resultNum >= 10) {
+                        resultNum -= 9;
+                        }
+                        sum += resultNum;
+                    }
+                    return sum;
+                    }
+
+                // 進行持卡人姓名(CARDOWNER)的驗證
+                var cardOwnerInput = $('#CARDOWNER');
+                var cardOwnerValue = cardOwnerInput.val().trim();
+                var cardOwnerErrorElement1 = cardOwnerInput.siblings('.INPUTERROR');
+                var cardOwnerErrorElement2 = cardOwnerInput.siblings('.INPUTERROR2');
+
+                var cardOwnerRegex = /^[\u4E00-\u9FFFa-zA-Z\s]+$/;
+                if (cardOwnerValue === '') {
+                cardOwnerErrorElement1.addClass('WRONG');
+                cardOwnerErrorElement2.removeClass('WRONG');
+                $('#CARDOWNER').addClass('ERROROUTLINE').removeClass('TRUEOUTLINE');
+                isValid = false;
+                } else if (cardOwnerValue.length < 2 || !cardOwnerRegex.test(cardOwnerValue)) {
+                cardOwnerErrorElement1.removeClass('WRONG');
+                cardOwnerErrorElement2.addClass('WRONG');
+                $('#CARDOWNER').addClass('ERROROUTLINE').removeClass('TRUEOUTLINE');
+                isValid = false;
+                } else {
+                cardOwnerErrorElement1.removeClass('WRONG');
+                cardOwnerErrorElement2.removeClass('WRONG');
+                }
+
+                // 進行信用卡有效期限(CARDEXPIRYDATE)的驗證
+                var cardExpiryDateInput = $('#CARDEXPIRYDATE');
+                var cardExpiryDateValue = cardExpiryDateInput.val().trim();
+                var cardExpiryDateErrorElement1 = cardExpiryDateInput.siblings('.INPUTERROR');
+                var cardExpiryDateErrorElement2 = cardExpiryDateInput.siblings('.INPUTERROR2');
+
+                if (cardExpiryDateValue === '') {
+                cardExpiryDateErrorElement1.addClass('WRONG');
+                cardExpiryDateErrorElement2.removeClass('WRONG');
+                $('#CARDEXPIRYDATE').addClass('ERROROUTLINE').removeClass('TRUEOUTLINE');
+                isValid = false;
+                } else if (cardExpiryDateValue.length < 4) {
+                cardExpiryDateErrorElement1.removeClass('WRONG');
+                cardExpiryDateErrorElement2.addClass('WRONG');
+                $('#CARDEXPIRYDATE').addClass('ERROROUTLINE').removeClass('TRUEOUTLINE');
+                isValid = false;
+                } else {
+                cardExpiryDateErrorElement1.removeClass('WRONG');
+                cardExpiryDateErrorElement2.removeClass('WRONG');
+                }
+
+                // 進行信用卡安全碼(CARDCVC)的驗證
+                var cardCVCInput = $('#CARDCVC');
+                var cardCVCValue = cardCVCInput.val().trim();
+                var cardCVCErrorElement1 = cardCVCInput.siblings('.INPUTERROR');
+                var cardCVCErrorElement2 = cardCVCInput.siblings('.INPUTERROR2');
+
+                if (cardCVCValue === '') {
+                cardCVCErrorElement1.addClass('WRONG');
+                cardCVCErrorElement2.removeClass('WRONG');
+                $('#CARDCVC').addClass('ERROROUTLINE').removeClass('TRUEOUTLINE');
+                isValid = false;
+                } else if (cardCVCValue.length < 3) {
+                cardCVCErrorElement1.removeClass('WRONG');
+                cardCVCErrorElement2.addClass('WRONG');
+                $('#CARDCVC').addClass('ERROROUTLINE').removeClass('TRUEOUTLINE');
+                isValid = false;
+                } else {
+                cardCVCErrorElement1.removeClass('WRONG');
+                cardCVCErrorElement2.removeClass('WRONG');
+                }
+
+                return isValid;
+
+            }
+
+
+
+        })
+    </script>
+
 
 
 
