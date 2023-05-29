@@ -20,10 +20,6 @@
         width: 300px;
     }
 
-    input:focus {
-        outline: none;
-    }
-
 }
 
 // RWD的input有兩種長度：
@@ -199,6 +195,21 @@
             font-size: $p;
             color: $blueblack;
             margin: 0 40px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            background-color:transparent;
+            border: 0px;
+
+            &:focus{
+                outline: 0px;
+            }
+        }
+
+        .ITEM_COUNT--NUM::-webkit-inner-spin-button,
+        .ITEM_COUNT--NUM::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
 
         .ITEM_COUNT--PLUS{
@@ -272,6 +283,7 @@
 
     .SHOPPINGCART_STEPONETEXT--SELECT{
         padding:0 40px;
+        position: relative;
 
         .SELECT{
             font-size: $littleword;
@@ -297,6 +309,18 @@
 
         @include m {
             padding: 0 20px;
+        }
+
+        .SELECTERROR{
+            color: $redprice;
+            font-size: 16px;
+            margin-left: 10px;
+            line-height: 16px;
+            display: none;
+        }
+
+        .WRONG{
+            display: inline-block;
         }
 
     }
@@ -488,11 +512,20 @@
                             background-color: $blueblack;
                             text-align: center;
                         }
-                        .ITEM_COUNT--NUM{
+                        .ITEM_COUNTM--NUM{
                             font-size: 20px;
                             line-height: 20px;
                             color: $blueblack;
-                            margin: 0 15px;
+                            font-size: $p;
+                            text-align: center;
+                            background-color:transparent;
+                            border: 0px;
+                            width: 45px;
+                            height: 20px;
+
+                            &:focus{
+                                outline: 0px;
+                            }
                         }
                         .ITEM_COUNT--PLUS{
                             display: block;

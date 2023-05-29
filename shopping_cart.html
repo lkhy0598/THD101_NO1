@@ -107,15 +107,16 @@
                         <span>沛威貓狗保健-護眼亮晶晶 30入/盒</span>
                     </section>
                     <section class="ITEM_PRICE ITEM_PRICE--W">
-                        <p>NT＄1,380</p>
+                        <p>NT＄<span class="CARTITEM_PRICE">1,380</span></p>
                     </section>
                     <section class="ITEM_COUNT ITEM_COUNT--W">
                         <span class="ITEM_COUNT--MINUS"><i class="bi bi-dash"></i></span>
-                        <span class="ITEM_COUNT--NUM">2</span>
+                        <input type="number" class="ITEM_COUNT--NUM" value="1" min="1">
+                        <!-- <span class="ITEM_COUNT--NUM">2</span> -->
                         <span class="ITEM_COUNT--PLUS"><i class="bi bi-plus"></i></span>
                     </section>
                     <section class="ITEM_SUBTOTAL ITEM_SUBTOTAL--W">
-                        <p>NT＄2,760</p>
+                        <p>NT＄<span class="CARTITEMSUBTOTAL"></span></p>
                     </section>
                     <section class="ITEM_DELETE ITEM_DELETE--W">
                         <i class="bi bi-trash3"></i>
@@ -130,15 +131,16 @@
                         <span>【SC星益生趣】無穀貓糧(鮭魚配方) 2.5磅/1.1kg</span>
                     </section>
                     <section class="ITEM_PRICE ITEM_PRICE--W">
-                        <p>NT＄980</p>
+                        <p>NT＄<span class="CARTITEM_PRICE">980</span></p>
                     </section>
                     <section class="ITEM_COUNT ITEM_COUNT--W">
                         <span class="ITEM_COUNT--MINUS"><i class="bi bi-dash"></i></span>
-                        <span class="ITEM_COUNT--NUM">1</span>
+                        <input type="number" class="ITEM_COUNT--NUM" value="1" min="1">
+                        <!-- <span class="ITEM_COUNT--NUM">1</span> -->
                         <span class="ITEM_COUNT--PLUS"><i class="bi bi-plus"></i></span>
                     </section>
                     <section class="ITEM_SUBTOTAL ITEM_SUBTOTAL--W">
-                        <p>NT＄980</p>
+                        <p>NT＄<span class="CARTITEMSUBTOTAL"></span></p>
                     </section>
                     <section class="ITEM_DELETE ITEM_DELETE--W">
                         <i class="bi bi-trash3"></i>
@@ -169,11 +171,11 @@
                             <section class="SHOPPINGCART_ITEMWORD--BOTTOMM">
                                 <section class="SHOPPINGCART_ITEMWORD--COUNTM">
                                     <span class="ITEM_COUNT--MINUS"><i class="bi bi-dash"></i></span>
-                                    <span class="ITEM_COUNT--NUM">2</span>
+                                    <input type="number" class="ITEM_COUNTM--NUM" value="1" min="1">
                                     <span class="ITEM_COUNT--PLUS"><i class="bi bi-plus"></i></span>
                                 </section>
                                 <section class="SHOPPINGCART_ITEMWORD--PRICEM">
-                                    <p>NT＄2,760</p>
+                                    <p>NT＄<span class="CARTITEMSUBTOTALM">2,760</span></p>
                                 </section>
                             </section>
                         </section>
@@ -196,11 +198,11 @@
                             <section class="SHOPPINGCART_ITEMWORD--BOTTOMM">
                                 <section class="SHOPPINGCART_ITEMWORD--COUNTM">
                                     <span class="ITEM_COUNT--MINUS"><i class="bi bi-dash"></i></span>
-                                    <span class="ITEM_COUNT--NUM">1</span>
+                                    <input type="number" class="ITEM_COUNTM--NUM" value="1" min="1">
                                     <span class="ITEM_COUNT--PLUS"><i class="bi bi-plus"></i></span>
                                 </section>
                                 <section class="SHOPPINGCART_ITEMWORD--PRICEM">
-                                    <p>NT＄980</p>
+                                    <p><span class="CARTITEMSUBTOTALM">NT＄980</span></p>
                                 </section>
                             </section>
                         </section>
@@ -233,27 +235,30 @@
                             <span>選擇送貨及付款方式</span>
                         </section>
                         <section class="SHOPPINGCART_STEPONETEXT--SELECT">
-                            <label for="CUPON" class="SELECT">送貨地點<br>
-                                <select id="CUPON" class="SELECTOPTION">
+                            <label for="POSITION" class="SELECT">送貨地點
+                                <span class="SELECTERROR">尚未選擇所在位置</span><br>
+                                <select id="POSITION" class="SELECTOPTION">
                                     <option value="">請選擇所在位置</option>
-                                    <option value="">台灣</option>
+                                    <option value="1">台灣</option>
                                 </select>
                             </label>
                         </section>
                         <section class="SHOPPINGCART_STEPONETEXT--SELECT">
-                            <label for="CUPON" class="SELECT">送貨方式<br>
-                                <select id="CUPON" class="SELECTOPTION">
+                            <label for="DELIVERY" class="SELECT">送貨方式
+                                <span class="SELECTERROR">尚未選擇送貨方式</span><br>
+                                <select id="DELIVERY" class="SELECTOPTION">
                                     <option value="">請選擇送貨方式</option>
-                                    <option value="">7-11店到店取貨</option>
+                                    <option value="1">7-11店到店取貨</option>
                                 </select>
                             </label>
                         </section>
                         <section class="SHOPPINGCART_STEPONETEXT--SELECT LASTBOTTOM">
-                            <label for="CUPON" class="SELECT">付款方式<br>
-                                <select id="CUPON" class="SELECTOPTION">
+                            <label for="PAYWAY" class="SELECT">付款方式
+                                <span class="SELECTERROR">尚未選擇付款方式</span><br>
+                                <select id="PAYWAY" class="SELECTOPTION">
                                     <option value="">請選擇付款方式</option>
-                                    <option value="">到貨付款</option>
-                                    <option value="">信用卡付款</option>
+                                    <option value="1">到貨付款</option>
+                                    <option value="2">信用卡付款</option>
                                 </select>
                             </label>
                         </section>
@@ -267,7 +272,7 @@
                         <section class="SHOPPINGCART_STEPONETEXT--INFO">
                             <section class="SHOPPINGCART_STEPONETEXT--ZONE">
                                 <span>小計:</span>
-                                <span><b>NT＄3,740</b></span>
+                                <span><b>NT＄<b id="CARTITEMPRICE_SUB"></b></b></span>
                             </section>
                             <section class="SHOPPINGCART_STEPONETEXT--ZONE">
                                 <span>運費:</span>
@@ -279,7 +284,7 @@
                             </section>
                             <section class="SHOPPINGCART_STEPONETEXT--ZONE STEPONETOTAL">
                                 <span>合計:</span>
-                                <span><b>NT＄3,740</b></span>
+                                <span><b>NT＄<b id="CARTITEMPRICE_TOTAL"></b></b></span>
                             </section>
                             <a href="./shopping_cartp2.html" class="SHOPPINGCART_STEPONETEXT--PAY">
                                 <button class="BTN STEPONEPAY">前往結帳</button>
@@ -312,6 +317,139 @@
 
 
 </body>
+
+<script>
+$(document).ready(function() {
+
+    $('#POSITION').on('change', function() {
+    var selectedOption = $(this).val();
+    if (selectedOption === '') {
+        $('.SELECTERROR', $(this).closest('.SHOPPINGCART_STEPONETEXT--SELECT')).addClass('WRONG'); // 添加错误类
+    } else {
+        $('.SELECTERROR', $(this).closest('.SHOPPINGCART_STEPONETEXT--SELECT')).removeClass('WRONG'); // 移除错误类
+        $('#POSITION').removeClass('ERROROUTLINE').addClass('TRUEOUTLINE');
+    }
+});
+
+    $('#DELIVERY').on('change', function() {
+        var selectedOption = $(this).val();
+        if (selectedOption === '') {
+        $('.SELECTERROR', $(this).closest('.SHOPPINGCART_STEPONETEXT--SELECT')).addClass('WRONG'); // 添加错误类
+        } else {
+        $('.SELECTERROR', $(this).closest('.SHOPPINGCART_STEPONETEXT--SELECT')).removeClass('WRONG'); // 移除错误类
+        $('#DELIVERY').removeClass('ERROROUTLINE').addClass('TRUEOUTLINE');
+        }
+    });
+
+    $('#PAYWAY').on('change', function() {
+        var selectedOption = $(this).val();
+        if (selectedOption === '') {
+        $('.SELECTERROR', $(this).closest('.SHOPPINGCART_STEPONETEXT--SELECT')).addClass('WRONG'); // 添加错误类
+        } else {
+        $('.SELECTERROR', $(this).closest('.SHOPPINGCART_STEPONETEXT--SELECT')).removeClass('WRONG'); // 移除错误类
+        $('#PAYWAY').removeClass('ERROROUTLINE').addClass('TRUEOUTLINE');
+        }
+    });
+});
+
+$(document).ready(function() {
+    $('.STEPONEPAY').click(function(e) {
+        var position = $('#POSITION').val();
+        var delivery = $('#DELIVERY').val();
+        var payway = $('#PAYWAY').val();
+
+        if (position === '') {
+        $('.SELECTERROR', $('#POSITION').closest('.SHOPPINGCART_STEPONETEXT--SELECT')).addClass('WRONG'); // 添加错误类
+        $('#POSITION').addClass('ERROROUTLINE').removeClass('TRUEOUTLINE');
+        } else {
+        $('#POSITION').removeClass('ERROROUTLINE').addClass('TRUEOUTLINE');
+        }
+
+        if (delivery === '') {
+        $('.SELECTERROR', $('#DELIVERY').closest('.SHOPPINGCART_STEPONETEXT--SELECT')).addClass('WRONG'); // 添加错误类
+        $('#DELIVERY').addClass('ERROROUTLINE').removeClass('TRUEOUTLINE');
+        } else {
+        $('#DELIVERY').removeClass('ERROROUTLINE').addClass('TRUEOUTLINE');
+        }
+
+        if (payway === '') {
+        $('.SELECTERROR', $('#PAYWAY').closest('.SHOPPINGCART_STEPONETEXT--SELECT')).addClass('WRONG'); // 添加错误类
+        $('#PAYWAY').addClass('ERROROUTLINE').removeClass('TRUEOUTLINE');
+        } else {
+        $('#PAYWAY').removeClass('ERROROUTLINE').addClass('TRUEOUTLINE');
+        }
+
+        if (position === '' || delivery === '' || payway === '') {
+        e.preventDefault(); // 阻止默认的链接跳转行为
+        }
+    });
+});
+
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('.SHOPPINGCART_ITEM').each(function() {
+            var $itemCountNum = $(this).find('.ITEM_COUNT--NUM');
+            var $cartItemPrice = $(this).find('.CARTITEM_PRICE');
+            var $cartItemSubtotal = $(this).find('.CARTITEMSUBTOTAL');
+
+            // 更新CARTITEMSUBTOTAL的值
+            function updateSubtotal() {
+            var price = parseFloat($cartItemPrice.text().replace(/[^\d.]/g, ''));
+            var quantity = parseInt($itemCountNum.val());
+            var subtotal = price * quantity;
+
+            $cartItemSubtotal.text(subtotal);
+            }
+
+            // 初始化CARTITEMSUBTOTAL的值
+            updateSubtotal();
+
+            // 监听ITEM_COUNT--PLUS按钮的点击事件
+            $(this).find('.ITEM_COUNT--PLUS').click(function() {
+            var currentValue = parseInt($itemCountNum.val());
+            $itemCountNum.val(currentValue + 1);
+
+            updateSubtotal();
+            });
+
+            // 监听ITEM_COUNT--MINUS按钮的点击事件
+            $(this).find('.ITEM_COUNT--MINUS').click(function() {
+            var currentValue = parseInt($itemCountNum.val());
+            if (currentValue > 1) {
+                $itemCountNum.val(currentValue - 1);
+
+                updateSubtotal();
+            }
+            });
+        });
+
+
+        function calculateTotal() {
+            var total = 0;
+            $('.CARTITEMSUBTOTAL').each(function() {
+            var subtotal = parseFloat($(this).text().replace(/[^\d.]/g, ''));
+            total += subtotal;
+            });
+            $('#CARTITEMPRICE_TOTAL').text(total);
+
+            // 更新CARTITEMPRICE_SUB的值
+            $('#CARTITEMPRICE_SUB').text(total);
+        }
+
+        // 初始化总和
+        calculateTotal();
+
+        // 监听每个 .CARTITEMSUBTOTAL 的变化
+        $('.CARTITEMSUBTOTAL').bind('DOMSubtreeModified', function() {
+            calculateTotal();
+        });
+    });
+
+
+
+</script>
 
 
 </html>

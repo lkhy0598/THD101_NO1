@@ -280,68 +280,13 @@
                             margin-left: 20px;
                         }
                     }
-                }
-
-                .SHOPPINGCARTP2_STEPTEXT--INPUT{
-                    padding:0 40px;
-                    margin-top: 25px;
-                    position: relative;
-
-                    @include m {
-                        padding:  0 20px;
-                    }
-            
-                    .INPUT{
-                        font-size: $littleword;
-                        font-weight: 300;
-                        
-                        .INPUTENTER{
-                            width: 100%;
-                            color: $blueblack;
-                            font-weight: 400;
-                        }
-                        ::placeholder{
-                            color: $blueblack;
-                            font-weight: 400;
-                        }
-                    }
-
-                    span{
-                        display: block;
-                        font-size: $bread;
-                        font-weight: 300;
-                        margin-bottom: 8px;
-                        line-height: 20px;
-                    }
-                    div{
-                        .BTN{
-                            width: 100%;
-                        }
-                    }
-                    .CREDITREMIND{
-                        color: $gray;
-                        line-height: 25px;
-                    }
-
-                    .TEXTAREA{
-                        font-size: $littleword;
-                        font-weight: 300;
-                        .TEXTAREA_CONTENT{
-                            width: 100%;
-                            height: 288px;
-
-                            @include m {
-                                height: 383px;
-                            }
-                        }
-                    }
 
                     .SAMEMEMBER{
                         font-size: $littleword;
                         color: $blueblack;
                         font-weight: 300;
                         position: absolute;
-                        top: -4px;
+                        top: 17px;
                         right: 45px;
 
                         @include m {
@@ -382,6 +327,86 @@
                     .SAMEMEMBER input:checked + .CHECKMEMBER::after{
                         opacity: 1;
                     }
+
+                }
+
+                .SHOPPINGCARTP2_STEPTEXT--INPUT{
+                    padding:0 40px;
+                    margin-top: 25px;
+                    position: relative;
+
+                    @include m {
+                        padding:  0 20px;
+                    }
+            
+                    .INPUT{
+                        font-size: $littleword;
+                        font-weight: 300;
+                        
+                        .INPUTENTER{
+                            width: 100%;
+                            color: $blueblack;
+                            font-weight: 400;
+                        }
+                        ::placeholder{
+                            color: #9E9E9E;
+                            font-weight: 400;
+                        }
+
+                        .INPUTERROR{
+                            display: inline-block;
+                            color: $redprice;
+                            font-size: 16px;
+                            margin-left: 10px;
+                            margin-bottom: 0px;
+                            line-height: 16px;
+                            display: none;
+                        }
+
+                        .INPUTERROR2{
+                            display: none;
+                            color: $redprice;
+                            font-size: 16px;
+                            margin-left: 10px;
+                            margin-bottom: 0px;
+                            line-height: 16px;
+                        }
+                    }
+
+                    span{
+                        display: block;
+                        font-size: $bread;
+                        font-weight: 300;
+                        margin-bottom: 8px;
+                        line-height: 20px;
+                    }
+                    div{
+                        .BTN{
+                            width: 100%;
+                        }
+                    }
+                    .CREDITREMIND{
+                        color: $gray;
+                        line-height: 25px;
+                    }
+
+                    .TEXTAREA{
+                        font-size: $littleword;
+                        font-weight: 300;
+                        .TEXTAREA_CONTENT{
+                            width: 100%;
+                            height: 288px;
+
+                            @include m {
+                                height: 383px;
+                            }
+                        }
+                    }
+
+                    .INPUT .WRONG{
+                        display: inline-block;
+                    }
+
                 }
 
                 .SHOPPINGCARTP2_STEPTEXT--REMIND{
@@ -402,6 +427,28 @@
                     justify-content: space-between;
                     padding: 0 40px;
 
+                    .INPUTERROR{
+                        display: none;
+                        color: $redprice;
+                        font-size: 16px;
+                        margin-left: 10px;
+                        margin-bottom: 0px;
+                        line-height: 16px;
+                    }
+
+                    .INPUTERROR2{
+                        display: none;
+                        color: $redprice;
+                        font-size: 16px;
+                        margin-left: 10px;
+                        margin-bottom: 0px;
+                        line-height: 16px;
+                    }
+
+                    .INPUT .WRONG{
+                        display: inline-block;
+                    }
+
                     @include m {
                         display: block;
                         padding: 0 20px;
@@ -420,7 +467,7 @@
                                 font-weight: 400;
                             }
                             ::placeholder{
-                                color: $blueblack;
+                                color: #9E9E9E;
                                 font-weight: 400;
                             }
                         }
@@ -517,6 +564,13 @@
         }
     }
 
-    
+    .ERROROUTLINE{
+        border: 0px;
+        outline: 2px solid $redprice;
+    }
+
+    .TRUEOUTLINE{
+        border: 1px solid #9E9E9E;
+    }
 
 }
