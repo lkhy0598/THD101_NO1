@@ -45,11 +45,19 @@
     justify-content: space-between;
     color: #34424F;
     
+    @include m() {
+        flex-direction: column;
+    }
+    
 
 }
 
 .MENU {
     margin-bottom: 130px;
+    @include m(){
+        display: flex;
+    }
+   
     a {
         text-decoration: none;
         color: #34424F;
@@ -68,6 +76,16 @@
         h3:hover {
 
             color: white;
+        }
+        h2{
+            @include m(){
+                font-size: 2em;
+            }
+        }
+        h3{
+            @include m(){
+                display: none;
+            }
         }
 
 
