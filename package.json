@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "開發": "gulp dev",
-    "上線": "gulp online"
+    "上線": "gulp online",
+    "build": "gulp online"
   },
   "keywords": [],
   "author": "",

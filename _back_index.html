@@ -253,22 +253,6 @@
 
     </script>
 
-    <!-- 今日預約人數 -->
-    <script>
-
-        reservationCount.textContent = calculateReservationCount();
-
-        // 計算預約人數
-        function calculateReservationCount() {
-            var total = 0;
-            for (var key in counters) {
-                total += counters[key];
-            }
-            return total;
-        }
-
-    </script>
-
 </body>
 
 </html>
