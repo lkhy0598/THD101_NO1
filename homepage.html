@@ -12,27 +12,27 @@
 </head>
 
 <body class="INDEX">
-    <!-- =============== 共用元件 =============== -->
+  <!-- =============== 共用元件 =============== -->
 
-    <!-- ===== 會員彈窗 ===== -->
-    <!-- user_popup -->
-    @@include('./layout/user_popup.html')
-    <!-- user_popup end -->
+  <!-- ===== 會員彈窗 ===== -->
+  <!-- user_popup -->
+  @@include('./layout/user_popup.html')
+  <!-- user_popup end -->
 
-    <!-- ===== 預約浮動視窗 ===== -->
-    <!-- appointment -->
-    @@include('./layout/appointment.html')
-    <!-- appointment end -->
+  <!-- ===== 預約浮動視窗 ===== -->
+  <!-- appointment -->
+  @@include('./layout/appointment.html')
+  <!-- appointment end -->
 
-    <!-- ===== 手機板下功能列 ===== -->
-    <!-- RWD_FUNTIONBAR -->
-    @@include('./layout/RWD_FUNTIONBAR.html')
-    <!-- RWD_FUNTIONBAR end -->
+  <!-- ===== 手機板下功能列 ===== -->
+  <!-- RWD_FUNTIONBAR -->
+  @@include('./layout/RWD_FUNTIONBAR.html')
+  <!-- RWD_FUNTIONBAR end -->
 
-    <!-- =============== header =============== -->
-    <!-- header -->
-    @@include('./layout/header.html')
-    <!-- header end -->
+  <!-- =============== header =============== -->
+  <!-- header -->
+  @@include('./layout/header.html')
+  <!-- header end -->
 
   <!-- =============== 頁首主視覺 =============== -->
   <section class="CAROUSEL">
@@ -91,7 +91,7 @@
             <div class="TOPBACKGROUND_1"></div>
             <div class="CONSULTATIONCARD">
               <p class="CONSULTATION_TITLE">目前叫號</p>
-              <p class="CONSULTATION_NUM">10</p>
+              <p id="clinic_room_one" class="CONSULTATION_NUM">10</p>
               <p class="CONSULTATION_DOCTOR">看診醫師　范植鑫</p>
             </div>
           </div>
@@ -102,7 +102,7 @@
             <div class="TOPBACKGROUND_2"></div>
             <div class="CONSULTATIONCARD">
               <p class="CONSULTATION_TITLE">目前叫號</p>
-              <p class="CONSULTATION_NUM">10</p>
+              <p id="clinic_room_two" class="CONSULTATION_NUM">10</p>
               <p class="CONSULTATION_DOCTOR">看診醫師　范植鑫</p>
             </div>
           </div>
@@ -113,7 +113,7 @@
             <div class="TOPBACKGROUND_3"></div>
             <div class="CONSULTATIONCARD">
               <p class="CONSULTATION_TITLE">目前叫號</p>
-              <p class="CONSULTATION_NUM">10</p>
+              <p id="clinic_room_three" class="CONSULTATION_NUM">10</p>
               <p class="CONSULTATION_DOCTOR">看診醫師　范植鑫</p>
             </div>
           </div>
@@ -415,7 +415,30 @@
   <script src="./js/user_popup.js"></script>
   <script src="./js/toggle.js"></script>
   <script src="./js/appointment.js"></script>
- 
+
+  <script>
+
+    // 检查本地存储中是否存在计数器值
+    if (localStorage.getItem("counters")) {
+      // 如果存在，从本地存储中读取计数器值
+      var counters = JSON.parse(localStorage.getItem("counters"));
+
+      // 更新第一个计数器的值
+      var clinicRoomOne = document.getElementById("clinic_room_one");
+      clinicRoomOne.innerHTML = counters[1];
+
+      // 更新第二个计数器的值
+      var clinicRoomTwo = document.getElementById("clinic_room_two");
+      clinicRoomTwo.innerHTML = counters[2];
+
+      // 更新第三个计数器的值
+      var clinicRoomThree = document.getElementById("clinic_room_three");
+      clinicRoomThree.innerHTML = counters[3];
+    }
+
+
+  </script>
+
 </body>
 
 </html>
