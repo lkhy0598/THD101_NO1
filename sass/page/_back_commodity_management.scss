@@ -179,7 +179,7 @@
                 display: flex;
                 justify-content: center;
                 align-content: center;
-
+  
              }
 
             .IMAGE_TOP {
@@ -189,6 +189,7 @@
                 height: 220px;
                 margin-right: 40px;
                 text-align: center;
+                position: relative;
                 
                 img {
                     width: 100%;
@@ -207,6 +208,15 @@
                 .BTN_BACK {
                     width: 80%;
                 }
+            }
+
+            .IMAGE_BOX:hover::after{
+                content: url(../img/backend/commodity_bg.svg);
+                position: absolute;
+                top: 0;
+                left: 0;
+                pointer-events: none;
+                // display: none;
             }
 
             .IMAGE_TOP:last-child {

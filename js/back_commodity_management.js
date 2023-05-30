@@ -30,12 +30,42 @@ commodityPic.addEventListener('change', function(e) {
 
       // 將預覽的圖像元素添加到預覽容器中
       previewContainer.appendChild(img);
+
+
+      img.addEventListener('click', function() {
+        // 刪除圖片和重置預覽容器
+        this.remove();
+        previewContainer.innerHTML = '<i class="bi bi-image"></i>';
+      });
+
+
+      var imageTops = document.querySelectorAll('.IMAGE_TOP');
+      // console.log(imageTops);
+      for(var j = 0 ; j < imageTops.length; j++){
+        var child = imageTops[j].querySelectorAll("img");
+        // console.log(child);
+        if(child.length > 0){
+          imageTops[j].classList.add('IMAGE_BOX');
+        }else if(child.length < 0){
+          imageTops[j].classList.remove('IMAGE_BOX');
+        }
+      }
+      
+ 
     }
 
     // 讀取檔案內容
     reader.readAsDataURL(file);
   }
 });
+
+ 
+
+
+
+
+
+
 
 // 獲取下一個可用的預覽容器
 function getNextPreviewContainer() {
@@ -48,4 +78,5 @@ function getNextPreviewContainer() {
    }
    return null;
  }
+
 
