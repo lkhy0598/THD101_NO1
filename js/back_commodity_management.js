@@ -1,3 +1,4 @@
+
 // 獲取上傳照片按鈕和預覽容器的元素
 var commodityPic = document.getElementById('commodity_pic');
 // console.log(commodityPic);
@@ -30,9 +31,14 @@ commodityPic.addEventListener('change', function(e) {
 
       // 將預覽的圖像元素添加到預覽容器中
       previewContainer.appendChild(img);
+      // let img_arr = $('img.PREVIEW_IMG');
+      // console.log(img_arr);
 
 
       img.addEventListener('click', function() {
+        var parentDiv = this.parentElement;
+        console.log(parentDiv);
+        parentDiv.classList.remove('IMAGE_BOX');
         // 刪除圖片和重置預覽容器
         this.remove();
         previewContainer.innerHTML = '<i class="bi bi-image"></i>';
@@ -46,8 +52,6 @@ commodityPic.addEventListener('change', function(e) {
         // console.log(child);
         if(child.length > 0){
           imageTops[j].classList.add('IMAGE_BOX');
-        }else if(child.length < 0){
-          imageTops[j].classList.remove('IMAGE_BOX');
         }
       }
       
