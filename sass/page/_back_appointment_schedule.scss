@@ -112,6 +112,12 @@
 
     .fc-daygrid-day-number:hover {
         cursor: pointer;
-      }
+    }
+
+    .event-title {
+        margin: auto;
+        letter-spacing: 3.5px;
+        font-size: $littleword;
+    }
 
 }
