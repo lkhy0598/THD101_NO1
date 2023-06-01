@@ -100,6 +100,9 @@ function ugjs() {
 
 exports.jsmin = ugjs;
 
+
+
+
 // =============================================　降轉js es6 > es5
 const babel = require('gulp-babel');
 

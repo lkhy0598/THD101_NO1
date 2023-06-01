@@ -1,10 +1,10 @@
 <?php
 
 // Tibame中心server
-$db_host = "127.0.0.1";
-$db_user = "tibamefe_since2021";
-$db_pass = "vwRBSb.j&K#E";
-$db_select = "tibamefe_thd101g1";
+// $db_host = "127.0.0.1";
+// $db_user = "tibamefe_since2021";
+// $db_pass = "vwRBSb.j&K#E";
+// $db_select = "tibamefe_thd101g1";
 //MySQL相關資訊在本地端，記得改成自己的密碼
 $db_host = "127.0.0.1";
 $db_user = "root";
