@@ -1,4 +1,3 @@
-
 // 獲取上傳照片按鈕和預覽容器的元素
 var commodityPic = document.getElementById('commodity_pic');
 // console.log(commodityPic);
@@ -82,5 +81,3 @@ function getNextPreviewContainer() {
    }
    return null;
  }
-
-

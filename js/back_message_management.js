@@ -1,48 +1,68 @@
+// 選擇上傳照片按鈕元素
+var uploadButton = document.getElementById("message_pic_btn");
 
-// 獲取上傳照片按鈕和預覽容器的元素
-var commodityPic = document.getElementById('commodity_pic');
-// console.log(commodityPic);
+// 選擇文件選擇器元素
+var fileInput = document.getElementById("message_pic");
 
-// 添加change事件監聽器
-commodityPic.addEventListener('change', function(e) {
-  // 遍歷選擇的檔案
-  for (var i = 0; i < e.target.files.length; i++) {
-    // 獲取當前檔案
-    var file = e.target.files[i];
+// 選擇 MESSAGE_IMAGE 元素
+var messageImage = document.querySelector(".MESSAGE_IMAGE");
 
-    // 創建檔案讀取器
-    var reader = new FileReader();
+// 選擇預覽圖片容器元素
+var previewImage = document.getElementById("preview_message_pic");
 
-    // 設置檔案讀取器的加載完成事件
-    reader.onload = function(e) {
-      // 創建圖像元素
-      var img = document.createElement('img');
+// 監聽上傳照片按鈕的點擊事件
+uploadButton.addEventListener("click", function () {
+  // 觸發文件選擇器點擊事件
+  fileInput.click();
+});
 
-      img.classList.add('PREVIEW_IMG');
+// 監聽文件選擇器的文件選擇事件
+fileInput.addEventListener("change", function () {
+  // 獲取選中的文件
+  var files = fileInput.files;
 
-      // 設置預覽圖像的src屬性為讀取到的檔案內容
-      img.src = e.target.result;
+  // 選擇第一個文件並創建檔案讀取器
+  var file = files[0];
+  var reader = new FileReader();
 
-      // 獲取下一個可用的預覽容器
-      var previewContainer = getNextPreviewContainer();
-      // console.log(previewContainer);
+  // 設置檔案讀取器的加載完成事件
+  reader.onload = function (e) {
+    // 創建圖像元素
+    var img = document.createElement('img');
+    img.classList.add('PREVIEW_IMG');
 
-      previewContainer.innerHTML = '';
+    // 設置預覽圖像的src屬性為讀取到的檔案內容
+    img.src = e.target.result;
 
-      previewContainer.appendChild(img);
+    // 清空預覽圖片容器
+    previewImage.innerHTML = '';
 
-      img.addEventListener('click', function() {
-        var parentDiv = this.parentElement;
-        console.log(parentDiv);
-        parentDiv.classList.remove('IMAGE_BOX');
-        // 刪除圖片和重置預覽容器
-        this.remove();
-        previewContainer.innerHTML = '<i class="bi bi-image"></i>';
-      });
-      
-    }
+    // 將圖像元素添加到預覽圖片容器中
+    previewImage.appendChild(img);
 
-    // 讀取檔案內容
-    reader.readAsDataURL(file);
-  }
+    // 添加 IMAGE_BOX class
+    messageImage.classList.add('IMAGE_BOX');
+
+    // 隱藏上傳照片按鈕
+    uploadButton.style.display = 'none';
+  };
+
+  // 讀取檔案內容
+  reader.readAsDataURL(file);
+  
+});
+
+// 點擊圖片時移除圖片並恢復預設狀態
+previewImage.addEventListener('click', function () {
+  // 清空預覽圖片容器
+  previewImage.innerHTML = '<i class="bi bi-image"></i>';
+
+  // 移除 IMAGE_BOX class
+  messageImage.classList.remove('IMAGE_BOX');
+  
+  // 重置文件選擇器
+  fileInput.value = '';
+  
+  // 顯示上傳照片按鈕
+  uploadButton.style.display = 'inline-block';
 });
