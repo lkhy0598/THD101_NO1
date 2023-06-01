@@ -1,21 +1,6 @@
 <?php
 
-// Tibame中心server
-// $db_host = "127.0.0.1";
-// $db_user = "tibamefe_since2021";
-// $db_pass = "vwRBSb.j&K#E";
-// $db_select = "tibamefe_thd101g1";
-//MySQL相關資訊在本地端，記得改成自己的密碼
-$db_host = "127.0.0.1";
-$db_user = "root";
-$db_pass = "password";
-$db_select = "mydb";
-
-//建立資料庫連線物件
-$dsn = "mysql:host=".$db_host.";dbname=".$db_select.";charset=utf8";
-
-//建立PDO物件，並放入指定的相關資料
-$pdo = new PDO($dsn, $db_user, $db_pass);
+include('conn.php');
 
 //---------------------------------------------------
 
@@ -49,7 +34,7 @@ $statement = $pdo->query($sql);
 if ($statement == null) {
  echo 'sucess';
 }else {
-       header ("location:./login.html");
+       header ("location:../login.html");
 }
 //抓出全部且依照順序封裝成一個二維陣列
 $data = $statement->fetchAll();

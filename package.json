@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.4.0",
     "gulp-sass": "^5.1.0",
     "jquey": "0.0.1-security",
     "sass": "^1.62.1",
