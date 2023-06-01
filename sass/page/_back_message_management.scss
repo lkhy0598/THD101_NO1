@@ -190,6 +190,25 @@
 
     }
 
+    .PREVIEW_IMG{
+        width: 100%;
+        height: 570px; 
+        object-fit: cover; 
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+     }
+
+     .IMAGE_BOX:hover::after{
+        content: url(../img/backend/message_bg.svg);
+        position: absolute;
+        width: 100%;
+        top: 175px;
+        left: 0;
+        pointer-events: none;
+    }
+
     .PIC_FILE_BOX {
         position: relative;
         display: block;
