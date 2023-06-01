@@ -164,7 +164,7 @@
                             <li>0988192839</li>
                             <li>2023/04/01</li>
                             <li><i class="bi bi-pencil RE_MEMBER_PROFILE"></i></li>
-                            <li><i class="bi bi-x-lg"></i></li>
+                            <li><i class="bi bi-x-lg DEL_MEMBER_BTN"></i></li>
                             <li><i class="bi bi-calendar-plus RESERVE_BTN"></i></li>
                         </ul>
                     </section>
@@ -222,7 +222,7 @@
                             <li>一般掛號</li>
                             <li>2023/04/01</li>
                             <li><i class="bi bi-pencil RE_PET_PROFILE"></i></li>
-                            <li><i class="bi bi-x-lg"></i></li>
+                            <li><i class="bi bi-x-lg DEL_PET_BTN"></i></li>
                         </ul>
                         <ul class="PET_PROFILE_CONTENT BACK_TABLE_CONTENT">
                             <li>0988192839</li>
@@ -230,7 +230,7 @@
                             <li>寵物溝通</li>
                             <li>2023/04/01</li>
                             <li><i class="bi bi-pencil RE_PET_PROFILE"></i></li>
-                            <li><i class="bi bi-x-lg"></i></li>
+                            <li><i class="bi bi-x-lg DEL_PET_BTN"></i></li>
                         </ul>
                     </section>
 
@@ -648,56 +648,65 @@
                 $('.BACK_ADD_NEW_MEMBER').show();
                 $('.BACK_MEMBER_PROFILE').hide();
                 event.preventDefault();
-            })
+            });
 
             // 修改紐
             $('.RE_MEMBER_PROFILE').click(function () {
                     $('.BACK_MODIFY_MEMBER').show();
                     $('.BACK_MEMBER_PROFILE').hide();
-            })
+            });
                 
             $('.RE_PET_PROFILE').click(function () {
                     $('.BACK_MODIFY_PET').show();
                     $('.BACK_MEMBER_PROFILE').hide();
-            })
+            });
 
             $('.MODIFY_MEMBER_BTN').click(function () {
                     $('.BACK_MEMBER_PROFILE').show();
                     $('.BACK_MODIFY_MEMBER').hide();
                     event.preventDefault();
-            })
+            });
                 
             $('.MODIFY_PET_BTN').click(function () {
                     $('.BACK_MEMBER_PROFILE').show();
                     $('.BACK_MODIFY_PET').hide();
                     event.preventDefault();
-            })
+            });
 
             $('.RESERVE_BTN').click(function () {
                 $('.RESERVE_BOX').css('display','block');
                 $('.MASK').show();
-            })
+            });
 
             $('.ESC_BTN').click(function(){
                 $('.RESERVE_BOX').css('display','none');
                 $('.MASK').hide();
-            })
+            });
 
             $('.MASK').click(function(){
                 $('.RESERVE_BOX').css('display','none');
                 $('.MASK').hide();
-            })
+            });
 
             $('.MASK').click(function(){
                 $('.RESERVE_BOX').css('display','none');
                 $('.MASK').hide();
-            })
+            });
 
             $('.ADD_RESERVE_BTN').click(function(){
                 $('.RESERVE_BOX').css('display','none');
                 $('.MASK').hide();
                 event.preventDefault();
-            })
+            });
+           
+            $('.DEL_MEMBER_BTN').click(function(){
+                $(this).closest('.MEMBER_PROFILE_CONTENT').remove();
+            });
+            $('.DEL_PET_BTN').click(function() {
+                $(this).closest('.PET_PROFILE_CONTENT').remove();
+            });
+                
+            
         });
     </script>
     <script src="./js/back_member_profile.js"></script>
