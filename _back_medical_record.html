@@ -159,7 +159,7 @@
                         <li>2023/04/01</li>
                         <li>一般掛號</li>
                         <li><i class="bi bi-pencil"></i></li>
-                        <li><i class="bi bi-x-lg"></i></li>
+                        <li><i class="bi bi-x-lg DEL_MEDICAL_BTN"></i></li>
                     </ul>
                     <ul class="MEDICAL_RECORD_CONTENT BACK_TABLE_CONTENT">
                         <li>0988192839</li>
@@ -167,7 +167,7 @@
                         <li>2023/04/05</li>
                         <li>預防針</li>
                         <li><i class="bi bi-pencil"></i></li>
-                        <li><i class="bi bi-x-lg"></i></li>
+                        <li><i class="bi bi-x-lg DEL_MEDICAL_BTN"></i></li>
                     </ul>
                     <ul class="MEDICAL_RECORD_CONTENT BACK_TABLE_CONTENT">
                         <li>0988192839</li>
@@ -175,7 +175,7 @@
                         <li>2023/04/01</li>
                         <li>寵物溝通</li>
                         <li><i class="bi bi-pencil"></i></li>
-                        <li><i class="bi bi-x-lg"></i></li>
+                        <li><i class="bi bi-x-lg DEL_MEDICAL_BTN"></i></li>
                     </ul>
                 </section>
                 <section>
@@ -276,24 +276,28 @@
                 $('.bi-pencil').click(function () {
                     $('.BACK_ADD_MEDICAL_RECORD').show();
                     $('.BACK_MEDICAL_RECORD').hide();
-                })
+                });
                 // 新增紐
                 $('.MEDICAL_RECORD_TABLE_BTN').click(function () {
                     $('.BACK_ADD_MEDICAL_RECORD').show();
                     $('.BACK_MEDICAL_RECORD').hide();
-                })
+                });
 
                 $('.ADD_MEDICAL_RECORD_BTN').click(function () {
                     $('.BACK_MEDICAL_RECORD').show();
                     $('.BACK_ADD_MEDICAL_RECORD').hide();
                     event.preventDefault();
-                })
+                });
                 
                 $('.REVISE_MEDICAL_RECORD_BTN').click(function () {
                     $('.BACK_MEDICAL_RECORD').show();
                     $('.BACK_ADD_MEDICAL_RECORD').hide();
                     event.preventDefault();
-                })
+                });
+
+                $('.DEL_MEDICAL_BTN').click(function(){
+                    $(this).closest('.MEDICAL_RECORD_CONTENT').remove();
+                });
             });
         </script>
         
