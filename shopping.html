@@ -37,7 +37,7 @@
     @@include('./layout/header.html')
     <!-- header end -->
 
-  <!-- =============== 頁首主視覺 =============== -->
+    <!-- =============== 頁首主視覺 =============== -->
     <section class="CAROUSEL">
         <div class="SHOPPING_MASTERVISION">
             <img src="./img/HEADER-TOP.png" alt="">
@@ -266,186 +266,21 @@
         <!-- ====================================商品列表P1================================================= -->
 
         <section class="SHOPPINGITEM WRAPPER">
-            <ul class="SHOPPINGITEM_UL">
-                <li class="SHOPPINGCARD COL-4 RWD-COL-6">
+            <ul class="SHOPPINGITEM_UL" id="SHOPPINGITEM_UL">
+                <li class="SHOPPINGCARD COL-4 RWD-COL-6" v-for="item in shoppingItems" :key="item.id">
                     <section class="SHOPPINGCARD_IMG">
                         <span>
                             <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
                             <p>加入購物車</p>
                         </span>
-                        <a href="./shopping_list.html" class="CARDLINK">
-                            <img src="./img/shopping_list/can/01/can_01_01.jpg" alt="">
+                        <a href="'shoping.hmtml?id=' + item.id" class="CARDLINK">
+                            <img :src="getImagesArray(item.IMG_SOURCE)[0]" :alt="item.PRODUCT_TITLE">
                         </a>
                     </section>
-                    <a href="./shopping_list.html" class="CARDLINK">
-                        <p class="SHOPPINGCARD_TITLE">耐吉斯 源野獵食客主食罐 犬用(全雞+鮭魚肉絲派佐薑黃) 85g</p>
+                    <a :href="'#'" class="CARDLINK">
+                        <p class="SHOPPINGCARD_TITLE">{{ item.PRODUCT_TITLE }}</p>
                     </a>
-                    <P class="SHOPPINGCARD_PRICE">$53</P>
-                </li>
-                <li class="SHOPPINGCARD COL-4 RWD-COL-6">
-                    <section class="SHOPPINGCARD_IMG">
-                        <span>
-                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
-                            <p>加入購物車</p>
-                        </span>
-                        <a href="#" class="CARDLINK">
-                            <img src="./img/shopping_list/can/02/can_02_01.jpg" alt="">
-                        </a>
-                    </section>
-                    <a href="#" class="CARDLINK">
-                        <p class="SHOPPINGCARD_TITLE">耐吉斯 源野獵食客主食罐 犬用(全雞+嫩羊肉絲派佐南瓜) 85g</p>
-                    </a>
-                    <P class="SHOPPINGCARD_PRICE">$53</P>
-                </li>
-                <li class="SHOPPINGCARD COL-4 RWD-COL-6">
-                    <section class="SHOPPINGCARD_IMG">
-                        <span>
-                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
-                            <p>加入購物車</p>
-                        </span>
-                        <a href="#" class="CARDLINK">
-                            <img src="./img/shopping_list/can/03/can_03_01.jpg" alt="">
-                        </a>
-                    </section>
-                    <a href="#" class="CARDLINK">
-                        <p class="SHOPPINGCARD_TITLE">耐吉斯 源野獵食客主食罐 犬用(全雞+嫩牛肉絲派佐綠貽貝) 85g</p>
-                    </a>
-                    <P class="SHOPPINGCARD_PRICE">$53</P>
-                </li>
-                <li class="SHOPPINGCARD COL-4 RWD-COL-6">
-                    <section class="SHOPPINGCARD_IMG">
-                        <span>
-                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
-                            <p>加入購物車</p>
-                        </span>
-                        <a href="#" class="CARDLINK">
-                            <img src="./img/shopping_list/can/04/can_04_01.jpg" alt="">
-                        </a>
-                    </section>
-                    <a href="#" class="CARDLINK">
-                        <p class="SHOPPINGCARD_TITLE">耐吉斯 源野獵食客主食罐 犬用(全雞+火雞肉絲派佐綠貽貝) 85g</p>
-                    </a>
-                    <P class="SHOPPINGCARD_PRICE">$53</P>
-                </li>
-                <li class="SHOPPINGCARD COL-4 RWD-COL-6">
-                    <section class="SHOPPINGCARD_IMG">
-                        <span>
-                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
-                            <p>加入購物車</p>
-                        </span>
-                        <a href="#" class="CARDLINK">
-                            <img src="./img/shopping_list/can/05/can_05_01.jpg" alt="">
-                        </a>
-                    </section>
-                    <a href="#" class="CARDLINK">
-                        <p class="SHOPPINGCARD_TITLE">MDARYN麥德琳 喵樂-肉食控主食罐(嫩雞鵪鶉) 80g</p>
-                    </a>
-                    <P class="SHOPPINGCARD_PRICE">$58</P>
-                </li>
-                <li class="SHOPPINGCARD COL-4 RWD-COL-6">
-                    <section class="SHOPPINGCARD_IMG">
-                        <span>
-                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
-                            <p>加入購物車</p>
-                        </span>
-                        <a href="#" class="CARDLINK">
-                            <img src="./img/shopping_list/can/06/can_06_01.jpg" alt="">
-                        </a>
-                    </section>
-                    <a href="#" class="CARDLINK">
-                        <p class="SHOPPINGCARD_TITLE">MDARYN麥德琳 喵樂-肉食控主食罐(嫩雞牛肉) 80g</p>
-                    </a>
-                    <P class="SHOPPINGCARD_PRICE">$58</P>
-                </li>
-                <li class="SHOPPINGCARD COL-4 RWD-COL-6">
-                    <section class="SHOPPINGCARD_IMG">
-                        <span>
-                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
-                            <p>加入購物車</p>
-                        </span>
-                        <a href="#" class="CARDLINK">
-                            <img src="./img/shopping_list/can/07/can_07_01.jpg" alt="">
-                        </a>
-                    </section>
-                    <a href="#" class="CARDLINK">
-                        <p class="SHOPPINGCARD_TITLE">MDARYN麥德琳 喵樂-肉食控主食罐(嫩雞鴨肉) 80g</p>
-                    </a>
-                    <P class="SHOPPINGCARD_PRICE">$58</P>
-                </li>
-                <li class="SHOPPINGCARD COL-4 RWD-COL-6">
-                    <section class="SHOPPINGCARD_IMG">
-                        <span>
-                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
-                            <p>加入購物車</p>
-                        </span>
-                        <a href="#" class="CARDLINK">
-                            <img src="./img/shopping_list/can/08/can_08_01.jpg" alt="">
-                        </a>
-                    </section>
-                    <a href="#" class="CARDLINK">
-                        <p class="SHOPPINGCARD_TITLE">MDARYN麥德琳 喵樂-肉食控主食罐(嫩雞鮪魚) 80g</p>
-                    </a>
-                    <P class="SHOPPINGCARD_PRICE">$58</P>
-                </li>
-                <li class="SHOPPINGCARD COL-4 RWD-COL-6">
-                    <section class="SHOPPINGCARD_IMG">
-                        <span>
-                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
-                            <p>加入購物車</p>
-                        </span>
-                        <a href="#" class="CARDLINK">
-                            <img src="./img/shopping_list/can/09/can_09_01.jpg" alt="">
-                        </a>
-                    </section>
-                    <a href="#" class="CARDLINK">
-                        <p class="SHOPPINGCARD_TITLE">MDARYN麥德琳 喵樂-肉食控主食罐(嫩雞鮭魚) 80g</p>
-                    </a>
-                    <P class="SHOPPINGCARD_PRICE">$58</P>
-                </li>
-                <li class="SHOPPINGCARD COL-4 RWD-COL-6">
-                    <section class="SHOPPINGCARD_IMG">
-                        <span>
-                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
-                            <p>加入購物車</p>
-                        </span>
-                        <a href="#" class="CARDLINK">
-                            <img src="./img/shopping_list/can/10/can_10_01.jpg" alt="">
-                        </a>
-                    </section>
-                    <a href="#" class="CARDLINK">
-                        <p class="SHOPPINGCARD_TITLE">MDARYN麥德琳 喵樂-肉食控主食罐(嫩雞旗魚) 80g</p>
-                    </a>
-                    <P class="SHOPPINGCARD_PRICE">$58</P>
-                </li>
-                <li class="SHOPPINGCARD COL-4 RWD-COL-6">
-                    <section class="SHOPPINGCARD_IMG">
-                        <span>
-                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
-                            <p>加入購物車</p>
-                        </span>
-                        <a href="#" class="CARDLINK">
-                            <img src="./img/shopping_list//dryfood/01/dryfood_01_01.jpg" alt="">
-                        </a>
-                    </section>
-                    <a href="#" class="CARDLINK">
-                        <p class="SHOPPINGCARD_TITLE">【SC星益生趣】有穀健康狗糧(鮭魚藜麥配方) 3.5磅/1.6kg</p>
-                    </a>
-                    <P class="SHOPPINGCARD_PRICE">$972</P>
-                </li>
-                <li class="SHOPPINGCARD COL-4 RWD-COL-6">
-                    <section class="SHOPPINGCARD_IMG">
-                        <span>
-                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
-                            <p>加入購物車</p>
-                        </span>
-                        <a href="#" class="CARDLINK">
-                            <img src="./img/shopping_list//dryfood/03/dryfood_03_01.jpg" alt="">
-                        </a>
-                    </section>
-                    <a href="#" class="CARDLINK">
-                        <p class="SHOPPINGCARD_TITLE">【SC星益生趣】無穀狗糧(野生白魚配方) 3.5磅/1.6kg</p>
-                    </a>
-                    <P class="SHOPPINGCARD_PRICE">$1080</P>
+                    <p class="SHOPPINGCARD_PRICE">${{ item.PRODUCT_PRICE }}</p>
                 </li>
             </ul>
         </section>
@@ -474,8 +309,9 @@
     <!-- footer -->
     @@include('./layout/footer.html')
     <!-- footer end -->
-  
 
+    <script src="./js/vendors/vue/vue.global.js"></script>
+    <script src="./js/shopping.js"></script>
     <script src="./js/top_btn.js"></script>
     <script src="./js/nav.js"></script>
     <script src="./js/user_popup.js"></script>
@@ -525,6 +361,7 @@
             }
         });
     </script>
+
 
 </body>
 
