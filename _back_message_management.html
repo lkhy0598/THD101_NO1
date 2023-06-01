@@ -199,6 +199,15 @@
 
                 <section class="ADD_MESSAGE">
 
+                    <section class="MESSAGE_IMAGE">
+                        <i class="bi bi-image"></i>
+                        <label for="message_pic" class=" PIC_FILE_BOX">
+                            <input type="button" id="commodity_pic_btn" value="上傳照片" class="BTN_BACK">
+                            <input name="message_pic" type=" file" id="message_pic" class=" PIC_FILE"
+                                accept="image/gif, image/jpeg, image/png" multiple />
+                        </label>
+                    </section>
+
                     <label for="message_title" class="INPUT">消息標題<br>
                         <input type="text" name="message_title" id="message_title">
                     </label>
@@ -206,8 +215,8 @@
                     <p>消息內容</p>
                     <div id="summernote" class="SUMMERNOTE"></div>
 
-                        <button class="BTN_BACK" type="submit">新增消息</button>
-                        <button class="BTN_BACK CANCEL" type="submit">取消</button>
+                    <button class="BTN_BACK" type="submit">新增消息</button>
+                    <button class="BTN_BACK CANCEL" type="submit">取消</button>
 
                 </section>
 

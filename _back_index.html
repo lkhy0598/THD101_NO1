@@ -253,6 +253,17 @@
 
     </script>
 
+    <script>
+        // 更新計數器元素的內容
+        function updateCounter() {
+            var selectedRoom = clinicRoom.value;
+            counter.textContent = counters[selectedRoom];
+            reservationCount.textContent = calculateReservationCount();
+        }
+
+        updateCounter()
+    </script>
+
 </body>
 
 </html>

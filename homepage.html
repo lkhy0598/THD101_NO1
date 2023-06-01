@@ -418,24 +418,20 @@
 
   <script>
 
-    // 检查本地存储中是否存在计数器值
     if (localStorage.getItem("counters")) {
-      // 如果存在，从本地存储中读取计数器值
+
       var counters = JSON.parse(localStorage.getItem("counters"));
 
-      // 更新第一个计数器的值
       var clinicRoomOne = document.getElementById("clinic_room_one");
       clinicRoomOne.innerHTML = counters[1];
 
-      // 更新第二个计数器的值
       var clinicRoomTwo = document.getElementById("clinic_room_two");
       clinicRoomTwo.innerHTML = counters[2];
 
-      // 更新第三个计数器的值
       var clinicRoomThree = document.getElementById("clinic_room_three");
       clinicRoomThree.innerHTML = counters[3];
-    }
 
+    }
 
   </script>
 
