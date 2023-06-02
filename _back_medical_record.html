@@ -108,23 +108,23 @@
 
                 <h2>病歷紀錄管理</h2>
 
-                <section class="MEDICAL_RECORD_SEARCH">
-                    <form action="">
+                <section class="MEDICAL_RECORD_SEARCH" id="app">
+                    <form @submit.prevent="searchMedicalRecords">
 
                         <ul>
                             <li>
                                 <label for="phone" class="INPUT">手機號碼<br>
-                                    <input type="text" name="phone" id="phone">
+                                    <input type="text" v-model="searchForm.phone" name="phone" id="phone">
                                 </label>
                             </li>
                             <li>
                                 <label for="pet_name" class="INPUT">寵物姓名<br>
-                                    <input type="text" name="pet_name" id="pet_name">
+                                    <input type="text" v-model="searchForm.petName" name="pet_name" id="pet_name">
                                 </label>
                             </li>
                             <li>
                                 <label for="consultation_date" class="INPUT">看診日期<br>
-                                    <input type="date" name="consultation_date" id="consultation_date">
+                                    <input type="date" v-model="searchForm.startDate" name="consultation_date" id="consultation_date">
                                 </label>
                             </li>
                             <li>
@@ -132,7 +132,7 @@
                             </li>
                             <li>
                                 <label for="consultation_date" class="INPUT">
-                                    <input type="date" name="consultation_date" id="consultation_date">
+                                    <input type="date" v-model="searchForm.endDate" name="consultation_date" id="consultation_date">
                                 </label>
                             </li>
                             <li>
@@ -153,33 +153,17 @@
                         <li>刪除</li>
                     </ul>
 
-                    <ul class="MEDICAL_RECORD_CONTENT BACK_TABLE_CONTENT">
-                        <li>0988192839</li>
-                        <li>范植鑫</li>
-                        <li>2023/04/01</li>
-                        <li>一般掛號</li>
-                        <li><i class="bi bi-pencil"></i></li>
-                        <li><i class="bi bi-x-lg DEL_MEDICAL_BTN"></i></li>
-                    </ul>
-                    <ul class="MEDICAL_RECORD_CONTENT BACK_TABLE_CONTENT">
-                        <li>0988192839</li>
-                        <li>范植鑫</li>
-                        <li>2023/04/05</li>
-                        <li>預防針</li>
-                        <li><i class="bi bi-pencil"></i></li>
-                        <li><i class="bi bi-x-lg DEL_MEDICAL_BTN"></i></li>
-                    </ul>
-                    <ul class="MEDICAL_RECORD_CONTENT BACK_TABLE_CONTENT">
-                        <li>0988192839</li>
-                        <li>范植鑫</li>
-                        <li>2023/04/01</li>
-                        <li>寵物溝通</li>
-                        <li><i class="bi bi-pencil"></i></li>
-                        <li><i class="bi bi-x-lg DEL_MEDICAL_BTN"></i></li>
+                    <ul class="MEDICAL_RECORD_CONTENT BACK_TABLE_CONTENT" v-for="(record, index) in medicalRecords" :key="index">
+                        <li>{{ record.phone }}</li>
+                        <li>{{ record.petName }}</li>
+                        <li>{{ record.consultationDate }}</li>
+                        <li>{{ record.consultationContent }}</li>
+                        <li><i class="bi bi-pencil" @click="reviseMedicalRecord"></i></li>
+                        <li><i class="bi bi-x-lg DEL_MEDICAL_BTN" @click="delMedicalRecord"></i></li>
                     </ul>
                 </section>
                 <section>
-                    <button class="BTN_BACK MEDICAL_RECORD_TABLE_BTN" type="submit">新增病歷</button>   
+                    <button class="BTN_BACK MEDICAL_RECORD_TABLE_BTN" @click="addMedicalRecord" type="submit">新增病歷</button>   
                 </section>
             </section>
 
@@ -269,37 +253,69 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="./js/back_call_system.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
 
-        <script>
-            $(document).ready(function () {
-                // 修改紐
-                $('.bi-pencil').click(function () {
-                    $('.BACK_ADD_MEDICAL_RECORD').show();
-                    $('.BACK_MEDICAL_RECORD').hide();
-                });
-                // 新增紐
-                $('.MEDICAL_RECORD_TABLE_BTN').click(function () {
-                    $('.BACK_ADD_MEDICAL_RECORD').show();
-                    $('.BACK_MEDICAL_RECORD').hide();
-                });
+    <script>
+        const app = Vue.createApp({
+            searchForm: {
+                phone: '',
+                petName: '',
+                startDate: '',
+                endDate: '',
+            },
+            methods: {
+                searchMedicalRecords() {
+                // 根据搜索条件执行病历搜索逻辑
+                // 更新this.medicalRecords数组，以显示搜索结果
+                },
+                reviseMedicalRecord(){
 
-                $('.ADD_MEDICAL_RECORD_BTN').click(function () {
-                    $('.BACK_MEDICAL_RECORD').show();
-                    $('.BACK_ADD_MEDICAL_RECORD').hide();
-                    event.preventDefault();
-                });
-                
-                $('.REVISE_MEDICAL_RECORD_BTN').click(function () {
-                    $('.BACK_MEDICAL_RECORD').show();
-                    $('.BACK_ADD_MEDICAL_RECORD').hide();
-                    event.preventDefault();
-                });
+                },
+                delMedicalRecord(){
 
-                $('.DEL_MEDICAL_BTN').click(function(){
-                    $(this).closest('.MEDICAL_RECORD_CONTENT').remove();
-                });
+                },
+                addMedicalRecord() {
+                    
+                },
+            }    
+        })
+
+
+    </script>
+
+
+    <script>
+
+        $(document).ready(function () {
+            // 修改紐
+            $('.bi-pencil').click(function () {
+                $('.BACK_ADD_MEDICAL_RECORD').show();
+                 $('.BACK_MEDICAL_RECORD').hide();
             });
-        </script>
+            // 新增紐
+            $('.MEDICAL_RECORD_TABLE_BTN').click(function () {
+                $('.BACK_ADD_MEDICAL_RECORD').show();
+                $('.BACK_MEDICAL_RECORD').hide();
+            });
+
+            $('.ADD_MEDICAL_RECORD_BTN').click(function () {
+                $('.BACK_MEDICAL_RECORD').show();
+                $('.BACK_ADD_MEDICAL_RECORD').hide();
+                event.preventDefault();
+            });
+                
+            $('.REVISE_MEDICAL_RECORD_BTN').click(function () {
+                $('.BACK_MEDICAL_RECORD').show();
+                $('.BACK_ADD_MEDICAL_RECORD').hide();
+                event.preventDefault();
+            });
+
+            $('.DEL_MEDICAL_BTN').click(function(){
+                $(this).closest('.MEDICAL_RECORD_CONTENT').remove();
+            });
+        });
+    </script>
         
 </body>
 
