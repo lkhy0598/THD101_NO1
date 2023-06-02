@@ -1,4 +1,20 @@
 $(document).ready(function () {
+    
+    // 密碼關閉隱藏功能
+    $(".SHOWPASS").click(function () {
+        var passwordField = $("#PASSWORD");
+        var icon = $(this).find("i");
+        var fieldType = passwordField.attr("type");
+
+        if (fieldType === "password") {
+            passwordField.attr("type", "text");
+            icon.removeClass("bi-eye-fill").addClass("bi-eye-slash-fill");
+        } else {
+            passwordField.attr("type", "password");
+            icon.removeClass("bi-eye-slash-fill").addClass("bi-eye-fill");
+        }
+    });
+
     // ====== 彈跳視窗函式設定 ======
     // 初始化頁籤及內容的函式
     function POPUP_READY() {
@@ -19,7 +35,7 @@ $(document).ready(function () {
     // ====== 彈跳視窗控制 ======
     // 打開彈跳視窗
     $('.LOGIN').click(function () {
-        console.log("aaaa");
+        // console.log("aaaa");
         // 載入登入頁
         POPUP_READY();
         LOGIN_SIGNUP_TABS_READY();
@@ -118,7 +134,7 @@ $(document).ready(function () {
             e.preventDefault();
             $('.POPUP_TABS_CONTENT div').removeClass('POPUPACTIVE');
             $('#popup_changepass_succ').addClass('POPUPACTIVE');
-            
+
             // 延遲三秒後跳轉
             setTimeout(function () {
                 // 載入登入頁
