@@ -90,7 +90,7 @@ const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 
 function ugjs() {
-    return src('js/*.js')
+    return src('./js/**/*.js')
         // .pipe(uglify())
         // .pipe(rename({
         //     extname: '.min.js'
@@ -149,4 +149,4 @@ exports.default = browser;
 exports.dev = series(parallel(html, sassstyle, img_orgin, ugjs), browser)
 
 //上線用
-exports.online = series(clear, parallel(html, sassstyle, img, babel5))
+exports.online = series(clear, parallel(html, sassstyle, img, ugjs,babel5))
