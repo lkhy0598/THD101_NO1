@@ -1,5 +1,5 @@
 <?php
-     include("Conn.php");
+     include("conn.php");
      //---------------------------------------------------
      $USERNAME = htmlspecialchars($_POST['USERNAME']);
      $PHONENO = htmlentities($_POST['PHONENO']);
@@ -58,3 +58,4 @@
                echo "請檢查全部欄位是否都正確輸入";
           }
      };
+?>
