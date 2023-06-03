@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <style>
+        .SHOWPASS i:nth-child(2) {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    加入會員：</br>
+    <!-- 只能輸入中文和英文 -->
+    姓名: <input type="text" id="USERNAME" name="USERNAME" placeholder="請輸入姓名"
+        onkeyup="value=value.replace(/[^a-zA-Z\u4E00-\u9FFF]/g, '')" /></br>
+    <!-- 只能輸入數字 最多十位數 -->
+    手機: <input type="tel" id="PHONENO" name="PHONENO" placeholder="請輸入電話"
+        onkeyup="this.value=this.value.replace(/\D/g,'')" maxlength="10" /></br>
+    <!-- 只能英文和數字和'@'和'.' -->
+    信箱: <input type="email" id="EMAIL" name="EMAIL" placeholder="請輸入信箱"
+        onkeyup="value=value.replace(/[^a-zA-Z0-9@.]/g, '')" /></br>
+    <!-- 只能英文和數字 -->
+    密碼: <input type="password" id="PASSWORD" name="PASSWORD" placeholder="請輸入密碼"
+        onkeyup="value=value.replace(/[^a-zA-Z0-9]/g, '')" maxlength="10"/>
+
+    <button class="SHOWPASS">
+        <i class="bi bi-eye-fill"></i>
+        <i class="bi bi-eye-slash-fill"></i>
+    </button>
+
+    </br>
+
+    <input type="submit" id="send-btn" value="送出" onclick="joinSub()" />
+    <p>註冊結果: <br>
+        <span id="result"></span>
+    </p>
+
+    <input type="button" value="列出所有會員" onclick="AllMemberSub()" style="margin-top: 100px;">
+    <input id="clear-btn" type="button" value="清空會員列表">
+    <p>查詢結果: <br>
+        <span id="result2"></span>
+    </p>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="./js/Join.js"></script>
+</body>
+
+</html>
