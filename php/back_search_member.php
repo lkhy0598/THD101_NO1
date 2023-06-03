@@ -36,6 +36,23 @@ if($name == '' ){
    echo json_encode($data);
 }
 
+if($phone != '' && $name != ''){
+   $sql = "select * FROM MEMBER where PHONENO like ? or NAME like ?";
+   $statement = $pdo->prepare($sql);
+
+   $statement->bindValue(1,"%".$phone."%");
+
+   $statement->bindValue(2,"%".$name."%");
+
+   $statement ->execute();
+
+   $data = $statement->fetchAll();
+
+   header('Content-Type: application/json');
+   echo json_encode($data);
+
+}
+
 
 
 ?>

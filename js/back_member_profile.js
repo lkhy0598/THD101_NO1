@@ -1,11 +1,24 @@
+// 新增會員及寵物
+function doAddMember(){
+
+    $('.BACK_ADD_NEW_MEMBER').show();
+    $('.BACK_MEMBER_PROFILE').hide();
+    preventDefault();
+
+}
+// 會員搜尋
 function dosearch(){
 
     var phone = $("#phone").val();
     var name = $("#name").val();
 
+    if (phone === "" && name === "") {
+        // 若輸入欄位為空，不執行搜尋操作
+        return;
+    }
     $.ajax({            
         method: "POST",
-        url: "http://localhost/THD101_NO1/php/back_new_member.php",
+        url: "http://localhost/THD101_NO1/php/back_search_member.php",
         data:{
             phone: phone, 
             name: name
@@ -24,19 +37,55 @@ function dosearch(){
                     "<li>" + row.NAME +"</li>" +
                     "<li>" + row.PHONENO + "</li>" +
                     "<li>" + row.CREATE_DATE + "</li>" +
-                    "<li>" + "<i class='bi bi-pencil RE_MEMBER_PROFILE'>" + "</i>" + "</li>" +
-                    "<li>" + "<i class='bi bi-x-lg DEL_MEMBER_BTN'>" + "</i>" + "</li>" +
-                    "<li>" + "<i class='bi bi-calendar-plus RESERVE_BTN'>" + "</i>" + "</li>" 
+                    "<li>" + "<i class='bi bi-pencil RE_MEMBER_PROFILE' onclick='doReviseMember()' >" + "</i>" + "</li>" +
+                    "<li>" + "<i class='bi bi-x-lg DEL_MEMBER_BTN' onclick='doDelMember()'>" + "</i>" + "</li>" +
+                    "<li>" + "<i class='bi bi-calendar-plus RESERVE_BTN' onclick='doReserve()'>" + "</i>" + "</li>" 
                     + "</ul>"
                 );
 
-                });
+            });
+
+
         },
         error: function(exception) {
             alert("發生錯誤: " + exception.status);
         }
     });
 }
+// 會員修改
+function doReviseMember(){
+    $('.BACK_MODIFY_MEMBER').show();
+    $('.BACK_MEMBER_PROFILE').hide();
+}
+// 會員刪除
+function doDelMember(){
+
+}
+// 會員新增預約
+function doReserve(){
+    $('.RESERVE_BOX').css('display','block');
+    $('.MASK').show();
+
+    $('.ESC_BTN').click(function(){
+        $('.RESERVE_BOX').css('display','none');
+        $('.MASK').hide();
+    });
+
+    $('.MASK').click(function(){
+        $('.RESERVE_BOX').css('display','none');
+        $('.MASK').hide();
+    });
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -69,7 +118,6 @@ memberPic.addEventListener('change', function(e) {
 });
 
 // 新增寵物照片
-
 var petPic = document.getElementById('pet_pic');
 var previewPetPic = document.getElementById('preview_pet_pic');
 petPic.addEventListener('change',function (e) {
@@ -88,7 +136,6 @@ petPic.addEventListener('change',function (e) {
 });
 
 // 修改會員照片
-
 var memberPicRevise = document.getElementById('member_pic_revise');
 var previewMemberPicRevise = document.getElementById('preview_member_pic_revise');
 memberPicRevise.addEventListener('change',function (e) {
@@ -107,7 +154,6 @@ memberPicRevise.addEventListener('change',function (e) {
 });
 
 // 修改寵物照片
-
 var petPicRevise = document.getElementById('pet_pic_revise');
 var previewPetPicRevise = document.getElementById('preview_pet_pic_revise');
 petPicRevise.addEventListener('change',function (e) {
