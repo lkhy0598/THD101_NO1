@@ -104,11 +104,11 @@
         <main class="BACK_MAIN_CONTENT_RIGHT">
 
             <!-- 病歷紀錄管理區塊 "會更動區塊" -->
-            <section class="BACK_MEDICAL_RECORD">
+            <section class="BACK_MEDICAL_RECORD" >
 
                 <h2>病歷紀錄管理</h2>
 
-                <section class="MEDICAL_RECORD_SEARCH" id="app">
+                <section class="MEDICAL_RECORD_SEARCH" >
                     <form @submit.prevent="searchMedicalRecords">
 
                         <ul>
@@ -143,8 +143,8 @@
                     </form>
                 </section>
 
-                <section class="MEDICAL_RECORD_TABLE_ALL">
-                    <ul class="MEDICAL_RECORD_TITLE BACK_TABLE_TITLE">
+                <section class="MEDICAL_RECORD_TABLE_ALL" id="MEDICAL_RECORD_SEARCH">
+                    <ul class="MEDICAL_RECORD_TITLE BACK_TABLE_TITLE" id="MEDICAL_RECORD_SEARCH">
                         <li>手機號碼</li>
                         <li>寵物姓名</li>
                         <li>看診日期</li>
@@ -168,7 +168,7 @@
             </section>
 
             <!-- 新增病歷區塊 "會更動區塊" -->
-            <section class="BACK_ADD_MEDICAL_RECORD">
+            <section class="BACK_ADD_MEDICAL_RECORD" v-show="showAddMedical">
 
                 <h2>新增 / 修改病歷</h2>
 
@@ -228,7 +228,7 @@
 
                                     <!-- 原按鈕隱藏 -->
                                     <input type="file" name="file" class="FILE"
-                                        onchange="document.getElementById('textfield').value=this.value">
+                                        onchange="document.getElementById('textfield').value=this.value" @change="updateFileName">
                                 </label>
 
                             </li>
@@ -240,8 +240,8 @@
                             </li>
                         </ul>
                         <section class="BTN_BOX">
-                            <button class="BTN_BACK REVISE_MEDICAL_RECORD_BTN" type="submit">修改病歷</button>
-                            <button class="BTN_BACK ADD_MEDICAL_RECORD_BTN" type="submit">新增病歷</button>
+                            <button class="BTN_BACK REVISE_MEDICAL_RECORD_BTN" type="submit" @click="reviseMedicalRecord">修改病歷</button>
+                            <button class="BTN_BACK ADD_MEDICAL_RECORD_BTN" type="submit" @click="addMedicalRecord">新增病歷</button>
                         </section>
 
                     </form>
@@ -250,36 +250,61 @@
 
         </main>
     </section>
-    
+    <script src="./js/vendors/vue/vue.global.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="./js/back_call_system.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
 
     <script>
         const app = Vue.createApp({
-            searchForm: {
-                phone: '',
-                petName: '',
-                startDate: '',
-                endDate: '',
+            data() {
+                return {
+                    showAddMedical: false,
+                    
+                    searchForm: {
+                        phone: '',
+                        petName: '',
+                        startDate: null,
+                        endDate: null
+                    },
+                    medicalRecords: [] // Assuming you have data for medical records
+                };
             },
             methods: {
                 searchMedicalRecords() {
-                // 根据搜索条件执行病历搜索逻辑
-                // 更新this.medicalRecords数组，以显示搜索结果
+                    $.ajax({
+                        url: 'http://localhost/THD101_NO1/php/back_medical_record.php',
+                        type: 'POST',
+                        dataType: 'json',
+                        success: response => {
+                            console.log(response);
+                            this.medicalRecords = response;
+                        },
+                        error: (xhr, status, error) => {
+                            console.error(error);
+                        }
+                    });
                 },
-                reviseMedicalRecord(){
-
-                },
-                delMedicalRecord(){
-
-                },
-                addMedicalRecord() {
-                    
-                },
-            }    
+                // addMedicalRecord() {
+                //     // this.showAddMedical = true;
+                //     $('.BACK_ADD_MEDICAL_RECORD').show();
+                //     $('.BACK_MEDICAL_RECORD').hide();
+                // },
+                // reviseMedicalRecord() {
+                //     this.showAddMedical = true;
+                // },
+                // delMedicalRecord(index) {
+                //     this.medicalRecords.splice(index, 1);
+                // },
+                // updateFileName(event) {
+                //     const input = event.target;
+                //     const fileName = input.value.split('\\').pop();
+                //     // Perform any additional logic with the selected file name
+                // }
+            }
         })
+
+        app.mount('#MEDICAL_RECORD_SEARCH');
 
 
     </script>
@@ -291,7 +316,7 @@
             // 修改紐
             $('.bi-pencil').click(function () {
                 $('.BACK_ADD_MEDICAL_RECORD').show();
-                 $('.BACK_MEDICAL_RECORD').hide();
+                $('.BACK_MEDICAL_RECORD').hide();
             });
             // 新增紐
             $('.MEDICAL_RECORD_TABLE_BTN').click(function () {

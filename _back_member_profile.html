@@ -124,8 +124,6 @@
 
                     <section class="MEMBER_PROFILE_SEARCH">
 
-                        <form action="">
-
                             <ul>
                                 <li>
                                     <label for="phone" class="INPUT">手機號碼<br>
@@ -141,16 +139,15 @@
                                     </label>
                                 </li>
                                 <li>
-                                    <button class="BTN_BACK" type="submit">搜尋會員</button>
+                                    <button class="BTN_BACK" type="submit" onclick="dosearch()">搜尋會員</button>
                                 </li>
                             </ul>
 
-                        </form>
                     </section>
                     <!-- 會員管理搜尋結果 -->
                     <section class="MEMBER_PROFILE_TABLE">
 
-                        <ul class="MEMBER_PROFILE_TITLE BACK_TABLE_TITLE">
+                        <ul class="MEMBER_PROFILE_TITLE BACK_TABLE_TITLE" >
                             <li>姓名</li>
                             <li>手機號碼</li>
                             <li>加入日期</li>
@@ -159,14 +156,8 @@
                             <li>新增預約</li>
                         </ul>
 
-                        <ul class="MEMBER_PROFILE_CONTENT BACK_TABLE_CONTENT">
-                            <li>范植鑫</li>
-                            <li>0988192839</li>
-                            <li>2023/04/01</li>
-                            <li><i class="bi bi-pencil RE_MEMBER_PROFILE"></i></li>
-                            <li><i class="bi bi-x-lg DEL_MEMBER_BTN"></i></li>
-                            <li><i class="bi bi-calendar-plus RESERVE_BTN"></i></li>
-                        </ul>
+                        <div id="result"></div>
+                       
                     </section>
 
                 </section>
@@ -638,8 +629,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="./js/back_call_system.js"></script>
+    <script src="./js/back_member_profile.js"></script>
 
     <script>
+
         $(document).ready(function () {
 
             $('.BACK_ADD_NEW_MEMBER').hide();
@@ -709,7 +702,7 @@
             
         });
     </script>
-    <script src="./js/back_member_profile.js"></script>
+
     
 
 </body>

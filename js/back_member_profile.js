@@ -1,4 +1,42 @@
+function dosearch(){
 
+    var phone = $("#phone").val();
+    var name = $("#name").val();
+
+    $.ajax({            
+        method: "POST",
+        url: "http://localhost/THD101_NO1/php/back_new_member.php",
+        data:{
+            phone: phone, 
+            name: name
+        },            
+        dataType: "json",
+        
+        success: function (response) {
+            // console.log(response);
+            // 更新html內容前先清空原有資料
+            $("#result").html("");
+            // 更新html內容(透過jQuery跑迴圈取值)
+            $.each(response, function(index, row) {
+
+                $("#result").append(
+                    "<ul class='MEMBER_PROFILE_CONTENT BACK_TABLE_CONTENT' >" + 
+                    "<li>" + row.NAME +"</li>" +
+                    "<li>" + row.PHONENO + "</li>" +
+                    "<li>" + row.CREATE_DATE + "</li>" +
+                    "<li>" + "<i class='bi bi-pencil RE_MEMBER_PROFILE'>" + "</i>" + "</li>" +
+                    "<li>" + "<i class='bi bi-x-lg DEL_MEMBER_BTN'>" + "</i>" + "</li>" +
+                    "<li>" + "<i class='bi bi-calendar-plus RESERVE_BTN'>" + "</i>" + "</li>" 
+                    + "</ul>"
+                );
+
+                });
+        },
+        error: function(exception) {
+            alert("發生錯誤: " + exception.status);
+        }
+    });
+}
 
 
 
