@@ -1,0 +1,158 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <style>
+        .SHOWPASS i:nth-child(2) {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    加入會員：</br>
+    <!-- 只能輸入中文和英文 -->
+    姓名: <input type="text" id="USERNAME" name="USERNAME" placeholder="請輸入姓名"
+        onkeyup="value=value.replace(/[^a-zA-Z\u4E00-\u9FFF]/g, '')" /></br>
+    <!-- 只能輸入數字 最多十位數 -->
+    手機: <input type="tel" id="PHONENO" name="PHONENO" placeholder="請輸入電話"
+        onkeyup="this.value=this.value.replace(/\D/g,'')" maxlength="10" /></br>
+    <!-- 只能英文和數字和'@'和'.' -->
+    信箱: <input type="email" id="EMAIL" name="EMAIL" placeholder="請輸入信箱"
+        onkeyup="value=value.replace(/[^a-zA-Z0-9@.]/g, '')" /></br>
+    <!-- 只能英文和數字 -->
+    密碼: <input type="password" id="PASSWORD" name="PASSWORD" placeholder="請輸入密碼"
+        onkeyup="value=value.replace(/[^a-zA-Z0-9]/g, '')" maxlength="10"/>
+
+    <button class="SHOWPASS">
+        <i class="bi bi-eye-fill"></i>
+        <i class="bi bi-eye-slash-fill"></i>
+    </button>
+
+    </br>
+
+    <input type="submit" id="send-btn" value="送出" onclick="joinSub()" />
+    <p>註冊結果: <br>
+        <span id="result"></span>
+    </p>
+
+    <input type="button" value="列出所有會員" onclick="AllMemberSub()" style="margin-top: 100px;">
+    <input id="clear-btn" type="button" value="清空會員列表">
+    <p>查詢結果: <br>
+        <span id="result2"></span>
+    </p>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        // 密碼關閉隱藏功能
+        $(".SHOWPASS").click(function () {
+            var passwordField = $("#PASSWORD");
+            var icon = $(this).find("i");
+            var fieldType = passwordField.attr("type");
+
+            if (fieldType === "password") {
+                passwordField.attr("type", "text");
+                icon.removeClass("bi-eye-fill").addClass("bi-eye-slash-fill");
+            } else {
+                passwordField.attr("type", "password");
+                icon.removeClass("bi-eye-slash-fill").addClass("bi-eye-fill");
+            }
+        });
+
+        // 加入會員功能
+        function joinSub() {
+            let usn = $('#USERNAME').val();
+            let pho = $('#PHONENO').val();
+            let eml = $('#EMAIL').val();
+            let psw = $('#PASSWORD').val();
+
+            if (usn === '' && pho === '' && eml === '' && psw === '') {
+                $("#result").html("");
+                $("#result").html("註冊失敗，欄位不得為空");
+            } else if (usn === '') {
+                $("#result").html("");
+                $("#result").html("註冊失敗，請填寫姓名");
+            } else if (pho === '') {
+                $("#result").html("");
+                $("#result").html("註冊失敗，請填寫信箱");
+            } else if (eml === '') {
+                $("#result").html("");
+                $("#result").html("註冊失敗，請填寫電話");
+            } else if (psw === '') {
+                $("#result").html("");
+                $("#result").html("註冊失敗，請填寫密碼");
+            } else if (usn !== '' && pho !== '' && eml !== '' && psw !== '') {
+                $.ajax({
+                    method: "POST",
+                    url: "Join.php",
+                    data: {
+                        USERNAME: usn,
+                        PHONENO: pho,
+                        EMAIL: eml,
+                        PASSWORD: psw
+                    },
+                    dataType: "text",
+                    success: function (response) {
+                        //更新html內容
+                        $("#result").html("");
+                        $("#result").html(response);
+                    },
+                    error: function (exception) {
+                        alert("發生錯誤: " + exception.status);
+                    }
+                });
+            }
+
+        };
+
+        // 列出會員列表
+        function AllMemberSub() {
+            $.ajax({
+                method: "post",
+                url: "Select.php",
+
+                dataType: "json",
+                success: function (response) {
+                    //更新html內容前先清空原有資料
+                    $("#result2").html("");
+
+                    $.each(response, function (index, row) {
+                        $("#result2").append(row.NAME + "/" + row.PHONENO + "/" + row.PASSWORD + "/" + row.CREATE_DATE + "<br/>");
+                    });
+                },
+                error: function (exception) {
+                    alert("發生錯誤: " + exception.status);
+                }
+            })
+        };
+        // 清空會員列表
+        $("#clear-btn").click(function (e) {
+            e.preventDefault();
+            $("#result2").html("");
+        });
+
+        // 註冊結果若為空做出相對應的字
+        $("#send-btn").click(function (e) {
+            var acc = $("#account").val();
+            var psw = $("#password").val();
+
+            if (acc === '' && psw === '') {
+                e.preventDefault();
+                alert('帳號密碼不得為空！');
+            } else if (acc === '') {
+                e.preventDefault();
+                alert('請輸入帳號！');
+            } else if (psw === '') {
+                e.preventDefault();
+                alert('請輸入密碼！');
+            }
+        });
+    </script>
+</body>
+
+</html>
