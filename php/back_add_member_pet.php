@@ -24,7 +24,6 @@ if(move_uploaded_file($filePath_Temp, $filePath)){
    $newmember_phone = $_POST['newmember_phone'];
    $newmember_email = $_POST['newmember_email'];
    $newmember_address = $_POST['newmember_address'];
-
     
     //執行
    $statement = $pdo->prepare($sql);
@@ -36,8 +35,6 @@ if(move_uploaded_file($filePath_Temp, $filePath)){
    $statement->bindValue(6 , $_FILES["member_pic"]["name"]);
    $statement->execute();
 
-   
-
     //導頁                        
    echo "新增成功!";
 
@@ -46,6 +43,5 @@ if(move_uploaded_file($filePath_Temp, $filePath)){
       echo "拷貝/移動上傳圖片失敗!";      
 
   }
-
 
 ?>
