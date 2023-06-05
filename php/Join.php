@@ -1,10 +1,18 @@
 <?php
      include("conn.php");
      //---------------------------------------------------
-     $USERNAME = htmlspecialchars($_POST['USERNAME']);
-     $PHONENO = htmlentities($_POST['PHONENO']);
-     $EMAIL = htmlspecialchars($_POST['EMAIL']);
+     // ini_set("display_errors", "On");
+     
+     $USERNAME = htmlentities($_POST['USERNAME']);
      $PASSWORD = htmlentities($_POST['PASSWORD']);
+     $PHONENO = htmlentities($_POST['PHONENO']);
+     $EMAIL = htmlentities($_POST['PASSWORD']);
+
+
+     // $USERNAME = htmlspecialchars($_POST['USERNAME']);
+     // $PHONENO = htmlentities($_POST['PHONENO']);
+     // $EMAIL = htmlspecialchars($_POST['EMAIL']);
+     // $PASSWORD = htmlentities($_POST['PASSWORD']);
 
      // 建立SQL語法 ============================
      // 確認帳號是否重複的語法       
@@ -52,7 +60,7 @@
                echo "您好！" . $USERNAME . "<br/>";
                echo "您註冊的電話為" . $PHONENO . "<br/>";
                echo "您註冊的信箱為" . $EMAIL . "<br/>";
-               echo "歡迎使用下方查詢功能來查詢所有會員資料<br/>";
+               // echo "歡迎使用下方查詢功能來查詢所有會員資料<br/>";
           } else {
                echo "新增失敗！<br/>";
                echo "請檢查全部欄位是否都正確輸入";

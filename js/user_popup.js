@@ -1,149 +1,297 @@
-$(document).ready(function () {
-    
-    // 密碼關閉隱藏功能
-    $(".SHOWPASS").click(function () {
-        var passwordField = $("#PASSWORD");
-        var icon = $(this).find("i");
-        var fieldType = passwordField.attr("type");
+// $(document).ready(function () {
+// =================== 前端版面操控功能 ===================
 
-        if (fieldType === "password") {
-            passwordField.attr("type", "text");
-            icon.removeClass("bi-eye-fill").addClass("bi-eye-slash-fill");
-        } else {
-            passwordField.attr("type", "password");
-            icon.removeClass("bi-eye-slash-fill").addClass("bi-eye-fill");
-        }
-    });
+// ====== 密碼關閉隱藏功能 ======
+$(".SHOWPASS").click(function () {
+    var passwordField = $(this).siblings(".PASSWORD");
+    var icon = $(this).find("i");
+    var fieldType = passwordField.attr("type");
 
-    // ====== 彈跳視窗函式設定 ======
-    // 初始化頁籤及內容的函式
-    function POPUP_READY() {
-        $('.POPUP_NAVS li').removeClass('TAB_ACTIVE');
-        $('.POPUP_TABS_CONTENT div').removeClass('POPUPACTIVE')
-    };
-    // 登入和註冊的頁籤初始化
-    function LOGIN_SIGNUP_TABS_READY() {
-        $('.POPUP_NAVS li').removeClass('CLOSETABS');
-        $('.FORGETTABS, .CHANGETABS').addClass('CLOSETABS');
-    };
-    // 忘記及修改密碼的頁籤初始化
-    function PASSWORD_TABS_READY() {
-        $('.POPUP_NAVS li').addClass('CLOSETABS');
-        $('.FORGETTABS, .CHANGETABS').removeClass('CLOSETABS');
-    };
-
-    // ====== 彈跳視窗控制 ======
-    // 打開彈跳視窗
-    $('.LOGIN').click(function () {
-        // console.log("aaaa");
-        // 載入登入頁
-        POPUP_READY();
-        LOGIN_SIGNUP_TABS_READY();
-        $('.POPUP_NAVS li:first-child').addClass('TAB_ACTIVE');
-        $('.POPUP_TABS_CONTENT div:first-child').addClass('POPUPACTIVE');
-        $('.INPUT_GROUP').removeClass('POPUPACTIVE');
-
-        // 打開視窗
-        $('.MODAL').addClass('MODAL_ACTIVE');
-        $('.POPUP_WRAP').addClass('POPUP_WRAP_ACTIVE');
-    });
-
-    // 關閉彈跳視窗
-    $('.POPUP_CLOSEBTN, .MODAL').click(function () {
-        $('.MODAL').removeClass('MODAL_ACTIVE');
-        $('.POPUP_WRAP').removeClass('POPUP_WRAP_ACTIVE');
-    });
-
-    //阻止誤觸MODAL關閉
-    $('.POPUP_WRAP').click(function (e) {
-        e.stopPropagation();;
-    })
-
-    // ====== 登入及註冊 ======
-    // 點選頁籤的登入或註冊功能
-    $('.POPUP_NAVS li').click(function () {
-        var tab_id = $(this).find('a').attr('href');
-        // 初始化頁面
-        POPUP_READY()
-        // 顯示登入頁
-        $(this).addClass('TAB_ACTIVE');
-        $(tab_id).addClass('POPUPACTIVE');
-    });
-
-    // 登入頁內下面的註冊會員
-    $('.SIGNUP_BTN').click(function () {
-        // 初始化頁面
-        POPUP_READY();
-        LOGIN_SIGNUP_TABS_READY();
-        // 載入註冊頁面
-        $('.POPUP_NAVS li:nth-child(2)').addClass('TAB_ACTIVE');
-        $('#POPUP_SIGNUP').addClass('POPUPACTIVE');
-
-    });
-    // 註冊頁內的送出資料
-    $('.SIGNUP_SUB').click(function (e) {
-        // 阻止連結PHP
-        e.preventDefault();
-        // 提示是否成功
-        alert('註冊成功，請重新登入!');
-        // 載入登入頁
-        POPUP_READY();
-        LOGIN_SIGNUP_TABS_READY();
-        $('.POPUP_NAVS li:first-child').addClass('TAB_ACTIVE');
-        $('.POPUP_TABS_CONTENT div:first-child').addClass('POPUPACTIVE');
-        $('.INPUT_GROUP').removeClass('POPUPACTIVE');
-    });
-
-    // ====== 忘記密碼 ======
-    $('.FORGET_BTN').click(function () {
-        // 初始化頁面
-        POPUP_READY()
-        PASSWORD_TABS_READY()
-
-        // 顯示忘記密碼頁
-        $('.FORGETTABS').addClass('TAB_ACTIVE');
-        $('.CHANGETABS').addClass('CLOSETABS');
-        $('#popup_forgetpass').addClass('POPUPACTIVE');
-    });
-    // 返回登入
-    $('.BACKLOGIN_BTN').click(function (e) {
-        e.preventDefault();
-        // 載入登入頁
-        POPUP_READY();
-        LOGIN_SIGNUP_TABS_READY();
-        $('.POPUP_NAVS li:first-child').addClass('TAB_ACTIVE');
-        $('.POPUP_TABS_CONTENT div:first-child').addClass('POPUPACTIVE');
-        $('.INPUT_GROUP').removeClass('POPUPACTIVE');
-    });
-    // ====== 修改密碼 ======
-    $('.PASS_SUB').click(function (e) {
-        // 阻止連結PHP
-        e.preventDefault();
-        // 初始化頁面
-        $('.FORGETTABS').addClass('CLOSETABS');
-        $('.CHANGETABS').removeClass('CLOSETABS');
-        $('.POPUP_TABS_CONTENT div').removeClass('POPUPACTIVE');
-
-        // 顯示修改密碼頁
-        $('.CHANGETABS').addClass('TAB_ACTIVE');
-        $('#popup_changepass').addClass('POPUPACTIVE');
-
-        // 顯示修改完成頁
-        $('.PASS_SUB').click(function (e) {
-            // 阻止連結PHP
-            e.preventDefault();
-            $('.POPUP_TABS_CONTENT div').removeClass('POPUPACTIVE');
-            $('#popup_changepass_succ').addClass('POPUPACTIVE');
-
-            // 延遲三秒後跳轉
-            setTimeout(function () {
-                // 載入登入頁
-                POPUP_READY();
-                LOGIN_SIGNUP_TABS_READY();
-                $('.POPUP_NAVS li:first-child').addClass('TAB_ACTIVE');
-                $('.POPUP_TABS_CONTENT div:first-child').addClass('POPUPACTIVE');
-                $('.INPUT_GROUP').removeClass('POPUPACTIVE');
-            }, 3000);
-        });
-    });
+    if (fieldType === "password") {
+        passwordField.attr("type", "text");
+        icon.removeClass("bi-eye-fill").addClass("bi-eye-slash-fill");
+    } else {
+        passwordField.attr("type", "password");
+        icon.removeClass("bi-eye-slash-fill").addClass("bi-eye-fill");
+    }
 });
+
+// ====== 彈跳視窗函式設定 ======
+// 初始化頁籤及內容的函式
+function POPUP_READY() {
+    $('.POPUP_NAVS li').removeClass('TAB_ACTIVE');
+    $('.POPUP_TABS_CONTENT div').removeClass('POPUPACTIVE')
+};
+// 登入和註冊的頁籤初始化
+function LOGIN_SIGNUP_TABS_READY() {
+    $('.POPUP_NAVS li').removeClass('CLOSETABS');
+    $('.FORGETTABS, .CHANGETABS').addClass('CLOSETABS');
+};
+// 忘記及修改密碼的頁籤初始化
+function PASSWORD_TABS_READY() {
+    $('.POPUP_NAVS li').addClass('CLOSETABS');
+    $('.FORGETTABS, .CHANGETABS').removeClass('CLOSETABS');
+};
+
+// ====== 彈跳視窗控制 ======
+// 打開彈跳視窗
+$('.LOGIN').click(function () {
+    // console.log("aaaa");
+    // 載入登入頁
+    POPUP_READY();
+    LOGIN_SIGNUP_TABS_READY();
+    $('.POPUP_NAVS li:first-child').addClass('TAB_ACTIVE');
+    $('.POPUP_TABS_CONTENT div:first-child').addClass('POPUPACTIVE');
+    $('.INPUT_GROUP').removeClass('POPUPACTIVE');
+    $('.BTN').removeClass('POPUPACTIVE');
+    // 清空input裡面的值
+    $('.MODAL input').val('');
+
+    // 初始化隱藏密碼
+    $(".PASSWORD").attr("type", "password");
+    $(".SHOWPASS").find('i').removeClass("bi-eye-slash-fill").addClass("bi-eye-fill");
+
+    // 打開視窗
+    $('.MODAL').addClass('MODAL_ACTIVE');
+    $('.POPUP_WRAP').addClass('POPUP_WRAP_ACTIVE');
+});
+
+// 關閉彈跳視窗
+$('.POPUP_CLOSEBTN, .MODAL').click(function () {
+    $('.MODAL').removeClass('MODAL_ACTIVE');
+    $('.POPUP_WRAP').removeClass('POPUP_WRAP_ACTIVE');
+});
+
+//阻止誤觸MODAL關閉
+$('.POPUP_WRAP').click(function (e) {
+    e.stopPropagation();;
+})
+// ====== 登入及註冊 ======
+// 點選頁籤的登入或註冊功能
+$('.POPUP_NAVS li').click(function () {
+    var tab_id = $(this).find('a').attr('href');
+    // 初始化頁面
+    POPUP_READY()
+    // 顯示登入頁
+    $(this).addClass('TAB_ACTIVE');
+    $(tab_id).addClass('POPUPACTIVE');
+});
+
+// 登入頁內下面的註冊會員
+$('.TOSIGNUP_BTN').click(function () {
+    // 初始化頁面
+    POPUP_READY();
+    LOGIN_SIGNUP_TABS_READY();
+    // 載入註冊頁面
+    $('.POPUP_NAVS li:nth-child(2)').addClass('TAB_ACTIVE');
+    $('#POPUP_SIGNUP').addClass('POPUPACTIVE');
+
+});
+// 註冊頁內的送出資料 - 前端驗證資料
+
+// 倒數計時是否中斷
+var timeoutId = null;
+
+$('.SIGNUP_SUB').click(function (e) {
+
+    let usn = $('.SIGNUP_USERNAME').val();
+    let psw = $('.SIGNUP_PASSWORD').val();
+    let vpw = $('.SIGNUP_VERIFPASSWORD').val();
+    let pho = $('.SIGNUP_PHONENO').val();
+    let eml = $('.SIGNUP_EMAIL').val();
+    let vfy = $('.SIGNUP_VERIFY').val();
+
+    if (usn === '' && pho === '' && eml === '' && psw === '' && vpw === '' && vfy === '') {
+        e.preventDefault();
+        alert('註冊資料不得為空！');
+        return;
+    } else if (usn === '') {
+        e.preventDefault();
+        alert('請輸入姓名！');
+        return;
+    } else if (psw === '') {
+        e.preventDefault();
+        alert('請輸入密碼！');
+        return;
+    } else if (vpw === '') {
+        e.preventDefault();
+        alert('請輸入確認密碼！');
+        return;
+    } else if (pho === '') {
+        e.preventDefault();
+        alert('請輸入手機號碼！');
+        return;
+    } else if (eml === '') {
+        e.preventDefault();
+        alert('請輸入信箱！');
+        return;
+    } else if (vfy === '') {
+        e.preventDefault();
+        alert('請輸入驗證碼！');
+        return;
+    } else if (usn !== '' && psw !== '' && vpw !== '' && pho !== '' && eml !== '' && vfy !== '') {
+        if (psw != vpw) {
+            e.preventDefault();
+            alert('兩次密碼輸入不相同！');
+            return;
+        } else if (pho.length < 10) {
+            e.preventDefault();
+            alert('手機號碼不正確！');
+            return;
+        }
+    }
+});
+
+// ====== 忘記密碼 ======
+$('.FORGET_BTN').click(function () {
+    // 初始化頁面
+    POPUP_READY()
+    PASSWORD_TABS_READY()
+
+    // 顯示忘記密碼頁
+    $('.FORGETTABS').addClass('TAB_ACTIVE');
+    $('.CHANGETABS').addClass('CLOSETABS');
+    $('#popup_forgetpass').addClass('POPUPACTIVE');
+});
+// 返回登入
+$('.BACKLOGIN_BTN').click(function () {
+    // 載入登入頁
+    POPUP_READY();
+    LOGIN_SIGNUP_TABS_READY();
+    $('.POPUP_NAVS li:first-child').addClass('TAB_ACTIVE');
+    $('.POPUP_TABS_CONTENT div:first-child').addClass('POPUPACTIVE');
+    $('.INPUT_GROUP').removeClass('POPUPACTIVE');
+});
+
+
+// ====== 修改密碼 ======
+$('.TOPASS_BTN').click(function () {
+    // 初始化頁面
+    $('.FORGETTABS').addClass('CLOSETABS');
+    $('.CHANGETABS').removeClass('CLOSETABS');
+    $('.POPUP_TABS_CONTENT div').removeClass('POPUPACTIVE');
+
+    // 顯示修改密碼頁
+    $('.CHANGETABS').addClass('TAB_ACTIVE');
+    $('#popup_changepass').addClass('POPUPACTIVE');
+
+});
+
+// 顯示修改完成頁
+// 監看是否有點擊返回登入，否則就三秒後跳轉登入頁面
+$('.PASS_SUB').click(function () {
+
+    $('.POPUP_TABS_CONTENT div').removeClass('POPUPACTIVE');
+    $('#popup_changepass_succ').addClass('POPUPACTIVE');
+
+    // 延遲三秒後跳轉
+    timeoutId = setTimeout(function () {
+
+        // 載入登入頁
+        POPUP_READY();
+        LOGIN_SIGNUP_TABS_READY();
+        $('.POPUP_NAVS li:first-child').addClass('TAB_ACTIVE');
+        $('.POPUP_TABS_CONTENT div:first-child').addClass('POPUPACTIVE');
+        $('.INPUT_GROUP').removeClass('POPUPACTIVE');
+
+    }, 3000);
+
+});
+
+// 點擊返回登入就阻止跳轉回登入頁
+$('.SUCC_BTN').click(function () {
+    if (timeoutId) {
+        clearTimeout(timeoutId);
+    }
+});
+
+
+//  =================== 連接資料庫的功能 ===================
+// 加入會員功能
+function joinSub(e) {
+
+    let usn = $('.SIGNUP_USERNAME').val();
+    let psw = $('.SIGNUP_PASSWORD').val();
+    let vpw = $('.SIGNUP_VERIFPASSWORD').val();
+    let pho = $('.SIGNUP_PHONENO').val();
+    let eml = $('.SIGNUP_EMAIL').val();
+    let vfy = $('.SIGNUP_VERIFY').val();
+
+    if (usn === '' && pho === '' && eml === '' && psw === '' && vpw === '' && vfy === '') {
+        e.preventDefault();
+        alert('註冊資料不得為空！');
+        return;
+    } else if (usn === '') {
+        e.preventDefault();
+        alert('請輸入姓名！');
+        return;
+    } else if (psw === '') {
+        e.preventDefault();
+        alert('請輸入密碼！');
+        return;
+    } else if (vpw === '') {
+        e.preventDefault();
+        alert('請輸入確認密碼！');
+        return;
+    } else if (pho === '') {
+        e.preventDefault();
+        alert('請輸入手機號碼！');
+        return;
+    } else if (eml === '') {
+        e.preventDefault();
+        alert('請輸入信箱！');
+        return;
+    } else if (vfy === '') {
+        e.preventDefault();
+        alert('請輸入驗證碼！');
+        return;
+    } else if (usn !== '' && psw !== '' && vpw !== '' && pho !== '' && eml !== '' && vfy !== '') {
+        if (psw != vpw) {
+            e.preventDefault();
+            alert('兩次密碼輸入不相同！');
+            return;
+        } else if (pho.length < 10) {
+            e.preventDefault();
+            alert('手機號碼不正確！');
+            return;
+        } else {
+            $.ajax({
+                method: "POST",
+                url: "http://localhost/THD101_G1_groupproject/php/Join.php",
+                // url: "https://tibamef2e.com/thd101/g1/php/Join.php",
+                data: {
+                    USERNAME: usn,
+                    PHONENO: pho,
+                    EMAIL: eml,
+                    PASSWORD: psw
+                },
+                dataType: "text",
+                success: function (response) {
+                    console.log(response);
+                    // 清空註冊資料
+                    $('.POPUP_SIGNUP input').val('');
+                    // 跳轉到註冊成功
+                    $('.POPUP_TABS_CONTENT div').removeClass('POPUPACTIVE');
+                    $('#popup_signup_succ').addClass('POPUPACTIVE');
+
+                    // 監看是否有點擊返回登入，否則就三秒後跳轉登入頁面
+                    timeoutId = setTimeout(function () {
+                        // 載入登入頁
+                        POPUP_READY();
+                        LOGIN_SIGNUP_TABS_READY();
+                        $('.POPUP_NAVS li:first-child').addClass('TAB_ACTIVE');
+                        $('.POPUP_TABS_CONTENT div:first-child').addClass('POPUPACTIVE');
+                        $('.INPUT_GROUP').removeClass('POPUPACTIVE');
+
+                    }, 3000);
+
+                },
+                error: function (exception) {
+                    alert("發生錯誤: " + exception.status);
+                }
+            });
+        }
+    }
+};
+// });
+

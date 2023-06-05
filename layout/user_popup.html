@@ -23,21 +23,27 @@
             <div id="POPUP_LOGIN" class="POPUP_BOX">
                 <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
 
-                <form class="USER_FORM" method="post" action="Login.php">
+                <form class="USER_FORM">
+                    <!-- 信箱：只能英文和數字和'@'和'.' -->
                     <div class="INPUT_GROUP">
                         <i class="bi bi-envelope"></i>
-                        <input type="email" name="account"  autocomplete="email" placeholder="請輸入電子信箱" /></br>
+                        <input type="email" name="account" autocomplete="email" placeholder="請輸入電子信箱"
+                            onkeyup="value=value.replace(/[^a-zA-Z0-9@.]/g, '')" 　 /></br>
                     </div>
+                    <!-- 密碼：只能英文和數字/長度限制20 -->
                     <div class="INPUT_GROUP">
                         <i class="bi bi-lock-fill"></i>
-                        <input type="password" name="password" autocomplete="current-password" placeholder="請輸入密碼" /></br>
+                        <input type="password" name="password" class="PASSWORD" placeholder="請輸入密碼"
+                            onkeyup="value=value.replace(/[^a-zA-Z0-9]/g, '')" maxlength="20" />
+                        <div class="SHOWPASS">
+                            <i class="bi bi-eye-fill"></i>
+                        </div></br>
                     </div>
                     <div class="FORGET_BOX">
                         <button type="button" class="FORGET_BTN">忘記密碼？</button>
                     </div>
-                    <div class="INPUT_GROUP">
-                        <input type="submit" class="BTN" value="登入" />
-                    </div>
+
+                    <div class="LOGIN_BTN BTN">登入</div>
 
                     <div class="DIVIDING">
                         <span>or</span>
@@ -49,40 +55,56 @@
                         <span>使用GOOGLE登入</span>
                     </button>
                 </form>
-                <div class="BTN SIGNUP_BTN">註冊會員</div>
+                <div class="BTN TOSIGNUP_BTN">註冊會員</div>
             </div>
             <!-- 註冊視窗 -->
             <div id="POPUP_SIGNUP" class="POPUP_BOX ">
                 <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
 
-                <form class="USER_FORM" method="post" action="SIGNUP.php">
+                <form class="USER_FORM">
                     <div class="SIGNUP_INPUTS">
+                        <!-- 姓名：只能輸入中文和英文 -->
                         <div class="INPUT_GROUP">
                             <i class="bi bi-person-circle"></i>
-                            <input type="text" name="name" autocomplete="name" placeholder="請輸入真實姓名" />
+                            <input type="text" name="SIGNUP_USERNAME" id="SIGNUP_USERNAME" class="SIGNUP_USERNAME" autocomplete="name"
+                                placeholder="請輸入真實姓名"
+                                onkeyup="value=value.replace(/[^a-zA-Z\u4E00-\u9FFF\u3100-\u312F]/g, '')" />
                         </div>
+                        <!-- 密碼：只能英文和數字/長度限制30 -->
                         <div class="INPUT_GROUP">
                             <i class="bi bi-lock-fill"></i>
-                            <input type="password" name="password" autocomplete="new-password" placeholder="請輸入密碼" />
+                            <input type="password" name="SIGNUP_PASSWORD" id="SIGNUP_PASSWORD" class="PASSWORD SIGNUP_PASSWORD"
+                                autocomplete="new-password" placeholder="請輸入密碼"
+                                onkeyup="value=value.replace(/[^a-zA-Z0-9]/g, '')" maxlength="30" />
+                            <div class="SHOWPASS">
+                                <i class="bi bi-eye-fill"></i>
+                            </div>
                         </div>
                         <div class="INPUT_GROUP">
                             <i class="bi bi-lock"></i>
-                            <input type="password" name="password" autocomplete="new-password" placeholder="請再確認一次密碼" />
+                            <input type="password" name="password" class="PASSWORD SIGNUP_VERIFPASSWORD"
+                                autocomplete="new-password" placeholder="請再確認一次密碼"
+                                onkeyup="value=value.replace(/[^a-zA-Z0-9]/g, '')" maxlength="30" />
+                            <div class="SHOWPASS">
+                                <i class="bi bi-eye-fill"></i>
+                            </div>
                         </div>
+                        <!-- 電話：只能輸入數字 最多十位數 -->
                         <div class="INPUT_GROUP">
                             <i class="bi bi-phone"></i>
-                            <input type="tel" name="phone" autocomplete="phone" placeholder="請輸入手機號碼" />
+                            <input type="tel" name="SIGNUP_PHONENO" class="SIGNUP_PHONENO" autocomplete="phone"
+                                placeholder="請輸入手機號碼" onkeyup="this.value=this.value.replace(/\D/g,'')"
+                                maxlength="10" />
                         </div>
+                        <!-- 信箱：只能英文和數字和'@'和'.' -->
                         <div class="INPUT_GROUP">
                             <i class="bi bi-envelope"></i>
-                            <input type="email" name="email"  autocomplete="email" placeholder="請輸入電子信箱" />
-                            <!-- <button class="VERIFBTN BTN">
-                                    發送驗證信
-                                </button> -->
+                            <input type="email" name="SIGNUP_EMAIL" class="SIGNUP_EMAIL" autocomplete="email"
+                                placeholder="請輸入電子信箱" onkeyup="value=value.replace(/[^a-zA-Z0-9@.]/g, '')" />
                         </div>
                         <div class="INPUT_GROUP">
                             <i class="bi bi-key"></i>
-                            <input type="number" name="verifyNum" class="VERIFYINPUT"
+                            <input type="number" name="verifyNum" class="VERIFYINPUT SIGNUP_VERIFY"
                                 placeholder="請輸入驗證碼" />
                             <button class="VERIFBTN BTN">
                                 發送驗證碼
@@ -91,27 +113,37 @@
                     </div>
 
                     <p>＊送出即同意「會員服務條款、隱私權保護聲明」</p>
-                    <div class="INPUT_GROUP">
-                        <input type="submit" class=" SIGNUP_SUB BTN" value="驗證並送出" />
-                    </div>
+                    <div class=" SIGNUP_SUB BTN" onclick="joinSub()">驗證並送出</div>
                 </form>
+            </div>
+
+            <!-- 註冊成功畫面 -->
+            <div id="popup_signup_succ" class="POPUP_BOX">
+                <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
+                <div class="USER_FORM">
+                    <img class="SIGNUP_SUCC" src="./img/user_popup/SIGNUP_SUCC.png" alt="">
+                </div>
+                <div class="BACKTOLOGIN_BOX">
+                    <p>＊三秒後將跳轉到登入頁，如果沒跳轉請點選按鈕</p>
+                    <div class="BTN SUCC_BTN BACKLOGIN_BTN">登入會員</div>
+                </div>
             </div>
             <!-- 忘記密碼 -->
             <div id="popup_forgetpass" class="POPUP_BOX ">
                 <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
-                <form class="USER_FORM" method="post" action="SIGNUP.php">
+                <form class="USER_FORM">
+                    <!-- 信箱：只能英文和數字和'@'和'.' -->
                     <div class="INPUT_GROUP">
                         <i class="bi bi-envelope"></i>
-                        <input type="email" name="email" class="VERIFYINPUT" autocomplete="email" placeholder="請輸入電子信箱" />
-                        <button class="VERIFBTN BTN">
-                            發送驗證信
-                        </button>
+                        <input type="email" name="email" autocomplete="email" placeholder="請輸入電子信箱"
+                            onkeyup="value=value.replace(/[^a-zA-Z0-9@.]/g, '')" />
                     </div>
+
                     <div class="INPUT_GROUP">
                         <i class="bi bi-key"></i>
                         <input type="number" name="verifyNum" class="VERIFYINPUT" placeholder="請輸入驗證碼" />
                         <button class="VERIFBTN BTN">
-                            驗證
+                            發送驗證碼
                         </button>
                     </div>
                     <div class="BACKLOGIN_BOX">
@@ -124,29 +156,33 @@
                 </form>
                 <div class="PASS_SEND_BOX">
                     <p>＊送出後會直接跳轉到修改密碼頁</p>
-                    <div class="INPUT_GROUP">
-                        <input type="submit" class="PASS_SUB BTN" value="送出" />
-                    </div>
+                    <div class="TOPASS_BTN BTN">送出</div>
                 </div>
             </div>
             <!-- 修改密碼 -->
             <div id="popup_changepass" class="POPUP_BOX">
                 <img src="./img/user_popup/USER_LOGO.png" alt="" class="USER_LOGO">
-                <form class="USER_FORM" method="post" action="SIGNUP.php">
+                <form class="USER_FORM">
+                    <!-- 密碼：只能英文和數字/長度限制30 -->
                     <div class="INPUT_GROUP">
                         <i class="bi bi-lock-fill"></i>
-                        <input type="password" name="password" placeholder="請輸入密碼" />
+                        <input type="password" name="password" class="PASSWORD" placeholder="請輸入密碼"
+                            onkeyup="value=value.replace(/[^a-zA-Z0-9]/g, '')" maxlength="30" />
+                        <div class="SHOWPASS">
+                            <i class="bi bi-eye-fill"></i>
+                        </div>
                     </div>
                     <div class="INPUT_GROUP">
                         <i class="bi bi-lock"></i>
-                        <input type="password" name="password" placeholder="請再確認一次密碼" />
+                        <input type="password" name="password" class="PASSWORD" placeholder="請再確認一次密碼"
+                            onkeyup="value=value.replace(/[^a-zA-Z0-9]/g, '')" maxlength="30" />
+                        <div class="SHOWPASS">
+                            <i class="bi bi-eye-fill"></i>
+                        </div>
                     </div>
                 </form>
                 <div class="PASS_SEND_BOX">
-                    <p>＊送出後會直接跳轉到修改密碼頁</p>
-                    <div class="INPUT_GROUP">
-                        <input type="submit" class="PASS_SUB BTN" value="修改密碼" />
-                    </div>
+                    <div class="PASS_SUB BTN">修改密碼</div>
                 </div>
             </div>
             <!-- 修改完成畫面 -->
@@ -157,9 +193,7 @@
                 </div>
                 <div class="BACKTOLOGIN_BOX">
                     <p>＊三秒後將跳轉到登入頁，如果沒跳轉請點選按鈕</p>
-                    <div class="INPUT_GROUP">
-                        <input type="submit" class="BTN CHANGE_SUCC_BTN BACKLOGIN_BTN" value="登入會員" />
-                    </div>
+                    <div class="BTN SUCC_BTN BACKLOGIN_BTN">登入會員</div>
                 </div>
             </div>
 

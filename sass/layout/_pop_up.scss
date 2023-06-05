@@ -228,7 +228,6 @@ body .MODAL .POPUP_WRAP_ACTIVE {
         text-align: center;
         margin-bottom: 16px;
 
-
         .bi {
             color: #9D9D9D;
             background: white;
@@ -236,7 +235,7 @@ body .MODAL .POPUP_WRAP_ACTIVE {
             position: absolute;
             // left: 6.7rem;
             // bottom: .6rem;
-            height: calc( 100% - 2px );
+            height: calc(100% - 2px);
             width: 12%;
             line-height: 41px;
             border-radius: 10px 0 0 10px;
@@ -246,6 +245,41 @@ body .MODAL .POPUP_WRAP_ACTIVE {
 
             @include m {
                 left: 4.7rem;
+            }
+        }
+
+        .bi-key {
+            height: calc(100% - 3px);
+        }
+
+        .SHOWPASS {
+            background: white;
+            font-size: 3rem;
+            position: absolute;
+            height: calc(100% - 2px);
+            top: 0;
+            right: 57px;
+            width: 12%;
+            line-height: 41px;
+            border-radius: 0px 10px 10px 0px;
+            border-top: 1px solid #9E9E9E;
+            border-bottom: 1px solid #9E9E9E;
+            border-right: 1px solid #9E9E9E;
+            border-left: 0;
+
+            cursor: pointer;
+
+            &:hover .bi {
+                color: #757575;
+            }
+
+            .bi {
+                line-height: 41px;
+                border-radius: 0;
+                border: none;
+                color: #9D9D9D;
+                background: none;
+                position: unset;
             }
         }
 
@@ -261,7 +295,6 @@ body .MODAL .POPUP_WRAP_ACTIVE {
             height: 45px;
             width: 300px;
             text-indent: 40px;
-
         }
 
         input:focus {
@@ -286,14 +319,9 @@ body .MODAL .POPUP_WRAP_ACTIVE {
 
         }
 
-        .SIGNUP_SUB {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
         .VERIFYINPUT {
             width: 170px;
-            margin-right: 10px;
+            margin-right: 5px;
         }
 
         .VERIFBTN {
@@ -302,6 +330,9 @@ body .MODAL .POPUP_WRAP_ACTIVE {
             font-size: 15px;
         }
 
+        .SHOWPASS i:nth-child(2) {
+            display: none;
+        }
 
 
     }
@@ -408,14 +439,22 @@ body .MODAL .POPUP_WRAP_ACTIVE {
     }
 }
 
-// 註冊按鈕
-.SIGNUP_BTN {
+
+// 登入和註冊按鈕
+.MODAL .POPUP_WRAP .POPUP_TABS_CONTENT .TOSIGNUP_BTN
+, .MODAL .POPUP_WRAP .POPUP_TABS_CONTENT .LOGIN_BTN
+, .MODAL .POPUP_WRAP .POPUP_TABS_CONTENT .SIGNUP_BTN 
+, .MODAL .POPUP_WRAP .POPUP_TABS_CONTENT .SIGNUP_SUB
+, .MODAL .POPUP_WRAP .POPUP_TABS_CONTENT .TOPASS_BTN
+, .MODAL .POPUP_WRAP .POPUP_TABS_CONTENT .PASS_SUB
+, .MODAL .POPUP_WRAP .POPUP_TABS_CONTENT .SUCC_BTN {
+    width: 300px;
     font-weight: unset;
     margin: 0 auto;
+    margin-top: 10px;
     margin-bottom: 26px;
     height: 45px;
-    width: 300px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 45px;
     cursor: pointer;
 }
@@ -425,7 +464,7 @@ body .MODAL .POPUP_WRAP_ACTIVE {
     display: none;
 }
 
-.CHANGEPASS_SUCC {
+.CHANGEPASS_SUCC, .SIGNUP_SUCC{
     width: 172px;
     height: 163px;
     margin: auto;
@@ -444,8 +483,8 @@ body .MODAL .POPUP_WRAP_ACTIVE {
         line-height: 2rem;
     }
 
-    .PASS_SUB,
-    .CHANGE_SUCC_BTN {
+    .INPUT_GROUP .PASS_SUB,
+    .SUCC_BTN {
         width: 300px;
         height: 45px;
         line-height: 45px;
