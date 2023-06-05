@@ -1,10 +1,60 @@
 // 新增會員及寵物
 function doAddMember(){
 
-    $('.BACK_ADD_NEW_MEMBER').show();
-    $('.BACK_MEMBER_PROFILE').hide();
-    preventDefault();
+    if ($('#newmember_name').val() == "") {
+        alert("請輸入姓名");
+        return false;
+    }
+    if ($('#newmember_phone').val() == "") {
+        alert("請輸入手機號碼");
+        return false;
+    }
+    if ($('#newmember_email').val() == "") {
+        alert("請輸入電子信箱");
+        return false;
+    }
+    if ($('#newmember_address').val() == "") {
+        alert("請輸入通訊地址");
+        return false;
+    }
 
+    var formData = new FormData();
+    var files = $('#member_pic')[0].files;
+	formData.append('member_pic',files[0]);
+    formData.append('newmember_name',$('#newmember_name').val());
+    formData.append('newmember_phone',$("#newmember_phone").val());
+    formData.append('newmember_email',$("#newmember_email").val());
+    formData.append('newmember_address',$('#newmember_address').val());      
+
+    $.ajax({
+        method:"POST",
+        url:"http://localhost/THD101_NO1/php/back_add_member_pet.php",
+        data:formData,
+
+        dataType:"text",
+        // 告訴jQuery不要去處理發送的資料
+        processData : false, 
+        // 告訴jQuery不要去設定Content-Type請求頭
+        contentType : false,
+        success:function(response){
+            
+            alert(response);
+
+            location.href = '_back_member_profile.html'
+            
+        },
+        error: function(exception) {
+            
+            alert("發生錯誤: " + exception.status);
+        }
+    })
+    
+}
+// 返回
+function back(){
+    $('.BACK_MEMBER_PROFILE').show();
+    $('.BACK_ADD_NEW_MEMBER').hide();
+    event.preventDefault();
 }
 // 會員搜尋
 function dosearch(){
@@ -18,7 +68,7 @@ function dosearch(){
     }
     $.ajax({            
         method: "POST",
-        url: "http://localhost/THD101_NO1/php/back_search_member.php",
+        url: "http://localhost/THD101_project/php/back_search_member.php",
         data:{
             phone: phone, 
             name: name
@@ -26,7 +76,7 @@ function dosearch(){
         dataType: "json",
         
         success: function (response) {
-            // console.log(response);
+            console.log(response);
             // 更新html內容前先清空原有資料
             $("#result").html("");
             // 更新html內容(透過jQuery跑迴圈取值)
@@ -52,6 +102,65 @@ function dosearch(){
         }
     });
 }
+
+
+// 寵物搜尋
+function Petsearch(){
+
+    var phone = $("#phone").val();
+    var type = $("#consultation_type").val();
+
+    if (phone == "" && type == "default") {
+        // 若輸入欄位為空，不執行搜尋操作
+        alert ("請選擇類型");
+    }
+    $.ajax({            
+        method: "POST",
+        url: "http://localhost/THD101_project/php/back_pet_search_member.php",
+        data:{
+            phone: phone, 
+            type: type
+        },            
+        dataType: "json",
+        
+        success: function (response) {
+            // console.log(response);
+            // 更新html內容前先清空原有資料
+            $("#pet_result").html("");
+            // 更新html內容(透過jQuery跑迴圈取值)
+            // $.each(response, function(index, row) {
+
+            //     $("#pet_result").append(
+            //         "<ul class='PET_PROFILE_CONTENT BACK_TABLE_CONTENT'>" + 
+            //         "<li>" + row.PHONENO +"</li>" +
+            //         "<li>" + row.PET_NAME + "</li>" +
+            //         "<li>" + row.Type + "</li>" +
+            //         "<li>" + row.CREATEDATE + "</li>" +
+            //         "<li>" + "<i class='bi bi-pencil RE_PET_PROFILE' onclick='doReviseMember()'>" + "</i>" + "</li>" +
+            //         "<li>" + "<i class='bi bi-x-lg DEL_PET_BTN' onclick='doDelMember()'>" + "</i>" + "</li>" 
+                   
+            //         + "</ul>"
+            //     );
+
+            // });
+
+            if(response===1){
+                alert('lalala');
+            }
+        },
+        error: function(exception) {
+            alert("發生錯誤: " + exception.status);
+        }
+    });
+}
+
+
+
+
+
+
+
+
 // 會員修改
 function doReviseMember(){
     $('.BACK_MODIFY_MEMBER').show();
@@ -63,6 +172,7 @@ function doDelMember(){
 }
 // 會員新增預約
 function doReserve(){
+
     $('.RESERVE_BOX').css('display','block');
     $('.MASK').show();
 
