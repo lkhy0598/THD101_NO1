@@ -118,6 +118,7 @@
         display: flex;
         flex-wrap: wrap;
         z-index: 10;
+
         h1 {
             font-size: 25px;
             margin: 20px 0;
@@ -130,7 +131,7 @@
         justify-content: center;
         flex-wrap: wrap;
         width: 98%;
-        margin:0 auto 50px;
+        margin: 0 auto 50px;
         border: 1px solid #888888;
         border-radius: 10px;
         background-color: #fff;
@@ -155,7 +156,7 @@
         width: 100%;
         margin: 20px auto 50px;
     }
-    
+
 
 
 
@@ -166,7 +167,7 @@
         width: 100%;
     }
 
-    .STEPS{
+    .STEPS {
         margin-bottom: 170px;
     }
 
@@ -200,58 +201,58 @@
 
 @include m {
     .RESERVE_NORMAL3 {
-            .RESERVE_STEPAREA {
-                width: 100%;
-                display: flex;
-                flex-grow: 1;
-                margin-top: 20px;
+        .RESERVE_STEPAREA {
+            width: 100%;
+            display: flex;
+            flex-grow: 1;
+            margin: 20px auto 100px;
 
-                .RESERVE_ARC {
-                    p {
-                        font-size: 12px;
-                        bottom: -25px;
-                    }
+            .RESERVE_ARC {
+                p {
+                    font-size: 12px;
+                    bottom: -25px;
                 }
-
-                .RESERVE_ARC::before {
-                    background-color: #FFF;
-                    width: 40px;
-                    height: 6px;
-                    content: "";
-                    box-sizing: border-box;
-                    display: block;
-                    position: absolute;
-                    top: 19px;
-                    left: 0px;
-                }
-
-                .RESERVE_ARC::after {
-                    background-color: #FFF;
-                    width: 40px;
-                    height: 6px;
-                    content: "";
-                    box-sizing: border-box;
-                    display: block;
-                    position: absolute;
-                    top: 19px;
-                    right: 0px;
-                }
-
             }
-        }
 
-        .CALENDAR_AREA {
-            .CALENDAR_INFO {
-                padding-top: 20px;
-                padding-left: 50px;
+            .RESERVE_ARC::before {
+                background-color: #FFF;
+                width: 40px;
+                height: 6px;
+                content: "";
+                box-sizing: border-box;
+                display: block;
+                position: absolute;
+                top: 19px;
+                left: 0px;
             }
-        }
 
-        .RESERVE_FORM ul li {
-            padding-left: 32px;
-        }
+            .RESERVE_ARC::after {
+                background-color: #FFF;
+                width: 40px;
+                height: 6px;
+                content: "";
+                box-sizing: border-box;
+                display: block;
+                position: absolute;
+                top: 19px;
+                right: 0px;
+            }
 
-        .FOOTER_BOTTOM {
-            margin-bottom: 0px;
         }
     }
+
+    .CALENDAR_AREA {
+        .CALENDAR_INFO {
+            padding-top: 20px;
+            padding-left: 50px;
+        }
+    }
+
+    .RESERVE_FORM ul li {
+        padding-left: 32px;
+    }
+
+    .FOOTER_BOTTOM {
+        margin-bottom: 0px;
+    }
+}

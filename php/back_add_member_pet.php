@@ -44,6 +44,9 @@ if (move_uploaded_file($_FILES["member_pic"]["tmp_name"], $filePath)) {
    $statement->bindValue(2, $memberID);
    $statement->execute();
 
+   
+
+    //導頁                        
    echo "新增成功!";
 
 
@@ -51,6 +54,5 @@ if (move_uploaded_file($_FILES["member_pic"]["tmp_name"], $filePath)) {
 
    echo "拷贝/移动上传图片失败!";      
 }
-
 
 ?>

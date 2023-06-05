@@ -1,3 +1,27 @@
+$(document).ready(function () {
+
+  $('.BACK_ADD_MESSAGE').hide();
+
+  $('.BACK_NAV ul li').eq(0).click(function () {
+    $('.BACK_ADD_MESSAGE').show();
+    $('.BACK_MESSAGE_MANAGEMENT').hide();
+    event.preventDefault();
+  })
+
+  $('.CANCEL').eq(0).click(function () {
+    $('.BACK_MESSAGE_MANAGEMENT').show();
+    $('.BACK_ADD_MESSAGE').hide();
+  })
+
+})
+
+$('#summernote').summernote({
+  height: 400,                 // set editor height
+  minHeight: null,             // set minimum height of editor
+  maxHeight: null,             // set maximum height of editor
+  focus: false                 // set focus to editable area after initializing summernote
+});
+
 // 選擇上傳照片按鈕元素
 var uploadButton = document.getElementById("message_pic_btn");
 
@@ -49,7 +73,7 @@ fileInput.addEventListener("change", function () {
 
   // 讀取檔案內容
   reader.readAsDataURL(file);
-  
+
 });
 
 // 點擊圖片時移除圖片並恢復預設狀態
@@ -59,10 +83,157 @@ previewImage.addEventListener('click', function () {
 
   // 移除 IMAGE_BOX class
   messageImage.classList.remove('IMAGE_BOX');
-  
+
   // 重置文件選擇器
   fileInput.value = '';
-  
+
   // 顯示上傳照片按鈕
   uploadButton.style.display = 'inline-block';
 });
+
+// 搜尋消息
+
+var releaseDateOneInput = document.getElementById("release_date_one")
+var releaseDateTwoInput = document.getElementById("release_date_two")
+
+releaseDateTwoInput.addEventListener("change", handleDateChange);
+
+function handleDateChange() {
+  var releaseDateOne = releaseDateOneInput.value;
+  var releaseDateTwo = releaseDateTwoInput.value;
+
+  if (releaseDateTwo < releaseDateOne) {
+    alert("請重新設定日期範圍");
+  }
+
+}
+
+function searchMessage(event) {
+  event.preventDefault();
+  var message_number = $("#message_number").val();
+  var message_classification = $("#message_classification option:selected").val();
+  var message_status = $("#message_status option:selected").val();
+  var message_title = $("#message_title").val();
+  var releaseDateOne = $("#release_date_one").val();
+  var releaseDateTwo = $("#release_date_two").val();
+
+  if (message_number === "" && message_classification === "" && message_status === "" && message_title === "" && releaseDateOne === "" && releaseDateTwo === "") {
+    // 若輸入欄位為空，不執行搜尋操作
+    return;
+  }
+
+  $.ajax({
+    method: "POST",
+    url: "http://localhost/THD101_NO1/php/back_search_message.php",
+
+    data: {
+      message_number: message_number,
+      message_classification: message_classification,
+      message_status: message_status,
+      message_title: message_title,
+      releaseDateOne: releaseDateOne,
+      releaseDateTwo: releaseDateTwo
+    },
+
+    dataType: "json",
+
+    success: function (response) {
+      console.log(response);
+
+      // 更新html內容前先清空原有資料
+      $("#message_result").html("");
+      // 更新html內容(透過jQuery跑迴圈取值)
+      $.each(response, function (index, row) {
+
+        $("#message_result").append(
+
+          // 消息狀態、消息分類
+          "<ul class='MESSAGE_MANAGEMENT_TABLE_CONTENT BACK_TABLE_CONTENT'>" +
+          "<li>" + row.NEWS_ID + "</li>" +
+          "<li>" + '刊登' + "</li>" +
+          "<li>" + '<img src="./img/backend/close-up-veterinarian-taking-care-dog 1.jpg" alt="">' + "</li>" +
+          "<li>" + '衛教資訊' + "</li>" +
+          "<li>" + row.TITLE + "</li>" +
+          "<li>" + row.CREATE_DATE + "</li>" +
+          "<li>" + "<i class='bi bi-pencil RE_MEMBER_PROFILE' onclick='doReviseMember()' >" + "</i>" + "</li>" +
+          "<li>" + "<i class='bi bi-x-lg DEL_MEMBER_BTN' onclick='doDelMember()'>" + "</i>" + "</li>" +
+          + "</ul>"
+
+        );
+
+      });
+
+    },
+
+    error: function (exception) {
+      alert("搜尋失敗: " + exception.status);
+    }
+
+  })
+
+}
+
+// 新增消息
+
+function doAddMessage() {
+
+  if ($('#preview_message_pic').val() == "") {
+    alert("請上傳圖片");
+    return false;
+}
+if ($('#new_message_classification').val() == "") {
+    alert("請選擇消息分類");
+    return false;
+}
+if ($('#new_message_status').val() == "") {
+    alert("請選擇消息狀態");
+    return false;
+}
+if ($('#new_message_title').val() == "") {
+    alert("請輸入消息標題");
+    return false;
+}
+
+if ($("#summernote").summernote('code') == "") {
+  alert("請輸入消息內容");
+  return false;
+}
+
+  var new_message_classification = $("#new_message_classification option:selected").val();
+  var new_message_status = $("#new_message_status option:selected").val();
+  var new_message_title = $("#new_message_title").val();
+  var new_message_content = $("#summernote").summernote('code'); // 獲取summernote編輯器的內容
+
+  // 創建FormData對象，用於發送帶有文件的請求
+  var formData = new FormData();
+  formData.append("message_pic", $("#message_pic")[0].files[0]); // 添加上傳的文件到FormData
+
+  // 添加其他數據到FormData
+  formData.append("new_message_classification", new_message_classification);
+  formData.append("new_message_status", new_message_status);
+  formData.append("new_message_title", new_message_title);
+  formData.append("new_message_content", new_message_content);
+
+  $.ajax({
+    method: "POST",
+    url: "http://localhost/THD101_NO1/php/add_message.php",
+    data: formData,
+    contentType: false, // 不設置content-type，jQuery會自動處理
+    processData: false, // 不處理data，jQuery會自動處理
+    success: function (response) {
+      console.log(response);
+      // 清空表單欄位
+      $("#new_message_classification").val("");
+      $("#new_message_status").val("");
+      $("#new_message_title").val("");
+      $("#summernote").summernote("reset"); // 清空summernote編輯器的內容
+      $("#message_pic").val(""); // 清空上傳的文件
+      // 顯示成功訊息或其他操作
+    },
+    error: function (exception) {
+      alert("新增失敗: " + exception.status);
+    }
+  });
+
+  return false; // 防止表單提交
+}

@@ -133,7 +133,7 @@
                             </li>
                             <li>
                                 <label for="release_date" class="INPUT">發布日期<br>
-                                    <input type="date" name="release_date" id="release_date">
+                                    <input type="date" name="release_date" id="release_date_one">
                                 </label>
                             </li>
                             <li>
@@ -141,11 +141,11 @@
                             </li>
                             <li>
                                 <label for="release_date" class="INPUT">
-                                    <input type="date" name="release_date" id="release_date">
+                                    <input type="date" name="release_date" id="release_date_two">
                                 </label>
                             </li>
                             <li>
-                                <button class="BTN_BACK" type="submit">搜尋消息</button>
+                                <button class="BTN_BACK" type="submit" onclick="searchMessage()">搜尋消息</button>
                             </li>
                         </ul>
 
@@ -166,7 +166,9 @@
                         <li>刪除</li>
                     </ul>
 
-                    <ul class="MESSAGE_MANAGEMENT_TABLE_CONTENT BACK_TABLE_CONTENT">
+                    <div id="message_result"></div>
+
+                    <!-- <ul class="MESSAGE_MANAGEMENT_TABLE_CONTENT BACK_TABLE_CONTENT">
                         <li>001</li>
                         <li>刊登</li>
                         <li><img src="./img/backend/close-up-veterinarian-taking-care-dog 1.jpg" alt=""></li>
@@ -175,18 +177,7 @@
                         <li>2023/04/01</li>
                         <li><i class="bi bi-pencil"></i></li>
                         <li><i class="bi bi-x-lg"></i></li>
-                    </ul>
-
-                    <ul class="MESSAGE_MANAGEMENT_TABLE_CONTENT BACK_TABLE_CONTENT">
-                        <li>002</li>
-                        <li>隱藏</li>
-                        <li><img src="./img/backend/pexels-gustavo-fring-6816869 1.jpg" alt=""></li>
-                        <li>衛教資訊</li>
-                        <li>別讓你的毛小孩吃錯東西 - 腸胃異物</li>
-                        <li>2023/04/01</li>
-                        <li><i class="bi bi-pencil"></i></li>
-                        <li><i class="bi bi-x-lg"></i></li>
-                    </ul>
+                    </ul> -->
 
                 </section>
 
@@ -200,7 +191,7 @@
                 <section class="ADD_MESSAGE">
 
                     <section class="MESSAGE_IMAGE">
-                        
+
                         <div id="preview_message_pic" class="PREVIEW_MESSAGE_PIC">
                             <i class="bi bi-image"></i>
                         </div>
@@ -213,16 +204,35 @@
 
                     </section>
 
-                    <label for="message_title" class="INPUT">消息標題<br>
-                        <input type="text" name="message_title" id="message_title">
+                    <label for="message_classification" class="SELECT">消息分類<br>
+                        <select name="new_message_classification" id="new_message_classification" class="MESSAGE_CLASSIFICATION">
+                            <option value="">請選擇消息分類</option>
+                            <option value="">最新消息</option>
+                            <option value="">衛教資訊</option>
+                            <option value="">相關連結</option>
+                        </select>
+                    </label>
+
+                    <label for="message_status" class="SELECT">消息狀態<br>
+                        <select name="new_message_status" id="new_message_status" class="MESSAGE_STATUS">
+                            <option value="">請選擇消息狀態</option>
+                            <option value="">刊登</option>
+                            <option value="">隱藏</option>
+                        </select>
+                    </label>
+
+                    <label for="new_message_title" class="INPUT">消息標題<br>
+                        <input type="text" name="new_message_title" id="new_message_title">
                     </label>
 
                     <p>消息內容</p>
-                    <div id="summernote" class="SUMMERNOTE"></div>
+                    <div id="summernote" name="new_message_content" class="SUMMERNOTE"></div>
 
-                    <button class="BTN_BACK" type="submit">新增消息</button>
-                    <button class="BTN_BACK CANCEL" type="submit">取消</button>
-
+                    <div class="BUTTON">
+                        <button class="BTN_BACK" type="submit" onclick="return doAddMessage()">新增消息</button>
+                        <button class="BTN_BACK CANCEL" type="submit" onclick="back()">取消</button>
+                    </div>
+                    
                 </section>
 
             </section>
@@ -237,33 +247,5 @@
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <script src="./js/back_call_system.js"></script>
     <script src="./js/back_message_management.js"></script>
-
-    <script>
-
-        $(document).ready(function () {
-
-            $('.BACK_ADD_MESSAGE').hide();
-
-            $('.BACK_NAV ul li').eq(0).click(function () {
-                $('.BACK_ADD_MESSAGE').show();
-                $('.BACK_MESSAGE_MANAGEMENT').hide();
-                event.preventDefault();
-            })
-
-            $('.CANCEL').eq(0).click(function () {
-                $('.BACK_MESSAGE_MANAGEMENT').show();
-                $('.BACK_ADD_MESSAGE').hide();
-            })
-
-        })
-
-        $('#summernote').summernote({
-            height: 400,                 // set editor height
-            minHeight: null,             // set minimum height of editor
-            maxHeight: null,             // set maximum height of editor
-            focus: false                 // set focus to editable area after initializing summernote
-        });
-
-    </script>
 
 </body>
