@@ -2,6 +2,8 @@
 
 include('conn.php');
 
+
+//會員搜尋
 $phone = $_POST['phone'];
 $name = $_POST['name'];
 
@@ -52,6 +54,7 @@ if($phone != '' && $name != ''){
    echo json_encode($data);
 
 }
+
 
 
 
