@@ -218,40 +218,40 @@ function joinSub(e) {
     let vfy = $('.SIGNUP_VERIFY').val();
 
     if (usn === '' && pho === '' && eml === '' && psw === '' && vpw === '' && vfy === '') {
-        e.preventDefault();
+        // e.preventDefault();
         alert('註冊資料不得為空！');
         return;
     } else if (usn === '') {
-        e.preventDefault();
+        // e.preventDefault();
         alert('請輸入姓名！');
         return;
     } else if (psw === '') {
-        e.preventDefault();
+        // e.preventDefault();
         alert('請輸入密碼！');
         return;
     } else if (vpw === '') {
-        e.preventDefault();
+        // e.preventDefault();
         alert('請輸入確認密碼！');
         return;
     } else if (pho === '') {
-        e.preventDefault();
+        // e.preventDefault();
         alert('請輸入手機號碼！');
         return;
     } else if (eml === '') {
-        e.preventDefault();
+        // e.preventDefault();
         alert('請輸入信箱！');
         return;
     } else if (vfy === '') {
-        e.preventDefault();
+        // e.preventDefault();
         alert('請輸入驗證碼！');
         return;
     } else if (usn !== '' && psw !== '' && vpw !== '' && pho !== '' && eml !== '' && vfy !== '') {
         if (psw != vpw) {
-            e.preventDefault();
+            // e.preventDefault();
             alert('兩次密碼輸入不相同！');
             return;
         } else if (pho.length < 10) {
-            e.preventDefault();
+            // e.preventDefault();
             alert('手機號碼不正確！');
             return;
         } else {
@@ -266,28 +266,32 @@ function joinSub(e) {
                     PASSWORD: psw
                 },
                 dataType: "text",
-                success: function (response) {
+                success: function (response, status, xhr) {
                     console.log(response);
-                    // 清空註冊資料
-                    $('.POPUP_SIGNUP input').val('');
-                    // 跳轉到註冊成功
-                    $('.POPUP_TABS_CONTENT div').removeClass('POPUPACTIVE');
-                    $('#popup_signup_succ').addClass('POPUPACTIVE');
 
-                    // 監看是否有點擊返回登入，否則就三秒後跳轉登入頁面
-                    timeoutId = setTimeout(function () {
-                        // 載入登入頁
-                        POPUP_READY();
-                        LOGIN_SIGNUP_TABS_READY();
-                        $('.POPUP_NAVS li:first-child').addClass('TAB_ACTIVE');
-                        $('.POPUP_TABS_CONTENT div:first-child').addClass('POPUPACTIVE');
-                        $('.INPUT_GROUP').removeClass('POPUPACTIVE');
+                    if (xhr.status === 200) {
+                        // 清空註冊資料
+                        $('.POPUP_SIGNUP input').val('');
+                        // 跳轉到註冊成功
+                        $('.POPUP_TABS_CONTENT div').removeClass('POPUPACTIVE');
+                        $('#popup_signup_succ').addClass('POPUPACTIVE');
 
-                    }, 3000);
-
+                        // 監看是否有點擊返回登入，否則就三秒後跳轉登入頁面
+                        timeoutId = setTimeout(function () {
+                            // 載入登入頁
+                            POPUP_READY();
+                            LOGIN_SIGNUP_TABS_READY();
+                            $('.POPUP_NAVS li:first-child').addClass('TAB_ACTIVE');
+                            $('.POPUP_TABS_CONTENT div:first-child').addClass('POPUPACTIVE');
+                            $('.INPUT_GROUP').removeClass('POPUPACTIVE');
+                        }, 3000);
+                    } else {
+                        alert(response); // 显示错误消息
+                        // alert("註冊失敗！請檢查資料是否正確");
+                    }
                 },
-                error: function (exception) {
-                    alert("發生錯誤: " + exception.status);
+                error: function (xhr, status, error) {
+                    alert("發生錯誤: " + xhr.status);
                 }
             });
         }
