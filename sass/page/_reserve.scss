@@ -159,8 +159,6 @@
         padding-top: 9px;
     }
 
-
-
     .RESERVE_FORM .STEPS {
         display: flex;
         align-items: center;
@@ -244,22 +242,22 @@
     }
 
     .CALENDAR_AREA {
+
         #calendar {
-            .fc-toolbar-chunk {
-                // width: 50%;
-            }
 
             font-size: 14px;
 
             a {
                 font-size: 12px;
             }
+
         }
 
         .CALENDAR_INFO {
             padding-top: 20px;
             padding-left: 50px;
         }
+
     }
 
     .RESERVE_FORM ul li {
@@ -269,4 +267,5 @@
     .FOOTER_BOTTOM {
         margin-bottom: 0px;
     }
+
 }
