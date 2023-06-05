@@ -1,8 +1,16 @@
 <?php
 
 function getMemberPath() {
+
+   global $pdo;
+  
+   $memberID = $pdo->lastInsertId();
+
    $ServerRoot = $_SERVER["DOCUMENT_ROOT"];
-   $filePath = "/THD101_NO1/Upload/member/";
+
+   $filePath = "/THD101_NO1/img/member/" . $memberID ."/"; //本地
+   // $filePath = "../dist/img/Upload/" . $memberID ."/member/"; //server
+
    $fullPath = $ServerRoot . $filePath;
 
    // 檢查目錄是否存在，如果不存在，則建立目錄

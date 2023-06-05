@@ -39,9 +39,12 @@ function doAddMember(){
         success:function(response){
             
             alert(response);
+
             location.href = '_back_member_profile.html'
+            
         },
         error: function(exception) {
+            
             alert("發生錯誤: " + exception.status);
         }
     })
