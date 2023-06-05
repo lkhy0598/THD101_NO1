@@ -30,7 +30,7 @@
             </a>
 
             <ul>
-                <li><a href="_back_member_profile.html" onclick="doAddMember()"><i class="bi bi-plus-square"></i> 新增會員 / 寵物</a></li>
+                <li><a href="_back_member_profile.html"><i class="bi bi-plus-square"></i> 新增會員 / 寵物</a></li>
                 <li><a href="_back_user_settings.html"><i class="bi bi-person-circle"></i> USER 你好</a></li>
                 <li><a href="index.html">登出後台</a></li>
             </ul>
@@ -241,55 +241,63 @@
 
                     <section class="ADD_NEW_MEMBER">
 
+                        <!-- <form enctype="multipart/form-data"> -->
 
-                        <section  class="ADD_NEW_FORM">
+                            <section  class="ADD_NEW_FORM">
 
-                            <section class="ADD_NEW_MEMBER_PIC ADD_PIC">
-
-                                <div id="preview_member_pic">
-                                    <img src="./img/backend/MENBER_PIC.svg" class="ADD_PIC_IMG" />
-                                </div>
-
-                                <label for="member_pic" class="PIC_FILE_BOX">
-                                    <input type="button" id="member_pic_btn" value="上傳照片" class="BTN_BACK">
-                                    <input name="member_pic" type="file" id="member_pic" class="PIC_FILE"
-                                        accept="accept=" image/* " />
-                                </label>
-
+                                <section class="ADD_NEW_MEMBER_PIC ADD_PIC">
+    
+                                    <div id="preview_member_pic">
+                                        <img src="./img/backend/MENBER_PIC.svg" class="ADD_PIC_IMG" />
+                                    </div>
+    
+                                    <label for="member_pic" class="PIC_FILE_BOX">
+                                        <input type="button" id="member_pic_btn" value="上傳照片" class="BTN_BACK">
+                                        <input name="member_pic" type="file" id="member_pic" class="PIC_FILE"
+                                            accept="accept=" image/* " />
+                                    </label>
+    
+                                </section>
+    
+                                <ul class="ADD_NEW_MEMBER_FORM">
+                                    <li>
+                                        <label for="newmember_name" class="INPUT">姓名<br>
+                                            <input type="text" name="newmember_name" id="newmember_name">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="newmember_phone" class="INPUT">手機號碼<br>
+                                            <input type="text" name="newmember_phone" id="newmember_phone">
+                                        </label>
+                                    </li>
+    
+                                    <li>
+                                        <label for="newmember_email" class="INPUT">電子信箱<br>
+                                            <input type="email" name="newmember_email" id="newmember_email">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="newmember_address" class="INPUT">通訊地址<br>
+                                            <input type="text" name="newmember_address" id="newmember_address">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <button class="BTN_BACK" type="submit" onclick="return doAddMember()">新增會員</button>
+                                    </li>
+                                    <li>
+                                        <button class="BTN_BACK CANCEL" type="submit" onclick="back()">取消</button>
+                                    </li>
+                                </ul>
+    
                             </section>
-
-                            <ul class="ADD_NEW_MEMBER_FORM">
-                                <li>
-                                    <label for="name" class="INPUT">姓名<br>
-                                        <input type="text" name="name" id="name">
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="phone" class="INPUT">手機號碼<br>
-                                        <input type="text" name="phone" id="phone">
-                                    </label>
-                                </li>
-
-                                <li>
-                                    <label for="email" class="INPUT">電子信箱<br>
-                                        <input type="email" name="email" id="email">
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="address" class="INPUT">通訊地址<br>
-                                        <input type="text" name="address" id="address">
-                                    </label>
-                                </li>
-                                <li>
-                                    <button class="BTN_BACK" type="submit">新增會員</button>
-                                </li>
-                                <li>
-                                    <button class="BTN_BACK CANCEL" type="submit">取消</button>
-                                </li>
-                            </ul>
-
-                        </section>
+                        <!-- </form> -->
                     </section>
+
+                        
+
+                        
+
+
                     <!-- 新增寵物 -->
                     <div class="BACK_BANNER">
                         <h3>新增寵物</h3>
@@ -362,7 +370,7 @@
                                     <button class="BTN_BACK" type="submit">新增寵物</button>
                                 </li>
                                 <li>
-                                    <button class="BTN_BACK CANCEL" type="submit">取消</button>
+                                    <button class="BTN_BACK CANCEL" type="submit" onclick="back()">取消</button>
                                 </li>
                             </ul>
 
@@ -637,13 +645,12 @@
 
             $('.BACK_ADD_NEW_MEMBER').hide();
 
-            // $('.BACK_NAV ul li').eq(0).click(function () {
-            //     $('.BACK_ADD_NEW_MEMBER').show();
-            //     $('.BACK_MEMBER_PROFILE').hide();
-            //     event.preventDefault();
-            // });
+            $('.BACK_NAV ul li').eq(0).click(function () {
+                $('.BACK_ADD_NEW_MEMBER').show();
+                $('.BACK_MEMBER_PROFILE').hide();
+                event.preventDefault();
+            });
 
-            
                 
             $('.RE_PET_PROFILE').click(function () {
                     $('.BACK_MODIFY_PET').show();
