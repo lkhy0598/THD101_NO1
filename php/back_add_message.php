@@ -12,6 +12,7 @@ $new_message_status = $_POST['new_message_status'];
 $new_message_title = $_POST['new_message_title'];
 $new_message_content = $_POST['new_message_content']; 
 
+
 //Server上的暫存檔路徑含檔名
 $filePath_Temp = $_FILES["message_pic"]["tmp_name"];
 
