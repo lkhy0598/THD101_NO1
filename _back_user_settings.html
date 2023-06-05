@@ -30,6 +30,7 @@
             </a>
 
             <ul>
+                <li><a href="_back_user_settings.html"><i class="bi bi-plus-square"></i> 新增使用者</a></li>
                 <li><a href="_back_user_settings.html"><i class="bi bi-person-circle"></i> USER 你好</a></li>
                 <li><a href="index.html">登出後台</a></li>
             </ul>
@@ -90,7 +91,7 @@
         <!-- 右側內容 "主要" 不會更動 -->
         <main class="BACK_MAIN_CONTENT_RIGHT">
 
-            <!-- 商品管理區塊 "會更動區塊" -->
+            <!-- 使用者設定區塊 "會更動區塊" -->
             <section class="BACK_USER_SETTINGS_ALL">
 
                 <h2>使用者設定</h2>
@@ -192,29 +193,98 @@
 
             </section>
 
+            <!-- 使用者設定區塊 "會更動區塊" -->
+            <section class="BACK_ADD_USER_ALL">
+
+                <h2>新增使用者</h2>
+
+                <section class="BACK_ADD_USER">
+
+                    <div class="BACK_BANNER">
+                        <h3>使用者相關設定</h3>
+                    </div>
+
+                    <section class="ADD_USER_SECTION">
+
+                        <form action="" class="ADD_USER_FORM">
+
+                            <section class="ADD_USER_PIC ADD_PIC">
+
+                                <div id="preview_add_user_pic">
+                                    <img src="./img/backend/MENBER_PIC.svg" class="ADD_PIC_IMG" />
+                                </div>
+
+                                <label for="add_user_pic" class="PIC_FILE_BOX">
+                                    <input type="button" id="user_pic_btn" value="上傳照片" class="BTN_BACK">
+                                    <input name="add_user_pic" type="file" id="add_user_pic" class="PIC_FILE"
+                                        accept="image/gif, image/jpeg, image/png" />
+                                </label>
+
+                            </section>
+
+                            <ul class="USER_SETTINGS">
+                                <li>
+                                    <label for="user_name" class="INPUT">使用者名稱<br>
+                                        <input type="text" name="user_name" id="user_name">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="birthday" class="INPUT">生日<br>
+                                        <input type="date" name="birthday" id="birthday">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="phone" class="INPUT">手機號碼<br>
+                                        <input type="text" name="phone" id="phone">
+                                    </label>
+                                </li>
+
+                                <li>
+                                    <label for="email" class="INPUT">電子信箱<br>
+                                        <input type="email" name="email" id="email">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="address" class="INPUT">通訊地址<br>
+                                        <input type="text" name="address" id="address">
+                                    </label>
+                                </li>
+                                <li>
+                                    <p>密碼設定</p>
+                                </li>
+                                <li>
+                                    <label for="new_password" class="INPUT">新密碼<br>
+                                        <input type="text" name="new_password" id="new_password"><br>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="new_password_confirm" class="INPUT">新密碼確認<br>
+                                        <input type="text" name="new_password_confirm" id="new_password_confirm">
+                                    </label>
+                                </li>
+                                <li>
+                                    <button class="BTN_BACK" type="submit">新增</button>
+                                </li>
+                                <li>
+                                    <button class="BTN_BACK" type="submit">取消</button>
+                                </li>
+
+                            </ul>
+
+                        </form>
+
+                    </section>
+
+                </section>
+
+            </section>
+
         </main>
 
     </section>
-    
-    <script>
-        // 修改使用者照片
-        var userPic = document.getElementById('user_pic');
-        var previewUserPic = document.getElementById('preview_user_pic');
-        userPic.addEventListener('change',function (e) {
-            var file = e.target.files[0];
-            // console.log(file);
-            var reader = new FileReader();
-            // console.log(reader);
-            reader.onload = function(e){
-                var img = document.createElement('img');
-                img.src = e.target.result;
-                img.classList.add('PREVIEW_IMG');
-                previewUserPic.innerHTML = '';
-                previewUserPic.appendChild(img);
-            }
-            reader.readAsDataURL(file);
-        })
-    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./js/back_user_settings.js"></script>
     <script src="./js/back_call_system.js"></script>
 
 </body>
