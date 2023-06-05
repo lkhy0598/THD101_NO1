@@ -241,7 +241,7 @@
             width: 100%;
             display: flex;
             flex-grow: 1;
-            margin-top: 20px;
+            margin: 20px auto 100px;
 
             .RESERVE_ARC {
                 p {
@@ -275,35 +275,19 @@
             }
 
         }
-    }
 
-    .ILLNESS_SIGN {
-        margin-top: -80px;
-        margin-left: 18px;
-        margin-bottom: 50px;
-        width: 98%;
-        font-size: 20px;
-        display: flex;
-        flex-wrap: wrap;
-
-        div {
-            width: 100%;
-        }
-
-        .ILLNESS_SIGN_BTN {
-            font-size: 16px;
-            width: 45%;
-            margin-right: 15px;
-        }
-    }
-
-    .TEXT_AREA {
-        width: 90%;
-        margin-top: -50px;
-        margin-left: 10px;
-
-        .TEXTAREA {
-            font-size: 16px;
+        .RESERVE_FORM {
+            .OTHER_ILLNESS_SIGN {
+                .TEXT_AREA {
+                    width: 90%;
+                    margin-top: -50px;
+                    margin-left: 10px;
+            
+                    .TEXTAREA {
+                        font-size: 16px;
+                    }
+                }
+            }
         }
     }
 
