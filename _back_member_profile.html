@@ -171,7 +171,7 @@
 
                     <section class="PET_PROFILE_SEARCH">
 
-                        <form action="">
+                        
 
                             <ul>
                                 <li>
@@ -182,6 +182,7 @@
                                 <li>
                                     <label for="consultation_type" class="SELECT">看診類型<br>
                                         <select id="consultation_type">
+                                            <option value="default">請選擇類型</option>
                                             <option value="general">一般掛號</option>
                                             <option value="vaccines">預防針</option>
                                             <option value="health_checks">健康檢查</option>
@@ -191,11 +192,11 @@
                                     </label>
                                 </li>
                                 <li>
-                                    <button class="BTN_BACK" type="submit">搜尋寵物</button>
+                                    <button class="BTN_BACK" type="submit" onclick="Petsearch()">搜尋寵物</button>
                                 </li>
                             </ul>
 
-                        </form>
+                    
                     </section>
                     <!-- 寵物搜尋結果 -->
                     <section class="PET_PROFILE_TABLE">
@@ -207,22 +208,12 @@
                             <li>修改</li>
                             <li>刪除</li>
                         </ul>
-                        <ul class="PET_PROFILE_CONTENT BACK_TABLE_CONTENT">
-                            <li>0988192839</li>
-                            <li>范植鑫</li>
-                            <li>一般掛號</li>
-                            <li>2023/04/01</li>
-                            <li><i class="bi bi-pencil RE_PET_PROFILE"></i></li>
-                            <li><i class="bi bi-x-lg DEL_PET_BTN"></i></li>
-                        </ul>
-                        <ul class="PET_PROFILE_CONTENT BACK_TABLE_CONTENT">
-                            <li>0988192839</li>
-                            <li>范植鑫</li>
-                            <li>寵物溝通</li>
-                            <li>2023/04/01</li>
-                            <li><i class="bi bi-pencil RE_PET_PROFILE"></i></li>
-                            <li><i class="bi bi-x-lg DEL_PET_BTN"></i></li>
-                        </ul>
+
+                        <div id="pet_result"></div>
+
+
+
+                        
                     </section>
 
                 </section>

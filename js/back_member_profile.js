@@ -65,7 +65,7 @@ function dosearch(){
     }
     $.ajax({            
         method: "POST",
-        url: "http://localhost/THD101_NO1/php/back_search_member.php",
+        url: "http://localhost/THD101_project/php/back_search_member.php",
         data:{
             phone: phone, 
             name: name
@@ -73,7 +73,7 @@ function dosearch(){
         dataType: "json",
         
         success: function (response) {
-            // console.log(response);
+            console.log(response);
             // 更新html內容前先清空原有資料
             $("#result").html("");
             // 更新html內容(透過jQuery跑迴圈取值)
@@ -99,6 +99,65 @@ function dosearch(){
         }
     });
 }
+
+
+// 寵物搜尋
+function Petsearch(){
+
+    var phone = $("#phone").val();
+    var type = $("#consultation_type").val();
+
+    if (phone == "" && type == "default") {
+        // 若輸入欄位為空，不執行搜尋操作
+        alert ("請選擇類型");
+    }
+    $.ajax({            
+        method: "POST",
+        url: "http://localhost/THD101_project/php/back_pet_search_member.php",
+        data:{
+            phone: phone, 
+            type: type
+        },            
+        dataType: "json",
+        
+        success: function (response) {
+            // console.log(response);
+            // 更新html內容前先清空原有資料
+            $("#pet_result").html("");
+            // 更新html內容(透過jQuery跑迴圈取值)
+            // $.each(response, function(index, row) {
+
+            //     $("#pet_result").append(
+            //         "<ul class='PET_PROFILE_CONTENT BACK_TABLE_CONTENT'>" + 
+            //         "<li>" + row.PHONENO +"</li>" +
+            //         "<li>" + row.PET_NAME + "</li>" +
+            //         "<li>" + row.Type + "</li>" +
+            //         "<li>" + row.CREATEDATE + "</li>" +
+            //         "<li>" + "<i class='bi bi-pencil RE_PET_PROFILE' onclick='doReviseMember()'>" + "</i>" + "</li>" +
+            //         "<li>" + "<i class='bi bi-x-lg DEL_PET_BTN' onclick='doDelMember()'>" + "</i>" + "</li>" 
+                   
+            //         + "</ul>"
+            //     );
+
+            // });
+
+            if(response===1){
+                alert('lalala');
+            }
+        },
+        error: function(exception) {
+            alert("發生錯誤: " + exception.status);
+        }
+    });
+}
+
+
+
+
+
+
+
+
 // 會員修改
 function doReviseMember(){
     $('.BACK_MODIFY_MEMBER').show();

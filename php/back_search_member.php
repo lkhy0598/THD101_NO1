@@ -3,6 +3,10 @@
 include('conn.php');
 
 
+<<<<<<< HEAD
+=======
+//會員搜尋
+>>>>>>> A
 $phone = $_POST['phone'];
 $name = $_POST['name'];
 
@@ -53,6 +57,7 @@ if($phone != '' && $name != ''){
    echo json_encode($data);
 
 }
+
 
 
 
