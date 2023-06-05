@@ -235,7 +235,7 @@
     }
 }
 
-// =========================  RWD ===============================
+// =========================  RWD =============================== //
 
 @mixin m() {
     @media screen and (max-width: 415px) {
@@ -249,7 +249,9 @@
             width: 100%;
             display: flex;
             flex-grow: 1;
-            margin-top: 20px;
+            margin: 20px auto 100px;
+            
+            // margin-top: 20px;
 
             .RESERVE_ARC {
                 p {
@@ -283,36 +285,40 @@
             }
 
         }
+        .RESERVE_FORM {
+            .ILLNESS_SIGN {
+                margin: -80px auto 80px;
+                width: 100%;
+                font-size: 20px;
+                display: flex;
+                flex-wrap: wrap;
+
+                div {
+                    width: 100%;
+                }
+        
+                .ILLNESS_SIGN_BTN {
+                    font-size: 16px;
+                    width: 44%;
+                    margin-right: 15px;
+                }
+            }
+
+            .OTHER_ILLNESS_SIGN {
+                .TEXT_AREA {
+                    width: 90%;    
+                    .TEXTAREA {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        
     }
 
-    .ILLNESS_SIGN {
-        margin-top: -80px;
-        margin-left: 18px;
-        margin-bottom: 50px;
-        width: 98%;
-        font-size: 20px;
-        display: flex;
-        flex-wrap: wrap;
+    
 
-        div {
-            width: 100%;
-        }
-
-        .ILLNESS_SIGN_BTN {
-            font-size: 16px;
-            width: 44%;
-            margin-right: 15px;
-        }
-    }
-
-    .TEXT_AREA {
-        width: 90%;
-        margin-left: 10px;
-
-        .TEXTAREA {
-            font-size: 16px;
-        }
-    }
+    
 
     .RESERVE_FORM ul li {
         padding-left: 32px;

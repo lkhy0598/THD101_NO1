@@ -1,40 +1,41 @@
-.BACK_USER_SETTINGS_ALL{
+.BACK_USER_SETTINGS_ALL {
     .BACK_USER_SETTINGS {
         width: 76.5%;
         margin: 85px auto 50px;
     }
-    
+
     .USER_SETTINGS_SECTION {
         width: 85%;
         margin: 50px auto;
     }
-    
+
     .USER_SETTINGS_FORM {
         display: flex;
         justify-content: space-between;
-    
+
         ul {
             width: 70%;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-    
+
             input {
                 width: 100%;
             }
-    
+
             select {
                 width: 100%;
             }
         }
-    
+
         // 左側上傳照片區塊
         .ADD_PIC_IMG {
             width: 75%;
             display: block;
-            margin: 0 auto ;
+            margin: 0 auto;
         }
-        #preview_user_pic{
+
+        #preview_user_pic {
             border-radius: 50%;
             width: 220px;
             height: 220px;
@@ -45,20 +46,20 @@
             align-content: center;
         }
 
-        .PREVIEW_IMG{
-            width: 220px; 
-            height: 220px; 
-            border-radius: 50%; 
-            object-fit: cover; 
-         }
-    
+        .PREVIEW_IMG {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
         .PIC_FILE_BOX {
             position: relative;
-    
+
             .BTN_BACK {
                 width: 160px;
             }
-    
+
             // 隱藏原本按鈕
             .PIC_FILE {
                 width: 180px;
@@ -68,39 +69,40 @@
                 left: 20px;
                 cursor: pointer;
                 opacity: 0;
-    
+
             }
-    
+
         }
-    
+
     }
-    
+
     .USER_SETTINGS li:nth-child(1),
     .USER_SETTINGS li:nth-child(2),
     .USER_SETTINGS li:nth-child(3),
     .USER_SETTINGS li:nth-child(4) {
         width: 47.5%;
     }
-    
-    .USER_SETTINGS li:nth-child(5){
+
+    .USER_SETTINGS li:nth-child(5) {
         width: 100%;
     }
-    
-    .USER_SETTINGS li:nth-child(6),.USER_SETTINGS li:nth-child(7){
+
+    .USER_SETTINGS li:nth-child(6),
+    .USER_SETTINGS li:nth-child(7) {
         margin-top: 25px;
         flex-basis: 50%;
     }
-    
-    .USER_SETTINGS li:nth-child(8){
+
+    .USER_SETTINGS li:nth-child(8) {
         width: 100%;
         margin-top: 60px;
-    
-        p{
+
+        p {
             color: $blueblack;
             font-weight: 700;
             position: relative;
-    
-            &::after{
+
+            &::after {
                 content: "";
                 width: 100%;
                 border-bottom: 2px solid $blueblack;
@@ -109,20 +111,148 @@
                 top: 40px;
             }
         }
-    
+
     }
-    
-    .USER_SETTINGS li:nth-child(9){
+
+    .USER_SETTINGS li:nth-child(9) {
         width: 47.5%;
         margin-top: 60px;
     }
-    
-    .USER_SETTINGS li:nth-child(10),.USER_SETTINGS li:nth-child(11),.USER_SETTINGS li:nth-child(12){
+
+    .USER_SETTINGS li:nth-child(10),
+    .USER_SETTINGS li:nth-child(11),
+    .USER_SETTINGS li:nth-child(12) {
         width: 47.5%;
     }
-    
-    .USER_SETTINGS li:nth-child(13),.USER_SETTINGS li:nth-child(14){
+
+    .USER_SETTINGS li:nth-child(13),
+    .USER_SETTINGS li:nth-child(14) {
         margin-top: 25px;
         flex-basis: 50%;
     }
+}
+
+.BACK_ADD_USER_ALL {
+
+    .BACK_ADD_USER {
+        width: 76.5%;
+        margin: 85px auto 50px;
+    }
+
+    .ADD_USER_SECTION {
+        width: 85%;
+        margin: 50px auto;
+    }
+
+    .ADD_USER_FORM {
+
+        display: flex;
+        justify-content: space-between;
+
+        ul {
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            input {
+                width: 100%;
+            }
+
+            select {
+                width: 100%;
+            }
+        }
+
+        // 左側上傳照片區塊
+        .ADD_PIC_IMG {
+            width: 75%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #preview_add_user_pic {
+            border-radius: 50%;
+            width: 220px;
+            height: 220px;
+            overflow: hidden;
+            margin: 0 auto 35px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .PREVIEW_IMG {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .PIC_FILE_BOX {
+            position: relative;
+
+            .BTN_BACK {
+                width: 160px;
+            }
+
+            // 隱藏原本按鈕
+            .PIC_FILE {
+                width: 180px;
+                height: 65px;
+                position: absolute;
+                top: 0;
+                left: 20px;
+                cursor: pointer;
+                opacity: 0;
+
+            }
+
+        }
+
+    }
+
+    .USER_SETTINGS li:nth-child(1),
+    .USER_SETTINGS li:nth-child(2),
+    .USER_SETTINGS li:nth-child(3),
+    .USER_SETTINGS li:nth-child(4) {
+        width: 47.5%;
+    }
+
+    .USER_SETTINGS li:nth-child(5) {
+        width: 100%;
+    }
+
+    .USER_SETTINGS li:nth-child(6) {
+        width: 100%;
+        margin: 40px 0 60px;
+
+        p {
+            color: $blueblack;
+            font-weight: 700;
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 100%;
+                border-bottom: 2px solid $blueblack;
+                position: absolute;
+                left: 0;
+                top: 40px;
+            }
+        }
+
+    }
+
+    .USER_SETTINGS li:nth-child(7),
+    .USER_SETTINGS li:nth-child(8) {
+        width: 47.5%;
+    }
+
+    .USER_SETTINGS li:nth-child(9),
+    .USER_SETTINGS li:nth-child(10) {
+        margin-top: 25px;
+        flex-basis: 50%;
+    }
+
 }

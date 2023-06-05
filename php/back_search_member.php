@@ -3,6 +3,10 @@
 include('conn.php');
 
 
+<<<<<<< HEAD
+=======
+//會員搜尋
+>>>>>>> A
 $phone = $_POST['phone'];
 $name = $_POST['name'];
 
@@ -13,12 +17,13 @@ if( $phone == ''){
    $statement = $pdo->prepare($sql);
 
    $statement->bindValue(1,"%".$name."%");
-
+ 
    $statement ->execute();
 
    $data = $statement->fetchAll();
 
    header('Content-Type: application/json');
+
    echo json_encode($data);
 }
 
@@ -34,6 +39,7 @@ if($name == '' ){
    $data = $statement->fetchAll();
 
    header('Content-Type: application/json');
+
    echo json_encode($data);
 }
 
@@ -50,11 +56,9 @@ if($phone != '' && $name != ''){
    $data = $statement->fetchAll();
 
    header('Content-Type: application/json');
+
    echo json_encode($data);
-
 }
-
-
 
 ?>
 
