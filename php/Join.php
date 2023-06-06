@@ -31,17 +31,17 @@ $stmt->execute();
 $confirmResult = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if ($confirmResult['phoneCount'] > 0 && $confirmResult['emailCount'] > 0) {
-     http_response_code(400); // 设置HTTP状态码为400表示错误
+     // http_response_code(400); // 设置HTTP状态码为400表示错误
      echo "註冊失敗！\n";
      echo "您的信箱及電話皆已被註冊\n";
  
  } else if ($confirmResult['phoneCount'] > 0) {
-     http_response_code(400);
+     // http_response_code(400);
      echo "註冊失敗！\n";
      echo "您的電話已被註冊\n";
  
  } else if ($confirmResult['emailCount'] > 0) {
-     http_response_code(400);
+     // http_response_code(400);
      echo "註冊失敗！\n";
      echo "您的信箱已被註冊 \n";
 } else {
@@ -61,7 +61,7 @@ if ($confirmResult['phoneCount'] > 0 && $confirmResult['emailCount'] > 0) {
           echo "註冊成功！\n";
           echo "您好！" . $USERNAME . "\n";
           echo "您註冊的電話為" . $PHONENO . "\n";
-          echo "您註冊的信箱為" . $EMAIL . "\n>";
+          echo "您註冊的信箱為" . $EMAIL . "\n";
           // echo "歡迎使用下方查詢功能來查詢所有會員資料<br/>";
      } else {
           http_response_code(500);
