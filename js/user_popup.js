@@ -51,6 +51,10 @@ $('.LOGIN').click(function () {
     $(".PASSWORD").attr("type", "password");
     $(".SHOWPASS").find('i').removeClass("bi-eye-slash-fill").addClass("bi-eye-fill");
 
+    // 初始化填空警告
+    // 註冊
+    $(".SIGNUP_INPUTS .INPUT_WARN").find("p").css("display", "none");
+
     // 打開視窗
     $('.MODAL').addClass('MODAL_ACTIVE');
     $('.POPUP_WRAP').addClass('POPUP_WRAP_ACTIVE');
@@ -86,60 +90,6 @@ $('.TOSIGNUP_BTN').click(function () {
     $('.POPUP_NAVS li:nth-child(2)').addClass('TAB_ACTIVE');
     $('#POPUP_SIGNUP').addClass('POPUPACTIVE');
 
-});
-// 註冊頁內的送出資料 - 前端驗證資料
-
-// 倒數計時是否中斷
-var timeoutId = null;
-
-$('.SIGNUP_SUB').click(function (e) {
-
-    let usn = $('.SIGNUP_USERNAME').val();
-    let psw = $('.SIGNUP_PASSWORD').val();
-    let vpw = $('.SIGNUP_VERIFPASSWORD').val();
-    let pho = $('.SIGNUP_PHONENO').val();
-    let eml = $('.SIGNUP_EMAIL').val();
-    let vfy = $('.SIGNUP_VERIFY').val();
-
-    if (usn === '' && pho === '' && eml === '' && psw === '' && vpw === '' && vfy === '') {
-        e.preventDefault();
-        alert('註冊資料不得為空！');
-        return;
-    } else if (usn === '') {
-        e.preventDefault();
-        alert('請輸入姓名！');
-        return;
-    } else if (psw === '') {
-        e.preventDefault();
-        alert('請輸入密碼！');
-        return;
-    } else if (vpw === '') {
-        e.preventDefault();
-        alert('請輸入確認密碼！');
-        return;
-    } else if (pho === '') {
-        e.preventDefault();
-        alert('請輸入手機號碼！');
-        return;
-    } else if (eml === '') {
-        e.preventDefault();
-        alert('請輸入信箱！');
-        return;
-    } else if (vfy === '') {
-        e.preventDefault();
-        alert('請輸入驗證碼！');
-        return;
-    } else if (usn !== '' && psw !== '' && vpw !== '' && pho !== '' && eml !== '' && vfy !== '') {
-        if (psw != vpw) {
-            e.preventDefault();
-            alert('兩次密碼輸入不相同！');
-            return;
-        } else if (pho.length < 10) {
-            e.preventDefault();
-            alert('手機號碼不正確！');
-            return;
-        }
-    }
 });
 
 // ====== 忘記密碼 ======
@@ -178,6 +128,10 @@ $('.TOPASS_BTN').click(function () {
 });
 
 // 顯示修改完成頁
+
+// 倒數計時是否中斷
+var timeoutId = null;
+
 // 監看是否有點擊返回登入，否則就三秒後跳轉登入頁面
 $('.PASS_SUB').click(function () {
 
@@ -220,40 +174,61 @@ function joinSub(e) {
     if (usn === '' && pho === '' && eml === '' && psw === '' && vpw === '' && vfy === '') {
         // e.preventDefault();
         alert('註冊資料不得為空！');
-        return;
+        $(".SIGNUP_INPUTS .INPUT_WARN").find("p").css("display", "none");
+        $(".SIGNUP_INPUTS .INPUT_WARN").find("p").eq(0).css("display", "block");
+        return false;
     } else if (usn === '') {
         // e.preventDefault();
         alert('請輸入姓名！');
-        return;
+        $(".SIGNUP_INPUTS .INPUT_WARN").find("p").css("display", "none");
+        $(".SIGNUP_INPUTS .INPUT_WARN").find("p").eq(1).css("display", "block");
+        return false;
     } else if (psw === '') {
         // e.preventDefault();
         alert('請輸入密碼！');
-        return;
+        $(".SIGNUP_INPUTS .INPUT_WARN").find("p").css("display", "none");
+        $(".SIGNUP_INPUTS .INPUT_WARN").find("p").eq(2).css("display", "block");
+        return false;
     } else if (vpw === '') {
         // e.preventDefault();
         alert('請輸入確認密碼！');
-        return;
+        $(".SIGNUP_INPUTS .INPUT_WARN").find("p").css("display", "none");
+        $(".SIGNUP_INPUTS .INPUT_WARN").find("p").eq(3).css("display", "block");
+
+        return false;
     } else if (pho === '') {
         // e.preventDefault();
         alert('請輸入手機號碼！');
-        return;
+        $(".SIGNUP_INPUTS .INPUT_WARN").find("p").css("display", "none");
+        $(".SIGNUP_INPUTS .INPUT_WARN").find("p").eq(4).css("display", "block");
+
+        return false;
     } else if (eml === '') {
         // e.preventDefault();
         alert('請輸入信箱！');
-        return;
+        $(".SIGNUP_INPUTS .INPUT_WARN").find("p").css("display", "none");
+        $(".SIGNUP_INPUTS .INPUT_WARN").find("p").eq(5).css("display", "block");
+
+        return false;
     } else if (vfy === '') {
         // e.preventDefault();
         alert('請輸入驗證碼！');
-        return;
+        $(".SIGNUP_INPUTS .INPUT_WARN").find("p").css("display", "none");
+        $(".SIGNUP_INPUTS .INPUT_WARN").find("p").eq(6).css("display", "block");
+        return false;
     } else if (usn !== '' && psw !== '' && vpw !== '' && pho !== '' && eml !== '' && vfy !== '') {
         if (psw != vpw) {
             // e.preventDefault();
             alert('兩次密碼輸入不相同！');
-            return;
+            $(".SIGNUP_INPUTS .INPUT_WARN").find("p").css("display", "none");
+            $(".SIGNUP_INPUTS .INPUT_WARN").find("p").eq(8).css("display", "block");
+            return false;
         } else if (pho.length < 10) {
             // e.preventDefault();
             alert('手機號碼不正確！');
-            return;
+            $(".SIGNUP_INPUTS .INPUT_WARN").find("p").css("display", "none");
+            $(".SIGNUP_INPUTS .INPUT_WARN").find("p").eq(9).css("display", "block");
+            return false; 
         } else {
             $.ajax({
                 method: "POST",
@@ -269,13 +244,16 @@ function joinSub(e) {
                 success: function (response, status, xhr) {
                     console.log(response);
 
-                    if (xhr.status === 200) {
+                    if (response.includes("註冊成功")) {
                         // 清空註冊資料
-                        $('.POPUP_SIGNUP input').val('');
+                        $('#POPUP_SIGNUP input').val('');
+                        // 清空填空警告
+                        $(".SIGNUP_INPUTS .INPUT_WARN").find("p").css("display", "none");
                         // 跳轉到註冊成功
                         $('.POPUP_TABS_CONTENT div').removeClass('POPUPACTIVE');
                         $('#popup_signup_succ').addClass('POPUPACTIVE');
 
+                        alert(response);
                         // 監看是否有點擊返回登入，否則就三秒後跳轉登入頁面
                         timeoutId = setTimeout(function () {
                             // 載入登入頁
@@ -291,7 +269,7 @@ function joinSub(e) {
                     }
                 },
                 error: function (xhr, status, error) {
-                    alert("發生錯誤: " + xhr.status);
+                    alert("發生錯誤: " + xhr.status); // 显示AJAX请求的错误信息
                 }
             });
         }
