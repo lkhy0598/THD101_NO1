@@ -228,17 +228,16 @@
       border-radius: 50%;
       width: 220px;
       height: 220px;
-      overflow: hidden;
       margin: 0 auto 35px;
-      display: flex;
-      justify-content: center;
-      align-content: center;
-
+  
       .PREVIEW_IMG{
          width: 220px; 
          height: 220px; 
          border-radius: 50%; 
          object-fit: cover; 
+         display: flex;
+         justify-content: center;
+         align-content: center;
       }
    }
 
@@ -273,9 +272,15 @@
 
       // 左側上傳照片區塊
       .ADD_PIC_IMG {
-         width: 75%;
          display: block;
          margin: 0 auto;
+         width: 220px; 
+         height: 220px; 
+         border-radius: 50%; 
+         object-fit: cover; 
+         display: flex;
+         justify-content: center;
+         align-content: center;
       }
 
       .PIC_FILE_BOX {

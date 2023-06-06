@@ -27,6 +27,7 @@ function doAddMember(){
     formData.append('newmember_address',$('#newmember_address').val());      
 
     $.ajax({
+
         method:"POST",
         url:"http://localhost/THD101_NO1/php/back_add_member_pet.php",
         data:formData,
@@ -37,24 +38,13 @@ function doAddMember(){
         // 告訴jQuery不要去設定Content-Type請求頭
         contentType : false,
         success:function(response){
-            
             alert(response);
-
             location.href = '_back_member_profile.html'
-            
         },
-        error: function(exception) {
-            
+        error: function(exception) {  
             alert("發生錯誤: " + exception.status);
         }
     })
-    
-}
-// 返回
-function back(){
-    $('.BACK_MEMBER_PROFILE').show();
-    $('.BACK_ADD_NEW_MEMBER').hide();
-    event.preventDefault();
 }
 // 會員搜尋
 function dosearch(){
@@ -68,41 +58,36 @@ function dosearch(){
     }
     $.ajax({            
         method: "POST",
-        url: "http://localhost/THD101_project/php/back_search_member.php",
+        // url: "http://localhost/THD101_project/php/back_search_member.php",
+        url: "http://localhost/THD101_NO1/php/back_search_member.php",
         data:{
             phone: phone, 
             name: name
         },            
         dataType: "json",
-        
         success: function (response) {
             console.log(response);
             // 更新html內容前先清空原有資料
             $("#result").html("");
             // 更新html內容(透過jQuery跑迴圈取值)
             $.each(response, function(index, row) {
-
                 $("#result").append(
                     "<ul class='MEMBER_PROFILE_CONTENT BACK_TABLE_CONTENT' >" + 
                     "<li>" + row.NAME +"</li>" +
                     "<li>" + row.PHONENO + "</li>" +
                     "<li>" + row.CREATE_DATE + "</li>" +
-                    "<li>" + "<i class='bi bi-pencil RE_MEMBER_PROFILE' onclick='doReviseMember()' >" + "</i>" + "</li>" +
+                    "<li>" + "<i class='bi bi-pencil RE_MEMBER_PROFILE' onclick='doReviseMember(\"" + row.PHONENO + "\")' >" + "</i>" + "</li>" +
                     "<li>" + "<i class='bi bi-x-lg DEL_MEMBER_BTN' onclick='doDelMember()'>" + "</i>" + "</li>" +
                     "<li>" + "<i class='bi bi-calendar-plus RESERVE_BTN' onclick='doReserve()'>" + "</i>" + "</li>" 
                     + "</ul>"
                 );
-
             });
-
-
         },
         error: function(exception) {
             alert("發生錯誤: " + exception.status);
         }
     });
 }
-
 
 // 寵物搜尋
 function Petsearch(){
@@ -162,14 +147,50 @@ function Petsearch(){
 
 
 // 會員修改
-function doReviseMember(){
+function doReviseMember(phone_revise){
+
     $('.BACK_MODIFY_MEMBER').show();
     $('.BACK_MEMBER_PROFILE').hide();
-}
-// 會員刪除
-function doDelMember(){
+    
+    
+    console.log(phone_revise);
+    $.ajax({
+        method: "GET",
+        url: "http://localhost/THD101_NO1/php/back_modify_member.php",
+        
+        data: {
+            phone_revise: phone_revise
+        },
+        dataType:"json",
+        statusCode: {
+            404: function() {
+                alert("找不到");
+            }
+        },
+        success:function(response){
 
+            console.log(response);
+
+            $('#name_revise').val(response.NAME);
+            $('#phone_revise').val(response.PHONENO);
+            $('#email_revise').val(response.EMAIL);
+            $('#address_revise').val(response.ADDRESS);
+            $('#preview_member_pic_revise img').attr('src', response.MEMBER_AVATAR);
+
+        },
+        error: function(exception) {  
+
+            alert("發生錯誤: " + exception.status);
+        }
+    })
 }
+function doUpdateMember(){
+    
+}
+
+// // 會員刪除
+// function doDelMember()
+
 // 會員新增預約
 function doReserve(){
 
