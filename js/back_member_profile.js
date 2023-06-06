@@ -56,6 +56,7 @@ function dosearch(){
         // 若輸入欄位為空，不執行搜尋操作
         return;
     }
+    console.log(phone);
     $.ajax({            
         method: "POST",
         // url: "http://localhost/THD101_project/php/back_search_member.php",
@@ -66,7 +67,7 @@ function dosearch(){
         },            
         dataType: "json",
         success: function (response) {
-            console.log(response);
+            // console.log(response);
             // 更新html內容前先清空原有資料
             $("#result").html("");
             // 更新html內容(透過jQuery跑迴圈取值)
@@ -92,7 +93,7 @@ function dosearch(){
 // 寵物搜尋
 function Petsearch(){
 
-    var phone = $("#phone").val();
+    var phone = $("#owner_phone").val();
     var type = $("#consultation_type").val();
 
     if (phone == "" && type == "default") {
@@ -101,7 +102,8 @@ function Petsearch(){
     }
     $.ajax({            
         method: "POST",
-        url: "http://localhost/THD101_project/php/back_pet_search_member.php",
+        // url: "http://localhost/THD101_project/php/back_pet_search_member.php",
+        url: "http://localhost/THD101_NO1/php/back_pet_search_member.php",
         data:{
             phone: phone, 
             type: type
@@ -139,53 +141,52 @@ function Petsearch(){
     });
 }
 
-
-
-
-
-
-
-
-// 會員修改
+// 會員修改資料渲染
 function doReviseMember(phone_revise){
 
     $('.BACK_MODIFY_MEMBER').show();
     $('.BACK_MEMBER_PROFILE').hide();
-    
-    
-    console.log(phone_revise);
+    // console.log(phone_revise);
     $.ajax({
         method: "GET",
         url: "http://localhost/THD101_NO1/php/back_modify_member.php",
-        
         data: {
             phone_revise: phone_revise
         },
         dataType:"json",
-        statusCode: {
-            404: function() {
-                alert("找不到");
-            }
-        },
         success:function(response){
-
             console.log(response);
-
             $('#name_revise').val(response.NAME);
             $('#phone_revise').val(response.PHONENO);
             $('#email_revise').val(response.EMAIL);
             $('#address_revise').val(response.ADDRESS);
             $('#preview_member_pic_revise img').attr('src', response.MEMBER_AVATAR);
-
         },
         error: function(exception) {  
-
             alert("發生錯誤: " + exception.status);
         }
     })
 }
+// 更新資料
 function doUpdateMember(){
-    
+
+    if ($('#name_revise').val() == "") {
+        alert("請輸入姓名");
+        return false;
+    }
+    if ($('#phone_revise').val() == "") {
+        alert("請輸入手機號碼");
+        return false;
+    }
+    if ($('#email_revise').val() == "") {
+        alert("請輸入電子信箱");
+        return false;
+    }
+    if ($('#address_revise').val() == "") {
+        alert("請輸入通訊地址");
+        return false;
+    }
+
 }
 
 // // 會員刪除
