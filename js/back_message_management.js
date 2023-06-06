@@ -33,6 +33,7 @@ fileInput.addEventListener("change", function () {
 
     // 設置預覽圖像的src屬性為讀取到的檔案內容
     img.src = e.target.result;
+    // console.log(img.src);
 
     // 清空預覽圖片容器
     previewImage.innerHTML = '';
@@ -66,3 +67,6 @@ previewImage.addEventListener('click', function () {
   // 顯示上傳照片按鈕
   uploadButton.style.display = 'inline-block';
 });
+
+
+
