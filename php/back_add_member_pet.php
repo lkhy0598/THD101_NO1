@@ -6,6 +6,7 @@ include('upload.php');
 header("Access-Control-Allow-Origin: http://localhost:3000");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
+// header('Content-Type: application/json');
 
 $newmember_name = $_POST['newmember_name'];
 $newmember_phone = $_POST['newmember_phone'];
