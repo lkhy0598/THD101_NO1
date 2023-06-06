@@ -14,46 +14,46 @@
 </head>
 
 <body class="RESERVE_NORMAL2">
-    <!-- =============== 共用元件 =============== -->
+  <!-- =============== 共用元件 =============== -->
 
-    <!-- ===== 會員彈窗 ===== -->
-    <!-- user_popup -->
-    @@include('./layout/user_popup.html')
-    <!-- user_popup end -->
+  <!-- ===== 會員彈窗 ===== -->
+  <!-- user_popup -->
+  @@include('./layout/user_popup.html')
+  <!-- user_popup end -->
 
-    <!-- =============== header =============== -->
-    <!-- header -->
-    @@include('./layout/header.html')
-    <!-- header end -->
+  <!-- =============== header =============== -->
+  <!-- header -->
+  @@include('./layout/header.html')
+  <!-- header end -->
 
-    <!-- =============== 主視覺 =============== -->
-    @@include('./layout/reserve_top_module.html')
+  <!-- =============== 主視覺 =============== -->
+  @@include('./layout/reserve_top_module.html')
 
-    <!-- ==============主視覺下方區塊============== -->
-    <section class="BACKGROUND">
-      <!-- ==========預約頁面共用資訊========== -->
-      @@include('./layout/reserve_info_module.html')
+  <!-- ==============主視覺下方區塊============== -->
+  <section class="BACKGROUND">
+    <!-- ==========預約頁面共用資訊========== -->
+    @@include('./layout/reserve_info_module.html')
 
-      <!-------  預約步驟 ------->
-      <section class="RESERVE_STEPAREA">
-        <section class="RESERVE_ARC" id="ARCONE">
-          <div class="ARC_TITLE">1</div>
-          <p>預約類型選擇</p>
-        </section>
-        <section class="RESERVE_ARC" id="ARCTWO">
-          <div class="ARC_TITLE">2</div>
-          <p>填寫資料</p>
-        </section>
-        <section class="RESERVE_ARC" id="ARCTHREE">
-          <div class="ARC_TITLE">3</div>
-          <p>確認預約資料</p>
-        </section>
-        <section class="RESERVE_ARC" id="ARCFOUR">
-          <div class="ARC_TITLE">4</div>
-          <p>預約成功</p>
-        </section>
+    <!-------  預約步驟 ------->
+    <section class="RESERVE_STEPAREA">
+      <section class="RESERVE_ARC" id="ARCONE">
+        <div class="ARC_TITLE">1</div>
+        <p>預約類型選擇</p>
       </section>
-    
+      <section class="RESERVE_ARC" id="ARCTWO">
+        <div class="ARC_TITLE">2</div>
+        <p>填寫資料</p>
+      </section>
+      <section class="RESERVE_ARC" id="ARCTHREE">
+        <div class="ARC_TITLE">3</div>
+        <p>確認預約資料</p>
+      </section>
+      <section class="RESERVE_ARC" id="ARCFOUR">
+        <div class="ARC_TITLE">4</div>
+        <p>預約成功</p>
+      </section>
+    </section>
+
 
     <!-- ========表單區塊======== -->
 
@@ -66,8 +66,7 @@
         </li>
         <li>
           <label for="phone_number" class="SELECT">手機號碼<br>
-            <input 
-           id="phoneno" type="tel" placeholder="請輸入手機號碼">
+            <input id="phoneno" type="tel" placeholder="請輸入手機號碼">
           </label>
         </li>
         <li>
@@ -91,11 +90,11 @@
           </label>
         </li>
         <li>
-          <label for="pet_specie" class="SELECT">是否打過預防針<br>
+          <label for="vaccinationOrNot" class="SELECT">是否打過預防針<br>
             <select name="vaccinationOrNot" id="vaccinationOrNot">
               <option value="" style="display: none">請選擇</option>
-              <option value="1">是</option>
-              <option value="2">否</option>
+              <option value="Y">是</option>
+              <option value="N">否</option>
             </select>
           </label>
         </li>
@@ -103,22 +102,23 @@
 
       <label for="illness_sign" class="ILLNESS_SIGN">
         <div>病徵類型</div><br>
-        <input type="button" class="ILLNESS_SIGN_BTN" value="食慾不振" id="ill1">
-        <input type="button" class="ILLNESS_SIGN_BTN" value="精神不振" id="ill2">
-        <input type="button" class="ILLNESS_SIGN_BTN" value="異常搔抓皮膚" id="ill3">
-        <input type="button" class="ILLNESS_SIGN_BTN" value="嘔吐腹瀉" id="ill4">
-        <input type="button" class="ILLNESS_SIGN_BTN" value="跛行" id="ill5">
-        <input type="button" class="ILLNESS_SIGN_BTN" value="發燒" id="ill6">
-        <input type="button" class="ILLNESS_SIGN_BTN" value="咳嗽" id="ill7">
-        <input type="button" class="ILLNESS_SIGN_BTN" value="眼鼻分泌物增加" id="ill8">
-        <input type="button" class="ILLNESS_SIGN_BTN" value="皮毛脫落" id="ill9">
+        <input type="button" class="ILLNESS_SIGN_BTN" value="食慾不振" id="ill01">
+        <input type="button" class="ILLNESS_SIGN_BTN" value="精神不振" id="ill02">
+        <input type="button" class="ILLNESS_SIGN_BTN" value="異常搔抓皮膚" id="ill03">
+        <input type="button" class="ILLNESS_SIGN_BTN" value="嘔吐腹瀉" id="ill04">
+        <input type="button" class="ILLNESS_SIGN_BTN" value="跛行" id="ill05">
+        <input type="button" class="ILLNESS_SIGN_BTN" value="發燒" id="ill06">
+        <input type="button" class="ILLNESS_SIGN_BTN" value="咳嗽" id="ill07">
+        <input type="button" class="ILLNESS_SIGN_BTN" value="眼鼻分泌物增加" id="ill08">
+        <input type="button" class="ILLNESS_SIGN_BTN" value="皮毛脫落" id="ill09">
         <input type="button" class="ILLNESS_SIGN_BTN" value="排泄問題" id="ill10">
       </label>
 
       <label for="other_illness_sign" class="OTHER_ILLNESS_SIGN">
         <div class="TEXT_AREA">
           其他病徵<br>
-          <textarea cols="30" rows="10" id="other_illness_sign" class="TEXTAREA" placeholder="請簡述寵物病徵狀況......"></textarea>
+          <textarea cols="30" rows="10" id="other_illness_sign" class="TEXTAREA"
+            placeholder="請簡述寵物病徵狀況......"></textarea>
         </div>
 
 
@@ -132,10 +132,10 @@
     </section>
   </section>
 
-    <!-- ===== TOP按鈕 ===== -->
-    <!-- top_btn -->
-    @@include('./layout/top_btn.html')
-    <!-- top_btn end -->
+  <!-- ===== TOP按鈕 ===== -->
+  <!-- top_btn -->
+  @@include('./layout/top_btn.html')
+  <!-- top_btn end -->
 
   <!-- ===== footer ===== -->
   <!-- footer -->
@@ -148,6 +148,7 @@
   <script src="./js/top_btn.js"></script>
   <script src="./js/appointment.js"></script>
   <script src="./js/illness_sign.js"></script>
+  <script src="./js/reserve_normal2_grab_data.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var calendarEl = document.getElementById('calendar');
