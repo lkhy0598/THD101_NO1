@@ -8,8 +8,10 @@
 $h1: 4.5rem;
 $h2: 3.5rem;
 $h3: 3rem;
-$p: 1.3vw;
-$littleword:1.04vw;
+$p: 2.5rem;
+// $p: 1.3vw;
+$littleword:2rem;
+// $littleword:1.04vw;
 $bread: 1.5rem;
 $initial:10px;
 
@@ -39,7 +41,7 @@ h3{
     }
 }
 p{
-    font-size: 1.3vw;
+    font-size: $p;
     letter-spacing: 1.5px;
     @include m(){
         font-size: 4.83vw;
