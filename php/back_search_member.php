@@ -2,16 +2,16 @@
 
 include('conn.php');
 
+header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Headers: Content-Type");
 
-<<<<<<< HEAD
-=======
 //會員搜尋
->>>>>>> A
 $phone = $_POST['phone'];
 $name = $_POST['name'];
 
 
-if( $phone == ''){
+if($phone == ''){
    $sql = "select * FROM MEMBER where NAME like ?";
 
    $statement = $pdo->prepare($sql);
@@ -27,7 +27,7 @@ if( $phone == ''){
    echo json_encode($data);
 }
 
-if($name == '' ){
+if($name == ''){
    $sql = "select * FROM MEMBER where PHONENO like ?";
 
    $statement = $pdo->prepare($sql);

@@ -42,17 +42,10 @@
 }
 
 .MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(4) {
-    width: 30%;
+    width: 70%;
 }
 
-.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(5),
-.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(7) {
-    width: 20%;
-}
-
-.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(6),
-.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(7),
-.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(8) {
+.MESSAGE_MANAGEMENT_SEARCH ul li:nth-child(5) {
     align-self: flex-end;
 }
 
@@ -239,7 +232,7 @@
         }
     }
 
-    .BUTTON{
+    .BUTTON {
         text-align: center;
     }
 
