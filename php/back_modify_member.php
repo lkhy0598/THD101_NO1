@@ -25,7 +25,8 @@ if ($result->rowCount() > 0) {
       'PHONENO' => $row['PHONENO'], // 修改欄位名稱為 PHONENO
       'EMAIL' => $row['EMAIL'], // 修改欄位名稱為 EMAIL
       'ADDRESS' => $row['ADDRESS'], // 修改欄位名稱為 ADDRESS
-      'MEMBER_AVATAR' => $row['MEMBER_AVATAR'] // 修改欄位名稱為 MEMBER_AVATAR
+      'MEMBER_AVATAR' => $row['MEMBER_AVATAR'], // 修改欄位名稱為 MEMBER_AVATAR
+      'MEMBER_ID' => $row['MEMBER_ID']
   );
    // 將資料轉換為 JSON 格式並返回
    echo json_encode($responseData);

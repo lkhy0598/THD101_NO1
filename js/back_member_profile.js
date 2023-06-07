@@ -1,33 +1,42 @@
 // 新增會員及寵物
 function doAddMember(){
 
-    if ($('#newmember_name').val() == "") {
+    const newmember_name = $('#newmember_name').val().trim();
+    const newmember_phone = $('#newmember_phone').val().trim();
+    const newmember_email = $('#newmember_email').val().trim();
+    const newmember_address = $('#newmember_address').val().trim();
+
+    if (newmember_name === "") {
         alert("請輸入姓名");
         return false;
     }
-    if ($('#newmember_phone').val() == "") {
+    if (newmember_phone === "") {
         alert("請輸入手機號碼");
         return false;
     }
-    if ($('#newmember_email').val() == "") {
+    if (newmember_email === "") {
         alert("請輸入電子信箱");
         return false;
     }
-    if ($('#newmember_address').val() == "") {
+    if (newmember_address === "") {
         alert("請輸入通訊地址");
         return false;
     }
 
-    var formData = new FormData();
-    var files = $('#member_pic')[0].files;
-	formData.append('member_pic',files[0]);
-    formData.append('newmember_name',$('#newmember_name').val());
-    formData.append('newmember_phone',$("#newmember_phone").val());
-    formData.append('newmember_email',$("#newmember_email").val());
-    formData.append('newmember_address',$('#newmember_address').val());      
+    const formData = new FormData();
+    const files = $('#member_pic')[0].files;
+    formData.append('member_pic', files[0]);
+    formData.append('newmember_name', newmember_name);
+    formData.append('newmember_phone', newmember_phone);
+    formData.append('newmember_email', newmember_email);
+    formData.append('newmember_address', newmember_address);
+    // console.log($('#newmember_name').val());
+    // console.log($('#newmember_phone').val());
+    // console.log($('#newmember_email').val());
+    // console.log($('#newmember_address').val());
+    
 
     $.ajax({
-
         method:"POST",
         url:"http://localhost/THD101_NO1/php/back_add_member_pet.php",
         data:formData,
@@ -39,7 +48,9 @@ function doAddMember(){
         contentType : false,
         success:function(response){
             alert(response);
-            location.href = '_back_member_profile.html'
+            // location.href = '_back_member_profile.html'
+            $('.BACK_ADD_NEW_MEMBER').hide();
+            $('.BACK_MEMBER_PROFILE').show();
         },
         error: function(exception) {  
             alert("發生錯誤: " + exception.status);
@@ -78,8 +89,8 @@ function dosearch(){
                     "<li>" + row.PHONENO + "</li>" +
                     "<li>" + row.CREATE_DATE + "</li>" +
                     "<li>" + "<i class='bi bi-pencil RE_MEMBER_PROFILE' onclick='doReviseMember(\"" + row.PHONENO + "\")' >" + "</i>" + "</li>" +
-                    "<li>" + "<i class='bi bi-x-lg DEL_MEMBER_BTN' onclick='doDelMember()'>" + "</i>" + "</li>" +
-                    "<li>" + "<i class='bi bi-calendar-plus RESERVE_BTN' onclick='doReserve()'>" + "</i>" + "</li>" 
+                    "<li>" + "<i class='bi bi-x-lg DEL_MEMBER_BTN' onclick='doDelMember(\"" + row.MEMBER_ID + "\")'></i></a></li>" +
+                    "<li>" + "<i class='bi bi-calendar-plus RESERVE_BTN' onclick='doReserve(\"" + row.PHONENO + "\")'>" + "</i>" + "</li>" 
                     + "</ul>"
                 );
             });
@@ -160,7 +171,10 @@ function doReviseMember(phone_revise){
             $('#phone_revise').val(response.PHONENO);
             $('#email_revise').val(response.EMAIL);
             $('#address_revise').val(response.ADDRESS);
+            $('#member_id').val(response.MEMBER_ID);
             $('#preview_member_pic_revise img').attr('src', response.MEMBER_AVATAR);
+            // console.log($('#member_id').val());
+            
         },
         error: function(exception) {  
             alert("發生錯誤: " + exception.status);
@@ -187,10 +201,69 @@ function doUpdateMember(){
         return false;
     }
 
+    var formData = new FormData();
+    var files = $('#member_pic_revise')[0].files;
+	formData.append('member_pic_revise',files[0]);
+    formData.append('name_revise',$('#name_revise').val());
+    formData.append('phone_revise',$("#phone_revise").val());
+    formData.append('email_revise',$("#email_revise").val());
+    formData.append('address_revise',$('#address_revise').val());   
+    formData.append('member_id',$('#member_id').val());   
+
+    console.log($('#member_id').val());
+    console.log($('#name_revise').val());
+    console.log($('#phone_revise').val());
+    console.log($('#email_revise').val());
+    console.log($('#address_revise').val());
+    
+
+    $.ajax({
+        method:"POST",
+        url:"http://localhost/THD101_NO1/php/back_update_member.php",
+        data:formData,
+        dataType:"json",
+        // 告訴jQuery不要去處理發送的資料
+        processData : false, 
+        // 告訴jQuery不要去設定Content-Type請求頭
+        contentType : false,
+        success:function(response){
+            alert(response);
+            // location.href = '_back_member_profile.html'
+            $('.BACK_MEMBER_PROFILE').show();
+            $('.BACK_MODIFY_MEMBER').hide();
+        },
+        // 
+        error: function(xhr, status, error) {
+            var errorMessage = xhr.status + ': ' + xhr.statusText;
+            console.log('錯誤訊息:', errorMessage);
+            console.log('伺服器回應:', xhr.responseText);
+            alert('發生錯誤: ' + errorMessage);
+        }
+    })
 }
 
 // // 會員刪除
-// function doDelMember()
+function doDelMember(memberID){
+
+    console.log(memberID);
+    $.ajax({            
+        method: "POST",
+        // url: "http://localhost/THD101_project/php/back_search_member.php",
+        url: "http://localhost/THD101_NO1/php/back_del_member.php",
+        data: { memberID: memberID },            
+        dataType: "json",
+        success: function (response) {
+            alert(response);
+            console.log(response);
+            location.href = '_back_member_profile.html';
+        },
+        error: function(exception) {
+            alert("發生錯誤: " + exception.status);
+        }
+    });
+
+
+}
 
 // 會員新增預約
 function doReserve(){
