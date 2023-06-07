@@ -406,6 +406,8 @@
                                         <input type="text" name="address_revise" id="address_revise">
                                     </label>
                                 </li>
+                                <input type="hidden" name="member_id" id="member_id" value="要更新的会员ID">
+                                <input type="hidden" name="picture_name" id="picture_name"/>
                                 <li>
                                     <button class="BTN_BACK MODIFY_MEMBER_BTN" type="submit" onclick="doUpdateMember()">修改會員</button>
                                 </li>
@@ -624,10 +626,10 @@
             });
 
             
-            $('.RE_PET_PROFILE').click(function () {
-                    $('.BACK_MODIFY_PET').show();
-                    $('.BACK_MEMBER_PROFILE').hide();
-            });
+            // $('.RE_PET_PROFILE').click(function () {
+            //         $('.BACK_MODIFY_PET').show();
+            //         $('.BACK_MEMBER_PROFILE').hide();
+            // });
             // 取消紐
             $('.CANCEL_MEMBER').click(function () {
                     $('.BACK_MEMBER_PROFILE').show();
