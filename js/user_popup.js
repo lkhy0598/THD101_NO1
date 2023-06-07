@@ -228,7 +228,7 @@ function joinSub(e) {
             alert('手機號碼不正確！');
             $(".SIGNUP_INPUTS .INPUT_WARN").find("p").css("display", "none");
             $(".SIGNUP_INPUTS .INPUT_WARN").find("p").eq(9).css("display", "block");
-            return false; 
+            return false;
         } else {
             $.ajax({
                 method: "POST",
@@ -264,8 +264,7 @@ function joinSub(e) {
                             $('.INPUT_GROUP').removeClass('POPUPACTIVE');
                         }, 3000);
                     } else {
-                        alert(response); // 显示错误消息
-                        // alert("註冊失敗！請檢查資料是否正確");
+                        alert(response); 
                     }
                 },
                 error: function (xhr, status, error) {
@@ -275,5 +274,37 @@ function joinSub(e) {
         }
     }
 };
+
+// 登入會員功能
+function loginSub() {
+    let lusn = $('.LOGIN_USERNAME').val();
+    let lpsw = $('.LOGIN_PASSWORD').val();
+    let leml = $('.LOGIN_EMAIL').val();
+
+    //input your code...
+    $.ajax({
+        method: "POST",
+        url: "http://localhost/THD101_G1_groupproject/php/Login.php",
+        data: {
+            USERNAME: lusn,
+            EMAIL: lpsw,
+            PASSWORD: leml
+        },
+        dataType: "text",
+        success: function (response) {
+            if (response.includes("登入成功")) { 
+                alert(response);
+                setTimeout(function() {
+                    window.location.href = 'member_center.html';
+                }, 3000);
+            } else {
+                alert(response);
+            };
+        },
+        error: function (exception) {
+            alert("發生錯誤: " + exception.status);
+        }
+    });
+}
 // });
 
