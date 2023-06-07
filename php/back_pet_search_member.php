@@ -29,7 +29,7 @@ if( $phone == '' && $type !== 'default'){
 
    header('Content-Type: application/json');
    // echo json_encode($data);
-   echo ;
+   
 } 
 
 // if($type == "DEFAULT" && $phone !== ''){

@@ -126,7 +126,7 @@
                         <img src="./img/member_center/member_avatar_default.png" alt="">
                         <button type="submit" class="BTN">上傳照片</button>
                     </div>
-                    <form method="post" action="./member_center.php">
+                    <form method="post" action="../php/member_center.php">
                         <ul>
                             <li class="short"><label for="name">姓名</label>
                                 <input type="text" name="name">
@@ -162,7 +162,7 @@
                 </div>
                 <div class=" password">
 
-                    <form method="post" action="./member_center.php">
+                    <form method="post" action="../php/member_center.php">
                         <ul>
                             <li class="middlelong start"><label for="old_password">舊密碼</label>
                                 <input type="text" name="old_password">
@@ -181,8 +181,8 @@
 
                         </ul>
                         <div class="submit">
-                            <input type="submit" value="儲存" class="BTN">
-                            <input type="submit" value="修改" class="BTN">
+                            <input type="submit" name="save" value="儲存" class="BTN">
+                            <input type="submit" name="modify" value="修改" class="BTN">
                         </div>
                     </form>
                 </div>
