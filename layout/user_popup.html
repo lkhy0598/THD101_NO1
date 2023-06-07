@@ -27,13 +27,13 @@
                     <!-- 信箱：只能英文和數字和'@'和'.' -->
                     <div class="INPUT_GROUP">
                         <i class="bi bi-envelope"></i>
-                        <input type="email" name="account" autocomplete="email" placeholder="請輸入電子信箱"
+                        <input type="email" name="email" class="LOGIN_EMAIL" autocomplete="email" placeholder="請輸入電子信箱"
                             onkeyup="value=value.replace(/[^a-zA-Z0-9@.]/g, '')" 　 /></br>
                     </div>
                     <!-- 密碼：只能英文和數字/長度限制20 -->
                     <div class="INPUT_GROUP">
                         <i class="bi bi-lock-fill"></i>
-                        <input type="password" name="password" class="PASSWORD" placeholder="請輸入密碼"
+                        <input type="password" name="password" class="LOGIN_PASSWORD" placeholder="請輸入密碼"
                             onkeyup="value=value.replace(/[^a-zA-Z0-9]/g, '')" maxlength="20" />
                         <div class="SHOWPASS">
                             <i class="bi bi-eye-fill"></i>
@@ -43,7 +43,7 @@
                         <button type="button" class="FORGET_BTN">忘記密碼？</button>
                     </div>
 
-                    <div class="LOGIN_BTN BTN">登入</div>
+                    <div class="LOGIN_BTN BTN" onclick="loginSub()">登入</div>
 
                     <div class="DIVIDING">
                         <span>or</span>
