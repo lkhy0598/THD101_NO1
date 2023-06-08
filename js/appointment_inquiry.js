@@ -7,7 +7,12 @@ function doQuery(){
         method: "POST",
         // url: "https://tibamef2e.com/thd101/g1/php/appointment_inquiry.php",
         // url: "php/appointment_inquiry.php",
-        url: "php/appointment_inquiry.php",
+        // 這是本機測試的php路徑
+        // JS is inclueded in HTML,so the route must be started from HTML.
+        // url: "php/appointment_inquiry.php",
+        // 這是上server的路徑
+        // url: "../php/appointment_inquiry.php",
+        url: "../php/member_center.php",
         data: {
             // phppost:js
             phoneNo:phoneNo
