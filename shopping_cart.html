@@ -13,7 +13,7 @@
     <title>購物車 SHOPPING_CART - 波波動物醫院</title>
 </head>
 
-<body class="SHOPPINGCART">
+<body class="SHOPPINGCART" id="SHOPPINGCARTVUE">
     <!-- =============== 共用元件 =============== -->
 
     <!-- ===== 會員彈窗 ===== -->
@@ -83,14 +83,17 @@
             </section>
 
             <!-- =====================================購物車登入==================================================== -->
-
-            <section class="SHOPPINGCART_LOGIN">
+            <section class="SHOPPINGCART_LOGIN" v-if="checksessionResponse == 'notlogin'">
                 <p>已經是會員？登入可以更方便管理訂單喔！</p>
                 <span class="LOGIN">登入會員</span>
             </section>
 
             <!-- =====================================購物商品列表==================================================== -->
 
+            <section class="SHOPPINGSEARCHERR WRAPPER" v-if="shoppingCartItems.length === 0">
+                <h3>很抱歉，目前購物車中無商品，請新增商品。</h3>
+            </section>
+            <section v-else>
             <section class="SHOPPINGCART_ITEMFORM">
                 <section class="SHOPPINGCART_ITEMtitle">
                     <span class="ITEM_PRODUCT--W">商品</span>
@@ -99,54 +102,30 @@
                     <span class="ITEM_SUBTOTAL--W">小計</span>
                     <span class="ITEM_DELETE--W"></span>
                 </section>
-                <section class="SHOPPINGCART_ITEM">
+                <section class="SHOPPINGCART_ITEM" v-for="(item, index) in shoppingCartItems" :key="index">
                     <section class="ITEM_PRODUCT ITEM_PRODUCT--W">
+                        <a :href="'shopping_list.html?id=' + item.PRODUCT_ID" class="ITEM_PRODUCTCON">
                         <section class="ITEM_PRODUCT--IMG">
-                            <img src="./img/shopping_list/healthy/01/healthy_01_01.jpg" alt="">
+                            <img :src="getFirstImage(item.IMG_SOURCE_ARRAY)" alt="">
                         </section>
-                        <span>沛威貓狗保健-護眼亮晶晶 30入/盒</span>
+                        <span>{{ item.PRODUCT_TITLE }}</span>
+                        </a>
                     </section>
                     <section class="ITEM_PRICE ITEM_PRICE--W">
-                        <p>NT＄<span class="CARTITEM_PRICE">1,380</span></p>
+                        <p>NT＄<span class="CARTITEM_PRICE">{{ item.PRODUCT_PRICE }}</span></p>
                     </section>
                     <section class="ITEM_COUNT ITEM_COUNT--W">
-                        <span class="ITEM_COUNT--MINUS"><i class="bi bi-dash"></i></span>
-                        <input type="number" class="ITEM_COUNT--NUM" value="1" min="1">
-                        <!-- <span class="ITEM_COUNT--NUM">2</span> -->
-                        <span class="ITEM_COUNT--PLUS"><i class="bi bi-plus"></i></span>
+                        <span class="ITEM_COUNT--MINUS" @click="decrementQuantity(item)"><i class="bi bi-dash"></i></span>
+                        <input type="number" class="ITEM_COUNT--NUM" v-model="item.quantity" min="1">
+                        <span class="ITEM_COUNT--PLUS" @click="incrementQuantity(item)"><i class="bi bi-plus"></i></span>
                     </section>
                     <section class="ITEM_SUBTOTAL ITEM_SUBTOTAL--W">
-                        <p>NT＄<span class="CARTITEMSUBTOTAL"></span></p>
+                        <p>NT＄<span class="CARTITEMSUBTOTAL">{{ item.PRODUCT_PRICE * item.quantity }}</span></p>
                     </section>
-                    <section class="ITEM_DELETE ITEM_DELETE--W">
+                    <section class="ITEM_DELETE ITEM_DELETE--W" @click="deleteItem(index)">
                         <i class="bi bi-trash3"></i>
                     </section>
                 </section>
-
-                <section class="SHOPPINGCART_ITEM">
-                    <section class="ITEM_PRODUCT ITEM_PRODUCT--W">
-                        <section class="ITEM_PRODUCT--IMG">
-                            <img src="./img/shopping_list/dryfood/09/dryfood_09_01.jpg" alt="">
-                        </section>
-                        <span>【SC星益生趣】無穀貓糧(鮭魚配方) 2.5磅/1.1kg</span>
-                    </section>
-                    <section class="ITEM_PRICE ITEM_PRICE--W">
-                        <p>NT＄<span class="CARTITEM_PRICE">980</span></p>
-                    </section>
-                    <section class="ITEM_COUNT ITEM_COUNT--W">
-                        <span class="ITEM_COUNT--MINUS"><i class="bi bi-dash"></i></span>
-                        <input type="number" class="ITEM_COUNT--NUM" value="1" min="1">
-                        <!-- <span class="ITEM_COUNT--NUM">1</span> -->
-                        <span class="ITEM_COUNT--PLUS"><i class="bi bi-plus"></i></span>
-                    </section>
-                    <section class="ITEM_SUBTOTAL ITEM_SUBTOTAL--W">
-                        <p>NT＄<span class="CARTITEMSUBTOTAL"></span></p>
-                    </section>
-                    <section class="ITEM_DELETE ITEM_DELETE--W">
-                        <i class="bi bi-trash3"></i>
-                    </section>
-                </section>
-
             </section>
 
             <!-- ==================================購物車LISTM=============================================== -->
@@ -154,60 +133,34 @@
             <section class="SHOPPINGCART_ITEMFORM--M">
                 <h3>購物車</h3>
                 <section class="SHOPPINGCART_ITEMLIST--M">
-                    <section class="SHOPPINGCART_ITEM--M">
+                    <section class="SHOPPINGCART_ITEM--M" v-for="(item, index) in shoppingCartItems" :key="index">
                         <section class="SHOPPINGCART_ITEMIMG--M">
-                            <img src="./img/shopping_list/healthy/01/healthy_01_01.jpg" alt="">
+                            <a :href="'shopping_list.html?id=' + item.PRODUCT_ID">
+                            <img :src="getFirstImage(item.IMG_SOURCE_ARRAY)" alt="">
+                            </a>
                         </section>
                         <section class="SHOPPINGCART_ITEMWORD--M">
                             <section class="SHOPPINGCART_ITEMWORD--TOPM">
                                 <section class="SHOPPINGCART_ITEMWORD--NAMEM">
-                                    <span>沛威貓狗保健-護眼亮晶晶 30入/盒</span>
+                                    <a :href="'shopping_list.html?id=' + item.PRODUCT_ID">{{ item.PRODUCT_TITLE }}</a>
                                 </section>
-                                <section class="SHOPPINGCART_ITEMWORD--DELM">
+                                <section class="SHOPPINGCART_ITEMWORD--DELM" @click="deleteItem(index)">
                                     <i class="bi bi-trash3"></i>
                                 </section>
 
                             </section>
                             <section class="SHOPPINGCART_ITEMWORD--BOTTOMM">
                                 <section class="SHOPPINGCART_ITEMWORD--COUNTM">
-                                    <span class="ITEM_COUNT--MINUS"><i class="bi bi-dash"></i></span>
-                                    <input type="number" class="ITEM_COUNTM--NUM" value="1" min="1">
-                                    <span class="ITEM_COUNT--PLUS"><i class="bi bi-plus"></i></span>
+                                    <span class="ITEM_COUNT--MINUS" @click="decrementQuantity(item)"><i class="bi bi-dash"></i></span>
+                                    <input type="number" class="ITEM_COUNTM--NUM" v-model="item.quantity" min="1">
+                                    <span class="ITEM_COUNT--PLUS" @click="incrementQuantity(item)"><i class="bi bi-plus"></i></span>
                                 </section>
                                 <section class="SHOPPINGCART_ITEMWORD--PRICEM">
-                                    <p>NT＄<span class="CARTITEMSUBTOTALM">2,760</span></p>
+                                    <p>NT＄<span class="CARTITEMSUBTOTALM">{{ item.PRODUCT_PRICE * item.quantity }}</span></p>
                                 </section>
                             </section>
                         </section>
                     </section>
-
-                    <section class="SHOPPINGCART_ITEM--M">
-                        <section class="SHOPPINGCART_ITEMIMG--M">
-                            <img src="./img/shopping_list/dryfood/09/dryfood_09_01.jpg" alt="">
-                        </section>
-                        <section class="SHOPPINGCART_ITEMWORD--M">
-                            <section class="SHOPPINGCART_ITEMWORD--TOPM">
-                                <section class="SHOPPINGCART_ITEMWORD--NAMEM">
-                                    <span>【SC星益生趣】無穀貓糧(鮭魚配方) 2.5磅/1.1kg</span>
-                                </section>
-                                <section class="SHOPPINGCART_ITEMWORD--DELM">
-                                    <i class="bi bi-trash3"></i>
-                                </section>
-
-                            </section>
-                            <section class="SHOPPINGCART_ITEMWORD--BOTTOMM">
-                                <section class="SHOPPINGCART_ITEMWORD--COUNTM">
-                                    <span class="ITEM_COUNT--MINUS"><i class="bi bi-dash"></i></span>
-                                    <input type="number" class="ITEM_COUNTM--NUM" value="1" min="1">
-                                    <span class="ITEM_COUNT--PLUS"><i class="bi bi-plus"></i></span>
-                                </section>
-                                <section class="SHOPPINGCART_ITEMWORD--PRICEM">
-                                    <p><span class="CARTITEMSUBTOTALM">NT＄980</span></p>
-                                </section>
-                            </section>
-                        </section>
-                    </section>
-
 
                 </section>
             </section>
@@ -222,10 +175,13 @@
                             <span>優惠促銷</span>
                         </section>
                         <section class="SHOPPINGCART_STEPONETEXT--SELECT">
-                            <label for="CUPON" class="SELECT">已選擇之優惠<br>
-                                <select id="CUPON" class="SELECTOPTION">
-                                    <option value="">請選擇優惠劵</option>
-                                    <option value="">台灣限定 滿千免運</option>
+                            <label for="CUPON" class="SELECT">
+                                已選擇之優惠<br>
+                                <select id="CUPON" class="SELECTOPTION" v-model="selectedVoucher">
+                                    <option value="">請選擇優惠券</option>
+                                    <option v-for="voucher in vouchers" :value="voucher.VOUCHER_ID" :disabled="isVoucherDisabled(voucher.VOUCHER_ID)">
+                                    {{ voucher.VOUCHER_NAME }}
+                                    </option>
                                 </select>
                             </label>
                         </section>
@@ -246,19 +202,19 @@
                         <section class="SHOPPINGCART_STEPONETEXT--SELECT">
                             <label for="DELIVERY" class="SELECT">送貨方式
                                 <span class="SELECTERROR">尚未選擇送貨方式</span><br>
-                                <select id="DELIVERY" class="SELECTOPTION">
+                                <select id="DELIVERY" class="SELECTOPTION" v-model="selectedDeliveryMethod">
                                     <option value="">請選擇送貨方式</option>
-                                    <option value="1">7-11店到店取貨</option>
+                                    <option value="2">7-11店到店取貨</option>
                                 </select>
                             </label>
                         </section>
                         <section class="SHOPPINGCART_STEPONETEXT--SELECT LASTBOTTOM">
                             <label for="PAYWAY" class="SELECT">付款方式
                                 <span class="SELECTERROR">尚未選擇付款方式</span><br>
-                                <select id="PAYWAY" class="SELECTOPTION">
+                                <select id="PAYWAY" class="SELECTOPTION" v-model="selectedPayment">
                                     <option value="">請選擇付款方式</option>
-                                    <option value="1">到貨付款</option>
-                                    <option value="2">信用卡付款</option>
+                                    <option value="2">到貨付款</option>
+                                    <option value="1">信用卡付款</option>
                                 </select>
                             </label>
                         </section>
@@ -272,21 +228,21 @@
                         <section class="SHOPPINGCART_STEPONETEXT--INFO">
                             <section class="SHOPPINGCART_STEPONETEXT--ZONE">
                                 <span>小計:</span>
-                                <span><b>NT＄<b id="CARTITEMPRICE_SUB"></b></b></span>
+                                <span><b>NT＄<b id="CARTITEMPRICE_SUB"></b>{{ cartItemSubtotal }}</b></span>
                             </section>
                             <section class="SHOPPINGCART_STEPONETEXT--ZONE">
                                 <span>運費:</span>
-                                <span><b>免運</b></span>
+                                <span><b>NT＄{{ discountedShippingFee }}</b></span>
                             </section>
                             <section class="SHOPPINGCART_STEPONETEXT--ZONE">
                                 <span>使用優惠劵:</span>
-                                <span><b>台灣限定 滿千免運</b></span>
+                                <span><b>{{ selectedVoucherName }}</b></span>
                             </section>
                             <section class="SHOPPINGCART_STEPONETEXT--ZONE STEPONETOTAL">
                                 <span>合計:</span>
-                                <span><b>NT＄<b id="CARTITEMPRICE_TOTAL"></b></b></span>
+                                <span><b>NT＄<b id="CARTITEMPRICE_TOTAL"></b>{{ cartItemTotal }}</b></span>
                             </section>
-                            <a href="./shopping_cartp2.html" class="SHOPPINGCART_STEPONETEXT--PAY">
+                            <a href="./shopping_cartp2.html" class="SHOPPINGCART_STEPONETEXT--PAY" @click.prevent="handleClick">
                                 <button class="BTN STEPONEPAY">前往結帳</button>
                             </a>
                         </section>
@@ -294,6 +250,7 @@
 
                 </section>
 
+            </section>
             </section>
 
         </section>
@@ -309,11 +266,13 @@
     @@include('./layout/footer.html')
     <!-- footer end -->
 
+    <script src="./js/vendors/vue/vue.global.js"></script>
+    <script src="./js/shopping_cart.js"></script>
     <script src="./js/top_btn.js"></script>
     <script src="./js/nav.js"></script>
     <script src="./js/user_popup.js"></script>
     <script src="./js/toggle.js"></script>
-    <script src="./js/user_popup.js"></script>
+
 
 
 </body>
@@ -387,7 +346,7 @@ $(document).ready(function() {
 
 </script>
 
-<script>
+<!-- <script>
     $(document).ready(function() {
         $('.SHOPPINGCART_ITEM').each(function() {
             var $itemCountNum = $(this).find('.ITEM_COUNT--NUM');
@@ -449,7 +408,7 @@ $(document).ready(function() {
 
 
 
-</script>
+</script> -->
 
 
 </html>

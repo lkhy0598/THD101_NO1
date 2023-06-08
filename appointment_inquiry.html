@@ -11,6 +11,10 @@
 </head>
 
 <body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/appointment_inquiry.js"></script>
     <!-- =============== 共用元件 =============== -->
 
     <!-- ===== 會員彈窗 ===== -->
@@ -124,13 +128,14 @@
                 </div>
                 <div class=" password ">
 
-                    <form method="post" action="./member_center.php">
+                    <!-- <form method="post" action="../php/appointment_inquiry.php">                        -->
                         <ul>
                             <li class="middlelong"><label for="">選擇寵物資料</label>
                                 <select name="petNameRecord" id="petNameRecord" class="select">
                                     <option value="">請選擇寵物名稱</option>
                                     <!-- php for -->
                                 </select>
+                                <input type="text" id="phoneNo">
                             </li>
                             <li class="middlelong"><label for="appointmentDate">預約日期</label>
 
@@ -144,10 +149,10 @@
 
                         </ul>
                         <div class="submit">
-                            <input type="submit" value="搜尋預約" class="BTN">
+                            <input type="button" value="搜尋預約" id="searchAppBTN" class="BTN" onclick="doQuery()">
 
                         </div>
-                    </form>
+                    <!-- </form> -->
 
                 </div>
                 <!-- <table class="MEMTABLE">
@@ -178,9 +183,9 @@
                     </ul>
 
                     <ul class="AAPMT_RECORD_TABLE_CONTENT BACK_TABLE_CONTENT">
-                        <li>第一診間<br>24號</li>
+                        <li>第 <span id="roomNo"></span> 診間<br><span id="appNo"></span></li>
                         <li>2023/10/24 <br>上午</li>
-                        <li>辛巴</li>
+                        <li><span id="petName"></span></li>
                         <li>預防針</li>
                         </li>
                     </ul>
@@ -212,6 +217,105 @@
     <script src="./js/user_popup.js"></script>
     <script src="./js/toggle.js"></script>
     <script src="./js/appointment.js"></script>
+    <script src="./js/appointment_inquiry.js"></script>
+   
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -142,6 +142,9 @@
     .ITEM_PRODUCT{
         display: flex;
         // justify-content: left;
+        .ITEM_PRODUCTCON{
+            display: flex;
+        }
 
         .ITEM_PRODUCT--IMG{
             width: 100px;
@@ -485,6 +488,9 @@
                         width: 85%;
                         font-size: 1.7rem;
                         line-height: 20px;
+                        a{
+                            color: $blueblack;
+                        }
                     }
                     .SHOPPINGCART_ITEMWORD--DELM{
                         width: 15%;
