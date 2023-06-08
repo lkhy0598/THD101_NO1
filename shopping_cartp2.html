@@ -13,7 +13,7 @@
     <title>填寫資料 SHOPPING_CART - 波波動物醫院</title>
 </head>
 
-<body class="SHOPPINGCARTP2">
+<body class="SHOPPINGCARTP2" id="SHOPPINGCART2VUE">
     <!-- =============== 共用元件 =============== -->
 
     <!-- ===== 會員彈窗 ===== -->
@@ -77,8 +77,8 @@
         <section class="SHOPPINGCARTP2_ORDER WRAPPER">
             <section class="SHOPPINGCARTP2_ORDERTEXTALL">
                 <section class="SHOPPINGCARTP2_ORDERTEXT">
-                    <p>合計：NT$ 3,740</p>
-                    <span>購物車:(3件)
+                    <p>合計：NT${{totalAmount}}</p>
+                    <span>購物車:({{ cartItemCount }}件)
                         <span class="SHOPPINGCARTP2_ORDERARR">
                             <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="">
                         </span>
@@ -95,93 +95,46 @@
                             <span class="ITEM_SUBTOTAL--W">小計</span>
                         </section>
 
-                        <section class="SHOPPINGCART_ITEM">
+                        <section class="SHOPPINGCART_ITEM" v-for="(item, index) in shoppingCartItems" :key="index">
                             <section class="ITEM_PRODUCT ITEM_PRODUCT--W">
                                 <section class="ITEM_PRODUCT--IMG">
-                                    <img src="./img/shopping_list/healthy/01/healthy_01_01.jpg" alt="">
+                                    <img :src="getFirstImage(item.IMG_SOURCE_ARRAY)" alt="">
                                 </section>
-                                <span>沛威貓狗保健-護眼亮晶晶 30入/盒</span>
+                                <span>{{ item.PRODUCT_TITLE }}</span>
                             </section>
                             <section class="ITEM_PRICE ITEM_PRICE--W">
-                                <p>NT＄1,380</p>
+                                <p>NT＄{{ item.PRODUCT_PRICE }}</p>
                             </section>
                             <section class="ITEM_COUNT ITEM_COUNT--W">
-                                <span class="ITEM_COUNT--NUM">2</span>
+                                <span class="ITEM_COUNT--NUM">{{ item.quantity }}</span>
                             </section>
                             <section class="ITEM_SUBTOTAL ITEM_SUBTOTAL--W">
-                                <p>NT＄2,760</p>
-                            </section>
-                        </section>
-
-                        <section class="SHOPPINGCART_ITEM">
-                            <section class="ITEM_PRODUCT ITEM_PRODUCT--W">
-                                <section class="ITEM_PRODUCT--IMG">
-                                    <img src="./img/shopping_list/dryfood/09/dryfood_09_01.jpg" alt="">
-                                </section>
-                                <span>【SC星益生趣】無穀貓糧(鮭魚配方) 2.5磅/1.1kg</span>
-                            </section>
-                            <section class="ITEM_PRICE ITEM_PRICE--W">
-                                <p>NT＄980</p>
-                            </section>
-                            <section class="ITEM_COUNT ITEM_COUNT--W">
-                                <span class="ITEM_COUNT--NUM">1</span>
-                            </section>
-                            <section class="ITEM_SUBTOTAL ITEM_SUBTOTAL--W">
-                                <p>NT＄980</p>
+                                <p>NT＄{{ item.PRODUCT_PRICE * item.quantity }}</p>
                             </section>
                         </section>
                     </section>
-
                 </section>
 
                 <!-- ========================================手機板LIST================================================== -->
 
                 <section class="SHOPPINGCART_ITEMLIST--M">
-                    <section class="SHOPPINGCART_ITEM--M">
+                    <section class="SHOPPINGCART_ITEM--M" v-for="(item, index) in shoppingCartItems" :key="index">
                         <section class="SHOPPINGCART_ITEMIMG--M">
-                            <img src="./img/shopping_list/healthy/01/healthy_01_01.jpg" alt="">
+                            <img :src="getFirstImage(item.IMG_SOURCE_ARRAY)" alt="">
                         </section>
                         <section class="SHOPPINGCART_ITEMWORD--M">
                             <section class="SHOPPINGCART_ITEMWORD--TOPM">
                                 <section class="SHOPPINGCART_ITEMWORD--NAMEM">
-                                    <span>沛威貓狗保健-護眼亮晶晶 30入/盒</span>
-                                </section>
-                                <section class="SHOPPINGCART_ITEMWORD--DELM">
-                                    <i class="bi bi-trash3"></i>
+                                    <span>{{ item.PRODUCT_TITLE }}</span>
                                 </section>
 
                             </section>
                             <section class="SHOPPINGCART_ITEMWORD--BOTTOMM">
                                 <section class="SHOPPINGCART_ITEMWORD--COUNTM">
-                                    <span class="ITEM_COUNT--NUM">數量:2</span>
+                                    <span class="ITEM_COUNT--NUM">數量:{{ item.quantity }}</span>
                                 </section>
                                 <section class="SHOPPINGCART_ITEMWORD--PRICEM">
-                                    <p>NT＄2,760</p>
-                                </section>
-                            </section>
-                        </section>
-                    </section>
-
-                    <section class="SHOPPINGCART_ITEM--M">
-                        <section class="SHOPPINGCART_ITEMIMG--M">
-                            <img src="./img/shopping_list/dryfood/09/dryfood_09_01.jpg" alt="">
-                        </section>
-                        <section class="SHOPPINGCART_ITEMWORD--M">
-                            <section class="SHOPPINGCART_ITEMWORD--TOPM">
-                                <section class="SHOPPINGCART_ITEMWORD--NAMEM">
-                                    <span>【SC星益生趣】無穀貓糧(鮭魚配方) 2.5磅/1.1kg</span>
-                                </section>
-                                <section class="SHOPPINGCART_ITEMWORD--DELM">
-                                    <i class="bi bi-trash3"></i>
-                                </section>
-
-                            </section>
-                            <section class="SHOPPINGCART_ITEMWORD--BOTTOMM">
-                                <section class="SHOPPINGCART_ITEMWORD--COUNTM">
-                                    <span class="ITEM_COUNT--NUM">數量:1</span>
-                                </section>
-                                <section class="SHOPPINGCART_ITEMWORD--PRICEM">
-                                    <p>NT＄980</p>
+                                    <p>NT＄{{ item.PRODUCT_PRICE * item.quantity }}</p>
                                 </section>
                             </section>
                         </section>
@@ -200,26 +153,28 @@
                         </section>
                         <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
                             <label for="MEMBERNAME" class="INPUT">姓名<br>
-                                <input type="text" id="MEMBERNAME" class="INPUTENTER" placeholder="請輸入會員名稱">
+                                <input type="text" id="MEMBERNAME" class="INPUTENTER" placeholder="請輸入會員名稱" readonly>
                             </label>
                         </section>
 
                         <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
                             <label for="MEMBERMAIL" class="INPUT">電子信箱<br>
-                                <input type="text" id="MEMBERMAIL" class="INPUTENTER" placeholder="請輸入電子信箱">
+                                <input type="text" id="MEMBERMAIL" class="INPUTENTER" placeholder="請輸入電子信箱" readonly>
                             </label>
                         </section>
 
                         <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
                             <label for="MEMBERPHONE" class="INPUT">連絡電話<br>
-                                <input type="text" id="MEMBERPHONE" class="INPUTENTER" placeholder="請輸入電話號碼">
+                                <input type="text" id="MEMBERPHONE" class="INPUTENTER" placeholder="請輸入電話號碼" readonly>
                             </label>
                         </section>
 
                         <section class="SHOPPINGCARTP2_STEPTEXT--INPUT">
                             <span>若會員資料有誤，建議前往會員中心進行修改，以防之後仍帶入錯誤資訊。</span>
                             <div>
+                                <a href="./member_center.html">
                                 <button class="BTN">前往會員中心</button>
+                                </a>
                             </div>
                         </section>
 
@@ -363,59 +318,20 @@
                 </section>
             </section>
 
-
-
         </section>
+    </section>
         <!-- ===== TOP按鈕 ===== -->
         <!-- top_btn -->
         @@include('./layout/top_btn.html')
         <!-- top_btn end -->
 
+    <script src="./js/vendors/vue/vue.global.js"></script>
+    <script src="./js/shopping_cart2.js"></script>
     <script src="./js/top_btn.js"></script>
     <script src="./js/nav.js"></script>
     <script src="./js/user_popup.js"></script>
     <script src="./js/toggle.js"></script>
     <script src="./js/user_popup.js"></script>
-
-    <script>
-        let a = 0
-        $(function () {
-            let viewport = $(window).width();
-            if (viewport > 414) {
-                $(function () {
-                    $('.SHOPPINGCART_ALLLIST').hide();
-                    $(".SHOPPINGCARTP2_ORDERTEXT").click(function () {
-                        $(".SHOPPINGCART_ALLLIST").slideToggle("slow");
-                        if (a === 0) {
-                            $('.SHOPPINGCARTP2_ORDERARR').css({ transform: "rotate(-180deg)" });
-                            a = 1;
-                        } else {
-                            $('.SHOPPINGCARTP2_ORDERARR').css({ transform: "rotate(0deg)" });
-                            a = 0;
-                        }
-                    })
-                })
-            }
-        })
-
-        $(function () {
-            let viewport = $(window).width();
-            if (viewport <= 414) {
-                $('.SHOPPINGCART_ITEMLIST--M').hide();
-                $(".SHOPPINGCARTP2_ORDERTEXT").click(function () {
-                    $(".SHOPPINGCART_ITEMLIST--M").slideToggle("slow");
-                    if (a === 0) {
-                        $('.SHOPPINGCARTP2_ORDERARR').css({ transform: "rotate(-180deg)" });
-                        a = 1;
-                    } else {
-                        $('.SHOPPINGCARTP2_ORDERARR').css({ transform: "rotate(0deg)" });
-                        a = 0;
-                    }
-                })
-
-            }
-        })
-    </script>
 
             
     <script>
