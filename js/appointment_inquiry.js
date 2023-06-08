@@ -1,9 +1,13 @@
 function doQuery(){
     alert('lalala');
-    var phoneNo = document.getElementById('phoneNo');
+    // 你是要抓整個element，還是value
+    var phoneNo = document.getElementById('phoneNo').value;
+    // Headers('https://tibamef2e.com/thd101/g1/php/appointment_inquiry.php');
     $.ajax({
         method: "POST",
-        url: "https://tibamef2e.com/thd101/g1/php/appointment_inquiry.php",
+        // url: "https://tibamef2e.com/thd101/g1/php/appointment_inquiry.php",
+        // url: "php/appointment_inquiry.php",
+        url: "php/appointment_inquiry.php",
         data: {
             // phppost:js
             phoneNo:phoneNo
@@ -11,7 +15,7 @@ function doQuery(){
         },
         dataType: "text",
         success: function (response) {
-           
+           alert('hello');
             $("#petName").html(response);
             
         },
