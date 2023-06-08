@@ -534,8 +534,17 @@
         }
     }
 
+    .SHOPPINGCART_ITEMWORD--TOPM{
+        .SHOPPINGCART_ITEMWORD--NAMEM{
+            display: block;
+            width: 100%;
+        }
+    }
 
-}
+    
+
+}   
+    
 
     .SHOPPINGCART_ITEMLIST--M{
         display: none;
@@ -552,6 +561,7 @@
                         margin: 0px;
                         font-size: 1.7rem;
                         padding-top: 2px;
+                        letter-spacing: 1px;
                     }
                 }
             }
@@ -559,6 +569,7 @@
     }
 
     .SHOPPINGCART_ALLLIST{
+        margin-bottom: 30px;
         @include m {
             display: none;
         }

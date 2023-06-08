@@ -5,7 +5,7 @@ include('conn.php');
 
 $productId = $_GET['id'];
 
-$sql = "SELECT * FROM PRODUCT WHERE product_id = :productId"; // 使用获取到的id值进行查询
+$sql = "SELECT * FROM PRODUCT WHERE PRODUCT_ID = :productId"; // 使用获取到的id值进行查询
 
 
 

@@ -367,12 +367,15 @@
             line-height: 65px;
         }
     }
-
-
-    .SHOPPINGCART_ITEMLIST--M{
+    .SHOPPINGCART_ITEMFORM--M{
         display: none;
+        @include m {
+            display: block;  
+        }
+    }
+    
+    .SHOPPINGCART_ITEMLIST--M{
         @include m{
-            display: block;   
             background-color: rgba(255, 255, 255, 0.5);
             border-top: 1px solid $gray;
             margin-top: 10px;
@@ -387,5 +390,10 @@
 
     .TRUEOUTLINE{
         border: 1px solid #9E9E9E;
+    }
+
+    .SHOPPINGSEARCHERR{
+        text-align: center;
+        padding: 80px 0px;
     }
 }

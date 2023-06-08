@@ -3,7 +3,7 @@
 include('conn.php');
 
 
-$sql = "SELECT * FROM product";
+$sql = "SELECT * FROM PRODUCT";
 
 $statement = $pdo->query($sql);
 
