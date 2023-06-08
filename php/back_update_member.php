@@ -15,7 +15,7 @@ $address_revise = isset($_POST['address_revise']) ? $_POST['address_revise'] : '
 
 // 返回訊息文字
 
-$message = "修改成功!";
+// $message = "修改成功!";
 $picture_name = '';
 
 if(isset($_FILES["member_pic_revise"])){
@@ -45,32 +45,29 @@ if(isset($_FILES["member_pic_revise"])){
 
 }
 
-   // $sql = "UPDATE MEMBER SET NAME = ?, PHONENO = ?, EMAIL = ?, ADDRESS = ?, MEMBER_AVATAR = ? WHERE MEMBER_ID = ?";
+ 
 
-   // $statement = $pdo->prepare($sql);
-   // $statement->bindValue(1 , $name_revise);             
-   // $statement->bindValue(2 , $phone_revise);
-   // $statement->bindValue(3 , $email_revise);
-   // $statement->bindValue(4 , $address_revise);
-   // $statement->bindValue(5 , $picture_name);
-   // $statement->bindValue(6 , $memberID);
-   // $statement->execute();
-  
-   // echo $message;
-   try {
-      $sql = "UPDATE MEMBER SET NAME = ?, PHONENO = ?, EMAIL = ?, ADDRESS = ?, MEMBER_AVATAR = ? WHERE MEMBER_ID = ?";
+   $sql = "UPDATE MEMBER SET NAME = ?, PHONENO = ?, EMAIL = ?, ADDRESS = ?";
+      $values = [$name_revise, $phone_revise, $email_revise, $address_revise];
+   
+      if (!empty($picture_name)) {
+         $sql .= ", MEMBER_AVATAR = ?";
+         $values[] = $picture_name;
+      }
+
+      if
+   
+      $sql .= " WHERE MEMBER_ID = ?";
+      $values[] = $memberID;
+   
       $statement = $pdo->prepare($sql);
-      $statement->bindValue(1, $name_revise);
-      $statement->bindValue(2, $phone_revise);
-      $statement->bindValue(3, $email_revise);
-      $statement->bindValue(4, $address_revise);
-      $statement->bindValue(5, $picture_name);
-      $statement->bindValue(6, $memberID);
-      $statement->execute();
-    
-      echo $message;
-  } catch (PDOException $e) {
-      echo "發生錯誤: " . $e->getMessage();
-  }
+      $a = $statement->execute($values);
+
+      if($a > 0){
+         echo 'done';
+      } else{
+         echo 'fail';
+      }
+
   
 ?>

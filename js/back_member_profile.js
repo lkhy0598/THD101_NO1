@@ -1,4 +1,4 @@
-// 新增會員及寵物
+// 新增會員
 function doAddMember(){
 
     const newmember_name = $('#newmember_name').val().trim();
@@ -48,14 +48,75 @@ function doAddMember(){
         contentType : false,
         success:function(response){
             alert(response);
-            // location.href = '_back_member_profile.html'
-            $('.BACK_ADD_NEW_MEMBER').hide();
-            $('.BACK_MEMBER_PROFILE').show();
+            // console.log(response);
+            location.href = '_back_member_profile.html'
+            // $('.BACK_ADD_NEW_MEMBER').hide();
+            // $('.BACK_MEMBER_PROFILE').show();
         },
         error: function(exception) {  
             alert("發生錯誤: " + exception.status);
         }
     })
+}
+// 新增寵物
+function doAddPet(){
+    const new_pet_phone = $('#new_pet_phone').val().trim();
+    const new_pet_name = $('#new_pet_name').val().trim();
+    const new_pet_gender = $('#new_pet_gender option:selected').val();
+    const new_pet_age = $('#new_pet_age').val().trim();
+    const new_pet_category = $('#new_pet_category option:selected').val();
+
+    if (new_pet_phone === "") {
+        alert("請輸入手機號碼");
+        return false;
+    }
+    if (new_pet_name === "") {
+        alert("請輸入寵物姓名");
+        return false;
+    }
+    if (new_pet_gender === "") {
+        alert("請選擇寵物性別");
+        return false;
+    }
+    if (new_pet_age === "") {
+        alert("請輸入寵物年齡");
+        return false;
+    }
+    if (new_pet_category === "") {
+        alert("請選擇寵物類型");
+        return false;
+    }
+
+    const formData = new FormData();
+    const files = $('#pet_pic')[0].files;
+    formData.append('pet_pic', files[0]);
+    formData.append('new_pet_phone', new_pet_phone);
+    formData.append('new_pet_name', new_pet_name);
+    formData.append('new_pet_gender', new_pet_gender);
+    formData.append('new_pet_age', new_pet_age);
+    formData.append('new_pet_category', new_pet_category);
+
+    $.ajax({
+        method:"POST",
+        url:"http://localhost/THD101_NO1/php/back_add_pet.php",
+        data:formData,
+        dataType:"text",
+        // 告訴jQuery不要去處理發送的資料
+        processData : false, 
+        // 告訴jQuery不要去設定Content-Type請求
+        contentType : false,
+        success:function(response){
+            alert(response);
+            location.href = '_back_member_profile.html'
+            // $('.BACK_ADD_NEW_MEMBER').hide();
+            // $('.BACK_MEMBER_PROFILE').show();
+        },
+        error: function(exception) {  
+            alert("發生錯誤: " + exception.status);
+        }
+    })
+
+    
 }
 // 會員搜尋
 function dosearch(){
@@ -100,7 +161,6 @@ function dosearch(){
         }
     });
 }
-
 // 寵物搜尋
 function Petsearch(){
 
@@ -122,25 +182,24 @@ function Petsearch(){
         dataType: "json",
         
         success: function (response) {
-            // console.log(response);
+            console.log(response);
             // 更新html內容前先清空原有資料
             $("#pet_result").html("");
             // 更新html內容(透過jQuery跑迴圈取值)
-            // $.each(response, function(index, row) {
+            $.each(response, function(index, row) {
+                let TITLE = row.APPOINTMENT_TYPE_TITLE  !== null ? row.APPOINTMENT_TYPE_TITLE : '';
+                $("#pet_result").append(
 
-            //     $("#pet_result").append(
-            //         "<ul class='PET_PROFILE_CONTENT BACK_TABLE_CONTENT'>" + 
-            //         "<li>" + row.PHONENO +"</li>" +
-            //         "<li>" + row.PET_NAME + "</li>" +
-            //         "<li>" + row.Type + "</li>" +
-            //         "<li>" + row.CREATEDATE + "</li>" +
-            //         "<li>" + "<i class='bi bi-pencil RE_PET_PROFILE' onclick='doReviseMember()'>" + "</i>" + "</li>" +
-            //         "<li>" + "<i class='bi bi-x-lg DEL_PET_BTN' onclick='doDelMember()'>" + "</i>" + "</li>" 
-                   
-            //         + "</ul>"
-            //     );
-
-            // });
+                    "<ul class='PET_PROFILE_CONTENT BACK_TABLE_CONTENT'>" + 
+                    "<li>" + row.PHONENO +"</li>" +
+                    "<li>" + row.PET_NAME + "</li>" +
+                    "<li>" + TITLE+ "</li>" +
+                    "<li>" + row.CREATEDATE + "</li>" +
+                    "<li><i class='bi bi-pencil RE_PET_PROFILE' onclick='doRevisePet(\"" + row.PHONENO + "\")'></i></li>" +
+                    "<li><i class='bi bi-x-lg DEL_PET_BTN' onclick='doDelPet()'></i></li>"
+                    + "</ul>"
+                );
+            });
 
             if(response===1){
                 alert('lalala');
@@ -151,7 +210,6 @@ function Petsearch(){
         }
     });
 }
-
 // 會員修改資料渲染
 function doReviseMember(phone_revise){
 
@@ -174,6 +232,38 @@ function doReviseMember(phone_revise){
             $('#member_id').val(response.MEMBER_ID);
             $('#preview_member_pic_revise img').attr('src', response.MEMBER_AVATAR);
             // console.log($('#member_id').val());
+            
+        },
+        error: function(exception) {  
+            alert("發生錯誤: " + exception.status);
+        }
+    })
+}
+// 寵物修改資料渲染
+function doRevisePet(owner_phone){
+    $('.BACK_MODIFY_PET').show();
+    $('.BACK_MEMBER_PROFILE').hide();
+    console.log(owner_phone);
+    $.ajax({
+        method: "GET",
+        url: "http://localhost/THD101_NO1/php/back_modify_pet.php",
+        data: {
+            owner_phone: owner_phone
+        },
+        dataType:"json",
+        success:function(response){
+            console.log(response);
+            // $('#owner_name_revise').val(response.NAME);
+            $('#pet_phone_revise').val(response.PHONENO);
+            $('#pet_gender_revise').val(response.PET_GENDER);
+            $('#pet_name_revise').val(response.PET_NAME);
+            $('#pet_category_revise').val(response.PET_CATAGORY);
+            $('#pet_age_revise').val(response.PET_AGE);
+            $('#member_id_pet').val(response.MEMBER_ID);
+            $('#preview_pet_pic_revise img').attr('src', response.PET_AVATAR);
+            console.log($('#member_id_pet').val());
+            console.log($('#pet_gender_revise').val());
+            console.log($('#pet_category_revise').val());
             
         },
         error: function(exception) {  
@@ -210,11 +300,11 @@ function doUpdateMember(){
     formData.append('address_revise',$('#address_revise').val());   
     formData.append('member_id',$('#member_id').val());   
 
-    console.log($('#member_id').val());
-    console.log($('#name_revise').val());
-    console.log($('#phone_revise').val());
-    console.log($('#email_revise').val());
-    console.log($('#address_revise').val());
+    // console.log($('#member_id').val());
+    // console.log($('#name_revise').val());
+    // console.log($('#phone_revise').val());
+    // console.log($('#email_revise').val());
+    // console.log($('#address_revise').val());
     
 
     $.ajax({
@@ -232,7 +322,7 @@ function doUpdateMember(){
             $('.BACK_MEMBER_PROFILE').show();
             $('.BACK_MODIFY_MEMBER').hide();
         },
-        // 
+        
         error: function(xhr, status, error) {
             var errorMessage = xhr.status + ': ' + xhr.statusText;
             console.log('錯誤訊息:', errorMessage);
@@ -241,29 +331,85 @@ function doUpdateMember(){
         }
     })
 }
+function doUpdatePet(){
 
-// // 會員刪除
-function doDelMember(memberID){
+    if (new_pet_phone === "") {
+        alert("請輸入手機號碼");
+        return false;
+    }
+    if (new_pet_name === "") {
+        alert("請輸入寵物姓名");
+        return false;
+    }
+    if (new_pet_gender === "") {
+        alert("請選擇寵物性別");
+        return false;
+    }
+    if (new_pet_age === "") {
+        alert("請輸入寵物年齡");
+        return false;
+    }
+    if (new_pet_category === "") {
+        alert("請選擇寵物類型");
+        return false;
+    }
 
-    console.log(memberID);
-    $.ajax({            
-        method: "POST",
-        // url: "http://localhost/THD101_project/php/back_search_member.php",
-        url: "http://localhost/THD101_NO1/php/back_del_member.php",
-        data: { memberID: memberID },            
-        dataType: "json",
-        success: function (response) {
+    var formData = new FormData();
+    var files = $('#pet_pic_revise')[0].files;
+	formData.append('pet_pic_revise',files[0]);
+    formData.append('pet_name_revise',$('#pet_name_revise').val());
+    formData.append('pet_phone_revise',$("#pet_phone_revise").val());
+    formData.append('pet_gender_revise',$("#pet_gender_revise").val());
+    formData.append('pet_category_revise',$('#pet_category_revise').val());   
+    formData.append('pet_age_revise',$('#pet_age_revise').val());   
+    formData.append('member_id_pet',$('#member_id_pet').val());   
+
+    $.ajax({
+        method:"POST",
+        url:"http://localhost/THD101_NO1/php/back_update_pet.php",
+        data:formData,
+        dataType:"json",
+        // 告訴jQuery不要去處理發送的資料
+        processData : false, 
+        // 告訴jQuery不要去設定Content-Type請求頭
+        contentType : false,
+        success:function(response){
             alert(response);
-            console.log(response);
-            location.href = '_back_member_profile.html';
+            // location.href = '_back_member_profile.html'
+            $('.BACK_MEMBER_PROFILE').show();
+            $('.BACK_MODIFY_PET').hide();
         },
-        error: function(exception) {
-            alert("發生錯誤: " + exception.status);
+        
+        error: function(xhr, status, error) {
+            var errorMessage = xhr.status + ': ' + xhr.statusText;
+            console.log('錯誤訊息:', errorMessage);
+            console.log('伺服器回應:', xhr.responseText);
+            alert('發生錯誤: ' + errorMessage);
         }
-    });
-
-
+    })
 }
+// // 會員刪除
+// function doDelMember(memberID){
+
+//     console.log(memberID);
+//     $.ajax({            
+//         method: "POST",
+//         // url: "http://localhost/THD101_project/php/back_search_member.php",
+//         url: "http://localhost/THD101_NO1/php/back_del_member.php",
+//         data: { memberID: memberID },            
+//         dataType: "json",
+//         success: function (response) {
+//             alert(response);
+//             console.log(response);
+//             location.href = '_back_member_profile.html';
+//         },
+//         error: function(exception) {
+//             alert("發生錯誤: " + exception.status);
+//         }
+//     });
+
+
+// }
 
 // 會員新增預約
 function doReserve(){

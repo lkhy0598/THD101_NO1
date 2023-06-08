@@ -8,11 +8,6 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
 // header('Content-Type: application/json');
 
-// $newmember_name = $_POST['newmember_name'];
-// $newmember_phone = $_POST['newmember_phone'];
-// $newmember_email = $_POST['newmember_email'];
-// $newmember_address = $_POST['newmember_address'];
-
 $newmember_name = isset($_POST['newmember_name']) ? $_POST['newmember_name'] : '';
 $newmember_phone = isset($_POST['newmember_phone']) ? $_POST['newmember_phone'] : '';
 $newmember_email = isset($_POST['newmember_email']) ? $_POST['newmember_email'] : '';
@@ -20,7 +15,6 @@ $newmember_address = isset($_POST['newmember_address']) ? $_POST['newmember_addr
 
 // if ($newmember_name === '') {
 //     die("請輸入姓名");
-
 // }
 // if ($newmember_phone === '') {
 //     die("請輸入手機號碼");
@@ -68,10 +62,8 @@ if (move_uploaded_file($_FILES["member_pic"]["tmp_name"], $filePath)) {
       die("更新會員圖片失敗");
   }
 
-
     //導頁                        
    echo "新增成功!";
-
 
 } else { 
 

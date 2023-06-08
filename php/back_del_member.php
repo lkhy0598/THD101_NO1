@@ -7,29 +7,42 @@
     //取得GET過來的值
     $memberID = isset($_POST['memberID']) ? $_POST['memberID'] : '';
 
-   //  //建立SQL
-   //  $sql = "delete from MEMBER where MEMBER_ID = ?";
-   //  $sql = "delete from PET where MEMBER_ID = ?";
-  
-   //  //執行
-   //  $statement = $pdo->prepare($sql);
-   //  $statement->bindValue(1 , $memberID); 
-   //  $statement->bindValue(2 , $memberID); 
-   //  $statement->execute();
-
-   //建立SQL
-   $sql1 = "delete from MEMBER where MEMBER_ID = ?";
-   $sql2 = "delete from PET where MERBER_ID = ?";
+   // //建立SQL
+   // $sql1 = "delete from MEMBER where MEMBER_ID = ?";
+   // $sql2 = "delete from PET where MERBER_ID = ?";
  
-   //執行
-   $statement = $pdo->prepare($sql1);
-   $statement->bindValue(1, $memberID); 
-   $statement->execute();
+   // //執行
+   // $statement = $pdo->prepare($sql1);
+   // $statement->bindValue(1, $memberID); 
+   // $statement->execute();
 
-   $statement = $pdo->prepare($sql2);
-   $statement->bindValue(1, $memberID); 
-   $statement->execute();
+   // $statement = $pdo->prepare($sql2);
+   // $statement->bindValue(1, $memberID); 
+   // $statement->execute();
 
+   $sqlDeleteMemberVoucher = "DELETE FROM MEMBER_VOUCHER WHERE MEMBER_ID = ?";
+   $statementDeleteMemberVoucher = $pdo->prepare($sqlDeleteMemberVoucher);
+   $statementDeleteMemberVoucher->bindValue(1, $memberID);
+   $statementDeleteMemberVoucher->execute();
+
+   $sqlDeleteAppointment = "DELETE FROM APPOINTMENT WHERE MEMBER_ID = ?";
+   $statementDeleteAppointment = $pdo->prepare($sqlDeleteAppointment);
+   $statementDeleteAppointment->bindValue(1, $memberID);
+   $statementDeleteAppointment->execute();
+
+   $sqlDeletePet = "DELETE FROM PET WHERE MERBER_ID = ?";
+   $statementDeletePet = $pdo->prepare($sqlDeletePet);
+   $statementDeletePet->bindValue(1, $memberID);
+   $statementDeletePet->execute();
+
+   $sqlDeleteMember = "DELETE FROM MEMBER WHERE MEMBER_ID = ?";
+   $statementDeleteMember = $pdo->prepare($sqlDeleteMember);
+   $statementDeleteMember->bindValue(1, $memberID);
+   $statementDeleteMember->execute();
+   
+
+
+   
     //導頁    
     echo "<script>alert('商品已刪除!'); location.href = '_back_member_profile.html';</script>";  
 ?>

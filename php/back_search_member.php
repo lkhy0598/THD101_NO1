@@ -15,47 +15,30 @@ if (isset($_POST['name'])) {
    $name = '';
 }
 
-if($phone == ''){
-   $sql = "select * FROM MEMBER where NAME like ?";
 
+if($phone !== '' || $name !== ''){
+
+   $sql = "SELECT * FROM MEMBER WHERE 1=1";
+
+   if($phone !== ''){
+      $sql .= " AND PHONENO LIKE ?";
+   }
+   if($name !== '' ){
+      $sql .= " AND NAME LIKE ?";
+   }
+   
    $statement = $pdo->prepare($sql);
+   $parameterIndex = 1;
 
-   $statement->bindValue(1,"%".$name."%");
- 
-   $statement ->execute();
+   if($phone !== ''){
+      $statement->bindValue($parameterIndex,"%".$phone."%");
+      $parameterIndex++;
+   }
+   if($name !== '' ){
+      $statement->bindValue($parameterIndex,"%".$name."%");
+      $parameterIndex++;
+   }
 
-   $data = $statement->fetchAll();
-
-   header('Content-Type: application/json');
-
-   echo json_encode($data);
-}
-
-if($name == '' ){
-   $sql = "select * FROM MEMBER where PHONENO like ?";
-
-   $statement = $pdo->prepare($sql);
-
-   $statement->bindValue(1,"%".$phone."%");
-
-   $statement ->execute();
-
-   $data = $statement->fetchAll();
-
-   header('Content-Type: application/json');
-
-   echo json_encode($data);
-}
-
-if($phone != '' && $name != ''){
-
-   $sql = "select * FROM MEMBER where PHONENO like ? or NAME like ?";
-
-   $statement = $pdo->prepare($sql);
-
-   $statement->bindValue(1,"%".$phone."%");
-
-   $statement->bindValue(2,"%".$name."%");
 
    $statement ->execute();
 

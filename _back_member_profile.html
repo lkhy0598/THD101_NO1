@@ -167,19 +167,19 @@
 
                             <ul>
                                 <li>
-                                    <label for="phone" class="INPUT">手機號碼<br>
-                                        <input type="text" name="phone" id="owner_phone">
+                                    <label for="owner_phone" class="INPUT">手機號碼<br>
+                                        <input type="text" name="owner_phone" id="owner_phone">
                                     </label>
                                 </li>
                                 <li>
                                     <label for="consultation_type" class="SELECT">看診類型<br>
                                         <select id="consultation_type">
                                             <option value="default">請選擇類型</option>
-                                            <option value="general">一般掛號</option>
-                                            <option value="vaccines">預防針</option>
-                                            <option value="health_checks">健康檢查</option>
-                                            <option value="communication">寵物溝通</option>
-                                            <option value="hotel">寵物住宿</option>
+                                            <option value="一般掛號">一般掛號</option>
+                                            <option value="預防針">預防針</option>
+                                            <option value="健康檢查">健康檢查</option>
+                                            <option value="寵物溝通">寵物溝通</option>
+                                            <option value="住宿">住宿</option>
                                         </select>
                                     </label>
                                 </li>
@@ -278,7 +278,7 @@
                     <section class="ADD_NEW_PET">
 
 
-                        <form action="" class="ADD_NEW_FORM">
+                        <section action="" class="ADD_NEW_FORM">
 
                             <section class="ADD_NEW_PET_PIC ADD_PIC">
 
@@ -295,58 +295,58 @@
                             </section>
 
                             <ul class="ADD_NEW_PET_FORM">
-                                <li>
+                                <!-- <li>
                                     <label for="owner_name" class="INPUT">主人姓名<br>
                                         <input type="text" name="owner_name" id="owner_name">
                                     </label>
-                                </li>
+                                </li> -->
                                 <li>
-                                    <label for="phone" class="INPUT">手機號碼<br>
-                                        <input type="text" name="owner_phone" id="phone">
+                                    <label for="new_pet_phone" class="INPUT">手機號碼<br>
+                                        <input type="text" name="new_pet_phone" id="new_pet_phone">
                                     </label>
                                 </li>
                                 <li>
-                                    <label for="pet_name" class="INPUT">寵物姓名<br>
-                                        <input type="text" name="pet_name" id="pet_name">
+                                    <label for="new_pet_name" class="INPUT">寵物姓名<br>
+                                        <input type="text" name="new_pet_name" id="new_pet_name">
                                     </label>
                                 </li>
                                 <li>
-                                    <label for="pet_gender" class="SELECT">寵物性別<br>
-                                        <select name="pet_gender" id="pet_gender">
-                                            <option value="male">公</option>
-                                            <option value="female">母</option>
+                                    <label for="new_pet_gender" class="SELECT">寵物性別<br>
+                                        <select name="new_pet_gender" id="new_pet_gender">
+                                            <option value="公">公</option>
+                                            <option value="母">母</option>
                                         </select>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="new_pet_age" class="INPUT">寵物年齡<br>
+                                        <input type="text" name="new_pet_age" id="new_pet_age">
                                     </label>
                                 </li>
                                 <li>
                                     <label for="pet_category" class="SELECT">寵物類型<br>
-                                        <select id="pet_category">
-                                            <option value="dog">狗狗</option>
-                                            <option value="cat">貓貓</option>
-                                            <option value="rabbit">兔子</option>
-                                            <option value="other">其他</option>
+                                        <select id="new_pet_category">
+                                            <option value="狗">狗狗</option>
+                                            <option value="貓">貓貓</option>
+                                            <option value="其他">其他</option>
                                         </select>
                                     </label>
                                 </li>
-                                <li>
-                                    <label for="pet_age" class="INPUT">寵物年齡<br>
-                                        <input type="text" name="pet_age" id="pet_age">
-                                    </label>
-                                </li>
-                                <li>
+                               
+                                <!-- <li>
                                     <label for="vaccines" class="INPUT">上次施打預防針日期<br>
                                         <input type="date" name="vaccines" id="vaccines">
                                     </label>
-                                </li>
+                                </li> -->
                                 <li>
-                                    <button class="BTN_BACK" type="submit">新增寵物</button>
+                                    <button class="BTN_BACK" type="submit" onclick="return doAddPet()">新增寵物</button>
                                 </li>
                                 <li>
                                     <button class="BTN_BACK CANCEL_NEW_PET" type="submit" onclick="back()">取消</button>
                                 </li>
                             </ul>
 
-                        </form>
+                        </section>
                     </section>
 
                 </section>
@@ -435,8 +435,7 @@
 
                     <section class="MODIFY_PET_FORM" >
 
-
-                        <form action="" class="ADD_NEW_FORM">
+                        <section action="" class="ADD_NEW_FORM">
 
                             <section class="ADD_NEW_PET_PIC ADD_PIC">
                                 <div id="preview_pet_pic_revise">
@@ -451,58 +450,59 @@
                             </section>
 
                             <ul class="ADD_NEW_PET_FORM">
+                                <!-- <li>
+                                    <label for="owner_name_revise" class="INPUT">主人姓名<br>
+                                        <input type="text" name="owner_name_revise" id="owner_name_revise">
+                                    </label>
+                                </li> -->
                                 <li>
-                                    <label for="owner_name" class="INPUT">主人姓名<br>
-                                        <input type="text" name="owner_name" id="owner_name">
+                                    <label for="pet_phone_revise" class="INPUT">手機號碼<br>
+                                        <input type="text" name="pet_phone_revise" id="pet_phone_revise" disabled>
                                     </label>
                                 </li>
                                 <li>
-                                    <label for="phone" class="INPUT">手機號碼<br>
-                                        <input type="text" name="phone" id="phone">
+                                    <label for="pet_name_revise" class="INPUT">寵物姓名<br>
+                                        <input type="text" name="pet_name_revise" id="pet_name_revise">
                                     </label>
                                 </li>
                                 <li>
-                                    <label for="pet_name" class="INPUT">寵物姓名<br>
-                                        <input type="text" name="pet_name" id="pet_name">
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="pet_gender" class="SELECT">寵物性別<br>
-                                        <select name="pet_gender" id="pet_gender">
-                                            <option value="male">公</option>
-                                            <option value="female">母</option>
+                                    <label for="pet_gender_revise" class="SELECT">寵物性別<br>
+                                        <select name="pet_gender_revise" id="pet_gender_revise">
+                                            <option value="公">公</option>
+                                            <option value="母">母</option>
                                         </select>
                                     </label>
                                 </li>
                                 <li>
-                                    <label for="pet_category" class="SELECT">寵物類型<br>
-                                        <select id="pet_category">
-                                            <option value="dog">狗狗</option>
-                                            <option value="cat">貓貓</option>
-                                            <option value="rabbit">兔子</option>
-                                            <option value="other">其他</option>
+                                    <label for="pet_category_revise" class="SELECT">寵物類型<br>
+                                        <select id="pet_category_revise">
+                                            <option value="狗">狗狗</option>
+                                            <option value="貓">貓貓</option>
+                                            <option value="其他">其他</option>
                                         </select>
                                     </label>
                                 </li>
                                 <li>
-                                    <label for="pet_age" class="INPUT">寵物年齡<br>
-                                        <input type="text" name="pet_age" id="pet_age">
+                                    <label for="pet_age_revise" class="INPUT">寵物年齡<br>
+                                        <input type="text" name="pet_age_revise" id="pet_age_revise">
                                     </label>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <label for="vaccines" class="INPUT">上次施打預防針日期<br>
                                         <input type="date" name="vaccines" id="vaccines">
                                     </label>
-                                </li>
+                                </li> -->
+                                <input type="hidden" name="member_id" id="member_id_pet" value="要更新的会员ID">
+                                <input type="hidden" name="picture_name" id="picture_name_pet"/>
                                 <li>
-                                    <button class="BTN_BACK MODIFY_PET_BTN" type="submit">修改寵物</button>
+                                    <button class="BTN_BACK MODIFY_PET_BTN" type="submit" onclick="doUpdatePet()">修改寵物</button>
                                 </li>
                                 <li>
                                     <button class="BTN_BACK CANCEL_PET" type="submit">取消</button>
                                 </li>
                             </ul>
 
-                        </form>
+                        </section>
                     </section>
                 </section>
 
@@ -622,6 +622,8 @@
             $('.BACK_NAV ul li').eq(0).click(function () {
                 $('.BACK_ADD_NEW_MEMBER').show();
                 $('.BACK_MEMBER_PROFILE').hide();
+                $('.BACK_MODIFY_PET').hide();
+
                 event.preventDefault();
             });
 
