@@ -1,6 +1,7 @@
 <?php
 
 include('conn.php');
+// include('connServer.php');
 include('upload.php');
 
 header("Access-Control-Allow-Origin: http://localhost:3000");
@@ -57,7 +58,7 @@ if(isset($_FILES["picture_name_pet"])){
       $a = $statement->execute($values);
 
       if($a > 0){
-         echo 'done';
+         echo '修改成功';
       } else{
          echo 'fail';
       }

@@ -38,7 +38,8 @@ function doAddMember(){
 
     $.ajax({
         method:"POST",
-        url:"http://localhost/THD101_NO1/php/back_add_member_pet.php",
+        // url:"http://localhost/THD101_NO1/php/back_add_member_pet.php",
+        url:"../php/back_add_member_pet.php",
         data:formData,
 
         dataType:"text",
@@ -99,6 +100,7 @@ function doAddPet(){
     $.ajax({
         method:"POST",
         url:"http://localhost/THD101_NO1/php/back_add_pet.php",
+        // url:"../php/back_add_pet.php",
         data:formData,
         dataType:"text",
         // 告訴jQuery不要去處理發送的資料
@@ -132,7 +134,8 @@ function dosearch(){
     $.ajax({            
         method: "POST",
         // url: "http://localhost/THD101_project/php/back_search_member.php",
-        url: "http://localhost/THD101_NO1/php/back_search_member.php",
+        // url: "http://localhost/THD101_NO1/php/back_search_member.php",
+        url:"../php/back_search_member.php",
         data:{
             phone: phone, 
             name: name
@@ -150,7 +153,7 @@ function dosearch(){
                     "<li>" + row.PHONENO + "</li>" +
                     "<li>" + row.CREATE_DATE + "</li>" +
                     "<li>" + "<i class='bi bi-pencil RE_MEMBER_PROFILE' onclick='doReviseMember(\"" + row.PHONENO + "\")' >" + "</i>" + "</li>" +
-                    "<li>" + "<i class='bi bi-x-lg DEL_MEMBER_BTN' onclick='doDelMember(\"" + row.MEMBER_ID + "\")'></i></a></li>" +
+                    // "<li>" + "<i class='bi bi-x-lg DEL_MEMBER_BTN' onclick='doDelMember(\"" + row.MEMBER_ID + "\")'></i></a></li>" +
                     "<li>" + "<i class='bi bi-calendar-plus RESERVE_BTN' onclick='doReserve(\"" + row.PHONENO + "\")'>" + "</i>" + "</li>" 
                     + "</ul>"
                 );
@@ -175,6 +178,7 @@ function Petsearch(){
         method: "POST",
         // url: "http://localhost/THD101_project/php/back_pet_search_member.php",
         url: "http://localhost/THD101_NO1/php/back_pet_search_member.php",
+        // url:"../php/back_pet_search_member.php",
         data:{
             phone: phone, 
             type: type
@@ -218,7 +222,8 @@ function doReviseMember(phone_revise){
     // console.log(phone_revise);
     $.ajax({
         method: "GET",
-        url: "http://localhost/THD101_NO1/php/back_modify_member.php",
+        // url: "http://localhost/THD101_NO1/php/back_modify_member.php",
+        url:"../php/back_modify_member.php",
         data: {
             phone_revise: phone_revise
         },
@@ -247,6 +252,7 @@ function doRevisePet(owner_phone){
     $.ajax({
         method: "GET",
         url: "http://localhost/THD101_NO1/php/back_modify_pet.php",
+        // url:"../php/back_modify_pet.php",
         data: {
             owner_phone: owner_phone
         },
@@ -271,7 +277,7 @@ function doRevisePet(owner_phone){
         }
     })
 }
-// 更新資料
+// 會員更新
 function doUpdateMember(){
 
     if ($('#name_revise').val() == "") {
@@ -309,9 +315,10 @@ function doUpdateMember(){
 
     $.ajax({
         method:"POST",
-        url:"http://localhost/THD101_NO1/php/back_update_member.php",
+        // url:"http://localhost/THD101_NO1/php/back_update_member.php",
+        url:"../php/back_update_member.php",
         data:formData,
-        dataType:"json",
+        // dataType:"json",
         // 告訴jQuery不要去處理發送的資料
         processData : false, 
         // 告訴jQuery不要去設定Content-Type請求頭
@@ -331,6 +338,7 @@ function doUpdateMember(){
         }
     })
 }
+// 寵物更新
 function doUpdatePet(){
 
     if (new_pet_phone === "") {
@@ -367,8 +375,9 @@ function doUpdatePet(){
     $.ajax({
         method:"POST",
         url:"http://localhost/THD101_NO1/php/back_update_pet.php",
+        // url:"../php/back_update_pet.php",
         data:formData,
-        dataType:"json",
+        // dataType:"json",
         // 告訴jQuery不要去處理發送的資料
         processData : false, 
         // 告訴jQuery不要去設定Content-Type請求頭
@@ -384,35 +393,15 @@ function doUpdatePet(){
             var errorMessage = xhr.status + ': ' + xhr.statusText;
             console.log('錯誤訊息:', errorMessage);
             console.log('伺服器回應:', xhr.responseText);
+            console.log('伺服器回應:',xhr);
+            console.log('伺服器回應:',status);
+            console.log('伺服器回應:',error);
             alert('發生錯誤: ' + errorMessage);
         }
     })
 }
-// // 會員刪除
-// function doDelMember(memberID){
-
-//     console.log(memberID);
-//     $.ajax({            
-//         method: "POST",
-//         // url: "http://localhost/THD101_project/php/back_search_member.php",
-//         url: "http://localhost/THD101_NO1/php/back_del_member.php",
-//         data: { memberID: memberID },            
-//         dataType: "json",
-//         success: function (response) {
-//             alert(response);
-//             console.log(response);
-//             location.href = '_back_member_profile.html';
-//         },
-//         error: function(exception) {
-//             alert("發生錯誤: " + exception.status);
-//         }
-//     });
-
-
-// }
-
-// 會員新增預約
-function doReserve(){
+// 會員新增預約資料渲染
+function doReserve(reserve_phone){
 
     $('.RESERVE_BOX').css('display','block');
     $('.MASK').show();
@@ -421,14 +410,71 @@ function doReserve(){
         $('.RESERVE_BOX').css('display','none');
         $('.MASK').hide();
     });
-
     $('.MASK').click(function(){
         $('.RESERVE_BOX').css('display','none');
         $('.MASK').hide();
     });
 
+    $.ajax({
+        method: "GET",
+        url: "http://localhost/THD101_NO1/php/back_reserve_get.php",
+        data: {
+            reserve_phone: reserve_phone
+        },
+        dataType:"json",
+        success:function(response){
+            console.log(response);
+            $('#reserve_name').val(response.NAME);
+            $('#reserve_phone').val(response.PHONENO);
+            $('#member_id').val(response.MEMBER_ID);
+            // console.log($('#member_id').val());
+            
+        },
+        error: function(exception) {  
+            alert("發生錯誤: " + exception.status);
+        }
+    })
+
 }
 
+function doAddReserve(){
+    const reserve_type = $('#reserve_type').val();
+    const reserve_doctor = $('#reserve_doctor').val();
+    const reserve_date = $('#reserve_date').val();
+    const reserve_datetime = $('#reserve_datetime').val();
+    const reserve_name = $('#reserve_name').val();
+    const reserve_phone = $('#reserve_phone').val();
+    const reserve_pet_name = $('#reserve_pet_name').val();
+    const reserve_pet_category= $('#reserve_pet_category').val();
+    const reserve_pet_age= $('#reserve_pet_age').val();
+    const reserve_vaccines= $('#reserve_vaccines').val();
+    const reserve_symptom_type= $('#reserve_symptom_type').val();
+
+    if (reserve_type === "") {
+        alert("請選擇預約類型");
+        return false;
+    }
+    if (reserve_doctor === "") {
+        alert("請選擇指定醫師");
+        return false;
+    }
+    if (reserve_date === "") {
+        alert("請輸入預約日期");
+        return false;
+    }
+    if (reserve_datetime === "") {
+        alert("請選擇預約時段");
+        return false;
+    }
+    if (reserve_pet_name === "") {
+        alert("請輸入寵物姓名");
+        return false;
+    }
+    if (reserve_pet_name === "") {
+        alert("請輸入寵物姓名");
+        return false;
+    }
+}
 
 
 

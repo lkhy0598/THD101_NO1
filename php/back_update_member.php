@@ -1,6 +1,7 @@
 <?php
 
-include('conn.php');
+// include('conn.php');
+include('connServer.php');
 include('upload.php');
 
 header("Access-Control-Allow-Origin: http://localhost:3000");
@@ -54,8 +55,6 @@ if(isset($_FILES["member_pic_revise"])){
          $sql .= ", MEMBER_AVATAR = ?";
          $values[] = $picture_name;
       }
-
-      if
    
       $sql .= " WHERE MEMBER_ID = ?";
       $values[] = $memberID;
@@ -64,7 +63,7 @@ if(isset($_FILES["member_pic_revise"])){
       $a = $statement->execute($values);
 
       if($a > 0){
-         echo 'done';
+         echo '修改成功';
       } else{
          echo 'fail';
       }
