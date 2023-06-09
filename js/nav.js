@@ -39,7 +39,7 @@ $(document).ready(function () {
             // $('.SPAN1').addClass('M_HEADER_TOGGLE_ACTIVE');
             // $('.SPAN2').addClass('M_HEADER_TOGGLE_ACTIVE');
             // $('.SPAN3').addClass('M_HEADER_TOGGLE_ACTIVE');
-            
+
 
 
             // LOGO形變
@@ -70,22 +70,22 @@ startTimer();
 
 // 重置计时器
 function resetTimer() {
-  clearTimeout(timer);
-  startTimer();
+    clearTimeout(timer);
+    startTimer();
 }
 
 // 开始计时器函数
 function startTimer() {
-  // 设置2秒后执行移除class的函数
-  timer = setTimeout(function() {
-    // 执行需要的操作，例如移除class
-    $('.M_HEADER_NAV').removeClass('M_HEADER_BG_ACTIVE');
-    $('.M_HEADER_NAV').removeClass('HEADER_NAV_SHADOW');
+    // 设置2秒后执行移除class的函数
+    timer = setTimeout(function () {
+        // 执行需要的操作，例如移除class
+        $('.M_HEADER_NAV').removeClass('M_HEADER_BG_ACTIVE');
+        $('.M_HEADER_NAV').removeClass('HEADER_NAV_SHADOW');
 
-    // $('.SPAN1').removeClass('M_HEADER_TOGGLE_ACTIVE')
-    // $('.SPAN2').removeClass('M_HEADER_TOGGLE_ACTIVE')
-    // $('.SPAN3').removeClass('M_HEADER_TOGGLE_ACTIVE')
-  }, 2000);
+        // $('.SPAN1').removeClass('M_HEADER_TOGGLE_ACTIVE')
+        // $('.SPAN2').removeClass('M_HEADER_TOGGLE_ACTIVE')
+        // $('.SPAN3').removeClass('M_HEADER_TOGGLE_ACTIVE')
+    }, 2000);
 }
 
 // ========= RWD NAV的LOGO 變化==========
@@ -113,48 +113,33 @@ $(document).ready(function () {
 
 });
 
+// 判斷是否登入相關功能 ========================
+// showMember();
+//顯示會員資訊
+function showMember() {
+    $.ajax({
+        method: "POST",
+        // url: "../php/Member.php",
+        url: "http://localhost/THD101_NO1/php/Member.php",
+        data: {},
+        dataType: "text",
+        success: function (response) {
 
+            //窄版顯示>>Header.html
+            $("#SHOWMEMBER").html(response);
+
+        },
+        error: function (exception) {
+            alert("數據載入失敗: " + exception.status);
+        }
+    });
+}
 
 // 按登入紐停止預設行為
-$(document).ready(function(e) {
-    $('.LOGIN').click(function(e){
-	e.preventDefault();
+$(document).ready(function (e) {
+    $('.LOGIN').click(function (e) {
+        e.preventDefault();
     });
 });
 
-
-
-//手機板門診時間彈窗
-// $(document).ready(function() {
-//  var btn_el = document.getElementsByClassName("M_FUNTION_A2")[0];
-//         btn_el.addEventListener("click", function(e){
-//             // console.log("wdd");
-//             e.preventDefault();
-//             // var test = document.getElementsByClassName("bookwrapper")[0];
-//             // test.classList.add("-on");
-//             // test.classList.remove("-off");
-//             $(".M_TIME_TABLE").fadeIn(400);
-            
-//         });
-//     var i = document.getElementsByClassName("CLOSE_TABLE")[0];
-//         i.addEventListener("click", function(e){
-//             // console.log("wdd");
-//             // $(i).toggleClass('XXX');
-//             e.preventDefault();
-//             $(".M_TIME_TABLE").fadeOut(300);
-    
-
-//         });
-
-//     var c = document.getElementsByClassName("M_TIME_TABLE")[0];
-//         c.addEventListener("click", function(e){
-//             // console.log("wdd");
-//             // $(i).toggleClass('XXX');
-//             e.preventDefault();
-//             $(".M_TIME_TABLE").fadeOut(300);
-    
-
-//         });
-
-// });
 

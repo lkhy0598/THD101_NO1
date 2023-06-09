@@ -35,7 +35,7 @@ function PASSWORD_TABS_READY() {
 
 // ====== 彈跳視窗控制 ======
 // 打開彈跳視窗
-$('.LOGIN').click(function () {
+function LOGIN() {
     // console.log("aaaa");
     // 載入登入頁
     POPUP_READY();
@@ -58,7 +58,7 @@ $('.LOGIN').click(function () {
     // 打開視窗
     $('.MODAL').addClass('MODAL_ACTIVE');
     $('.POPUP_WRAP').addClass('POPUP_WRAP_ACTIVE');
-});
+};
 
 // 關閉彈跳視窗
 $('.POPUP_CLOSEBTN, .MODAL').click(function () {
@@ -232,8 +232,8 @@ function joinSub(e) {
         } else {
             $.ajax({
                 method: "POST",
-                url: "http://localhost/THD101_G1_groupproject/php/Join.php",
-                // url: "https://tibamef2e.com/thd101/g1/php/Join.php",
+                url: "http://localhost/THD101_NO1/php/Join.php",
+                // url: "../php/Join.php",
                 data: {
                     USERNAME: usn,
                     PHONENO: pho,
@@ -264,7 +264,7 @@ function joinSub(e) {
                             $('.INPUT_GROUP').removeClass('POPUPACTIVE');
                         }, 3000);
                     } else {
-                        alert(response); 
+                        alert(response);
                     }
                 },
                 error: function (xhr, status, error) {
@@ -284,7 +284,8 @@ function loginSub() {
     //input your code...
     $.ajax({
         method: "POST",
-        url: "http://localhost/THD101_G1_groupproject/php/Login.php",
+        // url: '../php/Login.php',
+        url: "http://localhost/THD101_NO1/php/Login.php",
         data: {
             USERNAME: lusn,
             EMAIL: lpsw,
@@ -292,17 +293,36 @@ function loginSub() {
         },
         dataType: "text",
         success: function (response) {
-            if (response.includes("登入成功")) { 
+            if (response.includes("登入成功")) {
+
+                console.log(response)
                 alert(response);
-                setTimeout(function() {
-                    window.location.href = 'member_center.html';
-                }, 3000);
+                window.location.href = 'member_center.html';
             } else {
+                console.log(response)
                 alert(response);
             };
         },
         error: function (exception) {
             alert("發生錯誤: " + exception.status);
+        }
+    });
+}
+
+// 登出會員
+function logoutSub() {
+    $.ajax({
+        // url: '../php/Logout.php',
+        url: 'http://localhost/THD101_NO1/php/Logout.php',
+        type: 'GET',
+        success: function(response) {
+            // 在成功回應後執行以下動作
+            alert(response);
+            location.href = '../dist/homepage.html';
+        },
+        error: function(xhr, status, error) {
+            // 在錯誤回應時執行以下動作
+            alert('登出失敗!');
         }
     });
 }

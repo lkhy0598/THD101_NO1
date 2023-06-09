@@ -1,87 +1,89 @@
 <?php
+header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Headers: Content-Type");
 
-    //清除Session
-    function clearSession(){
+//清除Session
+function clearSession()
+{
 
-        //先判斷session是否存在
-        if(!isset($_SESSION)){
-            session_start(); 
-        }
-
-        session_unset();
-        session_destroy();
-
+    //先判斷session是否存在
+    if (!isset($_SESSION)) {
+        session_start();
     }
 
-    //--------------------------------------後台專用--------------------------------------
+    session_unset();
+    session_destroy();
+}
 
-    //取得Session(後台專用)
-    function getSessionB(){
+//--------------------------------------後台專用--------------------------------------
 
-        //先判斷session是否存在
-        if(!isset($_SESSION)){
-            session_start(); 
-        }
+//取得Session(後台專用)
+function getSessionB()
+{
 
-        //有登入session->回傳ID，無登入session->回傳空字串""
-        return isset($_SESSION["BackendUserID"]) ? $_SESSION["BackendUserID"] : "";             
-
+    //先判斷session是否存在
+    if (!isset($_SESSION)) {
+        session_start();
     }
 
-    //寫入Session(後台專用)
-    function setSessionB($UserID){
+    //有登入session->回傳ID，無登入session->回傳空字串""
+    return isset($_SESSION["BackendUserID"]) ? $_SESSION["BackendUserID"] : "";
+}
 
-        //先判斷session是否存在
-        if(!isset($_SESSION)){
-            session_start(); 
-        }
+//寫入Session(後台專用)
+function setSessionB($UserID)
+{
 
-        $_SESSION["BackendUserID"] = $UserID;
-
+    //先判斷session是否存在
+    if (!isset($_SESSION)) {
+        session_start();
     }
 
-    //--------------------------------------前台專用--------------------------------------
+    $_SESSION["BackendUserID"] = $UserID;
+}
 
-    //取得會員ID(前台專用)
-    function getMemberID(){
+//--------------------------------------前台專用--------------------------------------
 
-        //先判斷session是否存在
-        if(!isset($_SESSION)){
-            session_start(); 
-        }
+//取得會員ID(前台專用)
+function getMemberID()
+{
 
-        //有登入session->回傳ID，無登入session->回傳空字串""
-        return isset($_SESSION["MemberID"]) ? $_SESSION["MemberID"] : ""; 
-
+    //先判斷session是否存在
+    if (!isset($_SESSION)) {
+        session_start();
     }
 
-    //取得會員帳號(前台專用)
-    function getMemberName(){
+    //有登入session->回傳ID，無登入session->回傳空字串""
+    return isset($_SESSION["MemberID"]) ? $_SESSION["MemberID"] : "";
+}
 
-        //先判斷session是否存在
-        if(!isset($_SESSION)){
-            session_start(); 
-        }
+//取得會員名稱(前台專用)
+function getMemberName()
+{
 
-        //有登入session->回傳Name，無登入session->回傳空字串""
-        return isset($_SESSION["MemberName"]) ? $_SESSION["MemberName"] : ""; 
-
+    //先判斷session是否存在
+    if (!isset($_SESSION)) {
+        session_start();
     }
 
-    //寫入Session(前台專用)
-    function setMemberInfo($MemberID, $MemberName){
+    //有登入session->回傳Name，無登入session->回傳空字串""
+    return isset($_SESSION["MemberName"]) ? $_SESSION["MemberName"] : "";
+}
 
-        //先判斷session是否存在
-        if(!isset($_SESSION)){
-            session_start(); 
-        }
-
-        //Table 'ec_member'裡的ID欄位值
-        $_SESSION["MemberID"] = $MemberID; 
-
-        //Table 'ec_member'裡的Account欄位值
-        $_SESSION["MemberName"] = $MemberName; 
-        
+//寫入Session(前台專用)
+function setMemberInfo($MemberID, $MemberName)
+{
+    // clearSession();
+    //先判斷session是否存在
+    if (!isset($_SESSION)) {
+        session_start();
     }
 
+    //Table 'mydb'裡的MEMBER_ID欄位值
+    $_SESSION["MemberID"] = $MemberID;
+
+    //Table 'mydb'裡的NAME欄位值
+    $_SESSION["MemberName"] = $MemberName;
+}
 ?>
