@@ -17,11 +17,11 @@ const app = Vue.createApp({
         fetchProducts() {
             $.ajax({
                 // url: 'http://tibamef2e.com/thd101/g1/php/shopping.php',
-                url: 'http://localhost/THD101_project/php/shopping.php',
+                url: 'http://localhost/THD101_NO1/php/shopping.php',
                 type: 'GET',
                 dataType: 'json',
                 success: response => {
-                    console.log(response);
+                    // console.log(response);
                     this.shoppingItems = response;
                     this.filterItems();
                 },

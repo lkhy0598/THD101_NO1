@@ -18,5 +18,6 @@
        $pdo = new PDO($dsn, $db_user, $db_pass);
 
        header("Access-Control-Allow-Origin: http://localhost:3000");
+       
 
 ?>

@@ -11,7 +11,7 @@ header("Access-Control-Allow-Headers: Content-Type");
 //     echo "notlogin";
 // }
 
-echo "24";
+echo "22";
 // echo "notlogin";
 
 ?>
