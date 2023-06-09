@@ -1,7 +1,7 @@
 <?php
 
-// include('conn.php');
-include('connServer.php');
+include('conn.php');
+// include('connServer.php');
 include('upload.php');
 
 header("Access-Control-Allow-Origin: http://localhost:3000");
@@ -28,7 +28,7 @@ $newmember_address = isset($_POST['newmember_address']) ? $_POST['newmember_addr
 // }
 //建立SQL
     
-$sql = "INSERT INTO MEMBER (NAME, PHONENO, EMAIL, ADDRESS, PASSWORD, CREATE_DATE) VALUES (?, ?, ?, ?,?,NOW())";
+$sql = "INSERT INTO MEMBER (NAME, PHONENO, EMAIL, ADDRESS, PASSWORD, CREATE_DATE) VALUES (?, ?, ?, ?, ?, CURDATE())";
 
 $statement = $pdo->prepare($sql);
 $statement->bindValue(1 , $newmember_name);             

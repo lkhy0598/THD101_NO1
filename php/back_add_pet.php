@@ -1,5 +1,6 @@
 <?php
 include('conn.php');
+// include('connServer.php');
 include('upload.php');
 
 header("Access-Control-Allow-Origin: http://localhost:3000");
@@ -11,6 +12,7 @@ header("Access-Control-Allow-Headers: Content-Type");
    $new_pet_gender = isset($_POST['new_pet_gender']) ? $_POST['new_pet_gender'] : '';
    $new_pet_age = isset($_POST['new_pet_age']) ? $_POST['new_pet_age'] : '';
    $new_pet_category = isset($_POST['new_pet_category']) ? $_POST['new_pet_category'] : '';
+   $new_vaccines = isset($_POST['new_vaccines']) ? $_POST['new_vaccines'] : '';
 
 
    $sql = "SELECT MEMBER_ID FROM MEMBER WHERE PHONENO = ?";
@@ -21,7 +23,7 @@ header("Access-Control-Allow-Headers: Content-Type");
    
 if($memberID){
 
-   $sql = "INSERT INTO PET (PET_NAME, PET_GENDER, PET_CATAGORY, PET_AGE, MEMBER_ID, CREATEDATE) VALUES (?, ?, ?, ?, ?,NOW())";
+   $sql = "INSERT INTO PET (PET_NAME, PET_GENDER, PET_CATAGORY, PET_AGE, MEMBER_ID, CREATEDATE, VACCI_OR_NOT) VALUES (?, ?, ?, ?, ?, NOW(),?)";
 
    $statement = $pdo->prepare($sql);
    $statement->bindValue(1, $new_pet_name);
@@ -29,6 +31,8 @@ if($memberID){
    $statement->bindValue(3, $new_pet_category);
    $statement->bindValue(4, $new_pet_age);
    $statement->bindValue(5, $memberID);
+   $statement->bindValue(6, $new_vaccines);
+   
    $statement->execute();
 
    $petID = $pdo->lastInsertId();

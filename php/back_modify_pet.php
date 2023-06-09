@@ -1,5 +1,6 @@
 <?php
    include('conn.php');
+   // include('connServer.php');
 
    // 設定CORS標頭，允許 'content-type' 標頭欄位。
    header("Access-Control-Allow-Origin: http://localhost:3000");
@@ -25,7 +26,8 @@ if ($result->rowCount() > 0) {
       'PHONENO' => $row['PHONENO'], 
       'PET_GENDER' => $row['PET_GENDER'], 
       'PET_CATAGORY' => $row['PET_CATAGORY'], 
-      'PET_AGE' => $row['PET_AGE'], // 
+      'PET_AGE' => $row['PET_AGE'], 
+      'VACCI_OR_NOT' => $row['VACCI_OR_NOT'], 
       'PET_AVATAR' => $row['PET_AVATAR'], 
       'MEMBER_ID' => $row['MEMBER_ID']
   );

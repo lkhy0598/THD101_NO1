@@ -1,5 +1,6 @@
 <?php
 include('conn.php');
+// include('connServer.php');
 
 // 設定CORS標頭，允許 'content-type' 標頭欄位。
 header("Access-Control-Allow-Origin: http://localhost:3000");
@@ -8,7 +9,7 @@ header("Access-Control-Allow-Headers: Content-Type");
 
 $reserve_phone = $_GET['reserve_phone'];
 
-$sql = "SELECT * FROM MEMBER WHERE PHONENO = $reserve_phone";
+$sql = "SELECT * FROM PET JOIN MEMBER ON PET.MEMBER_ID = MEMBER.MEMBER_ID WHERE PHONENO = $reserve_phone";
    
 $result = $pdo->query($sql);
 
@@ -21,7 +22,11 @@ $result = $pdo->query($sql);
       $responseData = array(
          'NAME' => $row['NAME'],
          'PHONENO' => $row['PHONENO'], 
-         'MEMBER_ID' => $row['MEMBER_ID']
+         'MEMBER_ID' => $row['MEMBER_ID'],
+         'PET_CATAGORY' => $row['PET_CATAGORY'],
+         'PET_NAME' => $row['PET_NAME'],
+         'PET_AGE' => $row['PET_AGE'],
+         'PET_ID' => $row['PET_ID'],
      );
       // 將資料轉換為 JSON 格式並返回
       echo json_encode($responseData);

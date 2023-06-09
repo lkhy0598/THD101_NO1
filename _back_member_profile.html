@@ -147,10 +147,10 @@
                         <ul class="MEMBER_PROFILE_TITLE BACK_TABLE_TITLE" >
                             <li>姓名</li>
                             <li>手機號碼</li>
-                            <li>加入日期</li>
+                            <li>電子信箱</li>
                             <li>修改</li>
                             <!-- <li>刪除</li> -->
-                            <li>新增預約</li>
+                            <!-- <li>新增預約</li> -->
                         </ul>
                         <div id="result"></div>
                     </section>
@@ -195,9 +195,9 @@
                             <li>手機號碼</li>
                             <li>寵物姓名</li>
                             <li>看診類型</li>
-                            <li>最近看診日期</li>
+                            <li>最近看診</li>
                             <li>修改</li>
-                            <li>刪除</li>
+                            <li>立即預約</li>
                         </ul>
 
                         <div id="pet_result"></div>
@@ -333,11 +333,14 @@
                                     </label>
                                 </li>
                                
-                                <!-- <li>
-                                    <label for="vaccines" class="INPUT">上次施打預防針日期<br>
-                                        <input type="date" name="vaccines" id="vaccines">
+                                <li>
+                                    <label for="new_vaccines" class="SELECT">是否打過預防針<br>
+                                        <select id="new_vaccines">
+                                            <option value="是">是</option>
+                                            <option value="否">否</option>
+                                        </select>
                                     </label>
-                                </li> -->
+                                </li>
                                 <li>
                                     <button class="BTN_BACK" type="submit" onclick="return doAddPet()">新增寵物</button>
                                 </li>
@@ -487,11 +490,14 @@
                                         <input type="text" name="pet_age_revise" id="pet_age_revise">
                                     </label>
                                 </li>
-                                <!-- <li>
-                                    <label for="vaccines" class="INPUT">上次施打預防針日期<br>
-                                        <input type="date" name="vaccines" id="vaccines">
+                                <li>
+                                    <label for="vaccines_revise" class="SELECT">是否打過預防針<br>
+                                        <select id="vaccines_revise">
+                                            <option value="是">是</option>
+                                            <option value="否">否</option>
+                                        </select>
                                     </label>
-                                </li> -->
+                                </li>
                                 <input type="hidden" name="member_id" id="member_id_pet" value="要更新的会员ID">
                                 <input type="hidden" name="picture_name" id="picture_name_pet"/>
                                 <li>
@@ -514,19 +520,18 @@
             <section class="RESERVE_BOX">
                 
                 <i class="bi bi-x-lg ESC_BTN"></i>
-                <form action="get">
+                <section class="FORM">
 
                     <ul class="RESERVE_LIST">
                         <li>
                             <label for="reserve_type" class="SELECT">預約類型<br>
                                 <select id="reserve_type">
                                     <option value=""></option>
-                                    <option value="一般掛號">一般掛號</option>
-                                    <option value="預防針">預防針</option>
-                                    <option value="健康檢查">健康檢查</option>
-                                    <option value="寵物溝通">寵物溝通</option>
-                                    <option value="住宿">住宿</option>
-                                    <option value="寵物健檢">寵物健檢/option>
+                                    <option value="1">一般掛號</option>
+                                    <option value="2">預防針</option>
+                                    <option value="3">寵物溝通</option>
+                                    <option value="4">住宿</option>
+                                    <option value="5">寵物健檢</option>
                                 </select>
                             </label>
                         </li>
@@ -534,14 +539,14 @@
                             <label for="reserve_doctor" class="SELECT">指定醫師<br>
                                 <select id="reserve_doctor">
                                     <option value=""></option>
-                                    <option value="不指定">不指定</option>
-                                    <option value="范植鑫">范植鑫院長</option>
-                                    <option value="賴偉峰">賴偉峰醫師</option>
-                                    <option value="林佳緯">林佳緯醫師</option>
-                                    <option value="詹宗豪">詹宗豪醫師</option>
-                                    <option value="汪玉婷">汪玉婷醫師</option>
-                                    <option value="林育楣">林育楣醫師</option>
-                                    <option value="羅婉瑜">羅婉瑜溝通師</option>
+                                    <option value="0">不指定</option>
+                                    <option value="1">范植鑫院長</option>
+                                    <option value="7">賴偉峰醫師</option>
+                                    <option value="4">林佳緯醫師</option>
+                                    <option value="5">詹宗豪醫師</option>
+                                    <option value="3">汪玉婷醫師</option>
+                                    <option value="6">林育楣醫師</option>
+                                    <option value="2">羅婉瑜溝通師</option>
                                 </select>
                             </label>
                         </li>
@@ -553,10 +558,11 @@
                         <li>
                             <label for="reserve_datetime" class="SELECT">預約時段<br>
                                 <select id="reserve_datetime">
-                                    <option value=""></option>
-                                    <option value="上午">上午 09:00 ~ 12:00</option>
-                                    <option value="下午">下午 14:00 ~ 18:00</option>
-                                    <option value="晚上">晚上 19:00 ~ 21:00</option>
+                                    <option value="default">預約時段</option>
+                                    <option value="">住宿</option>
+                                    <option value="1">上午 09:00 ~ 12:00</option>
+                                    <option value="2">下午 14:00 ~ 18:00</option>
+                                    <option value="3">晚上 19:00 ~ 21:00</option>
                                 </select>
                             </label>
                         </li>
@@ -592,8 +598,8 @@
                         <li>
                             <label for="reserve_vaccines" class="SELECT">是否打過預防針<br>
                                 <select id="reserve_vaccines">
-                                    <option value="1">是</option>
-                                    <option value="0">否</option>
+                                    <option value="是">是</option>
+                                    <option value="否">否</option>
                                 </select>
                             </label>
                         </li>
@@ -603,10 +609,12 @@
                                 </textarea>
                             </label>
                         </li>
+                        <input type="hidden" name="reserve_member_id" id="reserve_member_id" value="要新增的會員">
+                        <input type="hidden" name="reserve_pet_id" id="reserve_pet_id"/>
 
                     </ul>
                     <button class="BTN_BACK ADD_RESERVE_BTN" type="submit" onclick="doAddReserve()">新增預約</button>
-                </form>
+                </section>
 
             </section>
 
