@@ -13,7 +13,7 @@
     <title>結帳完成 SHOPPING_CART - 波波動物醫院</title>
 </head>
 
-<body class="SHOPPINGCARTP3">
+<body class="SHOPPINGCARTP3" id="SHOPPINGCART3VUE">
 
     <!-- =============== 共用元件 =============== -->
 
@@ -83,8 +83,8 @@
 
         <section class="SHOPPINGCARTP2_ORDER WRAPPER">
             <section class="SHOPPINGCARTP2_ORDERTEXT">
-                <p>合計：NT$ 3,740</p>
-                <span>購物車:(3件)
+                <p>合計：NT$ {{this.total}}</p>
+                <span>購物車:({{totalQuantity}}件)
                     <span class="SHOPPINGCARTP2_ORDERARR">
                         <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="">
                     </span>
@@ -101,25 +101,25 @@
                         <span class="ITEM_SUBTOTAL--W">小計</span>
                     </section>
 
-                    <section class="SHOPPINGCART_ITEM">
+                    <section class="SHOPPINGCART_ITEM" v-for="product in products" :key="product.PRODUCT_ID">
                         <section class="ITEM_PRODUCT ITEM_PRODUCT--W">
                             <section class="ITEM_PRODUCT--IMG">
-                                <img src="./img/shopping_list/healthy/01/healthy_01_01.jpg" alt="">
+                                <img :src="getFirstImagePath(product.IMG_SOURCE)" alt="">
                             </section>
-                            <span>沛威貓狗保健-護眼亮晶晶 30入/盒</span>
+                            <span>{{ product.PRODUCT_TITLE }}</span>
                         </section>
                         <section class="ITEM_PRICE ITEM_PRICE--W">
-                            <p>NT＄1,380</p>
+                            <p>NT＄{{ product.PRICE }}</p>
                         </section>
                         <section class="ITEM_COUNT ITEM_COUNT--W">
-                            <span class="ITEM_COUNT--NUM">2</span>
+                            <span class="ITEM_COUNT--NUM">{{ product.ORDER_AMOUNT }}</span>
                         </section>
                         <section class="ITEM_SUBTOTAL ITEM_SUBTOTAL--W">
-                            <p>NT＄2,760</p>
+                            <p>NT＄{{ product.PRICE * product.ORDER_AMOUNT }}</p>
                         </section>
                     </section>
 
-                    <section class="SHOPPINGCART_ITEM">
+                    <!-- <section class="SHOPPINGCART_ITEM">
                         <section class="ITEM_PRODUCT ITEM_PRODUCT--W">
                             <section class="ITEM_PRODUCT--IMG">
                                 <img src="./img/shopping_list/dryfood/09/dryfood_09_01.jpg" alt="">
@@ -135,39 +135,36 @@
                         <section class="ITEM_SUBTOTAL ITEM_SUBTOTAL--W">
                             <p>NT＄980</p>
                         </section>
-                    </section>
+                    </section> -->
                 </section>
             </section>
 
             <!-- ========================================手機板LIST================================================== -->
 
             <section class="SHOPPINGCART_ITEMLIST--M">
-                <section class="SHOPPINGCART_ITEM--M">
+                <section class="SHOPPINGCART_ITEM--M" v-for="product in products" :key="product.PRODUCT_ID">
                     <section class="SHOPPINGCART_ITEMIMG--M">
-                        <img src="./img/shopping_list/healthy/01/healthy_01_01.jpg" alt="">
+                        <img :src="getFirstImagePath(product.IMG_SOURCE)" alt="">
                     </section>
                     <section class="SHOPPINGCART_ITEMWORD--M">
                         <section class="SHOPPINGCART_ITEMWORD--TOPM">
                             <section class="SHOPPINGCART_ITEMWORD--NAMEM">
-                                <span>沛威貓狗保健-護眼亮晶晶 30入/盒</span>
-                            </section>
-                            <section class="SHOPPINGCART_ITEMWORD--DELM">
-                                <i class="bi bi-trash3"></i>
+                                <span>{{ product.PRODUCT_TITLE }}</span>
                             </section>
 
                         </section>
                         <section class="SHOPPINGCART_ITEMWORD--BOTTOMM">
                             <section class="SHOPPINGCART_ITEMWORD--COUNTM">
-                                <span class="ITEM_COUNT--NUM">數量:2</span>
+                                <span class="ITEM_COUNT--NUM">數量:{{ product.ORDER_AMOUNT }}</span>
                             </section>
                             <section class="SHOPPINGCART_ITEMWORD--PRICEM">
-                                <p>NT＄2,760</p>
+                                <p>NT＄{{ product.PRICE * product.ORDER_AMOUNT }}</p>
                             </section>
                         </section>
                     </section>
                 </section>
 
-                <section class="SHOPPINGCART_ITEM--M">
+                <!-- <section class="SHOPPINGCART_ITEM--M">
                     <section class="SHOPPINGCART_ITEMIMG--M">
                         <img src="./img/shopping_list/dryfood/09/dryfood_09_01.jpg" alt="">
                     </section>
@@ -190,7 +187,7 @@
                             </section>
                         </section>
                     </section>
-                </section>
+                </section> -->
             </section>
 
 
@@ -216,9 +213,9 @@
                         </section>
                         <section class="SHOPPINGCARTP3_CONFIRM--CON">
                             <span>230301N00130</span>
-                            <span>THD101_17***@gmail.com</span>
-                            <span>2023-03-01 00:00AM</span>
-                            <span>訂單處理中</span>
+                            <span>{{ maskedEmail }}</span>
+                            <span>{{this.createDate}}</span>
+                            <span>{{this.orderState}}</span>
                         </section>
 
                     </section>
@@ -233,8 +230,8 @@
                             <span>電話:</span>
                         </section>
                         <section class="SHOPPINGCARTP3_CONFIRM--CON">
-                            <span>范植鑫</span>
-                            <span>0912345***</span>
+                            <span>{{this.name}}</span>
+                            <span>{{maskedPhoneNo}}</span>
                         </section>
 
                     </section>
@@ -256,12 +253,12 @@
                             <span>門市地址:</span>
                         </section>
                         <section class="SHOPPINGCARTP3_CONFIRM--CON">
-                            <span>7-11取貨付款</span>
-                            <span>備貨中</span>
+                            <span>{{this.deliveryMethod}}</span>
+                            <span>{{this.deliveryState}}</span>
                             <span>連通門市</span>
                             <span>163877</span>
-                            <span>范植鑫</span>
-                            <span>0912345***</span>
+                            <span>{{this.recipient}}</span>
+                            <span>{{maskedrePhoneNo}}</span>
                             <span>新北市中和區圓通路293號</span>
                         </section>
 
@@ -277,8 +274,8 @@
                             <span>付款狀態:</span>
                         </section>
                         <section class="SHOPPINGCARTP3_CONFIRM--CON">
-                            <span>7-11取貨付款</span>
-                            <span>未付款</span>
+                            <span>{{this.paymentMethod}}</span>
+                            <span>{{this.paymentState}}</span>
                         </section>
 
                     </section>
@@ -289,7 +286,7 @@
             <section class="SHOPPINGCARTP3_MEMO">
                 <section>
                     <label for="memo" class="TEXTAREA">訂單備註<br>
-                        <textarea id="memo" placeholder="有什麼想告訴賣家的..." class="TEXTAREA_CONTENT"></textarea>
+                        <textarea id="memo" placeholder="有什麼想告訴賣家的..." class="TEXTAREA_CONTENT">{{this.orderComment}}</textarea>
                     </label>
                 </section>
             </section>
@@ -299,7 +296,7 @@
             <section class="SHOPPINGCARTP3_SENDMESSAGE">
 
                 <div>
-                    <button class="BTN">送出留言</button>
+                    <button class="BTN" @click="submitMemo">送出留言</button>
                 </div>
 
             </section>
@@ -318,6 +315,8 @@
     @@include('./layout/footer.html')
     <!-- footer end -->
 
+    <script src="./js/vendors/vue/vue.global.js"></script>
+    <script src="./js/shopping_cart3.js"></script>
     <script src="./js/top_btn.js"></script>
     <script src="./js/nav.js"></script>
     <script src="./js/user_popup.js"></script>

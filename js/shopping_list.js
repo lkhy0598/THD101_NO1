@@ -16,20 +16,20 @@ const app = Vue.createApp({
     created() {
         const urlParams = new URLSearchParams(window.location.search);
         this.productId = urlParams.get('id');
-        console.log(this.productId);
+        // console.log(this.productId);
         this.fetchProducts(); // 手动调用fetchProducts方法
     },
     methods: {
         fetchProducts() {
             $.ajax({
-                url: 'http://localhost/THD101_project/php/shopping_list.php?id=' + this.productId,
+                url: 'http://localhost/THD101_NO1/php/shopping_list.php?id=' + this.productId,
                 type: 'GET',
                 dataType: 'json',
                 data: {
                     id: this.productId // 将获取的ID值作为参数传递给PHP
                 },
                 success: response => {
-                    console.log(response);
+                    // console.log(response);
                     const productData = response[0]; // 获取第一个对象
                     this.shoppingItems = {
                         PRODUCT_TITLE: productData.PRODUCT_TITLE,

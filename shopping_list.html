@@ -12,6 +12,47 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="shortcut icon" type="image/png" href="./img/shortcut_logo.png">
     <title>商品介紹 SHOPPING_LIST - 波波動物醫院</title>
+    <script>
+        $(document).ready(function() {
+            var minValue = parseInt($(".ITEMCOUNT_BTN-BODY").attr("min")); // 获取最小值
+            var maxValue = parseInt($(".STOCK").text()); // 获取最大值
+
+            $(".ITEMCOUNT_BTN-BODY").attr("min", minValue); // 设置最小值属性
+            $(".ITEMCOUNT_BTN-BODY").attr("max", maxValue); // 设置最大值属性
+
+            $("#ITEMMINUS").click(function() {
+            var currentValue = parseInt($(".ITEMCOUNT_BTN-BODY").val());
+
+            if (currentValue > minValue) {
+                $(".ITEMCOUNT_BTN-BODY").val(currentValue - 1);
+            }
+            });
+
+            $("#ITEMPLUS").click(function() {
+            var currentValue = parseInt($(".ITEMCOUNT_BTN-BODY").val());
+
+            if (currentValue < maxValue) {
+                $(".ITEMCOUNT_BTN-BODY").val(currentValue + 1);
+            }
+            });
+
+            $(".ITEMCOUNT_BTN-BODY").on("blur", function() {
+            var inputValue = $(this).val().trim(); // 获取输入框值并去除首尾空格
+
+            if (inputValue === "" || isNaN(inputValue)) {
+                $(this).val(minValue); // 输入为空或非数字时，将值重置为最小值
+            } else {
+                var numericValue = parseInt(inputValue);
+
+                if (numericValue < minValue) {
+                $(this).val(minValue); // 输入小于最小值时，将值重置为最小值
+                } else if (numericValue > maxValue) {
+                $(this).val(maxValue); // 输入大于最大值时，将值重置为最大值
+                }
+            }
+            });
+        });
+    </script>
 </head>
 
 <body class="SHOPPINGLIST" id="SHOPPINGLISTVUE">
@@ -401,47 +442,7 @@
             }
         });
     </script>
-    <script>
-        $(document).ready(function() {
-            var minValue = parseInt($(".ITEMCOUNT_BTN-BODY").attr("min")); // 获取最小值
-            var maxValue = parseInt($(".STOCK").text()); // 获取最大值
-
-            $(".ITEMCOUNT_BTN-BODY").attr("min", minValue); // 设置最小值属性
-            $(".ITEMCOUNT_BTN-BODY").attr("max", maxValue); // 设置最大值属性
-
-            $("#ITEMMINUS").click(function() {
-            var currentValue = parseInt($(".ITEMCOUNT_BTN-BODY").val());
-
-            if (currentValue > minValue) {
-                $(".ITEMCOUNT_BTN-BODY").val(currentValue - 1);
-            }
-            });
-
-            $("#ITEMPLUS").click(function() {
-            var currentValue = parseInt($(".ITEMCOUNT_BTN-BODY").val());
-
-            if (currentValue < maxValue) {
-                $(".ITEMCOUNT_BTN-BODY").val(currentValue + 1);
-            }
-            });
-
-            $(".ITEMCOUNT_BTN-BODY").on("blur", function() {
-            var inputValue = $(this).val().trim(); // 获取输入框值并去除首尾空格
-
-            if (inputValue === "" || isNaN(inputValue)) {
-                $(this).val(minValue); // 输入为空或非数字时，将值重置为最小值
-            } else {
-                var numericValue = parseInt(inputValue);
-
-                if (numericValue < minValue) {
-                $(this).val(minValue); // 输入小于最小值时，将值重置为最小值
-                } else if (numericValue > maxValue) {
-                $(this).val(maxValue); // 输入大于最大值时，将值重置为最大值
-                }
-            }
-            });
-        });
-    </script>
+    
 
 </body>
 

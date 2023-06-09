@@ -20,7 +20,7 @@ const app = Vue.createApp({
             this.shoppingCartItems = storedData;
         }
         this.searchProducts(); // 在确认shoppingCartItems数组被正确填充后调用searchProducts方法
-        console.log(storedData);
+        // console.log(storedData);
 
 // ===========================================================
     $.ajax({
@@ -46,9 +46,9 @@ const app = Vue.createApp({
                     dataType: 'json',
                     success: response => {
                         // 处理cartmember_voucher.php的响应
-                        console.log(response);
+                        // console.log(response);
                         this.vouchers = response;
-                        console.log(this.vouchers);
+                        // console.log(this.vouchers);
                     },
                     error: error => {
                         // 处理错误
