@@ -1,5 +1,12 @@
 <?php
-include('conn.php');
+// session_start();
+
+header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Headers: Content-Type");
+
+include("conn.php");
+// include("connServer.php");
 
 //---------------------------------------------------
 // $USERNAME = htmlspecialchars($_POST['USERNAME']);
@@ -17,30 +24,38 @@ $statement->execute();
 
 //抓出全部且依照順序封裝成一個二維陣列
 $data = $statement->fetchAll();
-session_start();
-// 執行
-if (count($data) > 0) {
-       // 成功獲取email和password
-       foreach ($data as $row) {
-              // 抓取其使用者名稱
-              $sql = "SELECT NAME FROM member WHERE EMAIL = ?";
-              $statement = $pdo->prepare($sql);
-              $statement->bindValue(1, $EMAIL);
-              $statement->execute();
-              $nameData  = $statement->fetch();
-              // 套上名稱
-              if ($row) {
-                     // 將會員名稱儲存在 $_SESSION["memberID"] 
-                     $_SESSION["memberID"] = $nameData ['NAME']; 
-                     echo "登入成功！\n";
-                     echo "三秒後將跳轉到會員中心\n";
-                     break;
-              }else{
-                     $_SESSION["memberID"] = '使用者';
-                     break;
-              }
-       }
+
+// 將session中的值清空
+$memberID = "";
+$memberName = "";
+// clearSession();
+
+// 將回傳的data賦值給指定變數
+foreach ($data as $index => $row) {
+       $memberID = $row["MEMBER_ID"];
+       $memberName = $row["NAME"];
+}
+
+//判斷是否有會員資料?
+if ($memberID != "" && $memberName != "") {
+
+       // include("http://localhost/THD101_NO1/lib/Member.php");
+       include("../lib/Member.php");
+       //將會員資訊寫入session
+       setMemberInfo($memberID, $memberName);
+
+       //登入成功        
+       echo "登入成功！\n";
+       echo "將跳轉到會員中心\n";
+
+       if (isset($_SESSION["MemberID"])) {
+              echo "Session 已正確建立，MemberID 為：" . $_SESSION["MemberID"];
+          } else {
+              echo "Session 尚未建立";
+          }
+       
 } else {
+       //登入失敗
        echo "登入失敗！\n";
        echo "請檢查帳號密碼是否輸入正確！\n";
 }
