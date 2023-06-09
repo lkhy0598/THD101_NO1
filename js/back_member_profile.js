@@ -454,17 +454,17 @@ function doReserve(reserve_phone){
 
 function doAddReserve(){
 
-    const reserve_type = $('#reserve_type').val();
-    const reserve_doctor = $('#reserve_doctor').val();
+    const reserve_type = $('#reserve_type option:selected').val();
+    const reserve_doctor = $('#reserve_doctor option:selected').val();
     const reserve_date = $('#reserve_date').val();
-    const reserve_datetime = $('#reserve_datetime').val();
+    const reserve_datetime = $('#reserve_datetime option:selected').val();
     const reserve_name = $('#reserve_name').val();
     const reserve_phone = $('#reserve_phone').val();
     const reserve_pet_name = $('#reserve_pet_name').val();
-    const reserve_pet_category= $('#reserve_pet_category').val();
+    const reserve_pet_category= $('#reserve_pet_category option:selected').val();
     const reserve_symptom_type= $('#reserve_symptom_type').val();
     const reserve_pet_age= $('#reserve_pet_age').val();
-    const reserve_vaccines= $('#reserve_vaccines').val();
+    const reserve_vaccines= $('#reserve_vaccines option:selected').val();
     const reserve_member_id= $('#reserve_member_id').val();
     const reserve_pet_id= $('#reserve_pet_id').val();
 
@@ -505,6 +505,20 @@ function doAddReserve(){
         return false;
     }
 
+    const formData = new FormData();
+    formData.append('reserve_type', reserve_type);
+    formData.append('reserve_doctor', reserve_doctor);
+    formData.append('reserve_date', reserve_date);
+    formData.append('reserve_datetime', reserve_datetime);
+    formData.append('reserve_name', reserve_name);
+    formData.append('reserve_phone', reserve_phone);
+    formData.append('reserve_pet_name', reserve_pet_name);
+    formData.append('reserve_pet_category', reserve_pet_category);
+    formData.append('reserve_pet_age', reserve_pet_age);
+    formData.append('reserve_vaccines', reserve_vaccines);
+    formData.append('reserve_member_id', reserve_member_id);
+    formData.append('reserve_pet_id', reserve_pet_id);
+
     console.log(reserve_type);
     console.log(reserve_doctor);
     console.log(reserve_date);
@@ -522,22 +536,8 @@ function doAddReserve(){
         method:"POST",
         url:"http://localhost/THD101_NO1/php/back_add_reserve.php",
         // url:"../php/back_add_reserve.php",
-        data:{
-            reserve_type:reserve_type,
-            reserve_doctor:reserve_doctor,
-            reserve_date:reserve_date,
-            reserve_datetime:reserve_datetime,
-            reserve_name:reserve_name,
-            reserve_phone:reserve_phone,
-            reserve_pet_name:reserve_pet_name,
-            reserve_pet_category:reserve_pet_category,
-            reserve_vaccines:reserve_vaccines,
-            reserve_symptom_type:reserve_symptom_type,
-            reserve_member_id:reserve_member_id,
-            reserve_pet_id:reserve_pet_id
-        },
-
-        dataType:"json",
+        data:formData,
+        // dataType:"json",
         // 告訴jQuery不要去處理發送的資料
         processData : false, 
         // 告訴jQuery不要去設定Content-Type請求頭

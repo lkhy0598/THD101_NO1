@@ -7,6 +7,7 @@ include('upload.php');
 header("Access-Control-Allow-Origin: http://localhost:3000");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
+header('Content-Type: application/json');
 
 $memberID = isset($_POST['member_id_pet']) ? $_POST['member_id_pet'] : '';
 $pet_name_revise = isset($_POST['pet_name_revise']) ? $_POST['pet_name_revise'] : '';
