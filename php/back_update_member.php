@@ -31,7 +31,7 @@ if(isset($_FILES["member_pic_revise"])){
       $filePath = getMemberPath($memberID).$_FILES["member_pic_revise"]["name"];
       
       // $fileName = "./img/member/". $memberID ."/".$_FILES["member_pic_revise"]["name"];
-      $fileName = "../dist/img/member/". $memberID ."/".$_FILES["member_pic_revise"]["name"];
+      $fileName = "./img/member/". $memberID ."/".$_FILES["member_pic_revise"]["name"];
 
       //將暫存檔搬移到正確位置
       if(move_uploaded_file($_FILES["member_pic_revise"]["tmp_name"], $filePath)){

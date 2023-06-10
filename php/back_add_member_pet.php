@@ -40,7 +40,7 @@ $statement->bindValue(5 , $newmember_phone);
 
 // $statement->execute();
 if (!$statement->execute()) {
-   die("新增會員失敗");
+   echo 'fail';
 }
 
 $memberID = $pdo->lastInsertId(); // 获取刚插入的会员ID
@@ -49,7 +49,7 @@ $memberID = $pdo->lastInsertId(); // 获取刚插入的会员ID
 $filePath = getMemberPath($memberID).$_FILES["member_pic"]["name"];
 
 // $fileName = "./img/member/". $memberID ."/".$_FILES["member_pic"]["name"];
-$fileName = "../dist/img/member/". $memberID ."/".$_FILES["member_pic"]["name"];
+$fileName = "./img/member/". $memberID ."/".$_FILES["member_pic"]["name"];
 
 //將暫存檔搬移到正確位置
 if (move_uploaded_file($_FILES["member_pic"]["tmp_name"], $filePath)) {
