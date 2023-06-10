@@ -10,7 +10,7 @@ $password = htmlentities($_POST['password']);
 
 
 //建立SQL
-$sql = "SELECT * FROM USER WHERE USER_NAME = ? and PASSWORD = ?";
+$sql = "SELECT * FROM USER WHERE USER_ACCOUNT = ? and PASSWORD = ?";
     
 //執行
 $statement = $pdo->prepare($sql);    
@@ -27,13 +27,12 @@ $data = $statement->fetchAll();
         setSessionB($_POST["account"]);
 
         echo "done";
-        // //導回後台首頁        
-        // header("Location: ../Category.html");
+       
 
     }else{
 
         //跳出提示停留在後台登入頁
-        // echo "<script>alert('帳號或密碼錯誤!'); location.href = '../index.html';</script>"; 
+        echo "<script>alert('帳號或密碼錯誤!'); location.href = '../index.html';</script>"; 
         echo"fail";
 
     }

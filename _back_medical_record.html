@@ -104,46 +104,46 @@
         <main class="BACK_MAIN_CONTENT_RIGHT">
 
             <!-- 病歷紀錄管理區塊 "會更動區塊" -->
-            <section class="BACK_MEDICAL_RECORD" >
+            <section class="BACK_MEDICAL_RECORD">
 
                 <h2>病歷紀錄管理</h2>
 
                 <section class="MEDICAL_RECORD_SEARCH" >
-                    <form @submit.prevent="searchMedicalRecords">
+                    <!-- <form action="post"> -->
 
                         <ul>
                             <li>
                                 <label for="phone" class="INPUT">手機號碼<br>
-                                    <input type="text" v-model="searchForm.phone" name="phone" id="phone">
+                                    <input type="text" name="phone" id="phone">
                                 </label>
+                            </li>
+                            <li>
+                                <p>or</p>
                             </li>
                             <li>
                                 <label for="pet_name" class="INPUT">寵物姓名<br>
-                                    <input type="text" v-model="searchForm.petName" name="pet_name" id="pet_name">
+                                    <input type="text" name="pet_name" id="pet_name">
                                 </label>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <label for="consultation_date" class="INPUT">看診日期<br>
                                     <input type="date" v-model="searchForm.startDate" name="consultation_date" id="consultation_date">
                                 </label>
                             </li>
                             <li>
-                                <p>~</p>
-                            </li>
-                            <li>
                                 <label for="consultation_date" class="INPUT">
                                     <input type="date" v-model="searchForm.endDate" name="consultation_date" id="consultation_date">
                                 </label>
-                            </li>
+                            </li> -->
                             <li>
-                                <button class="BTN_BACK" type="submit">搜尋病歷</button>
+                                <button class="BTN_BACK" type="submit" onclick="doSearch()">搜尋病歷</button>
                             </li>
                         </ul>
 
-                    </form>
+                    <!-- </form> -->
                 </section>
 
-                <section class="MEDICAL_RECORD_TABLE_ALL" id="MEDICAL_RECORD_SEARCH">
+                <section class="MEDICAL_RECORD_TABLE_ALL" >
                     <ul class="MEDICAL_RECORD_TITLE BACK_TABLE_TITLE" id="MEDICAL_RECORD_SEARCH">
                         <li>手機號碼</li>
                         <li>寵物姓名</li>
@@ -152,57 +152,73 @@
                         <li>修改</li>
                         <li>刪除</li>
                     </ul>
-
-                    <ul class="MEDICAL_RECORD_CONTENT BACK_TABLE_CONTENT" v-for="(record, index) in medicalRecords" :key="index">
-                        <li>{{ record.phone }}</li>
-                        <li>{{ record.petName }}</li>
-                        <li>{{ record.consultationDate }}</li>
-                        <li>{{ record.consultationContent }}</li>
-                        <li><i class="bi bi-pencil" @click="reviseMedicalRecord"></i></li>
-                        <li><i class="bi bi-x-lg DEL_MEDICAL_BTN" @click="delMedicalRecord"></i></li>
-                    </ul>
+                    <div id="result"></div>
                 </section>
                 <section>
-                    <button class="BTN_BACK MEDICAL_RECORD_TABLE_BTN" @click="addMedicalRecord" type="submit">新增病歷</button>   
+                    <button class="BTN_BACK MEDICAL_RECORD_TABLE_BTN" type="submit" onclick="doAdd()">新增病歷</button>   
                 </section>
             </section>
 
             <!-- 新增病歷區塊 "會更動區塊" -->
-            <section class="BACK_ADD_MEDICAL_RECORD" v-show="showAddMedical">
+            <section class="BACK_ADD_MEDICAL_RECORD">
 
-                <h2>新增 / 修改病歷</h2>
+                <h2>新增 / 更新病歷</h2>
 
                 <section class="ADD_MEDICAL_RECORD">
-                    <form action="">
 
                         <ul class="ADD_MEDICAL_RECORD_FORM">
                             <li>
-                                <p>診斷醫師：USER</p>
-                                <p>診斷日期：2023 年 04 月 01 日</p>
+                                <label for="doctor" class="SELECT">看診醫師<br>
+                                    <select id="doctor">
+                                        <option value="0">請選擇看診醫師</option>
+                                        <option value="1">范植鑫院長</option>
+                                        <option value="7">賴偉峰醫師</option>
+                                        <option value="4">林佳緯醫師</option>
+                                        <option value="5">詹宗豪醫師</option>
+                                        <option value="3">汪玉婷醫師</option>
+                                        <option value="6">林育楣醫師</option>
+                                        <option value="2">羅婉瑜溝通師</option>
+                                    </select>
+                                </label>
                             </li>
-
+                            <li>
+                                <label for="type" class="SELECT">看診類型<br>
+                                    <select id="type">
+                                        <option value=""></option>
+                                        <option value="1">一般掛號</option>
+                                        <option value="2">預防針</option>
+                                        <option value="3">寵物溝通</option>
+                                        <option value="5">寵物健檢</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="date" class="INPUT">看診日期<br>
+                                    <input type="date" name="date" id="date">
+                                </label>
+                            </li>
+<!-- 
                             <li>
                                 <label for="owner_name" class="INPUT">主人姓名<br>
                                     <input type="text" name="owner_name"" id=" owner_name"">
                                 </label>
                             </li>
                             <li>
-                                <label for="phone" class="INPUT">手機號碼<br>
-                                    <input type="text" name="phone" id="phone">
+                                <label for="owner_phone" class="INPUT">手機號碼<br>
+                                    <input type="text" name="owner_phone" id="owner_phone">
+                                </label>
+                            </li> -->
+                            <li>
+                                <label for="add_pet_name" class="INPUT">寵物姓名<br>
+                                    <input type="text" name="add_pet_name" id="add_pet_name">
                                 </label>
                             </li>
-                            <li>
-                                <label for="pet_name" class="INPUT">寵物姓名<br>
-                                    <input type="text" name="pet_name" id="pet_name">
-                                </label>
-                            </li>
-                            <li>
+                            <!-- <li>
                                 <label for="pet_category" class="SELECT">寵物類型<br>
                                     <select id="pet_category">
-                                        <option value="dog">狗狗</option>
-                                        <option value="cat">貓貓</option>
-                                        <option value="rabbit">兔子</option>
-                                        <option value="other">其他</option>
+                                        <option value="狗">狗狗</option>
+                                        <option value="貓">貓貓</option>
+                                        <option value="其他">其他</option>
                                     </select>
                                 </label>
                             </li>
@@ -210,136 +226,69 @@
                                 <label for="pet_age" class="INPUT">寵物年齡<br>
                                     <input type="text" name="pet_age" id="pet_age">
                                 </label>
-                            </li>
-                            <li>
-                                <label for="vaccines" class="SELECT">是否打過預防針<br>
-                                    <select id="vaccines">
-                                        <option value="yes">是</option>
-                                        <option value="no">否</option>
-                                    </select>
-                                </label>
-                            </li>
-                            <li class="FILEBOX">
+                            </li> -->
+                           
+                            <!-- <li class="FILEBOX">
                                 <label for="textfield">上傳檔案<br>
-                                    <input name="textfield" id="textfield" class="FILENAME">
+                                    <input name="textfield" id="textfield" class="FILENAME"> -->
 
                                     <!-- 上傳按鈕 -->
-                                    <input type="button" class="FILEBUTTON" value="選取檔案 ">
+                                    <!-- <input type="button" class="FILEBUTTON" value="選取檔案 "> -->
 
                                     <!-- 原按鈕隱藏 -->
-                                    <input type="file" name="file" class="FILE"
+                                    <!-- <input type="file" name="file" class="FILE"
                                         onchange="document.getElementById('textfield').value=this.value" @change="updateFileName">
                                 </label>
 
-                            </li>
+                            </li> -->
                             <li>
                                 <label for="symptom_type" class="TEXTAREA">病徵類型<br>
                                     <textarea name="symptom_type" id="symptom_type" cols="30" rows="10">請簡述寵物病情
                                     </textarea>
                                 </label>
                             </li>
+                            <input type="hidden" name="pet_id" id="pet_id"/>
                         </ul>
                         <section class="BTN_BOX">
-                            <button class="BTN_BACK REVISE_MEDICAL_RECORD_BTN" type="submit" @click="reviseMedicalRecord">修改病歷</button>
-                            <button class="BTN_BACK ADD_MEDICAL_RECORD_BTN" type="submit" @click="addMedicalRecord">新增病歷</button>
+                            <button class="BTN_BACK REVISE_MEDICAL_RECORD_BTN" type="submit" onclick="doUpdate()" disabled="disabled">更新病歷</button>
+                            <button class="BTN_BACK ADD_MEDICAL_RECORD_BTN" type="submit" onclick="doAddmedical()" disabled="disabled">新增病歷</button>
                         </section>
-
-                    </form>
                 </section>
             </section>
 
         </main>
     </section>
-    <script src="./js/vendors/vue/vue.global.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script> -->
     <script src="./js/back_call_system.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
-
-    <script>
-        const app = Vue.createApp({
-            data() {
-                return {
-                    showAddMedical: false,
-                    
-                    searchForm: {
-                        phone: '',
-                        petName: '',
-                        startDate: null,
-                        endDate: null
-                    },
-                    medicalRecords: [] // Assuming you have data for medical records
-                };
-            },
-            methods: {
-                searchMedicalRecords() {
-                    $.ajax({
-                        url: 'http://localhost/THD101_NO1/php/back_medical_record.php',
-                        type: 'POST',
-                        dataType: 'json',
-                        success: response => {
-                            console.log(response);
-                            this.medicalRecords = response;
-                        },
-                        error: (xhr, status, error) => {
-                            console.error(error);
-                        }
-                    });
-                },
-                // addMedicalRecord() {
-                //     // this.showAddMedical = true;
-                //     $('.BACK_ADD_MEDICAL_RECORD').show();
-                //     $('.BACK_MEDICAL_RECORD').hide();
-                // },
-                // reviseMedicalRecord() {
-                //     this.showAddMedical = true;
-                // },
-                // delMedicalRecord(index) {
-                //     this.medicalRecords.splice(index, 1);
-                // },
-                // updateFileName(event) {
-                //     const input = event.target;
-                //     const fileName = input.value.split('\\').pop();
-                //     // Perform any additional logic with the selected file name
-                // }
-            }
-        })
-
-        app.mount('#MEDICAL_RECORD_SEARCH');
-
-
-    </script>
-
-
+    <script src="./js/back_medical_record.js"></script>
     <script>
 
         $(document).ready(function () {
             // 修改紐
-            $('.bi-pencil').click(function () {
-                $('.BACK_ADD_MEDICAL_RECORD').show();
-                $('.BACK_MEDICAL_RECORD').hide();
-            });
-            // 新增紐
-            $('.MEDICAL_RECORD_TABLE_BTN').click(function () {
-                $('.BACK_ADD_MEDICAL_RECORD').show();
-                $('.BACK_MEDICAL_RECORD').hide();
-            });
+            // $('.bi-pencil').click(function () {
+            //     $('.BACK_ADD_MEDICAL_RECORD').show();
+            //     $('.BACK_MEDICAL_RECORD').hide();
+            // });
 
-            $('.ADD_MEDICAL_RECORD_BTN').click(function () {
-                $('.BACK_MEDICAL_RECORD').show();
-                $('.BACK_ADD_MEDICAL_RECORD').hide();
-                event.preventDefault();
-            });
+            // $('.ADD_MEDICAL_RECORD_BTN').click(function () {
+            //     $('.BACK_MEDICAL_RECORD').show();
+            //     $('.BACK_ADD_MEDICAL_RECORD').hide();
+            //     event.preventDefault();
+            // });
                 
-            $('.REVISE_MEDICAL_RECORD_BTN').click(function () {
-                $('.BACK_MEDICAL_RECORD').show();
-                $('.BACK_ADD_MEDICAL_RECORD').hide();
-                event.preventDefault();
-            });
+            // $('.REVISE_MEDICAL_RECORD_BTN').click(function () {
+            //     $('.BACK_MEDICAL_RECORD').show();
+            //     $('.BACK_ADD_MEDICAL_RECORD').hide();
+            //     event.preventDefault();
+            // });
 
             $('.DEL_MEDICAL_BTN').click(function(){
                 $(this).closest('.MEDICAL_RECORD_CONTENT').remove();
             });
         });
+
+        
     </script>
         
 </body>

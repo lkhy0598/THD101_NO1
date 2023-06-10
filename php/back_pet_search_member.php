@@ -63,23 +63,5 @@ if ($phone !== '' || $type !== 'default') {
 }
 
 
-// if($type == "DEFAULT" && $phone !== ''){
-//    $sql = "SELECT * FROM PET P join MEMBER M on P.MERBER_ID = M.MEMBER_ID where M.PHONENO like ?";
-
-
-//    $statement = $pdo->prepare($sql);
-
-//    $statement->bindValue(1,"%".$phone."%");
-
-//    $statement ->execute();
-
-//    $data = $statement->fetchAll();
-
-//    header('Content-Type: application/json');
-//    echo json_encode($data);
-// }
-
-
-
 ?>
 

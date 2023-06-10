@@ -1,19 +1,16 @@
 <?php
 include('conn.php');
 // include('connServer.php');
-include('upload.php');
 
 header("Access-Control-Allow-Origin: http://localhost:3000");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
 
-// var_dump($_POST);
 
 $reserve_type = isset($_POST['reserve_type']) ? $_POST['reserve_type'] : '';
 $reserve_doctor = isset($_POST['reserve_doctor']) ? $_POST['reserve_doctor'] : '';
 $reserve_date = isset($_POST['reserve_date']) ? $_POST['reserve_date'] : '';
 $reserve_datetime = isset($_POST['reserve_datetime']) ? $_POST['reserve_datetime'] : '';
-// $reserve_datetime = $_POST['reserve_datetime'];
 $reserve_name = isset($_POST['reserve_name']) ? $_POST['reserve_name'] : '';
 $reserve_phone = isset($_POST['reserve_phone']) ? $_POST['reserve_phone'] : '';
 $reserve_pet_name = isset($_POST['reserve_pet_name']) ? $_POST['reserve_pet_name'] : '';

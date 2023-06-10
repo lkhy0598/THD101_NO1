@@ -152,7 +152,7 @@
                             <!-- <li>刪除</li> -->
                             <!-- <li>新增預約</li> -->
                         </ul>
-                        <div id="result"></div>
+                        <div ></div>
                     </section>
 
                 </section>
@@ -666,28 +666,13 @@
                 event.preventDefault();
             });
 
-            // $('.MASK').click(function(){
-            //     $('.RESERVE_BOX').css('display','none');
-            //     $('.MASK').hide();
-            // });
-
-            // $('.MASK').click(function(){
-            //     $('.RESERVE_BOX').css('display','none');
-            //     $('.MASK').hide();
-            // });
 
             $('.ADD_RESERVE_BTN').click(function(){
                 $('.RESERVE_BOX').css('display','none');
                 $('.MASK').hide();
                 event.preventDefault();
             });
-           
-            $('.DEL_MEMBER_BTN').click(function(){
-                $(this).closest('.MEMBER_PROFILE_CONTENT').remove();
-            });
-            $('.DEL_PET_BTN').click(function() {
-                $(this).closest('.PET_PROFILE_CONTENT').remove();
-            });
+        
                 
             
         });
