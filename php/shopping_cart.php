@@ -1,6 +1,6 @@
 <?php
 // include('conn.php');
-include('connServer.php')
+include('connServer.php');
 
 $ids = json_decode($_GET['ids']);
 
