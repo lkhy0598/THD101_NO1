@@ -41,7 +41,7 @@ if($memberID){
    $filePath = getPetPath($memberID, $petID).$_FILES["pet_pic"]["name"];
 
    // $fileName = "./img/member/". $memberID ."/". $petID . "/".$_FILES["pet_pic"]["name"];
-   $fileName = "./img/dist/img/member/". $memberID ."/". $petID . "/".$_FILES["pet_pic"]["name"];
+   $fileName = "../dist/img/member/". $memberID ."/". $petID . "/".$_FILES["pet_pic"]["name"];
 
    if (move_uploaded_file($_FILES["pet_pic"]["tmp_name"], $filePath)){
 

@@ -29,7 +29,7 @@ if(isset($_FILES["picture_name_pet"])){
       // 欲放置的檔案路徑up
       $filePath = getPetPath($memberID, $petID).$_FILES["picture_name_pet"]["name"];
       
-      $fileName = "./dist/img/member/". $memberID ."/". $petID . "/".$_FILES["picture_name_pet"]["name"];
+      $fileName = "../dist/img/member/". $memberID ."/". $petID . "/".$_FILES["picture_name_pet"]["name"];
       // $fileName = "./img/member/". $memberID ."/". $petID . "/".$_FILES["picture_name_pet"]["name"];
       //將暫存檔搬移到正確位置
       if(move_uploaded_file($_FILES["picture_name_pet"]["tmp_name"], $filePath)){
