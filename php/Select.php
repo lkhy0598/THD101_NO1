@@ -1,18 +1,8 @@
 <?php
-       include("Conn.php");
+       header("Access-Control-Allow-Origin: *");
 
-       // //MySQL相關資訊
-       // $db_host = "127.0.0.1";
-       // $db_user = "root";
-       // $db_pass = "password";
-       // $db_select = "pdo";
-
-       // //建立資料庫連線物件
-       // $dsn = "mysql:host=".$db_host.";dbname=".$db_select.";charset=utf8";
-
-       // //建立PDO物件，並放入指定的相關資料
-       // $pdo = new PDO($dsn, $db_user, $db_pass);
-
+       // include("Conn.php");
+       include('connServer.php');
        //---------------------------------------------------
 
        //建立SQL語法
@@ -26,14 +16,5 @@
 
        //將二維陣列取出顯示其值
        echo json_encode($data);
-
-       // foreach($data as $index => $row){
-	//        echo $row["Account"];   //欄位名稱
-	//        echo " / ";
-	//        echo $row["PWD"];    //欄位名稱
-	//        echo " / ";
-	//        echo $row["CreateDate"];    //欄位名稱
-       //        echo "<br>";
-       // }
 
 ?>

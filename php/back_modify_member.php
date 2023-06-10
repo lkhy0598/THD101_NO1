@@ -5,6 +5,7 @@ include('connServer.php');
 
 // 設定CORS標頭，允許 'content-type' 標頭欄位。
 // header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET");
 header("Access-Control-Allow-Headers: Content-Type");
 

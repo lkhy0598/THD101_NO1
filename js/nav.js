@@ -119,8 +119,8 @@ $(document).ready(function () {
 function showMember() {
     $.ajax({
         method: "POST",
-        // url: "../php/Member.php",
-        url: "http://localhost/THD101_NO1/php/Member.php",
+        url: "../php/Member.php",
+        // url: "http://localhost/THD101_NO1/php/Member.php",
         data: {},
         dataType: "text",
         success: function (response) {

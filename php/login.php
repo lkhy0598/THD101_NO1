@@ -1,12 +1,12 @@
 <?php
 // session_start();
 
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
 
-include("conn.php");
-// include("connServer.php");
+// include("conn.php");
+include("connServer.php");
 
 //---------------------------------------------------
 // $USERNAME = htmlspecialchars($_POST['USERNAME']);
@@ -14,7 +14,7 @@ $EMAIL = htmlspecialchars($_POST['EMAIL']);
 $PASSWORD = htmlentities($_POST['PASSWORD']);
 
 //建立SQL語法
-$sql = "SELECT * FROM member WHERE EMAIL = ? and PASSWORD = ? ";
+$sql = "SELECT * FROM MEMBER WHERE EMAIL = ? and PASSWORD = ? ";
 
 //會自動檢查數據格式，並轉換特殊字元，再將 User Input 填入 SQL 語法中 
 $statement = $pdo->prepare($sql);
