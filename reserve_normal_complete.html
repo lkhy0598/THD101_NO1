@@ -14,46 +14,46 @@
 </head>
 
 <body class="RESERVE_NORMAL_COMPLETE">
-    <!-- =============== 共用元件 =============== -->
+  <!-- =============== 共用元件 =============== -->
 
-    <!-- ===== 會員彈窗 ===== -->
-    <!-- user_popup -->
-    @@include('./layout/user_popup.html')
-    <!-- user_popup end -->
+  <!-- ===== 會員彈窗 ===== -->
+  <!-- user_popup -->
+  @@include('./layout/user_popup.html')
+  <!-- user_popup end -->
 
-    <!-- =============== header =============== -->
-    <!-- header -->
-    @@include('./layout/header.html')
-    <!-- header end -->
+  <!-- =============== header =============== -->
+  <!-- header -->
+  @@include('./layout/header.html')
+  <!-- header end -->
 
-    <!-- =============== 主視覺 =============== -->
-    @@include('./layout/reserve_top_module.html')
+  <!-- =============== 主視覺 =============== -->
+  @@include('./layout/reserve_top_module.html')
 
-    <!-- ==============主視覺下方區塊============== -->
-    <section class="BACKGROUND">
-      <!-- ==========預約頁面共用資訊========== -->
-      @@include('./layout/reserve_info_module.html')
+  <!-- ==============主視覺下方區塊============== -->
+  <section class="BACKGROUND">
+    <!-- ==========預約頁面共用資訊========== -->
+    @@include('./layout/reserve_info_module.html')
 
-      <!-------  預約步驟 ------->
-      <section class="RESERVE_STEPAREA">
-        <section class="RESERVE_ARC" id="ARCONE">
-          <div class="ARC_TITLE">1</div>
-          <p>預約類型選擇</p>
-        </section>
-        <section class="RESERVE_ARC" id="ARCTWO">
-          <div class="ARC_TITLE">2</div>
-          <p>填寫資料</p>
-        </section>
-        <section class="RESERVE_ARC" id="ARCTHREE">
-          <div class="ARC_TITLE">3</div>
-          <p>確認預約資料</p>
-        </section>
-        <section class="RESERVE_ARC" id="ARCFOUR">
-          <div class="ARC_TITLE">4</div>
-          <p>預約成功</p>
-        </section>
+    <!-------  預約步驟 ------->
+    <section class="RESERVE_STEPAREA">
+      <section class="RESERVE_ARC" id="ARCONE">
+        <div class="ARC_TITLE">1</div>
+        <p>預約類型選擇</p>
       </section>
-    
+      <section class="RESERVE_ARC" id="ARCTWO">
+        <div class="ARC_TITLE">2</div>
+        <p>填寫資料</p>
+      </section>
+      <section class="RESERVE_ARC" id="ARCTHREE">
+        <div class="ARC_TITLE">3</div>
+        <p>確認預約資料</p>
+      </section>
+      <section class="RESERVE_ARC" id="ARCFOUR">
+        <div class="ARC_TITLE">4</div>
+        <p>預約成功</p>
+      </section>
+    </section>
+
 
     <!-- ========表單區塊======== -->
 
@@ -64,7 +64,9 @@
         </span>
         <h1>預約成功</h1>
         <h2>第一診間</h2>
-        <h2>預約時間：2023 / 04 / 25</h2>
+        <h2>預約時間：<h2 id="reserve_date"></h2>
+          <h2 id="reserve_time"></h2>
+        </h2>
         <h2>預約號碼：1號</h2>
       </section>
 
@@ -110,10 +112,10 @@
     </section>
   </section>
 
-    <!-- ===== TOP按鈕 ===== -->
-    <!-- top_btn -->
-    @@include('./layout/top_btn.html')
-    <!-- top_btn end -->
+  <!-- ===== TOP按鈕 ===== -->
+  <!-- top_btn -->
+  @@include('./layout/top_btn.html')
+  <!-- top_btn end -->
 
   <!-- ===== footer ===== -->
   <!-- footer -->
@@ -125,6 +127,8 @@
   <script src="./js/toggle.js"></script>
   <script src="./js/top_btn.js"></script>
   <script src="./js/appointment.js"></script>
+  <script src="./js/reserve_normal_complete.js"></script>
+
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var calendarEl = document.getElementById('calendar');
