@@ -1,6 +1,6 @@
 <?php
 // include('conn.php');
-include('connServer.php')
+include('connServer.php');
 
 function retrieveAdditionalData($productId, $pdo) {
     // 执行查询，获取附加数据
