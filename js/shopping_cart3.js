@@ -21,14 +21,16 @@ const app = Vue.createApp({
     },
     created() {
         $.ajax({
-            url: 'http://localhost/THD101_NO1/php/checksession.php',
+            url: '../php/checksession.php',
+            // url: 'http://localhost/THD101_NO1/php/checksession.php',
             type: 'POST',
             dataType: 'text',
             success: response => {
                 const member_id = response.trim();
                 this.memberId = member_id;
                 $.ajax({
-                    url: 'http://localhost/THD101_NO1/php/shopping_cart3.php',
+                    url: '../php/shopping_cart3.php',
+                    // url: 'http://localhost/THD101_NO1/php/shopping_cart3.php',
                     type: 'POST',
                     data: { member_id: member_id },
                     dataType: 'json',
@@ -85,7 +87,8 @@ const app = Vue.createApp({
             //     orderComment: this.orderComment 
             // });
             $.ajax({
-                url: 'http://localhost/THD101_NO1/php/shopping_cart3_updateoc.php',
+                url: '../php/shopping_cart3_updateoc.php',
+                // url: 'http://localhost/THD101_NO1/php/shopping_cart3_updateoc.php',
                 type: 'POST',
                 data: { 
                     member_id: this.memberId,

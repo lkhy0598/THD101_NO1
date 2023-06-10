@@ -21,14 +21,16 @@ const app = Vue.createApp({
         }
 
         $.ajax({
-            url: 'http://localhost/THD101_NO1/php/checksession.php',
+            url: '../php/checksession.php',
+            // url: 'http://localhost/THD101_NO1/php/checksession.php',
             type: 'POST',
             dataType: 'text',
             success: response => {
                 const member_id = response.trim();
                 this.memberId = member_id;
                 $.ajax({
-                    url: 'http://localhost/THD101_NO1/php/shopping_cart2.php',
+                    url: '../php/shopping_cart2.php',
+                    // url: 'http://localhost/THD101_NO1/php/shopping_cart2.php',
                     type: 'POST',
                     data: { member_id: member_id },
                     dataType: 'json',
@@ -107,7 +109,8 @@ const app = Vue.createApp({
             const productIds = this.shoppingCartItems.map(item => item.PRODUCT_ID);
     
             $.ajax({
-                url: 'http://localhost/THD101_NO1/php/shopping_cart.php',
+                url: '../php/shopping_cart.php',
+                // url: 'http://localhost/THD101_NO1/php/shopping_cart.php',
                 type: 'GET',
                 dataType: 'json',
                 data: {
@@ -225,7 +228,8 @@ const app = Vue.createApp({
               // 请根据实际情况替换为您的AJAX请求代码
                 // console.log(data);
             $.ajax({
-                url: 'http://localhost/THD101_NO1/php/shopping_cart2pay.php',
+                url: '../php/shopping_cart2pay.php',
+                // url: 'http://localhost/THD101_NO1/php/shopping_cart2pay.php',
                 type: 'POST',
                 dataType: 'text',
                 data: data,

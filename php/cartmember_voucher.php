@@ -1,5 +1,6 @@
 <?php
-include('conn.php');
+// include('conn.php');
+include('connServer.php')
 
 $ids = $_POST['member_id'];
 
