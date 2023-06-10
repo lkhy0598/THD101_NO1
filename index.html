@@ -8,7 +8,7 @@
         <link rel="shortcut icon" type="image/png" href="img/shortcut_logo.png">
         <title>波波動物醫院前／後台 - 登入</title>
     </head>
-    <body onload="init()">
+    <body>
         <section class="WEB_LOGIN">
             <!-- 前後檯登入紐 -->
             <main class="LOGIN_PAGE">
@@ -95,7 +95,7 @@
                     },
                     dataType: "text",
                     success: function (response) {
-                        
+                        console.log(response);
                         if(response == 'done'){
                             alert('登入成功');
                             location.href = '_back_index.html';
