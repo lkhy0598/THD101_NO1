@@ -2,7 +2,7 @@
 
 // include('conn.php');
 include('connServer.php');
-
+ini_set("display_errors", "On");
 
 if (isset($_POST['phone'])) {
    $phone = $_POST['phone'];

@@ -1,7 +1,7 @@
 <?php
 // include('conn.php');
 include('connServer.php');
-
+ini_set("display_errors", "On");
 // 設定CORS標頭，允許 'content-type' 標頭欄位。
 // header("Access-Control-Allow-Origin: http://localhost:3000");
 header("Access-Control-Allow-Origin: *");
