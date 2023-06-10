@@ -68,8 +68,9 @@
         </span>
         <h1>預約成功</h1>
         <h2>寵物溝通</h2>
-        <h2>預約時間：2023 / 04 / 30</h2>
-        <h2>預約時段：上午</h2>
+        <h2>預約時間：<h2 id="reserve_date"></h2>
+          <h2 id="reserve_time"></h2>
+        </h2>
       </section>
 
       <div class="STEPS">
@@ -130,15 +131,8 @@
   <script src="./js/toggle.js"></script>
   <script src="./js/top_btn.js"></script>
   <script src="./js/appointment.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var calendarEl = document.getElementById('calendar');
-      var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth'
-      });
-      calendar.render();
-    });
-  </script>
+  <script src="./js/reserve_normal_complete.js"></script>
+  
 </body>
 
 </html>

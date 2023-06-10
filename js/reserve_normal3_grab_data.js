@@ -38,6 +38,7 @@ document.getElementById('selected_illness_sign').textContent = reserveNormal2Dat
 // otherIllnessSign:其他病徵
 document.getElementById('other_illness_sign').textContent = reserveNormal2Data.otherIllnessSign;
 
+//導向確認完成一般掛號預約
 function Comfirm() {
     window.location.href = "../reserve_normal_complete.html";
 }

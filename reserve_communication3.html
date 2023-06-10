@@ -65,18 +65,17 @@
       <h1>確認預約資料</h1>
       <div class="COMFIRM_TABLE" id="COMFIRM_TABLE">
         <ul>
-          <li>預約類型： 寵物溝通</li>
-          <li>指定醫師：羅婉瑜 溝通師</li>
-          <li>預約日期：2023 年 4 月 30 日</li>
-          <li>預約時段：上午</li>
-          <li>主人姓名：范植鑫</li>
-          <li>手機號碼：0912345678</li>
-          <li>寵物姓名：范植鑫 </li>
-          <li>寵物類型：院長</li>
-          <li>寵物年齡：100 歲</li>
-          <li>是否打過預防針：否</li>
-          <li>病徵類型：精神不振, 跛行, 發燒, 皮毛脫落</li>
-          <li>其他病徵：不好說......有點.....然後也.......總之........哀..........</li>
+          <li>預約類型： <h4 id="reserve_type"></h4>  </li>
+          <li>指定醫師：<h4 id="doctor_choices"></h4> 溝通師</li>
+          <li>預約日期：<h4 id="reserve_date"></h4></li>
+          <li>預約時段：<h4 id="reserve_time"></h4></li>
+          <li>主人姓名：<h4 id="owner_name"></h4></li>
+          <li>手機號碼：<h4 id="phoneno"></h4></li>
+          <li>寵物姓名：<h4 id="pet_name"></h4> </li>
+          <li>寵物種類：<h4 id="pet_species"></h4></li>
+          <li>寵物年齡：<h4 id="pet_age"></h4>歲</li>
+          <li>是否打過預防針：<h4 id="vaccination_or_not"></h4></li>
+          <li>其他備註：<h4 id="other_description"></h4></li>
         </ul>
       </div>
 
@@ -89,7 +88,7 @@
 
       <div class="STEPS">
         <input type="button" value="上一步" onclick="location.href='reserve_communication2.html'">
-        <input type="button" class="BTN" value="確認預約" onclick="location.href='reserve_communication_complete.html'">
+        <input type="button" class="BTN" value="確認預約" onclick="Comfirm();">
       </div>
 
     </section>
@@ -114,15 +113,8 @@
   <script src="./js/toggle.js"></script>
   <script src="./js/top_btn.js"></script>
   <script src="./js/appointment.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var calendarEl = document.getElementById('calendar');
-      var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth'
-      });
-      calendar.render();
-    });
-  </script>
+  <script src="./js/reserve_communication3_grab_data.js"></script>
+  
 </body>
 
 </html>

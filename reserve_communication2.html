@@ -66,42 +66,40 @@
       <ul>
         <li>
           <label for="owner_name" class="SELECT">飼主姓名<br>
-            <input class="SELECT" type="text" placeholder="請輸入飼主姓名">
+            <input id="owner_name" class="SELECT" type="text" placeholder="請輸入飼主姓名">
           </label>
         </li>
         <li>
           <label for="phone_number" class="SELECT">手機號碼<br>
-            <input type="tel" placeholder="請輸入手機號碼">
+            <input id="phoneno" type="tel" placeholder="請輸入手機號碼">
           </label>
         </li>
         <li>
           <label for="pet_name" class="SELECT">寵物名字<br>
-            <input class="SELECT" type="text" placeholder="請輸入寵物的名字">
+            <input id="pet_name" class="SELECT" type="text" placeholder="請輸入寵物的名字">
           </label>
         </li>
         <li>
           <label for="pet_specie" class="SELECT">寵物種類<br>
-            <select name="reserve_time" id="reserve_time">
+            <select name="pet_species" id="pet_species">
               <option value="" style="display: none">請選擇種類</option>
-              <option value="1">犬</option>
-              <option value="2">貓</option>
-              <option value="3">兔</option>
-              <option value="3">鼠</option>
-              <option value="3">其他動物</option>
+              <option value="犬">犬</option>
+              <option value="貓">貓</option>
+              <option value="其他動物">其他動物</option>
             </select>
           </label>
         </li>
         <li>
           <label for="pet_age" class="SELECT">寵物年齡<br>
-            <input type="number" min="0" placeholder="請輸入寵物年齡">
+            <input id="pet_age" type="number" min="0" placeholder="請輸入寵物年齡">
           </label>
         </li>
         <li>
-          <label for="pet_specie" class="SELECT">是否打過預防針<br>
-            <select name="reserve_time" id="reserve_time">
+          <label for="vaccinationOrNot" class="SELECT">是否打過預防針<br>
+            <select name="vaccinationOrNot" id="vaccinationOrNot">
               <option value="" style="display: none">請選擇</option>
-              <option value="1">是</option>
-              <option value="2">否</option>
+              <option value="是">是</option>
+              <option value="否">否</option>
             </select>
           </label>
         </li>
@@ -110,7 +108,7 @@
       <label for="other_illness_sign" class="OTHER_ILLNESS_SIGN">
         <div class="TEXT_AREA">
           其他備註<br>
-          <textarea cols="30" rows="10" class="TEXTAREA" placeholder="請輸入其他備註......"></textarea>
+          <textarea cols="30" rows="10" id="other_description" class="TEXTAREA" placeholder="請輸入其他備註......"></textarea>
         </div>
 
 
@@ -118,7 +116,7 @@
 
       <div class="STEPS">
         <input type="button" value="上一步" onclick="location.href='reserve.html'">
-        <input type="button" class="BTN" value="下一步" onclick="location.href='reserve_communication3.html'">
+        <input type="button" class="BTN" value="下一步" onclick="phoneNumberCheck(); NextStep();">
       </div>
 
     </section>
@@ -144,6 +142,8 @@
   <script src="./js/top_btn.js"></script>
   <script src="./js/appointment.js"></script>
   <script src="./js/illness_sign.js"></script>
+  <script src="./js/reserve_communication2_grab_data.js"></script>
+  
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var calendarEl = document.getElementById('calendar');

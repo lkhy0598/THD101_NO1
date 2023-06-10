@@ -75,13 +75,13 @@ function ReserveGrabData() {
     return; // 中斷後續程式碼的執行
   }
 
-  //檢查使用者有沒有誤填日期
-  var today = new Date().toISOString().split("T")[0]; // 獲取當前日期
+  // //檢查使用者有沒有誤填日期
+  // var today = new Date().toISOString().split("T")[0]; // 獲取當前日期
 
-  if (reserveDate != "" && reserveDate < today) {
-    alert("預約日期不能早於今天！");
-    return; // 中斷後續程式碼的執行
-  }
+  // if (reserveDate != "" && reserveDate < today) {
+  //   alert("預約日期不能早於今天！");
+  //   return; // 中斷後續程式碼的執行
+  // }
 
   // 將值存儲到網站內存中
   reserveData.reserveType = reserveType;
@@ -102,6 +102,13 @@ function RecognizingType() {
   var reserve_type = document.getElementById("reserve_type").value;
   var reserveDate = document.getElementById("reserve_date").value;
   var reserveTime = document.getElementById("reserve_time").value;
+  //檢查使用者有沒有誤填日期
+  var today = new Date().toISOString().split("T")[0]; // 獲取當前日期
+
+  if (reserveDate != "" && reserveDate < today) {
+    alert("預約日期不能早於今天！");
+    return; // 中斷後續程式碼的執行
+  }
 
   if (reserve_type === "一般掛號" && reserveDate != "" && reserveTime != "") {
     window.location.href = "../reserve_normal2.html";
