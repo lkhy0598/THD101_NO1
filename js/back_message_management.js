@@ -19,7 +19,8 @@ $('#summernote').summernote({
   height: 400,                 // set editor height
   minHeight: null,             // set minimum height of editor
   maxHeight: null,             // set maximum height of editor
-  focus: false                 // set focus to editable area after initializing summernote
+  focus: false,
+  disableEnter: true                 // set focus to editable area after initializing summernote
 });
 
 // 選擇上傳照片按鈕元素
@@ -110,8 +111,7 @@ function searchMessage(event) {
 
   $.ajax({
     method: "POST",
-    url: "http://localhost/THD101_NO1/php/back_search_message.php",
-
+    url: "../php/back_search_message.php",
     data: {
       message_number: message_number,
       message_classification: message_classification,
@@ -122,7 +122,7 @@ function searchMessage(event) {
     dataType: "json",
 
     success: function (response) {
-      console.log(response);
+      console.log(response);  
 
       // 更新html內容前先清空原有資料
       $("#message_result").html("");
@@ -161,7 +161,7 @@ function searchMessage(event) {
 function doAddMessage() {
 
   if ($('#preview_message_pic').children('img').length == 0) {
-    alert("請上傳圖片");
+    alert("請上傳消息圖片");
     return false;
   }
   if ($('#new_message_classification').val() == "") {
@@ -176,7 +176,8 @@ function doAddMessage() {
     alert("請輸入消息標題");
     return false;
   }
-  if ($("#summernote").summernote('code').trim() == "") {
+  var summernoteContent = $("#summernote").summernote('code').trim();
+  if (summernoteContent === "<p><br></p>" || summernoteContent === "") {
     alert("請輸入消息內容");
     return false;
   }
@@ -198,7 +199,7 @@ function doAddMessage() {
 
   $.ajax({
     method: "POST",
-    url: "http://localhost/THD101_NO1/php/back_add_message.php",
+    url: "../php/back_add_message.php",
     data: formData,
     contentType: false, // 不設置content-type，jQuery會自動處理
     processData: false, // 不處理data，jQuery會自動處理

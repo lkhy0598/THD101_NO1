@@ -29,7 +29,8 @@ function doAddMember(){
     $.ajax({
 
         method:"POST",
-        url:"http://localhost/THD101_NO1/php/back_add_member_pet.php",
+        // url: "http://localhost/THD101_NO1/php/back_add_member_pet.php",
+        url:"../php/back_add_member_pet.php",
         data:formData,
 
         dataType:"text",
@@ -59,8 +60,8 @@ function dosearch(){
     console.log(phone);
     $.ajax({            
         method: "POST",
-        // url: "http://localhost/THD101_project/php/back_search_member.php",
-        url: "http://localhost/THD101_NO1/php/back_search_member.php",
+        // url: "http://localhost/THD101_NO1/php/back_search_member.php",
+        url: "../php/back_search_member.php",
         data:{
             phone: phone, 
             name: name
@@ -102,8 +103,8 @@ function Petsearch(){
     }
     $.ajax({            
         method: "POST",
-        // url: "http://localhost/THD101_project/php/back_pet_search_member.php",
-        url: "http://localhost/THD101_NO1/php/back_pet_search_member.php",
+        // url: "http://localhost/THD101_NO1/php/back_pet_search_member.php",
+        url: "../php/back_pet_search_member.php",
         data:{
             phone: phone, 
             type: type
@@ -149,7 +150,8 @@ function doReviseMember(phone_revise){
     // console.log(phone_revise);
     $.ajax({
         method: "GET",
-        url: "http://localhost/THD101_NO1/php/back_modify_member.php",
+        // url: "http://localhost/THD101_NO1/php/back_modify_member.php",
+        url: "../php/back_modify_member.php",
         data: {
             phone_revise: phone_revise
         },

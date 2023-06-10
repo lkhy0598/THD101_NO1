@@ -111,19 +111,18 @@
                                 <label for="commodity_classification" class="SELECT">商品分類<br>
                                     <select id="commodity_classification">
                                         <option value="">請選擇商品分類</option>
-                                        <option value="">飼料</option>
-                                        <option value="">罐頭</option>
-                                        <option value="">保健食品</option>
+                                        <option value="1">乾糧</option>
+                                        <option value="2">罐頭</option>
+                                        <option value="3">保健食品</option>
                                     </select>
                                 </label>
                             </li>
                             <li>
-                                <label for="commodity_status" class="SELECT">商品狀態<br>
+                                <label for="commodity_status" class="SELECT">庫存狀態<br>
                                     <select id="commodity_status">
-                                        <option value="">請選擇商品狀態</option>
-                                        <option value="">上架</option>
-                                        <option value="">下架</option>
-                                        <option value="">售完</option>
+                                        <option value="">請選擇庫存狀態</option>
+                                        <option value="有庫存">有庫存</option>
+                                        <option value="無庫存">無庫存</option>
                                     </select>
                                 </label>
                             </li>
@@ -133,20 +132,7 @@
                                 </label>
                             </li>
                             <li>
-                                <label for="sale_date" class="INPUT">銷售日期<br>
-                                    <input type="date" name="sale_date" id="sale_date">
-                                </label>
-                            </li>
-                            <li>
-                                <p>~</p>
-                            </li>
-                            <li>
-                                <label for="release_date" class="INPUT">
-                                    <input type="date" name="release_date" id="release_date">
-                                </label>
-                            </li>
-                            <li>
-                                <button class="BTN_BACK" type="submit">搜尋商品</button>
+                                <button class="BTN_BACK" type="submit" onclick="searchCommodity(event)">搜尋商品</button>
                             </li>
                         </ul>
 
@@ -158,47 +144,16 @@
 
                     <ul class="COMMODITY_MANAGEMENT_TABLE_TITLE BACK_TABLE_TITLE">
                         <li>商品編號</li>
-                        <li>商品狀態</li>
+                        <li>庫存數量</li>
                         <li>商品圖片</li>
                         <li>商品分類</li>
-                        <li>商品標題</li>
+                        <li>商品名稱</li>
                         <li>銷售日期</li>
                         <li>修改</li>
                         <li>刪除</li>
                     </ul>
 
-                    <ul class="COMMODITY_MANAGEMENT_TABLE_CONTENT BACK_TABLE_CONTENT">
-                        <li>001</li>
-                        <li>上架</li>
-                        <li><img src="./img/shopping_list/dryfood/05/dryfood_05_01.jpg" alt=""></li>
-                        <li>飼料</li>
-                        <li>【SC星益生趣】無穀凍乾狗糧(三種魚配方) 3.5磅/1.6kg</li>
-                        <li>2023/04/01</li>
-                        <li><i class="bi bi-pencil"></i></li>
-                        <li><i class="bi bi-x-lg"></i></li>
-                    </ul>
-
-                    <ul class="COMMODITY_MANAGEMENT_TABLE_CONTENT BACK_TABLE_CONTENT">
-                        <li>002</li>
-                        <li>下架</li>
-                        <li><img src="./img/shopping_list/can/05/can_05_01.jpg" alt=""></li>
-                        <li>罐頭</li>
-                        <li>MDARYN麥德琳 喵樂-肉食控主食罐(嫩雞鵪鶉) 80g</li>
-                        <li>2023/04/01</li>
-                        <li><i class="bi bi-pencil"></i></li>
-                        <li><i class="bi bi-x-lg"></i></li>
-                    </ul>
-
-                    <ul class="COMMODITY_MANAGEMENT_TABLE_CONTENT BACK_TABLE_CONTENT">
-                        <li>003</li>
-                        <li>售完</li>
-                        <li><img src="./img/shopping_list/healthy/02/healthy_02_01.jpg" alt=""></li>
-                        <li>保健食品</li>
-                        <li>沛威狗保健-顧關節 30入/盒</li>
-                        <li>2023/04/01</li>
-                        <li><i class="bi bi-pencil"></i></li>
-                        <li><i class="bi bi-x-lg"></i></li>
-                    </ul>
+                    <div id="commodity_result"></div>
 
                 </section>
 
@@ -218,8 +173,8 @@
 
                     <form action="" class="ADD_COMMODITY">
 
-                        <label for="commodity_title" class="INPUT">商品名稱<br>
-                            <input type="text" name="commodity_title" id="commodity_title">
+                        <label for="new_commodity_title" class="INPUT">商品名稱<br>
+                            <input type="text" name="new_commodity_title" id="new_commodity_title">
                         </label>
 
                     </form>
@@ -230,23 +185,23 @@
 
                     <form action="" class="ADD_COMMODITY">
 
-                        <label for="message_classification" class="SELECT">類別<br>
-                            <select id="message_classification">
-                                <option value="">請選擇商品類別</option>
-                                <option value="">罐頭</option>
-                                <option value="">乾糧</option>
-                                <option value="">保健食品</option>
+                        <label for="new_commodity_classification" class="SELECT">商品分類<br>
+                            <select name= "new_commodity_classification" id="new_commodity_classification">
+                                <option value="">請選擇商品分類</option>
+                                <option value="1">乾糧</option>
+                                <option value="2">罐頭</option>
+                                <option value="3">保健食品</option>
                             </select>
                             <br><br><br>
                         </label>
 
-                        <label for="price" class="INPUT">價格<br>
-                            <input type="text" name="price" id="price">
+                        <label for="new_price" class="INPUT">商品價格<br>
+                            <input type="text" name="new_price" id="new_price">
                             <br><br><br>
                         </label>
 
-                        <label for="stock" class="INPUT">庫存<br>
-                            <input type="text" name="stock" id="stock">
+                        <label for="new_stock" class="INPUT">庫存數量<br>
+                            <input type="text" name="new_stock" id="new_stock">
                         </label>
 
                     </form>
@@ -259,35 +214,32 @@
 
                         <section class="COMMODITY_IMAGE_TOP">
 
-                            <div class="MAIN_IMAGE IMAGE_TOP ">
+                            <div class="MAIN_IMAGE IMAGE_TOP">
                                 <i class="bi bi-image"></i>
-
-
                             </div>
-                            <div class="SECONDARY_IMAGE IMAGE_TOP ">
+
+                            <div class="SECONDARY_IMAGE IMAGE_TOP">
                                 <i class="bi bi-image"></i>
-
-
                             </div>
-                            <div class="THIRD_IMAGE IMAGE_TOP ">
+                            <div class="THIRD_IMAGE IMAGE_TOP">
                                 <i class="bi bi-image"></i>
-
-
                             </div>
-                            <div class="FORTH_IMAGE IMAGE_TOP ">
+                            <div class="FORTH_IMAGE IMAGE_TOP">
                                 <i class="bi bi-image"></i>
-
                             </div>
 
                         </section>
 
                         <section class="COMMODITY_IMAGE_BOTTOM">
+
                             <i class="bi bi-image"></i>
+
                             <label for="commodity_pic" class="PIC_FILE_BOX">
                                 <input type="button" id="commodity_pic_btn" value="上傳照片" class="BTN_BACK">
                                 <input name="commodity_pic" type="file" id="commodity_pic" class="PIC_FILE"
                                     accept="image/gif, image/jpeg, image/png" multiple />
                             </label>
+
                         </section>
 
                     </section>
@@ -298,10 +250,10 @@
 
                     <section class="COMMODITY_CONTENT">
 
-                        <p>商品內容</p>
-                        <div id="summernote" class="SUMMERNOTE"></div>
+                        <p>商品描述</p>
+                        <div name="new_message_content" id="summernote" class="SUMMERNOTE"></div>
 
-                        <button class="BTN_BACK" type="submit">新增商品</button>
+                        <button class="BTN_BACK" type="submit" onclick="return doAddCommodity()">新增商品</button>
                         <button class="BTN_BACK CANCEL" type="submit">取消</button>
 
                     </section>
@@ -313,40 +265,12 @@
         </main>
 
     </section>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <script src="./js/back_call_system.js"></script>
     <script src="./js/back_commodity_management.js"></script>
 
-    <script>
-
-        $(document).ready(function () {
-
-            $('.BACK_ADD_COMMODITY_SECTION').hide();
-
-            $('.BACK_NAV ul li').eq(0).click(function () {
-                $('.BACK_ADD_COMMODITY_SECTION').show();
-                $('.BACK_COMMODITY_MANAGEMENT').hide();
-                event.preventDefault();
-            })
-
-            $('.CANCEL').eq(0).click(function () {
-                $('.BACK_COMMODITY_MANAGEMENT').show();
-                $('.BACK_ADD_COMMODITY_SECTION').hide();
-            })
-
-        })
-
-        $('#summernote').summernote({
-            height: 400,                 // set editor height
-            minHeight: null,             // set minimum height of editor
-            maxHeight: null,             // set maximum height of editor
-            focus: false                 // set focus to editable area after initializing summernote
-        });
-
-    </script>
-
 </body>
+
+</html>

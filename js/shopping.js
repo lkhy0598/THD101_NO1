@@ -6,7 +6,8 @@ const app = Vue.createApp({
             searchKeyword: '',
             displayedItems: [],
             itemsPerPage: 12,
-            currentPage: 1
+            currentPage: 1,
+            quantity: 1
         };
     },
     mounted() {
@@ -15,8 +16,8 @@ const app = Vue.createApp({
     methods: {
         fetchProducts() {
             $.ajax({
-                // url: 'http://tibamef2e.com/thd101/g1/php/shopping.php',
-                url: 'http://localhost/THD101_project/php/shopping.php',
+                // url: 'http://localhost/THD101_NO1/php/shopping.php',
+                url: '../php/shopping.php',
                 type: 'GET',
                 dataType: 'json',
                 success: response => {
@@ -75,6 +76,43 @@ const app = Vue.createApp({
                     window.scrollTo({ top: offsetTop, behavior: 'smooth' });
                 }
             });
+        },
+        addToCart(item) {
+            const purchaseq = parseInt($(".ITEMCOUNT_BTN-BODY").val());
+        
+            const newItem = {
+                PRODUCT_ID: item.PRODUCT_ID,
+                PRODUCT_TITLE: item.PRODUCT_TITLE,
+                PRODUCT_PRICE: item.PRODUCT_PRICE,
+                INVENTORY: item.INVENTORY,
+                IMG_SOURCE_ARRAY: this.getImagesArray(item.IMG_SOURCE),
+                PRODUCT_CONTENT: item.PRODUCT_CONTENT,
+                quantity: this.quantity
+            };
+        
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const existingItemIndex = cartItems.findIndex(cartItem => cartItem.PRODUCT_ID === item.PRODUCT_ID);
+            let showAlert = true; // 用于跟踪是否已经弹出过警告信息
+        
+            if (existingItemIndex !== -1) {
+                const existingItem = cartItems[existingItemIndex];
+                const totalQuantity = existingItem.quantity + newItem.quantity;
+                if (totalQuantity > newItem.INVENTORY) {
+                    existingItem.quantity = newItem.INVENTORY;
+                    alert('超過庫存數量，已將購買數量調整為庫存數量。');
+                    showAlert = false; // 不再弹出成功添加到购物车的提示
+                } else {
+                    existingItem.quantity = totalQuantity;
+                }
+            } else {
+                cartItems.push(newItem);
+            }
+        
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        
+            if (showAlert) {
+                alert('商品已成功加入購物車');
+            }
         }
     },
     computed: {

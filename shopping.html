@@ -273,7 +273,7 @@
             <ul class="SHOPPINGITEM_UL" ref="itemList">
                 <li class="SHOPPINGCARD COL-4 RWD-COL-6" v-for="item in displayedItems" :key="item.PRODUCT_ID">
                     <section class="SHOPPINGCARD_IMG">
-                        <span>
+                        <span @click="addToCart(item)">
                             <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
                             <p>加入購物車</p>
                         </span>
@@ -281,7 +281,7 @@
                             <img :src="getImagesArray(item.IMG_SOURCE)[0]" :alt="item.PRODUCT_TITLE">
                         </a>
                     </section>
-                    <a :href="'#'" class="CARDLINK">
+                    <a :href="'shopping_list.html?id=' + item.PRODUCT_ID" class="CARDLINK">
                         <p class="SHOPPINGCARD_TITLE">{{ item.PRODUCT_TITLE }}</p>
                     </a>
                     <p class="SHOPPINGCARD_PRICE">${{ item.PRODUCT_PRICE }}</p>

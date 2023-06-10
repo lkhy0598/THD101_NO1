@@ -232,8 +232,9 @@ function joinSub(e) {
         } else {
             $.ajax({
                 method: "POST",
-                url: "http://localhost/THD101_G1_groupproject/php/Join.php",
+                // url: "http://localhost/THD101_NO1/php/Join.php",
                 // url: "https://tibamef2e.com/thd101/g1/php/Join.php",
+                url: "../php/Join.php",
                 data: {
                     USERNAME: usn,
                     PHONENO: pho,
