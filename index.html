@@ -83,8 +83,8 @@
                     alert("請輸入手機號碼");
                     return false;
                 }
-                console.log(account);
-                console.log(password);
+                // console.log(account);
+                // console.log(password);
                 $.ajax({            
                     method: "POST",
                     // url: "http://localhost/THD101_NO1/php/back_login.php",
@@ -95,7 +95,7 @@
                     },
                     dataType: "text",
                     success: function (response) {
-                        console.log(response);
+                        // console.log(response);
                         if(response == 'done'){
                             alert('登入成功');
                             location.href = '_back_index.html';

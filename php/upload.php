@@ -15,6 +15,7 @@ function getMemberPath($memberID) {
    $fullPath = $ServerRoot . $filePath;
    // 檢查目錄是否存在，如果不存在，則建立目錄
    if (!file_exists($fullPath)) {
+      
        mkdir($fullPath, 0777, true); // 設置適當的權限
    }
    return $fullPath;

@@ -41,11 +41,11 @@ function doSearch(){
       //  }
       error: function(xhr, status, error) {
          var errorMessage = xhr.status + ': ' + xhr.statusText;
-         console.log('錯誤訊息:', errorMessage);
-         console.log('伺服器回應:', xhr.responseText);
-         console.log('伺服器回應:',xhr);
-         console.log('伺服器回應:',status);
-         console.log('伺服器回應:',error);
+        //  console.log('錯誤訊息:', errorMessage);
+        //  console.log('伺服器回應:', xhr.responseText);
+        //  console.log('伺服器回應:',xhr);
+        //  console.log('伺服器回應:',status);
+        //  console.log('伺服器回應:',error);
          alert('發生錯誤: ' + errorMessage);
      }
    });
@@ -77,7 +77,7 @@ function doRevise(pet_id){
       },
       dataType:"json",
       success:function(response){
-         console.log(response);
+        //  console.log(response);
          var createDate = new Date(response.CREATEDATE);
          var formattedDate = createDate.toISOString().split('T')[0];
          $('#doctor').val(response.DOCTOR_ID);
@@ -86,8 +86,8 @@ function doRevise(pet_id){
          $('#add_pet_name').val(response.PET_NAME);
          $('#pet_id').val(response.PET_ID);
          $('#symptom_type').val(response.MR_SYMPTOM);
-         console.log($('#pet_id').val());
-         console.log($('#symptom_type').val());
+        //  console.log($('#pet_id').val());
+        //  console.log($('#symptom_type').val());
      },
      error: function(exception) {  
          alert("發生錯誤: " + exception.status);
@@ -153,8 +153,8 @@ function doAddmedical(){
    // }
    error: function(xhr, status, error) {
       var errorMessage = xhr.status + ': ' + xhr.statusText;
-      console.log('錯誤訊息:', errorMessage);
-      console.log('伺服器回應:', xhr.responseText);
+    //   console.log('錯誤訊息:', errorMessage);
+    //   console.log('伺服器回應:', xhr.responseText);
       alert('發生錯誤: ' + errorMessage);
   }
 })
@@ -217,11 +217,11 @@ function doUpdate(){
       
       error: function(xhr, status, error) {
           var errorMessage = xhr.status + ': ' + xhr.statusText;
-          console.log('錯誤訊息:', errorMessage);
-          console.log('伺服器回應:', xhr.responseText);
-          console.log('伺服器回應:',xhr);
-          console.log('伺服器回應:',status);
-          console.log('伺服器回應:',error);
+        //   console.log('錯誤訊息:', errorMessage);
+        //   console.log('伺服器回應:', xhr.responseText);
+        //   console.log('伺服器回應:',xhr);
+        //   console.log('伺服器回應:',status);
+        //   console.log('伺服器回應:',error);
           alert('發生錯誤: ' + errorMessage);
       }
   });

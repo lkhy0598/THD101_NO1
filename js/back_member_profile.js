@@ -206,10 +206,6 @@ function Petsearch(){
                     + "</ul>"
                 );
             });
-
-            // if(response===1){
-            //     alert('lalala');
-            // }
         },
         error: function(exception) {
             alert("發生錯誤: " + exception.status);
@@ -231,7 +227,7 @@ function doReviseMember(phone_revise){
         },
         dataType:"json",
         success:function(response){
-            console.log(response);
+            // console.log(response);
             $('#name_revise').val(response.NAME);
             $('#phone_revise').val(response.PHONENO);
             $('#email_revise').val(response.EMAIL);
@@ -250,7 +246,7 @@ function doReviseMember(phone_revise){
 function doRevisePet(owner_phone){
     $('.BACK_MODIFY_PET').show();
     $('.BACK_MEMBER_PROFILE').hide();
-    console.log(owner_phone);
+    // console.log(owner_phone);
     $.ajax({
         method: "GET",
         // url: "http://localhost/THD101_NO1/php/back_modify_pet.php",
@@ -260,7 +256,7 @@ function doRevisePet(owner_phone){
         },
         dataType:"json",
         success:function(response){
-            console.log(response);
+            // console.log(response);
             // $('#owner_name_revise').val(response.NAME);
             $('#pet_phone_revise').val(response.PHONENO);
             $('#pet_gender_revise').val(response.PET_GENDER);
@@ -271,9 +267,9 @@ function doRevisePet(owner_phone){
             $('#member_id_pet').val(response.MEMBER_ID);
             $('#preview_pet_pic_revise img').attr('src', response.PET_AVATAR);
             
-            console.log($('#member_id_pet').val());
-            console.log($('#pet_gender_revise').val());
-            console.log($('#pet_category_revise').val());
+            // console.log($('#member_id_pet').val());
+            // console.log($('#pet_gender_revise').val());
+            // console.log($('#pet_category_revise').val());
             
         },
         error: function(exception) {  
@@ -336,8 +332,8 @@ function doUpdateMember(){
         
         error: function(xhr, status, error) {
             var errorMessage = xhr.status + ': ' + xhr.statusText;
-            console.log('錯誤訊息:', errorMessage);
-            console.log('伺服器回應:', xhr.responseText);
+            // console.log('錯誤訊息:', errorMessage);
+            // console.log('伺服器回應:', xhr.responseText);
             alert('發生錯誤: ' + errorMessage);
         }
     })
@@ -395,11 +391,11 @@ function doUpdatePet(){
         
         error: function(xhr, status, error) {
             var errorMessage = xhr.status + ': ' + xhr.statusText;
-            console.log('錯誤訊息:', errorMessage);
-            console.log('伺服器回應:', xhr.responseText);
-            console.log('伺服器回應:',xhr);
-            console.log('伺服器回應:',status);
-            console.log('伺服器回應:',error);
+            // console.log('錯誤訊息:', errorMessage);
+            // console.log('伺服器回應:', xhr.responseText);
+            // console.log('伺服器回應:',xhr);
+            // console.log('伺服器回應:',status);
+            // console.log('伺服器回應:',error);
             alert('發生錯誤: ' + errorMessage);
         }
     })
@@ -428,7 +424,7 @@ function doReserve(reserve_phone){
         },
         dataType:"json",
         success:function(response){
-            console.log(response);
+            // console.log(response);
             $('#reserve_name').val(response.NAME);
             $('#reserve_phone').val(response.PHONENO);
             $('#reserve_pet_name').val(response.PET_NAME);
@@ -437,8 +433,8 @@ function doReserve(reserve_phone){
             $('#reserve_pet_age').val(response.PET_AGE);
             $('#reserve_member_id').val(response.MEMBER_ID);
             $('#reserve_pet_id').val(response.PET_ID);
-            console.log($('#reserve_member_id').val());
-            console.log($('#reserve_pet_id').val());
+            // console.log($('#reserve_member_id').val());
+            // console.log($('#reserve_pet_id').val());
             
         },
         error: function(exception) {  
@@ -516,18 +512,18 @@ function doAddReserve(){
     formData.append('reserve_pet_id', reserve_pet_id);
     formData.append('reserve_symptom_type', reserve_symptom_type);
 
-    console.log(reserve_type);
-    console.log(reserve_doctor);
-    console.log(reserve_date);
-    console.log(reserve_datetime);
-    console.log(reserve_name);
-    console.log(reserve_phone);
-    console.log(reserve_pet_name);
-    console.log(reserve_pet_category);
-    console.log(reserve_pet_age);
-    console.log(reserve_vaccines);
-    console.log(reserve_member_id);
-    console.log(reserve_pet_id);
+    // console.log(reserve_type);
+    // console.log(reserve_doctor);
+    // console.log(reserve_date);
+    // console.log(reserve_datetime);
+    // console.log(reserve_name);
+    // console.log(reserve_phone);
+    // console.log(reserve_pet_name);
+    // console.log(reserve_pet_category);
+    // console.log(reserve_pet_age);
+    // console.log(reserve_vaccines);
+    // console.log(reserve_member_id);
+    // console.log(reserve_pet_id);
 
     $.ajax({
         method:"POST",
