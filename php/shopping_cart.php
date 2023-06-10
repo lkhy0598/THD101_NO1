@@ -1,6 +1,7 @@
 <?php
 // include('conn.php');
 include('connServer.php');
+header('Access-Control-Allow-Origin: https://tibamef2e.com');
 
 $ids = json_decode($_GET['ids']);
 

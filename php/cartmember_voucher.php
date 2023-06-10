@@ -1,6 +1,7 @@
 <?php
 // include('conn.php');
 include('connServer.php');
+header('Access-Control-Allow-Origin: https://tibamef2e.com');
 
 $ids = $_POST['member_id'];
 
