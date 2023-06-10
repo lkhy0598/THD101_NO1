@@ -30,6 +30,7 @@ if(isset($_FILES["picture_name_pet"])){
       $filePath = getPetPath($memberID, $petID).$_FILES["picture_name_pet"]["name"];
       
       $fileName = "./img/member/". $memberID ."/". $petID . "/".$_FILES["picture_name_pet"]["name"];
+      // $fileName = "https://tibamef2e.com/thd101/g1/dist/img/member/". $memberID ."/". $petID . "/".$_FILES["picture_name_pet"]["name"];
       // $fileName = "./img/member/". $memberID ."/". $petID . "/".$_FILES["picture_name_pet"]["name"];
       //將暫存檔搬移到正確位置
       if(move_uploaded_file($_FILES["picture_name_pet"]["tmp_name"], $filePath)){
@@ -60,9 +61,11 @@ if(isset($_FILES["picture_name_pet"])){
       $statement = $pdo->prepare($sql);
       $a = $statement->execute($values);
 
-      if($a > 0){
-         echo '修改成功';
-      } else{
-         echo 'fail';
+      header("Content-Type: application/json");
+
+      if ($a > 0) {
+         echo json_encode(['message' => '修改成功']);
+      } else {
+         echo json_encode(['message' => '修改失敗']);
       }
 ?>
