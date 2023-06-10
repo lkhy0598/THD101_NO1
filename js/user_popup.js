@@ -232,8 +232,8 @@ function joinSub(e) {
         } else {
             $.ajax({
                 method: "POST",
-                url: "http://localhost/THD101_NO1/php/Join.php",
-                // url: "../php/Join.php",
+                // url: "http://localhost/THD101_NO1/php/Join.php",
+                url: "../php/Join.php",
                 data: {
                     USERNAME: usn,
                     PHONENO: pho,
@@ -284,8 +284,8 @@ function loginSub() {
     //input your code...
     $.ajax({
         method: "POST",
-        // url: '../php/Login.php',
-        url: "http://localhost/THD101_NO1/php/Login.php",
+        url: '../php/login.php',
+        // url: "http://localhost/THD101_NO1/php/login.php",
         data: {
             USERNAME: lusn,
             EMAIL: lpsw,
@@ -312,8 +312,8 @@ function loginSub() {
 // 登出會員
 function logoutSub() {
     $.ajax({
-        // url: '../php/Logout.php',
-        url: 'http://localhost/THD101_NO1/php/Logout.php',
+        url: '../php/Logout.php',
+        // url: 'http://localhost/THD101_NO1/php/Logout.php',
         type: 'GET',
         success: function(response) {
             // 在成功回應後執行以下動作

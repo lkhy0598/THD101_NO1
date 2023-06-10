@@ -20,8 +20,12 @@ a {
         color: $white;
     }
 }
-// 登入紐
-.LOGIN, .LOGOUT {
+// 登入登出紐
+.LOGIN{
+    font-size: $p;
+    font-weight: 700;
+}
+.LOGOUT {
     font-size: $p;
     font-weight: 700;
 }
