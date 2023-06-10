@@ -35,6 +35,7 @@
     @@include('./layout/reserve_info_module.html')
 
     <!-------  預約步驟 ------->
+   
     <section class="RESERVE_STEPAREA">
       <section class="RESERVE_ARC" id="ARCONE">
         <div class="ARC_TITLE">1</div>
@@ -70,7 +71,7 @@
 
 
     <!-- ========表單區塊======== -->
-
+    <form action="">
     <section class="RESERVE_FORM">
 
       <ul>
@@ -116,9 +117,11 @@
 
       <div class="STEPS">
         <input type="button" value="上一步" style="color: #888">
-        <input class="BTN" type="button" value="下一步" onclick="ReserveGrabData(); RecognizingType(); GetReserveDataFromLocalStorage();">
+        <input class="BTN" type="button" value="下一步" onclick="ReserveGrabData(); RecognizingType(); ">
       </div>
-    </section>
+    </section>  
+    </form>
+    
 
   </section>
   <!-- ===== TOP按鈕 ===== -->

@@ -81,6 +81,6 @@ function NextStep() {
 
     if (ownerName != "" && phoneno != "" && petName != "" && petSpecies != "" && petAge != "" && vaccinationOrNot != "") {
         console.log(reserveCommunication2Data);
-        window.location.href = "../reserve_communication3.html";
+        window.location.href = "reserve_communication3.html";
     }
 }
