@@ -8,9 +8,9 @@ ini_set("display_errors", "On");
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
-header('Content-Type: application/json');
 
 $memberID = isset($_POST['member_id_pet']) ? $_POST['member_id_pet'] : '';
+$petID = isset($_POST['pet_id']) ? $_POST['pet_id'] : '';
 $pet_name_revise = isset($_POST['pet_name_revise']) ? $_POST['pet_name_revise'] : '';
 $pet_phone_revise = isset($_POST['pet_phone_revise']) ? $_POST['pet_phone_revise'] : '';
 $pet_gender_revise= isset($_POST['pet_gender_revise']) ? $_POST['pet_gender_revise'] : '';
@@ -19,21 +19,21 @@ $pet_age_revise = isset($_POST['pet_age_revise']) ? $_POST['pet_age_revise'] : '
 
 $picture_name_pet = '';
 
-if(isset($_FILES["picture_name_pet"])){
+if(isset($_FILES["pet_pic_revise"])){
 
    //判斷圖片是否上傳成功?
-   if($_FILES["picture_name_pet"]["error"] > 0){
+   if($_FILES["pet_pic_revise"]["error"] > 0){
        //返回訊息文字
-       $message = "上傳失敗: 錯誤代碼".$_FILES["picture_name_pet"]["error"];
+       $message = "上傳失敗: 錯誤代碼".$_FILES["pet_pic_revise"]["error"];
    }else{
       // 欲放置的檔案路徑up
-      $filePath = getPetPath($memberID, $petID).$_FILES["picture_name_pet"]["name"];
+      $filePath = getPetPath($memberID, $petID).$_FILES["pet_pic_revise"]["name"];
       
-      $fileName = "./img/member/". $memberID ."/". $petID . "/".$_FILES["picture_name_pet"]["name"];
+      $fileName = "./img/member/". $memberID ."/". $petID . "/".$_FILES["pet_pic_revise"]["name"];
       // $fileName = "https://tibamef2e.com/thd101/g1/dist/img/member/". $memberID ."/". $petID . "/".$_FILES["picture_name_pet"]["name"];
       // $fileName = "./img/member/". $memberID ."/". $petID . "/".$_FILES["picture_name_pet"]["name"];
       //將暫存檔搬移到正確位置
-      if(move_uploaded_file($_FILES["picture_name_pet"]["tmp_name"], $filePath)){
+      if(move_uploaded_file($_FILES["pet_pic_revise"]["tmp_name"], $filePath)){
 
          //修改後的商品圖片名稱
          $picture_name_pet = $fileName;
@@ -61,11 +61,10 @@ if(isset($_FILES["picture_name_pet"])){
       $statement = $pdo->prepare($sql);
       $a = $statement->execute($values);
 
-      header("Content-Type: application/json");
 
       if ($a > 0) {
-         echo json_encode(['message' => '修改成功']);
+         echo  '修改成功';
       } else {
-         echo json_encode(['message' => '修改失敗']);
+         echo 'fail';
       }
 ?>
