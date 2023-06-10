@@ -244,6 +244,7 @@ function doReviseMember(phone_revise){
 }
 // 寵物修改資料渲染
 function doRevisePet(owner_phone){
+
     $('.BACK_MODIFY_PET').show();
     $('.BACK_MEMBER_PROFILE').hide();
     // console.log(owner_phone);
@@ -265,6 +266,7 @@ function doRevisePet(owner_phone){
             $('#pet_age_revise').val(response.PET_AGE);
             $('#vaccines_revise').val(response.VACCI_OR_NOT);
             $('#member_id_pet').val(response.MEMBER_ID);
+            $('#pet_id').val(response.PET_ID);
             $('#preview_pet_pic_revise img').attr('src', response.PET_AVATAR);
             
             // console.log($('#member_id_pet').val());
@@ -325,9 +327,10 @@ function doUpdateMember(){
         contentType : false,
         success:function(response){
             alert(response);
-            // location.href = '_back_member_profile.html'
-            $('.BACK_MEMBER_PROFILE').show();
-            $('.BACK_MODIFY_MEMBER').hide();
+            // location.href = '_back_member_profile.html';
+            location.replace('_back_member_profile.html');
+            // $('.BACK_MEMBER_PROFILE').show();
+            // $('.BACK_MODIFY_MEMBER').hide();
         },
         
         error: function(xhr, status, error) {
@@ -384,9 +387,10 @@ function doUpdatePet(){
         contentType : false,
         success:function(response){
             alert(response);
-            // location.href = '_back_member_profile.html'
-            $('.BACK_MEMBER_PROFILE').show();
-            $('.BACK_MODIFY_PET').hide();
+            // location.href = '_back_member_profile.html';
+            location.replace('_back_member_profile.html');
+            // $('.BACK_MEMBER_PROFILE').show();
+            // $('.BACK_MODIFY_PET').hide();
         },
         
         error: function(xhr, status, error) {
