@@ -18,6 +18,7 @@ const app = Vue.createApp({
             $.ajax({
                 // url: 'http://tibamef2e.com/thd101/g1/php/shopping.php',
                 url: 'http://localhost/THD101_NO1/php/shopping.php',
+                // url: '../php/shopping.php',
                 type: 'GET',
                 dataType: 'json',
                 success: response => {

@@ -49,10 +49,11 @@ function getPetPath($memberID, $petID){
 
 // }
 
-function getMessagePath() {
+function getMessagePath($news_type) {
 
    $ServerRoot = $_SERVER["DOCUMENT_ROOT"];
-   $filePath = "/THD101_NO1/Upload/message/";
+   $filePath = "/THD101_NO1/img/information/" . $news_type ."/";
+   // $filePath = "../dist/img/information/" . $news_type ."/"; //server
    $fullPath = $ServerRoot . $filePath;
 
    // 檢查目錄是否存在，如果不存在，則建立目錄
@@ -61,7 +62,21 @@ function getMessagePath() {
    }
 
    return $fullPath;
+}
 
+function getCommodityPath($commodity_type , $commodity_folder) {
+
+   $ServerRoot = $_SERVER["DOCUMENT_ROOT"];
+   $filePath = "/THD101_NO1/img/shopping_list/" . $commodity_type ."/" . $commodity_folder;
+   // $filePath = "../dist/img/shopping_list/" . $commodity_type ."/" . $commodity_folder; //server
+   $fullPath = $ServerRoot . $filePath;
+
+   // 檢查目錄是否存在，如果不存在，則建立目錄
+   if (!file_exists($fullPath)) {
+       mkdir($fullPath, 0777, true); // 設置適當的權限
+   }
+
+   return $fullPath;
 }
 
 ?>

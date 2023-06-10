@@ -23,6 +23,7 @@ const app = Vue.createApp({
         fetchProducts() {
             $.ajax({
                 url: 'http://localhost/THD101_NO1/php/shopping_list.php?id=' + this.productId,
+                // url: '../php/shopping_list.php?id=' + this.productId,
                 type: 'GET',
                 dataType: 'json',
                 data: {
