@@ -8,8 +8,8 @@ function getMemberPath($memberID) {
 
    $ServerRoot = $_SERVER["DOCUMENT_ROOT"];
    
-   $filePath = "/THD101_NO1/img/member/" . $memberID ."/"; //本地
-   // $filePath = "../dist/img/member/" . $memberID ."/"; //server
+   // $filePath = "/THD101_NO1/img/member/" . $memberID ."/"; //本地
+   $filePath = "../dist/img/member/" . $memberID ."/"; //server
 
    $fullPath = $ServerRoot . $filePath;
    // 檢查目錄是否存在，如果不存在，則建立目錄
@@ -26,8 +26,8 @@ function getPetPath($memberID, $petID){
    $ServerRoot = $_SERVER["DOCUMENT_ROOT"];
 
    //Apache根目錄之下的檔案存放路徑
-   $filePath = "/THD101_NO1/img/member/". $memberID ."/". $petID ."/";
-   // $filePath = "../dist/img/member/" . $memberID ."/".$petID ."/";
+   // $filePath = "/THD101_NO1/img/member/". $memberID ."/". $petID ."/";
+   $filePath = "../dist/img/member/" . $memberID ."/".$petID ."/";
    
    $fullPath = $ServerRoot . $filePath;
 
@@ -36,18 +36,6 @@ function getPetPath($memberID, $petID){
   }
   return $fullPath;
 }
-
-// function getNewsPath(){        
-
-//    //Apache實際的根目錄路徑
-//    $ServerRoot = $_SERVER["DOCUMENT_ROOT"];
-
-//    //Apache根目錄之下的檔案存放路徑
-//    $filePath = "/THD101_NO1/Upload/news/";
-   
-//    return $ServerRoot.$filePath;
-
-// }
 
 function getMessagePath($news_type) {
 
