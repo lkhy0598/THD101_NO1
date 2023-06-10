@@ -48,8 +48,8 @@ $memberID = $pdo->lastInsertId(); // 获取刚插入的会员ID
 //欲放置的檔案路徑up
 $filePath = getMemberPath($memberID).$_FILES["member_pic"]["name"];
 
-// $fileName = "./img/member/". $memberID ."/".$_FILES["member_pic"]["name"];
 $fileName = "./img/member/". $memberID ."/".$_FILES["member_pic"]["name"];
+// $fileName = "https://tibamef2e.com/thd101/g1/dist/img/member/". $memberID ."/".$_FILES["member_pic"]["name"];
 
 //將暫存檔搬移到正確位置
 if (move_uploaded_file($_FILES["member_pic"]["tmp_name"], $filePath)) {
