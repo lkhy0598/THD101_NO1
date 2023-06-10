@@ -69,8 +69,8 @@ function doRevise(pet_id){
 
    $.ajax({
       method:"GET",
-      url: "http://localhost/THD101_NO1/php/back_medical_get.php",
-      // url:"../php/back_medical_get.php",
+    //   url: "http://localhost/THD101_NO1/php/back_medical_get.php",
+      url:"../php/back_medical_get.php",
       data:{
          // add_pet_name:add_pet_name
          pet_id:pet_id
@@ -134,8 +134,8 @@ function doAddmedical(){
 
   $.ajax({
    method:"POST",
-   url:"http://localhost/THD101_NO1/php/back_add_medical.php",
-//    url:"../php/back_add_medical.php",
+//    url:"http://localhost/THD101_NO1/php/back_add_medical.php",
+   url:"../php/back_add_medical.php",
    data:formData,
    dataType:"text",
    // 告訴jQuery不要去處理發送的資料
