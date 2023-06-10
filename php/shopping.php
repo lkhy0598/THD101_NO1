@@ -1,7 +1,7 @@
 <?php
 
 // include('conn.php');
-include('connServer.php')
+include('connServer.php');
 
 
 $sql = "SELECT * FROM PRODUCT";
