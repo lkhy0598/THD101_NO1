@@ -38,8 +38,8 @@ function doAddMember(){
 
     $.ajax({
         method:"POST",
-        url:"http://localhost/THD101_NO1/php/back_add_member_pet.php",
-        // url:"../php/back_add_member_pet.php",
+        // url:"http://localhost/THD101_NO1/php/back_add_member_pet.php",
+        url:"../php/back_add_member_pet.php",
         data:formData,
 
         dataType:"text",
@@ -105,8 +105,8 @@ function doAddPet(){
 
     $.ajax({
         method:"POST",
-        url:"http://localhost/THD101_NO1/php/back_add_pet.php",
-        // url:"../php/back_add_pet.php",
+        // url:"http://localhost/THD101_NO1/php/back_add_pet.php",
+        url:"../php/back_add_pet.php",
         data:formData,
         dataType:"text",
         // 告訴jQuery不要去處理發送的資料
@@ -139,9 +139,8 @@ function dosearch(){
     console.log(phone);
     $.ajax({            
         method: "POST",
-        // url: "http://localhost/THD101_project/php/back_search_member.php",
-        url: "http://localhost/THD101_NO1/php/back_search_member.php",
-        // url:"../php/back_search_member.php",
+        // url: "http://localhost/THD101_NO1/php/back_search_member.php",
+        url:"../php/back_search_member.php",
         data:{
             phone: phone, 
             name: name
@@ -159,8 +158,6 @@ function dosearch(){
                     "<li>" + row.PHONENO + "</li>" +
                     "<li>" + row.EMAIL + "</li>" +
                     "<li><i class='bi bi-pencil RE_MEMBER_PROFILE' onclick='doReviseMember(\"" + row.PHONENO + "\")' ></i></li>"
-                    // "<li>" + "<i class='bi bi-x-lg DEL_MEMBER_BTN' onclick='doDelMember(\"" + row.MEMBER_ID + "\")'></i></a></li>" +
-                    // "<li>" + "<i class='bi bi-calendar-plus RESERVE_BTN' onclick='doReserve(\"" + row.PHONENO + "\")'>" + "</i>" + "</li>" 
                     + "</ul>"
                 );
             });
@@ -183,8 +180,8 @@ function Petsearch(){
     $.ajax({            
         method: "POST",
         // url: "http://localhost/THD101_project/php/back_pet_search_member.php",
-        url: "http://localhost/THD101_NO1/php/back_pet_search_member.php",
-        // url:"../php/back_pet_search_member.php",
+        // url: "http://localhost/THD101_NO1/php/back_pet_search_member.php",
+        url:"../php/back_pet_search_member.php",
         data:{
             phone: phone, 
             type: type
@@ -199,7 +196,6 @@ function Petsearch(){
             $.each(response, function(index, row) {
                 let TITLE = row.APPOINTMENT_TYPE_TITLE  !== null ? row.APPOINTMENT_TYPE_TITLE : '';
                 $("#pet_result").append(
-
                     "<ul class='PET_PROFILE_CONTENT BACK_TABLE_CONTENT'>" + 
                     "<li>" + row.PHONENO +"</li>" +
                     "<li>" + row.PET_NAME + "</li>" +
@@ -211,9 +207,9 @@ function Petsearch(){
                 );
             });
 
-            if(response===1){
-                alert('lalala');
-            }
+            // if(response===1){
+            //     alert('lalala');
+            // }
         },
         error: function(exception) {
             alert("發生錯誤: " + exception.status);
@@ -228,8 +224,8 @@ function doReviseMember(phone_revise){
     // console.log(phone_revise);
     $.ajax({
         method: "GET",
-        url: "http://localhost/THD101_NO1/php/back_modify_member.php",
-        // url:"../php/back_modify_member.php",
+        // url: "http://localhost/THD101_NO1/php/back_modify_member.php",
+        url:"../php/back_modify_member.php",
         data: {
             phone_revise: phone_revise
         },
@@ -257,8 +253,8 @@ function doRevisePet(owner_phone){
     console.log(owner_phone);
     $.ajax({
         method: "GET",
-        url: "http://localhost/THD101_NO1/php/back_modify_pet.php",
-        // url:"../php/back_modify_pet.php",
+        // url: "http://localhost/THD101_NO1/php/back_modify_pet.php",
+        url:"../php/back_modify_pet.php",
         data: {
             owner_phone: owner_phone
         },
@@ -323,8 +319,8 @@ function doUpdateMember(){
 
     $.ajax({
         method:"POST",
-        url:"http://localhost/THD101_NO1/php/back_update_member.php",
-        // url:"../php/back_update_member.php",
+        // url:"http://localhost/THD101_NO1/php/back_update_member.php",
+        url:"../php/back_update_member.php",
         data:formData,
         // dataType:"json",
         // 告訴jQuery不要去處理發送的資料
@@ -382,8 +378,8 @@ function doUpdatePet(){
 
     $.ajax({
         method:"POST",
-        url:"http://localhost/THD101_NO1/php/back_update_pet.php",
-        // url:"../php/back_update_pet.php",
+        // url:"http://localhost/THD101_NO1/php/back_update_pet.php",
+        url:"../php/back_update_pet.php",
         data:formData,
         // dataType:"json",
         // 告訴jQuery不要去處理發送的資料
@@ -425,8 +421,8 @@ function doReserve(reserve_phone){
 
     $.ajax({
         method: "GET",
-        url: "http://localhost/THD101_NO1/php/back_reserve_get.php",
-        // url:"../php/back_reserve_get.php",
+        // url: "http://localhost/THD101_NO1/php/back_reserve_get.php",
+        url:"../php/back_reserve_get.php",
         data: {
             reserve_phone: reserve_phone
         },
@@ -518,6 +514,7 @@ function doAddReserve(){
     formData.append('reserve_vaccines', reserve_vaccines);
     formData.append('reserve_member_id', reserve_member_id);
     formData.append('reserve_pet_id', reserve_pet_id);
+    formData.append('reserve_symptom_type', reserve_symptom_type);
 
     console.log(reserve_type);
     console.log(reserve_doctor);
@@ -534,8 +531,8 @@ function doAddReserve(){
 
     $.ajax({
         method:"POST",
-        url:"http://localhost/THD101_NO1/php/back_add_reserve.php",
-        // url:"../php/back_add_reserve.php",
+        // url:"http://localhost/THD101_NO1/php/back_add_reserve.php",
+        url:"../php/back_add_reserve.php",
         data:formData,
         // dataType:"json",
         // 告訴jQuery不要去處理發送的資料
