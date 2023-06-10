@@ -142,8 +142,9 @@
         width: 99%;
         height: 50px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        // flex-direction: column;
+        justify-content: left;
+        align-items: center;
         padding-left: 10px;
         font-size: 20px;
     }
