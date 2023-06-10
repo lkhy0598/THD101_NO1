@@ -16,9 +16,8 @@ const app = Vue.createApp({
     methods: {
         fetchProducts() {
             $.ajax({
-                // url: 'http://tibamef2e.com/thd101/g1/php/shopping.php',
-                url: 'http://localhost/THD101_NO1/php/shopping.php',
-                // url: '../php/shopping.php',
+                url: '../php/shopping.php',
+                // url: 'http://localhost/THD101_NO1/php/shopping.php',
                 type: 'GET',
                 dataType: 'json',
                 success: response => {
@@ -80,7 +79,7 @@ const app = Vue.createApp({
         },
         addToCart(item) {
             const purchaseq = parseInt($(".ITEMCOUNT_BTN-BODY").val());
-        
+
             const newItem = {
                 PRODUCT_ID: item.PRODUCT_ID,
                 PRODUCT_TITLE: item.PRODUCT_TITLE,
@@ -90,11 +89,11 @@ const app = Vue.createApp({
                 PRODUCT_CONTENT: item.PRODUCT_CONTENT,
                 quantity: this.quantity
             };
-        
+
             const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
             const existingItemIndex = cartItems.findIndex(cartItem => cartItem.PRODUCT_ID === item.PRODUCT_ID);
             let showAlert = true; // 用于跟踪是否已经弹出过警告信息
-        
+
             if (existingItemIndex !== -1) {
                 const existingItem = cartItems[existingItemIndex];
                 const totalQuantity = existingItem.quantity + newItem.quantity;
@@ -108,9 +107,9 @@ const app = Vue.createApp({
             } else {
                 cartItems.push(newItem);
             }
-        
+
             localStorage.setItem('cartItems', JSON.stringify(cartItems));
-        
+
             if (showAlert) {
                 alert('商品已成功加入購物車');
             }

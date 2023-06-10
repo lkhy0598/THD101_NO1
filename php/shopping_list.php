@@ -1,6 +1,7 @@
 <?php
 
-include('conn.php');
+// include('conn.php');
+include('connServer.php')
 
 
 $productId = $_GET['id'];

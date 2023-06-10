@@ -24,7 +24,8 @@ const app = Vue.createApp({
 
 // ===========================================================
     $.ajax({
-        url: 'http://localhost/THD101_NO1/php/checksession.php',
+        url: '../php/checksession.php',
+        // url: 'http://localhost/THD101_NO1/php/checksession.php',
         type: 'POST',
         dataType: 'text',
         success: response => {
@@ -40,7 +41,8 @@ const app = Vue.createApp({
             const member_id = response.trim(); // 去除字符串两端的空格并获取member_id值
 
                 $.ajax({
-                    url: 'http://localhost/THD101_NO1/php/cartmember_voucher.php',
+                    url: '../php/cartmember_voucher.php',
+                    // url: 'http://localhost/THD101_NO1/php/cartmember_voucher.php',
                     type: 'POST',
                     data: { member_id: member_id },
                     dataType: 'json',
@@ -67,7 +69,8 @@ const app = Vue.createApp({
         searchProducts() {
             const productIds = this.shoppingCartItems.map(item => item.PRODUCT_ID);
             $.ajax({
-                url: 'http://localhost/THD101_NO1/php/shopping_cart.php',
+                url: '../php/shopping_cart.php',
+                // url: 'http://localhost/THD101_NO1/php/shopping_cart.php',
                 type: 'GET',
                 dataType: 'json',
                 data: {
