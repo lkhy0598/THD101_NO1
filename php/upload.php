@@ -11,7 +11,7 @@ function getMemberPath($memberID) {
    
    // $filePath = "/THD101_NO1/img/member/" . $memberID ."/"; //本地
    // $filePath = " https://tibamef2e.com/thd101/g1/dist/img/member/" . $memberID ."/"; //server
-   $filePath = " /thd101/g1/dist/img/member/" . $memberID ."/"; //server
+   $filePath = "./img/member/" . $memberID ."/"; //server
 
    // $fullPath = $_SERVER["DOCUMENT_ROOT"] . "/THD101_NO1/dist/img/member/" . $memberID ."/";
 
@@ -34,7 +34,7 @@ function getPetPath($memberID, $petID){
    //Apache根目錄之下的檔案存放路徑
    // $filePath = "/THD101_NO1/img/member/". $memberID ."/". $petID ."/";
    // $filePath = " https://tibamef2e.com/thd101/g1/dist/img/member/" . $memberID ."/".$petID ."/";
-   $filePath = " ../dist/img/member/" . $memberID ."/".$petID ."/";
+   $filePath = " ./img/member/" . $memberID ."/".$petID ."/";
    
    $fullPath = $ServerRoot . $filePath;
 
@@ -49,7 +49,7 @@ function getMessagePath($news_type) {
    $ServerRoot = $_SERVER["DOCUMENT_ROOT"];
    // $filePath = "/THD101_NO1/img/information/" . $news_type ."/";
    // $filePath = "https://tibamef2e.com/thd101/g1/dist/img/information/" . $news_type . "/"; //server
-   $filePath = "../dist/img/information/" . $news_type . "/"; //server
+   $filePath = "./img/information/" . $news_type . "/"; //server
    $fullPath = $ServerRoot . $filePath;
 
    // 檢查目錄是否存在，如果不存在，則建立目錄
@@ -65,7 +65,7 @@ function getCommodityPath($commodity_type , $commodity_folder) {
    $ServerRoot = $_SERVER["DOCUMENT_ROOT"];
    // $filePath = "/THD101_NO1/img/shopping_list/" . $commodity_type . "/" . $commodity_folder . "/";
    // $filePath = "https://tibamef2e.com/thd101/g1/dist/img/shopping_list/" . $commodity_type . "/" . $commodity_folder . "/"; //server
-   $filePath = "../dist/img/shopping_list/" . $commodity_type . "/" . $commodity_folder . "/"; //server
+   $filePath = "./img/shopping_list/" . $commodity_type . "/" . $commodity_folder . "/"; //server
    $fullPath = $ServerRoot . $filePath;
 
    // 檢查目錄是否存在，如果不存在，則建立目錄
