@@ -150,13 +150,13 @@
                     <!-- 信箱：只能英文和數字和'@'和'.' -->
                     <div class="INPUT_GROUP">
                         <i class="bi bi-envelope"></i>
-                        <input type="email" name="email" autocomplete="email" placeholder="請輸入電子信箱"
+                        <input type="email" name="email" class="FORGET_EMAIL" autocomplete="email" placeholder="請輸入電子信箱"
                             onkeyup="value=value.replace(/[^a-zA-Z0-9@.]/g, '')" />
                     </div>
 
                     <div class="INPUT_GROUP">
                         <i class="bi bi-key"></i>
-                        <input type="number" name="verifyNum" class="VERIFYINPUT" placeholder="請輸入驗證碼" />
+                        <input type="number" name="verifyNum" class="VERIFYINPUT FORGET_VERIFY" placeholder="請輸入驗證碼" />
                         <button class="VERIFBTN BTN">
                             發送驗證碼
                         </button>
@@ -171,7 +171,7 @@
                 </form>
                 <div class="PASS_SEND_BOX">
                     <p>＊送出後會直接跳轉到修改密碼頁</p>
-                    <div class="TOPASS_BTN BTN">送出</div>
+                    <div class="TOPASS_BTN BTN" onclick="forgetPassSub()" >送出</div>
                 </div>
             </div>
             <!-- 修改密碼 -->
@@ -181,7 +181,7 @@
                     <!-- 密碼：只能英文和數字/長度限制30 -->
                     <div class="INPUT_GROUP">
                         <i class="bi bi-lock-fill"></i>
-                        <input type="password" name="password" class="PASSWORD" placeholder="請輸入密碼"
+                        <input type="password" name="password" class="PASSWORD CHANGE_PASSWORD" placeholder="請輸入密碼"
                             onkeyup="value=value.replace(/[^a-zA-Z0-9]/g, '')" maxlength="30" />
                         <div class="SHOWPASS">
                             <i class="bi bi-eye-fill"></i>
@@ -189,7 +189,7 @@
                     </div>
                     <div class="INPUT_GROUP">
                         <i class="bi bi-lock"></i>
-                        <input type="password" name="password" class="PASSWORD" placeholder="請再確認一次密碼"
+                        <input type="password" name="password" class="PASSWORD CHANGE_VFPASSWORD" placeholder="請再確認一次密碼"
                             onkeyup="value=value.replace(/[^a-zA-Z0-9]/g, '')" maxlength="30" />
                         <div class="SHOWPASS">
                             <i class="bi bi-eye-fill"></i>
@@ -197,7 +197,7 @@
                     </div>
                 </form>
                 <div class="PASS_SEND_BOX">
-                    <div class="PASS_SUB BTN">修改密碼</div>
+                    <div class="PASS_SUB BTN" onclick="changePasstSub()">修改密碼</div>
                 </div>
             </div>
             <!-- 修改完成畫面 -->

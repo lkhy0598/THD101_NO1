@@ -46,13 +46,12 @@ if ($MemberID != "" && $MemberName != "") {
 
        //登入成功        
        echo "登入成功！\n";
-       echo "將跳轉到會員中心\n";
 
-       if (isset($_SESSION["MemberID"])) {
-              echo "Session 已正確建立，MemberID 為：" . $_SESSION["MemberID"];
-          } else {
-              echo "Session 尚未建立";
-          }
+       // if (isset($_SESSION["MemberID"])) {
+       //        echo "Session 已正確建立，MemberID 為：" . $_SESSION["MemberID"];
+       //    } else {
+       //        echo "Session 尚未建立";
+       //    }
        
 } else {
        //登入失敗
