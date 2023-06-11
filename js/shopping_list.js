@@ -11,7 +11,7 @@ const app = Vue.createApp({
                 PRODUCT_ID: '',
             },
             quantity: 1, // 新增 quantity 屬性並設置初始值為 1
-            count: 1,
+            count: ref(1), 
         };
     },
     created() {
@@ -88,12 +88,12 @@ const app = Vue.createApp({
         },
         decreaseCount() {
             if (this.count > 1) {
-                this.count--;
+                this.count.value--;
             }
         },
         increaseCount() {
             if (this.count < this.shoppingItems.INVENTORY) {
-                this.count++;
+                this.count.value++;
             }
         },
         validateInput() {
