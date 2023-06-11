@@ -39,6 +39,9 @@ if(isset($_FILES["member_pic_revise"])){
          //修改後的商品圖片名稱
          $picture_name = $fileName;
 
+         echo $fileName;
+         echo $filePath;
+
       }else{
 
          $message = "拷貝/移動上傳圖片失敗";
