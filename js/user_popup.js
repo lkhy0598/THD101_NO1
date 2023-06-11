@@ -3,14 +3,17 @@
 
 // ====== 密碼關閉隱藏功能 ======
 $(".SHOWPASS").click(function () {
+    console.log('aaa')
     var passwordField = $(this).siblings(".PASSWORD");
     var icon = $(this).find("i");
     var fieldType = passwordField.attr("type");
 
     if (fieldType === "password") {
+        console.log('bbb')
         passwordField.attr("type", "text");
         icon.removeClass("bi-eye-fill").addClass("bi-eye-slash-fill");
     } else {
+        console.log('ccc')
         passwordField.attr("type", "password");
         icon.removeClass("bi-eye-slash-fill").addClass("bi-eye-fill");
     }
@@ -288,8 +291,8 @@ function loginSub() {
         // url: "http://localhost/THD101_NO1/php/login.php",
         data: {
             USERNAME: lusn,
-            EMAIL: lpsw,
-            PASSWORD: leml
+            EMAIL: leml,
+            PASSWORD: lpsw
         },
         dataType: "text",
         success: function (response) {
