@@ -30,8 +30,8 @@ if ($new_message_classification === "最新消息") {
 
 $full_file_path = getMessagePath($news_type) . $fileName;
 
-// $fileToBase = "./img/information/" . $news_type . "/" . $_FILES["message_pic"]["name"];
-$fileToBase = "../dist/img/information/" . $news_type . "/" . $_FILES["message_pic"]["name"];
+$fileToBase = "./img/information/" . $news_type . "/" . $_FILES["message_pic"]["name"];
+// $fileToBase = "../dist/img/information/" . $news_type . "/" . $_FILES["message_pic"]["name"];
 
 if (move_uploaded_file($filePath_Temp, $full_file_path)) {
 
