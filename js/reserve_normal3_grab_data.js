@@ -40,7 +40,7 @@ document.getElementById('other_illness_sign').textContent = reserveNormal2Data.o
 
 //導向確認完成一般掛號預約
 function Comfirm() {
-    window.location.href = "reserve_normal_complete.html";
+    window.location.href = "./reserve_normal_complete.html";
 }
 
 function NormalReserveSub() {
@@ -75,7 +75,7 @@ function NormalReserveSub() {
     $.ajax({
         method: "POST",
 
-        url: "./php/submit_reserve.php",
+        url: "../php/submit_reserve.php",
         data: {
             // php:js
             RESERVE_TYPE: reserveType,
@@ -95,7 +95,6 @@ function NormalReserveSub() {
         success: function (response) {
             alert('預約成功！');
             alert(response);
-
         },
         error: function (exception) {
             alert("ajax發生錯誤" + exception.status);

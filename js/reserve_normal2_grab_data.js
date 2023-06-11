@@ -94,6 +94,6 @@ function NextStep() {
 
     if (ownerName != "" && phoneno != "" && petName != "" && petSpecies != "" && petAge != "" && vaccinationOrNot != "") {
         console.log(reserveNormal2Data);
-        window.location.href = "reserve_normal3.html";
+        window.location.href = "./reserve_normal3.html";
     }
 }
