@@ -67,7 +67,7 @@ function CommunicationReserveSub() {
     $.ajax({
         method: "POST",
 
-        url: "./php/submit_reserve.php",
+        url: "../php/submit_reserve.php",
         data: {
             // php:js
             RESERVE_TYPE: reserveType,
