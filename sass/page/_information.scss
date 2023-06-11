@@ -263,7 +263,8 @@
                     // overflow: hidden;
 
                     @include m() {
-                        height: 140px;
+                        width: auto;
+                        
                     }
 
                     // 左邊區塊
@@ -275,7 +276,8 @@
                         width: 38%;
 
                         @include m() {
-                            width: 100%;
+                            width: auto;
+                            
 
                         }
                     }
@@ -303,7 +305,7 @@
 
                         @include m() {
                             padding: 20px;
-                            height: 100%;
+                            height: auto;
                         }
 
                         .TITLE_DATE_BOX {
@@ -405,6 +407,8 @@
     display: block;
     width: 50px;
     margin: 0 10px;
+    height: 30px;
+
     color: $blueblack;
     cursor: pointer;
     text-align: center;
@@ -415,7 +419,7 @@
 }
 
 .LEFT {
-    position: unset;
+    // position: unset;
     transform: rotate(180deg);
     margin-right: 20px;
     padding-right: 25%;
@@ -423,7 +427,7 @@
 }
 
 .RIGHT {
-    position: unset;
+    // position: unset;
     margin-left: 20px;
     padding-left: 25%;
 

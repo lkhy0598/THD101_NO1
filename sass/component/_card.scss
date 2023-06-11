@@ -222,7 +222,7 @@
 
 
 .CARD_BODY{
-    width: auto;
+    width: 90vw;
     max-width: 90vw;
     height: 100px;
     margin: 0 auto;
@@ -233,14 +233,17 @@
 }
 
     
-
+.CARD_LEFT > img{
+    width: 22vw;
+   
+}
 .CARD_RIGHT{
     position: relative;
     background-color: $white;
-    width: 100%;
+    width: 80%;
     height: auto;
     border-radius: 0 10px 10px 0;
-    padding:0 20px 0;
+    padding:0 20px 0 10px;
     
 }
 

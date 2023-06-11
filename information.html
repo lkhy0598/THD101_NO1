@@ -11,7 +11,7 @@
     <title>資訊導覽 INFORMATION - 波波動物醫院</title>
 </head>
 
-<body class="INFORMATION" onload="showMember()" id="INFORMATION_1">
+<body class="INFORMATION" onload="showMember()" id="INFORMATION">
     <!-- =============== 共用元件 =============== -->
 
     <!-- ===== 會員彈窗 ===== -->
@@ -54,7 +54,7 @@
 
     <!-- =============== 網頁內容 =============== -->
     <!-- header下方區塊的背景 -->
-    <section class="BACKGROUND">
+    <section class="BACKGROUND" id="BACKGROUND">
 
         <!-- 背景 -->
         <img class="BG" src="./img/BG.jpg" alt="">
@@ -98,9 +98,9 @@
                 <div class="INFORMATION_NAV_WBG"></div>
             </ul>
 
-            <div class="INFORMATION_BOX" id="INFORMATION_BOX">
+            <div class="INFORMATION_BOX" id="INFORMATION_BOX"  ref="itemList">
                 <!-- 最新消息 -->
-                <ul id="INFORMATION_NEWS" class="INFORMATION_CARD" ref="itemList">
+                <ul id="INFORMATION_NEWS" class="INFORMATION_CARD">
 
                     <a :href="'information_content.html?id=' + infor.NEWS_ID" class="INFORMATION_CARD_A" v-for="infor in filteredNewsItems"  :key="infor.NEWS_ID">
 
@@ -171,7 +171,7 @@
             </div>
         </section>
         <!-- =======================================頁碼========================================== -->
-        <section class="PGAENUMBER WRAPPER">
+        <!-- <section class="PGAENUMBER WRAPPER">
             <span>
                 <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN LEFT">
             </span>
@@ -183,9 +183,9 @@
             <span>
                 <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN RIGHT">
             </span>
-        </section>
+        </section> -->
 
-        <!-- <section class="PGAENUMBER WRAPPER" v-if="displayedItems.length > 0">
+        <section class="PGAENUMBER WRAPPER" v-if="informationItems.length > 0">
             <span>
                 <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN LEFT" @click="goToPreviousPage">
             </span>
@@ -193,7 +193,7 @@
             <span>
                 <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN RIGHT" @click="goToNextPage">
             </span>
-        </section> -->
+        </section>
     </section>
 
     <!-- ===== TOP按鈕 ===== -->

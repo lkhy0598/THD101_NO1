@@ -1,6 +1,7 @@
 <?php
 
-include('conn.php');
+include("connServer.php");
+// include('conn.php');
 
 //---------------------------------------------------
 
