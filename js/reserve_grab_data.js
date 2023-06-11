@@ -1,5 +1,7 @@
 var reserveData = {}; // 定義一個空的物件用於存儲預約數據
 
+
+
 //在選擇預約類型為寵物溝通時指定醫師選項變成只有溝通師姓名，反之變回獸醫師姓名
 function changeReserveType() {
   var reserveType = document.getElementById("reserve_type").value;
@@ -131,7 +133,7 @@ function logInCheck() {
       if (response === 'notlogin') {
         // 使用者未登入，提醒他要登入才能進行預約
         alert("進行預約前請先登入會員！");
-      } 
+      }
     },
     error: error => {
       // 處理錯誤

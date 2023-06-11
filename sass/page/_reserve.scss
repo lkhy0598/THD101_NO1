@@ -89,6 +89,17 @@
         width: 70%;
     }
 
+    #calendar a:hover {
+        background-color: transparent;
+    }
+
+    //calendar每日格子中文字
+    #calendar .event-title {
+        margin: auto;
+        letter-spacing: 3.5px;
+        font-size: 2rem;
+    }
+
     .CALENDAR_INFO {
         padding-left: 10px;
     }
@@ -251,6 +262,13 @@
                 font-size: 12px;
             }
 
+        }
+
+        //calendar每日格子中文字
+        #calendar .event-title {
+            margin: auto;
+            letter-spacing: 1px;
+            font-size: 1rem;
         }
 
         .CALENDAR_INFO {
