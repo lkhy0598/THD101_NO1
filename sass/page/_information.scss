@@ -1,5 +1,5 @@
 .INFORMATION {
-
+ 
     //歡迎BANNER 
     .CAROUSEL {
 
@@ -241,72 +241,10 @@
         // 文章圖片
 
         // 消息圖片
-        #INFORMATION_NEWS a:nth-child(1) .NEWSIMG {
-            background-image: url(../img/information/NEWS_IMG_1.jpg)
-        }
-
-        #INFORMATION_NEWS a:nth-child(2) .NEWSIMG {
-            background-image: url(../img/information/NEWS_IMG_2.jpg)
-        }
-
-        #INFORMATION_NEWS a:nth-child(3) .NEWSIMG {
-            background-image: url(../img/information/NEWS_IMG_3.jpg)
-        }
-
-        #INFORMATION_NEWS a:nth-child(4) .NEWSIMG {
-            background-image: url(../img/information/NEWS_IMG_4.jpg)
-        }
-
-        #INFORMATION_NEWS a:nth-child(5) .NEWSIMG {
-            background-image: url(../img/information/NEWS_IMG_5.jpg)
-        }
-
-        // 衛教圖片
-        #INFORMATION_HEALTH a:nth-child(1) .HEALTHIMG {
-            background-image: url(../img/information/HEALTH_IMG_1.jpg)
-        }
-
-        #INFORMATION_HEALTH a:nth-child(2) .HEALTHIMG {
-            background-image: url(../img/information/HEALTH_IMG_2.jpg)
-        }
-
-        #INFORMATION_HEALTH a:nth-child(3) .HEALTHIMG {
-            background-image: url(../img/information/HEALTH_IMG_3.jpg)
-        }
-
-        #INFORMATION_HEALTH a:nth-child(4) .HEALTHIMG {
-            background-image: url(../img/information/HEALTH_IMG_4.jpg)
-        }
-
-        #INFORMATION_HEALTH a:nth-child(5) .HEALTHIMG {
-            background-image: url(../img/information/HEALTH_IMG_5.JPG)
-        }
-
-        // 連結圖片
-        #INFORMATION_LINKS a:nth-child(1) .LINKIMG {
-            background-image: url(../img/information/LINK_IMG_1.jpg)
-        }
-
-        #INFORMATION_LINKS a:nth-child(2) .LINKIMG {
-            background-image: url(../img/information/LINK_IMG_2.jpg)
-        }
-
-        #INFORMATION_LINKS a:nth-child(3) .LINKIMG {
-            background-image: url(../img/information/LINK_IMG_3.JPG)
-        }
-
-        #INFORMATION_LINKS a:nth-child(4) .LINKIMG {
-            background-image: url(../img/information/LINK_IMG_4.jpg)
-        }
-
-        #INFORMATION_LINKS a:nth-child(5) .LINKIMG {
-            background-image: url(../img/information/LINK_IMG_5.jpg)
-        }
-
-        .INFORMATION_CARD {
+       
+        .INFORMATION_CARD{
             display: none;
-
-
+        }
 
             a {
                 text-decoration: none;
@@ -316,13 +254,13 @@
 
 
                 .CARD_BODY {
-                    width: 100%;
+                    width: 90%;
                     max-width: none;
-                    margin: 0;
-                    padding: 0;
-                    margin-bottom: 30px;
-                    box-sizing: border-box;
-                    overflow: hidden;
+                    // // margin: 0;
+                    // // padding: 0;
+                    // margin-bottom: 30px;
+                    // box-sizing: border-box;
+                    // overflow: hidden;
 
                     @include m() {
                         height: 140px;
@@ -330,14 +268,11 @@
 
                     // 左邊區塊
                     .CARD_LEFT {
-                        display: flex;
-                        flex-grow: 1;
-                        box-sizing: border-box;
-                        overflow: hidden;
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        width: 30%;
+                        // display: flex;
+                        // flex-grow: 1;
+                        // box-sizing: border-box;
+                     
+                        width: 38%;
 
                         @include m() {
                             width: 100%;
@@ -436,7 +371,7 @@
 
         }
     }
-}
+
 
 // 分頁器
 .PGAENUMBER {
@@ -492,4 +427,11 @@
     margin-left: 20px;
     padding-left: 25%;
 
+    
+
 }
+
+.current-page {
+    text-decoration: underline;
+}
+

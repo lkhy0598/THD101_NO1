@@ -51,7 +51,7 @@
         <!-- ===== 麵包屑 ===== -->
         <section class="MEMCENTOP">
             <section class="BREAD WRAPPER">
-                <a href="/index.html">首頁</a>
+                <a href="/homepage.html">首頁</a>
                 /
                 <a href="/information.html">資訊導覽</a>
                 /
@@ -62,9 +62,10 @@
         <!-- 網頁 -->
         <section class="WRAPPER">
             <div class="INFOMATION_CONTENT_BOX">
-                <p class="INFOMATION_CONTENT_DATE">2022-10-28</p>
+                <p class="INFOMATION_CONTENT_DATE">{{ NewsItems.DATE }}</p>
                 <p class="INFOMATION_CONTENT_TITLE">寵物健檢的重要性</p>
-                <img class="INFORMATION_IMG" src="./img/information/content/INFORMATION_HEALTHCHECK.jpg" alt="">
+                <img class="INFORMATION_IMG" :src="NewsItems.IMG_SOURCE_ARRAY[0]" alt="">
+ 
                 <p class="INFOMATION_CONTENT_TEXT">
                     身為毛孩家長的你知道嗎？據家中犬貓死因統計，繼癌症之後，狗狗的心血管疾病，貓咪的慢性腎病為前三名常見致死疾病。毛小孩不會說話，所以當他們不舒服時，我們無從得知，唯有「定期的健康檢查」才能早點發現潛在疾病或慢性病的早期變化，讓醫療即時開始並延緩疾病的惡化。
                 </p>
@@ -106,12 +107,14 @@
     @@include('./layout/footer.html')
     <!-- footer end -->
 
+    <script src="./js/vendors/vue/vue.global.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/top_btn.js"></script>
     <script src="./js/nav.js"></script>
     <script src="./js/user_popup.js"></script>
     <script src="./js/toggle.js"></script>
     <script src="./js/appointment.js"></script>
+    <script src="./js/information_content.js"></script>
 
 </body>
 

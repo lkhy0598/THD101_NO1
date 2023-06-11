@@ -498,7 +498,7 @@
 .INFORMATION_CARD{
     padding-top: 50px;
     position: relative;
-
+    
 }
 
 .DOT3{
@@ -525,14 +525,7 @@
 
 }
 
-.INFORMATION_CARD_A{
-    color: $blueblack;
-    transition: all 0.3s ease;
-    &:hover{
-        filter: drop-shadow(0px 0px 5px $blueblack);
-        transform: scale(1.05);
-    }
-}
+
 
 
 .BTN_WRAAPER{
