@@ -2,6 +2,7 @@
 
 // include('conn.php');
 include('connServer.php');
+
 // header("Access-Control-Allow-Origin: http://localhost:3000");
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
@@ -60,7 +61,7 @@ if ($message_number !== '' || $message_classification !== '' || $message_status 
  
    $data = $statement->fetchAll();
  
-   header('Content-Type: application/json');
+  
  
    echo json_encode($data);
    
