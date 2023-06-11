@@ -11,7 +11,7 @@
     <title>資訊導覽 INFORMATION - 波波動物醫院</title>
 </head>
 
-<body class="INFORMATION" onload="showMember()">
+<body class="INFORMATION" onload="showMember()" id="INFORMATION_1">
     <!-- =============== 共用元件 =============== -->
 
     <!-- ===== 會員彈窗 ===== -->
@@ -98,180 +98,49 @@
                 <div class="INFORMATION_NAV_WBG"></div>
             </ul>
 
-            <div class="INFORMATION_BOX">
+            <div class="INFORMATION_BOX" id="INFORMATION_BOX">
                 <!-- 最新消息 -->
-                <ul id="INFORMATION_NEWS" class="INFORMATION_CARD">
+                <ul id="INFORMATION_NEWS" class="INFORMATION_CARD" ref="itemList">
 
-                    <a href="./information_content.html">
+                    <a :href="'information_content.html?id=' + infor.NEWS_ID" class="INFORMATION_CARD_A" v-for="infor in filteredNewsItems"  :key="infor.NEWS_ID">
+
                         <li class="CARD_BODY">
                             <div class="CARD_LEFT NEWSIMG">
                                 <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
+                                <img :src="getImagesArray(infor.IMG_SOURCE)[0]" :alt="infor.TITLE">
+
                             </div>
                             <div class="CARD_RIGHT">
                                 <div class="TITLE_DATE_BOX">
-                                    <div class="CARD_TITLE">最新消息</div>
-                                    <div class="CARD_DATE">2023 / 04 / 13</div>
+                                    <div class="CARD_TITLE" v-if="infor.INFOR_TYPE === '最新消息'">{{ infor.INFOR_TYPE }}</div>
+                                    <div class="CARD_DATE">{{ infor.DATE }}</div>
                                 </div>
-                                <h3 class="CARD_CONTENT">COVID-19 毛孩家長就診須知！保護你我不憂慮</h3>
+                                <h3 class="CARD_CONTENT">{{ infor.TITLE }}</h3>
                                 <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
                             </div>
                         </li>
                     </a>
 
-                    <a href="./information_content.html">
-                        <li class="CARD_BODY">
-                            <div class="CARD_LEFT NEWSIMG">
-                                <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
-                            </div>
-                            <div class="CARD_RIGHT">
-                                <div class="TITLE_DATE_BOX">
-                                    <div class="CARD_TITLE">最新消息</div>
-                                    <div class="CARD_DATE">2023 / 04 / 13</div>
-                                </div>
-                                <h3 class="CARD_CONTENT">COVID-19 毛孩家長就診須知！保護你我不憂慮</h3>
-                                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
-                            </div>
-                        </li>
-                    </a>
-
-                    <a href="./information_content.html">
-                        <li class="CARD_BODY">
-                            <div class="CARD_LEFT NEWSIMG">
-                                <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
-                            </div>
-                            <div class="CARD_RIGHT">
-                                <div class="TITLE_DATE_BOX">
-                                    <div class="CARD_TITLE">最新消息</div>
-                                    <div class="CARD_DATE">2023 / 04 / 13</div>
-                                </div>
-                                <h3 class="CARD_CONTENT">COVID-19 毛孩家長就診須知！保護你我不憂慮</h3>
-                                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
-                            </div>
-                        </li>
-                    </a>
-
-                    <a href="./information_content.html">
-                        <li class="CARD_BODY">
-                            <div class="CARD_LEFT NEWSIMG">
-                                <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
-                            </div>
-                            <div class="CARD_RIGHT">
-                                <div class="TITLE_DATE_BOX">
-                                    <div class="CARD_TITLE">最新消息</div>
-                                    <div class="CARD_DATE">2023 / 04 / 13</div>
-                                </div>
-                                <h3 class="CARD_CONTENT">COVID-19 毛孩家長就診須知！保護你我不憂慮</h3>
-                                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
-                            </div>
-                        </li>
-                    </a>
-
-                    <a href="./information_content.html">
-                        <li class="CARD_BODY">
-                            <div class="CARD_LEFT NEWSIMG">
-                                <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
-                            </div>
-                            <div class="CARD_RIGHT">
-                                <div class="TITLE_DATE_BOX">
-                                    <div class="CARD_TITLE">最新消息</div>
-                                    <div class="CARD_DATE">2023 / 04 / 13</div>
-                                </div>
-                                <h3 class="CARD_CONTENT">COVID-19 毛孩家長就診須知！保護你我不憂慮</h3>
-                                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
-                            </div>
-                        </li>
-                    </a>
-
+                   
                 </ul>
                 <!-- 衛教資訊 -->
                 <ul id="INFORMATION_HEALTH" class="INFORMATION_CARD">
 
-                    <a href="./information_content.html">
-                        <li class="CARD_BODY">
-                            <div class="CARD_LEFT HEALTHIMG">
-                                <!-- <img src="img/index/INDEX_CARD2.jpg" alt=""> -->
-                            </div>
-                            <div class="CARD_RIGHT">
-                                <div class="TITLE_DATE_BOX">
-                                    <div class="CARD_TITLE">衛教資訊</div>
-                                    <div class="CARD_DATE">2023 / 04 / 08</div>
-                                </div>
-                                <div class="CARD_CONTENT_LINK_BOX">
-                                    <h3 class="CARD_CONTENT">毛小孩健檢的重要性</h3>
-                                    <i Class="bi bi-arrow-right-circle-fill ALLOW"></i>
-                                </div>
-                            </div>
-                        </li>
-                    </a>
+                    <a :href="'information_content.html?id=' + infor.NEWS_ID" class="INFORMATION_CARD_A" v-for="infor in filteredHealthItems" :key="infor.NEWS_ID">
 
-                    <a href="./information_content.html">
                         <li class="CARD_BODY">
-                            <div class="CARD_LEFT HEALTHIMG">
-                                <!-- <img src="img/index/INDEX_CARD2.jpg" alt=""> -->
-                            </div>
-                            <div class="CARD_RIGHT">
-                                <div class="TITLE_DATE_BOX">
-                                    <div class="CARD_TITLE">衛教資訊</div>
-                                    <div class="CARD_DATE">2023 / 04 / 08</div>
-                                </div>
-                                <div class="CARD_CONTENT_LINK_BOX">
-                                    <h3 class="CARD_CONTENT">毛小孩健檢的重要性</h3>
-                                    <i Class="bi bi-arrow-right-circle-fill ALLOW"></i>
-                                </div>
-                            </div>
-                        </li>
-                    </a>
+                            <div class="CARD_LEFT NEWSIMG">
+                                <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
+                                <img :src="getImagesArray(infor.IMG_SOURCE)[0]" :alt="infor.TITLE">
 
-                    <a href="./information_content.html">
-                        <li class="CARD_BODY">
-                            <div class="CARD_LEFT HEALTHIMG">
-                                <!-- <img src="img/index/INDEX_CARD2.jpg" alt=""> -->
                             </div>
                             <div class="CARD_RIGHT">
                                 <div class="TITLE_DATE_BOX">
-                                    <div class="CARD_TITLE">衛教資訊</div>
-                                    <div class="CARD_DATE">2023 / 04 / 08</div>
+                                    <div class="CARD_TITLE" v-if="infor.INFOR_TYPE === '衛教資訊'">{{ infor.INFOR_TYPE }}</div>
+                                    <div class="CARD_DATE">{{ infor.DATE }}</div>
                                 </div>
-                                <div class="CARD_CONTENT_LINK_BOX">
-                                    <h3 class="CARD_CONTENT">毛小孩健檢的重要性</h3>
-                                    <i Class="bi bi-arrow-right-circle-fill ALLOW"></i>
-                                </div>
-                            </div>
-                        </li>
-                    </a>
-
-                    <a href="./information_content.html">
-                        <li class="CARD_BODY">
-                            <div class="CARD_LEFT HEALTHIMG">
-                                <!-- <img src="img/index/INDEX_CARD2.jpg" alt=""> -->
-                            </div>
-                            <div class="CARD_RIGHT">
-                                <div class="TITLE_DATE_BOX">
-                                    <div class="CARD_TITLE">衛教資訊</div>
-                                    <div class="CARD_DATE">2023 / 04 / 08</div>
-                                </div>
-                                <div class="CARD_CONTENT_LINK_BOX">
-                                    <h3 class="CARD_CONTENT">毛小孩健檢的重要性</h3>
-                                    <i Class="bi bi-arrow-right-circle-fill ALLOW"></i>
-                                </div>
-                            </div>
-                        </li>
-                    </a>
-
-                    <a href="./information_content.html">
-                        <li class="CARD_BODY">
-                            <div class="CARD_LEFT HEALTHIMG">
-                                <!-- <img src="img/index/INDEX_CARD2.jpg" alt=""> -->
-                            </div>
-                            <div class="CARD_RIGHT">
-                                <div class="TITLE_DATE_BOX">
-                                    <div class="CARD_TITLE">衛教資訊</div>
-                                    <div class="CARD_DATE">2023 / 04 / 08</div>
-                                </div>
-                                <div class="CARD_CONTENT_LINK_BOX">
-                                    <h3 class="CARD_CONTENT">毛小孩健檢的重要性</h3>
-                                    <i Class="bi bi-arrow-right-circle-fill ALLOW"></i>
-                                </div>
+                                <h3 class="CARD_CONTENT">{{ infor.TITLE }}</h3>
+                                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
                             </div>
                         </li>
                     </a>
@@ -280,78 +149,20 @@
                 <!-- 相關連結 -->
                 <ul id="INFORMATION_LINKS" class="INFORMATION_CARD">
 
-                    <a href="./information_content.html">
-                        <li class="CARD_BODY">
-                            <div class="CARD_LEFT LINKIMG">
-                                <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
-                            </div>
-                            <div class="CARD_RIGHT">
-                                <div class="TITLE_DATE_BOX">
-                                    <div class="CARD_TITLE">相關連結</div>
-                                    <div class="CARD_DATE">2023 / 04 / 13</div>
-                                </div>
-                                <h3 class="CARD_CONTENT">[推薦]微電影：無家的孩子</h3>
-                                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
-                            </div>
-                        </li>
-                    </a>
+                    <a :href="'information_content.html?id=' + infor.NEWS_ID" class="INFORMATION_CARD_A" v-for="infor in filteredLinkItems" :key="infor.NEWS_ID">
 
-                    <a href="./information_content.html">
                         <li class="CARD_BODY">
-                            <div class="CARD_LEFT LINKIMG">
+                            <div class="CARD_LEFT NEWSIMG">
                                 <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
+                                <img :src="getImagesArray(infor.IMG_SOURCE)[0]" :alt="infor.TITLE">
+
                             </div>
                             <div class="CARD_RIGHT">
                                 <div class="TITLE_DATE_BOX">
-                                    <div class="CARD_TITLE">相關連結</div>
-                                    <div class="CARD_DATE">2023 / 04 / 13</div>
+                                    <div class="CARD_TITLE" v-if="infor.INFOR_TYPE === '相關連結'">{{ infor.INFOR_TYPE }}</div>
+                                    <div class="CARD_DATE">{{ infor.DATE }}</div>
                                 </div>
-                                <h3 class="CARD_CONTENT">[推薦]微電影：無家的孩子</h3>
-                                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
-                            </div>
-                        </li>
-                    </a>
-                    <a href="./information_content.html">
-                        <li class="CARD_BODY">
-                            <div class="CARD_LEFT LINKIMG">
-                                <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
-                            </div>
-                            <div class="CARD_RIGHT">
-                                <div class="TITLE_DATE_BOX">
-                                    <div class="CARD_TITLE">相關連結</div>
-                                    <div class="CARD_DATE">2023 / 04 / 13</div>
-                                </div>
-                                <h3 class="CARD_CONTENT">[推薦]微電影：無家的孩子</h3>
-                                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
-                            </div>
-                        </li>
-                    </a>
-                    <a href="./information_content.html">
-                        <li class="CARD_BODY">
-                            <div class="CARD_LEFT LINKIMG">
-                                <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
-                            </div>
-                            <div class="CARD_RIGHT">
-                                <div class="TITLE_DATE_BOX">
-                                    <div class="CARD_TITLE">相關連結</div>
-                                    <div class="CARD_DATE">2023 / 04 / 13</div>
-                                </div>
-                                <h3 class="CARD_CONTENT">[推薦]微電影：無家的孩子</h3>
-                                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
-                            </div>
-                        </li>
-                    </a>
-                    <a href="./information_content.html">
-                        <li class="CARD_BODY">
-                            <div class="CARD_LEFT LINKIMG">
-                                <!-- <img src="img/index/INDEX_CARD1.jpg" alt=""> -->
-                            </div>
-                            <div class="CARD_RIGHT">
-                                <div class="TITLE_DATE_BOX">
-                                    <div class="CARD_TITLE">相關連結</div>
-                                    <div class="CARD_DATE">2023 / 04 / 13</div>
-                                </div>
-                                <h3 class="CARD_CONTENT">[推薦]微電影：無家的孩子</h3>
+                                <h3 class="CARD_CONTENT">{{ infor.TITLE }}</h3>
                                 <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
                             </div>
                         </li>
@@ -373,6 +184,16 @@
                 <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN RIGHT">
             </span>
         </section>
+
+        <!-- <section class="PGAENUMBER WRAPPER" v-if="displayedItems.length > 0">
+            <span>
+                <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN LEFT" @click="goToPreviousPage">
+            </span>
+            <p v-for="page in totalPages" :key="page" @click="goToPage(page)" :class="{ 'current-page': currentPage === page }">{{ page }}</p>
+            <span>
+                <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN RIGHT" @click="goToNextPage">
+            </span>
+        </section> -->
     </section>
 
     <!-- ===== TOP按鈕 ===== -->
@@ -384,7 +205,8 @@
     <!-- footer -->
     @@include('./layout/footer.html')
     <!-- footer end -->
-
+    
+    <script src="./js/vendors/vue/vue.global.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/infor.js"></script>
     <script src="./js/top_btn.js"></script>
