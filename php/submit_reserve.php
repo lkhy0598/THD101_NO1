@@ -1,7 +1,7 @@
 <?php
 
-include ('conn.php');
-// include ('connServer.php');
+// include ('conn.php');
+include ('connServer.php');
 
 $reserveType=$_POST['RESERVE_TYPE'];
 $doctorChoices=$_POST['DOCTOR_CHOICES'];
