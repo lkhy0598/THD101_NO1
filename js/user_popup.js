@@ -303,6 +303,7 @@ function loginSub() {
 
                 console.log(response)
                 alert(response);
+                $('.POPUP_CLOSEBTN').trigger('click');
                 window.location.href = window.location.href;
             } else {
                 console.log(response)
@@ -337,22 +338,22 @@ function logoutSub() {
 function forgetPassSub() {
     let feml = $('.FORGET_EMAIL').val();
     let fvrf = $('.FORGET_VERIFY').val();
-    console.log(feml, fvrf);
-    $.ajax({
-        method: "POST",
-        url: '../php/forgetPass.php',
-        data: {
-            EMAIL: feml
-        },
-        dataType: "text",
-        success: function (response) {
-            if (feml == '' && fvrf == '') {
-                alert('請輸入信箱和驗證碼');
-            } else if (feml == '') {
-                alert('請輸入信箱');
-            } else if (fvrf == '') {
-                alert('請輸入驗證碼');
-            } else if (feml !== '' && fvrf !== '') {
+    // console.log(feml, fvrf);
+    if (feml == '' && fvrf == '') {
+        alert('請輸入信箱和驗證碼');
+    } else if (feml == '') {
+        alert('請輸入信箱');
+    } else if (fvrf == '') {
+        alert('請輸入驗證碼');
+    } else if (feml !== '' && fvrf !== '') {
+        $.ajax({
+            method: "POST",
+            url: '../php/forgetPass.php',
+            data: {
+                EMAIL: feml
+            },
+            dataType: "text",
+            success: function (response) {
                 if (response.includes("信箱正確")) {
                     // console.log(response);
                     TOPASS_BTN();
@@ -363,12 +364,13 @@ function forgetPassSub() {
                     // console.log(response);
                     alert(response);
                 }
+            },
+            error: function (exception) {
+                alert("發生錯誤: " + exception.status);
             }
-        },
-        error: function (exception) {
-            alert("發生錯誤: " + exception.status);
-        }
-    });
+
+        });
+    }
 }
 
 // 修改密码
