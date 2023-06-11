@@ -13,6 +13,6 @@
     // echo "<script>alert('登出成功!\n' + '將跳轉回首頁\n');</script>";  
 
     echo "登出成功！\n";
-    echo "將跳轉回首頁\n";
+    // echo "將跳轉回首頁\n";
 
 ?>
