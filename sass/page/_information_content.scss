@@ -80,9 +80,11 @@
         .INFOMATION_CONTENT_TEXT {
             font-size: $p;
             line-height: normal;
+            white-space:pre-line;
         }
         p{
             line-height: normal;
+            
         }
     }
 
