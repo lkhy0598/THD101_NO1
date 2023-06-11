@@ -11,7 +11,6 @@ function phoneNumberCheck() {
     }
 }
 
-
 //獲取使用者在本頁面表單填入的資料內容
 function ReserveNormal2GrabData() {
 
@@ -92,8 +91,8 @@ function NextStep() {
     var petAge = document.getElementById("pet_age").value;
     var vaccinationOrNot = document.getElementById("vaccinationOrNot").value;
 
-    if (ownerName != "" && phoneno != "" && petName != "" && petSpecies != "" && petAge != "" && vaccinationOrNot != "") {
-        console.log(reserveNormal2Data);
+    if (ownerName != "" && phoneno != "" && petName != "" && petSpecies != "" && petAge != "" && vaccinationOrNot != "" && (/^09\d{8}$/.test(document.getElementById('phoneno').value))) {
+        // console.log(reserveNormal2Data);
         window.location.href = "./reserve_normal3.html";
     }
 }

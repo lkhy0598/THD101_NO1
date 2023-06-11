@@ -79,8 +79,8 @@ function NextStep() {
     var petAge = document.getElementById("pet_age").value;
     var vaccinationOrNot = document.getElementById("vaccinationOrNot").value;
 
-    if (ownerName != "" && phoneno != "" && petName != "" && petSpecies != "" && petAge != "" && vaccinationOrNot != "") {
-        console.log(reserveCommunication2Data);
+    if (ownerName != "" && phoneno != "" && petName != "" && petSpecies != "" && petAge != "" && vaccinationOrNot != "" && (/^09\d{8}$/.test(document.getElementById('phoneno').value))) {
+        // console.log(reserveCommunication2Data);
         window.location.href = "./reserve_communication3.html";
     }
 }

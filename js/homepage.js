@@ -4,7 +4,7 @@ const app = Vue.createApp({
             informationItems: [],
             // selectedCategory: '',
             // searchKeyword: '',
-            displayedItems: [],
+     
             // itemsPerPage: 12,
             // currentPage: 1,
             // quantity: 1
@@ -21,7 +21,7 @@ const app = Vue.createApp({
                 type: 'GET',
                 dataType: 'json',
                 success: response => {
-                    console.log(response);
+                    // console.log(response);
                     this.informationItems = response;
                     // this.filterItems();
 
@@ -70,15 +70,15 @@ const app = Vue.createApp({
         //         this.scrollToTop();
         //     }
         // },
-        scrollToTop() {
-            this.$nextTick(() => {
-                const itemList = this.$refs.itemList;
-                if (itemList) {
-                    const offsetTop = itemList.offsetTop + 650; // 调整偏移量为更低的位置
-                    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-                }
-            });
-        },
+            // scrollToTop() {
+            //     this.$nextTick(() => {
+            //         const itemList = this.$refs.itemList;
+            //         if (itemList) {
+            //             const offsetTop = itemList.offsetTop + 650; // 调整偏移量为更低的位置
+            //             window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+            //         }
+            //     });
+            // },
       
     },
     computed: {
@@ -104,4 +104,4 @@ const app = Vue.createApp({
     }
 });
 
-app.mount("#INFORMATION_CARD");
+app.mount("#app");
