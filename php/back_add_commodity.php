@@ -1,6 +1,7 @@
 <?php
 
-include('conn.php');
+// include('conn.php');
+include('connServer.php');
 include('upload.php');
 
 // header("Access-Control-Allow-Origin: http://localhost:3000");
@@ -49,7 +50,7 @@ if ($new_commodity_classification === "2") {
 }
 
 // 創建商品專屬的資料夾
-$commodity_folder = $commodity_type . str_pad($number, 2, '0', STR_PAD_LEFT);
+$commodity_folder = str_pad($number, 2, '0', STR_PAD_LEFT);
 
 if (!is_dir($commodity_folder)) {
     mkdir($commodity_folder, 0755, true);
@@ -81,7 +82,8 @@ if (move_uploaded_file($filePath_Temp, $filePath)) {
 
 
 
-    $full_file_path = $commodity_folder . "/" . $_FILES["commodity_pic"]["name"][$i]; // 拼接完整路徑
+    // $full_file_path = "./img/shopping_list/" . $commodity_type . "/" . $commodity_folder . "/" . $_FILES["commodity_pic"]["name"][$i]; // 拼接完整路徑
+    $full_file_path = "../dist/img/shopping_list/" . $commodity_type . "/" . $commodity_folder . "/" . $_FILES["commodity_pic"]["name"][$i]; // 拼接完整路徑
 
     $uploaded_file_paths[] = $full_file_path; // 將路徑加入到陣列中
 
@@ -94,7 +96,7 @@ if (move_uploaded_file($filePath_Temp, $filePath)) {
 
 }
 
-    $new_commodity_content = '            <section class="SHOPPINGLIST_ARTICLE">' . $new_commodity_content . '</section>';
+    $new_commodity_content = '<section class="SHOPPINGLIST_ARTICLE">' . $new_commodity_content . '</section>';
 
     $uploaded_paths_str = implode(',', $uploaded_file_paths); // 使用implode()將陣列轉換成字串，用逗號區隔
 

@@ -19,7 +19,8 @@ $('#summernote').summernote({
   height: 400,                 // set editor height
   minHeight: null,             // set minimum height of editor
   maxHeight: null,             // set maximum height of editor
-  focus: false                 // set focus to editable area after initializing summernote
+  focus: false,
+  disableEnter: true          
 });
 
 // 獲取上傳照片按鈕和預覽容器的元素
@@ -134,6 +135,7 @@ function searchCommodity(event) {
 
   $.ajax({
     method: "POST",
+    // url: "http://localhost/THD101_NO1/php/back_search_commodity.php",
     url: "../php/back_search_commodity.php",
     data: {
       commodity_number: commodity_number,
@@ -235,6 +237,7 @@ function doAddCommodity() {
 
   $.ajax({
     method: "POST",
+    // url: "http://localhost/THD101_NO1/php/back_add_commodity.php",
     url: "../php/back_add_commodity.php",
     data: formData,
     contentType: false, // 不設置content-type，jQuery會自動處理

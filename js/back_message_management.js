@@ -108,9 +108,10 @@ function searchMessage(event) {
     // 若輸入欄位為空，不執行搜尋操作
     return;
   }
-
+  
   $.ajax({
     method: "POST",
+    // url: "http://localhost/THD101_NO1/php/back_search_message.php",
     url: "../php/back_search_message.php",
     data: {
       message_number: message_number,
@@ -197,8 +198,12 @@ function doAddMessage() {
   formData.append("new_message_title", new_message_title);
   formData.append("new_message_content", new_message_content);
 
+  // console.log(formData);
+
+
   $.ajax({
     method: "POST",
+    // url: "http://localhost/THD101_NO1/php/back_add_message.php",
     url: "../php/back_add_message.php",
     data: formData,
     contentType: false, // 不設置content-type，jQuery會自動處理
@@ -206,7 +211,7 @@ function doAddMessage() {
 
     success: function (response) {
 
-      // console.log(response);
+      console.log(response);
 
       // 清空表單欄位
       $("#new_message_classification").val("");
