@@ -18,11 +18,13 @@ const app = Vue.createApp({
             $.ajax({
                 // url: '../php/homepage.php',
                 url: 'http://localhost/THD101_project/php/homepage.php',
-                type: 'POST',
+                type: 'GET',
                 dataType: 'json',
                 success: response => {
                     console.log(response);
                     this.informationItems = response;
+                    // this.filterItems();
+
                    
                 },
                 error: (xhr, status, error) => {
@@ -30,9 +32,9 @@ const app = Vue.createApp({
                 }
             });
         },
-        // getImagesArray(imgSrc) {
-        //     return imgSrc.split(',');
-        // },
+        getImagesArray(imgSrc) {
+            return imgSrc.split(',');
+        },
         // filterItems() {
         //     if (this.selectedCategory === '' && this.searchKeyword === '') {
         //         this.displayedItems = this.shoppingItems;

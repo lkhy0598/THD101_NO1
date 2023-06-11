@@ -148,7 +148,9 @@
             <a :href="'information_content.html?id=' + item.NEWS_ID" class="INFORMATION_CARD_A">
               <picture class="CARD_LEFT">
                 <source srcset="./img/index/M_index/in_1.jpg" media="(max-width: 414px)">
-                <img src="./img/index/INDEX_CARD1.jpg" alt="">
+                
+                <img :src="getImagesArray(item.IMG_SOURCE)[0]" :alt="item.TITLE">
+                <!-- <img src="./img/index/INDEX_CARD1.jpg" alt=""> -->
               </picture>
 
               <div class="CARD_RIGHT">
