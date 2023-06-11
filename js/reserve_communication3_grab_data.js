@@ -98,5 +98,5 @@ function CommunicationReserveSub() {
 
 //導向確認完成寵物溝通預約
 function Comfirm() {
-    window.location.href = "reserve_communication_complete.html";
+    window.location.href = "./reserve_communication_complete.html";
 }
