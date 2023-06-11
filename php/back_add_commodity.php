@@ -82,8 +82,8 @@ if (move_uploaded_file($filePath_Temp, $filePath)) {
 
 
 
-    $full_file_path = "./img/shopping_list/" . $commodity_type . "/" . $commodity_folder . "/" . $_FILES["commodity_pic"]["name"][$i]; // 拼接完整路徑
-    // $full_file_path = "../dist/img/shopping_list/" . $commodity_type . "/" . $commodity_folder . "/" . $_FILES["commodity_pic"]["name"][$i]; // 拼接完整路徑
+    // $full_file_path = "./img/shopping_list/" . $commodity_type . "/" . $commodity_folder . "/" . $_FILES["commodity_pic"]["name"][$i]; // 拼接完整路徑
+    $full_file_path = "../dist/img/shopping_list/" . $commodity_type . "/" . $commodity_folder . "/" . $_FILES["commodity_pic"]["name"][$i]; // 拼接完整路徑
 
     $uploaded_file_paths[] = $full_file_path; // 將路徑加入到陣列中
 
