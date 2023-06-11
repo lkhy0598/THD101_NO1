@@ -13,10 +13,11 @@ function getMemberPath($memberID) {
    // $filePath = " https://tibamef2e.com/thd101/g1/dist/img/member/" . $memberID ."/"; //server
    $filePath = " ../dist/img/member/" . $memberID ."/"; //server
 
+   // $fullPath = $_SERVER["DOCUMENT_ROOT"] . "/THD101_NO1/dist/img/member/" . $memberID ."/";
+
    $fullPath = $ServerRoot . $filePath;
    // 檢查目錄是否存在，如果不存在，則建立目錄
    if (!file_exists($fullPath)) {
-      
        mkdir($fullPath, 0777, true); // 設置適當的權限
    }
    return $fullPath;
