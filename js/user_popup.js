@@ -1,16 +1,20 @@
 // $(document).ready(function () {
 // =================== 前端版面操控功能 ===================
-
+var changePassCheck = false;
+console.log(changePassCheck);
 // ====== 密碼關閉隱藏功能 ======
 $(".SHOWPASS").click(function () {
+    console.log('aaa')
     var passwordField = $(this).siblings(".PASSWORD");
     var icon = $(this).find("i");
     var fieldType = passwordField.attr("type");
 
     if (fieldType === "password") {
+        console.log('bbb')
         passwordField.attr("type", "text");
         icon.removeClass("bi-eye-fill").addClass("bi-eye-slash-fill");
     } else {
+        console.log('ccc')
         passwordField.attr("type", "password");
         icon.removeClass("bi-eye-slash-fill").addClass("bi-eye-fill");
     }
@@ -32,6 +36,8 @@ function PASSWORD_TABS_READY() {
     $('.POPUP_NAVS li').addClass('CLOSETABS');
     $('.FORGETTABS, .CHANGETABS').removeClass('CLOSETABS');
 };
+// 初始化修改密碼前的信箱驗證
+var changePassCheck = false;
 
 // ====== 彈跳視窗控制 ======
 // 打開彈跳視窗
@@ -115,7 +121,7 @@ $('.BACKLOGIN_BTN').click(function () {
 
 
 // ====== 修改密碼 ======
-$('.TOPASS_BTN').click(function () {
+function TOPASS_BTN() {
     // 初始化頁面
     $('.FORGETTABS').addClass('CLOSETABS');
     $('.CHANGETABS').removeClass('CLOSETABS');
@@ -125,7 +131,7 @@ $('.TOPASS_BTN').click(function () {
     $('.CHANGETABS').addClass('TAB_ACTIVE');
     $('#popup_changepass').addClass('POPUPACTIVE');
 
-});
+};
 
 // 顯示修改完成頁
 
@@ -133,7 +139,7 @@ $('.TOPASS_BTN').click(function () {
 var timeoutId = null;
 
 // 監看是否有點擊返回登入，否則就三秒後跳轉登入頁面
-$('.PASS_SUB').click(function () {
+function PASS_SUB() {
 
     $('.POPUP_TABS_CONTENT div').removeClass('POPUPACTIVE');
     $('#popup_changepass_succ').addClass('POPUPACTIVE');
@@ -150,7 +156,7 @@ $('.PASS_SUB').click(function () {
 
     }, 3000);
 
-});
+};
 
 // 點擊返回登入就阻止跳轉回登入頁
 $('.SUCC_BTN').click(function () {
@@ -288,8 +294,8 @@ function loginSub() {
         // url: "http://localhost/THD101_NO1/php/login.php",
         data: {
             USERNAME: lusn,
-            EMAIL: lpsw,
-            PASSWORD: leml
+            EMAIL: leml,
+            PASSWORD: lpsw
         },
         dataType: "text",
         success: function (response) {
@@ -297,7 +303,7 @@ function loginSub() {
 
                 console.log(response)
                 alert(response);
-                window.location.href = 'member_center.html';
+                window.location.href = window.location.href;
             } else {
                 console.log(response)
                 alert(response);
@@ -315,16 +321,101 @@ function logoutSub() {
         url: '../php/Logout.php',
         // url: 'http://localhost/THD101_NO1/php/Logout.php',
         type: 'GET',
-        success: function(response) {
+        success: function (response) {
             // 在成功回應後執行以下動作
             alert(response);
-            location.href = '../dist/homepage.html';
+            window.location.href = window.location.href;
         },
-        error: function(xhr, status, error) {
+        error: function (xhr, status, error) {
             // 在錯誤回應時執行以下動作
             alert('登出失敗!');
         }
     });
+}
+
+// 忘記密碼
+function forgetPassSub() {
+    let feml = $('.FORGET_EMAIL').val();
+    let fvrf = $('.FORGET_VERIFY').val();
+    console.log(feml, fvrf);
+    $.ajax({
+        method: "POST",
+        url: '../php/forgetPass.php',
+        data: {
+            EMAIL: feml
+        },
+        dataType: "text",
+        success: function (response) {
+            if (feml == '' && fvrf == '') {
+                alert('請輸入信箱和驗證碼');
+            } else if (feml == '') {
+                alert('請輸入信箱');
+            } else if (fvrf == '') {
+                alert('請輸入驗證碼');
+            } else if (feml !== '' && fvrf !== '') {
+                if (response.includes("信箱正確")) {
+                    // console.log(response);
+                    TOPASS_BTN();
+                    changePassCheck = true;
+                    // console.log(changePassCheck);
+                    // alert(response);
+                } else {
+                    // console.log(response);
+                    alert(response);
+                }
+            }
+        },
+        error: function (exception) {
+            alert("發生錯誤: " + exception.status);
+        }
+    });
+}
+
+// 修改密码
+function changePasstSub() {
+    // console.log(changePassCheck);
+    let feml = $('.FORGET_EMAIL').val();
+    let cpwd = $('.CHANGE_PASSWORD').val();
+    let cvpw = $('.CHANGE_VFPASSWORD').val();
+    if (changePassCheck == true) {
+        if (cpwd == '' && cvpw == '') {
+            alert('請輸入欲修改的密碼');
+        } else if (cpwd == '') {
+            alert('請填寫密碼');
+        } else if (cvpw == '') {
+            alert('請填寫確認密碼');
+        } else if (cpwd !== '' && cvpw !== '') {
+            $.ajax({
+                url: '../php/changePasstSub.php',
+                type: 'POST',
+                data: {
+                    EMAIL: feml,
+                    PASSWORD: cpwd
+                },
+                dataType: "text",
+                success: function (response) {
+                    // 在成功回應後執行以下動作
+                    if (response.includes("相同")) {
+                        alert(response);
+                    } else {
+                        alert(response);
+                        PASS_SUB();
+                        changePassCheck = false;
+                    }
+                },
+                error: function (xhr, status, error) {
+                    // 在錯誤回應時執行以下動作
+                    alert("發生錯誤: " + exception.status);
+                }
+            });
+        }
+
+    } else {
+        alert('修改成功!\n');
+        alert('請重新開啟密碼!\n');
+        $('.POPUP_CLOSEBTN').trigger('click');
+
+    }
 }
 // });
 

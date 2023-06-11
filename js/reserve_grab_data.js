@@ -74,14 +74,13 @@ function ReserveGrabData() {
     alert("請選擇預約時段");
     return; // 中斷後續程式碼的執行
   }
+  //檢查使用者有沒有誤填日期
+  var today = new Date().toISOString().split("T")[0]; // 獲取當前日期
 
-  // //檢查使用者有沒有誤填日期
-  // var today = new Date().toISOString().split("T")[0]; // 獲取當前日期
-
-  // if (reserveDate != "" && reserveDate < today) {
-  //   alert("預約日期不能早於今天！");
-  //   return; // 中斷後續程式碼的執行
-  // }
+  if (reserveDate != "" && reserveDate < today) {
+    alert("預約日期不能早於今天！");
+    return; // 中斷後續程式碼的執行
+  }
 
   // 將值存儲到網站內存中
   reserveData.reserveType = reserveType;
@@ -89,10 +88,9 @@ function ReserveGrabData() {
   reserveData.reserveDate = reserveDate;
   reserveData.reserveTime = reserveTime;
 
+
   // 將資料存儲到 localStorage 中
   localStorage.setItem('reserveData', JSON.stringify(reserveData));
-
-  console.log(reserveData); // 在控制台上輸出存儲的數據
 
 }
 
@@ -106,22 +104,42 @@ function RecognizingType() {
   var today = new Date().toISOString().split("T")[0]; // 獲取當前日期
 
   if (reserveDate != "" && reserveDate < today) {
-    alert("預約日期不能早於今天！");
     return; // 中斷後續程式碼的執行
   }
 
   if (reserve_type === "一般掛號" && reserveDate != "" && reserveTime != "") {
-    window.location.href = "../reserve_normal2.html";
+    window.location.href = "./reserve_normal2.html";
   } else if (reserve_type === "寵物溝通" && reserveDate != "" && reserveTime != "") {
-    window.location.href = "../reserve_communication2.html";
+    window.location.href = "./reserve_communication2.html";
   }
 }
 
-// 從 localStorage 中取得預約數據
-function GetReserveDataFromLocalStorage() {
-  var reserveData = JSON.parse(localStorage.getItem('reserveData'));
+//使用者click表格想填寫時時檢查使用者是否登入，若否則alert提醒
+var reserve_type_select = document.getElementById("reserve_type");
+var doctor_choices_select = document.getElementById("doctor_choices");
+var reserve_date_date = document.getElementById("reserve_date");
+var reserve_time_select = document.getElementById("reserve_time");
 
-  // 使用 reserveData 中的資料進行後續處理
-
-  console.log(reserveData); // 在控制台上輸出從 localStorage 中取得的資料
+function logInCheck() {
+  $.ajax({
+    url: '../php/checksession.php',
+    // url: 'http://localhost/THD101_NO1/php/checksession.php',
+    type: 'POST',
+    dataType: 'text',
+    success: response => {
+      this.checksessionResponse = response;
+      if (response === 'notlogin') {
+        // 使用者未登入，提醒他要登入才能進行預約
+        alert("進行預約前請先登入會員！");
+      } 
+    },
+    error: error => {
+      // 處理錯誤
+    }
+  });
 }
+
+reserve_type_select.addEventListener('click', logInCheck);
+doctor_choices_select.addEventListener('click', logInCheck);
+reserve_date_date.addEventListener('click', logInCheck);
+reserve_time_select.addEventListener('click', logInCheck);

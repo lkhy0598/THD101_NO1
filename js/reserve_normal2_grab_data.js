@@ -3,7 +3,7 @@ var reserveNormal2Data = {}; // 定義一個空的物件用於存儲預約數據
 // 檢查手機號碼格式
 function phoneNumberCheck() {
     var phoneNumber = document.getElementById('phoneno').value;
-    if(!(/^09\d{8}$/.test(phoneNumber))){
+    if (!(/^09\d{8}$/.test(phoneNumber))) {
         alert("請輸入正確格式手機號碼！");
         return; // 中斷後續程式碼的執行
     } else {
@@ -14,7 +14,7 @@ function phoneNumberCheck() {
 
 //獲取使用者在本頁面表單填入的資料內容
 function ReserveNormal2GrabData() {
-    
+
     var ownerName = document.getElementById("owner_name").value;
     var phoneno = document.getElementById("phoneno").value;
     var petName = document.getElementById("pet_name").value;
@@ -63,10 +63,10 @@ function ReserveNormal2GrabData() {
     reserveNormal2Data.vaccinationOrNot = vaccinationOrNot;
 
     //其他疾病徵兆按鈕的值放入一個空陣列
-    reserveNormal2Data.selectedIllnessSign=[];
+    reserveNormal2Data.selectedIllnessSign = [];
 
     var buttons = document.querySelectorAll('.ILLNESS_SIGN_BTN');
-    buttons.forEach(button=>{
+    buttons.forEach(button => {
         if (button.classList.contains('ACTIVE')) {
             var selectedIllnessSign = button.value;
             console.log(selectedIllnessSign);
@@ -77,7 +77,7 @@ function ReserveNormal2GrabData() {
 
     reserveNormal2Data.otherIllnessSign = otherIllnessSign;
 
-    
+
     // 將資料存儲到 localStorage 中
     localStorage.setItem('reserveNormal2Data', JSON.stringify(reserveNormal2Data));
 }
@@ -94,6 +94,6 @@ function NextStep() {
 
     if (ownerName != "" && phoneno != "" && petName != "" && petSpecies != "" && petAge != "" && vaccinationOrNot != "") {
         console.log(reserveNormal2Data);
-        window.location.href = "../reserve_normal3.html";
+        window.location.href = "./reserve_normal3.html";
     }
 }

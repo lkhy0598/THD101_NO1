@@ -136,7 +136,7 @@ function dosearch(){
         // 若輸入欄位為空，不執行搜尋操作
         return;
     }
-    console.log(phone);
+    // console.log(phone);
     $.ajax({            
         method: "POST",
         // url: "http://localhost/THD101_NO1/php/back_search_member.php",
@@ -189,7 +189,7 @@ function Petsearch(){
         dataType: "json",
         
         success: function (response) {
-            console.log(response);
+            // console.log(response);
             // 更新html內容前先清空原有資料
             $("#pet_result").html("");
             // 更新html內容(透過jQuery跑迴圈取值)
@@ -206,10 +206,6 @@ function Petsearch(){
                     + "</ul>"
                 );
             });
-
-            // if(response===1){
-            //     alert('lalala');
-            // }
         },
         error: function(exception) {
             alert("發生錯誤: " + exception.status);
@@ -231,7 +227,7 @@ function doReviseMember(phone_revise){
         },
         dataType:"json",
         success:function(response){
-            console.log(response);
+            // console.log(response);
             $('#name_revise').val(response.NAME);
             $('#phone_revise').val(response.PHONENO);
             $('#email_revise').val(response.EMAIL);
@@ -248,9 +244,10 @@ function doReviseMember(phone_revise){
 }
 // 寵物修改資料渲染
 function doRevisePet(owner_phone){
+
     $('.BACK_MODIFY_PET').show();
     $('.BACK_MEMBER_PROFILE').hide();
-    console.log(owner_phone);
+    // console.log(owner_phone);
     $.ajax({
         method: "GET",
         // url: "http://localhost/THD101_NO1/php/back_modify_pet.php",
@@ -260,7 +257,7 @@ function doRevisePet(owner_phone){
         },
         dataType:"json",
         success:function(response){
-            console.log(response);
+            // console.log(response);
             // $('#owner_name_revise').val(response.NAME);
             $('#pet_phone_revise').val(response.PHONENO);
             $('#pet_gender_revise').val(response.PET_GENDER);
@@ -269,11 +266,12 @@ function doRevisePet(owner_phone){
             $('#pet_age_revise').val(response.PET_AGE);
             $('#vaccines_revise').val(response.VACCI_OR_NOT);
             $('#member_id_pet').val(response.MEMBER_ID);
+            $('#pet_id').val(response.PET_ID);
             $('#preview_pet_pic_revise img').attr('src', response.PET_AVATAR);
             
-            console.log($('#member_id_pet').val());
-            console.log($('#pet_gender_revise').val());
-            console.log($('#pet_category_revise').val());
+            // console.log($('#member_id_pet').val());
+            // console.log($('#pet_gender_revise').val());
+            // console.log($('#pet_category_revise').val());
             
         },
         error: function(exception) {  
@@ -329,15 +327,16 @@ function doUpdateMember(){
         contentType : false,
         success:function(response){
             alert(response);
-            // location.href = '_back_member_profile.html'
-            $('.BACK_MEMBER_PROFILE').show();
-            $('.BACK_MODIFY_MEMBER').hide();
+            // location.href = '_back_member_profile.html';
+            location.replace('_back_member_profile.html');
+            // $('.BACK_MEMBER_PROFILE').show();
+            // $('.BACK_MODIFY_MEMBER').hide();
         },
         
         error: function(xhr, status, error) {
             var errorMessage = xhr.status + ': ' + xhr.statusText;
-            console.log('錯誤訊息:', errorMessage);
-            console.log('伺服器回應:', xhr.responseText);
+            // console.log('錯誤訊息:', errorMessage);
+            // console.log('伺服器回應:', xhr.responseText);
             alert('發生錯誤: ' + errorMessage);
         }
     })
@@ -388,18 +387,19 @@ function doUpdatePet(){
         contentType : false,
         success:function(response){
             alert(response);
-            // location.href = '_back_member_profile.html'
-            $('.BACK_MEMBER_PROFILE').show();
-            $('.BACK_MODIFY_PET').hide();
+            // location.href = '_back_member_profile.html';
+            location.replace('_back_member_profile.html');
+            // $('.BACK_MEMBER_PROFILE').show();
+            // $('.BACK_MODIFY_PET').hide();
         },
         
         error: function(xhr, status, error) {
             var errorMessage = xhr.status + ': ' + xhr.statusText;
-            console.log('錯誤訊息:', errorMessage);
-            console.log('伺服器回應:', xhr.responseText);
-            console.log('伺服器回應:',xhr);
-            console.log('伺服器回應:',status);
-            console.log('伺服器回應:',error);
+            // console.log('錯誤訊息:', errorMessage);
+            // console.log('伺服器回應:', xhr.responseText);
+            // console.log('伺服器回應:',xhr);
+            // console.log('伺服器回應:',status);
+            // console.log('伺服器回應:',error);
             alert('發生錯誤: ' + errorMessage);
         }
     })
@@ -428,7 +428,7 @@ function doReserve(reserve_phone){
         },
         dataType:"json",
         success:function(response){
-            console.log(response);
+            // console.log(response);
             $('#reserve_name').val(response.NAME);
             $('#reserve_phone').val(response.PHONENO);
             $('#reserve_pet_name').val(response.PET_NAME);
@@ -437,8 +437,8 @@ function doReserve(reserve_phone){
             $('#reserve_pet_age').val(response.PET_AGE);
             $('#reserve_member_id').val(response.MEMBER_ID);
             $('#reserve_pet_id').val(response.PET_ID);
-            console.log($('#reserve_member_id').val());
-            console.log($('#reserve_pet_id').val());
+            // console.log($('#reserve_member_id').val());
+            // console.log($('#reserve_pet_id').val());
             
         },
         error: function(exception) {  
@@ -516,18 +516,18 @@ function doAddReserve(){
     formData.append('reserve_pet_id', reserve_pet_id);
     formData.append('reserve_symptom_type', reserve_symptom_type);
 
-    console.log(reserve_type);
-    console.log(reserve_doctor);
-    console.log(reserve_date);
-    console.log(reserve_datetime);
-    console.log(reserve_name);
-    console.log(reserve_phone);
-    console.log(reserve_pet_name);
-    console.log(reserve_pet_category);
-    console.log(reserve_pet_age);
-    console.log(reserve_vaccines);
-    console.log(reserve_member_id);
-    console.log(reserve_pet_id);
+    // console.log(reserve_type);
+    // console.log(reserve_doctor);
+    // console.log(reserve_date);
+    // console.log(reserve_datetime);
+    // console.log(reserve_name);
+    // console.log(reserve_phone);
+    // console.log(reserve_pet_name);
+    // console.log(reserve_pet_category);
+    // console.log(reserve_pet_age);
+    // console.log(reserve_vaccines);
+    // console.log(reserve_member_id);
+    // console.log(reserve_pet_id);
 
     $.ajax({
         method:"POST",
@@ -616,6 +616,7 @@ memberPicRevise.addEventListener('change',function (e) {
         previewMemberPicRevise.appendChild(img);
     }
     reader.readAsDataURL(file);
+    // URL.createObjectURL(file);
 });
 
 // 修改寵物照片

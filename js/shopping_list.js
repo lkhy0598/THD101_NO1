@@ -10,7 +10,8 @@ const app = Vue.createApp({
                 PRODUCT_CONTENT: '',
                 PRODUCT_ID: '',
             },
-            quantity: 1 // 新增 quantity 屬性並設置初始值為 1
+            quantity: 1, // 新增 quantity 屬性並設置初始值為 1
+            count: 1,
         };
     },
     created() {
@@ -83,6 +84,28 @@ const app = Vue.createApp({
 
             if (showAlert) {
                 alert('商品已成功加入購物車');
+            }
+        },
+        decreaseCount() {
+            if (this.count > 1) {
+                this.count--;
+            }
+        },
+        increaseCount() {
+            if (this.count < this.shoppingItems.INVENTORY) {
+                this.count++;
+            }
+        },
+        validateInput() {
+            if (this.count === "" || isNaN(this.count)) {
+                this.count = 1;
+            } else {
+                const numericValue = parseInt(this.count);
+                if (numericValue < 1) {
+                    this.count = 1;
+                } else if (numericValue > this.shoppingItems.INVENTORY) {
+                    this.count = this.shoppingItems.INVENTORY;
+                }
             }
         }
     }

@@ -1,18 +1,19 @@
 <?php
 
-include('conn.php');
-// include('connServer.php');
+// include('conn.php');
+include('connServer.php');
 include('upload.php');
 
 // header("Access-Control-Allow-Origin: http://localhost:3000");
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
-header("Access-Control-Allow-Headers: Content-Type");
+header('Content-Type: application/json');
+// header("Access-Control-Allow-Headers: Content-Type");
 
-$new_message_classification = $_POST['new_message_classification'];
-$new_message_status = $_POST['new_message_status'];
-$new_message_title = $_POST['new_message_title'];
-$new_message_content = $_POST['new_message_content'];
+$new_message_classification = isset($_POST['new_message_classification']) ? $_POST['new_message_classification'] : '';
+$new_message_status = isset($_POST['new_message_status']) ? $_POST['new_message_status'] : '';
+$new_message_title = isset($_POST['new_message_title']) ? $_POST['new_message_title'] : '';
+$new_message_content = isset($_POST['new_message_content']) ? $_POST['new_message_content'] :'';
 
 $news_type = "";
 
@@ -29,7 +30,8 @@ if ($new_message_classification === "最新消息") {
 
 $full_file_path = getMessagePath($news_type) . $fileName;
 
-$fileToBase = "./img/information/" . $news_type . "/" . $_FILES["message_pic"]["name"];
+// $fileToBase = "./img/information/" . $news_type . "/" . $_FILES["message_pic"]["name"];
+$fileToBase = "../dist/img/information/" . $news_type . "/" . $_FILES["message_pic"]["name"];
 
 if (move_uploaded_file($filePath_Temp, $full_file_path)) {
 

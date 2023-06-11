@@ -126,7 +126,7 @@ function showMember() {
         success: function (response) {
 
             //窄版顯示>>Header.html
-            $("#SHOWMEMBER").html(response);
+            $(".SHOWMEMBER").html(response);
 
         },
         error: function (exception) {

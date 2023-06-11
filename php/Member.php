@@ -6,7 +6,7 @@
 	header("Access-Control-Allow-Methods: POST");
 	header("Access-Control-Allow-Headers: Content-Type");
 
-	// include('http://localhost/THD101_NO1/lib/Member.php');
+	// include('http://localhost/THD101_project/lib/Member.php');
 	include('../lib/Member.php');
 	// include(__DIR__ . '../lib/Member.php');
 

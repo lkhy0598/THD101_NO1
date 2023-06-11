@@ -15,19 +15,32 @@ $newmember_phone = isset($_POST['newmember_phone']) ? $_POST['newmember_phone'] 
 $newmember_email = isset($_POST['newmember_email']) ? $_POST['newmember_email'] : '';
 $newmember_address = isset($_POST['newmember_address']) ? $_POST['newmember_address'] : '';
 
-// if ($newmember_name === '') {
-//     die("請輸入姓名");
-// }
-// if ($newmember_phone === '') {
-//     die("請輸入手機號碼");
-// }
-// if ($newmember_email === '') {
-//     die("請輸入電子信箱");
-// }
-// if ($newmember_address === '') {
-//     die("請輸入通訊地址");
-// }
 //建立SQL
+
+$phoneExists = false;
+$sql = "SELECT * FROM MEMBER WHERE PHONENO = ?";
+$statement = $pdo->prepare($sql);
+$statement->bindValue(1, $newmember_phone);
+$statement->execute();
+if ($statement->rowCount() > 0) {
+   $phoneExists = true;
+}
+
+if ($phoneExists) {
+   die("電話號碼已存在");
+}
+$mailExists = false;
+$sql = "SELECT * FROM MEMBER WHERE EMAIL = ?";
+$statement = $pdo->prepare($sql);
+$statement->bindValue(1, $newmember_email);
+$statement->execute();
+if ($statement->rowCount() > 0) {
+   $phoneExists = true;
+}
+
+if ($phoneExists) {
+   die("電子信箱已存在");
+}
     
 $sql = "INSERT INTO MEMBER (NAME, PHONENO, EMAIL, ADDRESS, PASSWORD, CREATE_DATE) VALUES (?, ?, ?, ?, ?, CURDATE())";
 
@@ -40,7 +53,7 @@ $statement->bindValue(5 , $newmember_phone);
 
 // $statement->execute();
 if (!$statement->execute()) {
-   die("新增會員失敗");
+   echo 'fail';
 }
 
 $memberID = $pdo->lastInsertId(); // 获取刚插入的会员ID
@@ -49,6 +62,7 @@ $memberID = $pdo->lastInsertId(); // 获取刚插入的会员ID
 $filePath = getMemberPath($memberID).$_FILES["member_pic"]["name"];
 
 $fileName = "./img/member/". $memberID ."/".$_FILES["member_pic"]["name"];
+// $fileName = "https://tibamef2e.com/thd101/g1/dist/img/member/". $memberID ."/".$_FILES["member_pic"]["name"];
 
 //將暫存檔搬移到正確位置
 if (move_uploaded_file($_FILES["member_pic"]["tmp_name"], $filePath)) {

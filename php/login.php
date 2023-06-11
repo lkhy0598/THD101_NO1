@@ -26,33 +26,32 @@ $statement->execute();
 $data = $statement->fetchAll();
 
 // 將session中的值清空
-$memberID = "";
-$memberName = "";
+$MemberID = "";
+$MemberName = "";
 // clearSession();
 
 // 將回傳的data賦值給指定變數
 foreach ($data as $index => $row) {
-       $memberID = $row["MEMBER_ID"];
-       $memberName = $row["NAME"];
+       $MemberID = $row["MEMBER_ID"];
+       $MemberName = $row["NAME"];
 }
 
 //判斷是否有會員資料?
-if ($memberID != "" && $memberName != "") {
+if ($MemberID != "" && $MemberName != "") {
 
        // include("http://localhost/THD101_NO1/lib/Member.php");
        include("../lib/Member.php");
        //將會員資訊寫入session
-       setMemberInfo($memberID, $memberName);
+       setMemberInfo($MemberID, $MemberName);
 
        //登入成功        
        echo "登入成功！\n";
-       echo "將跳轉到會員中心\n";
 
-       if (isset($_SESSION["MemberID"])) {
-              echo "Session 已正確建立，MemberID 為：" . $_SESSION["MemberID"];
-          } else {
-              echo "Session 尚未建立";
-          }
+       // if (isset($_SESSION["MemberID"])) {
+       //        echo "Session 已正確建立，MemberID 為：" . $_SESSION["MemberID"];
+       //    } else {
+       //        echo "Session 尚未建立";
+       //    }
        
 } else {
        //登入失敗

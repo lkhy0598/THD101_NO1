@@ -33,6 +33,7 @@ const app = Vue.createApp({
             if (response === 'notlogin') {
                 // 用户未登录，禁用下拉列表
                 $('#CUPON').prop('disabled', true);
+                // LOGIN();
             } else {
                 // 用户已登录，启用下拉列表
                 $('#CUPON').prop('disabled', false);

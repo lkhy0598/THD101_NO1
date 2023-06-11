@@ -265,6 +265,28 @@
         updateCounter()
     </script>
 
+    <!-- <script>
+        function init(){
+            $.ajax({            
+                method: "POST",
+                url: "../php/back_member_check.php",
+                url: "http://localhost/THD101_NO1/php/back_member_check.php",
+                data:{},            
+                dataType: "text",
+                success: function (response) {
+                    console.log(response);
+                    if(response == ""){
+                        
+                        alert('請先登入，將前往登入頁'); 
+                        location.href = 'index.html';                
+                    }
+                },
+                error: function(exception) {
+                    alert("數據載入失敗: " + exception.status);
+                }
+            });
+        }
+    </script> -->
 
 </body>
 
