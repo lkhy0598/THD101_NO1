@@ -131,7 +131,16 @@
   <script src="./js/toggle.js"></script>
   <script src="./js/top_btn.js"></script>
   <script src="./js/appointment.js"></script>
-  <script src="./js/reserve_normal_complete.js"></script>
+  <script src="./js/reserve_communication_complete.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 網頁載入完成後的操作
+      setTimeout(function clearData() {
+        // 網頁載入完成3秒後清除網頁內存
+        localStorage.clear();
+      }, 3000);
+    });
+  </script>
   
 </body>
 

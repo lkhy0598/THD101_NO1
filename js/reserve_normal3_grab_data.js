@@ -38,13 +38,8 @@ document.getElementById('selected_illness_sign').textContent = reserveNormal2Dat
 // otherIllnessSign:其他病徵
 document.getElementById('other_illness_sign').textContent = reserveNormal2Data.otherIllnessSign;
 
-//導向確認完成一般掛號預約
-function Comfirm() {
-    window.location.href = "./reserve_normal_complete.html";
-}
-
 function NormalReserveSub() {
-    alert('預約成功！');
+   
     // 抓使用者填入的預約表單內容填入資料庫
 
     // reserveType:預約類型
@@ -94,11 +89,16 @@ function NormalReserveSub() {
         dataType: "text",
         success: function (response) {
             alert('預約成功！');
-            alert(response);
+            // alert(response);
         },
         error: function (exception) {
             alert("ajax發生錯誤" + exception.status);
         }
 
     });
+}
+
+//導向確認完成寵物溝通預約
+function Comfirm() {
+    window.location.href = "./reserve_normal_complete.html";
 }

@@ -37,7 +37,7 @@ document.getElementById('other_description').textContent = reserveCommunication2
 
 
 function CommunicationReserveSub() {
-    alert('預約成功！');
+    
     // 抓使用者填入的預約表單內容填入資料庫
 
     // reserveType:預約類型
@@ -80,13 +80,13 @@ function CommunicationReserveSub() {
             PET_SPECIES: petSpecies,
             PET_AGE: petAge,
             VACCINATION_OR_NOT: vaccinationOrNot,
-            // SELECTED_ILLNESS_SIGN: selectedIllnessSign,
+            
             OTHER_ILLNESS_SIGN: otherIllnessSign
         },
         dataType: "text",
         success: function (response) {
             alert('預約成功！');
-            alert(response);
+            // alert(response);
 
         },
         error: function (exception) {
