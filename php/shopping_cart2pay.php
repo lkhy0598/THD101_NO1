@@ -36,7 +36,7 @@ foreach ($items as $item) {
     $stockStatement->execute();
 
     $stockResult = $stockStatement->fetch(PDO::FETCH_ASSOC);
-    $currentStock = $stockResult['STOCK'];
+    $currentStock = $stockResult['INVENTORY'];
 
     // 将商品ID和当前库存存储到数组中
     $productStock[$PRODUCT_ID] = $currentStock;
