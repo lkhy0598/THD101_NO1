@@ -24,6 +24,25 @@ $PAY_STATE_ID = intval($_POST['PAY_STATE_ID']);
 
 try {
 
+$productStock = array(); // 用于存储商品库存的数组
+
+foreach ($items as $item) {
+    $PRODUCT_ID = $item['PRODUCT_ID'];
+
+    // 查询商品库存
+    $stockQuery = "SELECT INVENTORY FROM PRODUCT WHERE PRODUCT_ID = ?";
+    $stockStatement = $pdo->prepare($stockQuery);
+    $stockStatement->bindValue(1, $PRODUCT_ID);
+    $stockStatement->execute();
+
+    $stockResult = $stockStatement->fetch(PDO::FETCH_ASSOC);
+    $currentStock = $stockResult['STOCK'];
+
+    // 将商品ID和当前库存存储到数组中
+    $productStock[$PRODUCT_ID] = $currentStock;
+}
+
+
 $pdo->beginTransaction();
 
 $sql ="INSERT INTO `ORDER`(MEMBER_ID,PAYMENT_ID,CREATE_DATE,ORDER_STATE_ID,PAY_STATE_ID,DELIVERY_STATE_ID,TOTAL,VOUCHER_ID,DELIVERY_METHOD_ID,ORDER_COMMENT,RECIPIENT,RE_PHONE_NO,RE_EMAIL)
@@ -61,7 +80,17 @@ foreach ($items as $item) {
     $statement->bindValue(4, $ORDER_AMOUNT);
     $statement->bindValue(5, $SUBTOTAL);
     $statement->execute();
+
+    // 更新商品库存
+    $newStock = $productStock[$PRODUCT_ID] - $ORDER_AMOUNT;
+
+    $updateStockQuery = "UPDATE PRODUCT SET INVENTORY = ? WHERE PRODUCT_ID = ?";
+    $updateStockStatement = $pdo->prepare($updateStockQuery);
+    $updateStockStatement->bindValue(1, $newStock);
+    $updateStockStatement->bindValue(2, $PRODUCT_ID);
+    $updateStockStatement->execute();
 }
+
 
 $pdo->commit(); // 提交事务
 echo "OK"; // 成功消息
