@@ -12,7 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="shortcut icon" type="image/png" href="./img/shortcut_logo.png">
     <title>商品介紹 SHOPPING_LIST - 波波動物醫院</title>
-    <script>
+    <!-- <script>
         $(document).ready(function() {
             var minValue = parseInt($(".ITEMCOUNT_BTN-BODY").attr("min")); // 获取最小值
             var maxValue = parseInt($(".STOCK").text()); // 获取最大值
@@ -52,7 +52,7 @@
             }
             });
         });
-    </script>
+    </script> -->
 </head>
 
 <body class="SHOPPINGLIST" id="SHOPPINGLISTVUE" onload="showMember()">
@@ -129,10 +129,10 @@
                     <span class="STOCK">{{ shoppingItems.INVENTORY }}</span>
                     ）</h3>
                 <section class="ITEMCOUNT_BTN">
-                    <span class="ITEMCOUNT_BTN-LEFT" id="ITEMMINUS"><i class="bi bi-dash"></i></span>
-                    <input type="number" class="ITEMCOUNT_BTN-BODY" value="1" min="1">
+                    <span class="ITEMCOUNT_BTN-LEFT" id="ITEMMINUS" @click="decreaseCount"><i class="bi bi-dash"></i></span>
+                    <input type="number" class="ITEMCOUNT_BTN-BODY" v-model.number="count" :min="1">
                     <!-- <span class="ITEMCOUNT_BTN-BODY">1</span> -->
-                    <span class="ITEMCOUNT_BTN-RIGHT" id="ITEMPLUS"><i class="bi bi-plus"></i></span>
+                    <span class="ITEMCOUNT_BTN-RIGHT" id="ITEMPLUS" @click="increaseCount"><i class="bi bi-plus"></i></span>
                 </section>
                 <section class="SHOPPINGLIST_CARTBTN" @click="addToCart">
                     <button class="BTN"><i class="bi bi-cart-fill"></i>加入購物車</button>
