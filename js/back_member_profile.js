@@ -136,7 +136,7 @@ function dosearch(){
         // 若輸入欄位為空，不執行搜尋操作
         return;
     }
-    console.log(phone);
+    // console.log(phone);
     $.ajax({            
         method: "POST",
         // url: "http://localhost/THD101_NO1/php/back_search_member.php",
@@ -189,7 +189,7 @@ function Petsearch(){
         dataType: "json",
         
         success: function (response) {
-            console.log(response);
+            // console.log(response);
             // 更新html內容前先清空原有資料
             $("#pet_result").html("");
             // 更新html內容(透過jQuery跑迴圈取值)
@@ -616,6 +616,7 @@ memberPicRevise.addEventListener('change',function (e) {
         previewMemberPicRevise.appendChild(img);
     }
     reader.readAsDataURL(file);
+    // URL.createObjectURL(file);
 });
 
 // 修改寵物照片
