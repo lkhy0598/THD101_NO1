@@ -39,8 +39,8 @@ if(isset($_FILES["member_pic_revise"])){
          //修改後的商品圖片名稱
          $picture_name = $fileName;
 
-         echo $fileName;
-         echo $filePath;
+         // echo $fileName;
+         // echo $filePath;
 
       }else{
 
