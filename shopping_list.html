@@ -130,7 +130,7 @@
                     ）</h3>
                 <section class="ITEMCOUNT_BTN">
                     <span class="ITEMCOUNT_BTN-LEFT" id="ITEMMINUS" @click="decreaseCount"><i class="bi bi-dash"></i></span>
-                    <input type="number" class="ITEMCOUNT_BTN-BODY" v-model.number="count" :min="1">
+                    <input type="number" class="ITEMCOUNT_BTN-BODY" v-model.number="count" :min="1" @input="validateInput">
                     <!-- <span class="ITEMCOUNT_BTN-BODY">1</span> -->
                     <span class="ITEMCOUNT_BTN-RIGHT" id="ITEMPLUS" @click="increaseCount"><i class="bi bi-plus"></i></span>
                 </section>
