@@ -40,7 +40,7 @@ document.getElementById('other_illness_sign').textContent = reserveNormal2Data.o
 
 //導向確認完成一般掛號預約
 function Comfirm() {
-    window.location.href = "reserve_normal_complete.html";
+    window.location.href = "./reserve_normal_complete.html";
 }
 
 function NormalReserveSub() {
