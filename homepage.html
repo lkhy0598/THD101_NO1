@@ -138,29 +138,31 @@
 
 
     <section class="WRAPPER">
-      <ul class="INFORMATION_CARD">
+      <ul class="INFORMATION_CARD" ref="itemList" id="INFORMATION_CARD">
         <section class="INFORMATION_ANI WRAPPER">
           <span class="GIRAFFE ANI"></span>
         </section>
         <div class="DOT3"></div>
-        <a href="information_content.html" class="INFORMATION_CARD_A">
-          <li class="CARD_BODY">
-            <picture class="CARD_LEFT">
-              <source srcset="./img/index/M_index/in_1.jpg" media="(max-width: 414px)">
-              <img src="./img/index/INDEX_CARD1.jpg" alt="">
-            </picture>
+       
+          <li class="CARD_BODY" v-for="item in displayedItems" :key="item.NEWS_ID">
+            <a :href="'information_content.html?id=' + item.NEWS_ID" class="INFORMATION_CARD_A">
+              <picture class="CARD_LEFT">
+                <source srcset="./img/index/M_index/in_1.jpg" media="(max-width: 414px)">
+                <img src="./img/index/INDEX_CARD1.jpg" alt="">
+              </picture>
 
-            <div class="CARD_RIGHT">
-              <div class="CARD_TITLE">最新消息</div>
-              <div class="CARD_DATE">2023 / 04 / 13</div>
-              <h3 class="CARD_CONTENT">COVID-19 毛孩家長就診須知！保護你我不憂慮</h3>
-              <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
-            </div>
+              <div class="CARD_RIGHT">
+                <div class="CARD_TITLE">{{ item.INFOR_TYPE }}</div>
+                <div class="CARD_DATE">{{ item.CREATE_DATE }}</div>
+                <h3 class="CARD_CONTENT">{{ item.TITLE }}</h3>
+                <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
+              </div>
+            </a>
           </li>
-        </a>
 
-        <a href="information_content.html" class="INFORMATION_CARD_A">
-          <li class="CARD_BODY">
+
+       
+          <!-- <li class="CARD_BODY">
             <picture class="CARD_LEFT">
               <source srcset="./img/index/M_index/in_2.jpg" media="(max-width: 414px)">
               <img src="./img/index/INDEX_CARD2.jpg" alt="">
@@ -172,9 +174,9 @@
               <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
             </div>
           </li>
-        </a>
 
-        <a href="information_content.html" class="INFORMATION_CARD_A">
+
+       
           <li class="CARD_BODY">
             <picture class="CARD_LEFT">
               <source srcset="./img/index/M_index/in_3.jpg" media="(max-width: 414px)">
@@ -186,8 +188,8 @@
               <h3 class="CARD_CONTENT">別讓你的毛小孩吃錯東西 - 腸胃異物</h3>
               <i class="bi bi-arrow-right-circle-fill ALLOW"></i>
             </div>
-          </li>
-        </a>
+          </li> -->
+
 
 
 
@@ -408,14 +410,14 @@
   <!-- footer end -->
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+  <script src="./js/vendors/vue/vue.global.js"></script>
   <script src="./js/top_btn.js"></script>
   <script src="./js/sroll.js"></script>
   <script src="./js/nav.js"></script>
   <script src="./js/user_popup.js"></script>
   <script src="./js/toggle.js"></script>
   <script src="./js/appointment.js"></script>
-  <script src="./js/homepage.js"></script>
+  <script src="./js/homepage.js"></script>  
 
   <script>
 
