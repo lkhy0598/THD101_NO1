@@ -108,20 +108,35 @@ function RecognizingType() {
   }
 
   if (reserve_type === "一般掛號" && reserveDate != "" && reserveTime != "") {
-    window.location.href = "reserve_normal2.html";
+    window.location.href = "./reserve_normal2.html";
   } else if (reserve_type === "寵物溝通" && reserveDate != "" && reserveTime != "") {
-    window.location.href = "reserve_communication2.html";
+    window.location.href = "./reserve_communication2.html";
   }
 }
 
-//focus在表格input時檢查使用者是否登入，若否則alert提醒
+//使用者click表格想填寫時時檢查使用者是否登入，若否則alert提醒
 var reserve_type_select = document.getElementById("reserve_type");
 var doctor_choices_select = document.getElementById("doctor_choices");
 var reserve_date_date = document.getElementById("reserve_date");
 var reserve_time_select = document.getElementById("reserve_time");
 
 function logInCheck() {
-  // alert("進行預約前請先登入會員！");
+  $.ajax({
+    url: '../php/checksession.php',
+    // url: 'http://localhost/THD101_NO1/php/checksession.php',
+    type: 'POST',
+    dataType: 'text',
+    success: response => {
+      this.checksessionResponse = response;
+      if (response === 'notlogin') {
+        // 使用者未登入，提醒他要登入才能進行預約
+        alert("進行預約前請先登入會員！");
+      } 
+    },
+    error: error => {
+      // 處理錯誤
+    }
+  });
 }
 
 reserve_type_select.addEventListener('click', logInCheck);
