@@ -163,7 +163,7 @@
             }
         }
 
-        #SHOWMEMBER {
+        .SHOWMEMBER {
 
             .LOGIN,
             .LOGOUT {
@@ -489,6 +489,9 @@
                     >a>i {
                         font-size: 40px;
                         color: $white;
+                    }
+                    .SHOWMEMBER{
+                        line-height: 42px;
                     }
                 }
 

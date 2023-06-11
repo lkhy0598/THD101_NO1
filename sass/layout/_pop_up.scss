@@ -245,9 +245,10 @@ body .MODAL .POPUP_WRAP_ACTIVE {
             border-left: 1px solid #9E9E9E;
 
             @include m {
-                left: 4.7rem;
+                left: 3.7rem;
             }
         }
+        
 
         .bi-key {
             height: calc(100% - 3px);
@@ -259,7 +260,7 @@ body .MODAL .POPUP_WRAP_ACTIVE {
             position: absolute;
             height: calc(100% - 2px);
             top: 0;
-            right: 57px;
+            right: 5.7rem;
             width: 12%;
             line-height: 41px;
             border-radius: 0px 10px 10px 0px;
@@ -267,7 +268,7 @@ body .MODAL .POPUP_WRAP_ACTIVE {
             border-bottom: 1px solid #9E9E9E;
             border-right: 1px solid #9E9E9E;
             border-left: 0;
-
+        
             cursor: pointer;
 
             &:hover .bi {
@@ -282,6 +283,11 @@ body .MODAL .POPUP_WRAP_ACTIVE {
                 background: none;
                 position: unset;
             }
+            
+            @include m {
+                right: 3.7rem;
+            }
+            
         }
 
         input {
@@ -329,10 +335,6 @@ body .MODAL .POPUP_WRAP_ACTIVE {
             width: 120px;
             height: 45px;
             font-size: 15px;
-        }
-
-        .SHOWPASS i:nth-child(2) {
-            display: none;
         }
 
 
