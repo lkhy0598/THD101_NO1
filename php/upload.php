@@ -60,7 +60,7 @@ function getCommodityPath($commodity_type , $commodity_folder) {
 
    $ServerRoot = $_SERVER["DOCUMENT_ROOT"];
    // $filePath = "/THD101_NO1/img/shopping_list/" . $commodity_type . "/" . $commodity_folder . "/";
-   $filePath = "https://tibamef2e.com/thd101/g1/dist/img/shopping_list/" . $commodity_type ."/" . $commodity_folder . "/"; //server
+   $filePath = "https://tibamef2e.com/thd101/g1/dist/img/shopping_list/" . $commodity_type . "/" . $commodity_folder . "/"; //server
    $fullPath = $ServerRoot . $filePath;
 
    // 檢查目錄是否存在，如果不存在，則建立目錄
