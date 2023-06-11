@@ -1,7 +1,7 @@
 <?php
 
-include('conn.php');
-// include('connServer.php');
+// include('conn.php');
+include('connServer.php');
 include('upload.php');
 
 // header("Access-Control-Allow-Origin: http://localhost:3000");
