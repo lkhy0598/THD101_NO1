@@ -12,7 +12,6 @@ const app = Vue.createApp({
             },
             quantity: 1, // 新增 quantity 屬性並設置初始值為 1
             count: 1,
-            maxValue: 0
         };
     },
     created() {
@@ -93,7 +92,7 @@ const app = Vue.createApp({
             }
         },
         increaseCount() {
-            if (this.count < this.maxValue) {
+            if (this.count < this.shoppingItems.INVENTORY) {
                 this.count++;
             }
         },
@@ -101,17 +100,14 @@ const app = Vue.createApp({
             if (this.count === "" || isNaN(this.count)) {
                 this.count = 1;
             } else {
-            const numericValue = parseInt(this.count);
+                const numericValue = parseInt(this.count);
                 if (numericValue < 1) {
                     this.count = 1;
-                } else if (numericValue > this.maxValue) {
-                    this.count = this.maxValue;
+                } else if (numericValue > this.shoppingItems.INVENTORY) {
+                    this.count = this.shoppingItems.INVENTORY;
                 }
             }
         }
-    },
-    mounted() {
-        this.maxValue = parseInt(this.$el.querySelector(".STOCK").innerText);
     }
 
 });
