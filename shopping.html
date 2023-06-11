@@ -10,11 +10,13 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/user_popup.js"></script> -->
+
     <link rel="shortcut icon" type="image/png" href="./img/shortcut_logo.png">
     <title>線上購物 SHOPPING - 波波動物醫院</title>
 </head>
 
-<body class="SHOPPING" id="SHOPPINGVUE" onload="showMember()">
+<body class="SHOPPING" onload="showMember()">
     <!-- =============== 共用元件 =============== -->
 
     <!-- ===== 會員彈窗 ===== -->
@@ -36,270 +38,278 @@
     <!-- header -->
     @@include('./layout/header.html')
     <!-- header end -->
+    <div id="SHOPPINGVUE">
+        <!-- =============== 頁首主視覺 =============== -->
+        <section class="CAROUSEL">
+            <div class="SHOPPING_MASTERVISION">
+                <img src="./img/HEADER-TOP.png" alt="">
+                <p class="MASTERVISIONTEXT1">
+                    我們精心挑選、專注品質，<br>
+                    只為讓您的寵物擁有健康、活力、快樂的生活!
+                </p>
 
-    <!-- =============== 頁首主視覺 =============== -->
-    <section class="CAROUSEL">
-        <div class="SHOPPING_MASTERVISION">
-            <img src="./img/HEADER-TOP.png" alt="">
-            <p class="MASTERVISIONTEXT1">
-                我們精心挑選、專注品質，<br>
-                只為讓您的寵物擁有健康、活力、快樂的生活!
-            </p>
-
-            <p class="MASTERVISIONTEXT3">
-                無論是什麼年齡的寵物，<br>
-                我們都有適合的產品供您選擇。<br>
-                在這裡，<br>
-                您可以放心選購，<br>
-                因為我們與您一樣，<br>
-                對寵物的愛與關懷不遺餘力。
-            </p>
-        </div>
-    </section>
-
-    <div class="DOT"></div>
-
-    <!-- =============== 網頁內容 =============== -->
-
-    <!-- header下方區塊的背景 -->
-    <section class="SHOPPINGBG BACKGROUND">
-
-        <div class="BG_CLOUDS">
-            <div class="BG_CLOUD CLOUD_1">
-                <img class="BG_CLOUD_IMG1" src="./img/CLOUD_BG.png" alt="">
+                <p class="MASTERVISIONTEXT3">
+                    無論是什麼年齡的寵物，<br>
+                    我們都有適合的產品供您選擇。<br>
+                    在這裡，<br>
+                    您可以放心選購，<br>
+                    因為我們與您一樣，<br>
+                    對寵物的愛與關懷不遺餘力。
+                </p>
             </div>
-            <div class="BG_CLOUD CLOUD_2">
-                <img class="BG_CLOUD_IMG2" src="./img/CLOUD_BG.png" alt="">
-            </div>
-        </div>
-
-        <!-- ===================================麵包屑====================================== -->
-
-        <section class="BREAD WRAPPER">
-            <a href="homepage.html">首頁</a>
-            /
-            <a>線上購物</a>
         </section>
 
-        <section class="BIG_TITLE WRAPPER">
-            <section class="BIG_TITLE_IMG">
-                <h1>線上購物</h1>
-                <p class="EN">Shopping</p>
+        <div class="DOT"></div>
+
+        <!-- =============== 網頁內容 =============== -->
+
+        <!-- header下方區塊的背景 -->
+        <section class="SHOPPINGBG BACKGROUND">
+
+            <div class="BG_CLOUDS">
+                <div class="BG_CLOUD CLOUD_1">
+                    <img class="BG_CLOUD_IMG1" src="./img/CLOUD_BG.png" alt="">
+                </div>
+                <div class="BG_CLOUD CLOUD_2">
+                    <img class="BG_CLOUD_IMG2" src="./img/CLOUD_BG.png" alt="">
+                </div>
+            </div>
+
+            <!-- ===================================麵包屑====================================== -->
+
+            <section class="BREAD WRAPPER">
+                <a href="homepage.html">首頁</a>
+                /
+                <a>線上購物</a>
             </section>
-        </section>
 
-        <!-- ================================熱門商品======================================= -->
-
-        <section class="SHOPPINGHOT">
-            <section class="SMALL_TITLE WRAPPER">
-                <h2>熱門商品<span class="EN">Popular Product</span></h2>
-                <section class="SHOPPINGHOT_ANI WRAPPER">
-                    <span class="HIPPO ANI"></span>
-                    <span class="HIPPO2 ANI"></span>
+            <section class="BIG_TITLE WRAPPER">
+                <section class="BIG_TITLE_IMG">
+                    <h1>線上購物</h1>
+                    <p class="EN">Shopping</p>
                 </section>
             </section>
-            <section class="SHOPPINGCARDAREA WRAPPER swiper mySwiper">
-                <ul class="SHOPPINGCARDAREA_UL swiper-wrapper">
-                    <li class="SHOPPINGCARD COL-3 swiper-slide">
+
+            <!-- ================================熱門商品======================================= -->
+
+            <section class="SHOPPINGHOT">
+                <section class="SMALL_TITLE WRAPPER">
+                    <h2>熱門商品<span class="EN">Popular Product</span></h2>
+                    <section class="SHOPPINGHOT_ANI WRAPPER">
+                        <span class="HIPPO ANI"></span>
+                        <span class="HIPPO2 ANI"></span>
+                    </section>
+                </section>
+                <section class="SHOPPINGCARDAREA WRAPPER swiper mySwiper">
+                    <ul class="SHOPPINGCARDAREA_UL swiper-wrapper">
+                        <li class="SHOPPINGCARD COL-3 swiper-slide">
+                            <section class="SHOPPINGCARD_IMG">
+                                <span>
+                                    <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
+                                    <p>加入購物車</p>
+                                </span>
+                                <a href="#" class="CARDLINK">
+                                    <img src="./img/shopping_list/can/01/can_01_01.jpg" alt="">
+                                </a>
+                            </section>
+                            <a href="#" class="CARDLINK">
+                                <p class="SHOPPINGCARD_TITLE">耐吉斯 源野獵食客主食罐 犬用(全雞+鮭魚肉絲派佐薑黃) 85g</p>
+                            </a>
+                            <P class="SHOPPINGCARD_PRICE">$53</P>
+                        </li>
+                        <li class="SHOPPINGCARD COL-3 swiper-slide">
+                            <section class="SHOPPINGCARD_IMG">
+                                <span>
+                                    <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
+                                    <p>加入購物車</p>
+                                </span>
+                                <a href="#" class="CARDLINK">
+                                    <img src="./img/shopping_list/can/05/can_05_01.jpg" alt="">
+                                </a>
+                            </section>
+                            <a href="#" class="CARDLINK">
+                                <p class="SHOPPINGCARD_TITLE">MDARYN麥德琳 喵樂-肉食控主食罐(嫩雞鵪鶉) 80g</p>
+                            </a>
+                            <P class="SHOPPINGCARD_PRICE">$58</P>
+                        </li>
+                        <li class="SHOPPINGCARD COL-3 swiper-slide">
+                            <section class="SHOPPINGCARD_IMG">
+                                <span>
+                                    <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
+                                    <p>加入購物車</p>
+                                </span>
+                                <a href="#" class="CARDLINK">
+                                    <img src="./img/shopping_list/dryfood/05/dryfood_05_01.jpg" alt="">
+                                </a>
+                            </section>
+                            <a href="#" class="CARDLINK">
+                                <p class="SHOPPINGCARD_TITLE">【SC星益生趣】無穀凍乾狗糧(三種魚配方) 3.5磅/1.6kg</p>
+                            </a>
+                            <P class="SHOPPINGCARD_PRICE">$1,380</P>
+                        </li>
+                        <li class="SHOPPINGCARD COL-3 swiper-slide">
+                            <section class="SHOPPINGCARD_IMG">
+                                <span>
+                                    <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
+                                    <p>加入購物車</p>
+                                </span>
+                                <a href="#" class="CARDLINK">
+                                    <img src="./img/shopping_list/healthy/02/healthy_02_01.jpg" alt="">
+                                </a>
+                            </section>
+                            <a href="#" class="CARDLINK">
+                                <p class="SHOPPINGCARD_TITLE">沛威狗保健-顧關節 30入/盒</p>
+                            </a>
+                            <P class="SHOPPINGCARD_PRICE">$1,380</P>
+                        </li>
+                        <li class="SHOPPINGCARD COL-3 swiper-slide">
+                            <section class="SHOPPINGCARD_IMG">
+                                <span>
+                                    <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
+                                    <p>加入購物車</p>
+                                </span>
+                                <a href="#" class="CARDLINK">
+                                    <img src="./img/shopping_list/dryfood/07/dryfood_07_01.jpg" alt="">
+                                </a>
+                            </section>
+                            <a href="#" class="CARDLINK">
+                                <p class="SHOPPINGCARD_TITLE">【SC星益生趣】冷凍乾燥狗狗生食佐餐(鮭魚鱈魚) 3.5oz/99g</p>
+                            </a>
+                            <P class="SHOPPINGCARD_PRICE">$720</P>
+                        </li>
+                        <li class="SHOPPINGCARD COL-3 swiper-slide">
+                            <section class="SHOPPINGCARD_IMG">
+                                <span>
+                                    <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
+                                    <p>加入購物車</p>
+                                </span>
+                                <a href="#" class="CARDLINK">
+                                    <img src="./img/shopping_list/can/08/can_08_01.jpg" alt="">
+                                </a>
+                            </section>
+                            <a href="#" class="CARDLINK">
+                                <p class="SHOPPINGCARD_TITLE">MDARYN麥德琳 喵樂-肉食控主食罐(嫩雞鮪魚) 80g</p>
+                            </a>
+                            <P class="SHOPPINGCARD_PRICE">$58</P>
+                        </li>
+                        <li class="SHOPPINGCARD COL-3 swiper-slide">
+                            <section class="SHOPPINGCARD_IMG">
+                                <span>
+                                    <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
+                                    <p>加入購物車</p>
+                                </span>
+                                <a href="#" class="CARDLINK">
+                                    <img src="./img/shopping_list/healthy/04/healthy_04_01.jpg" alt="">
+                                </a>
+                            </section>
+                            <a href="#" class="CARDLINK">
+                                <p class="SHOPPINGCARD_TITLE">沛威狗保健-膚健康 30入/盒</p>
+                            </a>
+                            <P class="SHOPPINGCARD_PRICE">$1,280</P>
+                        </li>
+                        <li class="SHOPPINGCARD COL-3 swiper-slide">
+                            <section class="SHOPPINGCARD_IMG">
+                                <span>
+                                    <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
+                                    <p>加入購物車</p>
+                                </span>
+                                <a href="#" class="CARDLINK">
+                                    <img src="./img/shopping_list/healthy/06/healthy_06_01.jpg" alt="">
+                                </a>
+                            </section>
+                            <a href="#" class="CARDLINK">
+                                <p class="SHOPPINGCARD_TITLE">沛威貓保健-好胃口益生菌 30入/盒</p>
+                            </a>
+                            <P class="SHOPPINGCARD_PRICE">$1,380</P>
+                        </li>
+                    </ul>
+                    <div class="swiper-button">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </section>
+
+
+                <!-- <section class="WRAPPER ">
+                    <button class="BTN SHOPPINGCARDBTN">查看全部熱門商品</button>
+                </section> -->
+
+            </section>
+
+            <!-- ====================================商品列表搜尋================================================== -->
+
+            <section class="SHOPPINGSELECT WRAPPER">
+                <section class="SEARCH_ALL_M">
+                    <label for="search" class="INPUT">
+                        <input type="text" id="searchM" placeholder="搜尋商品" class="SHOPPINGSELECT_SEARCH"
+                            v-model="searchKeyword">
+                    </label>
+                    <section class="SEARCHBTN_ALL">
+                        <i class="bi bi-search SEARCHICON"></i>
+                    </section>
+                </section>
+
+                <label for="pet_category" class="SELECT">
+                    <select id="pet_category" class="SELECTOP" v-model="selectedCategory" @change="filterItems">
+                        <option value="">全部商品</option>
+                        <option value="2">罐頭</option>
+                        <option value="1">乾糧</option>
+                        <option value="3">保健食品</option>
+                    </select>
+                </label>
+                <section class="SEARCH_ALL">
+                    <label for="search" class="INPUT">
+                        <input type="text" id="search" placeholder="搜尋商品" class="SHOPPINGSELECT_SEARCH"
+                            v-model="searchKeyword">
+                    </label>
+                    <section class="SEARCHBTN_ALL">
+                        <i class="bi bi-search SEARCHICON"></i>
+                    </section>
+                </section>
+
+            </section>
+
+            <section class="SHOPPINGSEARCHERR WRAPPER" v-if="displayedItems.length === 0">
+                <h3>很抱歉，無法找到符合您搜尋的結果。請嘗試使用其他關鍵字或調整搜尋條件。</h3>
+            </section>
+
+            <!-- ====================================商品列表P1================================================= -->
+
+            <section class="SHOPPINGITEM WRAPPER">
+                <ul class="SHOPPINGITEM_UL" ref="itemList">
+                    <li class="SHOPPINGCARD COL-4 RWD-COL-6" v-for="item in displayedItems" :key="item.PRODUCT_ID">
                         <section class="SHOPPINGCARD_IMG">
-                            <span>
+                            <span @click="addToCart(item)">
                                 <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
                                 <p>加入購物車</p>
                             </span>
-                            <a href="#" class="CARDLINK">
-                                <img src="./img/shopping_list/can/01/can_01_01.jpg" alt="">
+                            <a :href="'shopping_list.html?id=' + item.PRODUCT_ID" class="CARDLINK">
+                                <img :src="getImagesArray(item.IMG_SOURCE)[0]" :alt="item.PRODUCT_TITLE">
                             </a>
                         </section>
-                        <a href="#" class="CARDLINK">
-                            <p class="SHOPPINGCARD_TITLE">耐吉斯 源野獵食客主食罐 犬用(全雞+鮭魚肉絲派佐薑黃) 85g</p>
+                        <a :href="'shopping_list.html?id=' + item.PRODUCT_ID" class="CARDLINK">
+                            <p class="SHOPPINGCARD_TITLE">{{ item.PRODUCT_TITLE }}</p>
                         </a>
-                        <P class="SHOPPINGCARD_PRICE">$53</P>
-                    </li>
-                    <li class="SHOPPINGCARD COL-3 swiper-slide">
-                        <section class="SHOPPINGCARD_IMG">
-                            <span>
-                                <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
-                                <p>加入購物車</p>
-                            </span>
-                            <a href="#" class="CARDLINK">
-                                <img src="./img/shopping_list/can/05/can_05_01.jpg" alt="">
-                            </a>
-                        </section>
-                        <a href="#" class="CARDLINK">
-                            <p class="SHOPPINGCARD_TITLE">MDARYN麥德琳 喵樂-肉食控主食罐(嫩雞鵪鶉) 80g</p>
-                        </a>
-                        <P class="SHOPPINGCARD_PRICE">$58</P>
-                    </li>
-                    <li class="SHOPPINGCARD COL-3 swiper-slide">
-                        <section class="SHOPPINGCARD_IMG">
-                            <span>
-                                <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
-                                <p>加入購物車</p>
-                            </span>
-                            <a href="#" class="CARDLINK">
-                                <img src="./img/shopping_list/dryfood/05/dryfood_05_01.jpg" alt="">
-                            </a>
-                        </section>
-                        <a href="#" class="CARDLINK">
-                            <p class="SHOPPINGCARD_TITLE">【SC星益生趣】無穀凍乾狗糧(三種魚配方) 3.5磅/1.6kg</p>
-                        </a>
-                        <P class="SHOPPINGCARD_PRICE">$1,380</P>
-                    </li>
-                    <li class="SHOPPINGCARD COL-3 swiper-slide">
-                        <section class="SHOPPINGCARD_IMG">
-                            <span>
-                                <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
-                                <p>加入購物車</p>
-                            </span>
-                            <a href="#" class="CARDLINK">
-                                <img src="./img/shopping_list/healthy/02/healthy_02_01.jpg" alt="">
-                            </a>
-                        </section>
-                        <a href="#" class="CARDLINK">
-                            <p class="SHOPPINGCARD_TITLE">沛威狗保健-顧關節 30入/盒</p>
-                        </a>
-                        <P class="SHOPPINGCARD_PRICE">$1,380</P>
-                    </li>
-                    <li class="SHOPPINGCARD COL-3 swiper-slide">
-                        <section class="SHOPPINGCARD_IMG">
-                            <span>
-                                <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
-                                <p>加入購物車</p>
-                            </span>
-                            <a href="#" class="CARDLINK">
-                                <img src="./img/shopping_list/dryfood/07/dryfood_07_01.jpg" alt="">
-                            </a>
-                        </section>
-                        <a href="#" class="CARDLINK">
-                            <p class="SHOPPINGCARD_TITLE">【SC星益生趣】冷凍乾燥狗狗生食佐餐(鮭魚鱈魚) 3.5oz/99g</p>
-                        </a>
-                        <P class="SHOPPINGCARD_PRICE">$720</P>
-                    </li>
-                    <li class="SHOPPINGCARD COL-3 swiper-slide">
-                        <section class="SHOPPINGCARD_IMG">
-                            <span>
-                                <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
-                                <p>加入購物車</p>
-                            </span>
-                            <a href="#" class="CARDLINK">
-                                <img src="./img/shopping_list/can/08/can_08_01.jpg" alt="">
-                            </a>
-                        </section>
-                        <a href="#" class="CARDLINK">
-                            <p class="SHOPPINGCARD_TITLE">MDARYN麥德琳 喵樂-肉食控主食罐(嫩雞鮪魚) 80g</p>
-                        </a>
-                        <P class="SHOPPINGCARD_PRICE">$58</P>
-                    </li>
-                    <li class="SHOPPINGCARD COL-3 swiper-slide">
-                        <section class="SHOPPINGCARD_IMG">
-                            <span>
-                                <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
-                                <p>加入購物車</p>
-                            </span>
-                            <a href="#" class="CARDLINK">
-                                <img src="./img/shopping_list/healthy/04/healthy_04_01.jpg" alt="">
-                            </a>
-                        </section>
-                        <a href="#" class="CARDLINK">
-                            <p class="SHOPPINGCARD_TITLE">沛威狗保健-膚健康 30入/盒</p>
-                        </a>
-                        <P class="SHOPPINGCARD_PRICE">$1,280</P>
-                    </li>
-                    <li class="SHOPPINGCARD COL-3 swiper-slide">
-                        <section class="SHOPPINGCARD_IMG">
-                            <span>
-                                <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
-                                <p>加入購物車</p>
-                            </span>
-                            <a href="#" class="CARDLINK">
-                                <img src="./img/shopping_list/healthy/06/healthy_06_01.jpg" alt="">
-                            </a>
-                        </section>
-                        <a href="#" class="CARDLINK">
-                            <p class="SHOPPINGCARD_TITLE">沛威貓保健-好胃口益生菌 30入/盒</p>
-                        </a>
-                        <P class="SHOPPINGCARD_PRICE">$1,380</P>
+                        <p class="SHOPPINGCARD_PRICE">${{ item.PRODUCT_PRICE }}</p>
                     </li>
                 </ul>
-                </div class="swiper-button">
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                </div>
-            </section>
-            <!-- <section class="WRAPPER ">
-                <button class="BTN SHOPPINGCARDBTN">查看全部熱門商品</button>
-            </section> -->
-
-        </section>
-
-        <!-- ====================================商品列表搜尋================================================== -->
-
-        <section class="SHOPPINGSELECT WRAPPER">
-            <section class="SEARCH_ALL_M">
-                <label for="search" class="INPUT">
-                    <input type="text" id="searchM" placeholder="搜尋商品" class="SHOPPINGSELECT_SEARCH" v-model="searchKeyword">
-                </label>
-                <section class="SEARCHBTN_ALL">
-                    <i class="bi bi-search SEARCHICON"></i>
-                </section>
             </section>
 
-            <label for="pet_category" class="SELECT">
-                <select id="pet_category" class="SELECTOP" v-model="selectedCategory" @change="filterItems">
-                    <option value="">全部商品</option>
-                    <option value="2">罐頭</option>
-                    <option value="1">乾糧</option>
-                    <option value="3">保健食品</option>
-                </select>
-            </label>
-            <section class="SEARCH_ALL">
-                <label for="search" class="INPUT">
-                    <input type="text" id="search" placeholder="搜尋商品" class="SHOPPINGSELECT_SEARCH" v-model="searchKeyword">
-                </label>
-                <section class="SEARCHBTN_ALL">
-                    <i class="bi bi-search SEARCHICON"></i>
-                </section>
+            <!-- =======================================頁碼========================================== -->
+            <section class="PGAENUMBER WRAPPER" v-if="displayedItems.length > 0">
+                <span>
+                    <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN LEFT"
+                        @click="goToPreviousPage">
+                </span>
+                <p v-for="page in totalPages" :key="page" @click="goToPage(page)"
+                    :class="{ 'current-page': currentPage === page }">{{ page }}</p>
+                <span>
+                    <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN RIGHT"
+                        @click="goToNextPage">
+                </span>
             </section>
-
         </section>
-
-        <section class="SHOPPINGSEARCHERR WRAPPER" v-if="displayedItems.length === 0">
-            <h3>很抱歉，無法找到符合您搜尋的結果。請嘗試使用其他關鍵字或調整搜尋條件。</h3>
-        </section>
-
-        <!-- ====================================商品列表P1================================================= -->
-
-        <section class="SHOPPINGITEM WRAPPER">
-            <ul class="SHOPPINGITEM_UL" ref="itemList">
-                <li class="SHOPPINGCARD COL-4 RWD-COL-6" v-for="item in displayedItems" :key="item.PRODUCT_ID">
-                    <section class="SHOPPINGCARD_IMG">
-                        <span @click="addToCart(item)">
-                            <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
-                            <p>加入購物車</p>
-                        </span>
-                        <a :href="'shopping_list.html?id=' + item.PRODUCT_ID" class="CARDLINK">
-                            <img :src="getImagesArray(item.IMG_SOURCE)[0]" :alt="item.PRODUCT_TITLE">
-                        </a>
-                    </section>
-                    <a :href="'shopping_list.html?id=' + item.PRODUCT_ID" class="CARDLINK">
-                        <p class="SHOPPINGCARD_TITLE">{{ item.PRODUCT_TITLE }}</p>
-                    </a>
-                    <p class="SHOPPINGCARD_PRICE">${{ item.PRODUCT_PRICE }}</p>
-                </li>
-            </ul>
-        </section>
-
-        <!-- =======================================頁碼========================================== -->
-        <section class="PGAENUMBER WRAPPER" v-if="displayedItems.length > 0">
-            <span>
-                <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN LEFT" @click="goToPreviousPage">
-            </span>
-            <p v-for="page in totalPages" :key="page" @click="goToPage(page)" :class="{ 'current-page': currentPage === page }">{{ page }}</p>
-            <span>
-                <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN RIGHT" @click="goToNextPage">
-            </span>
-        </section>
-    </section>
+    </div>
     <!-- ===== TOP按鈕 ===== -->
     <!-- top_btn -->
     @@include('./layout/top_btn.html')
@@ -316,7 +326,6 @@
     <script src="./js/nav.js"></script>
     <script src="./js/user_popup.js"></script>
     <script src="./js/toggle.js"></script>
-    <script src="./js/user_popup.js"></script>
 
     <script>
 
