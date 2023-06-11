@@ -10,7 +10,8 @@ function getMemberPath($memberID) {
    $ServerRoot = $_SERVER["DOCUMENT_ROOT"];
    
    // $filePath = "/THD101_NO1/img/member/" . $memberID ."/"; //本地
-   $filePath = " https://tibamef2e.com/thd101/g1/dist/img/member/" . $memberID ."/"; //server
+   // $filePath = " https://tibamef2e.com/thd101/g1/dist/img/member/" . $memberID ."/"; //server
+   $filePath = " ../dist/img/member/" . $memberID ."/"; //server
 
    $fullPath = $ServerRoot . $filePath;
    // 檢查目錄是否存在，如果不存在，則建立目錄
@@ -29,7 +30,8 @@ function getPetPath($memberID, $petID){
 
    //Apache根目錄之下的檔案存放路徑
    // $filePath = "/THD101_NO1/img/member/". $memberID ."/". $petID ."/";
-   $filePath = " https://tibamef2e.com/thd101/g1/dist/img/member/" . $memberID ."/".$petID ."/";
+   // $filePath = " https://tibamef2e.com/thd101/g1/dist/img/member/" . $memberID ."/".$petID ."/";
+   $filePath = " ../dist/img/member/" . $memberID ."/".$petID ."/";
    
    $fullPath = $ServerRoot . $filePath;
 

@@ -29,6 +29,18 @@ if ($statement->rowCount() > 0) {
 if ($phoneExists) {
    die("電話號碼已存在");
 }
+$mailExists = false;
+$sql = "SELECT * FROM MEMBER WHERE EMAIL = ?";
+$statement = $pdo->prepare($sql);
+$statement->bindValue(1, $newmember_email);
+$statement->execute();
+if ($statement->rowCount() > 0) {
+   $phoneExists = true;
+}
+
+if ($phoneExists) {
+   die("電子信箱已存在");
+}
     
 $sql = "INSERT INTO MEMBER (NAME, PHONENO, EMAIL, ADDRESS, PASSWORD, CREATE_DATE) VALUES (?, ?, ?, ?, ?, CURDATE())";
 
