@@ -300,7 +300,7 @@ function loginSub() {
 
                 console.log(response)
                 alert(response);
-                window.location.href = 'member_center.html';
+                window.location.href = window.location.href;
             } else {
                 console.log(response)
                 alert(response);
@@ -318,12 +318,12 @@ function logoutSub() {
         url: '../php/Logout.php',
         // url: 'http://localhost/THD101_NO1/php/Logout.php',
         type: 'GET',
-        success: function(response) {
+        success: function (response) {
             // 在成功回應後執行以下動作
             alert(response);
-            location.href = '../dist/homepage.html';
+            window.location.href = window.location.href;
         },
-        error: function(xhr, status, error) {
+        error: function (xhr, status, error) {
             // 在錯誤回應時執行以下動作
             alert('登出失敗!');
         }
