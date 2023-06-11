@@ -95,7 +95,6 @@ function NormalReserveSub() {
         success: function (response) {
             alert('預約成功！');
             alert(response);
-
         },
         error: function (exception) {
             alert("ajax發生錯誤" + exception.status);
