@@ -95,17 +95,56 @@
 .SHOPPINGCARD{
     margin-top: 35px;
 
+    @media screen and (max-width: 1300px) {
+        a{
+            line-height: 25px;
+            p.SHOPPINGCARD_TITLE{
+                font-size: 2.2rem;
+                line-height: 25px;
+            }
+        }
+        
+        
+    }
+
+    @media screen and (max-width: 1100px) {
+        a{
+            line-height: 20px;
+            p.SHOPPINGCARD_TITLE{
+                font-size: 2rem;
+                // line-height: 25px;
+            }
+        }
+        
+        
+    }
+
+    @media screen and (max-width: 1050px) {
+        a{
+            line-height: 20px;
+            p.SHOPPINGCARD_TITLE{
+                font-size: 1.7rem;
+                line-height: 20px;
+            }
+        }
+        
+        
+    }
+
     @media (min-width:768px){
     &:hover{
         .CARDLINK img{
             transform: scale(1.05);
             // transition: all .3s ease-in-out;
+            
         }
 
         p.SHOPPINGCARD_TITLE{
             text-decoration: underline;
             text-underline-position: under;
             text-underline-offset: 1px;
+
+            
         }
         }
     }
@@ -160,7 +199,16 @@
                     color: #FFF;
                     }
                     line-height: 50px;
-    
+                @media screen and (max-width: 1300px) {
+                    p{
+                        font-size: 2rem;
+                    }
+                }
+                @media screen and (max-width: 1100px) {
+                    p{
+                        font-size: 1.5rem;
+                    }
+                }
             } 
 
             a{
@@ -179,12 +227,19 @@
 
         a{
             text-decoration: none;
+
+            
+
         .SHOPPINGCARD_TITLE{
             height: 125px;
             font-weight: 700;
             line-height: 34px;
             margin-bottom: 10px;
             color:$blueblack;
+
+            @media screen and (max-width: 1200px) {
+                font-size: 2.2rem;
+            }
 
             @include m {
                 height: 150px;
