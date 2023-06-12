@@ -171,8 +171,6 @@ function searchCommodity(event) {
 
       });
 
-      alert("搜尋成功");
-
     },
 
     error: function (exception) {
