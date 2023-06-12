@@ -2,13 +2,13 @@ $(document).ready(function () {
 
   $('.BACK_ADD_MESSAGE').hide();
 
-  $('.BACK_NAV ul li').eq(0).click(function () {
+  $('.BACK_NAV ul li').eq(0).click(function (event) {
     $('.BACK_ADD_MESSAGE').show();
     $('.BACK_MESSAGE_MANAGEMENT').hide();
     event.preventDefault();
   })
 
-  $('.CANCEL').eq(0).click(function () {
+  $('.CANCEL').eq(0).click(function (event) {
     $('.BACK_MESSAGE_MANAGEMENT').show();
     $('.BACK_ADD_MESSAGE').hide();
   })
@@ -147,8 +147,6 @@ function searchMessage(event) {
 
       });
 
-      alert("搜尋成功");
-
     },
 
     error: function (exception) {
@@ -210,7 +208,7 @@ function doAddMessage() {
 
     success: function (response) {
 
-      console.log(response);
+      // console.log(response);
 
       // 清空表單欄位
       $("#new_message_classification").val("");

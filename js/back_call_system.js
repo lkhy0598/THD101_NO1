@@ -124,4 +124,5 @@ function resetCounters() {
 
   // 更新午夜時間
   midnight.setDate(midnight.getDate() + 1);
+  
 }
