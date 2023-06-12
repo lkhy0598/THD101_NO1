@@ -147,6 +147,8 @@ function searchMessage(event) {
 
       });
 
+      alert("搜尋成功");
+
     },
 
     error: function (exception) {
@@ -228,6 +230,9 @@ function doAddMessage() {
       // 顯示上傳照片按鈕
       uploadButton.style.display = 'inline-block';
       // 顯示成功訊息或其他操作
+
+      alert("新增成功");
+
     },
 
     error: function (error) {

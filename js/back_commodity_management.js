@@ -171,6 +171,8 @@ function searchCommodity(event) {
 
       });
 
+      alert("搜尋成功");
+
     },
 
     error: function (exception) {
@@ -262,6 +264,8 @@ function doAddCommodity() {
       if (!imageTop.hasClass('bi bi-image')) {
         imageTop.html('<i class="bi bi-image"></i>');
       }
+
+      alert("新增成功");
 
     },
 
