@@ -128,22 +128,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // 新增事件至第一週的星期二
         eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(firstWeekTuesday) + 'T' + morningStartTime,
-            end: formatDate(firstWeekTuesday) + 'T' + morningEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(firstWeekTuesday) + 'T' + afternoonStartTime,
-            end: formatDate(firstWeekTuesday) + 'T' + afternoonEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
             title: '林佳緯',
             start: formatDate(firstWeekTuesday) + 'T' + afternoonStartTime,
             end: formatDate(firstWeekTuesday) + 'T' + afternoonEndTime,
@@ -208,22 +192,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // 新增事件至第一週的星期三
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(firstWeekWednesday) + 'T' + morningStartTime,
-            end: formatDate(firstWeekWednesday) + 'T' + morningEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(firstWeekWednesday) + 'T' + afternoonStartTime,
-            end: formatDate(firstWeekWednesday) + 'T' + afternoonEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
         eventList.push({
             title: '詹宗豪',
             start: formatDate(firstWeekWednesday) + 'T' + afternoonStartTime,
@@ -290,22 +258,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // 新增事件至第一週的星期四
         eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(firstWeekThursday) + 'T' + afternoonStartTime,
-            end: formatDate(firstWeekThursday) + 'T' + afternoonEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(firstWeekThursday) + 'T' + eveningStartTime,
-            end: formatDate(firstWeekThursday) + 'T' + eveningEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
             title: '范植鑫',
             start: formatDate(firstWeekThursday) + 'T' + afternoonStartTime,
             end: formatDate(firstWeekThursday) + 'T' + afternoonEndTime,
@@ -371,22 +323,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // 新增事件至第一週的星期五
         eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(firstWeekFriday) + 'T' + morningStartTime,
-            end: formatDate(firstWeekFriday) + 'T' + morningEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(firstWeekFriday) + 'T' + afternoonStartTime,
-            end: formatDate(firstWeekFriday) + 'T' + afternoonEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
             title: '范植鑫',
             start: formatDate(firstWeekFriday) + 'T' + afternoonStartTime,
             end: formatDate(firstWeekFriday) + 'T' + afternoonEndTime,
@@ -451,22 +387,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // 新增事件至第一週的星期六
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(firstWeekSaturday) + 'T' + morningStartTime,
-            end: formatDate(firstWeekSaturday) + 'T' + morningEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(firstWeekSaturday) + 'T' + afternoonStartTime,
-            end: formatDate(firstWeekSaturday) + 'T' + afternoonEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
         eventList.push({
             title: '汪玉婷',
             start: formatDate(firstWeekSaturday) + 'T' + morningStartTime,
@@ -582,22 +502,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // 新增事件至第二週的星期二
         eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(secondWeekTuesday) + 'T' + morningStartTime,
-            end: formatDate(secondWeekTuesday) + 'T' + morningEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(secondWeekTuesday) + 'T' + afternoonStartTime,
-            end: formatDate(secondWeekTuesday) + 'T' + afternoonEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
             title: '林佳緯',
             start: formatDate(secondWeekTuesday) + 'T' + afternoonStartTime,
             end: formatDate(secondWeekTuesday) + 'T' + afternoonEndTime,
@@ -662,22 +566,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // 新增事件至第二週的星期三
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(secondWeekWednesday) + 'T' + morningStartTime,
-            end: formatDate(secondWeekWednesday) + 'T' + morningEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(secondWeekWednesday) + 'T' + afternoonStartTime,
-            end: formatDate(secondWeekWednesday) + 'T' + afternoonEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
         eventList.push({
             title: '詹宗豪',
             start: formatDate(secondWeekWednesday) + 'T' + afternoonStartTime,
@@ -744,22 +632,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // 新增事件至第二週的星期四
         eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(secondWeekThursday) + 'T' + afternoonStartTime,
-            end: formatDate(secondWeekThursday) + 'T' + afternoonEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(secondWeekThursday) + 'T' + eveningStartTime,
-            end: formatDate(secondWeekThursday) + 'T' + eveningEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
             title: '范植鑫',
             start: formatDate(secondWeekThursday) + 'T' + afternoonStartTime,
             end: formatDate(secondWeekThursday) + 'T' + afternoonEndTime,
@@ -825,22 +697,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // 新增事件至第二週的星期五
         eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(secondWeekFriday) + 'T' + morningStartTime,
-            end: formatDate(secondWeekFriday) + 'T' + morningEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(secondWeekFriday) + 'T' + afternoonStartTime,
-            end: formatDate(secondWeekFriday) + 'T' + afternoonEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
             title: '范植鑫',
             start: formatDate(secondWeekFriday) + 'T' + afternoonStartTime,
             end: formatDate(secondWeekFriday) + 'T' + afternoonEndTime,
@@ -905,22 +761,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // 新增事件至第二週的星期六
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(secondWeekSaturday) + 'T' + morningStartTime,
-            end: formatDate(secondWeekSaturday) + 'T' + morningEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(secondWeekSaturday) + 'T' + afternoonStartTime,
-            end: formatDate(secondWeekSaturday) + 'T' + afternoonEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
         eventList.push({
             title: '范植鑫',
             start: formatDate(secondWeekSaturday) + 'T' + morningStartTime,
@@ -1036,22 +876,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // 新增事件至第三週的星期二
         eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(thirdWeekTuesday) + 'T' + morningStartTime,
-            end: formatDate(thirdWeekTuesday) + 'T' + morningEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(thirdWeekTuesday) + 'T' + afternoonStartTime,
-            end: formatDate(thirdWeekTuesday) + 'T' + afternoonEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
             title: '林佳緯',
             start: formatDate(thirdWeekTuesday) + 'T' + afternoonStartTime,
             end: formatDate(thirdWeekTuesday) + 'T' + afternoonEndTime,
@@ -1116,22 +940,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // 新增事件至第三週的星期三
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(thirdWeekWednesday) + 'T' + morningStartTime,
-            end: formatDate(thirdWeekWednesday) + 'T' + morningEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(thirdWeekWednesday) + 'T' + afternoonStartTime,
-            end: formatDate(thirdWeekWednesday) + 'T' + afternoonEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
         eventList.push({
             title: '詹宗豪',
             start: formatDate(thirdWeekWednesday) + 'T' + afternoonStartTime,
@@ -1198,22 +1006,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // 新增事件至第三週的星期四
         eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(thirdWeekThursday) + 'T' + afternoonStartTime,
-            end: formatDate(thirdWeekThursday) + 'T' + afternoonEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(thirdWeekThursday) + 'T' + eveningStartTime,
-            end: formatDate(thirdWeekThursday) + 'T' + eveningEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
             title: '范植鑫',
             start: formatDate(thirdWeekThursday) + 'T' + afternoonStartTime,
             end: formatDate(thirdWeekThursday) + 'T' + afternoonEndTime,
@@ -1279,22 +1071,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // 新增事件至第三週的星期五
         eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(thirdWeekFriday) + 'T' + morningStartTime,
-            end: formatDate(thirdWeekFriday) + 'T' + morningEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(thirdWeekFriday) + 'T' + afternoonStartTime,
-            end: formatDate(thirdWeekFriday) + 'T' + afternoonEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
             title: '范植鑫',
             start: formatDate(thirdWeekFriday) + 'T' + afternoonStartTime,
             end: formatDate(thirdWeekFriday) + 'T' + afternoonEndTime,
@@ -1359,22 +1135,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // 新增事件至第三週的星期六
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(thirdWeekSaturday) + 'T' + morningStartTime,
-            end: formatDate(thirdWeekSaturday) + 'T' + morningEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
-        eventList.push({
-            title: '羅婉瑜',
-            start: formatDate(thirdWeekSaturday) + 'T' + afternoonStartTime,
-            end: formatDate(thirdWeekSaturday) + 'T' + afternoonEndTime,
-            allDay: false,
-            description: '無診間'
-        });
-
         eventList.push({
             title: '范植鑫',
             start: formatDate(thirdWeekSaturday) + 'T' + morningStartTime,

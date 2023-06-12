@@ -7,17 +7,25 @@ function changeReserveType() {
   var reserveType = document.getElementById("reserve_type").value;
   var doctorChoices = document.getElementById("doctor_choices");
 
+  var calendar = document.getElementById("calendar");
+  var calendar2 = document.getElementById("calendar2");
+
   // 清空原有的選項
   doctorChoices.innerHTML = "";
 
-  // 根據選擇的預約類型動態添加選項
+  // 根據選擇的預約類型動態添加選項並顯示對應溝通師或獸醫師班表
   if (reserveType === "寵物溝通") {
     var option1 = document.createElement("option");
     option1.value = "羅婉瑜";
     option1.text = "羅婉瑜";
     doctorChoices.appendChild(option1);
 
-  } else {
+    // //顯示溝通師的班表
+    calendar.classList.add("hidden");
+    calendar2.classList.add("hidden");
+    calendar2.classList.toggle("hiden");
+
+  } else if (reserveType === "一般掛號") {
     // 一般掛號類型的選項
     var option2 = document.createElement("option");
     option2.value = "不指定";
@@ -53,6 +61,11 @@ function changeReserveType() {
     option8.value = "賴偉峰";
     option8.text = "賴偉峰";
     doctorChoices.appendChild(option8);
+
+    //顯示獸醫師的班表
+    calendar.classList.add("hidden");
+    calendar2.classList.add("hidden");
+    calendar.classList.toggle("hidden");
   }
 }
 
