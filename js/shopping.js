@@ -93,6 +93,9 @@ const app = Vue.createApp({
             const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
             const existingItemIndex = cartItems.findIndex(cartItem => cartItem.PRODUCT_ID === item.PRODUCT_ID);
             let showAlert = true; // 用于跟踪是否已经弹出过警告信息
+            if (item.INVENTORY === 0) {
+                return;
+            }
 
             if (existingItemIndex !== -1) {
                 const existingItem = cartItems[existingItemIndex];

@@ -279,7 +279,7 @@
                 <ul class="SHOPPINGITEM_UL" ref="itemList">
                     <li class="SHOPPINGCARD COL-4 RWD-COL-6" v-for="item in displayedItems" :key="item.PRODUCT_ID">
                         <section class="SHOPPINGCARD_IMG">
-                            <span @click="addToCart(item)">
+                            <span @click="addToCart(item)" :class="{ 'SHOPPINGCARD_ZERO': item && item.INVENTORY === 0 }">
                                 <i class="bi bi-cart-fill SHOPPINGCART_ICON"></i>
                                 <p>加入購物車</p>
                             </span>
