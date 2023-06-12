@@ -74,11 +74,15 @@
         }
 
         .SHOPPINGLIST_SMALLIMG{
-            display: flex;
-            flex-direction: column;
+            // display: flex;
+            // flex-direction: column;
             justify-content: space-between;
             width: 8.5%;
             margin-right: 10px;
+
+            .LIGHTBOX{
+                margin-bottom: 15px;
+            }
 
             section{
                 cursor: pointer;
@@ -206,30 +210,144 @@
                 color: $blueblack;
                 line-height: 58px;
                 margin-bottom: 45px;
+
+                @media screen and (max-width: 1900px) {
+                    margin-bottom: 35px;
+                }
+
+                @media screen and (max-width: 1800px) {
+                    margin-bottom: 25px;
+                }
+
+                @media screen and (max-width: 1700px) {
+                    margin-bottom: 15px;
+                }
+
+                @media screen and (max-width: 1600px) {
+                    font-size: 3.2rem;
+                }
+
+                @media screen and (max-width: 1500px) {
+                    font-size: 2.8rem;
+                    line-height: 48px;
+                }
+
+                @media screen and (max-width: 1400px) {
+                    font-size: 2.4rem;
+                    line-height: 33px;
+                }
+
+                @media screen and (max-width: 1200px) {
+                    font-size: 2.2rem;
+                    line-height: 33px;
+                }
+
+                @media screen and (max-width: 1100px) {
+                    font-size: 2rem;
+                    line-height: 23px;
+                }
             }
 
             h1{
                 color:$redprice;
                 margin-bottom: 53px;
+
+                @media screen and (max-width: 1900px) {
+                    margin-bottom: 43px;
+                }
+
+                @media screen and (max-width: 1800px) {
+                    margin-bottom: 33px;
+                }
+
+                @media screen and (max-width: 1700px) {
+                    margin-bottom: 23px;
+                }
+
+                @media screen and (max-width: 1600px) {
+                    font-size: 4rem;
+                }
+
+                @media screen and (max-width: 1500px) {
+                    font-size: 3.5rem;
+                }
+
+                @media screen and (max-width: 1400px) {
+                    font-size: 3rem;
+                }
+
+                @media screen and (max-width: 1300px) {
+                    margin-bottom: 13px;
+                }
+
+                @media screen and (max-width: 1200px) {
+                    font-size: 2.5rem;
+                }
+
+                @media screen and (max-width: 1100px) {
+                    font-size: 2rem;
+                }
+
+                
             }
 
             h3{
                 color: $blueblack;
                 margin-bottom: 20px;
 
+                @media screen and (max-width: 1900px) {
+                    margin-bottom: 15px;
+                }
+
+                @media screen and (max-width: 1800px) {
+                    margin-bottom: 10px;
+                }
+
+                @media screen and (max-width: 1600px) {
+                    font-size: 2.8rem;
+                }
+
+                @media screen and (max-width: 1500px) {
+                    font-size: 2.6rem;
+                }
+
+                @media screen and (max-width: 1400px) {
+                    font-size: 2.4rem;
+                }
+
+                @media screen and (max-width: 1200px) {
+                    font-size: 2rem;
+                }
+
+                @media screen and (max-width: 1100px) {
+                    font-size: 1.7rem;
+                }
+
             }
 
             .ITEMCOUNT_BTN{
                 margin-bottom: 20px;
+                @media screen and (max-width: 1100px) {
+                    margin-bottom: 10px;
+                }
 
             }
 
             .SHOPPINGLIST_CARTBTN{
                 margin-bottom: 40px;
+
+                @media screen and (max-width: 1550px) {
+                    margin-bottom: 26px;
+                }
+
+                @media screen and (max-width: 1250px) {
+                    margin-bottom: 18px;
+                }
                 .BTN{
                 width: 100%;
                 background: $linear-orange;
                 font-weight: 700;
+                
                 &:hover{
                     background: $linear-orange-hover;
                     color: $white;
@@ -243,18 +361,26 @@
 
             .SHOPPINGLIST_SHARE{
                 display: flex;
+                
                 p{
                     margin-right: 20px;
+                    @media screen and (max-width: 1050px) {
+                        font-size: 1.7rem;
+                    }
                 }
 
                 a{  
                     display: inline-block;
                     margin-right: 20px;
                     width: 25px;
+                    @media screen and (max-width: 1050px) {
+                        width: 20px;
+                    }
                     
                     img{
                         display: inline-block;
                         width: 100%;
+                    }
 
                     }
                 }
@@ -270,6 +396,31 @@
             }
         }
         
+
+
+        .swiper-button-prev{
+            top: var(--swiper-navigation-top-offset,38%);
+            left: 5px;
+            color: $orange;
+            font-weight: 600;
+    
+            @include m {
+                display: none;
+            }
+        
+        }
+        
+        .swiper-button-next{
+            top: var(--swiper-navigation-top-offset,38%);
+            color: $orange;
+            right: 5px;
+            font-weight: 600;
+    
+            @include m {
+                display: none;
+            }
+        
+        }
     }
 
 // ======================================================================
@@ -331,29 +482,10 @@
         }
     }
 
-    .swiper-button-prev{
-        top: var(--swiper-navigation-top-offset,38%);
-        left: 5px;
-        color: $orange;
-        font-weight: 600;
 
-        @include m {
-            display: none;
-        }
     
-    }
-    
-    .swiper-button-next{
-        top: var(--swiper-navigation-top-offset,38%);
-        color: $orange;
-        right: 5px;
-        font-weight: 600;
 
-        @include m {
-            display: none;
-        }
-    
-    }
+
 
 
 // ===================================================================
@@ -452,4 +584,5 @@
         display: block;
     }
 
-}
+
+
