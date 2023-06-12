@@ -1,20 +1,20 @@
 // $(document).ready(function () {
 // =================== 前端版面操控功能 ===================
 var changePassCheck = false;
-console.log(changePassCheck);
+// console.log(changePassCheck);
 // ====== 密碼關閉隱藏功能 ======
 $(".SHOWPASS").click(function () {
-    console.log('aaa')
+    // console.log('aaa')
     var passwordField = $(this).siblings(".PASSWORD");
     var icon = $(this).find("i");
     var fieldType = passwordField.attr("type");
 
     if (fieldType === "password") {
-        console.log('bbb')
+        // console.log('bbb')
         passwordField.attr("type", "text");
         icon.removeClass("bi-eye-fill").addClass("bi-eye-slash-fill");
     } else {
-        console.log('ccc')
+        // console.log('ccc')
         passwordField.attr("type", "password");
         icon.removeClass("bi-eye-slash-fill").addClass("bi-eye-fill");
     }
