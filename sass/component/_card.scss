@@ -209,6 +209,7 @@
                         font-size: 1.5rem;
                     }
                 }
+
             } 
 
             a{
@@ -252,6 +253,13 @@
         line-height: 34px;
         color: $redprice;
         text-align: right;
+    }
+
+    span.SHOPPINGCARD_ZERO{
+        background-color:#727272;
+        &:hover{
+            background-color:#727272;
+        }
     }
 
 
