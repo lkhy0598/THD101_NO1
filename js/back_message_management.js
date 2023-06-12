@@ -123,7 +123,7 @@ function searchMessage(event) {
     dataType: "json",
 
     success: function (response) {
-      console.log(response);  
+      // console.log(response);  
 
       // 更新html內容前先清空原有資料
       $("#message_result").html("");
@@ -198,9 +198,6 @@ function doAddMessage() {
   formData.append("new_message_title", new_message_title);
   formData.append("new_message_content", new_message_content);
 
-  // console.log(formData);
-
-
   $.ajax({
     method: "POST",
     // url: "http://localhost/THD101_NO1/php/back_add_message.php",
@@ -233,8 +230,8 @@ function doAddMessage() {
       // 顯示成功訊息或其他操作
     },
 
-    error: function (exception) {
-      alert("新增失敗: " + exception.status);
+    error: function (error) {
+      alert("新增失敗: " + error.status);
     }
 
   });

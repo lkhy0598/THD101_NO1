@@ -6,6 +6,7 @@ include('connServer.php');
 // header("Access-Control-Allow-Origin: http://localhost:3000");
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
+header('Content-Type: application/json');
 header("Access-Control-Allow-Headers: Content-Type");
 
 $message_number = $_POST['message_number'];
@@ -60,8 +61,6 @@ if ($message_number !== '' || $message_classification !== '' || $message_status 
    $statement->execute();
  
    $data = $statement->fetchAll();
- 
-  
  
    echo json_encode($data);
    

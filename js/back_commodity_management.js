@@ -147,7 +147,7 @@ function searchCommodity(event) {
     dataType: "json",
 
     success: function (response) {
-      // console.log(response);  
+      console.log(response);  
 
       // 更新html內容前先清空原有資料
       $("#commodity_result").html("");
