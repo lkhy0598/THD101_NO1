@@ -75,55 +75,6 @@
         display: none;
     }
 
-    //----- 月曆區塊 -----//
-    .CALENDAR_AREA {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 10;
-        // border: 1px solid;
-    }
-
-    #calendar {
-        width: 70%;
-    }
-
-    #calendar a:hover {
-        background-color: transparent;
-    }
-
-    //calendar每日格子中文字
-    #calendar .event-title {
-        margin: auto;
-        letter-spacing: 3.5px;
-        font-size: 2rem;
-    }
-
-    .CALENDAR_INFO {
-        padding-left: 10px;
-    }
-
-    .CALENDAR_INFO p {
-        font-size: 18px;
-        color: #34424F;
-        margin: 10px;
-    }
-
-    .CALENDAR_COLOR_INFO {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 10;
-    }
-
-    .CALENDAR_COLOR_INFO p {
-        font-size: 12px;
-        margin-left: -10px;
-        margin-right: 40px;
-    }
-
     //----- 表單區塊 -----//
     .RESERVE_FORM {
         margin: 30px auto;
@@ -169,6 +120,53 @@
     .RESERVE_FORM ul li:nth-child(3) {
         padding-top: 9px;
     }
+
+    //----- 月曆區塊 -----//
+    .CALENDAR_AREA {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        margin-bottom: 100px;
+        // border: 1px solid;
+    }
+
+    #calendar {
+        width: 80%;
+    }
+
+    #calendar a:hover {
+        background-color: transparent;
+    }
+
+    //calendar每日格子中文字
+    #calendar .event-title {
+        margin: auto;
+        letter-spacing: 3px;
+        font-size: 2rem;
+    }
+
+    .CALENDAR_INFO p {
+        font-size: 18px;
+        color: #34424F;
+        margin-bottom: 50px;
+    }
+
+    // .CALENDAR_COLOR_INFO {
+    //     width: 100%;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     z-index: 10;
+    // }
+
+    // .CALENDAR_COLOR_INFO p {
+    //     font-size: 12px;
+    //     margin-left: -10px;
+    //     margin-right: 40px;
+    // }
 
     .RESERVE_FORM .STEPS {
         display: flex;
@@ -250,40 +248,49 @@
             }
 
         }
-    }
 
-    .CALENDAR_AREA {
+        .RESERVE_FORM {
+            ul {
+                margin-bottom: 0;
 
-        #calendar {
-
-            font-size: 14px;
-
-            a {
-                font-size: 12px;
+                li {
+                    padding-left: 32px;
+                }
             }
 
+            .CALENDAR_AREA {
+                .CALENDAR_INFO {
+                    padding-left: 10px;
+                }
+    
+                #calendar {
+                    width: 100%;
+                    height: auto;
+                    font-size: 10px;
+        
+                    a {
+                        font-size: 10px;
+                    }
+        
+                }
+        
+                //calendar每日格子中文字
+                #calendar .event-title {
+                    margin: auto;
+                    letter-spacing: 1px;
+                    font-size: 1rem;
+                }
+        
+            }
         }
 
-        //calendar每日格子中文字
-        #calendar .event-title {
-            margin: auto;
-            letter-spacing: 1px;
-            font-size: 1rem;
+       
+    
+        .FOOTER_BOTTOM {
+            margin-bottom: 0px;
         }
-
-        .CALENDAR_INFO {
-            padding-top: 20px;
-            padding-left: 50px;
-        }
-
     }
 
-    .RESERVE_FORM ul li {
-        padding-left: 32px;
-    }
-
-    .FOOTER_BOTTOM {
-        margin-bottom: 0px;
-    }
+    
 
 }

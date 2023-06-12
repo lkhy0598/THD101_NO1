@@ -35,7 +35,7 @@
     @@include('./layout/reserve_info_module.html')
 
     <!-------  預約步驟 ------->
-   
+
     <section class="RESERVE_STEPAREA">
       <section class="RESERVE_ARC" id="ARCONE">
         <div class="ARC_TITLE">1</div>
@@ -55,73 +55,70 @@
       </section>
     </section>
 
-
-    <!-- ========月曆區塊======== -->
-    <section class="CALENDAR_AREA">
-      <div id='calendar'></div>
-      <div class="CALENDAR_INFO">
-        <p>請點選欲預約的日期</p>
-        <div class="CALENDAR_COLOR_INFO">
-          <p>*紅色為休診日</p>
-          <p>*灰色為當日滿診</p>
-        </div>
-      </div>
-
-    </section>
-
-
     <!-- ========表單區塊======== -->
     <form action="">
-    <section class="RESERVE_FORM">
+      <section class="RESERVE_FORM">
 
-      <ul>
-        <li>
-          <label for="reserve_type" class="SELECT">預約類型<br>
-            <select name="reserve_type" id="reserve_type" onchange="changeReserveType()">
-              <option value="" style="display: none">請選擇類型</option>
-              <option value="一般掛號">一般掛號</option>
-              <option value="寵物溝通">寵物溝通</option>
-            </select>
-          </label>
-        </li>
-        <li>
-          <label for="doctor_choices" class="SELECT">指定醫師<br>
-            <select name="doctor_choices" id="doctor_choices">
-              <option value="不指定">不指定</option>
-              <option value="林佳緯">林佳緯</option>
-              <option value="詹宗豪">詹宗豪</option>
-              <option value="林育楣">林育楣</option>
-              <option value="汪玉婷">汪玉婷</option>
-              <option value="范植鑫">范植鑫</option>
-              <option value="賴偉峰">賴偉峰</option>
-            </select>
-          </label>
-        </li>
-        <li>
-          <label for="reserve_date" class="INPUT">預約日期<br>
-            <input type="date" name="reserve_date" id="reserve_date">
-          </label>
-        </li>
+        <ul>
+          <li>
+            <label for="reserve_type" class="SELECT">預約類型<br>
+              <select name="reserve_type" id="reserve_type" onchange="changeReserveType()">
+                <option value="" style="display: none">請選擇類型</option>
+                <option value="一般掛號">一般掛號</option>
+                <option value="寵物溝通">寵物溝通</option>
+              </select>
+            </label>
+          </li>
+          <li>
+            <label for="doctor_choices" class="SELECT">指定醫師<br>
+              <select name="doctor_choices" id="doctor_choices">
+                <option value="不指定">不指定</option>
+                <option value="林佳緯">林佳緯</option>
+                <option value="詹宗豪">詹宗豪</option>
+                <option value="林育楣">林育楣</option>
+                <option value="汪玉婷">汪玉婷</option>
+                <option value="范植鑫">范植鑫</option>
+                <option value="賴偉峰">賴偉峰</option>
+              </select>
+            </label>
+          </li>
+          <li>
+            <label for="reserve_date" class="INPUT">預約日期<br>
+              <input type="date" name="reserve_date" id="reserve_date">
+            </label>
+          </li>
 
-        <li>
-          <label for="reserve_time" class="SELECT">預約時段<br>
-            <select name="reserve_time" id="reserve_time">
-              <option value="" style="display: none">請選擇時段</option>
-              <option value="上午">09:00~12:00</option>
-              <option value="下午">14:00~18:00</option>
-              <option value="夜間">19:00~21:00</option>
-            </select>
-          </label>
-        </li>
-      </ul>
+          <li>
+            <label for="reserve_time" class="SELECT">預約時段<br>
+              <select name="reserve_time" id="reserve_time">
+                <option value="" style="display: none">請選擇時段</option>
+                <option value="上午">09:00~12:00</option>
+                <option value="下午">14:00~18:00</option>
+                <option value="夜間">19:00~21:00</option>
+              </select>
+            </label>
+          </li>
+        </ul>
 
-      <div class="STEPS">
-        <input type="button" value="上一步" style="color: #888">
-        <input class="BTN" type="button" value="下一步" onclick="ReserveGrabData(); RecognizingType(); ">
-      </div>
-    </section>  
+        <!-- ========月曆區塊======== -->
+        <section class="CALENDAR_AREA">
+          <div class="CALENDAR_INFO">
+            <p>請點選欲預約的日期以顯示當日班表</p>
+            <div class="CALENDAR_COLOR_INFO">
+              <!-- <p>*紅色為休診日</p>
+              <p>*灰色為當日滿診</p> -->
+            </div>
+          </div>
+          <div id='calendar'></div>
+        </section>
+
+        <div class="STEPS">
+          <input type="button" value="上一步" style="color: #888">
+          <input class="BTN" type="button" value="下一步" onclick="ReserveGrabData(); RecognizingType(); ">
+        </div>
+      </section>
     </form>
-    
+
 
   </section>
   <!-- ===== TOP按鈕 ===== -->
@@ -141,7 +138,7 @@
   <script src="./js/appointment.js"></script>
   <script src="./js/locales-all.global.js"></script>
   <script src="./js/reserve_schedule.js"></script>
-  <script src="./js/reserve_grab_data.js"></script> 
+  <script src="./js/reserve_grab_data.js"></script>
 
 </body>
 
