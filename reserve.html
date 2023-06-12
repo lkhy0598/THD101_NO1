@@ -63,7 +63,7 @@
           <li>
             <label for="reserve_type" class="SELECT">預約類型<br>
               <select name="reserve_type" id="reserve_type" onchange="changeReserveType()">
-                <option value="" style="display: none">請選擇類型</option>
+                <option value="0" style="display: none">請選擇類型</option>
                 <option value="一般掛號">一般掛號</option>
                 <option value="寵物溝通">寵物溝通</option>
               </select>
@@ -103,13 +103,16 @@
         <!-- ========月曆區塊======== -->
         <section class="CALENDAR_AREA">
           <div class="CALENDAR_INFO">
-            <p>請點選欲預約的日期以顯示當日班表</p>
+            <p>請點選欲預約的類型以顯示醫師或溝通師班表</p>
             <div class="CALENDAR_COLOR_INFO">
               <!-- <p>*紅色為休診日</p>
               <p>*灰色為當日滿診</p> -->
             </div>
           </div>
-          <div id='calendar'></div>
+
+          <div id="calendar" ></div>
+          <div id="calendar2" ></div>
+          <!-- class="hidden" -->
         </section>
 
         <div class="STEPS">
@@ -138,6 +141,7 @@
   <script src="./js/appointment.js"></script>
   <script src="./js/locales-all.global.js"></script>
   <script src="./js/reserve_schedule.js"></script>
+  <script src="./js/reserve_schedule2.js"></script>
   <script src="./js/reserve_grab_data.js"></script>
 
 </body>
