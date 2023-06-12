@@ -47,7 +47,7 @@ function getPetPath($memberID, $petID){
 function getMessagePath($news_type) {
 
    $ServerRoot = $_SERVER["DOCUMENT_ROOT"];
-   $filePath = "/THD101_NO1/img/information/" . $news_type ."/";
+   // $filePath = "/THD101_NO1/img/information/" . $news_type ."/";
    // $filePath = "https://tibamef2e.com/thd101/g1/dist/img/information/" . $news_type . "/"; //server
    $filePath = "../dist/img/information/" . $news_type . "/"; //server
    $fullPath = $ServerRoot . $filePath;
