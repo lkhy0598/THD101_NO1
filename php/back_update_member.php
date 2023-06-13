@@ -1,13 +1,12 @@
 <?php
 
-// include('conn.php');
-include('connServer.php');
-include('upload.php');
+include('conn.php');
+// include('connServer.php');
 ini_set("display_errors", "On");
 // header("Access-Control-Allow-Origin: http://localhost:3000");
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: POST");
-header("Access-Control-Allow-Headers: Content-Type");
+// header("Access-Control-Allow-Origin: *");
+// header("Access-Control-Allow-Methods: POST");
+// header("Access-Control-Allow-Headers: Content-Type");
 
 $memberID = isset($_POST['member_id']) ? $_POST['member_id'] : '';
 $name_revise = isset($_POST['name_revise']) ? $_POST['name_revise'] : '';
@@ -15,10 +14,7 @@ $phone_revise = isset($_POST['phone_revise']) ? $_POST['phone_revise'] : '';
 $email_revise = isset($_POST['email_revise']) ? $_POST['email_revise'] : '';
 $address_revise = isset($_POST['address_revise']) ? $_POST['address_revise'] : '';
 
-// 返回訊息文字
-
-// $message = "修改成功!";
-$picture_name = '';
+$fileName = '';
 
 if(isset($_FILES["member_pic_revise"])){
 
@@ -27,38 +23,30 @@ if(isset($_FILES["member_pic_revise"])){
        //返回訊息文字
        $message = "上傳失敗: 錯誤代碼".$_FILES["member_pic_revise"]["error"];
    }else{
+
+      $fileName = $_FILES["member_pic_revise"]["name"];    
+      $filePath_Temp = $_FILES["member_pic_revise"]["tmp_name"];  
       // 欲放置的檔案路徑up
-      $filePath = getMemberPath($memberID).$_FILES["member_pic_revise"]["name"];
-      
-      $fileName = "./img/member/". $memberID ."/".$_FILES["member_pic_revise"]["name"];
-      // $fileName = "https://tibamef2e.com/thd101/g1/dist/img/member/". $memberID ."/".$_FILES["member_pic_revise"]["name"];
+      $Path = "../dist/img/member/" . $memberID ."/"; 
 
-      //將暫存檔搬移到正確位置
-      if(move_uploaded_file($_FILES["member_pic_revise"]["tmp_name"], $filePath)){
+      if (!is_dir($Path)) {
 
-         //修改後的商品圖片名稱
-         $picture_name = $fileName;
-
-         // echo $fileName;
-         // echo $filePath;
-
-      }else{
-
-         $message = "拷貝/移動上傳圖片失敗";
-
+         mkdir($Path, 0777, true); // 設置適當的權限
       }
    }
+      $filePath = $Path . $fileName;
+      //  $fileName = "./img/member/". $memberID ."/".$_FILES["member_pic_revise"]["name"];
+      move_uploaded_file($filePath_Temp, $filePath);
 
 }
 
  
-
    $sql = "UPDATE MEMBER SET NAME = ?, PHONENO = ?, EMAIL = ?, ADDRESS = ?";
       $values = [$name_revise, $phone_revise, $email_revise, $address_revise];
    
-      if (!empty($picture_name)) {
+      if ($fileName !== '') {
          $sql .= ", MEMBER_AVATAR = ?";
-         $values[] = $picture_name;
+         $values[] = $fileName;
       }
    
       $sql .= " WHERE MEMBER_ID = ?";

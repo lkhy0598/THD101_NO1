@@ -1,13 +1,12 @@
 <?php
-
-// include('conn.php');
-include('connServer.php');
-include('upload.php');
 ini_set("display_errors", "On");
+include('conn.php');
+// include('connServer.php');
+
 // header("Access-Control-Allow-Origin: http://localhost:3000");
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: POST");
-header("Access-Control-Allow-Headers: Content-Type");
+// header("Access-Control-Allow-Origin: *");
+// header("Access-Control-Allow-Methods: POST");
+// header("Access-Control-Allow-Headers: Content-Type");
 
 $memberID = isset($_POST['member_id_pet']) ? $_POST['member_id_pet'] : '';
 $petID = isset($_POST['pet_id']) ? $_POST['pet_id'] : '';
@@ -17,32 +16,31 @@ $pet_gender_revise= isset($_POST['pet_gender_revise']) ? $_POST['pet_gender_revi
 $pet_category_revise = isset($_POST['pet_category_revise']) ? $_POST['pet_category_revise'] : '';
 $pet_age_revise = isset($_POST['pet_age_revise']) ? $_POST['pet_age_revise'] : '';
 
-$picture_name_pet = '';
+$fileName = '';
 
 if(isset($_FILES["pet_pic_revise"])){
 
    //判斷圖片是否上傳成功?
    if($_FILES["pet_pic_revise"]["error"] > 0){
-       //返回訊息文字
+       
        $message = "上傳失敗: 錯誤代碼".$_FILES["pet_pic_revise"]["error"];
    }else{
+
+      $fileName = $_FILES["pet_pic_revise"]["name"];    
+      $filePath_Temp = $_FILES["pet_pic_revise"]["tmp_name"];  
       // 欲放置的檔案路徑up
-      $filePath = getPetPath($memberID, $petID).$_FILES["pet_pic_revise"]["name"];
+
+      $Path = "../dist/img/member/" . $memberID ."/" .$petID . "/"; //server
       
-      $fileName = "./img/member/". $memberID ."/". $petID . "/".$_FILES["pet_pic_revise"]["name"];
-      // $fileName = "https://tibamef2e.com/thd101/g1/dist/img/member/". $memberID ."/". $petID . "/".$_FILES["picture_name_pet"]["name"];
-      // $fileName = "./img/member/". $memberID ."/". $petID . "/".$_FILES["picture_name_pet"]["name"];
-      //將暫存檔搬移到正確位置
-      if(move_uploaded_file($_FILES["pet_pic_revise"]["tmp_name"], $filePath)){
+      if (!is_dir($Path)) {
 
-         //修改後的商品圖片名稱
-         $picture_name_pet = $fileName;
-
-      }else{
-
-         $message = "拷貝/移動上傳圖片失敗";
-
+         mkdir($Path, 0777, true); // 設置適當的權限
       }
+      
+      $filePath = $Path . $fileName;
+      // $fileName = "./img/member/". $memberID ."/". $petID . "/".$_FILES["pet_pic_revise"]["name"];
+      //將暫存檔搬移到正確位置
+      move_uploaded_file($filePath_Temp, $filePath);
    }
 
 }
@@ -50,9 +48,9 @@ if(isset($_FILES["pet_pic_revise"])){
       $sql = "UPDATE PET SET PET_NAME = ?, PET_GENDER = ?, PET_CATAGORY = ?, PET_AGE = ?";
       $values = [$pet_name_revise, $pet_gender_revise, $pet_category_revise, $pet_age_revise];
    
-      if (!empty($picture_name_pet)) {
+      if (!empty($fileName)) {
          $sql .= ", PET_AVATAR = ?";
-         $values[] = $picture_name_pet;
+         $values[] = $fileName;
       }
    
       $sql .= " WHERE MEMBER_ID = ?";

@@ -1,66 +1,461 @@
-// 新增會員
-function doAddMember(){
-
-    const newmember_name = $('#newmember_name').val().trim();
-    const newmember_phone = $('#newmember_phone').val().trim();
-    const newmember_email = $('#newmember_email').val().trim();
-    const newmember_address = $('#newmember_address').val().trim();
-
-    if (newmember_name === "") {
-        alert("請輸入姓名");
-        return false;
-    }
-    if (newmember_phone === "") {
-        alert("請輸入手機號碼");
-        return false;
-    }
-    if (newmember_email === "") {
-        alert("請輸入電子信箱");
-        return false;
-    }
-    if (newmember_address === "") {
-        alert("請輸入通訊地址");
-        return false;
-    }
-
-    const formData = new FormData();
-    const files = $('#member_pic')[0].files;
-    formData.append('member_pic', files[0]);
-    formData.append('newmember_name', newmember_name);
-    formData.append('newmember_phone', newmember_phone);
-    formData.append('newmember_email', newmember_email);
-    formData.append('newmember_address', newmember_address);
-    // console.log($('#newmember_name').val());
-    // console.log($('#newmember_phone').val());
-    // console.log($('#newmember_email').val());
-    // console.log($('#newmember_address').val());
-    
-
-    $.ajax({
-        method:"POST",
-        // url:"http://localhost/THD101_NO1/php/back_add_member_pet.php",
-        url:"../php/back_add_member_pet.php",
-        data:formData,
-
-        dataType:"text",
-        // 告訴jQuery不要去處理發送的資料
-        processData : false, 
-        // 告訴jQuery不要去設定Content-Type請求頭
-        contentType : false,
-        success:function(response){
-            alert(response);
-            // console.log(response);
-            location.href = '_back_member_profile.html'
-            // $('.BACK_ADD_NEW_MEMBER').hide();
-            // $('.BACK_MEMBER_PROFILE').show();
-        },
-        error: function(exception) {  
-            alert("發生錯誤: " + exception.status);
+Vue.createApp({
+    data() {
+        return {
+            name: '',
+            phone: '',
+            email: '',
+            address: '',
+            searchPhone: '',
+            searchName: '',
+            searchResult: [],
+            showModify: false,
+            avatar: '',
+            memberID: '',
+            newmember_name:'',
+            newmember_phone:'',
+            newmember_email:'',
+            newmember_address:'',
+            new_pet_phone:'',
+            new_pet_name:'',
+            new_pet_gender:'',
+            new_pet_age:'',
+            new_pet_category:'',
+            new_vaccines:'',
+            searchPetResult: [],
+            showAdd: false,
+            current: 'search',
+            petPhone: '',
+            checkType: 'default',
+            pedID:'',
+            petAvatar:'',
+            pet_phone_revise:'',
+            pet_name_revise:'',
+            pet_gender_revise:'',
+            pet_category_revise:'',
+            pet_age_revise:'',
+            vaccines_revise:'',
+            mask: false,
+            reserve_name: '',
+            reserve_phone:'',
+            reserve_pet_name:'',
+            reserve_pet_category:'',
+            reserve_pet_age:'',
+            reserve_vaccines:'',
+            reserve_type:'',
+            reserve_doctor:'',
+            reserve_date:'',
+            reserve_datetime:'',
+            reserve_member_id:'',
+            reserve_pet_id:'',
+            reserve_symptom_type:'請簡述寵物病情'
         }
-    })
-}
+    },
+    methods: {
+        refreshPage() {
+            location.reload();
+        },
+        doSearch() {
+            const searchData = new FormData();
+            searchData.append('phone', this.searchPhone);
+            searchData.append('name', this.searchName);
+
+            if (this.searchPhone === '' && this.searchName === '') {
+                alert('請擇一填寫');
+            } else {
+                // axios.post('http://localhost/THD101_NO1/php/back_search_member.php', searchData)
+                axios.post('../php/back_search_member.php', searchData)
+                    .then(response => {
+                        console.log(response.data);
+                        this.searchResult = response.data;
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
+            }
+        },
+
+        doReviseMember(member) {
+            this.name = member.NAME;
+            this.phone = member.PHONENO;
+            this.email = member.EMAIL;
+            this.address = member.ADDRESS;
+            this.avatar = member.MEMBER_AVATAR;
+            this.memberID = member.MEMBER_ID;
+            this.current = 'modify';
+        },
+
+        doAddMember(){
+
+            if (this.newmember_name === "") {
+                alert("請輸入姓名");
+            }else if (this.newmember_phone === "") {
+                alert("請輸入手機號碼");
+            }else if (this.newmember_email === "") {
+                alert("請輸入電子信箱");
+            }else if (this.newmember_address === "") {
+                alert("請輸入通訊地址");
+            }else {
+                const newMemberData = new FormData();
+                const files = $('#member_pic')[0].files;
+                newMemberData.append('member_pic', files[0]);
+                newMemberData.append('newmember_name', this.newmember_name);
+                newMemberData.append('newmember_phone', this.newmember_phone);
+                newMemberData.append('newmember_email', this.newmember_email);
+                newMemberData.append('newmember_address', this.newmember_address);
+
+                axios.post('../php/back_add_member_pet.php', newMemberData)
+                .then(response => {
+                    // console.log(response.data);
+                    if (response.data == '新增成功') {
+                        alert('新增成功');
+                        this.current ='search';
+                        this.refreshPage();
+                    } else {
+                        alert('新增失敗');
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+
+            }
+            
+        },
+        newPicture(e){
+            // 獲取預覽容器元素
+            let previewMemberPic = document.getElementById('preview_member_pic');
+            // 添加change事件監聽器
+            // 獲取選擇的文件
+            let file = e.target.files[0];
+            // 創建文件讀取器
+            let reader = new FileReader();
+            // 設置文件讀取器的加載完成事件
+                reader.onload = function (e) {
+                // 創建圖像元素
+                let img = document.createElement('img');
+                // 設置預覽圖像的src屬性為讀取到的文件內容
+                img.src = e.target.result;
+                img.classList.add('PREVIEW_IMG');
+                // 清空預覽容器
+                previewMemberPic.innerHTML = '';
+                // 將預覽的圖像元素添加到預覽容器中
+                previewMemberPic.appendChild(img);
+                }
+            // 讀取文件內容
+            reader.readAsDataURL(file);
+            
+        },
+
+        doAddPet(){
+            if (this.new_pet_phone === "") {
+                alert("請輸入手機號碼");
+            }else if (this.new_pet_name === "") {
+                alert("請輸入寵物姓名");
+            }else if (this.new_pet_gender === "") {
+                alert("請選擇寵物性別");
+            }else if (this.new_pet_age === "") {
+                alert("請輸入寵物年齡");
+            }else if (this.new_pet_category === "") {
+                alert("請選擇寵物類型");
+            }else if (this.new_vaccines === "") {
+                alert("是否打過預防針");
+            }else{
+                const newPetData = new FormData();
+                const files = $('#pet_pic')[0].files;
+                newPetData.append('pet_pic', files[0]);
+                newPetData.append('new_pet_phone', this.new_pet_phone);
+                newPetData.append('new_pet_name', this.new_pet_name);
+                newPetData.append('new_pet_gender', this.new_pet_gender);
+                newPetData.append('new_pet_age', this.new_pet_age);
+                newPetData.append('new_pet_category', this.new_pet_category);
+                newPetData.append('new_vaccines', this.new_vaccines);
+
+                axios.post('../php/back_add_pet.php', newPetData)
+                .then(response => {
+                    // console.log(response.data);
+                    if (response.data == '新增成功') {
+                        alert('新增成功');
+                        this.current ='search';
+                        this.refreshPage();
+                    } else if(response.data == '新增失敗'){
+                        alert('新增失敗');
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+            }
+        },
+        newPetPic(e){
+            // 新增寵物照片
+            var previewPetPic = document.getElementById('preview_pet_pic');
+            let file = e.target.files[0];
+            // console.log(file);
+            let reader = new FileReader();
+            // console.log(reader);
+            reader.onload = function (e) {
+                let img = document.createElement('img');
+                img.src = e.target.result;
+                img.classList.add('PREVIEW_IMG');
+                previewPetPic.innerHTML = '';
+                previewPetPic.appendChild(img);
+            }
+            reader.readAsDataURL(file);
+            
+        },
+        new_pet_genderValue(e){
+            this.new_pet_gender = e.target.value;
+        },
+        new_pet_categoryValue(e){
+            this.new_pet_category = e.target.value;
+        },
+        new_vaccinesValue(e){
+            this.new_vaccines = e.target.value;
+        },
+        doUpdateMember() {
+            if (this.name === "") {
+                alert("請輸入姓名");
+            } else if (this.phone === "") {
+                alert("請輸入手機號碼");
+            } else if (this.email === "") {
+                alert("請輸入電子信箱");
+            } else if (this.address === "") {
+                alert("請輸入通訊地址");
+            } else {
+
+                const memberData = new FormData();
+                let files = document.querySelector('#member_pic_revise').files;
+                memberData.append('member_pic_revise', files[0]);
+                memberData.append('name_revise', this.name);
+                memberData.append('phone_revise', this.phone);
+                memberData.append('email_revise', this.email);
+                memberData.append('address_revise', this.address);
+                memberData.append('member_id', this.memberID);
+
+                // console.log(memberData);
+
+                // axios.post('http://localhost/THD101_NO1/php/back_update_member.php', memberData)
+                axios.post('../php/back_update_member.php', memberData)
+                    .then(response => {
+                        // console.log(response.data);
+                        if (response.data == '修改成功') {
+                            alert('修改成功');
+                            this.current ='search';
+                            this.refreshPage();
+                        } else {
+                            alert('修改失敗');
+                        }
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
+            }
+        },
+        uploadAvatar(e) {
+
+            let previewMemberPicRevise = document.getElementById('preview_member_pic_revise');
+            let file = e.target.files[0];
+            // console.log(file);
+            let reader = new FileReader();
+            reader.onload = function (e) {
+                let img = document.createElement('img');
+                img.src = e.target.result;
+                img.classList.add('PREVIEW_IMG');
+                previewMemberPicRevise.innerHTML = '';
+                previewMemberPicRevise.appendChild(img);
+            }
+            // console.log(reader);
+            reader.readAsDataURL(file);
+        },
+        searchPet() {
+            if (this.petPhone === '' && this.checkType === 'default') {
+                alert('請擇一搜尋');
+            } else{
+                const petData = new FormData();
+                petData.append('phone', this.petPhone);
+                petData.append('type', this.checkType);
+                
+                axios.post('../php/back_pet_search_member.php', petData)
+                    .then(response => {
+                        console.log(response.data);
+                        this.searchPetResult = response.data;
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
+            }
+        },
+        checkTypeValue(e) {
+            this.checkType = e.target.value;
+        },
+        doRevisePet(pet){
+            this.current = 'pet';
+            this.pet_phone_revise = pet.PHONENO;
+            this.pet_name_revise = pet.PET_NAME;
+            this.pet_gender_revise = pet.PET_GENDER;
+            this.pet_category_revise = pet.PET_CATAGORY;
+            this.pet_age_revise = pet.PET_AGE;
+            this.vaccines_revise = pet.VACCI_OR_NOT;
+            this.memberID = pet.MEMBER_ID;
+            this.pedID = pet.PET_ID;
+            this.petAvatar = pet.PET_AVATAR;
+        },
+        uploadPetAvatar(e){
+            // 修改寵物照片
+            let previewPetPicRevise = document.getElementById('preview_pet_pic_revise');
+            let file = e.target.files[0];
+            // console.log(file);
+            let reader = new FileReader();
+            // console.log(reader);
+            reader.onload = function (e) {
+                let img = document.createElement('img');
+                img.src = e.target.result;
+                img.classList.add('PREVIEW_IMG');
+                previewPetPicRevise.innerHTML = '';
+                previewPetPicRevise.appendChild(img);
+            }
+            reader.readAsDataURL(file);
+            
+        },
+        gender_reviseValue(e){
+            this.pet_gender_revise = e.target.value;
+        },
+        category_reviseValue(e){
+            this.pet_category_revise = e.target.value;
+        },
+        vaccines_reviseValue(e){
+            this.vaccines_revise= e.target.value;
+        },
+        doUpdatePet(){
+            if (this.pet_phone_revise === "") {
+                alert("請輸入手機號碼");
+            } else if (this.pet_name_revise === "") {
+                alert("請輸入寵物姓名");
+            } else if (this.pet_gender_revise === "") {
+                alert("請輸入寵物姓別");
+            } else if (this.pet_category_revise === "") {
+                alert("請輸入寵物類型");
+            } else if (this.new_pet_age === "") {
+                alert("請輸入寵物年齡");
+            }else if (this.vaccines_revise === "") {
+                alert("是否打過預防針");
+            }else{
+                const updataPetData = new FormData();
+                let files = document.querySelector('#pet_pic_revise').files;
+                updataPetData.append('pet_pic_revise', files[0]);
+                updataPetData.append('pet_name_revise', this.pet_name_revise);
+                updataPetData.append('pet_phone_revise', this.pet_phone_revise);
+                updataPetData.append('pet_gender_revise', this.pet_gender_revise);
+                updataPetData.append('pet_category_revise', this.pet_category_revise);
+                updataPetData.append('pet_age_revise', this.pet_age_revise);
+                updataPetData.append('member_id_pet', this.memberID);
+                updataPetData.append('pet_id', this.petID);
+
+                axios.post('../php/back_update_pet.php', updataPetData)
+                    .then(response => {
+                        // console.log(response.data);
+                        if (response.data == '修改成功') {
+                            alert('修改成功');
+                            this.current = 'search'
+                            this.refreshPage();
+                        } else {
+                            alert('修改失敗');
+                        }
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
+            }
+        },
+        doReserve(pet){
+            this.current = 'reserve';
+            this.mask = true;
+            this.reserve_name = pet.NAME;
+            this.reserve_phone = pet.PHONENO;
+            this.reserve_pet_name = pet.PET_NAME;
+            this.reserve_pet_category = pet.PET_CATAGORY;
+            this.reserve_pet_age = pet.PET_AGE;
+            this.reserve_vaccines = pet.VACCI_OR_NOT;
+            this.reserve_member_id = pet.MEMBER_ID;
+            this.reserve_pet_id = pet.PET_ID;
+        },
+        reserve_typeValue(e) {
+            this.reserve_type = e.target.value;
+        },
+        reserve_doctorValue(e) {
+            this.reserve_doctor = e.target.value;
+        },
+        reserve_datetimeValue(e) {
+            this.reserve_datetime = e.target.value;
+        },
+        pet_categoryValue(e) {
+            this.reserve_pet_category = e.target.value;
+        },
+        reserve_vaccinesValue(e) {
+            this.reserve_vaccines = e.target.value;
+        },
+        doAddReserve(){
+            if (this.reserve_type === "") {
+                alert("請選擇預約類型");  
+            }else if (this.reserve_doctor === "") {
+                alert("請選擇指定醫師");
+            }else if (this.reserve_date === "") {
+                alert("請輸入預約日期");
+            }else if (this.reserve_datetime === "default") {
+                alert("請選擇預約時段");
+            }else if (this.reserve_pet_name === "") {
+                alert("請輸入寵物姓名");
+            }else if (this.reserve_pet_category === "") {
+                alert("請選擇寵物類型");
+            }else if (this.reserve_pet_age === "") {
+                alert("請輸入年齡");
+            }else if (this.reserve_vaccines === "") {
+                alert("是否打過預防針");
+            }else if (this.reserve_symptom_type === "") {
+                alert("請輸入病徵類型");
+            }else {
+                const reserveData = new FormData();
+                reserveData.append('reserve_type', this.reserve_type);
+                reserveData.append('reserve_doctor', this.reserve_doctor);
+                reserveData.append('reserve_date', this.reserve_date);
+                reserveData.append('reserve_datetime', this.reserve_datetime);
+                reserveData.append('reserve_name', this.reserve_name);
+                reserveData.append('reserve_phone', this.reserve_phone);
+                reserveData.append('reserve_pet_name', this.reserve_pet_name);
+                reserveData.append('reserve_pet_category', this.reserve_pet_category);
+                reserveData.append('reserve_pet_age', this.reserve_pet_age);
+                reserveData.append('reserve_vaccines', this.reserve_vaccines);
+                reserveData.append('reserve_member_id', this.reserve_member_id);
+                reserveData.append('reserve_pet_id', this.reserve_pet_id);
+                reserveData.append('reserve_symptom_type', this.reserve_symptom_type);
+
+                axios.post('../php/back_add_reserve.php', reserveData)
+                    .then(response => {
+                        // console.log(response.data);
+                        if (response.data == '掛號預約成功') {
+                            alert('掛號預約成功');
+                            this.current = 'search';
+                            this.refreshPage();
+                        } else  if(response.data == '住宿預約成功'){
+                            alert('掛號預約成功');
+                            this.current = 'search';
+                            this.refreshPage();
+                            
+                        } else {
+                            alert('修改失敗');
+                        }
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
+            }
+        }
+    } 
+}).mount('#members');
+
+
 // 新增寵物
-function doAddPet(){
+function doAddPet() {
     const new_pet_phone = $('#new_pet_phone').val().trim();
     const new_pet_name = $('#new_pet_name').val().trim();
     const new_pet_gender = $('#new_pet_gender option:selected').val();
@@ -104,538 +499,34 @@ function doAddPet(){
     formData.append('new_vaccines', new_vaccines);
 
     $.ajax({
-        method:"POST",
-        // url:"http://localhost/THD101_NO1/php/back_add_pet.php",
-        url:"../php/back_add_pet.php",
-        data:formData,
-        dataType:"text",
+        method: "POST",
+        url: "http://localhost/THD101_NO1/php/back_add_pet.php",
+        // url:"../php/back_add_pet.php",
+        data: formData,
+        dataType: "text",
         // 告訴jQuery不要去處理發送的資料
-        processData : false, 
+        processData: false,
         // 告訴jQuery不要去設定Content-Type請求
-        contentType : false,
-        success:function(response){
+        contentType: false,
+        success: function (response) {
             alert(response);
             location.href = '_back_member_profile.html'
             // $('.BACK_ADD_NEW_MEMBER').hide();
             // $('.BACK_MEMBER_PROFILE').show();
         },
-        error: function(exception) {  
+        error: function (exception) {
             alert("發生錯誤: " + exception.status);
         }
     })
 
-    
-}
-// 會員搜尋
-function dosearch(){
-
-    var phone = $("#phone").val();
-    var name = $("#name").val();
-
-    if (phone === "" && name === "") {
-        // 若輸入欄位為空，不執行搜尋操作
-        return;
-    }
-    // console.log(phone);
-    $.ajax({            
-        method: "POST",
-        // url: "http://localhost/THD101_NO1/php/back_search_member.php",
-        url:"../php/back_search_member.php",
-        data:{
-            phone: phone, 
-            name: name
-        },            
-        dataType: "json",
-        success: function (response) {
-            // console.log(response);
-            // 更新html內容前先清空原有資料
-            $("#result").html("");
-            // 更新html內容(透過jQuery跑迴圈取值)
-            $.each(response, function(index, row) {
-                $("#result").append(
-                    "<ul class='MEMBER_PROFILE_CONTENT BACK_TABLE_CONTENT' >" + 
-                    "<li>" + row.NAME +"</li>" +
-                    "<li>" + row.PHONENO + "</li>" +
-                    "<li>" + row.EMAIL + "</li>" +
-                    "<li><i class='bi bi-pencil RE_MEMBER_PROFILE' onclick='doReviseMember(\"" + row.PHONENO + "\")' ></i></li>"
-                    + "</ul>"
-                );
-            });
-        },
-        error: function(exception) {
-            alert("發生錯誤: " + exception.status);
-        }
-    });
-}
-// 寵物搜尋
-function Petsearch(){
-
-    var phone = $("#owner_phone").val();
-    var type = $("#consultation_type").val();
-
-    if (phone == "" && type == "default") {
-        // 若輸入欄位為空，不執行搜尋操作
-        alert ("請選擇類型");
-    }
-    $.ajax({            
-        method: "POST",
-        // url: "http://localhost/THD101_project/php/back_pet_search_member.php",
-        // url: "http://localhost/THD101_NO1/php/back_pet_search_member.php",
-        url:"../php/back_pet_search_member.php",
-        data:{
-            phone: phone, 
-            type: type
-        },            
-        dataType: "json",
-        
-        success: function (response) {
-            // console.log(response);
-            // 更新html內容前先清空原有資料
-            $("#pet_result").html("");
-            // 更新html內容(透過jQuery跑迴圈取值)
-            $.each(response, function(index, row) {
-                let TITLE = row.APPOINTMENT_TYPE_TITLE  !== null ? row.APPOINTMENT_TYPE_TITLE : '';
-                $("#pet_result").append(
-                    "<ul class='PET_PROFILE_CONTENT BACK_TABLE_CONTENT'>" + 
-                    "<li>" + row.PHONENO +"</li>" +
-                    "<li>" + row.PET_NAME + "</li>" +
-                    "<li>" + TITLE+ "</li>" +
-                    "<li>" + row.CREATEDATE + "</li>" +
-                    "<li><i class='bi bi-pencil RE_PET_PROFILE' onclick='doRevisePet(\"" + row.PHONENO + "\")'></i></li>" +
-                    "<li><i class='bi bi-calendar-plus RESERVE_BTN' onclick='doReserve(\"" + row.PHONENO + "\")'></i></li>"
-                    + "</ul>"
-                );
-            });
-        },
-        error: function(exception) {
-            alert("發生錯誤: " + exception.status);
-        }
-    });
-}
-// 會員修改資料渲染
-function doReviseMember(phone_revise){
-
-    $('.BACK_MODIFY_MEMBER').show();
-    $('.BACK_MEMBER_PROFILE').hide();
-    // console.log(phone_revise);
-    $.ajax({
-        method: "GET",
-        // url: "http://localhost/THD101_NO1/php/back_modify_member.php",
-        url:"../php/back_modify_member.php",
-        data: {
-            phone_revise: phone_revise
-        },
-        dataType:"json",
-        success:function(response){
-            // console.log(response);
-            $('#name_revise').val(response.NAME);
-            $('#phone_revise').val(response.PHONENO);
-            $('#email_revise').val(response.EMAIL);
-            $('#address_revise').val(response.ADDRESS);
-            $('#member_id').val(response.MEMBER_ID);
-            $('#preview_member_pic_revise img').attr('src', response.MEMBER_AVATAR);
-            // console.log($('#member_id').val());
-            
-        },
-        error: function(exception) {  
-            alert("發生錯誤: " + exception.status);
-        }
-    })
-}
-// 寵物修改資料渲染
-function doRevisePet(owner_phone){
-
-    $('.BACK_MODIFY_PET').show();
-    $('.BACK_MEMBER_PROFILE').hide();
-    // console.log(owner_phone);
-    $.ajax({
-        method: "GET",
-        // url: "http://localhost/THD101_NO1/php/back_modify_pet.php",
-        url:"../php/back_modify_pet.php",
-        data: {
-            owner_phone: owner_phone
-        },
-        dataType:"json",
-        success:function(response){
-            // console.log(response);
-            // $('#owner_name_revise').val(response.NAME);
-            $('#pet_phone_revise').val(response.PHONENO);
-            $('#pet_gender_revise').val(response.PET_GENDER);
-            $('#pet_name_revise').val(response.PET_NAME);
-            $('#pet_category_revise').val(response.PET_CATAGORY);
-            $('#pet_age_revise').val(response.PET_AGE);
-            $('#vaccines_revise').val(response.VACCI_OR_NOT);
-            $('#member_id_pet').val(response.MEMBER_ID);
-            $('#pet_id').val(response.PET_ID);
-            $('#preview_pet_pic_revise img').attr('src', response.PET_AVATAR);
-            
-            // console.log($('#member_id_pet').val());
-            // console.log($('#pet_gender_revise').val());
-            // console.log($('#pet_category_revise').val());
-            
-        },
-        error: function(exception) {  
-            alert("發生錯誤: " + exception.status);
-        }
-    })
-}
-// 會員更新
-function doUpdateMember(){
-
-    if ($('#name_revise').val() == "") {
-        alert("請輸入姓名");
-        return false;
-    }
-    if ($('#phone_revise').val() == "") {
-        alert("請輸入手機號碼");
-        return false;
-    }
-    if ($('#email_revise').val() == "") {
-        alert("請輸入電子信箱");
-        return false;
-    }
-    if ($('#address_revise').val() == "") {
-        alert("請輸入通訊地址");
-        return false;
-    }
-
-    var formData = new FormData();
-    var files = $('#member_pic_revise')[0].files;
-	formData.append('member_pic_revise',files[0]);
-    formData.append('name_revise',$('#name_revise').val());
-    formData.append('phone_revise',$("#phone_revise").val());
-    formData.append('email_revise',$("#email_revise").val());
-    formData.append('address_revise',$('#address_revise').val());   
-    formData.append('member_id',$('#member_id').val());   
-
-    // console.log($('#member_id').val());
-    // console.log($('#name_revise').val());
-    // console.log($('#phone_revise').val());
-    // console.log($('#email_revise').val());
-    // console.log($('#address_revise').val());
-    
-
-    $.ajax({
-        method:"POST",
-        // url:"http://localhost/THD101_NO1/php/back_update_member.php",
-        url:"../php/back_update_member.php",
-        data:formData,
-        // dataType:"json",
-        // 告訴jQuery不要去處理發送的資料
-        processData : false, 
-        // 告訴jQuery不要去設定Content-Type請求頭
-        contentType : false,
-        success:function(response){
-            alert(response);
-            // location.href = '_back_member_profile.html';
-            location.replace('_back_member_profile.html');
-            // $('.BACK_MEMBER_PROFILE').show();
-            // $('.BACK_MODIFY_MEMBER').hide();
-        },
-        
-        error: function(xhr, status, error) {
-            var errorMessage = xhr.status + ': ' + xhr.statusText;
-            // console.log('錯誤訊息:', errorMessage);
-            // console.log('伺服器回應:', xhr.responseText);
-            alert('發生錯誤: ' + errorMessage);
-        }
-    })
-}
-// 寵物更新
-function doUpdatePet(){
-
-    if (new_pet_phone === "") {
-        alert("請輸入手機號碼");
-        return false;
-    }
-    if (new_pet_name === "") {
-        alert("請輸入寵物姓名");
-        return false;
-    }
-    if (new_pet_gender === "") {
-        alert("請選擇寵物性別");
-        return false;
-    }
-    if (new_pet_age === "") {
-        alert("請輸入寵物年齡");
-        return false;
-    }
-    if (new_pet_category === "") {
-        alert("請選擇寵物類型");
-        return false;
-    }
-
-    var formData = new FormData();
-    var files = $('#pet_pic_revise')[0].files;
-	formData.append('pet_pic_revise',files[0]);
-    formData.append('pet_name_revise',$('#pet_name_revise').val());
-    formData.append('pet_phone_revise',$("#pet_phone_revise").val());
-    formData.append('pet_gender_revise',$("#pet_gender_revise").val());
-    formData.append('pet_category_revise',$('#pet_category_revise').val());   
-    formData.append('pet_age_revise',$('#pet_age_revise').val());   
-    formData.append('member_id_pet',$('#member_id_pet').val());   
-
-    $.ajax({
-        method:"POST",
-        // url:"http://localhost/THD101_NO1/php/back_update_pet.php",
-        url:"../php/back_update_pet.php",
-        data:formData,
-        // dataType:"json",
-        // 告訴jQuery不要去處理發送的資料
-        processData : false, 
-        // 告訴jQuery不要去設定Content-Type請求頭
-        contentType : false,
-        success:function(response){
-            alert(response);
-            // location.href = '_back_member_profile.html';
-            location.replace('_back_member_profile.html');
-            // $('.BACK_MEMBER_PROFILE').show();
-            // $('.BACK_MODIFY_PET').hide();
-        },
-        
-        error: function(xhr, status, error) {
-            var errorMessage = xhr.status + ': ' + xhr.statusText;
-            // console.log('錯誤訊息:', errorMessage);
-            // console.log('伺服器回應:', xhr.responseText);
-            // console.log('伺服器回應:',xhr);
-            // console.log('伺服器回應:',status);
-            // console.log('伺服器回應:',error);
-            alert('發生錯誤: ' + errorMessage);
-        }
-    })
-}
-// 會員新增預約資料渲染
-function doReserve(reserve_phone){
-
-    $('.RESERVE_BOX').css('display','block');
-    $('.MASK').show();
-
-    $('.ESC_BTN').click(function(){
-        $('.RESERVE_BOX').css('display','none');
-        $('.MASK').hide();
-    });
-    $('.MASK').click(function(){
-        $('.RESERVE_BOX').css('display','none');
-        $('.MASK').hide();
-    });
-
-    $.ajax({
-        method: "GET",
-        // url: "http://localhost/THD101_NO1/php/back_reserve_get.php",
-        url:"../php/back_reserve_get.php",
-        data: {
-            reserve_phone: reserve_phone
-        },
-        dataType:"json",
-        success:function(response){
-            // console.log(response);
-            $('#reserve_name').val(response.NAME);
-            $('#reserve_phone').val(response.PHONENO);
-            $('#reserve_pet_name').val(response.PET_NAME);
-            $('#reserve_pet_category').val(response.PET_CATAGORY);
-            $('#reserve_pet_age').val(response.PET_AGE);
-            $('#reserve_pet_age').val(response.PET_AGE);
-            $('#reserve_member_id').val(response.MEMBER_ID);
-            $('#reserve_pet_id').val(response.PET_ID);
-            // console.log($('#reserve_member_id').val());
-            // console.log($('#reserve_pet_id').val());
-            
-        },
-        error: function(exception) {  
-            alert("發生錯誤: " + exception.status);
-        }
-    })
 
 }
 
-function doAddReserve(){
-
-    const reserve_type = $('#reserve_type option:selected').val();
-    const reserve_doctor = $('#reserve_doctor option:selected').val();
-    const reserve_date = $('#reserve_date').val();
-    const reserve_datetime = $('#reserve_datetime option:selected').val();
-    const reserve_name = $('#reserve_name').val();
-    const reserve_phone = $('#reserve_phone').val();
-    const reserve_pet_name = $('#reserve_pet_name').val();
-    const reserve_pet_category= $('#reserve_pet_category option:selected').val();
-    const reserve_symptom_type= $('#reserve_symptom_type').val();
-    const reserve_pet_age= $('#reserve_pet_age').val();
-    const reserve_vaccines= $('#reserve_vaccines option:selected').val();
-    const reserve_member_id= $('#reserve_member_id').val();
-    const reserve_pet_id= $('#reserve_pet_id').val();
-
-    if (reserve_type === "") {
-        alert("請選擇預約類型");
-        return false;
-    }
-    if (reserve_doctor === "") {
-        alert("請選擇指定醫師");
-        return false;
-    }
-    if (reserve_date === "") {
-        alert("請輸入預約日期");
-        return false;
-    }
-    if (reserve_datetime === "default") {
-        alert("請選擇預約時段");
-        return false;
-    }
-    if (reserve_pet_name === "") {
-        alert("請輸入寵物姓名");
-        return false;
-    }
-    if (reserve_pet_category === "") {
-        alert("請選擇寵物類型");
-        return false;
-    }
-    if (reserve_pet_age === "") {
-        alert("請輸入年齡");
-        return false;
-    }
-    if (reserve_vaccines === "") {
-        alert("是否打過預防針");
-        return false;
-    }
-    if (reserve_symptom_type === "") {
-        alert("請輸入病徵類型");
-        return false;
-    }
-
-    const formData = new FormData();
-    formData.append('reserve_type', reserve_type);
-    formData.append('reserve_doctor', reserve_doctor);
-    formData.append('reserve_date', reserve_date);
-    formData.append('reserve_datetime', reserve_datetime);
-    formData.append('reserve_name', reserve_name);
-    formData.append('reserve_phone', reserve_phone);
-    formData.append('reserve_pet_name', reserve_pet_name);
-    formData.append('reserve_pet_category', reserve_pet_category);
-    formData.append('reserve_pet_age', reserve_pet_age);
-    formData.append('reserve_vaccines', reserve_vaccines);
-    formData.append('reserve_member_id', reserve_member_id);
-    formData.append('reserve_pet_id', reserve_pet_id);
-    formData.append('reserve_symptom_type', reserve_symptom_type);
-
-    // console.log(reserve_type);
-    // console.log(reserve_doctor);
-    // console.log(reserve_date);
-    // console.log(reserve_datetime);
-    // console.log(reserve_name);
-    // console.log(reserve_phone);
-    // console.log(reserve_pet_name);
-    // console.log(reserve_pet_category);
-    // console.log(reserve_pet_age);
-    // console.log(reserve_vaccines);
-    // console.log(reserve_member_id);
-    // console.log(reserve_pet_id);
-
-    $.ajax({
-        method:"POST",
-        // url:"http://localhost/THD101_NO1/php/back_add_reserve.php",
-        url:"../php/back_add_reserve.php",
-        data:formData,
-        // dataType:"json",
-        // 告訴jQuery不要去處理發送的資料
-        processData : false, 
-        // 告訴jQuery不要去設定Content-Type請求頭
-        contentType : false,
-        success:function(response){
-            alert(response);
-            // console.log(response);
-            location.href = '_back_member_profile.html'
-            // $('.BACK_ADD_NEW_MEMBER').hide();
-            // $('.BACK_MEMBER_PROFILE').show();
-        },
-        error: function(exception) {  
-            alert("發生錯誤: " + exception.status);
-        }
-    })
-}
 
 
 
-// 新增會員照片
 
-// 獲取文件上傳元素
-var memberPic = document.getElementById('member_pic');
-// 獲取預覽容器元素
-var previewMemberPic = document.getElementById('preview_member_pic');
-// 添加change事件監聽器
-memberPic.addEventListener('change', function(e) {
-    // 獲取選擇的文件
-    var file = e.target.files[0];
-    // 創建文件讀取器
-    var reader = new FileReader();
-    // 設置文件讀取器的加載完成事件
-    reader.onload = function(e) {
-        // 創建圖像元素
-        var img = document.createElement('img');
-        // 設置預覽圖像的src屬性為讀取到的文件內容
-        img.src = e.target.result;
-        img.classList.add('PREVIEW_IMG');
-        // 清空預覽容器
-        previewMemberPic.innerHTML = '';
-        // 將預覽的圖像元素添加到預覽容器中
-        previewMemberPic.appendChild(img);
-    }
-    // 讀取文件內容
-    reader.readAsDataURL(file);
-});
 
-// 新增寵物照片
-var petPic = document.getElementById('pet_pic');
-var previewPetPic = document.getElementById('preview_pet_pic');
-petPic.addEventListener('change',function (e) {
-    var file = e.target.files[0];
-    // console.log(file);
-    var reader = new FileReader();
-    // console.log(reader);
-    reader.onload = function(e){
-        var img = document.createElement('img');
-        img.src = e.target.result;
-        img.classList.add('PREVIEW_IMG');
-        previewPetPic.innerHTML = '';
-        previewPetPic.appendChild(img);
-    }
-    reader.readAsDataURL(file);
-});
-
-// 修改會員照片
-var memberPicRevise = document.getElementById('member_pic_revise');
-var previewMemberPicRevise = document.getElementById('preview_member_pic_revise');
-memberPicRevise.addEventListener('change',function (e) {
-    var file = e.target.files[0];
-    // console.log(file);
-    var reader = new FileReader();
-    // console.log(reader);
-    reader.onload = function(e){
-        var img = document.createElement('img');
-        img.src = e.target.result;
-        img.classList.add('PREVIEW_IMG');
-        previewMemberPicRevise.innerHTML = '';
-        previewMemberPicRevise.appendChild(img);
-    }
-    reader.readAsDataURL(file);
-    // URL.createObjectURL(file);
-});
-
-// 修改寵物照片
-var petPicRevise = document.getElementById('pet_pic_revise');
-var previewPetPicRevise = document.getElementById('preview_pet_pic_revise');
-petPicRevise.addEventListener('change',function (e) {
-    var file = e.target.files[0];
-    // console.log(file);
-    var reader = new FileReader();
-    // console.log(reader);
-    reader.onload = function(e){
-        var img = document.createElement('img');
-        img.src = e.target.result;
-        img.classList.add('PREVIEW_IMG');
-        previewPetPicRevise.innerHTML = '';
-        previewPetPicRevise.appendChild(img);
-    }
-    reader.readAsDataURL(file);
-});
 
 
 
