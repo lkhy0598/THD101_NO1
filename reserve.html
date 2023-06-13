@@ -62,7 +62,7 @@
         <ul>
           <li>
             <label for="reserve_type" class="SELECT">預約類型<br>
-              <select name="reserve_type" id="reserve_type" onchange="changeReserveType()">
+              <select name="reserve_type" id="reserve_type" onchange="changeReserveType(); changeCalendar();">
                 <option value="0" style="display: none">請選擇類型</option>
                 <option value="一般掛號">一般掛號</option>
                 <option value="寵物溝通">寵物溝通</option>
@@ -110,8 +110,11 @@
             </div>
           </div>
 
-          <div id="calendar" ></div>
-          <div id="calendar2" ></div>
+          <div id="CALENDARS">
+            <!-- <div id="calendar"></div>
+            <div id="calendar2"></div> -->
+          </div>
+
           <!-- class="hidden" -->
         </section>
 
@@ -140,8 +143,6 @@
   <script src="./js/top_btn.js"></script>
   <script src="./js/appointment.js"></script>
   <script src="./js/locales-all.global.js"></script>
-  <script src="./js/reserve_schedule.js"></script>
-  <script src="./js/reserve_schedule2.js"></script>
   <script src="./js/reserve_grab_data.js"></script>
 
 </body>
