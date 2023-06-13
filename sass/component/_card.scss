@@ -173,6 +173,16 @@
         
     }
 
+    @include m{
+        a{
+            line-height: 0px;
+            p.SHOPPINGCARD_TITLE{
+                font-size: 4.83vw;
+                line-height: 30px;
+            }
+        }
+    }
+
     @media (min-width:768px){
     &:hover{
         .CARDLINK img{
@@ -252,6 +262,12 @@
                     }
                 }
 
+                @include m {
+                    p{
+                        font-size: 4.83vw;
+                    }
+                }
+
             } 
 
             a{
@@ -280,9 +296,9 @@
             margin-bottom: 10px;
             color:$blueblack;
 
-            @media screen and (max-width: 1200px) {
-                font-size: 2.2rem;
-            }
+            // @media screen and (max-width: 1200px) {
+            //     font-size: 2.2rem;
+            // }
 
             @include m {
                 height: 150px;
