@@ -16,8 +16,8 @@ const app = Vue.createApp({
     methods: {
         fetchInformation() {
             $.ajax({
-                // url: '../php/homepage.php',
-                url: 'http://localhost/THD101_project/php/homepage.php',
+                url: '../php/homepage.php',
+                // url: 'http://localhost/THD101_project/php/homepage.php',
                 type: 'GET',
                 dataType: 'json',
                 success: response => {
