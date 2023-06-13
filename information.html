@@ -102,7 +102,7 @@
                 <!-- 最新消息 -->
                 <ul id="INFORMATION_NEWS" class="INFORMATION_CARD">
 
-                    <a :href="'information_content.html?id=' + infor.NEWS_ID" class="INFORMATION_CARD_A" v-for="(infor, index) in displayedNewsItems"  :key="infor.NEWS_ID">
+                    <a :href="'information_content.html?id=' + infor.NEWS_ID" class="INFORMATION_CARD_A" v-for="(infor, index) in displayedNewsItems" :key="infor.NEWS_ID">
 
                         <li class="CARD_BODY">
                             <div class="CARD_LEFT NEWSIMG">
@@ -120,7 +120,7 @@
                             </div>
                         </li>
                     </a>
-                    <section class="PGAENUMBER WRAPPER" v-if="filteredNewsItems.length > itemsPerPage1">
+                    <section class="PGAENUMBER WRAPPER" v-if="filteredNewsItems.length > 0">
                         <span>
                             <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN LEFT" @click="goToPreviousPage1">
                         </span>
@@ -156,7 +156,7 @@
                         <span>
                             <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN LEFT" @click="goToPreviousPage">
                         </span>
-                        <p v-for="page in totalPages2" :key="page" @click="goToPage(page)" :class="{ 'current-page': currentPage === page }">{{ page }}</p>
+                        <p v-for="page in totalPages2" :key="page" @click="goToPage2(page)" :class="{ 'current-page': currentPage === page }">{{ page }}</p>
                         <span>
                             <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN RIGHT" @click="goToNextPage">
                         </span>
@@ -187,7 +187,7 @@
                         <span>
                             <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN LEFT" @click="goToPreviousPage">
                         </span>
-                        <p v-for="page in totalPages3" :key="page" @click="goToPage(page)" :class="{ 'current-page': currentPage === page }">{{ page }}</p>
+                        <p v-for="page in totalPages3" :key="page" @click="goToPage3(page)" :class="{ 'current-page': currentPage === page }">{{ page }}</p>
                         <span>
                             <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN RIGHT" @click="goToNextPage">
                         </span>
