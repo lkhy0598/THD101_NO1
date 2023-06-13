@@ -129,6 +129,7 @@
                 <div class=" password ">
 
                     <!-- <form method="post" action="../php/appointment_inquiry.php">                        -->
+                        <form method="post" >                       
                         <ul>
                             <li class="middlelong"><label for="">選擇寵物資料</label>
                                 <select name="petNameRecord" id="petNameRecord" class="select">
@@ -149,10 +150,10 @@
 
                         </ul>
                         <div class="submit">
-                            <input type="button" value="搜尋預約" id="searchAppBTN" class="BTN" onclick="doQuery()">
+                            <input type="button" value="搜尋預約" id="searchAppBTN" class="BTN" onclick="doSearchApp()">
 
                         </div>
-                    <!-- </form> -->
+                    </form>
 
                 </div>
                 <!-- <table class="MEMTABLE">
@@ -182,6 +183,7 @@
                         <li>預約類型</li>
                     </ul>
 
+                    <div id="result"></div>
                     <ul class="AAPMT_RECORD_TABLE_CONTENT BACK_TABLE_CONTENT">
                         <li>第 <span id="roomNo"></span> 診間<br><span id="appNo"></span></li>
                         <li>2023/10/24 <br>上午</li>

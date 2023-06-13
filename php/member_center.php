@@ -1,7 +1,7 @@
 <?php
 
-// include ('conn.php');
-include ('connServer.php');
+include ('conn.php');
+// include ('connServer.php');
 // //MySQL相關資訊，在本地端建立
 // // $db_host = "127.0.0.1";
 // // $db_user = "root";    
