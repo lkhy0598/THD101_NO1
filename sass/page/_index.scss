@@ -391,17 +391,92 @@
     }
 }
 // ==========看診進度==========
+
+
+
+@media screen and (max-width: 800px) {
+    .CONSULTATION_UL{
+        flex-direction: column;
+        margin-top: 50px;
+        margin-bottom: 0px; 
+
+    }
+
+    .CONSULTATION_ITEM{
+        padding: 0;
+    }
+
+    .CONSULTATIONCARD{
+        width: 280px;
+        height: 290px;
+        margin-bottom: 60px;
+    }
+}
 .CONSULTATION_UL{
     display: flex;
     justify-content: center;
     margin-top: 100px;
     margin-bottom: 120px;
+
+    @media screen and (max-width: 1400px) {
+        .CONSULTATION_ITEM{
+            padding: 0 70px;
+        }
+
+        .TOPBACKGROUND_1 , .TOPBACKGROUND_2, .TOPBACKGROUND_3{
+            width: 280px;
+            height: 50px;
+         
+        }
+
+
+        .CONSULTATIONCARD{
+            width: 280px;
+            height: 290px;
+           
+        }
+        
+    }
+
+    @media screen and (max-width: 1200px) {
+        .CONSULTATION_ITEM{
+            padding: 0 60px;
+        }
+
+        .TOPBACKGROUND_1 , .TOPBACKGROUND_2, .TOPBACKGROUND_3{
+            width: 270px;
+            height: 40px;
+   
+        }
+
+
+        .CONSULTATIONCARD{
+            width: 270px;
+            height: 280px;
+           
+        }
+    }
+
+    @media screen and (max-width: 1150px) {
+        .CONSULTATION_ITEM{
+            padding: 0 50px;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        .CONSULTATION_ITEM{
+            padding: 0 40px;
+        }
+    }
+
    
 }
 
 
 .CONSULTATION_ITEM{
     padding: 0 90px;
+
+    
 }
 
 .TOPBACKGROUND_1 , .TOPBACKGROUND_2, .TOPBACKGROUND_3{
