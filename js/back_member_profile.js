@@ -11,6 +11,8 @@ Vue.createApp({
             showModify: false,
             avatar: '',
             memberID: '',
+            pet_id:'',
+            member_id_pet:'',
             newmember_name:'',
             newmember_phone:'',
             newmember_email:'',
@@ -26,7 +28,7 @@ Vue.createApp({
             current: 'search',
             petPhone: '',
             checkType: 'default',
-            pedID:'',
+            petID:'',
             petAvatar:'',
             pet_phone_revise:'',
             pet_name_revise:'',
@@ -169,6 +171,9 @@ Vue.createApp({
                 newPetData.append('new_pet_age', this.new_pet_age);
                 newPetData.append('new_pet_category', this.new_pet_category);
                 newPetData.append('new_vaccines', this.new_vaccines);
+                newPetData.append('new_pet_id', this.new_pet_id);
+                newPetData.append('new_pet_memberid', this.new_pet_memberid);
+
 
                 axios.post('../php/back_add_pet.php', newPetData)
                 .then(response => {
@@ -297,7 +302,7 @@ Vue.createApp({
             this.pet_age_revise = pet.PET_AGE;
             this.vaccines_revise = pet.VACCI_OR_NOT;
             this.memberID = pet.MEMBER_ID;
-            this.pedID = pet.PET_ID;
+            this.petID = pet.PET_ID;
             this.petAvatar = pet.PET_AVATAR;
         },
         uploadPetAvatar(e){
@@ -348,8 +353,8 @@ Vue.createApp({
                 updataPetData.append('pet_gender_revise', this.pet_gender_revise);
                 updataPetData.append('pet_category_revise', this.pet_category_revise);
                 updataPetData.append('pet_age_revise', this.pet_age_revise);
-                updataPetData.append('member_id_pet', this.memberID);
-                updataPetData.append('pet_id', this.petID);
+                updataPetData.append('member_id_pet', this.member_id_pet);
+                updataPetData.append('pet_id', this.pet_id);
 
                 axios.post('../php/back_update_pet.php', updataPetData)
                     .then(response => {
@@ -442,7 +447,7 @@ Vue.createApp({
                             this.refreshPage();
                             
                         } else {
-                            alert('修改失敗');
+                            alert('預約失敗');
                         }
                     })
                     .catch(error => {
@@ -452,78 +457,6 @@ Vue.createApp({
         }
     } 
 }).mount('#members');
-
-
-// 新增寵物
-function doAddPet() {
-    const new_pet_phone = $('#new_pet_phone').val().trim();
-    const new_pet_name = $('#new_pet_name').val().trim();
-    const new_pet_gender = $('#new_pet_gender option:selected').val();
-    const new_pet_age = $('#new_pet_age').val().trim();
-    const new_pet_category = $('#new_pet_category option:selected').val();
-    const new_vaccines = $('#new_vaccines option:selected').val();
-
-    if (new_pet_phone === "") {
-        alert("請輸入手機號碼");
-        return false;
-    }
-    if (new_pet_name === "") {
-        alert("請輸入寵物姓名");
-        return false;
-    }
-    if (new_pet_gender === "") {
-        alert("請選擇寵物性別");
-        return false;
-    }
-    if (new_pet_age === "") {
-        alert("請輸入寵物年齡");
-        return false;
-    }
-    if (new_pet_category === "") {
-        alert("請選擇寵物類型");
-        return false;
-    }
-    if (new_vaccines === "") {
-        alert("是否打過預防針");
-        return false;
-    }
-
-    const formData = new FormData();
-    const files = $('#pet_pic')[0].files;
-    formData.append('pet_pic', files[0]);
-    formData.append('new_pet_phone', new_pet_phone);
-    formData.append('new_pet_name', new_pet_name);
-    formData.append('new_pet_gender', new_pet_gender);
-    formData.append('new_pet_age', new_pet_age);
-    formData.append('new_pet_category', new_pet_category);
-    formData.append('new_vaccines', new_vaccines);
-
-    $.ajax({
-        method: "POST",
-        url: "http://localhost/THD101_NO1/php/back_add_pet.php",
-        // url:"../php/back_add_pet.php",
-        data: formData,
-        dataType: "text",
-        // 告訴jQuery不要去處理發送的資料
-        processData: false,
-        // 告訴jQuery不要去設定Content-Type請求
-        contentType: false,
-        success: function (response) {
-            alert(response);
-            location.href = '_back_member_profile.html'
-            // $('.BACK_ADD_NEW_MEMBER').hide();
-            // $('.BACK_MEMBER_PROFILE').show();
-        },
-        error: function (exception) {
-            alert("發生錯誤: " + exception.status);
-        }
-    })
-
-
-}
-
-
-
 
 
 
