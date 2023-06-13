@@ -276,7 +276,7 @@
                                         <button class="BTN_BACK" type="button" @click="doAddMember">新增會員</button>
                                     </li>
                                     <li>
-                                        <button class="BTN_BACK CANCEL_NEW_MEMBER" type="submit">取消</button>
+                                        <button class="BTN_BACK CANCEL_NEW_MEMBER" type="button" @click="current = 'search'">取消</button>
                                     </li>
                                 </ul>
 
@@ -360,8 +360,7 @@
                                         <button class="BTN_BACK" type="submit" @click="doAddPet">新增寵物</button>
                                     </li>
                                     <li>
-                                        <button class="BTN_BACK CANCEL_NEW_PET" type="submit"
-                                        />取消</button>
+                                        <button class="BTN_BACK CANCEL_NEW_PET" type="button" @click="current = 'search'" />取消</button>
                                     </li>
                                 </ul>
 
@@ -431,7 +430,7 @@
                                             @click="doUpdateMember">修改會員</button>
                                     </li>
                                     <li>
-                                        <button class="BTN_BACK CANCEL_MEMBER" type="submit">取消</button>
+                                        <button class="BTN_BACK CANCEL_MEMBER" type="button"  @click="current = 'search'"/>取消</button>
                                     </li>
                                 </ul>
 
@@ -514,7 +513,7 @@
                                             @click="doUpdatePet">修改寵物</button>
                                     </li>
                                     <li>
-                                        <button class="BTN_BACK CANCEL_PET" type="submit">取消</button>
+                                        <button class="BTN_BACK CANCEL_PET" type="button"  @click="current = 'search'">取消</button>
                                     </li>
                                 </ul>
 

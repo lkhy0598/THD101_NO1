@@ -335,7 +335,7 @@ Vue.createApp({
                 alert("請輸入寵物姓別");
             } else if (this.pet_category_revise === "") {
                 alert("請輸入寵物類型");
-            } else if (this.new_pet_age === "") {
+            } else if (this.pet_age_revise === "") {
                 alert("請輸入寵物年齡");
             }else if (this.vaccines_revise === "") {
                 alert("是否打過預防針");
