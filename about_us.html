@@ -456,17 +456,6 @@
   <script src="./js/appointment.js"></script>
 
   <script>
-    $.ajax({
-      url: '../php/checksession.php',
-      // url: 'http://localhost/THD101_NO1/php/checksession.php',
-      type: 'POST',
-      dataType: 'text',
-      success: response => {
-        console.log(response);
-        this.checksessionResponse = response;
-        }
-      }
-    );
     
     $('.LIGHTBOX').click(function (e) {
       e.preventDefault();

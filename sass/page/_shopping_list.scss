@@ -82,6 +82,10 @@
 
             .LIGHTBOX{
                 margin-bottom: 15px;
+
+                @include m {
+                    margin-bottom: 0px;
+                }
             }
 
             section{
@@ -122,7 +126,8 @@
             }
 
             @include m {
-                order: 2;
+                display: flex;
+                order: 1;
                 width: auto;
                 flex-direction: row;
                 padding-top: 15px;
@@ -202,9 +207,14 @@
         }
 
         .SHOPPINGLIST_TOPTEXT{
+
             // display: flex;
             // flex-direction: column;
             // justify-content: space-between;
+
+            @include m{
+                order: 2 ;
+            }
 
             h2{
                 color: $blueblack;
@@ -245,6 +255,12 @@
                 @media screen and (max-width: 1100px) {
                     font-size: 2rem;
                     line-height: 23px;
+                }
+
+                @include m {
+                    line-height: 58px;
+                    margin-bottom: 45px;
+                    font-size: $h3;
                 }
             }
 
@@ -288,6 +304,11 @@
                     font-size: 2rem;
                 }
 
+                @include m {
+                    margin-bottom: 53px;
+                    font-size: $h2;
+                }
+
                 
             }
 
@@ -323,12 +344,21 @@
                     font-size: 1.7rem;
                 }
 
+                @include m {
+                    margin-bottom: 20px;
+                    ffont-size: $h3;
+                }
+
             }
 
             .ITEMCOUNT_BTN{
                 margin-bottom: 20px;
                 @media screen and (max-width: 1100px) {
                     margin-bottom: 10px;
+                }
+
+                @include m {
+                    margin-bottom: 20px;
                 }
 
             }
@@ -343,6 +373,11 @@
                 @media screen and (max-width: 1250px) {
                     margin-bottom: 18px;
                 }
+
+                @include m {
+                    margin-bottom: 40px;
+                }
+
                 .BTN{
                 width: 100%;
                 background: $linear-orange;
@@ -367,6 +402,10 @@
                     @media screen and (max-width: 1050px) {
                         font-size: 1.7rem;
                     }
+
+                    @include m {
+                        font-size: 4.83vw;
+                    }
                 }
 
                 a{  
@@ -375,6 +414,10 @@
                     width: 25px;
                     @media screen and (max-width: 1050px) {
                         width: 20px;
+                    }
+
+                    @include m {
+                        width: 25px;
                     }
                     
                     img{
@@ -387,6 +430,7 @@
             }
 
             @include m {
+                
                 order: 2;
                 padding-top: 20px;
 

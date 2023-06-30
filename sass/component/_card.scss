@@ -1,6 +1,42 @@
 // index消息小卡
 
 
+// @media screen and (max-width: 1400px) {
+
+//     .CARD_BODY{
+//         max-width: 1000px;
+//         height: 300px;
+//     }
+//     .CARD_BODY > .CARD_LEFT > img{
+//         width: 400px;
+//         height: 300px;
+//     }
+
+//     .CARD_BODY > .CARD_RIGHT{
+//         height: 300px;
+
+//     }
+// }
+
+
+// @media screen and (max-width: 1000px) {
+
+//     .CARD_BODY{
+//         max-width: 800px;
+//         height: 250;
+//     }
+//     .CARD_BODY > .CARD_LEFT > img{
+//         width: 350px;
+//         height: 250px;
+//     }
+
+//     .CARD_BODY > .CARD_RIGHT{
+//         height: 250px;
+
+//     }
+// }
+
+
 
 .CARD_BODY{
     max-width: 1200px;
@@ -33,7 +69,12 @@
         width: 120px;
         height: 100px;
     }
+
+    
 }
+
+
+
 
 .CARD_RIGHT{
     position: relative;
@@ -67,7 +108,8 @@
 .CARD_CONTENT{
     padding-top: 30px;
     font-weight: 500;
-    line-height: 50px;
+    line-height: 1.8;
+    font-size: 1.55vw;
     @include m {
         width: 220px; /* 設定容器寬度 */
         white-space: nowrap; /* 讓文字不換行 */
@@ -129,6 +171,16 @@
         }
         
         
+    }
+
+    @include m{
+        a{
+            line-height: 0px;
+            p.SHOPPINGCARD_TITLE{
+                font-size: 4.83vw;
+                line-height: 30px;
+            }
+        }
     }
 
     @media (min-width:768px){
@@ -210,6 +262,12 @@
                     }
                 }
 
+                @include m {
+                    p{
+                        font-size: 4.83vw;
+                    }
+                }
+
             } 
 
             a{
@@ -238,9 +296,9 @@
             margin-bottom: 10px;
             color:$blueblack;
 
-            @media screen and (max-width: 1200px) {
-                font-size: 2.2rem;
-            }
+            // @media screen and (max-width: 1200px) {
+            //     font-size: 2.2rem;
+            // }
 
             @include m {
                 height: 150px;
@@ -273,7 +331,7 @@
 //=============================================================
 // 手機版414px
 @mixin m() {
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: 428px) {
         @content;
     }
 }

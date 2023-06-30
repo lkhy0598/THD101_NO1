@@ -95,7 +95,6 @@
         flex-wrap: wrap;
         width: 1000px;
         margin-bottom: 90px;
-        // border: 1px solid;
         padding-left: 20px;
     }
 
@@ -105,7 +104,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        // border: 1px solid;
     }
 
     .RESERVE_FORM ul li {
@@ -129,98 +127,85 @@
         align-items: center;
         justify-content: center;
         z-index: 10;
-    }
-    
-    #calendar {
-        width: 80%;
-        // display: none;
-        // opacity: 1;
-        // position: absolute;
-        // pointer-events: none;
-    }
 
-    #calendar2 {
-        color: $blueblack;
-        font-size: $littleword;
-        letter-spacing: 1px;
-        width: 80%;
-        // display: none;
-        // opacity: 1;
-        // position: absolute;
-        // bottom: 0px;
-        // pointer-events: none;
-        
-        thead {
-            color: $white;
-            background-color: $red;
-            font-size: $littleword;
-            letter-spacing: 1px;
-            line-height: 50px;
-            min-height: 50px;
+        p {
+            margin-bottom: 50px;
         }
 
-        tbody {
-            tr {
-                .fc-day-sun,
-                .fc-day-sat {
-                    background-color: #EBE3DD;
-                }
+        #CALENDARS {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 150px;
+
+            #calendar {
+                width: 80%;
             }
+
+            #calendar2 {
+                color: $blueblack;
+                font-size: $littleword;
+                letter-spacing: 1px;
+                width: 80%;
+
+                thead {
+                    color: $white;
+                    background-color: $red;
+                    font-size: $littleword;
+                    letter-spacing: 1px;
+                    line-height: 50px;
+                    min-height: 50px;
+                }
+
+                tbody {
+                    tr {
+
+                        .fc-day-sun,
+                        .fc-day-sat {
+                            background-color: #EBE3DD;
+                        }
+                    }
+                }
+
+                .fc-daygrid-day-number:hover {
+                    cursor: pointer;
+                }
+
+            }
+
+            #calendar a:hover {
+                background-color: transparent;
+            }
+
+            #calendar2 a:hover {
+                background-color: transparent;
+            }
+
+            //calendar每日格子中文字
+            #calendar .event-title {
+                margin: auto;
+                letter-spacing: 3px;
+                font-size: 2rem;
+            }
+
+            #calendar2 .event-title {
+                margin: auto;
+                letter-spacing: 3px;
+                font-size: 2rem;
+            }
+
+            .CALENDAR_INFO p {
+                font-size: 18px;
+                color: #34424F;
+                margin-bottom: 50px;
+            }
+
         }
-
-        .fc-daygrid-day-number:hover {
-            cursor: pointer;
-        }
-
-    }
-
-    .hidden {
-        // opacity: 1!important;
-        display: none;
-        // pointer-events: unset;
     }
 
 
-    #calendar a:hover {
-        background-color: transparent;
-    }
-
-    #calendar2 a:hover {
-        background-color: transparent;
-    }
-
-    //calendar每日格子中文字
-    #calendar .event-title {
-        margin: auto;
-        letter-spacing: 3px;
-        font-size: 2rem;
-    }
-
-    #calendar2 .event-title {
-        margin: auto;
-        letter-spacing: 3px;
-        font-size: 2rem;
-    }
-
-    .CALENDAR_INFO p {
-        font-size: 18px;
-        color: #34424F;
-        margin-bottom: 50px;
-    }
-
-    // .CALENDAR_COLOR_INFO {
-    //     width: 100%;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     z-index: 10;
-    // }
-
-    // .CALENDAR_COLOR_INFO p {
-    //     font-size: 12px;
-    //     margin-left: -10px;
-    //     margin-right: 40px;
-    // }
 
     .RESERVE_FORM .STEPS {
         display: flex;
@@ -315,53 +300,55 @@
             .CALENDAR_AREA {
                 .CALENDAR_INFO {
                     padding-left: 10px;
-                }
 
-                #calendar {
-                    width: 100%;
-                    height: auto;
-                    font-size: 10px;
-
-                    a {
+                    p {
                         font-size: 10px;
                     }
-
                 }
 
-                #calendar2 {
-                    width: 100%;
-                    height: auto;
-                    font-size: 10px;
+                #CALENDARS {
+                    margin-bottom: 50px;
 
-                    a {
+                    #calendar {
+                        width: 100%;
+                        height: auto;
                         font-size: 10px;
+
+                        a {
+                            font-size: 10px;
+                        }
+
                     }
 
-                }
+                    #calendar2 {
+                        width: 100%;
+                        height: auto;
+                        font-size: 10px;
 
-                //calendar每日格子中文字
-                #calendar .event-title {
-                    margin: auto;
-                    letter-spacing: 1px;
-                    font-size: 1rem;
-                }
+                        a {
+                            font-size: 10px;
+                        }
 
-                #calendar2 .event-title {
-                    margin: auto;
-                    letter-spacing: 1px;
-                    font-size: 1rem;
-                }
+                    }
 
+                    //calendar每日格子中文字
+                    #calendar .event-title {
+                        margin: auto;
+                        letter-spacing: 1px;
+                        font-size: 1rem;
+                    }
+
+                    #calendar2 .event-title {
+                        margin: auto;
+                        letter-spacing: 1px;
+                        font-size: 1rem;
+                    }
+                }
             }
         }
-
-
 
         .FOOTER_BOTTOM {
             margin-bottom: 0px;
         }
     }
-
-
-
 }

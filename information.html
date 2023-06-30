@@ -102,7 +102,7 @@
                 <!-- 最新消息 -->
                 <ul id="INFORMATION_NEWS" class="INFORMATION_CARD">
 
-                    <a :href="'information_content.html?id=' + infor.NEWS_ID" class="INFORMATION_CARD_A" v-for="infor in filteredNewsItems"  :key="infor.NEWS_ID">
+                    <a :href="'information_content.html?id=' + infor.NEWS_ID" class="INFORMATION_CARD_A" v-for="(infor, index) in displayedNewsItems" :key="infor.NEWS_ID">
 
                         <li class="CARD_BODY">
                             <div class="CARD_LEFT NEWSIMG">
@@ -120,13 +120,21 @@
                             </div>
                         </li>
                     </a>
-
+                    <section class="PGAENUMBER WRAPPER" v-if="filteredNewsItems.length > 0">
+                        <span>
+                            <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN LEFT" @click="goToPreviousPage1">
+                        </span>
+                        <p v-for="page in totalPages1" :key="page" @click="goToPage1(page)" :class="{ 'current-page': currentPage === page }">{{ page }}</p>
+                        <span>
+                            <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN RIGHT" @click="goToNextPage1">
+                        </span>
+                    </section>
                    
                 </ul>
                 <!-- 衛教資訊 -->
                 <ul id="INFORMATION_HEALTH" class="INFORMATION_CARD">
 
-                    <a :href="'information_content.html?id=' + infor.NEWS_ID" class="INFORMATION_CARD_A" v-for="infor in filteredHealthItems" :key="infor.NEWS_ID">
+                    <a :href="'information_content.html?id=' + infor.NEWS_ID" class="INFORMATION_CARD_A" v-for="infor in displayedHealthItems" :key="infor.NEWS_ID">
 
                         <li class="CARD_BODY">
                             <div class="CARD_LEFT NEWSIMG">
@@ -144,12 +152,20 @@
                             </div>
                         </li>
                     </a>
-
+                    <section class="PGAENUMBER WRAPPER" v-if="filteredHealthItems.length > 0">
+                        <span>
+                            <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN LEFT" @click="goToPreviousPage">
+                        </span>
+                        <p v-for="page in totalPages2" :key="page" @click="goToPage2(page)" :class="{ 'current-page': currentPage === page }">{{ page }}</p>
+                        <span>
+                            <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN RIGHT" @click="goToNextPage">
+                        </span>
+                    </section>
                 </ul>
                 <!-- 相關連結 -->
                 <ul id="INFORMATION_LINKS" class="INFORMATION_CARD">
 
-                    <a :href="'information_content.html?id=' + infor.NEWS_ID" class="INFORMATION_CARD_A" v-for="infor in filteredLinkItems" :key="infor.NEWS_ID">
+                    <a :href="'information_content.html?id=' + infor.NEWS_ID" class="INFORMATION_CARD_A" v-for="infor in displayedLinkItems" :key="infor.NEWS_ID">
 
                         <li class="CARD_BODY">
                             <div class="CARD_LEFT NEWSIMG">
@@ -167,6 +183,15 @@
                             </div>
                         </li>
                     </a>
+                    <section class="PGAENUMBER WRAPPER" v-if="filteredLinkItems.length > 0">
+                        <span>
+                            <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN LEFT" @click="goToPreviousPage">
+                        </span>
+                        <p v-for="page in totalPages3" :key="page" @click="goToPage3(page)" :class="{ 'current-page': currentPage === page }">{{ page }}</p>
+                        <span>
+                            <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN RIGHT" @click="goToNextPage">
+                        </span>
+                    </section>
                 </ul>
             </div>
         </section>
@@ -185,15 +210,7 @@
             </span>
         </section> -->
 
-        <section class="PGAENUMBER WRAPPER" v-if="informationItems.length > 0">
-            <span>
-                <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN LEFT" @click="goToPreviousPage">
-            </span>
-            <p v-for="page in totalPages" :key="page" @click="goToPage(page)" :class="{ 'current-page': currentPage === page }">{{ page }}</p>
-            <span>
-                <img src="./img/shopping/🦆 icon _angle-right-b_.svg" alt="" class="PAGEBTN RIGHT" @click="goToNextPage">
-            </span>
-        </section>
+        
     </section>
 
     <!-- ===== TOP按鈕 ===== -->

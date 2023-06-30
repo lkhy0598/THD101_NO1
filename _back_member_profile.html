@@ -10,8 +10,8 @@
     <title>波波動物醫院後台 - 會員管理</title>
 </head>
 
-<body >
-
+<body>
+<div id="members">
     <header>
         <nav class="BACK_NAV">
 
@@ -30,7 +30,7 @@
             </a>
 
             <ul>
-                <li><a href="_back_member_profile.html"><i class="bi bi-plus-square"></i> 新增會員 / 寵物</a></li>
+                <li><a @click="current = 'Add'"><i class="bi bi-plus-square"></i> 新增會員 / 寵物</a></li>
                 <li><a href="_back_user_settings.html"><i class="bi bi-person-circle"></i> USER 你好</a></li>
                 <li><a href="index.html">登出後台</a></li>
             </ul>
@@ -110,70 +110,76 @@
 
         <!-- 右側內容 "主要" 不會更動 -->
         <main class="BACK_MAIN_CONTENT_RIGHT">
+            
+                <!-- 會員管理區塊 "會更動區塊" -->
+                <section class="BACK_MEMBER_PROFILE" v-if="current === 'search'">
 
-            <!-- 會員管理區塊 "會更動區塊" -->
-            <section class="BACK_MEMBER_PROFILE" >
+                    <h2>會員管理</h2>
+                    <!-- 會員管理 -->
+                    <section class="MEMBER_PROFILE">
 
-                <h2>會員管理</h2>
-                <!-- 會員管理 -->
-                <section class="MEMBER_PROFILE">
+                        <div class="BACK_BANNER">
+                            <h3>會員管理</h3>
+                        </div>
 
-                    <div class="BACK_BANNER">
-                        <h3>會員管理</h3>
-                    </div>
+                        <section class="MEMBER_PROFILE_SEARCH">
+                            <ul>
+                                <li>
+                                    <label for="phone" class="INPUT">手機號碼<br>
+                                        <input type="text" name="phone" id="phone" v-model="searchPhone">
+                                    </label>
+                                </li>
+                                <li>
+                                    <p>or</p>
+                                </li>
+                                <li>
+                                    <label for="name" class="INPUT">姓名<br>
+                                        <input type="text" name="name" id="name" v-model="searchName">
+                                    </label>
+                                </li>
+                                <li>
+                                    <button class="BTN_BACK" id="searchMember" type="button"
+                                        @click="doSearch">搜尋會員</button>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- 會員管理搜尋結果 -->
+                        <section class="MEMBER_PROFILE_TABLE">
+                            <ul class="MEMBER_PROFILE_TITLE BACK_TABLE_TITLE">
+                                <li>姓名</li>
+                                <li>手機號碼</li>
+                                <li>電子信箱</li>
+                                <li>修改</li>
+                            </ul>
 
-                    <section class="MEMBER_PROFILE_SEARCH">
-                        <ul>
-                            <li>
-                                <label for="phone" class="INPUT">手機號碼<br>
-                                    <input type="text" name="phone" id="phone">
-                                </label>
-                            </li>
-                            <li>
-                                <p>or</p>
-                            </li>
-                            <li>
-                                <label for="name" class="INPUT">姓名<br>
-                                    <input type="text" name="name" id="name">
-                                </label>
-                            </li>
-                            <li>
-                                <button class="BTN_BACK" id="searchMember" type="submit" onclick="dosearch()">搜尋會員</button>
-                            </li>
-                        </ul>
+                            <ul class='MEMBER_PROFILE_CONTENT BACK_TABLE_CONTENT' v-if="searchResult.length > 0" v-for="(member, index) in searchResult" :key="index">
+                                <li> {{member.NAME}} </li>
+                                <li> {{member.PHONENO}} </li>
+                                <li> {{member.EMAIL}} </li>
+                                <li><i class='bi bi-pencil RE_MEMBER_PROFILE' @click="doReviseMember(member)"></i></li>
+                            </ul>
+
+                        </section>
+
                     </section>
-                    <!-- 會員管理搜尋結果 -->
-                    <section class="MEMBER_PROFILE_TABLE">
-                        <ul class="MEMBER_PROFILE_TITLE BACK_TABLE_TITLE" >
-                            <li>姓名</li>
-                            <li>手機號碼</li>
-                            <li>電子信箱</li>
-                            <li>修改</li>
-                            <!-- <li>刪除</li> -->
-                            <!-- <li>新增預約</li> -->
-                        </ul>
-                        <div id="result"></div>
-                    </section>
+                    <!-- 寵物搜尋 -->
+                    <section class="PET_PROFILE">
 
-                </section>
-                <!-- 寵物搜尋 -->
-                <section class="PET_PROFILE">
+                        <div class="BACK_BANNER">
+                            <h3>寵物搜尋</h3>
+                        </div>
 
-                    <div class="BACK_BANNER">
-                        <h3>寵物搜尋</h3>
-                    </div>
-
-                    <section class="PET_PROFILE_SEARCH">
+                        <section class="PET_PROFILE_SEARCH">
 
                             <ul>
                                 <li>
                                     <label for="owner_phone" class="INPUT">手機號碼<br>
-                                        <input type="text" name="owner_phone" id="owner_phone">
+                                        <input type="text" name="owner_phone" id="owner_phone" v-model="petPhone">
                                     </label>
                                 </li>
                                 <li>
                                     <label for="consultation_type" class="SELECT">看診類型<br>
-                                        <select id="consultation_type">
+                                        <select id="consultation_type" :value="checkType" @change="checkTypeValue">
                                             <option value="default">請選擇類型</option>
                                             <option value="一般掛號">一般掛號</option>
                                             <option value="預防針">預防針</option>
@@ -184,498 +190,502 @@
                                     </label>
                                 </li>
                                 <li>
-                                    <button class="BTN_BACK" type="submit" onclick="Petsearch()">搜尋寵物</button>
+                                    <button class="BTN_BACK" type="button" @click="searchPet">搜尋寵物</button>
                                 </li>
                             </ul>
 
-                    </section>
-                    <!-- 寵物搜尋結果 -->
-                    <section class="PET_PROFILE_TABLE">
-                        <ul class="PET_PROFILE_TITLE BACK_TABLE_TITLE">
-                            <li>手機號碼</li>
-                            <li>寵物姓名</li>
-                            <li>看診類型</li>
-                            <li>最近看診</li>
-                            <li>修改</li>
-                            <li>立即預約</li>
-                        </ul>
+                        </section>
+                        <!-- 寵物搜尋結果 -->
+                        <section class="PET_PROFILE_TABLE">
+                            <ul class="PET_PROFILE_TITLE BACK_TABLE_TITLE">
+                                <li>手機號碼</li>
+                                <li>寵物姓名</li>
+                                <li>看診類型</li>
+                                <li>最近看診</li>
+                                <li>修改</li>
+                                <li>立即預約</li>
+                            </ul>
 
-                        <div id="pet_result"></div>
+                            <ul class='PET_PROFILE_CONTENT BACK_TABLE_CONTENT'  v-if="searchPetResult.length > 0" v-for="(pet, index) in searchPetResult" :key="index">
+                                <li>{{ pet.PHONENO}}</li>
+                                <li>{{ pet.PET_NAME}}</li>
+                                <li>{{ pet.APPOINTMENT_TYPE_TITLE }}</li>
+                                <li>{{ pet.CREATE_DATE }}</li>
+                                <li><i class='bi bi-pencil RE_PET_PROFILE' @click='doRevisePet(pet)'></i></li>
+                                <li><i class='bi bi-calendar-plus RESERVE_BTN' @click='doReserve(pet)'></i></li>
+                            </ul>
+
+                        </section>
 
                     </section>
 
                 </section>
+                <!-- 新增會員及寵物區塊 "會更動區塊" -->
+                <section class="BACK_ADD_NEW_MEMBER" v-if="current === 'Add'">
+                    <!-- <h2>新增會員 / 寵物</h2> -->
 
-            </section>
-            <!-- 新增會員及寵物區塊 "會更動區塊" -->
-            <section class="BACK_ADD_NEW_MEMBER">
-                <h2>新增會員 / 寵物</h2>
+                    <section class="ADD_NEW_MEMBER_PET">
 
-                <section class="ADD_NEW_MEMBER_PET">
+                        <!-- 新增會員 -->
+                        <div class="BACK_BANNER">
+                            <h3>新增會員</h3>
+                        </div>
 
-                    <!-- 新增會員 -->
-                    <div class="BACK_BANNER">
-                        <h3>新增會員</h3>
-                    </div>
+                        <section class="ADD_NEW_MEMBER">
 
-                    <section class="ADD_NEW_MEMBER">
+                            <section class="ADD_NEW_FORM">
 
-                        <section  class="ADD_NEW_FORM">
+                                <section class="ADD_NEW_MEMBER_PIC ADD_PIC">
 
-                            <section class="ADD_NEW_MEMBER_PIC ADD_PIC">
+                                    <div id="preview_member_pic">
+                                        <img v-if ="avatar === ''" src="./img/backend/MENBER_PIC.svg" class="ADD_PIC_IMG" />
+                                        <img v-if="avatar !== null" :src="'img/member/'+ memberID + '/' + avatar" alt="">
+                                    </div>
 
-                                <div id="preview_member_pic">
-                                    <img src="./img/backend/MENBER_PIC.svg" class="ADD_PIC_IMG" />
-                                </div>
+                                    <label for="member_pic" class="PIC_FILE_BOX">
+                                        <input type="button" id="member_pic_btn" value="上傳照片" class="BTN_BACK">
+                                        <input name="member_pic" type="file" id="member_pic" class="PIC_FILE"
+                                            accept="image/*" @change="newPicture" />
+                                    </label>
 
-                                <label for="member_pic" class="PIC_FILE_BOX">
-                                    <input type="button" id="member_pic_btn" value="上傳照片" class="BTN_BACK">
-                                    <input name="member_pic" type="file" id="member_pic" class="PIC_FILE"
-                                        accept="accept=" image/* " />
-                                </label>
+                                </section>
+
+                                <ul class=" ADD_NEW_MEMBER_FORM">
+                                    <li>
+                                        <label for="newmember_name" class="INPUT">姓名<br>
+                                            <input type="text" name="newmember_name" id="newmember_name" v-model="newmember_name">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="newmember_phone" class="INPUT">手機號碼<br>
+                                            <input type="text" name="newmember_phone" id="newmember_phone" v-model="newmember_phone">
+                                        </label>
+                                    </li>
+
+                                    <li>
+                                        <label for="newmember_email" class="INPUT">電子信箱<br>
+                                            <input type="email" name="newmember_email" id="newmember_email" v-model="newmember_email">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="newmember_address" class="INPUT">通訊地址<br>
+                                            <input type="text" name="newmember_address" id="newmember_address" v-model="newmember_address">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <button class="BTN_BACK" type="button" @click="doAddMember">新增會員</button>
+                                    </li>
+                                    <li>
+                                        <button class="BTN_BACK CANCEL_NEW_MEMBER" type="button" @click="current = 'search'">取消</button>
+                                    </li>
+                                </ul>
 
                             </section>
 
-                            <ul class="ADD_NEW_MEMBER_FORM">
-                                <li>
-                                    <label for="newmember_name" class="INPUT">姓名<br>
-                                        <input type="text" name="newmember_name" id="newmember_name">
+                        </section>
+
+                        <!-- 新增寵物 -->
+                        <div class="BACK_BANNER">
+                            <h3>新增寵物</h3>
+                        </div>
+
+                        <section class="ADD_NEW_PET">
+
+
+                            <section action="" class="ADD_NEW_FORM">
+
+                                <section class="ADD_NEW_PET_PIC ADD_PIC">
+
+                                    <div id="preview_pet_pic">
+                                        <img v-if="petAvatar === ''" src="./img/backend/PET_PIC.svg" class="ADD_PIC_IMG" />
+                                        <img v-if="petAvatar !== null" :src="'img/member/'+ memberID + '/' + petID + '/' + petAvatar" class="ADD_PIC_IMG" />
+                                    </div>
+
+                                    <label for="pet_pic" class="PIC_FILE_BOX">
+                                        <input type="button" id="pet_pic_btn" value="上傳照片" class="BTN_BACK">
+                                        <input name="pet_pic" type="file" id="pet_pic" class="PIC_FILE"
+                                            accept="image/gif, image/jpeg, image/png" @change="newPetPic" />
                                     </label>
-                                </li>
-                                <li>
-                                    <label for="newmember_phone" class="INPUT">手機號碼<br>
-                                        <input type="text" name="newmember_phone" id="newmember_phone">
-                                    </label>
-                                </li>
 
-                                <li>
-                                    <label for="newmember_email" class="INPUT">電子信箱<br>
-                                        <input type="email" name="newmember_email" id="newmember_email">
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="newmember_address" class="INPUT">通訊地址<br>
-                                        <input type="text" name="newmember_address" id="newmember_address">
-                                    </label>
-                                </li>
-                                <li>
-                                    <button class="BTN_BACK" type="submit" onclick="return doAddMember()">新增會員</button>
-                                </li>
-                                <li>
-                                    <button class="BTN_BACK CANCEL_NEW_MEMBER" type="submit">取消</button>
-                                </li>
-                            </ul>
+                                </section>
 
-                        </section>    
-
-                    </section>
-
-                    <!-- 新增寵物 -->
-                    <div class="BACK_BANNER">
-                        <h3>新增寵物</h3>
-                    </div>
-
-                    <section class="ADD_NEW_PET">
-
-
-                        <section action="" class="ADD_NEW_FORM">
-
-                            <section class="ADD_NEW_PET_PIC ADD_PIC">
-
-                                <div id="preview_pet_pic">
-                                    <img  src="./img/backend/PET_PIC.svg" class="ADD_PIC_IMG" />
-                                </div>
-
-                                <label for="pet_pic" class="PIC_FILE_BOX">
-                                    <input type="button" id="pet_pic_btn" value="上傳照片" class="BTN_BACK">
-                                    <input name="pet_pic" type="file" id="pet_pic" class="PIC_FILE"
-                                        accept="image/gif, image/jpeg, image/png" />
-                                </label>
-
-                            </section>
-
-                            <ul class="ADD_NEW_PET_FORM">
-                                <!-- <li>
+                                <ul class="ADD_NEW_PET_FORM">
+                                    <!-- <li>
                                     <label for="owner_name" class="INPUT">主人姓名<br>
                                         <input type="text" name="owner_name" id="owner_name">
                                     </label>
                                 </li> -->
-                                <li>
-                                    <label for="new_pet_phone" class="INPUT">手機號碼<br>
-                                        <input type="text" name="new_pet_phone" id="new_pet_phone">
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="new_pet_name" class="INPUT">寵物姓名<br>
-                                        <input type="text" name="new_pet_name" id="new_pet_name">
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="new_pet_gender" class="SELECT">寵物性別<br>
-                                        <select name="new_pet_gender" id="new_pet_gender">
-                                            <option value="公">公</option>
-                                            <option value="母">母</option>
-                                        </select>
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="new_pet_age" class="INPUT">寵物年齡<br>
-                                        <input type="text" name="new_pet_age" id="new_pet_age">
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="pet_category" class="SELECT">寵物類型<br>
-                                        <select id="new_pet_category">
-                                            <option value="狗">狗狗</option>
-                                            <option value="貓">貓貓</option>
-                                            <option value="其他">其他</option>
-                                        </select>
-                                    </label>
-                                </li>
-                               
-                                <li>
-                                    <label for="new_vaccines" class="SELECT">是否打過預防針<br>
-                                        <select id="new_vaccines">
-                                            <option value="是">是</option>
-                                            <option value="否">否</option>
-                                        </select>
-                                    </label>
-                                </li>
-                                <li>
-                                    <button class="BTN_BACK" type="submit" onclick="return doAddPet()">新增寵物</button>
-                                </li>
-                                <li>
-                                    <button class="BTN_BACK CANCEL_NEW_PET" type="submit" onclick="back()">取消</button>
-                                </li>
-                            </ul>
+                                    <li>
+                                        <label for="new_pet_phone" class="INPUT">手機號碼<br>
+                                            <input type="text" name="new_pet_phone" id="new_pet_phone" v-model="new_pet_phone">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="new_pet_name" class="INPUT">寵物姓名<br>
+                                            <input type="text" name="new_pet_name" id="new_pet_name" v-model="new_pet_name">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="new_pet_gender" class="SELECT">寵物性別<br>
+                                            <select name="new_pet_gender" id="new_pet_gender" :value="new_pet_gender" @change="new_pet_genderValue">
+                                                <option value="公">公</option>
+                                                <option value="母">母</option>
+                                            </select>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="new_pet_age" class="INPUT">寵物年齡<br>
+                                            <input type="text" name="new_pet_age" id="new_pet_age" v-model="new_pet_age">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="pet_category" class="SELECT">寵物類型<br>
+                                            <select id="new_pet_category" v-model="new_pet_category" @change="new_pet_categoryValue">
+                                                <option value="狗">狗狗</option>
+                                                <option value="貓">貓貓</option>
+                                                <option value="其他">其他</option>
+                                            </select>
+                                        </label>
+                                    </li>
 
-                        </section>
-                    </section>
+                                    <li>
+                                        <label for="new_vaccines" class="SELECT">是否打過預防針<br>
+                                            <select id="new_vaccines" v-model="new_vaccines" @change="new_vaccinesValue">
+                                                <option value="是">是</option>
+                                                <option value="否">否</option>
+                                            </select>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <button class="BTN_BACK" type="submit" @click="doAddPet">新增寵物</button>
+                                    </li>
+                                    <li>
+                                        <button class="BTN_BACK CANCEL_NEW_PET" type="button" @click="current = 'search'" />取消</button>
+                                    </li>
+                                </ul>
 
-                </section>
-
-
-
-            </section>
-            <!-- 修改會員區塊"會更動區塊" -->
-            <section class="BACK_MODIFY_MEMBER" >
-
-                <h2>修改會員</h2>
-
-                <section class="MODIFY_MEMBER">
-
-                    <!-- 修改會員 -->
-                    <div class="BACK_BANNER">
-                        <h3>修改會員</h3>
-                    </div>
-
-                    <section class="MODIFY_MEMBER_FORM" id="modify_member">
-
-                        <section class="ADD_NEW_FORM">
-
-                            <section class="ADD_NEW_MEMBER_PIC ADD_PIC">
-                                
-                                <div id="preview_member_pic_revise">
-                                    <img  src="./img/backend/MENBER_PIC.svg" class="ADD_PIC_IMG" />
-                                </div>
-    
-                                <label for="member_pic_revise" class="PIC_FILE_BOX">
-                                    <input type="button" id="member_pic_revise_btn" value="上傳照片" class="BTN_BACK">
-                                    <input name="member_pic_revise" type="file" id="member_pic_revise" class="PIC_FILE"
-                                        accept="image/gif, image/jpeg, image/png" />
-                                </label>
-    
                             </section>
-    
-                            <ul class="ADD_NEW_MEMBER_FORM">
-                                <li>
-                                    <label for="name_revise" class="INPUT">姓名<br>
-                                        <input type="text" name="name_revise" id="name_revise">
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="phone_revise" class="INPUT">手機號碼<br>
-                                        <input type="text" name="phone_revise" id="phone_revise">
-                                    </label>
-                                </li>
-    
-                                <li>
-                                    <label for="email_revise" class="INPUT">電子信箱<br>
-                                        <input type="email" name="email_revise" id="email_revise">
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="address_revise" class="INPUT">通訊地址<br>
-                                        <input type="text" name="address_revise" id="address_revise">
-                                    </label>
-                                </li>
-                                <input type="hidden" name="member_id" id="member_id" value="要更新的会员ID">
-                                <input type="hidden" name="picture_name" id="picture_name"/>
-                                <li>
-                                    <button class="BTN_BACK MODIFY_MEMBER_BTN" type="submit" onclick="doUpdateMember()">修改會員</button>
-                                </li>
-                                <li>
-                                    <button class="BTN_BACK CANCEL_MEMBER" type="submit" >取消</button>
-                                </li>
-                            </ul>    
-
                         </section>
 
                     </section>
 
+
+
                 </section>
-            </section>
-            <!-- 修改寵物區塊"會更動區塊" -->
-            <section class="BACK_MODIFY_PET">
+                <!-- 修改會員區塊"會更動區塊" -->
+                <section class="BACK_MODIFY_MEMBER"  v-if="current === 'modify'">
 
-                <h2>修改寵物</h2>
+                    <h2>修改會員</h2>
 
-                <section class="MODIFY_PET">
-                    <!-- 修改寵物 -->
-                    <div class="BACK_BANNER">
-                        <h3>修改寵物</h3>
-                    </div>
+                    <section class="MODIFY_MEMBER" id="MODIFY_MEMBER">
 
-                    <section class="MODIFY_PET_FORM" >
+                        <!-- 修改會員 -->
+                        <div class="BACK_BANNER">
+                            <h3>修改會員</h3>
+                        </div>
 
-                        <section action="" class="ADD_NEW_FORM">
+                        <section class="MODIFY_MEMBER_FORM" id="modify_member">
 
-                            <section class="ADD_NEW_PET_PIC ADD_PIC">
-                                <div id="preview_pet_pic_revise">
-                                    <img  src="./img/backend/PET_PIC.svg" class="ADD_PIC_IMG" />
-                                </div>
-                                <label for="pet_pic_revise"" class="PIC_FILE_BOX">
-                                    <input type="button" id="pet_pic_revise_btn" value="上傳照片" class="BTN_BACK">
-                                    <input name="pet_pic_revise"" type="file" id="pet_pic_revise"" class="PIC_FILE"
-                                        accept="image/gif, image/jpeg, image/png" />
-                                </label>
+                            <section class="ADD_NEW_FORM">
+
+                                <section class="ADD_NEW_MEMBER_PIC ADD_PIC">
+
+                                    <div id="preview_member_pic_revise">
+                                        <img :src="'img/member/'+ memberID + '/' + avatar" class="ADD_PIC_IMG" />
+                                    </div>
+
+                                    <label for="member_pic_revise" class="PIC_FILE_BOX">
+                                        <input type="button" id="member_pic_revise_btn" value="上傳照片" class="BTN_BACK" >
+                                        <input name="member_pic_revise" type="file" id="member_pic_revise"
+                                            class="PIC_FILE" accept="image/gif, image/jpeg, image/png" @change="uploadAvatar">
+                                    </label>
+
+                                </section>
+
+                                <ul class="ADD_NEW_MEMBER_FORM">
+                                    <li>
+                                        <label for="name_revise" class="INPUT">姓名<br>
+                                            <input type="text" name="name_revise" id="name_revise" v-model="name">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="phone_revise" class="INPUT">手機號碼<br>
+                                            <input type="text" name="phone_revise" id="phone_revise" v-model="phone">
+                                        </label>
+                                    </li>
+
+                                    <li>
+                                        <label for="email_revise" class="INPUT">電子信箱<br>
+                                            <input type="email" name="email_revise" id="email_revise" v-model="email">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="address_revise" class="INPUT">通訊地址<br>
+                                            <input type="text" name="address_revise" id="address_revise"
+                                                v-model="address">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <button class="BTN_BACK MODIFY_MEMBER_BTN" type="button"
+                                            @click="doUpdateMember">修改會員</button>
+                                    </li>
+                                    <li>
+                                        <button class="BTN_BACK CANCEL_MEMBER" type="button"  @click="current = 'search'"/>取消</button>
+                                    </li>
+                                </ul>
 
                             </section>
 
-                            <ul class="ADD_NEW_PET_FORM">
-                                <!-- <li>
-                                    <label for="owner_name_revise" class="INPUT">主人姓名<br>
-                                        <input type="text" name="owner_name_revise" id="owner_name_revise">
-                                    </label>
-                                </li> -->
-                                <li>
-                                    <label for="pet_phone_revise" class="INPUT">手機號碼<br>
-                                        <input type="text" name="pet_phone_revise" id="pet_phone_revise" disabled>
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="pet_name_revise" class="INPUT">寵物姓名<br>
-                                        <input type="text" name="pet_name_revise" id="pet_name_revise">
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="pet_gender_revise" class="SELECT">寵物性別<br>
-                                        <select name="pet_gender_revise" id="pet_gender_revise">
-                                            <option value="公">公</option>
-                                            <option value="母">母</option>
-                                        </select>
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="pet_category_revise" class="SELECT">寵物類型<br>
-                                        <select id="pet_category_revise">
-                                            <option value="狗">狗狗</option>
-                                            <option value="貓">貓貓</option>
-                                            <option value="其他">其他</option>
-                                        </select>
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="pet_age_revise" class="INPUT">寵物年齡<br>
-                                        <input type="text" name="pet_age_revise" id="pet_age_revise">
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="vaccines_revise" class="SELECT">是否打過預防針<br>
-                                        <select id="vaccines_revise">
-                                            <option value="是">是</option>
-                                            <option value="否">否</option>
-                                        </select>
-                                    </label>
-                                </li>
-                                <input type="hidden" name="member_id" id="member_id_pet" value="要更新的会员ID">
-                                <input type="hidden" name="pet_id" id="pet_id"/>
-                                <li>
-                                    <button class="BTN_BACK MODIFY_PET_BTN" type="submit" onclick="doUpdatePet()">修改寵物</button>
-                                </li>
-                                <li>
-                                    <button class="BTN_BACK CANCEL_PET" type="submit">取消</button>
-                                </li>
-                            </ul>
+                        </section>
 
+                    </section>
+                </section>
+                <!-- 修改寵物區塊"會更動區塊" -->
+                <section class="BACK_MODIFY_PET" v-if="current === 'pet'">
+
+                    <h2>修改寵物</h2>
+
+                    <section class="MODIFY_PET">
+                        <!-- 修改寵物 -->
+                        <div class="BACK_BANNER">
+                            <h3>修改寵物</h3>
+                        </div>
+
+                        <section class="MODIFY_PET_FORM">
+
+                            <section action="" class="ADD_NEW_FORM">
+
+                                <section class="ADD_NEW_PET_PIC ADD_PIC">
+                                    <div id="preview_pet_pic_revise">
+                                        <img v-if="petAvatar !== null" :src="'img/member/'+ memberID + '/' + petID + '/' + petAvatar" class="ADD_PIC_IMG" />
+                                    </div>
+                                    <label for="pet_pic_revise" class=" PIC_FILE_BOX">
+                                        <input type="button" id="pet_pic_revise_btn" value="上傳照片" class="BTN_BACK">
+
+                                        <input name="pet_pic_revise" type="file" id="pet_pic_revise" class="PIC_FILE" accept="image/gif, image/jpeg, image/png"
+                                        @change="uploadPetAvatar">
+                                    </label>
+
+                                </section>
+                                <ul class="ADD_NEW_PET_FORM">
+                                    <li>
+                                        <label for="pet_phone_revise" class="INPUT">手機號碼<br>
+                                            <input type="text" name="pet_phone_revise" id="pet_phone_revise" disabled v-model="pet_phone_revise">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="pet_name_revise" class="INPUT">寵物姓名<br>
+                                            <input type="text" name="pet_name_revise" id="pet_name_revise" v-model="pet_name_revise">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="pet_gender_revise" class="SELECT">寵物性別<br>
+                                            <select name="pet_gender_revise" id="pet_gender_revise" :value="pet_gender_revise" @change="gender_reviseValue">
+                                                <option value="公">公</option>
+                                                <option value="母">母</option>
+                                            </select>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="pet_category_revise" class="SELECT">寵物類型<br>
+                                            <select id="pet_category_revise" :value="pet_category_revise" @change="category_reviseValue">
+                                                <option value="狗">狗狗</option>
+                                                <option value="貓">貓貓</option>
+                                                <option value="其他">其他</option>
+                                            </select>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="pet_age_revise" class="INPUT">寵物年齡<br>
+                                            <input type="text" name="pet_age_revise" id="pet_age_revise" v-model="pet_age_revise">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="vaccines_revise" class="SELECT">是否打過預防針<br>
+                                            <select id="vaccines_revise" :value="vaccines_revise" @change="vaccines_reviseValue">
+                                                <option value="是">是</option>
+                                                <option value="否">否</option>
+                                            </select>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <button class="BTN_BACK MODIFY_PET_BTN" type="submit"
+                                            @click="doUpdatePet">修改寵物</button>
+                                    </li>
+                                    <li>
+                                        <button class="BTN_BACK CANCEL_PET" type="button"  @click="current = 'search'">取消</button>
+                                    </li>
+                                </ul>
+
+                            </section>
                         </section>
                     </section>
                 </section>
 
+                <!-- 新增預約彈窗 -->
+                <div :class="{'MASK': current == 'reserve'}"></div>
+                <section class="RESERVE_BOX" v-if="current === 'reserve'">
 
+                    <i class="bi bi-x-lg ESC_BTN" @click="current = 'search'"></i>
+                    <section class="FORM">
 
-            </section>
-            <!-- 新增預約彈窗 -->
-            <div class="MASK"></div>
-            <section class="RESERVE_BOX">
-                
-                <i class="bi bi-x-lg ESC_BTN"></i>
-                <section class="FORM">
+                        <ul class="RESERVE_LIST" >
+                            <li>
+                                <label for="reserve_type" class="SELECT">預約類型<br>
+                                    <select id="reserve_type" :value="reserve_type" @change="reserve_typeValue">
+                                        <option value=""></option>
+                                        <option value="1">一般掛號</option>
+                                        <option value="2">預防針</option>
+                                        <option value="3">寵物溝通</option>
+                                        <option value="4">住宿</option>
+                                        <option value="5">寵物健檢</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="reserve_doctor" class="SELECT">指定醫師<br>
+                                    <select id="reserve_doctor" :value="reserve_doctor" @change="reserve_doctorValue">
+                                        <option value=""></option>
+                                        <option value="0">不指定</option>
+                                        <option value="1">范植鑫院長</option>
+                                        <option value="7">賴偉峰醫師</option>
+                                        <option value="4">林佳緯醫師</option>
+                                        <option value="5">詹宗豪醫師</option>
+                                        <option value="3">汪玉婷醫師</option>
+                                        <option value="6">林育楣醫師</option>
+                                        <option value="2">羅婉瑜溝通師</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="reserve_date" class="INPUT">預約日期<br>
+                                    <input type="date" name="reserve_date" id="reserve_date" v-model="reserve_date">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="reserve_datetime" class="SELECT">預約時段<br>
+                                    <select id="reserve_datetime" :value="reserve_datetime" @change="reserve_datetimeValue">
+                                        <option value="default">預約時段</option>
+                                        <option value="0">住宿</option>
+                                        <option value="1">上午 09:00 ~ 12:00</option>
+                                        <option value="2">下午 14:00 ~ 18:00</option>
+                                        <option value="3">晚上 19:00 ~ 21:00</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="reserve_name" class="INPUT">主人姓名<br>
+                                    <input type="text" name="reserve_name" id="reserve_name" v-model="reserve_name">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="reserve_phone" class="INPUT">手機號碼<br>
+                                    <input type="text" name="reserve_phone" id="reserve_phone" v-model="reserve_phone">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="reserve_pet_name" class="INPUT">寵物姓名<br>
+                                    <input type="text" name="reserve_pet_name" id="reserve_pet_name" v-model="reserve_pet_name">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="reserve_pet_category" class="SELECT">寵物類型<br>
+                                    <select id="reserve_pet_category" :value="reserve_pet_category" @change="pet_categoryValue">
+                                        <option value="狗">狗狗</option>
+                                        <option value="貓">貓貓</option>
+                                        <option value="其他">兔子</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="reserve_pet_age" class="INPUT">寵物年齡<br>
+                                    <input type="text" name="reserve_pet_age" id="reserve_pet_age" v-model="reserve_pet_age">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="reserve_vaccines" class="SELECT">是否打過預防針<br>
+                                    <select id="reserve_vaccines" :value="reserve_vaccines" @change="reserve_vaccinesValue">
+                                        <option value="是">是</option>
+                                        <option value="否">否</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="reserve_symptom_type" class="TEXTAREA">病徵類型<br>
+                                    <textarea name="reserve_symptom_type" id="reserve_symptom_type" cols="30" rows="10" v-model="reserve_symptom_type">
+                                    </textarea >
+                                </label>
+                            </li>
+                            <input type="hidden" name="reserve_member_id" id="reserve_member_id" />
+                            <input type="hidden" name="reserve_pet_id" id="reserve_pet_id" />
 
-                    <ul class="RESERVE_LIST">
-                        <li>
-                            <label for="reserve_type" class="SELECT">預約類型<br>
-                                <select id="reserve_type">
-                                    <option value=""></option>
-                                    <option value="1">一般掛號</option>
-                                    <option value="2">預防針</option>
-                                    <option value="3">寵物溝通</option>
-                                    <option value="4">住宿</option>
-                                    <option value="5">寵物健檢</option>
-                                </select>
-                            </label>
-                        </li>
-                        <li>
-                            <label for="reserve_doctor" class="SELECT">指定醫師<br>
-                                <select id="reserve_doctor">
-                                    <option value=""></option>
-                                    <option value="0">不指定</option>
-                                    <option value="1">范植鑫院長</option>
-                                    <option value="7">賴偉峰醫師</option>
-                                    <option value="4">林佳緯醫師</option>
-                                    <option value="5">詹宗豪醫師</option>
-                                    <option value="3">汪玉婷醫師</option>
-                                    <option value="6">林育楣醫師</option>
-                                    <option value="2">羅婉瑜溝通師</option>
-                                </select>
-                            </label>
-                        </li>
-                        <li>
-                            <label for="reserve_date" class="INPUT">預約日期<br>
-                                <input type="date" name="reserve_date" id="reserve_date">
-                            </label>
-                        </li>
-                        <li>
-                            <label for="reserve_datetime" class="SELECT">預約時段<br>
-                                <select id="reserve_datetime">
-                                    <option value="default">預約時段</option>
-                                    <option value="0">住宿</option>
-                                    <option value="1">上午 09:00 ~ 12:00</option>
-                                    <option value="2">下午 14:00 ~ 18:00</option>
-                                    <option value="3">晚上 19:00 ~ 21:00</option>
-                                </select>
-                            </label>
-                        </li>
-                        <li>
-                            <label for="reserve_name" class="INPUT">主人姓名<br>
-                                <input type="text" name="reserve_name" id="reserve_name">
-                            </label>
-                        </li>
-                        <li>
-                            <label for="reserve_phone" class="INPUT">手機號碼<br>
-                                <input type="text" name="reserve_phone" id="reserve_phone">
-                            </label>
-                        </li>
-                        <li>
-                            <label for="reserve_pet_name" class="INPUT">寵物姓名<br>
-                                <input type="text" name="reserve_pet_name" id="reserve_pet_name">
-                            </label>
-                        </li>
-                        <li>
-                            <label for="reserve_pet_category" class="SELECT">寵物類型<br>
-                                <select id="reserve_pet_category">
-                                    <option value="狗">狗狗</option>
-                                    <option value="貓">貓貓</option>
-                                    <option value="其他">兔子</option>
-                                </select>
-                            </label>
-                        </li>
-                        <li>
-                            <label for="reserve_pet_age" class="INPUT">寵物年齡<br>
-                                <input type="text" name="reserve_pet_age" id="reserve_pet_age">
-                            </label>
-                        </li>
-                        <li>
-                            <label for="reserve_vaccines" class="SELECT">是否打過預防針<br>
-                                <select id="reserve_vaccines">
-                                    <option value="是">是</option>
-                                    <option value="否">否</option>
-                                </select>
-                            </label>
-                        </li>
-                        <li>
-                            <label for="reserve_symptom_type" class="TEXTAREA">病徵類型<br>
-                                <textarea name="reserve_symptom_type" id="reserve_symptom_type" cols="30" rows="10">請簡述寵物病情
-                                </textarea>
-                            </label>
-                        </li>
-                        <input type="hidden" name="reserve_member_id" id="reserve_member_id"/>
-                        <input type="hidden" name="reserve_pet_id" id="reserve_pet_id"/>
+                        </ul>
+                        <button class="BTN_BACK ADD_RESERVE_BTN" type="submit" @click="doAddReserve">新增預約</button>
+                    </section>
 
-                    </ul>
-                    <button class="BTN_BACK ADD_RESERVE_BTN" type="submit" onclick="doAddReserve()">新增預約</button>
                 </section>
-
-            </section>
-
+            
         </main>
     </section>
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./js/vendors/vue/vue.global.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
     <script src="./js/back_call_system.js"></script>
     <script src="./js/back_member_profile.js"></script>
 
     <script>
 
-        $(document).ready(function () {
+        // $(document).ready(function () {
 
-            // 新增會員及寵物
-            $('.BACK_ADD_NEW_MEMBER').hide();
+        //     // 新增會員及寵物
+        //     $('.BACK_ADD_NEW_MEMBER').hide();
 
-            $('.BACK_NAV ul li').eq(0).click(function () {
-                $('.BACK_ADD_NEW_MEMBER').show();
-                $('.BACK_MEMBER_PROFILE').hide();
-                $('.BACK_MODIFY_PET').hide();
+        //     $('.BACK_NAV ul li').eq(0).click(function () {
+        //         $('.BACK_ADD_NEW_MEMBER').show();
+        //         $('.BACK_MEMBER_PROFILE').hide();
+        //         $('.BACK_MODIFY_PET').hide();
 
-                event.preventDefault();
-            });
+        //         event.preventDefault();
+        //     });
 
-            
+
             // $('.RE_PET_PROFILE').click(function () {
             //         $('.BACK_MODIFY_PET').show();
             //         $('.BACK_MEMBER_PROFILE').hide();
+            // // });
+            // // 取消紐
+            // $('.CANCEL_MEMBER').click(function () {
+            //     $('.BACK_MEMBER_PROFILE').show();
+            //     $('.BACK_MODIFY_MEMBER').hide();
+            //     event.preventDefault();
             // });
-            // 取消紐
-            $('.CANCEL_MEMBER').click(function () {
-                    $('.BACK_MEMBER_PROFILE').show();
-                    $('.BACK_MODIFY_MEMBER').hide();
-                    event.preventDefault();
-            });    
-            $('.CANCEL_PET').click(function () {
-                    $('.BACK_MEMBER_PROFILE').show();
-                    $('.BACK_MODIFY_PET').hide();
-                    event.preventDefault();
-            });
-            $('.CANCEL_NEW_MEMBER').click(function(){
-                $('.BACK_MEMBER_PROFILE').show();
-                $('.BACK_ADD_NEW_MEMBER').hide();
-                event.preventDefault();
-            });
-            $('.CANCEL_NEW_PET').click(function(){
-                $('.BACK_MEMBER_PROFILE').show();
-                $('.BACK_ADD_NEW_MEMBER').hide();
-                event.preventDefault();
-            });
+            // $('.CANCEL_PET').click(function () {
+            //     $('.BACK_MEMBER_PROFILE').show();
+            //     $('.BACK_MODIFY_PET').hide();
+            //     event.preventDefault();
+            // });
+            // $('.CANCEL_NEW_MEMBER').click(function () {
+            //     $('.BACK_MEMBER_PROFILE').show();
+            //     $('.BACK_ADD_NEW_MEMBER').hide();
+            //     event.preventDefault();
+            // });
+            // $('.CANCEL_NEW_PET').click(function () {
+            //     $('.BACK_MEMBER_PROFILE').show();
+            //     $('.BACK_ADD_NEW_MEMBER').hide();
+            //     event.preventDefault();
+            // });
 
 
-            $('.ADD_RESERVE_BTN').click(function(){
-                $('.RESERVE_BOX').css('display','none');
+            $('.ADD_RESERVE_BTN').click(function () {
+                $('.RESERVE_BOX').css('display', 'none');
                 $('.MASK').hide();
                 event.preventDefault();
             });
-        
-                
-            
-        });
+
+
+
+        // });
     </script>
 
 
